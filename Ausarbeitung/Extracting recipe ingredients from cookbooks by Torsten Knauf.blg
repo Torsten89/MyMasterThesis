@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Extracting recipe ingredients from cookbooks by Torsten Knauf.aux
+The style file: biblatex.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Extracting_recipe_ingredients_from_cookbooks_by_Torsten_Knauf-blx.bib
+Database file #2: references.bib
+Biblatex version: 3.3
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+You've used 3 entries,
+            6047 wiz_defined-function locations,
+            1146 strings with 8730 characters,
+and the built_in function-call counts, 8942 in all, are:
+= -- 382
+> -- 341
+< -- 94
++ -- 147
+- -- 133
+* -- 635
+:= -- 737
+add.period$ -- 0
+call.type$ -- 3
+change.case$ -- 54
+chr.to.int$ -- 34
+cite$ -- 4
+duplicate$ -- 842
+empty$ -- 839
+format.name$ -- 161
+if$ -- 2051
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 0
+newline$ -- 82
+num.names$ -- 120
+pop$ -- 696
+preamble$ -- 1
+purify$ -- 62
+quote$ -- 0
+skip$ -- 539
+stack$ -- 0
+substring$ -- 335
+swap$ -- 290
+text.length$ -- 84
+text.prefix$ -- 2
+top$ -- 1
+type$ -- 102
+warning$ -- 0
+while$ -- 87
+width$ -- 0
+write$ -- 78
