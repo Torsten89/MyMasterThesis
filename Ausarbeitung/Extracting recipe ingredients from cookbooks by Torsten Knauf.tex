@@ -2,13 +2,49 @@
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
 \usepackage{graphicx}
-\usepackage[backend=bibtex, style=authoryear]{biblatex}
+\usepackage[backend=bibtex, style=authoryear, maxcitenames=2]{biblatex}
 \addbibresource{references.bib}
 
 
 \begin{document}
 
-\input{Titlepage/titlepage}
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+        \Huge{\textbf{Extracting recipe ingredients from cookbooks}}
+        
+        \vspace{1cm}
+        
+        \Large{by}\\
+        \LARGE{Torsten Knauf}
+        
+        \vspace{1cm}
+        
+        \Large
+        A thesis presented for the degree of\\
+        Master of Science
+        
+        \vspace{1cm}
+        
+        \includegraphics[width=0.4\textwidth]{Images/cau-siegel.pdf}
+        
+        Research Group for Communication Systems\\
+        \large{at} \\
+        Faculty of Engineering\\
+        Christian-Albrechts-Universität zu Kiel\\
+        Germany\\
+        31.03.2017
+    \end{center}
+    
+    \vspace{1cm}
+    
+    \LARGE
+    \begin{tabbing}
+    Supervisor: \= Prof. Dr.-Ing.Norbert Luttenberger\\
+    \> Dr.-Ing. Jesper Zedlitz
+    \end{tabbing}
+\end{titlepage}
 
 \chapter*{Abstract}
 Always do this one last, when knowing the things to praise  yourself for :P
@@ -23,46 +59,65 @@ If I don't profit from nice people in these thesis, I have done something horrib
 % \listoftables
 
 \chapter{Introduction}
-\parencite{surveyOfTextMining}
 
 The introduction points out, what this thesis is about, why it is actual usefull and finishes with an overview of the structure of this thesis.
 
 \section{What is this thesis about?}
-This thesis deals with the topic of making ingredients of recipes within a cookbook machine-readable.
+In general extracting information from textual resources is a new field of research. In contrast to knowledge discovery in databases the information are unstructed, what make it hard to automatically extract usefull information from them. For example the world wide web consists mainly of textual information, enriched with some meta data for formating, but without clues of its content. At least without clues, which a machine can process further. This restricts heavily the possibilities of new applications as described in \parencite{semanticWeb}.
 
-Extracting information from textual resources is a new field of research. In contrast to KDD the information are unstructed, what make it really hard to automatically extract usefull information. For example the world wide web is actual  a
+For changing the lack of machine-readability, an ontology is required, as well as the usage of the ontology on the textual information \parencite{semanticWeb}. An ontology for recipes is already in place \parencite{schemaRecipe}. But to deploy a strict ontology on textual information manually, for example through tagging, is slow and error prone \parencite{manualTagging}.
 
-\textbf{Text mining} was first mentioned in \parencite{KDT}
+\textbf{Text mining} deals with the automatic extraction of information from unstructered text. Once usefull information are extracted, it is easy to enclose them within tags and make them machine readability this way.
 
-
-here text mining
-recipe parsing problem 
-structured prediction problem 
+\textbf{Therefore the goal of this work} is to automatically extract ingredients with their quantity and unit from recipes and apply tags arround them for further processing.
 
 
+\section{Practical usefulness}
+Beside that text mining is interesting from a computer science point of view, beeing able to extract automatically ingredientes from recipes, can help in many scenarios.
 
-\textbf{Structure of this thesis:} ...
-\section{Why is this relevant?}
-Beside that the previous decripted topic is very interesting from a computer science view, it can also help in many practical points.
+The most obvious one is for cooking-services. It seems, that there is a huge cooking community with sheer endless of recipes for every region like allrecipes\footnote{http://allrecipes.com} for english, CHEFKOCH.DE\footnote{http://www.chefkoch.de/} for german and cookpad\footnote{http://cookpad.com/} for japanse speaking regions. They all have the advantage over traditional cookbooks, that user can share their expierence with and modifications of recipes. Furthermore they are the basis of recommodation networks for recipes. There are many studies, which take these sites as database and recommend recipes for example based on favorite ingredients or nutritionally value calculated out of the ingredients within a recipe (e.g. \cite{ingredientNetworks} or \cite{recipeRecommendation}).
 
-relevant cause of data minig:
-	already: Kochbuch.de...
-	Zukunft Gesellschaft, Geschichte...
+Having a huge machine-readable base of recipes and its ingredients can also provide insights in sociological points of interest. For example in XXX is a comparison between west and asia recipe cuisine.
+
+There are many more interesting questions, which could be analysed with the help of such a huge database like: 
+
+	Veränderung der deutschen Küche
+	Globalisierung (nicht lokale Zutaten)
+	Küche in Friedenszeiten / Kriegszeiten / Nachkriegszeiten -> Wohlstand an Essen ablesbar?
 
 
 \section{Structure of this thesis}
+Unknown yet :P
 
-\chapter{Theory basics}
-\section{Machine-readable data}
-\section{Machine learning}
+
+\chapter{Theory}
+\section{Machine-readable data and Ontologies}
+\section{Text mining}
+- was first mentioned in \parencite{KDT}
+- overview \parencite{surveyOfTextMining}
+
+-recipe parsing problem and structured prediction problem 
+
 \section{Exact formulation of the problem}
-\section{Similar work}
+\section{Similar work and distinction to this thesis}
+\cite{ingredientNetworks} or \cite{recipeRecommendation} (semi struktur -> RE sind gut genug)
+\section{Used algorithms}
 
+
+\chapter{Our recipe parser}
+\section{Our Website}
+\chapter{Evaluation}
+\chapter{Summary}
 
 
 \appendix
 \chapter{Statutory Declaration}
-\input{Appendix/appendix}
+I declare that I have developed and written the enclosed Master Thesis completely by myself, and have not used sources or means without declaration in the text. Any thoughts from others or literal quotations are clearly marked. The Master Thesis was not used in the same or in a similar version to achieve an academic grading or is being published elsewhere.
+\newline
+\newline
+\newline
+\rule{\textwidth}{1pt}
+Location, Date \hfill Signature 
 
 \chapter{Something else}
 hi

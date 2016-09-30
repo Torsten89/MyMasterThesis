@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.3)  29 SEP 2016 17:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.3)  30 SEP 2016 18:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -720,17 +720,16 @@ by Torsten Knauf".bbl' found.
 Package biblatex Info: Reference section=0 on input line 9.
 Package biblatex Info: Reference segment=0 on input line 9.
 
-(./Titlepage/titlepage.tex
-<Titlepage/cau-siegel.pdf, id=1, 398.34647pt x 455.24725pt>
-File: Titlepage/cau-siegel.pdf Graphic file (type pdf)
+<Images/cau-siegel.pdf, id=1, 398.34647pt x 455.24725pt>
+File: Images/cau-siegel.pdf Graphic file (type pdf)
 
-<use Titlepage/cau-siegel.pdf>
-Package pdftex.def Info: Titlepage/cau-siegel.pdf used on input line 20.
+<use Images/cau-siegel.pdf>
+Package pdftex.def Info: Images/cau-siegel.pdf used on input line 30.
 (pdftex.def)             Requested size: 170.71393pt x 195.09953pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Titlepage/cau-siegel.pdf
->]) [2
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Images/cau-siegel.pdf>] 
+[2
 
 ] [3
 
@@ -751,48 +750,51 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ]
 Chapter 1.
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.37 \newline
-             
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 78.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 78.
 [5
 
-]
+] [6]
 Chapter 2.
-[6
-
-]
-Appendix A.
-(./Appendix/appendix.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--66
-
- []
-
 [7
 
 ]
-Appendix B.
+Chapter 3.
 [8
 
 ]
-Appendix C.
+Chapter 4.
 [9
 
-] [10
+]
+Chapter 5.
+[10
+
+]
+Appendix A.
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--121
+
+ []
+
+[11
+
+]
+Appendix B.
+[12
+
+]
+Appendix C.
+[13
+
+] [14
 
 ] (./Extracting recipe ingredients from cookbooks by Torsten Knauf.aux)
 Package logreq Info: Writing requests to '"Extracting recipe ingredients from c
@@ -803,25 +805,27 @@ ookbooks by Torsten Knauf".run.xml'.
  )
 (\end occurred when \iftrue on line 9 was incomplete) 
 Here is how much of TeX's memory you used:
- 7163 strings out of 493029
- 115220 string characters out of 6136235
- 265809 words of memory out of 5000000
- 10618 multiletter control sequences out of 15000+600000
+ 7182 strings out of 493029
+ 115495 string characters out of 6136235
+ 267879 words of memory out of 5000000
+ 10642 multiletter control sequences out of 15000+600000
  9309 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,4n,58p,884b,926s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,58p,892b,935s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmtt12.pfb>
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
 Output written on "Extracting recipe ingredients from cookbooks by Torsten Knau
-f.pdf" (10 pages, 165948 bytes).
+f.pdf" (14 pages, 205730 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 88 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

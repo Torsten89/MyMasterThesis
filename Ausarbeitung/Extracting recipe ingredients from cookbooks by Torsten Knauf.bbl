@@ -16,6 +16,66 @@
   {}
 \endgroup
 
+\entry{semanticWeb}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Berners-Lee}{B.-L.}%
+     {T.}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hendler}{H.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lassila}{L.}%
+     {O.}{O.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BLT+1}
+  \strng{fullhash}{BLTHJLO1}
+  \field{labelyear}{2000}
+  \field{sortinit}{B}
+  \field{title}{Semantic web}
+  \field{journaltitle}{Scientific American, 1(1):68–88}
+  \field{year}{2000}
+\endentry
+
+\entry{manualTagging}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Erdmann}{E.}%
+     {M.}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Maedche}{M.}%
+     {A.}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Schnurr}{S.}%
+     {H.-P.}{H.-P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Staab}{S.}%
+     {S.}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{EM+1}
+  \strng{fullhash}{EMMASHPSS1}
+  \field{labelyear}{2000}
+  \field{sortinit}{E}
+  \field{title}{From Manual to Semi-automatic Semantic Annotation: About
+  Ontology-based Text Annotation Tools}
+  \field{journaltitle}{Scientific American, 1(1):68–88}
+  \field{year}{2000}
+\endentry
+
 \entry{KDT}{inproceedings}{}
   \name{author}{2}{}{%
     {{}%
@@ -68,7 +128,7 @@
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{HANAPG1}
+  \strng{namehash}{HA+1}
   \strng{fullhash}{HANAPG1}
   \field{labelyear}{2005}
   \field{sortinit}{H}
@@ -76,6 +136,109 @@
   \field{journaltitle}{LDV Forum - GLDV Journal for Computational Linguistics
   and Language Technology}
   \field{year}{2005}
+\endentry
+
+\entry{schemaRecipe}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Schema.org}{S.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{S1}
+  \strng{fullhash}{S1}
+  \field{labelyear}{2016}
+  \field{sortinit}{S}
+  \field{title}{Schema.org/Recipe}
+  \verb{url}
+  \verb https://schema.org/Recipe
+  \endverb
+  \field{year}{2016}
+\endentry
+
+\entry{ingredientNetworks}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Teng}{T.}%
+     {Chun-Yuen}{C.-Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lin}{L.}%
+     {Yu-Ru}{Y.-R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Adamic}{A.}%
+     {Lada~A.}{L.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \keyw{ingredient networks, recipe recommendation}
+  \strng{namehash}{TCY+1}
+  \strng{fullhash}{TCYLYRALA1}
+  \field{labelyear}{2012}
+  \field{sortinit}{T}
+  \field{booktitle}{Proceedings of the 4th Annual ACM Web Science Conference}
+  \verb{doi}
+  \verb 10.1145/2380718.2380757
+  \endverb
+  \field{isbn}{978-1-4503-1228-8}
+  \field{pages}{298\bibrangedash 307}
+  \field{series}{WebSci '12}
+  \field{title}{Recipe Recommendation Using Ingredient Networks}
+  \verb{url}
+  \verb http://doi.acm.org/10.1145/2380718.2380757
+  \endverb
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{year}{2012}
+\endentry
+
+\entry{recipeRecommendation}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Ueda}{U.}%
+     {Mayumi}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Takahata}{T.}%
+     {Mari}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nakajima}{N.}%
+     {Shinsuke}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {CEUR-WS.org}%
+  }
+  \strng{namehash}{UM+1}
+  \strng{fullhash}{UMTMNS1}
+  \field{labelyear}{2011}
+  \field{sortinit}{U}
+  \field{booktitle}{Proceedings of the Second International Conference on
+  Semantic Personalized Information Management: Retrieval and Recommendation -
+  Volume 781}
+  \field{pages}{98\bibrangedash 105}
+  \field{series}{SPIM'11}
+  \field{title}{User's Food Preference Extraction for Personalized Cooking
+  Recipe Recommendation}
+  \verb{url}
+  \verb http://dl.acm.org/citation.cfm?id=2887675.2887686
+  \endverb
+  \list{location}{1}{%
+    {Aachen, Germany, Germany}%
+  }
+  \field{year}{2011}
 \endentry
 
 \lossort
