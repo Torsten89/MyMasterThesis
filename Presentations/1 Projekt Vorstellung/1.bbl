@@ -1,0 +1,42 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{DTA}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Deutsches~Textarchiv}{D.~T.}%
+     {Berlin-Brandenburgische Akademie der~Wissenschaften}{B.-B. A. d.~W.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DTBBAdW1}
+  \strng{fullhash}{DTBBAdW1}
+  \field{labelyear}{2016}
+  \field{sortinit}{D}
+  \field{title}{Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche
+  und feinere Küche. 4. Aufl. Bielefeld, 1849.}
+  \verb{url}
+  \verb http://www.deutschestextarchiv.de/book/show/davidis_kochbuch_1849
+  \endverb
+  \field{year}{2016}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

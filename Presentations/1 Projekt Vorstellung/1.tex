@@ -1,0 +1,132 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[backend=bibtex, style=authoryear, maxcitenames=2]{biblatex}
+\addbibresource{../../Ausarbeitung/references.bib} 
+\usepackage{url}
+\definecolor{lila}{RGB}{128,0,128}
+
+\newcommand{\myCite}[1]{{\scriptsize\parencite{#1}}}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{%
+	\raisebox{5pt}{%
+		\makebox[\paperwidth]{%
+			\hfill\makebox[10pt]{%
+				\textcolor{gray}{\footnotesize\insertframenumber}
+			}
+		}
+	}
+}
+
+%\setbeamercovered{transparent} 
+%\logo{}  
+%\subject{} 
+\begin{document} 
+		
+\begin{frame}[plain,noframenumbering]
+	\begin{minipage}{0.25\textwidth}
+		\includegraphics[scale=0.049]{Images/Buchruecken}
+	\end{minipage}
+	\begin{minipage}{0.7\textwidth}
+		\begin{center}
+			\vspace{-1.5cm}
+			\Large{Extracting recipe ingredients \\ from cookbooks} \\
+			\vspace{0.5cm}
+			\large{Der Beginn einer Master-Arbeit} \\
+			\small{von \\ \vspace{-0.1cm} Torsten Knauf}
+		\end{center}
+	\end{minipage}
+\end{frame}
+
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+\section{Hintergrund der Arbeit}
+\subsection{Was und wieso}
+\begin{frame}{Was und wieso}
+	\begin{itemize}
+		\item Was?
+		\begin{itemize}
+			\item Zutaten der Rezepte automatisch extrahieren
+		\end{itemize}
+		\item Wieso?
+		\begin{itemize}
+			\item Ernährungswissenschaften
+			\item Soziologische Forschung wie z.B. Globalisierung, Wohlstand, ...
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{Digitalisierung}
+\begin{frame}{Digitalisierung}
+	\myCite{DTA} \\
+	\includegraphics[scale=0.3]{Images/BeispielSeite}
+\end{frame}
+
+\begin{frame}
+	\includegraphics[scale=0.4]{Images/derenXML} \\
+\end{frame}
+
+\begin{frame}
+	\includegraphics[scale=0.4]{Images/derenXML} \\
+	\vspace{0.3cm}
+	\hline
+	\vspace{0.3cm}
+	\includegraphics[scale=0.4]{Images/unserXML}
+\end{frame}
+
+\subsection{Das Tagging}
+\begin{frame}{Das Tagging}
+	\begin{itemize}
+		\item \textbf{cueML} (culinary editions markup language)
+		\begin{itemize}
+			\item Erweiterung von \textbf{TEI} (Text Encoding Initiative)
+			\item Erweitert mit \textbf{https://schema.org/Recipe}
+		\end{itemize}
+	\end{itemize}
+	\includegraphics[scale=0.45]{Images/TagBeispiel}
+\end{frame}
+
+\begin{frame}{Achtung}
+	\begin{itemize}
+		\item \textit{"[Man] legt ihn in einen eisernen Topf, darauf 1/4 Pfund in Scheiben geschnittenen rohen Schinken oder Sommerwurst"} $\rightarrow$ \textcolor{lila}{$<$recipeIngredientAlt$>$}
+		\item \textit{"Wie die vorhergehende, nur mit weiß gebranntem Mehl und Bouillonzubereitet, die Nelken bleiben weg."}
+		\item \textit{"Fehlt ihm die gewünschte Süße, so wird zeitig ein Stück Zucker dazu gethan so wie beim Anrichten die Brühe mit etwas Kartoffelmehl gebunden gemacht."} \\ $\rightarrow$ \textcolor{lila}{$<$recipeOptionalIngredient$>$}
+		\item Scorzoner-Wurzeln, Petersilienwurzel, \\
+		8 Pfennig Weißbrot verstehen, Loth, Quart
+	\end{itemize}
+\end{frame}
+
+
+\section{Ansätze}
+\begin{frame}{Ansätze}
+	\begin{itemize}
+		\item Was muss die Lösung alles können?
+		\begin{itemize}
+			\item \textcolor{red}{Aus reinem Text alle Zutaten eindeutig erkennen}
+			\item Zutaten erkennen \textbf{(Lemmatisierung)} und Zuordnen der Quantitäten und Einheiten zu den entsprechenden Zutaten \textbf{(Structure prediction for NLP)}
+			\item Unterscheidung ob eine Zutat verwendet werden soll, nicht verwendet werden soll, optional oder eine Alternative ist \textbf{(Klassifizierungs-Probleme)}
+			\item Verweise erkennen und verlinken \textbf{(Klassifizierungs-Probleme, Structure prediction for NLP)}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\section{Literatursuche}
+\begin{frame}{Literatursuche}
+	\printbibliography[heading=none]
+\end{frame}
+
+\begin{frame}
+	NLP nicht selber machen!
+\end{frame}
+
+\end{document}

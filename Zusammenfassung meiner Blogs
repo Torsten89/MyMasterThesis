@@ -1,0 +1,28 @@
+- Scorzoner-Wurzeln: Scorzonera (teuren Sommer-Trüffeln) vs Scorzonera hispanica (Schwarzwurzeln).
+Petersilienwurzel: Petersilie vs Wurzelpetersilie
+- [Man] legt ihn in einen eisernen Topf, darauf ¼ Pfund in Scheiben geschnittenen rohen Schinken oder Sommerwurst -> recipeIngredientAlt
+- Wie die vorhergehende, nur mit weiß gebranntem Mehl und Bouillonzubereitet, die Nelken bleiben weg. -> Im Link exclude
+- P-6 oder P-61 sind jeweils 2 unterschiedliche Rezepte innerhalb einem recipe-Tag. Eine Zutatenliste, welche beide Rezepte umschließend, finde ich irgendwie nicht akkurat.
+- Mengenangabe 8 Pfennig Weißbrot verstehen, Loth, Quart 
+- Beilagen Tag (vs. Ingredient Kartoffeln, Bratkartoffeln) - Ontology bilden ist schwer! :D
+-  Fehlt ihm die gewünschte Süße, so wird zeitig ein Stück Zucker dazu gethan so wie beim Anrichten die Brühe mit etwas Kartoffelmehl gebunden gemacht.-> Optionale Zutat - Kartoffelmehl nur wenn Zucker??
+- Rezept D-74 heißt Kartoffeln mit verschiedenen Saucen. Ist das überhaupt ein richtiges Rezept? Ist es sinnvoll verschiedene Saucen mit dem gesamten Saucen Kapitel zu verlinken?
+- Aus Regeln beim Zubereiten der Klöße ergibt sich für alle Klöße (L-Rezepte), bei denen nichts Anderes angeben ist, eine Kochzeit von 10-15min. Eigentlich sollte man diese Information dann auch überall entsprechend eintagen, was ich noch nicht getan habe. -> Informationen zwischen den Rezepten - 1 Quart
+- 3-4Eier, Mittelwert doofe Idee
+- recipeYield statt p.P. runterrechnen
+
+- einige Löffel ?!?!
+
+
+- <cue:recipeIngredient>ganzes Gewürz</cue:recipeIngredient> XD
+
+
+\begin{itemize}
+			\item Zutaten der Rezepte automatisch extrahieren
+		\end{itemize}
+		\item Wieso?
+		\begin{itemize}
+			\item Ernährungswissenschaften
+			\item Soziologische Forschung wie z.B. Globalisierung, Wohlstand, ...
+		\end{itemize}
+

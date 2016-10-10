@@ -14,9 +14,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}Text mining}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Exact formulation of the problem}{7}
+\contentsline {section}{\numberline {2.3}Similar work and distinction to this thesis}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Similar work and distinction to this thesis}{7}
+\contentsline {section}{\numberline {2.4}Exact formulation of the problem}{7}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}Used algorithms}{7}
 \defcounter {refsection}{0}\relax 
@@ -24,7 +24,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Data preparation}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Algorithm}{8}
+\contentsline {section}{\numberline {3.2}Workflow}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Implementation notes}{8}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Evaluation}{9}
 \defcounter {refsection}{0}\relax 
