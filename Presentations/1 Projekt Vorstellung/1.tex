@@ -10,6 +10,7 @@
 \usepackage{color}
 \usepackage[backend=bibtex, style=authoryear, maxcitenames=2]{biblatex}
 \addbibresource{../../Ausarbeitung/references.bib} 
+\renewcommand*{\bibfont}{\footnotesize}
 \usepackage{url}
 \definecolor{lila}{RGB}{128,0,128}
 
@@ -79,7 +80,7 @@
 \begin{frame}
 	\includegraphics[scale=0.4]{Images/derenXML} \\
 	\vspace{0.3cm}
-	\hline
+	\hrulefill
 	\vspace{0.3cm}
 	\includegraphics[scale=0.4]{Images/unserXML}
 \end{frame}
@@ -96,37 +97,75 @@
 	\includegraphics[scale=0.45]{Images/TagBeispiel}
 \end{frame}
 
-\begin{frame}{Achtung}
+\begin{frame}{Das Tagging \textcolor{red}{ - Achtung}}
 	\begin{itemize}
+		\item Scorzoner-Wurzeln, Petersilienwurzel
+		\item 8 Pfennig Weißbrot, Loth, Quart
 		\item \textit{"[Man] legt ihn in einen eisernen Topf, darauf 1/4 Pfund in Scheiben geschnittenen rohen Schinken oder Sommerwurst"} $\rightarrow$ \textcolor{lila}{$<$recipeIngredientAlt$>$}
 		\item \textit{"Wie die vorhergehende, nur mit weiß gebranntem Mehl und Bouillonzubereitet, die Nelken bleiben weg."}
 		\item \textit{"Fehlt ihm die gewünschte Süße, so wird zeitig ein Stück Zucker dazu gethan so wie beim Anrichten die Brühe mit etwas Kartoffelmehl gebunden gemacht."} \\ $\rightarrow$ \textcolor{lila}{$<$recipeOptionalIngredient$>$}
-		\item Scorzoner-Wurzeln, Petersilienwurzel, \\
-		8 Pfennig Weißbrot verstehen, Loth, Quart
 	\end{itemize}
 \end{frame}
 
 
-\section{Ansätze}
-\begin{frame}{Ansätze}
+\section{Ansätze für automatisches Tagging}
+\subsection{Was muss die Lösung alles können?}
+\begin{frame}{Ansätze für automatisches Tagging}
 	\begin{itemize}
 		\item Was muss die Lösung alles können?
 		\begin{itemize}
-			\item \textcolor{red}{Aus reinem Text alle Zutaten eindeutig erkennen}
+			\item \textbf{\textcolor{red}{Aus reinem Text alle Zutaten eindeutig erkennen}}
 			\item Zutaten erkennen \textbf{(Lemmatisierung)} und Zuordnen der Quantitäten und Einheiten zu den entsprechenden Zutaten \textbf{(Structure prediction for NLP)}
-			\item Unterscheidung ob eine Zutat verwendet werden soll, nicht verwendet werden soll, optional oder eine Alternative ist \textbf{(Klassifizierungs-Probleme)}
+			\item Unterscheidung ob eine Zutat verwendet werden soll, nicht verwendet werden soll, optional ist, eine Alternative ist \textbf{(Klassifizierungs-Probleme)}
 			\item Verweise erkennen und verlinken \textbf{(Klassifizierungs-Probleme, Structure prediction for NLP)}
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
-\section{Literatursuche}
-\begin{frame}{Literatursuche}
-	\printbibliography[heading=none]
+\subsection{Bestehende Ansätze}
+\begin{frame}
+	\begin{itemize}
+		\item Bestehende Ansätze:
+		\begin{itemize}
+			\item Reguläre Ausdrücke \parencite{REgutGenug}
+			\item Kontextfreie Grammatik: \parencite{GrammaBased} \\
+			$NP \rightarrow DT? JJ\textsuperscript{*} ING$
+			\item Conditional Random Field \parencite{CRFPaper}, \parencite{CRFZeit}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{Allgemeiner Workflow}
+\begin{frame}
+	\includegraphics[scale=0.8]{Images/workflow}
 \end{frame}
 
 \begin{frame}
-	NLP nicht selber machen!
+	\begin{center}
+		\includegraphics[scale=0.8]{Images/webseite}
+	\end{center}
+\end{frame}
+
+
+\section{Literatur}
+\subsection{Literatursuche ist toll}
+\begin{frame}{Literatursuche ist toll}
+	\textbf{\textcolor{red}{Aus reinem Text alle Zutaten eindeutig erkennen}}
+	\begin{itemize}
+		\item Problem verstehen $\rightarrow$ Teilgebiet vom Text Mining 
+		\item Zerlegung in Teilprobleme $\rightarrow$ Structure prediction for NLP, Lemmatisierung, Klassifizierungs-Probleme, Conditional Random Field
+		\item "Das Rad [nicht] neu erfinden"
+		\begin{itemize}
+			\item Bestehende Lösungen nutzen ist viel produktiver
+			\item Mehrere unterschiedliche Lösungen / Ideen / Meinungen ergänzen sich oft
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\subsection{Literaturverzeichnis}
+\begin{frame}[t,allowframebreaks]{Literaturverzeichnis}
+	\printbibliography[heading=none]
 \end{frame}
 
 \end{document}
