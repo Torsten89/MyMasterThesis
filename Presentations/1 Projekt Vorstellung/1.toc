@@ -18,7 +18,7 @@
 \defcounter {refsection}{0}\relax 
 \beamer@subsectionintoc {2}{2}{Bestehende Ans\IeC {\"a}tze}{10}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{3}{Allgemeiner Workflow}{11}{0}{2}
+\beamer@subsectionintoc {2}{3}{Typischer Workflow}{11}{0}{2}
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {3}{Literatur}{13}{0}{3}
 \defcounter {refsection}{0}\relax 
