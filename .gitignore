@@ -1,0 +1,13 @@
+#remove build helper of latex
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.run.xml
+*.synctex.gz
+*.toc
+*-blx.bib
+*.nav
+*.out
+*.snm
