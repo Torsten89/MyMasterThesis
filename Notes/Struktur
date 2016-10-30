@@ -1,19 +1,26 @@
 Introduction
-	- Why we do this (Ernährungswissenschaften - further in discussion)
+	- Why we extract ingredients from recipes (Ernährungswissenschaften + further in discussion)
 	- Need for automatisation
 	- Structure of this thesis
+	
 Tag schemata
 	- Schemata (TEI + schema.org/Recipe -> cueMLv2 )
 	- Schemata check with website (da leider neues Schemata)
-Theory
-	- Algs
-	- Some more or less useful metrics
-Recipe Parser
+	
+Related Work
+
+Development Process of our recipe Parser
+	For each Iteration: 
+		- idea
+		- test / visualisation
+		- evaluation
+		- git tag
+		
+Final Recipe Parser
 	- Workflow
-	- Implementation
 	- Evaluation
+	
 Discussion
-	- Related Work
 	- Power of Strucutred Data / Semantic web
 		- soziologische Forschung (Globalisation, Wohlstand, Kriegsküche)
 		- Was wir über uns preisgeben (Hilary's Gesundheitsstatus wichtiger Faktor im US-Wahlkampf)

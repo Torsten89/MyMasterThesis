@@ -1,0 +1,7 @@
+http://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/?_r=0
+
+deren GIt:
+https://github.com/NYTimes/ingredient-phrase-tagger
+
+Nach implementiert:
+https://rajmak.wordpress.com/2016/02/19/structuring-text-using-conditional-random-field-crf-tagging-recipe-ingredient-phrases/

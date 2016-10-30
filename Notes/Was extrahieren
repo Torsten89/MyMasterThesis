@@ -1,0 +1,28 @@
+Zutaten:
+	- Zutat
+	- Explizit keine Zutat
+	- optionale Zutat
+	- Alternative von Zutaten
+	
+Links / Verweise
+	- Welche Zutaten aus Verweis übernehmen
+	
+cookMethod:
+	- Im Beispiel vom schema.org/Recipe selbst nicht verwendet (bake)
+	- wo ist der Mehrwert darin ob der Braten gebraten, oder in den Ofen kommt?
+		- Ofen extrahieren als Info das Ofen gebraucht wird?
+	- Mehlschwitze -> gebraten? - Soße mit Mehlschwitze -> gebraten??
+	
+	- Chefkoch.de: -
+	
+time:
+	Info von preTime: 	So lange schnibble ich
+	Info von cooktime:	So lange kann ich alles stehen lassen und zwischen durch was anderes machen?
+	Info von totalTime:	So lange muss ich insgesamt für das Essen einplanen
+	
+	Chefkoch.de: Unter Zutatnliste: Arbeitszeit: ca. 30 Min. / Koch-/Backzeit: ca. 1 Std. 15 Min. 
+	
+	Diese Informationen sind nicht im Buch "kodiert" (manchmal "man rechner zur Zubereitung" :) )
+		- P-64: Hagebutten 1/4h kochen und später alles durchkochen
+		- D-58: Kohl 10min abkochen falls er was Starkes hat. Kohl 1.5h Kochen. Kohl mind. 2h kochen (wahrscheinlich totalTime, aber "mind." -.-)
+	

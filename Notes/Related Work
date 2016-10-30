@@ -1,0 +1,63 @@
+IE-Based
+	Statt Ingredient-Action Relation !Ingredient-Quantity!
+
+	Figure 3.2
+	POS Tagger + Morphological Analysis -> check all nouns against Dictionary
+	Ingredient-Action Relationship durch Context Free Grammar (CGF)
+		Durch Grammatik erzeugbare Tag-Sets kriegen feste Ingredient-Action - Bedeutung
+	Precision: 97,39%, Recall 51,55% (weil Regeln zu schlicht (CRF besser :P ) )
+	
+	Statt CFG Dependency based parsing (Satzstruktur/Beziehungen durch Baum dargestellt)
+	Precision: 95,4%, Recall 64,12%
+	
+	Probs: "sprinkle over potato mixture. Bake." Implizite Infos aus Vortext
+	
+NYT
+	Die haben bereits ingredient phrases "1 tablespoon fresh lemon juice"
+	CRF
+	89% sentence-level accuracy when trained on 130,000 labeled ingredient phrases from the database
+	
+	
+Could not locate executable gfortran
+Could not locate executable f95
+Could not locate executable ifort
+Could not locate executable ifc
+Could not locate executable lf95
+Could not locate executable pgfortran
+Could not locate executable f90
+Could not locate executable f77
+Could not locate executable fort
+Could not locate executable efort
+Could not locate executable efc
+Could not locate executable g77
+Could not locate executable g95
+Could not locate executable pathf95
+don't know how to compile Fortran code on platform 'posix'
+
+zip_safe flag not set; analyzing archive contents...
+numpy._import_tools: module references __file__
+numpy._import_tools: module references __path__
+numpy.doc.__init__: module references __file__
+numpy.f2py.f2py2e: module references __file__
+numpy.f2py.setup: module references __file__
+numpy.f2py.diagnose: module references __file__
+numpy.testing.utils: module references __file__
+numpy.testing.nosetester: module references __file__
+numpy.testing.noseclasses: module references __file__
+numpy.distutils.npy_pkg_config: module references __file__
+numpy.distutils.system_info: module references __file__
+numpy.distutils.misc_util: module references __file__
+numpy.distutils.exec_command: module references __file__
+numpy.distutils.command.build_src: module references __file__
+numpy.distutils.fcompiler.__init__: module references __file__
+numpy.distutils.fcompiler.compaq: module references __file__
+numpy.lib.utils: module references __file__
+numpy.lib.utils: module references __path__
+numpy.lib.utils: module MAY be using inspect.getsource
+numpy.lib.utils: module MAY be using inspect.getsourcefile
+numpy.core.generate_numpy_api: module references __file__
+numpy.core.cversions: module references __file__
+numpy.core.setup: module references __file__
+numpy.core.setup_common: module references __file__
+
+
