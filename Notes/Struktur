@@ -4,15 +4,16 @@ Introduction
 	- Structure of this thesis
 	
 Tag schemata
+	- Rezepte sehen so aus
 	- Schemata (TEI + schema.org/Recipe -> cueMLv2 )
 	- Schemata check with website (da leider neues Schemata)
 	
 Related Work
 
 Development Process of our recipe Parser
-	For each Iteration: 
+	- Setup
+	- For each Iteration: 
 		- idea
-		- test / visualisation
 		- evaluation
 		- git tag
 		
