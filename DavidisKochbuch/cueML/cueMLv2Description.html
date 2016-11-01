@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>cueMLv2.1</title>
+		<link href="css/cueMLTable.css" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		<h1>Description of cueMLv2.1</h1>
+		
+		<p> CueMLv2.1 is an ontology for recipes within cookbooks
+			and based on <a href="http://www.tei-c.org/index.xml">TEI: Text Encoding Initiative</a>
+			and <a href="https://schema.org/Recipe">schema.org/Recipe</a>. TEI is... Schema.org/Recipe is...
+			This website should give an overview of it and provide examples of how to use it.</p>
+		
+		<h2>Example 1</h2>
+		
+		<table class="cueMLTable" id="cueMLTableElement">
+			<tr>
+				<th style="font-size: 1.3em;">Element</th>
+				<th>Description</th>
+				<th>Attribute</th>
+				<th>Allowed child elements</th>
+			</tr>
+			
+			<tr>
+			    <td>cookTime</td>
+			    <td>The time the recipe has to cook/bake/...</td>
+				<td><a href="#dur-iso">dur-iso</a></td>
+				<td><a href="#text">text</a></td>
+			</tr>
+			<tr>
+			    <td id="head">head</td>
+			    <td>name of the recipe</td>
+			    <td>-</td>
+				<td><a href="#text">text</a></td>
+			</tr>
+			<tr>
+			    <td>link</td>
+			    <td>A reference to another source like a previous recipe</td>
+				<td><a href="#target">target</a></td>
+				<td><a href="#text">text</a></td>
+			</tr>
+			<tr>
+			    <td id="note">note</td>
+			    <td>Additional note to the recipe, as you can use white french wine and rum instead of madeira wine </td>
+			    <td>-</td>
+				<td><a href="#cookTime">cookTime</a>, <a href="#link">link</a>,
+					<a href="#prepTime">prepTime</a>, <a href="#recipeIngredient">recipeIngredient</a>,
+					<a href="#recipeYield">recipeYield</a>, <a href="#text">text</a>, 
+					<a href="#totalTime">totalTime</a></td>
+			</tr>
+			<tr>
+			    <td id="p">p</td>
+			    <td>(Part of) Textual description of the recipe</td>
+			    <td>-</td>
+				<td><a href="#cookTime">cookTime</a>, <a href="#link">link</a>,
+					<a href="#prepTime">prepTime</a>, <a href="#recipeIngredient">recipeIngredient</a>,
+					<a href="#recipeYield">recipeYield</a>, <a href="#text">text</a>, 
+					<a href="#totalTime">totalTime</a></td>
+			</tr>
+			<tr>
+			    <td>prepTime</td>
+			    <td>The time it takes to prepare the recipe</td>
+				<td><a href="#dur-iso">dur-iso</a></td>
+				<td><a href="#text">text</a></td>
+			</tr>
+			<tr>
+			    <td>recipe</td>
+			    <td>A recipe for a meal</td>
+			    <td><a href="#rcp-id">rcp-id</a>, <a href="#type">type</a>, <a href="#cookMethod">cookMethod</a></td>
+				<td><a href="#head">head</a>, <a href="#p">p</a>, <a href="#note">note</a></td>
+			</tr>
+			<tr>
+			    <td>recipeIngredient</td>
+			    <td>A single ingredient used in the recipe, e.g. sugar, flour or garlic</td>
+			    <td><a href="#isOptional">isOptional</a>, <a href="#isAlt">isAlt</a>,
+					<a href="#dontUse">dontUse</a>, <a href="#reference">reference<a>
+					<a href="#unit">unit<a></td>
+				<td><a href="#text">text</a></td>
+			</tr>
+			<tr>
+			    <td>recipeYield</td>
+			    <td>Number of people served by the recipe</td>
+				<td><a href="#quantity">quantity</a></td>
+				<td><a href="#text">text</a></td>
+			</tr>
+			<tr>
+			    <td id="span">span</td>
+			    <td>Defines the start and end of a reference.
+					<i>id</i>, <i>from</i> and <i>to</i> have to be a valid id in the document</td>
+			    <td>id, from, to</td>
+				<td><a href="#text">text</a></td>
+			</tr>
+			<tr>
+			    <td id="spanGrp">spanGrp</td>
+			    <td>Container for all <a href="#span">span</a>-elements</td>
+			    <td>-</td>
+				<td><a href="#span">span</a></td>
+			</tr>
+			<tr>
+			    <td id="text">text</td>
+			    <td>Plain text</td>
+			    <td>-</td>
+				<td>-</td>
+			</tr>
+			<tr>
+			    <td>totalTime</td>
+			    <td>The total time it takes to prepare and cook the recipe</td>
+				<td><a href="#dur-iso">dur-iso</a></td>
+				<td><a href="#text">text</a></td>
+			</tr>
+		</table>
+		
+		<p/>
+		
+		<table class="cueMLTable" id="cueMLTableAttribut">
+			<tr>
+				<th style="font-size: 1.3em;">Attribut</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			
+			<tr>
+				<td id="cookMethod">cookMethod</td>
+				<td>steam, bake</td>
+				<td>The main method of cooking, such as <i>steamed</i> fished</td>
+			</tr>
+			<tr>
+			    <td id="dontUse">dontUse</td>
+			    <td>True</td>
+				<td>States explicitly to <i>not</i> use this ingredient</td>
+			</tr>
+			<tr>
+			    <td id="dur-iso">dur-iso</td>
+			    <td>Duration in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO_8601</a></td>
+				<td>Period of time</td>
+			</tr>
+			<tr>
+			    <td id="isAlt">isAlt</td>
+			    <td>identifier</td>
+				<td>Within a recipe all ingredients with the same isAlt-identifier are
+					alternatives to each other</td>
+			</tr>
+			<tr>
+			    <td id="isOptional">isOptional</td>
+			    <td>True</td>
+				<td>States the ingredient is optional in the recipe</td>
+			</tr>
+			<tr>
+				<td id="quantity">quantity</td>
+				<td>double[-double][ pP]</td>
+				<td>Specifies the quantity by a number or a range and optional states that it is meant as quantity per person (pP)</td>
+			</tr>
+			<tr>
+				<td id="rcp-id">rcp-id</td>
+				<td>String</td>
+				<td>Unique id across the document</td>
+			</tr>
+			<tr>
+				<td id="reference">reference</td>
+				<td>identifier</td>
+				<td>The identifier of the reference contains more information for the ingredient.
+					For example when the ingriedient is dumbling, a reference could
+					<a href="#target">target</a> a recipe for dumblings. All ingredients of the reference
+					are meant to be included as sub ingredients to the ingredient.
+					<i>Note</i> that a <i>dontUse</i>-attribute is meant to hava a higher priority
+					than the included sub ingredients</i></td>
+			</tr>
+			<tr>
+				<td id="target">target</td>
+				<td>id</td>
+				<td>The id targets a <a href="#span">span</a>-element, which should define a reference</td>
+			</tr>
+			<tr>
+				<td id="type">type</td>
+				<td>String</td>
+				<td>Specifies a meal-category such as soup or fish</td>
+			</tr>
+			<tr>
+				<td id="unit">unit</td>
+				<td>Maß, Pfund, ...</td>
+				<td>Unit of specified quantity</td>
+			</tr>
+		</table>
+	</body>
+</html>

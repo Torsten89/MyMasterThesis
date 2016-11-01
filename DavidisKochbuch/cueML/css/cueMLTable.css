@@ -1,0 +1,28 @@
+table.cueMLTable {
+    border-collapse: collapse;
+	width: 90%;
+}
+
+table.cueMLTable tr {
+    border-bottom: 1px solid #ccc;  
+}
+
+table.cueMLTable th {
+    text-align: left;  
+}
+
+table.cueMLTable td {
+	padding: 1em 0em 1em 1em;
+}
+
+table.cueMLTable  td:first-child {
+    font-weight: bold;
+}
+
+#cueMLTableElement {
+	background-color: rgb(152, 251, 238);
+}
+
+#cueMLTableAttribut {
+	background-color: rgb(251, 221, 253);
+}
