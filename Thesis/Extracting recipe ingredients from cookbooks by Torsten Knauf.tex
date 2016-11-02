@@ -46,6 +46,7 @@
     \end{tabbing}
 \end{titlepage}
 
+\pagenumbering{Roman}
 \chapter*{Abstract}
 Always do this one last, when knowing the things to praise  yourself for :P
 
@@ -58,54 +59,84 @@ If I don't profit from nice people in these thesis, I have done something horrib
 
 % \listoftables
 
+\clearpage
+\pagenumbering{arabic}  
 \chapter{Introduction}
+A recipe parser, which can tag old and rather unstructured cookbooks according to the ontology of \parencite{schemaRecipe}, is developed in this thesis. Once it is tagged, it is easy to extract the tagged entities. The parser is developed and tested with \textit{Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849} but can be adapted easily to every German cookbook. For other languages new training data and dictionaries for the machine learning preparation of the parser have to be provided, but the general algorithm can be inherited.
 
-The introduction points out, what this thesis is about, why it is actual useful and finishes with an overview of the structure of this thesis.
+This effort is motivated by nutritional science. Being able to extract the ingredients of a recipe automatically simplifies research according healthy food as well as historical analysis.
 
-\section{What is this thesis about?}
-In general extracting automatically information from textual resources is a new field of research. In contrast to knowledge discovery in databases the information are unstructured, what makes it hard to automatically extract useful information. For example the world wide web consists mainly of textual information, enriched with some meta data for formatting, but without clues of its content. At least without clues, which a machine can process further. This restricts heavily the possibilities of new applications as described in \parencite{semanticWeb}.
-
-For changing the lack of machine-readability, an ontology is required, as well as the usage of the ontology on the textual information \parencite{semanticWeb}. An ontology for recipes is already in place \parencite{schemaRecipe}. But to deploy a strict ontology on textual information manually, for example through tagging, is slow and error prone \parencite{manualTagging}.
-
-\textbf{Text mining} deals with the automatic extraction of information from unstructured text. Once useful information are extracted, it is easy to enclose them within tags and make them machine-readable this way.
-
-\textbf{Therefore the goal of this work} is to automatically extract ingredients with their quantity and unit from recipes and apply tags around them for further processing.
+The thesis is structured as follows:
 
 
-\section{Practical usefulness}
-Beside that text mining is interesting from a computer science point of view, being able to extract automatically ingredients from recipes and build a huge machine-readable data pool, can help in many scenarios.
+\chapter{Making a cookbook machine-readable}
+This chapter covers shortly how we transform a cookbook in a machine-readable XML file, which can be processed further arbitrarily. To achieve this, the cookbook has to be digitalized first and afterwards enriched through an ontology.
 
-The most obvious one is for cooking-services. It seems, that there is a huge cooking community with sheer endless of recipes for every region like e.g. allrecipes\footnote{http://allrecipes.com/} for English, CHEFKOCH.DE\footnote{http://www.chefkoch.de/} for German and cookpad\footnote{http://cookpad.com/} for Japanese speaking regions. They all have the advantage over traditional cookbooks, that user can share their experience with recipes as well as their modifications. Furthermore they are the basis for recommendation networks for recipes. There are many studies, which take these sites as data pool and recommend recipes for example based on favourite ingredients or nutritionally value calculated out of the ingredients within a recipe (e.g. \cite{ingredientNetworks} or \cite{recipeRecommendation}).
+\section{Digitalisation}
+In general there are two different ways, how to digitalize a book. The first one is to scan each side and let an \textit{optical character recognition}-program translate the scanned pictures into text. The second one is to \textit{type it manual} into a computer.
 
-Having a huge machine-readable base of recipes and its ingredients can also provide insights in sociological points of interest. For example in XXX is a comparison between American and Asian kitchen based on about 56.000 recipes.
+The German Text Archive provides a collection of German texts from 16th to 19th century including \textit{Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849} in \parencite{DTA}. They digitalized it through double keying, meaning that two people manual typed the book into the computer. Differences in their versions were revised by a third person.
 
-There are many more interesting questions, which could be analysed with the help of such a huge data pool like a historic analysis of the development and changes of cooking. Occurrences of non-local ingredients or meals are evidence for inter cultural exchange and globalisation. More expensive ingredients could be an indication for prosperity, while very simple kitchen for poverty or even wartimes.
+The digitalized version can be downloaded from \parencite{DTA}. It is already enriched through \textit{TEI: Text Encoding Initiative}-standard\footnote{http://www.tei-c.org/index.xml}. TEI is a standard for representing text in digital form, which should be analysed later in humanities, social sciences or linguistics.
 
-Therefore I hope, that the data pool of recipes and its ingredients made in this work, will be helpful for further studies.
+Figure XXX depicts the digitalized version of our cookbook.
 
-\section{Structure of this thesis}
-Unknown yet :P
+Because we are only interested in extracting certain data from the recipes and not in linguistic analysis or something else, we transformed the digitalized version as depicted in figure XXX. The essence of this version is, that every recipe can be easily transformed into this form and that every recipe can be easily read by human for manual tagging. 
+
+\section{CueML ontology}
+For general automatic extraction and further processing of information an ontology is needed. In computer science an ontology is a vocabulary with defined meaning. A very nice description for the use of ontologies, which are a requirement for the Semantic Web, can be found in \parencite{semanticWeb}.
+
+\parencite{schemaRecipe} is an existing ontology for recipes. Figure XXX depicts its usage. It works fine for well structured recipes, which already have a list of used ingredients. However it is not well suited for tagging our cookbook as the following example demonstrates.
+
+Therefore we invented \textit{cueML}...
+
+Now this format can be easily transformed into a well structured recipe and afterwards be tagged with the standard ontology from \parencite{schemaRecipe}
+
+
+\section{Need for automatisation}
+\parencite{manualTagging} error prone. Brauche so lange pro Rezept
+
 
 \chapter{Related Work}
-
-
 \cite{REgutGenug}
-
-\chapter{Theory Background}
-\section{Machine-readable data and Ontologies}
+\section{Masterarbeit}
 \section{CRF}
 
 
-\chapter{Our recipe parser}
-\section{Exact formulation of the problem}
-\section{Data preparation}
-\section{Workflow}
-\section{Implementation notes}
+\chapter{Development of recipe parser}
 
-\chapter{Evaluation}
-\section{Our Website}
-\section{Some more or less awesome metrics and formulas}
--Precision -Recall F-measure
+\section{Test set-up}
+
+\section{First Iteration: Basis CRF}
+Git-tag
+\subsection{Idea}
+\subsection{Evaluation}
+
+\section{Final recipe parser}
+\subsection{Workflow}
+\subsection{Evaluation}
+
+\chapter{Discussion}
+- Übertragung auf beliebige Bücher (Wenn Buch hat bereits Zutatenliste erste Phase entfällt)
+- Power of Strucutred Data / Semantic web
+	- soziologische Forschung (Globalisation, Wohlstand, Kriegsküche)
+	- Was wir über uns preisgeben (Hilary's Gesundheitsstatus wichtiger Faktor im US-Wahlkampf)
+- TDD / früh Plausibilitäts-Überprüfungen (insbesondere fürs Schemata, Mengenangaben historische Recherche nötig)
+
+\section{Power of machine readable data}
+Machine readable data are very powerful. But \textit{with great power comes great responsibility}\footnote{A well known proverb with uncertain origin \parencite{quoteInvestigator}}. In the context of a recipe parser this might be a little bit exaggerated. But specially in mind of the global surveillance disclosures denounced by Edward Snowed with uncertain dimension, I think it is important to have a consciousness for what can be done. Therefore I want to think about, what can be done through innocent looking machine readable tags. 
+\bigskip
+
+\textbf{For the good} there exists already much effort for services, which require being able to extract ingredient from recipes.
+
+ (e.g. \cite{ingredientNetworks} or \cite{recipeRecommendation}).
+
+Further more, having a huge machine-readable base of recipes and its ingredients, can also provide insights in sociological research. For example in (((Flavor network and the principles of food pairing : Scientific Reports))) is a comparison between American and Asian kitchen based on about 56.000 recipes.
+
+There are many more interesting questions, which could be analysed like a historic analysis of the development and changes of cooking. Occurrences of non-local ingredients or meals are evidence for inter cultural exchange and globalisation. More expensive ingredients could be an indication for prosperity, while very simple kitchen for poverty or even wartimes...
+\bigskip
+
+\textbf{In the bad} \parencite{clintonHealth}
 
 
 \chapter{Summary}

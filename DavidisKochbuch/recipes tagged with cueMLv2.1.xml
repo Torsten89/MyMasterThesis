@@ -16,144 +16,258 @@
    </teiHeader>
    <text>
       <body>
-         
+
          <anchor xml:id="A-12-start"/>
          <cue:recipe type="Allgemeine_Vorbereitungsregeln" rcp-id="A-12">
             <head>Braune Kraftbrühe zu braunem Ragout.</head>
-            
-            <p><anchor xml:id="Jus-start"/><recipeYield>Zu <quantity basisForm="12">zwölf</quantity> Personen</recipeYield> nimmt man <ingredientPhrase><quantity>¼</quantity> <unit>Pfund</unit> in Scheiben
-               geschnittenen <recipeIngredient>Speck</recipeIngredient></ingredientPhrase>, legt ihn in einen eisernen Topf, darauf <altIngredientPhrases><ingredientPhrase><quantity>¼</quantity> <unit>Pfund</unit> in
-               Scheiben geschnittenen <recipeIngredient basisForm="roher_Schinken">rohen Schinken</recipeIngredient></ingredientPhrase>, oder <ingredientPhrase>Sommerwurst</ingredientPhrase></altIngredientPhrases>,
-               <ingredientPhrase><quantity>2</quantity> <unit>Pfund</unit> <recipeIngredient>Rindfleisch</recipeIngredient>, ebenfalls in dünne Scheiben geschnitten</ingredientPhrase>,
-               nebst <ingredientPhrase><unit>2</unit> <quantity>Zwiebeln</quantity></ingredientPhrase>, <ingredientPhrase><quantity>2</quantity> <recipeIngredient basisForm="Lorberblatt">Lorberblättern</recipeIngredient></ingredientPhrase>,
-               <ingredientPhrase><quantity basisForm="1">einer</quantity> <recipeIngredient basisForm="Kurkuma">gelben Wurzel</recipeIngredient></ingredientPhrase>, <ingredientPhrase><quantity basisForm="0.5">einer halben</quantity> <recipeIngredient>Sellerieknolle</recipeIngredient></ingredientPhrase>,
-               <ingredientPhrase><quantity basisForm="1">einer</quantity> <recipeIngredient>Petersilienwurzel</recipeIngredient></ingredientPhrase>,
-               <ingredientPhrase><recipeIngredient>ganzes Gewürz</recipeIngredient></ingredientPhrase>, so auch, wenn man
-              <ingredientPhrase> <recipeIngredient basisForm="Fleisch_Reste">Abfall von verschiedenem rohen Fleisch</recipeIngredient> hat, es kann das Schlechteste sein, nur nichts
-               vom Kopfe</ingredientPhrase>, weil die Jus sonst nicht klar wird. Dies Alles setzt man auf gelindes
-               Feuer und läßt es zugedeckt <cookTime><quantity basisForm="0.5">½</quantity> <unit basisForm="h">Stunde</unit></cookTime> langsam
-                  braten. Es ist gut, wenn es, ohne jedoch zu brennen, sich am
-               Topfe braun ansetzt.<anchor xml:id="Jus-end"/> Ist dies geschehen, gibt man einen Guß
-               kochendes Wasser hinzu und wiederholt dies, wenn es sich angesetzt hat, mehrere Mal.
-               Nachdem es braun genug ist, gießt man so viel kochendes Wasser zu, als man Brühe, zum
-               Einkochen mitgerechnet, haben muß und läßt es zugedeckt an einer Seite langsam
-               kochen. <ingredientPhrase>Das <recipeIngredient>Salz</recipeIngredient> gibt man <dontUse>nicht</dontUse> in die Brühe</ingredientPhrase>, sondern erst zum Ragout. Ist das
-               Fleisch nach Verlauf von <cookTime><quantity>2</quantity> <unit basisForm="h">Stunden</unit></cookTime> gut
-               ausgekocht, so gießt man die Brühe durch ein Haarsieb und klärt sie vom Fett und
-               Bodensatz.</p>
+
+            <p><anchor xml:id="Jus-start"/><recipeYield>Zu <quantity basisForm="12">zwölf</quantity>
+                  Personen</recipeYield> nimmt man <ingredientPhrase><quantity>¼</quantity>
+                  <unit>Pfund</unit> in Scheiben geschnittenen
+                     <recipeIngredient>Speck</recipeIngredient></ingredientPhrase>, legt ihn in
+               einen eisernen Topf, darauf
+                        <altIngredientPhrases><ingredientPhrase><quantity>¼</quantity>
+                     <unit>Pfund</unit> in Scheiben geschnittenen <recipeIngredient
+                        basisForm="roher_Schinken">rohen
+                     Schinken</recipeIngredient></ingredientPhrase>, oder
+                     <ingredientPhrase>Sommerwurst</ingredientPhrase></altIngredientPhrases>,
+                     <ingredientPhrase><quantity>2</quantity>
+                  <unit>Pfund</unit>
+                  <recipeIngredient>Rindfleisch</recipeIngredient>, ebenfalls in dünne Scheiben
+                  geschnitten</ingredientPhrase>, nebst <ingredientPhrase><unit>2</unit>
+                  <quantity>Zwiebeln</quantity></ingredientPhrase>,
+                     <ingredientPhrase><quantity>2</quantity>
+                  <recipeIngredient basisForm="Lorberblatt"
+                  >Lorberblättern</recipeIngredient></ingredientPhrase>, <ingredientPhrase><quantity
+                     basisForm="1">einer</quantity>
+                  <recipeIngredient basisForm="Kurkuma">gelben
+                  Wurzel</recipeIngredient></ingredientPhrase>, <ingredientPhrase><quantity
+                     basisForm="0.5">einer halben</quantity>
+                  <recipeIngredient>Sellerieknolle</recipeIngredient></ingredientPhrase>,
+                     <ingredientPhrase><quantity basisForm="1">einer</quantity>
+                  <recipeIngredient>Petersilienwurzel</recipeIngredient></ingredientPhrase>,
+                     <ingredientPhrase><recipeIngredient>ganzes
+                  Gewürz</recipeIngredient></ingredientPhrase>, so auch, wenn man <ingredientPhrase>
+                  <recipeIngredient basisForm="Fleisch_Reste">Abfall von verschiedenem rohen
+                     Fleisch</recipeIngredient> hat, es kann das Schlechteste sein, nur nichts vom
+                  Kopfe</ingredientPhrase>, weil die Jus sonst nicht klar wird. Dies Alles setzt man
+               auf gelindes Feuer und läßt es zugedeckt <cookTime><quantity basisForm="0.5"
+                     >½</quantity>
+                  <unit basisForm="h">Stunde</unit></cookTime> langsam braten. Es ist gut, wenn es,
+               ohne jedoch zu brennen, sich am Topfe braun ansetzt.<anchor xml:id="Jus-end"/> Ist
+               dies geschehen, gibt man einen Guß kochendes Wasser hinzu und wiederholt dies, wenn
+               es sich angesetzt hat, mehrere Mal. Nachdem es braun genug ist, gießt man so viel
+               kochendes Wasser zu, als man Brühe, zum Einkochen mitgerechnet, haben muß und läßt es
+               zugedeckt an einer Seite langsam kochen. <ingredientPhrase>Das
+                     <recipeIngredient>Salz</recipeIngredient> gibt man <dontUse>nicht</dontUse> in
+                  die Brühe</ingredientPhrase>, sondern erst zum Ragout. Ist das Fleisch nach
+               Verlauf von <cookTime><quantity>2</quantity>
+                  <unit basisForm="h">Stunden</unit></cookTime> gut ausgekocht, so gießt man die
+               Brühe durch ein Haarsieb und klärt sie vom Fett und Bodensatz.</p>
          </cue:recipe>
          <anchor xml:id="A-12-end"/>
-         
+
          <cue:recipe type="Suppen." rcp-id="B-1">
             <head>Klare weiße Rindfleischsuppe.</head>
-            
-            <p><ingredientPhrase>Man rechnet, wenn die Gesellschaft klein ist, <perPerson>auf jede Person</perPerson> <quantity basisForm="0.75">¾</quantity> <unit>Pfund</unit>, bei einer
-               großen Gesellschaft <quantity basisForm="0.5">½</quantity> <unit>Pfund</unit> <recipeIngredient basisForm="Rindfleisch">Fleisch</recipeIngredient></ingredientPhrase>. Dasselbe wird gewaschen und mit doppelt so
-               vielem Wasser, als man Suppe haben will, zu Feuer gesetzt. Auf jede Person rechnet
-               man bei einem Gesellschaftsessen ⅜ Maß Suppe, also auch ¾ Maß Wasser, wozu man gleich
-               das <ingredientPhrase>nöthige <recipeIngredient>Salz</recipeIngredient></ingredientPhrase> gibt, weil das Fleisch nur in der ersten Stunde des Kochens das Salz
-               annimmt und das spätere Hinzugeben des Salzes nur die Suppe würzt. Ist das Fleisch
-               sorgfältig ausgeschäumt, gibt man <ingredientPhrase><quantity basisForm="1">eine</quantity> fein geschnittene <recipeIngredient>Zwiebel</recipeIngredient></ingredientPhrase> hinzu, wodurch die
-               Brühe an Kraft gewinnt, und läßt sie, fest zugedeckt, fortwährend, aber nicht zu
-               stark kochen. <cookTime><quantity basisForm="1">Eine</quantity> <unit basisForm="h">Stunde</unit></cookTime> später gießt man die Brühe durch ein Haarsieb, weil sie nie
-               ganz klar ist, spült das Stück Fleisch eben ab und setzt es mit der Brühe, die man
-               vom Bodensatz langsam abschüttet, in dem ebenfalls umgespülten Topfe wieder zu Feuer
-               nebst <ingredientPhrase>einigen <recipeIngredient basisForm="Scorzonerwurzeln">Scorzoner-</recipeIngredient>, <quantity basisForm="1">einer</quantity> <recipeIngredient basisForm="Selleriewurzel">Sellerie-</recipeIngredient> und <recipeIngredient>Petersilienwurzel</recipeIngredient></ingredientPhrase>. Hiermit läßt man die
-               Suppe ferner kochen, während man zuweilen das Fett abnimmt, das der Bouillon den
-               feinen Geschmack benimmt. <ingredientPhrase>Man <optional>kann</optional> ein halbes Stündchen vor dem Anrichten <recipeIngredient>Spargel</recipeIngredient>
-               oder <recipeIngredient>Blumenkohl</recipeIngredient>, <dependOnTimeOfYear>was die Jahreszeit gerade bietet</dependOnTimeOfYear>, hinein geben</ingredientPhrase>, nur muß beides eben
-               abgekocht sein, und darf ja nicht in der Bouillon zerkochen. Ist das Fleisch gahr,
-               aber nicht zu weich gekocht, läßt man <ingredientPhrase>beliebige <recipeIngredient>Klöße</recipeIngredient></ingredientPhrase> eben darin gahr kochen und
-               richtet die Suppe an. Zugleich hat man Reis, für jede Person einen Eßlöffel
-               gerechnet, abgebrüht und in Bouillon, wozu man so viel mehr Fleisch genommen, gahr
-               und dick gekocht; doch müssen die Körner ganz bleiben. Derselbe wird bei der Suppe
-               (<ingredientPhrase><optional>nach Belieben</optional> mit geriebenem <recipeIngredient>Parmesankäse</recipeIngredient></ingredientPhrase>) herumgereicht. </p>
-            <p>Rindfleischsuppe muß vom Kochen an, <cookTime><quantity basisForm="3-3.5">3—3½</quantity> <unit basisForm="h">Stunden</unit></cookTime> kochen.</p>
-            
+
+            <p><ingredientPhrase>Man rechnet, wenn die Gesellschaft klein ist, <perPerson>auf jede
+                     Person</perPerson>
+                  <quantity basisForm="0.75">¾</quantity>
+                  <unit>Pfund</unit>, bei einer großen Gesellschaft <quantity basisForm="0.5"
+                     >½</quantity>
+                  <unit>Pfund</unit>
+                  <recipeIngredient basisForm="Rindfleisch"
+                  >Fleisch</recipeIngredient></ingredientPhrase>. Dasselbe wird gewaschen und mit
+               doppelt so vielem Wasser, als man Suppe haben will, zu Feuer gesetzt. Auf jede Person
+               rechnet man bei einem Gesellschaftsessen ⅜ Maß Suppe, also auch ¾ Maß Wasser, wozu
+               man gleich das <ingredientPhrase>nöthige
+                  <recipeIngredient>Salz</recipeIngredient></ingredientPhrase> gibt, weil das
+               Fleisch nur in der ersten Stunde des Kochens das Salz annimmt und das spätere
+               Hinzugeben des Salzes nur die Suppe würzt. Ist das Fleisch sorgfältig ausgeschäumt,
+               gibt man <ingredientPhrase><quantity basisForm="1">eine</quantity> fein geschnittene
+                     <recipeIngredient>Zwiebel</recipeIngredient></ingredientPhrase> hinzu, wodurch
+               die Brühe an Kraft gewinnt, und läßt sie, fest zugedeckt, fortwährend, aber nicht zu
+               stark kochen. <cookTime><quantity basisForm="1">Eine</quantity>
+                  <unit basisForm="h">Stunde</unit></cookTime> später gießt man die Brühe durch ein
+               Haarsieb, weil sie nie ganz klar ist, spült das Stück Fleisch eben ab und setzt es
+               mit der Brühe, die man vom Bodensatz langsam abschüttet, in dem ebenfalls umgespülten
+               Topfe wieder zu Feuer nebst <ingredientPhrase>einigen <recipeIngredient
+                     basisForm="Scorzonerwurzel">Scorzoner-</recipeIngredient>, <quantity
+                     basisForm="1">einer</quantity>
+                  <recipeIngredient basisForm="Selleriewurzel">Sellerie-</recipeIngredient> und
+                     <recipeIngredient>Petersilienwurzel</recipeIngredient></ingredientPhrase>.
+               Hiermit läßt man die Suppe ferner kochen, während man zuweilen das Fett abnimmt, das
+               der Bouillon den feinen Geschmack benimmt. <ingredientPhrase>Man
+                     <optional>kann</optional> ein halbes Stündchen vor dem Anrichten
+                     <recipeIngredient>Spargel</recipeIngredient> oder
+                     <recipeIngredient>Blumenkohl</recipeIngredient>, <dependOnTimeOfYear>was die
+                     Jahreszeit gerade bietet</dependOnTimeOfYear>, hinein geben</ingredientPhrase>,
+               nur muß beides eben abgekocht sein, und darf ja nicht in der Bouillon zerkochen. Ist
+               das Fleisch gahr, aber nicht zu weich gekocht, läßt man <ingredientPhrase>beliebige
+                     <recipeIngredient>Klöße</recipeIngredient></ingredientPhrase> eben darin gahr
+               kochen und richtet die Suppe an. Zugleich hat man <ingredientPhrase><recipeIngredient>Reis</recipeIngredient>, <perPerson>für jede Person</perPerson> <quantity basisForm="1">einen</quantity>
+               <unit basisForm="EL">Eßlöffel</unit> gerechnet</ingredientPhrase>, abgebrüht und in Bouillon, wozu man so viel mehr Fleisch
+               genommen, gahr und dick gekocht; doch müssen die Körner ganz bleiben. Derselbe wird
+               bei der Suppe (<ingredientPhrase><optional>nach Belieben</optional> mit geriebenem
+                     <recipeIngredient>Parmesankäse</recipeIngredient></ingredientPhrase>)
+               herumgereicht. </p>
+            <p>Rindfleischsuppe muß vom Kochen an, <cookTime><quantity basisForm="3-3.5"
+                     >3—3½</quantity>
+                  <unit basisForm="h">Stunden</unit></cookTime> kochen.</p>
+
          </cue:recipe>
-         
+
          <cue:recipe type="Suppen." rcp-id="B-2">
             <head>Rindfleischsuppe mit Perlgerste und Reis.</head>
-            
-            <p><ingredientPhrase>Wird gekocht <reference target="#B-1">wie die vorhergehende</reference></ingredientPhrase>, nur mit der Abänderung, daß, wenn die Brühe durch
-               ein Haarsieb geschüttet ist, man <ingredientPhrase>verhältnißmäßig <quantity basisForm="1-2">1—2</quantity> <unit basisForm="EL">Eßlöffel</unit> voll <recipeIngredient>Mehl</recipeIngredient></ingredientPhrase> mit <ingredientPhrase>frischer
-               <recipeIngredient>Butter</recipeIngredient></ingredientPhrase> durchschwitzt, welches jedoch weiß bleiben muß, und die vom Bodensatz
-               abgeklärte Brühe hinzuschüttet. Zugleich gibt man <ingredientPhrase>feine <recipeIngredient>Gerste</recipeIngredient></ingredientPhrase> nebst <ingredientPhrase>etwas <recipeIngredient>Wurzelwerk</recipeIngredient></ingredientPhrase>
-               in die Suppe, später auch <ingredientPhrase><recipeIngredient>Spargel</recipeIngredient>, <recipeIngredient>Blumenkohl</recipeIngredient> oder <recipeIngredient>Scorzonerwurzeln</recipeIngredient>, <dependsOnTimeOfYear>was die
-                  Jahreszeit bietet</dependsOnTimeOfYear></ingredientPhrase>, und vor dem Anrichten die <ingredientPhrase>Herzblättchen der <recipeIngredient basisForm="Sellerieknolle">Sellerieknollen</recipeIngredient></ingredientPhrase> und
-               <ingredientPhrase>beliebige <recipeIngredient>Klöße</recipeIngredient></ingredientPhrase>. Man rührt die Suppe mit <ingredientPhrase><quantity basisForm="1-2">1—2</quantity> <recipeIngredient>Eidotter</recipeIngredient></ingredientPhrase> ab, indem man solche mit etwas
-               Wasser zerrührt, und unter fortwährendem Rühren die kochende Suppe hinzu gibt. Sie
-               muß gebunden, nur ja nicht zu sämig sein. </p>
-            
+
+            <p><ingredientPhrase>Wird gekocht <reference target="#B-1">wie die
+                     vorhergehende</reference></ingredientPhrase>, nur mit der Abänderung, daß, wenn
+               die Brühe durch ein Haarsieb geschüttet ist, man <ingredientPhrase>verhältnißmäßig
+                     <quantity basisForm="1-2">1—2</quantity>
+                  <unit basisForm="EL">Eßlöffel</unit> voll
+                     <recipeIngredient>Mehl</recipeIngredient></ingredientPhrase> mit
+                  <ingredientPhrase>frischer
+                  <recipeIngredient>Butter</recipeIngredient></ingredientPhrase> durchschwitzt,
+               welches jedoch weiß bleiben muß, und die vom Bodensatz abgeklärte Brühe
+               hinzuschüttet. Zugleich gibt man <ingredientPhrase>feine
+                     <recipeIngredient>Gerste</recipeIngredient></ingredientPhrase> nebst
+                  <ingredientPhrase>etwas
+                  <recipeIngredient>Wurzelwerk</recipeIngredient></ingredientPhrase> in die Suppe,
+               später auch <ingredientPhrase><recipeIngredient>Spargel</recipeIngredient>,
+                     <recipeIngredient>Blumenkohl</recipeIngredient> oder
+                     <recipeIngredient>Scorzonerwurzeln</recipeIngredient>, <dependsOnTimeOfYear>was
+                     die Jahreszeit bietet</dependsOnTimeOfYear></ingredientPhrase>, und vor dem
+               Anrichten die <ingredientPhrase>Herzblättchen der <recipeIngredient
+                     basisForm="Sellerieknolle"
+                  >Sellerieknollen</recipeIngredient></ingredientPhrase> und
+                  <ingredientPhrase>beliebige
+                  <recipeIngredient>Klöße</recipeIngredient></ingredientPhrase>. Man rührt die Suppe
+               mit <ingredientPhrase><quantity basisForm="1-2">1—2</quantity>
+                  <recipeIngredient>Eidotter</recipeIngredient></ingredientPhrase> ab, indem man
+               solche mit etwas Wasser zerrührt, und unter fortwährendem Rühren die kochende Suppe
+               hinzu gibt. Sie muß gebunden, nur ja nicht zu sämig sein. </p>
+
             <note>Anmerk. Will man Reis oder Sago zur Suppe nehmen, so gibt man dieses später
                hinein. Man rechnet davon auf jede Person bei allen Fleischsuppen einen gestrichenen
                Eßlöffel voll. </note>
          </cue:recipe>
-         
+
          <cue:recipe type="Suppen." rcp-id="B-3">
             <head>Schnell gemachte Rindfleischsuppe.</head>
-            
-            <p><recipeYield>Für <quantity basisForm="6-7">6—7</quantity> Personen</recipeYield> schneidet man <ingredientPhrase><quantity>2</quantity> <unit>Pfund</unit> <recipeIngredient basisForm="Rindfleisch">Fleisch</recipeIngredient></ingredientPhrase> in kleine Würfel, läßt <ingredientPhrase><quantity>einige</quantity> <unit basisForm="EL">Löffel</unit>
-               <recipeIngredient>Mehl</recipeIngredient></ingredientPhrase> in <ingredientPhrase><quantity>2</quantity> <unit>Stich</unit> frischer <recipeIngredient>Butter</recipeIngredient></ingredientPhrase> gelbbraun werden, gibt das Fleisch hinzu und läßt es
-               ebenfalls ein wenig rösten, so wie nachher <ingredientPhrase><quantity basisForm="1">eine</quantity>, in 8 Theile geschnittene
-                  <recipeIngredient>Sellerieknolle</recipeIngredient></ingredientPhrase>, <ingredientPhrase><quantity basisForm="1">eine</quantity> klein geschnittene <recipeIngredient>Zwiebel</recipeIngredient></ingredientPhrase> und <ingredientPhrase><quantity basisForm="1">eine</quantity> geriebene gelbe Murzel
-               (<recipeIngredient>Möhre</recipeIngredient>)</ingredientPhrase>. Dies wird eine Weile gerührt und so viel kochendes Wasser zugegossen, als
-               man, zum Einkochen mitgerechnet, Suppe haben will. <cookTime><quantity basisForm="1">Eine</quantity> bis <quantity basisForm="1.5">1½</quantity> <unit basisForm="h">Stunden</unit></cookTime> läßt man Alles
-               kochen und schüttet es durch ein Sieb. Der <ingredientPhrase><recipeIngredient>Reis</recipeIngredient></ingredientPhrase> wird allein gekocht, beim Anrichten
-               mit dem <ingredientPhrase><recipeIngredient>Sellerie</recipeIngredient></ingredientPhrase> in die Suppe gegeben, und diese mit <ingredientPhrase><recipeIngredient>Eidotter</recipeIngredient></ingredientPhrase> und <ingredientPhrase><recipeIngredient>Muskat</recipeIngredient></ingredientPhrase> abgerührt. </p>
-            
+
+            <p><recipeYield>Für <quantity basisForm="6-7">6—7</quantity> Personen</recipeYield>
+               schneidet man <ingredientPhrase><quantity>2</quantity>
+                  <unit>Pfund</unit>
+                  <recipeIngredient basisForm="Rindfleisch"
+                  >Fleisch</recipeIngredient></ingredientPhrase> in kleine Würfel, läßt
+                     <ingredientPhrase><quantity>einige</quantity>
+                  <unit basisForm="EL">Löffel</unit>
+                  <recipeIngredient>Mehl</recipeIngredient></ingredientPhrase> in
+                     <ingredientPhrase><quantity>2</quantity>
+                  <unit>Stich</unit> frischer
+                  <recipeIngredient>Butter</recipeIngredient></ingredientPhrase> gelbbraun werden,
+               gibt das Fleisch hinzu und läßt es ebenfalls ein wenig rösten, so wie nachher
+                     <ingredientPhrase><quantity basisForm="1">eine</quantity>, in 8 Theile
+                  geschnittene
+                  <recipeIngredient>Sellerieknolle</recipeIngredient></ingredientPhrase>,
+                     <ingredientPhrase><quantity basisForm="1">eine</quantity> klein geschnittene
+                     <recipeIngredient>Zwiebel</recipeIngredient></ingredientPhrase> und
+                     <ingredientPhrase><quantity basisForm="1">eine</quantity> geriebene gelbe
+                  Murzel (<recipeIngredient>Möhre</recipeIngredient>)</ingredientPhrase>. Dies wird
+               eine Weile gerührt und so viel kochendes Wasser zugegossen, als man, zum Einkochen
+               mitgerechnet, Suppe haben will. <cookTime><quantity basisForm="1">Eine</quantity> bis
+                     <quantity basisForm="1.5">1½</quantity>
+                  <unit basisForm="h">Stunden</unit></cookTime> läßt man Alles kochen und schüttet
+               es durch ein Sieb. Der
+                  <ingredientPhrase><recipeIngredient>Reis</recipeIngredient></ingredientPhrase>
+               wird allein gekocht, beim Anrichten mit dem
+                     <ingredientPhrase><recipeIngredient>Sellerie</recipeIngredient></ingredientPhrase>
+               in die Suppe gegeben, und diese mit
+                     <ingredientPhrase><recipeIngredient>Eidotter</recipeIngredient></ingredientPhrase>
+               und <ingredientPhrase><recipeIngredient>Muskat</recipeIngredient></ingredientPhrase>
+               abgerührt. </p>
+
          </cue:recipe>
-         
+
          <cue:recipe type="Suppen." rcp-id="B-4">
             <head>Klare braune Rindfleischsuppe.</head>
-            
-            <p><ingredientPhrase>Die Bereitung dieser braunen Kraftbrühe findet man in <reference target="#A-12">A. No. 12</reference></ingredientPhrase>. <recipeYield>Zu einer
-               Gesellschaft von <quantity>12</quantity> Personen</recipeYield> nimmt man <ingredientPhrase><quantity>6</quantity> <unit>Pfund</unit> <recipeIngredient>Rindfleisch</recipeIngredient></ingredientPhrase> und <ingredientPhrase><quantity>1</quantity> <unit>Pfund</unit> <recipeIngredient basisForm="roher_Schinken">rohen
-               Schinken</recipeIngredient></ingredientPhrase>. Es werden <ingredientPhrase><reference target="#L-3">braune Klöße No. 3</reference></ingredientPhrase> und <ingredientPhrase><reference target="#L-6">Schwammklöße</reference></ingredientPhrase> darin gemacht.<ingredientPhrase> Auch <optional>kann</optional> man
-               <optional>nach Belieben</optional> <recipeIngredient>braunen Sago</recipeIngredient> darin kochen</ingredientPhrase>. </p>
-            
+
+            <p><ingredientPhrase>Die Bereitung dieser braunen Kraftbrühe findet man in <reference
+                     target="#A-12">A. No. 12</reference></ingredientPhrase>. <recipeYield>Zu einer
+                  Gesellschaft von <quantity>12</quantity> Personen</recipeYield> nimmt man
+                     <ingredientPhrase><quantity>6</quantity>
+                  <unit>Pfund</unit>
+                  <recipeIngredient>Rindfleisch</recipeIngredient></ingredientPhrase> und
+                     <ingredientPhrase><quantity>1</quantity>
+                  <unit>Pfund</unit>
+                  <recipeIngredient basisForm="roher_Schinken">rohen
+                  Schinken</recipeIngredient></ingredientPhrase>. Es werden
+                     <ingredientPhrase><reference target="#L-3">braune Klöße No.
+                  3</reference></ingredientPhrase> und <ingredientPhrase><reference target="#L-6"
+                     >Schwammklöße</reference></ingredientPhrase> darin gemacht.<ingredientPhrase>
+                  Auch <optional>kann</optional> man <optional>nach Belieben</optional>
+                  <recipeIngredient>braunen Sago </recipeIngredient>darin kochen</ingredientPhrase>. </p>
+
          </cue:recipe>
 
          <cue:recipe type="Suppen." rcp-id="B-1">
             <head>Klare weiße Rindfleischsuppe.</head>
 
-            <p>Man rechnet, wenn die Gesellschaft klein ist, <ingredientPhrase ingredient="Rindfleisch" quantity="0.5-0.75 pP" unit="Pfund">auf jede Person ¾ Pfund, bei einer
-               großen Gesellschaft ½ Pfund Fleisch</ingredientPhrase>. Dasselbe wird gewaschen und mit doppelt so
-               vielem Wasser, als man Suppe haben will, zu Feuer gesetzt. Auf jede Person rechnet
-               man bei einem Gesellschaftsessen ⅜ Maß Suppe, also auch ¾ Maß Wasser, wozu man gleich
-               das nöthige <ingredientPhrase>Salz</ingredientPhrase> gibt, weil das Fleisch nur in der ersten Stunde des Kochens das Salz
-               annimmt und das spätere Hinzugeben des Salzes nur die Suppe würzt. Ist das Fleisch
-               sorgfältig ausgeschäumt, gibt man eine fein geschnittene <ingredientPhrase>Zwiebel</ingredientPhrase> hinzu, wodurch die
-               Brühe an Kraft gewinnt, und läßt sie, fest zugedeckt, fortwährend, aber nicht zu
-               stark kochen. Eine Stunde später gießt man die Brühe durch ein Haarsieb, weil sie nie
-               ganz klar ist, spült das Stück Fleisch eben ab und setzt es mit der Brühe, die man
-               vom Bodensatz langsam abschüttet, in dem ebenfalls umgespülten Topfe wieder zu Feuer
-               nebst einigen <ingredientPhrase ingredient="Scorzonerwurzel">Scorzoner-</ingredientPhrase>, einer <ingredientPhrase ingredient="Sellerie-">Sellerie-</ingredientPhrase> und <ingredientPhrase>Petersilienwurzel</ingredientPhrase>. Hiermit läßt man die
-               Suppe ferner kochen, während man zuweilen das Fett abnimmt, das der Bouillon den
-               feinen Geschmack benimmt. Man kann ein halbes Stündchen vor dem Anrichten <ingredientPhrase isOptional="True">Spargel</ingredientPhrase>
-               oder <ingredientPhrase isOptional="True">Blumenkohl</ingredientPhrase>, was die Jahreszeit gerade bietet, hinein geben, nur muß beides eben
-               abgekocht sein, und darf ja nicht in der Bouillon zerkochen. Ist das Fleisch gahr,
-               aber nicht zu weich gekocht, läßt man beliebige <ingredientPhrase>Klöße</ingredientPhrase> eben darin gahr kochen und
-               richtet die Suppe an. Zugleich hat man <ingredientPhrase ingredient="Reis" quantity="1 pP" unit="EL">Reis, für jede Person einen Eßlöffel
-                  gerechnet</ingredientPhrase>, abgebrüht und in Bouillon, wozu man so viel mehr Fleisch genommen, gahr
-               und dick gekocht; doch müssen die Körner ganz bleiben. Derselbe wird bei der Suppe
-               (nach Belieben mit geriebenem <ingredientPhrase isOptional="True">Parmesankäse</ingredientPhrase>) herumgereicht. </p>
-            <p>Rindfleischsuppe muß vom Kochen an, <cue:cookTime quantity="3-3.5" unit="h">3—3½ Stunden</cue:cookTime> kochen.</p>
+            <p>Man rechnet, wenn die Gesellschaft klein ist, <ingredientPhrase
+                  ingredient="Rindfleisch" quantity="0.5-0.75 pP" unit="Pfund">auf jede Person ¾
+                  Pfund, bei einer großen Gesellschaft ½ Pfund Fleisch</ingredientPhrase>. Dasselbe
+               wird gewaschen und mit doppelt so vielem Wasser, als man Suppe haben will, zu Feuer
+               gesetzt. Auf jede Person rechnet man bei einem Gesellschaftsessen ⅜ Maß Suppe, also
+               auch ¾ Maß Wasser, wozu man gleich das nöthige
+                  <ingredientPhrase>Salz</ingredientPhrase> gibt, weil das Fleisch nur in der ersten
+               Stunde des Kochens das Salz annimmt und das spätere Hinzugeben des Salzes nur die
+               Suppe würzt. Ist das Fleisch sorgfältig ausgeschäumt, gibt man eine fein geschnittene
+                  <ingredientPhrase>Zwiebel</ingredientPhrase> hinzu, wodurch die Brühe an Kraft
+               gewinnt, und läßt sie, fest zugedeckt, fortwährend, aber nicht zu stark kochen. Eine
+               Stunde später gießt man die Brühe durch ein Haarsieb, weil sie nie ganz klar ist,
+               spült das Stück Fleisch eben ab und setzt es mit der Brühe, die man vom Bodensatz
+               langsam abschüttet, in dem ebenfalls umgespülten Topfe wieder zu Feuer nebst einigen
+                  <ingredientPhrase ingredient="Scorzonerwurzel">Scorzoner-</ingredientPhrase>,
+               einer <ingredientPhrase ingredient="Sellerie-">Sellerie-</ingredientPhrase> und
+                  <ingredientPhrase>Petersilienwurzel</ingredientPhrase>. Hiermit läßt man die Suppe
+               ferner kochen, während man zuweilen das Fett abnimmt, das der Bouillon den feinen
+               Geschmack benimmt. Man kann ein halbes Stündchen vor dem Anrichten <ingredientPhrase
+                  isOptional="True">Spargel</ingredientPhrase> oder <ingredientPhrase
+                  isOptional="True">Blumenkohl</ingredientPhrase>, was die Jahreszeit gerade bietet,
+               hinein geben, nur muß beides eben abgekocht sein, und darf ja nicht in der Bouillon
+               zerkochen. Ist das Fleisch gahr, aber nicht zu weich gekocht, läßt man beliebige
+                  <ingredientPhrase>Klöße</ingredientPhrase> eben darin gahr kochen und richtet die
+               Suppe an. Zugleich hat man <ingredientPhrase ingredient="Reis" quantity="1 pP"
+                  unit="EL">Reis, für jede Person einen Eßlöffel gerechnet</ingredientPhrase>,
+               abgebrüht und in Bouillon, wozu man so viel mehr Fleisch genommen, gahr und dick
+               gekocht; doch müssen die Körner ganz bleiben. Derselbe wird bei der Suppe (nach
+               Belieben mit geriebenem <ingredientPhrase isOptional="True"
+                  >Parmesankäse</ingredientPhrase>) herumgereicht. </p>
+            <p>Rindfleischsuppe muß vom Kochen an, <cue:cookTime quantity="3-3.5" unit="h">3—3½
+                  Stunden</cue:cookTime> kochen.</p>
 
          </cue:recipe>
 
          <cue:recipe type="Suppen." rcp-id="B-2">
             <head>Rindfleischsuppe mit Perlgerste und Reis.</head>
 
-            <p>Wird gekocht <ingredientPhrase reference="#B-1">wie die vorhergehende</ingredientPhrase>, nur mit der Abänderung, daß, wenn die Brühe durch
-               ein Haarsieb geschüttet ist, man verhältnißmäßig<ingredientPhrase ingredient="Mehl" quantity="1-2" unit="EL"> 1—2 Eßlöffel voll Mehl</ingredientPhrase> mit frischer
-               <ingredientPhrase>Butter</ingredientPhrase> durchschwitzt, welches jedoch weiß bleiben muß, und die vom Bodensatz
-               abgeklärte Brühe hinzuschüttet. Zugleich gibt man feine <ingredientPhrase>Gerste</ingredientPhrase> nebst etwas <ingredientPhrase>Wurzelwerk</ingredientPhrase>
-               in die Suppe, später auch <ingredientPhrase ingredient="Spargel Blumenkohl Scorzonerwurzeln" dependsOnTimeOfYear="True">Spargel, Blumenkohl oder Scorzonerwurzeln, was die
-               Jahreszeit bietet</ingredientPhrase>, und vor dem Anrichten die Herzblättchen der <ingredientPhrase>Sellerieknollen</ingredientPhrase> und
-               beliebige <ingredientPhrase>Klöße</ingredientPhrase>. Man rührt die Suppe mit <ingredientPhrase quantity="1-2">1—2 Eidotter</ingredientPhrase> ab, indem man solche mit etwas
-               Wasser zerrührt, und unter fortwährendem Rühren die kochende Suppe hinzu gibt. Sie
-               muß gebunden, nur ja nicht zu sämig sein. </p>
+            <p>Wird gekocht <ingredientPhrase reference="#B-1">wie die
+                  vorhergehende</ingredientPhrase>, nur mit der Abänderung, daß, wenn die Brühe
+               durch ein Haarsieb geschüttet ist, man verhältnißmäßig<ingredientPhrase
+                  ingredient="Mehl" quantity="1-2" unit="EL"> 1—2 Eßlöffel voll
+                  Mehl</ingredientPhrase> mit frischer <ingredientPhrase>Butter</ingredientPhrase>
+               durchschwitzt, welches jedoch weiß bleiben muß, und die vom Bodensatz abgeklärte
+               Brühe hinzuschüttet. Zugleich gibt man feine
+                  <ingredientPhrase>Gerste</ingredientPhrase> nebst etwas
+                  <ingredientPhrase>Wurzelwerk</ingredientPhrase> in die Suppe, später auch
+                  <ingredientPhrase ingredient="Spargel Blumenkohl Scorzonerwurzeln"
+                  dependsOnTimeOfYear="True">Spargel, Blumenkohl oder Scorzonerwurzeln, was die
+                  Jahreszeit bietet</ingredientPhrase>, und vor dem Anrichten die Herzblättchen der
+                  <ingredientPhrase>Sellerieknollen</ingredientPhrase> und beliebige
+                  <ingredientPhrase>Klöße</ingredientPhrase>. Man rührt die Suppe mit
+                  <ingredientPhrase quantity="1-2">1—2 Eidotter</ingredientPhrase> ab, indem man
+               solche mit etwas Wasser zerrührt, und unter fortwährendem Rühren die kochende Suppe
+               hinzu gibt. Sie muß gebunden, nur ja nicht zu sämig sein. </p>
 
             <note>Anmerk. Will man Reis oder Sago zur Suppe nehmen, so gibt man dieses später
                hinein. Man rechnet davon auf jede Person bei allen Fleischsuppen einen gestrichenen
@@ -163,24 +277,39 @@
          <cue:recipe type="Suppen." rcp-id="B-3">
             <head>Schnell gemachte Rindfleischsuppe.</head>
 
-            <p><recipeYield quantity="6-7">Für 6—7 Personen</recipeYield> schneidet man <ingredientPhrase ingredient="Rindfleisch" quantity="2" unit="Pfund">2 Pfund Fleisch</ingredientPhrase> in kleine Würfel, läßt <ingredientPhrase ingredient="Mehl">einige Löffel
-               Mehl</ingredientPhrase> in <ingredientPhrase ingredient="Butter" unit="Stich" quantity="2">2 Stich frischer Butter</ingredientPhrase> gelbbraun werden, gibt das Fleisch hinzu und läßt es
+            <p><recipeYield quantity="6-7">Für 6—7 Personen</recipeYield> schneidet man
+                  <ingredientPhrase ingredient="Rindfleisch" quantity="2" unit="Pfund">2 Pfund
+                  Fleisch</ingredientPhrase> in kleine Würfel, läßt <ingredientPhrase
+                  ingredient="Mehl">einige Löffel Mehl</ingredientPhrase> in <ingredientPhrase
+                  ingredient="Butter" unit="Stich" quantity="2">2 Stich frischer
+                  Butter</ingredientPhrase> gelbbraun werden, gibt das Fleisch hinzu und läßt es
                ebenfalls ein wenig rösten, so wie nachher eine, in 8 Theile geschnittene
-               <ingredientPhrase>Sellerieknolle</ingredientPhrase>, eine klein geschnittene <ingredientPhrase>Zwiebel</ingredientPhrase> und <ingredientPhrase ingredient="Möhre" quantity="1">eine geriebene gelbe Murzel
-               (Möhre)</ingredientPhrase>. Dies wird eine Weile gerührt und so viel kochendes Wasser zugegossen, als
-               man, zum Einkochen mitgerechnet, Suppe haben will. <cookTime quantity="1-1.5" unit="h">Eine bis 1½ Stunden</cookTime> läßt man Alles
-               kochen und schüttet es durch ein Sieb. Der <ingredientPhrase>Reis</ingredientPhrase> wird allein gekocht, beim Anrichten
-               mit dem Sellerie in die Suppe gegeben, und diese mit <ingredientPhrase>Eidotter</ingredientPhrase> und <ingredientPhrase>Muskat</ingredientPhrase> abgerührt. </p>
+                  <ingredientPhrase>Sellerieknolle</ingredientPhrase>, eine klein geschnittene
+                  <ingredientPhrase>Zwiebel</ingredientPhrase> und <ingredientPhrase
+                  ingredient="Möhre" quantity="1">eine geriebene gelbe Murzel
+                  (Möhre)</ingredientPhrase>. Dies wird eine Weile gerührt und so viel kochendes
+               Wasser zugegossen, als man, zum Einkochen mitgerechnet, Suppe haben will. <cookTime
+                  quantity="1-1.5" unit="h">Eine bis 1½ Stunden</cookTime> läßt man Alles kochen und
+               schüttet es durch ein Sieb. Der <ingredientPhrase>Reis</ingredientPhrase> wird allein
+               gekocht, beim Anrichten mit dem Sellerie in die Suppe gegeben, und diese mit
+                  <ingredientPhrase>Eidotter</ingredientPhrase> und
+                  <ingredientPhrase>Muskat</ingredientPhrase> abgerührt. </p>
 
          </cue:recipe>
 
          <cue:recipe type="Suppen." rcp-id="B-4">
             <head>Klare braune Rindfleischsuppe.</head>
 
-            <p>Die Bereitung dieser <ingredientPhrase reference="#A-12">braunen Kraftbrühe findet man in A. No. 12</ingredientPhrase>. <recipeYield quantity="12">Zu einer
-               Gesellschaft von 12 Personen</recipeYield> nimmt man <ingredientPhrase ingredient="Rindfleisch" quantity="6" unit="Pfund">6 Pfund Rindfleisch</ingredientPhrase> und <ingredientPhrase unit="Pfund" quantity="1">1 Pfund rohen
-               Schinken</ingredientPhrase>. Es werden<ingredientPhrase reference="#L-3"> braune Klöße No. 3</ingredientPhrase> und <ingredientPhrase reference="#L-6">Schwammklöße</ingredientPhrase> darin gemacht. Auch kann man
-               <ingredientPhrase ingredient="brauner_Sago" isOptional="True">nach Belieben braunen Sago</ingredientPhrase> darin kochen. </p>
+            <p>Die Bereitung dieser <ingredientPhrase reference="#A-12">braunen Kraftbrühe findet
+                  man in A. No. 12</ingredientPhrase>. <recipeYield quantity="12">Zu einer
+                  Gesellschaft von 12 Personen</recipeYield> nimmt man <ingredientPhrase
+                  ingredient="Rindfleisch" quantity="6" unit="Pfund">6 Pfund
+                  Rindfleisch</ingredientPhrase> und <ingredientPhrase unit="Pfund" quantity="1">1
+                  Pfund rohen Schinken</ingredientPhrase>. Es werden<ingredientPhrase
+                  reference="#L-3"> braune Klöße No. 3</ingredientPhrase> und <ingredientPhrase
+                  reference="#L-6">Schwammklöße</ingredientPhrase> darin gemacht. Auch kann man
+                  <ingredientPhrase ingredient="brauner_Sago" isOptional="True">nach Belieben
+                  braunen Sago</ingredientPhrase> darin kochen. </p>
 
          </cue:recipe>
 
