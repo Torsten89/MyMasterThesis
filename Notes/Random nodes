@@ -1,6 +1,4 @@
-Text mining:
-	- was first mentioned in \parencite{KDT}
-	- overview \parencite{surveyOfTextMining}
+\parencite{GrammaBased} also points out that ontology building is time consuming and expensive
 	
 \cite{ingredientNetworks}
 \cite{recipeRecommendation} (semi struktur -> RE sind gut genug)

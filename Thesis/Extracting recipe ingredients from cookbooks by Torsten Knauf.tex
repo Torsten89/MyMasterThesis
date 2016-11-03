@@ -2,8 +2,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
 \usepackage{graphicx}
+\usepackage{listings}
 \usepackage[backend=bibtex, style=authoryear, maxcitenames=2]{biblatex}
 \addbibresource{references.bib}
+\usepackage{cleveref} % cleverref has to be loaded after hyperref!
 
 
 \begin{document}
@@ -55,9 +57,9 @@ If I don't profit from nice people in these thesis, I have done something horrib
 
 \tableofcontents
 
-% \listoffigures
-
-% \listoftables
+\listoffigures
+\listoftables
+\lstlistoflistings
 
 \clearpage
 \pagenumbering{arabic}  
@@ -98,14 +100,78 @@ Now this format can be easily transformed into a well structured recipe and afte
 
 
 \chapter{Related Work}
-\cite{REgutGenug}
-\section{Masterarbeit}
-\section{CRF}
+In general there exists many effort about extracting useful information from textual and unstructured resources. The superordinate term for this field of research is \textit{Text Mining}. It was first mentioned in \parencite{KDT} and on overview can be found in \parencite{surveyOfTextMining}. 
+
+The algorithms for extracting useful information depend highly on existing semi-structures, which can be taken advantage of. Here we present existing algorithm, which we found in the domain of cooking, and distinct their effort from this thesis.
+
+\section{Skip The Pizza}
+\parencite{REgutGenug} is a project described on WordPress.org. The author wants to combine his two hobbies cooking and software engineering. For being able to answer questions like "How many ingredients does a typical recipe consist of?" or "Which are the most frequent ingredients?", he extracts the ingredients of recipes from http://recipes.wikia.com/wiki/Recipes\_Wiki.
+
+\begin{lstlisting}[frame=single, basicstyle=\footnotesize\ttfamily,caption={Shortened example recipe from \\ http://recipes.wikia.com/wiki/Recipes\_Wiki}, label=lst:recipeWiki]
+    * Makes 6 to 8 servings
+
+== Ingredients ==
+* 2 tbsp extra virgin [[olive oil]]
+* 3 cloves [[garlic]], finely chopped
+[...]
+
+== Directions ==
+Heat olive oil and garlic in large skillet over low heat until
+garlic begins to sizzle.
+Add tomatoes, [...]
+
+[[Category:Cathy's Recipes]]
+[[Category:Garlic Recipes]]
+[...]
+\end{lstlisting}
+
+The recipes have the internal structure of \cref{lst:recipeWiki}. The semi-structure, that after \texttt{== Ingredients ==} comes a list of ingredients, can be recognized easily. Per line is one ingredient enclosed within \texttt{[[ingredient name]]}. Using this semi-structure a regular expression is already good enough for extracting the ingredients from these recipes.
+
+ 
+\section{Domain Specific Information Extraction for Semantic Annotation}
+\parencite{GrammaBased} is a diploma thesis about extracting ingredients and their further processing from recipes. Their algorithm could be divided into two main parts.
+
+One main part is to check every word if it is occurs in a dictionary of ingredients respectively a dictionary of actions and tag it accordingly. For keeping the dictionaries as small as possible they do a morphological Analysis and only store the lemmas of the words. The second main part, and more sophisticated task, is to identify which action should be applied to which ingredient. They have two different approaches for that.
+
+\textbf{The first one} is to do a part of speech tagging and afterwards trying to apply a small set of rules. The example rule 1 means apply the action to all following ingredients and gets matched. Therefore it is extracted that buttermilk and bananas should be extracted.
+
+\begin{lstlisting}[frame=single, basicstyle=\footnotesize\ttfamily,caption={Rule based example}, label=lst:ruleBased]
+add buttermilk and bananas
+->
+add[ACT] buttermilk[ING] and[CC] bananas[ING]
+->
+rule 1: VP -> ACT NP (,NP)* (CC NP)?
+   -> ACT NP CC NP			und Hilfsregel:  NP -> DT? JJ* ING
+   -> ACT ING CC ING
+
+\end{lstlisting}
+
+\textbf{The second one} is to do a dependency based parsing, which represent the semantic structure of a sentence in a tree like format.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[]{Images/JohnLikesApple}
+	\caption{John likes apple \parencite{GrammaBased}}
+	\label{fig:johnLikesApple}
+\end{figure}
+
+For example \cref{fig:johnLikesApple} represents, that the subject of like is John and the liked object is apple.
+The format as well as building the tree is way more complex than the previous simple rules, but the tree can be build by already existing tools like the Standfod Parser\footnote{http://nlp.stanford.edu/software/lex-parser.shtml}. Having the semantic structure of the sentences, it is trivial to extract which action should be applied to which ingredient.
+
+
+\section{Extracting Structured Data From Recipes Using Conditional Random Fields}
+
+\section{Distinction to this work}
+
 
 
 \chapter{Development of recipe parser}
 
-\section{Test set-up}
+\section{Overall picture}
+\subsection{workflow}
+\subsection{preparation}
+\subsection{evaluation}
+-Precision -Recall F-measure
 
 \section{First Iteration: Basis CRF}
 Git-tag
@@ -118,13 +184,10 @@ Git-tag
 
 \chapter{Discussion}
 - Übertragung auf beliebige Bücher (Wenn Buch hat bereits Zutatenliste erste Phase entfällt)
-- Power of Strucutred Data / Semantic web
-	- soziologische Forschung (Globalisation, Wohlstand, Kriegsküche)
-	- Was wir über uns preisgeben (Hilary's Gesundheitsstatus wichtiger Faktor im US-Wahlkampf)
 - TDD / früh Plausibilitäts-Überprüfungen (insbesondere fürs Schemata, Mengenangaben historische Recherche nötig)
 
 \section{Power of machine readable data}
-Machine readable data are very powerful. But \textit{with great power comes great responsibility}\footnote{A well known proverb with uncertain origin \parencite{quoteInvestigator}}. In the context of a recipe parser this might be a little bit exaggerated. But specially in mind of the global surveillance disclosures denounced by Edward Snowed with uncertain dimension, I think it is important to have a consciousness for what can be done. Therefore I want to think about, what can be done through innocent looking machine readable tags. 
+Machine readable data are very powerful. But \textit{with great power comes great responsibility}\footnote{A well known proverb which probably has its origin from the French National Convention during the period of French Revolution. \parencite{quoteInvestigator}}. In the context of a recipe parser this might be a little bit exaggerated. But specially in mind of the global surveillance disclosures denounced by Edward Snowed with still uncertain dimension, I think it is important to have a consciousness for what can be done. Therefore I want to think about, what can be done through innocent looking machine readable tags. 
 \bigskip
 
 \textbf{For the good} there exists already much effort for services, which require being able to extract ingredient from recipes.
@@ -136,7 +199,7 @@ Further more, having a huge machine-readable base of recipes and its ingredients
 There are many more interesting questions, which could be analysed like a historic analysis of the development and changes of cooking. Occurrences of non-local ingredients or meals are evidence for inter cultural exchange and globalisation. More expensive ingredients could be an indication for prosperity, while very simple kitchen for poverty or even wartimes...
 \bigskip
 
-\textbf{In the bad} \parencite{clintonHealth}
+\textbf{In the bad} \parencite{clintonHealth} "schwacher vegetarier"
 
 
 \chapter{Summary}
