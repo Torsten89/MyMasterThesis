@@ -1,6 +1,7 @@
 \documentclass[12pt, twoside]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage{amsmath}
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{listings}
@@ -68,58 +69,56 @@ If I don't profit from nice people in these thesis, I have done something horrib
 \clearpage
 \pagenumbering{arabic}  
 \chapter{Introduction}
-A recipe parser, which can tag old and rather unstructured cookbooks according to the ontology of \parencite{schemaRecipe}, is developed in this thesis. Once it is tagged, it is easy to extract the tagged entities. The parser is developed and tested with \textit{Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849} but can be adapted easily to every German cookbook. For other languages new training data and dictionaries for the machine learning preparation of the parser have to be provided, but the general algorithm can be inherited.
+A recipe parser, which can tag old and rather unstructured cookbooks according to the ontology of \parencite{schemaRecipe}, is developed in this thesis. Once it is tagged, it is easy to extract the tagged entities. The parser is developed and tested with \textit{Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849} but can be adapted easily to every German cookbook or website. For other languages new training data and dictionaries for the machine learning preparation of the parser have to be provided, but the general algorithm can be inherited.
 
-This effort is motivated by nutritional science. Being able to extract the ingredients of a recipe automatically simplifies research according healthy food as well as historical analysis.
+This effort is motivated by nutritional science. Being able to extract the ingredients of a recipe automatically simplifies research according healthy food. But also sociological analysis are enabled through that.
 
 The thesis is structured as follows:
 
 
 \chapter{Making a cookbook machine readable}
-This chapter covers shortly, how we transform a cookbook in a machine readable XML file, which can be processed further arbitrarily. To achieve this, the cookbook has to be digitalized first and afterwards enriched through meta data defined by an ontology.
+This chapter covers shortly, how we transform a cookbook in a machine readable XML file, which can be arbitrarily processed further. To achieve this, the cookbook has to be digitalized first and afterwards enriched through meta data defined by an ontology.
 
 \section{Digitalisation}
-In general there are two different ways, how to digitalize a book. The first one is to scan each side and let an \textit{optical character recognition program} translate the scanned pictures into text. The second one is to \textit{type it manual} into a computer.
+In general there are two different ways, how to digitalize a book. The first one is to scan each side and let an optical character recognition program extract the the text of the scanned picture. The second one is to type it manual into a computer.
 
-The German Text Archive provides a collection of German texts from 16th to 19th century including \textit{Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849} in \parencite{DTA}. They digitalized it through double keying, meaning that two people manual typed the book into the computer. Differences in their versions were revised by a third person. They have already enriched the book through \textit{TEI: Text Encoding Initiative}-standard\footnote{http://www.tei-c.org/index.xml}. TEI is a standard for representing text in digital form, enriched through meta data. Its main purpose is for analysing in humanities, social sciences or linguistics.
+The German Text Archive provides a collection of German texts from 16th to 19th century including \textit{Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849} in \parencite{DTA}. They digitalized it through double keying, meaning that two people manual typed the book into the computer. Differences in their versions were revised by a third person. They have already enriched the book through \textit{TEI: Text Encoding Initiative}-standard\footnote{http://www.tei-c.org/index.xml}. TEI is a standard for representing real world text in digital form. As many as possible characteristics are kept through meta data. Its main purpose is for analysing in humanities, social sciences or linguistics.
 
-Figure XXX depicts the digitalized version of our cookbook.
+Because we are only interested in extracting certain data from the recipes and not in linguistic analysis or something else, we have transformed the digitalized version as depicted in figure XXX \todo{Beispiel Rezepte}. The essence of this version is, that it now only contains the textual information of the recipes. From this basis we will extract the ingredients as well as their corresponding quantities and units per each recipe.
 
-Because we are only interested in extracting certain data from the recipes and not in linguistic analysis or something else, we transformed the digitalized version as depicted in figure XXX. The essence of this version is, that every recipe can be easily transformed into this form and that every recipe can be easily read by human for manual tagging. 
-
-\section{CueML ontology}
-For general automatic extraction and further processing of information an ontology is needed. In computer science an ontology is a vocabulary with defined meaning. A nice description for the use of ontologies, which are a requirement for the Semantic Web, can be found in \parencite{semanticWeb}.
+\section{CueML ontology}\label{sec:cueMLOntology}
+For automatic extraction and further processing of information an ontology is needed. In computer science an ontology is a vocabulary with defined meaning. A description for the use of ontologies, which are a requirement for the Semantic Web, can be found in \parencite{semanticWeb}.
 
 \begin{figure}
 	\begin{subfigure}{1\textwidth}
 		\centering
 		\includegraphics[width=0.7\textwidth]{Images/schemaRecipeWithoutMarkup}
-		\caption{Without markup }
+		\caption{A recipe without markup}
 	\end{subfigure} \\
 	\begin{subfigure}{1\textwidth}
 		\centering
 		\includegraphics[width=0.95\textwidth]{Images/schemaRecipeWithMarkup}
-		\caption{With markup }
+		\caption{The same recipe enriched with markup}
 	\end{subfigure}
-	\caption{Schema.org example from \parencite{schemaRecipe}}
+	\caption{Schema.org/Recipe example from \parencite{schemaRecipe}}
 	\label{fig:schemaOrgRecipe}
 \end{figure}
 
-Schema.org/Recipe is an existing ontology for recipes \parencite{schemaRecipe}. For example http://cooking.nytimes.com and http://allrecipes.com use it. Its general usage is shown in \cref{fig:schemaOrgRecipe}. \parencite{foodBlogger} is a very nice blog article which describes the value of it and points out, that its main purpose is to provide help for search engines.
+\textit{Schema.org/Recipe} is an existing ontology for recipes \parencite{schemaRecipe}. For example http://cooking.nytimes.com and http://allrecipes.com use it. Its general usage is shown in \cref{fig:schemaOrgRecipe} on the previous page. \parencite{foodBlogger} is a very nice blog article, which describes the value of it and points out, that its main purpose is to provide help for search engines.
 
-It is not precise enough for general extracting of ingredients. Each line from the list of ingredient is tagged as an ingredient. This is too inaccurate, because the concrete ingredient can still not be understood from the computer and neither the quantity or unit of the ingredient. Another not suited point is, that the ingredients are only tagged within the list of ingredients, whereby the recipes in our cookbook have no list of ingredients.
+It is not precise enough for general extracting of ingredients. As you can see in \cref{fig:schemaOrgRecipe} each line from the list of ingredient is tagged as an ingredient. This is too inaccurate, because the concrete ingredient can still not be understood from the computer and neither its quantity nor unit. Another not suited point is, that the ingredients are only tagged within the list of ingredients, whereby the recipes in our cookbook have no list of ingredients.
 
 \begin{wrapfigure}{R}{0.5\textwidth}
 	\includegraphics[width=0.5\textwidth]{Images/ingredientsInText}
-	\caption{Meaning of ingredients in direction text}
+	\caption{Different meaning of ingredients in direction text}
 	\label{fig:ingredientsInText}
 \end{wrapfigure}
 
-Tagging the ingredients from the plain direction texts leads to more complex phrases, which have to be considered. We have spotted four different cases, considering the occurrence of ingredients, which have to be distinguished. They are shown in \cref{fig:ingredientsInText}. An additional problem in plain text are cross-references like prepare dumplings as in previous recipe.
+Tagging ingredients from the direction texts leads to more complex phrases, which have to be distinguished. We have spotted four different cases, which are shown in \cref{fig:ingredientsInText}. An additional problem in plain text are cross-references like "prepare dumplings as in previous recipe".
 
-Due to these two reasons we came up with \textbf{culinary editions markup language (cueML)}. It is pronounced like Kümmel, which is the German word for caraway. First of all we enclose the a recipeIngredient element more precisely around the ingredient and not vaguely around the whole phrase. Additional we specify an attribute for the quantity of an ingredient and another one for its unit.  Concerning the variants from \cref{fig:ingredientsInText} we added attributes which specify if an ingredient is optional, an alternative or should not be used. \todo{value of alternative attri} For the cross-referencing problem we added the attribute reference. Its value should point to the referenced element. As a last step an unique identifier for each kind of ingredient should be provided. Among others that enables to get additional nutrition information about an ingredient from external resources. Figure \ref{fig:exampleCueML} shows two example of cueML applied to a recipe from our target cookbook. The full grammar is described through a RELAX NG grammar, which can be found in appendix \ref{appendix:grammaCueML}.   
+Due to these reasons we came up with \textbf{culinary editions markup language (cueML)}. It is pronounced like Kümmel, which is the German word for caraway. First of all we enclose a \textit{recipeIngredient} element more precisely around the ingredient and not vaguely around the whole phrase. Additional we specify an attribute for the \textit{quantity} of an ingredient and another one for its \textit{unit}. Concerning the variants from \cref{fig:ingredientsInText} we added attributes which specify if an ingredient \textit{is optional}, an \textit{alternative} \todo{value of alternative attri} or should \textit{not be used}. For the cross-referencing problem we added the attribute \textit{reference}. Its value should point to the referenced element. As a last step we keep the \textit{basis form} of an ingredient in an attribute. That makes it possible to check the ingredient against a dictionary or connect external resources with it, which for example could provide additional nutrition information.
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{subfigure}{1\textwidth}
 		\centering
 		\caption{bla}
@@ -132,6 +131,8 @@ Due to these two reasons we came up with \textbf{culinary editions markup langua
 	\label{fig:exampleCueML}
 \end{figure} 
 
+Figure \ref{fig:exampleCueML} shows two example usage of cueML applied to recipes from our targeted cookbook. The full language is described through a RELAX NG grammar, which can be found in appendix \ref{appendix:grammaCueML}.
+
 Having cueML in place it is easy to extract an ingredient list. 
 
 \todo{Descripe Alg}
@@ -140,23 +141,31 @@ Having cueML in place it is easy to extract an ingredient list.
 
 
 \section{Need for automation}
-As mentioned in \parencite{manualTagging}, manual tagging is time consuming and error prone. The approach for extracting ingredients from recipes presented in section \ref{sec:crfzeit} emphasises that. To manual tag the ingredients of an average recipe requires about 50 fields, what can even climb up to 100 fields. And in the evaluation of their approach they discovered mistakes done in manual tagging.
+As mentioned in \parencite{manualTagging}, manual tagging is time consuming and error prone. The approach for extracting ingredients from recipes presented in section \ref{sec:crfzeit} emphasises that. They state, that they need 50-100 fields per recipe. And in the evaluation of their approach they discovered mistakes done in manual tagging.
 
-For tagging one recipe in our cookbook I need about 5 minutes. Therefore I would need more than 2 weeks of full time work for tagging only the recipes from our cookbook.
+For tagging one recipe in our cookbook I need about 5 minutes. That means, that I would need more than 2 weeks for tagging only the recipes from our cookbook. Building a big data pool this way is very time consuming and therefore expensive.
 
-Therefore automation is clearly preferable.
+Hence automation, which have to be configured only once and can be applied to many resources afterwards, is clearly preferable.
+
+
 
 \chapter{Related Work}
-In general there exists many effort about extracting useful information from textual and unstructured resources. The superordinate term for this field of research is \textit{Text Mining}. It was first mentioned in \parencite{KDT} and on overview can be found in \parencite{surveyOfTextMining}. 
+In general there exists many effort about extracting useful information from textual and unstructured resources. The superordinate term for this field of research is Text Mining. It was first mentioned in \parencite{KDT} and on overview can be found in \parencite{surveyOfTextMining}. 
 
-The algorithms for extracting useful information depend highly on existing semi-structures, which can be taken advantage of. Here we present existing algorithm, which we found in the domain of cooking, and distinct their effort from this thesis.
+The algorithms for extracting useful information depend highly on existing semi-structures, which can be taken advantage of. Here we present existing algorithm, which we found in the domain of cooking, and distinct their effort from this thesis. But before that, we define precision and recall.
 
 \section{Precision \& Recall}
-Precision = Relevant Information / Total Information.
-Recall = Relevant Information extracted / Total Relevant Information
+Precision and recall are metrics, which measure the quality of an information extracting algorithm.
+
+\begin{equation} \label{eq:precisionAndRecall}
+	Precision = \frac{\#(retrieved \cap relevant)}{\#retrieved}, \hspace{1em} Recall = \frac{\#(retrieved \cap relevant)}{\#relevant}
+\end{equation}
+
+They are defined as show in \cref{eq:precisionAndRecall} according to  \parencite{surveyOfTextMining}. A high precision states, that the algorithm does only find relevant information as intended. A high recall states, that the algorithm finds many of the total relevant information. Both are needed for an evaluation of an algorithm. If only considering precision, the algorithm could only find the information, which are obvious relevant and therefore find only view information, but having an high score this way. On the other side if only considering recall, the algorithm could return everything. This way its score would have the perfect value of one. But both algorithm are obviously not good, which gets covered by a low value by the other formula.
+
 
 \section{Skip The Pizza}
-\parencite{REgutGenug} is a project described on WordPress.org. The author wants to combine his two hobbies cooking and software engineering. For being able to answer questions like "How many ingredients does a typical recipe consist of?" or "Which are the most frequent ingredients?", he extracts the ingredients of recipes from http://recipes.wikia.com/wiki/Recipes\_Wiki.
+\parencite{REgutGenug} is a project described on WordPress.org. The author wants to combine his two hobbies cooking and software engineering. For being able to answer questions like "How many ingredients does a typical recipe consist of?" or "Which are the most frequent ingredients?", he extracts the ingredients of recipes from the open source platform http://recipes.wikia.com/wiki/Recipes\_Wiki.
 
 \begin{lstlisting}[frame=single, basicstyle=\footnotesize\ttfamily,caption={Shortened example recipe from \\ http://recipes.wikia.com/wiki/Recipes\_Wiki}, label=lst:recipeWiki]
 * Makes 6 to 8 servings
@@ -176,8 +185,49 @@ Add tomatoes, [...]
 [...]
 \end{lstlisting}
 
-The recipes have the internal structure of \cref{lst:recipeWiki}. The semi-structure, that after \texttt{== Ingredients ==} comes a list of ingredients, can be recognized easily. Per line is one ingredient enclosed within \texttt{[[ingredient name]]}. Using this semi-structure a regular expression is already good enough for extracting the ingredients from these recipes.
+The recipes have a consistent internal representation, which is shown in \cref{lst:recipeWiki}. The semi-structure, that after \texttt{== Ingredients ==} comes a list of ingredients, can be recognized easily. Per line is one ingredient enclosed within \texttt{[[ingredient name]]}. Using this semi-structure a regular expression is already good enough for extracting the ingredients from these recipes.
 
+\section{Extracting Structured Data From Recipes Using Conditional Random Fields}\label{sec:crfzeit}
+The New York Times (NYT) provides a cooking website with recipes\footnote{http://cooking.nytimes.com/}. Their recipes are enriched through Schema.org/Recipes. For providing a recipe recommendation system based on ingredients, you have to extract the exact ingredients from a recipe, which is not enable through this schema as already discussed in \cref{sec:cueMLOntology}. Nevertheless they are able to extract them automatically. They use the provided structure from Schema.org/Recipe, that each ingredient phrase from the list of ingredients is enclosed within a \textit{recipeIngredient}-tag, and Conditional Random Fields (CRF) for that. Their approach is described in \parencite{CRFZeit}. So we introduce CRF first and afterwards outline their implementation.  
+
+\subsection{Conditional Random Fields}
+Given a set of words, CRF wants to predict a suitable set of labels. For example when the set of words is \textit{1 tablespoon salt}, we want to predict \textit{QUANTITY, UNIT, INGREDIENT}, meaning 1 is a quantity, tablespoon an unit and salt an ingredient.
+
+A detailed introduction can be found in \parencite{CRFIntroduction}. Here we only want to give a quick overview about linear-chain CRF, because that is the algorithm the NJT uses. Therefore when we write CRF, we mean linear-chain CRF. It is build up from a set of words $X$, which have already a correct set of labels $Y$. Such a labelled set is called training data. A joint probability distribution can be extracted from this training data, which states how likely a set of words have a concrete set of labels. Taking the simplified assumption, that each tag depends only on the previous tag and the given set of words, leads to \cref{eq:jointProb}. This can always be transformed into \cref{eq:magicTransoformation}. The division with $Z(X,Y)$ ensures, that the value of $p(X,Y)$ is between $0$ and $1$. $1_{condition}$ is a function which is $1$ if the condition is true and $0$ otherwise. Smart indexing leads to \cref{eq:smartIndexing}. The $f_k$ are called feature functions. The calculation of the $\Theta_k$'s is a mathematical optimisation problem. Node that there is very likely no exact solution due to the simplified assumption in \cref{eq:jointProb}.
+
+\begin{equation} \label{eq:jointProb}
+p(X,Y) = \prod_{t=1}^T p(y_t|y_{t-1}) * p(x|y_t), \quad T = \#X
+\end{equation}
+\begin{equation} \label{eq:magicTransoformation}\begin{split}
+p(X,Y) = \frac{1}{Z(X,Y)}\prod_{t=1}^T exp(\sum_{i,j\in S}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in S}^{} \sum_{j \in O}^{} \mu_{o,i} * 1_{y=i} * 1_{x_t=o}),
+\\
+Z(X,Y) = \sum_{X}^{}\sum_{Y}^{}\prod_{t=1}^T exp(\sum_{i,j\in S}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in S}^{} \sum_{j \in O}^{} \mu_{o,i} * 1_{y=i} * 1_{x_t=o}),
+\\ \begin{flalign}
+T = \#X, \quad S = all\ possible\ labels, \quad O = all\ possible\ words
+\end{flalign}
+\end{split}\end{equation}
+\begin{equation} \label{eq:smartIndexing}
+p(X,Y) = \frac{1}{Z(X,Y)}\prod_{t=1}^T exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, X))
+\end{equation}
+
+A join probability distribution can always be transformed into a conditional probability as shown in \cref{eq:condProb}.
+
+\begin{equation}\label{eq:condProb}
+p(Y|X) = \frac{p(X,Y)}{\sum_{Y'\in S}^{}p(Y', X)}
+\end{equation}
+
+Having \cref{eq:condProb} in place, a natural prediction function is shown in \cref{eq:CRF}, what is exactly what CRF does. The calculation of $prediction(X)$ can be done in $\#S^2*\#X$through dynamic programming.
+
+\begin{equation}\label{eq:CRF}
+prediction(X) = argmax_y(P(Y|X))
+\end{equation}
+
+Additional custom feature functions can improve the prediction function. Two example custom feature functions are $f_{k+1}(y_t, y_{t-1}, X) = 1_{X_t\ starts with\ upper\ case}$ or \\ $f_{k+2}(y_t, y_{t-1}, X) = 1_{X_t\ is\ in\ a\ domain\ specific\ dictionary}$.
+
+\subsection{Implementation of New York Times}
+feature functions: isCapitalized, inParenthesis, I?, Length of phrases
+
+Eval recall and precision
  
 \section{Domain Specific Information Extraction for Semantic Annotation}
 \parencite{GrammaBased} is a diploma thesis about extracting ingredients and their further processing from recipes. Their algorithm could be divided into two main parts.
@@ -209,24 +259,19 @@ The second one is to do a dependency based parsing, which represent the semantic
 For example \cref{fig:johnLikesApple} represents, that the subject of like is John and the liked object is apple.
 The format as well as building the tree is way more complex than the previous simple rules, but the tree can be build by already existing tools like the Standfod Parser\footnote{http://nlp.stanford.edu/software/lex-parser.shtml}. Having the semantic structure of the sentences, it is trivial to extract which action should be applied to which ingredient.
 
-\begin{table}
-\centering
-\begin{tabular}{ l | c | r } 
-	  & Precision & Recall \\
-	\hline
-	Rule based & 97.39\% & 51.54\% \\
-	Dependency Based & 95.4\% & 64.12\% \\
-\end{tabular}
-\label{table:masterEval}
-\caption{Evaluation Domain Specific Information Extraction for Semantic Annotation}
+In their evaluation they apply these two variants to 43 randomly selected recipes from the internet. The precision and recall are presented in table \ref{tab:masterEval}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ l | c | r } 
+		& Precision & Recall \\
+		\hline
+		Rule based & 97.39\% & 51.54\% \\
+		Dependency Based & 95.4\% & 64.12\% \\
+	\end{tabular}
+	\caption{Evaluation Domain Specific Information Extraction for Semantic Annotation}
+	\label{tab:masterEval}
 \end{table}
-
-
-In their evaluation they apply these two variants to 43 randomly selected recipes from the internet. The precision and recall are presented in table \cref{table:masterEval}.
-
-\section{Extracting Structured Data From Recipes Using Conditional Random Fields}\label{sec:crfzeit}
-\parencite{CRFZeit}
-
 
 \section{Distinction to this work}
 
