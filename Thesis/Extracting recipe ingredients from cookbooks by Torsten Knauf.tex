@@ -1,5 +1,10 @@
 \documentclass[12pt, twoside]{report}
+\usepackage[TS1,T1]{fontenc}
+\usepackage{lmodern}
 \usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+\newcommand*\longs{{\fontencoding{TS1}\selectfont s}}
+\newunicodechar{ſ}{\longs}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
 \usepackage{amsmath}
 \usepackage{float}
@@ -14,6 +19,8 @@
 \usepackage[colorinlistoftodos]{todonotes} % dont forget to remove
 
 \begin{document}
+
+\todo{Alle XMLs gleiche Farbhervorhebung}
 
 \begin{titlepage}
     \begin{center}
@@ -82,12 +89,28 @@ This chapter covers shortly, how we transform a cookbook in a machine readable X
 \section{Digitalisation}
 In general there are two different ways, how to digitalize a book. The first one is to scan each side and let an optical character recognition program extract the the text of the scanned picture. The second one is to type it manual into a computer.
 
-The German Text Archive provides a collection of German texts from 16th to 19th century including \textit{Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849} in \parencite{DTA}. They digitalized it through double keying, meaning that two people manual typed the book into the computer. Differences in their versions were revised by a third person. They have already enriched the book through \textit{TEI: Text Encoding Initiative}-standard\footnote{http://www.tei-c.org/index.xml}. TEI is a standard for representing real world text in digital form. As many as possible characteristics are kept through meta data. Its main purpose is for analysing in humanities, social sciences or linguistics.
+The German Text Archive provides a collection of German texts from 16th to 19th century including \textit{Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849} in \parencite{DTA}. They digitalized it through double keying, meaning that two people manual typed the book into the computer. Differences in their versions were revised by a third person. They have already enriched the book through \textit{TEI: Text Encoding Initiative}-standard\footnote{http://www.tei-c.org/index.xml}. TEI is a standard for representing printed text in digital form. As many as possible characteristics of the printed medium are kept through meta data. Its main purpose is for analysing in humanities, social sciences and linguistics.
 
-Because we are only interested in extracting certain data from the recipes and not in linguistic analysis or something else, we have transformed the digitalized version as depicted in figure XXX \todo{Beispiel Rezepte}. The essence of this version is, that it now only contains the textual information of the recipes. From this basis we will extract the ingredients as well as their corresponding quantities and units per each recipe.
+Because we are only interested in extracting certain data from the recipes and not in linguistic analysis or something else, we have transformed the digitalized version as depicted in \cref{fig:davidisRecipe}. The essence of this version is, that it is clear of for us not relevant information like the encoding of the German \textit{\longs} and has a clear structure. 
+
+\begin{figure}
+	\begin{subfigure}{1\textwidth}
+		\centering
+		\includegraphics[]{Images/davidsRezeptOrig}
+		\caption{Version from \parencite{DTA}}
+	\end{subfigure} \\
+	\begin{subfigure}{1\textwidth}
+		\centering
+		\includegraphics[]{Images/davidsRezeptTrans1}
+		\caption{Cleared of for us not relevant data}
+	\end{subfigure}
+	\caption{A recipe from our cookbook}
+	\label{fig:davidisRecipe}
+\end{figure}
+
 
 \section{CueML ontology}\label{sec:cueMLOntology}
-For automatic extraction and further processing of information an ontology is needed. In computer science an ontology is a vocabulary with defined meaning. A description for the use of ontologies, which are a requirement for the Semantic Web, can be found in \parencite{semanticWeb}.
+An ontology is needed for automatic extraction and further processing of information. In computer science an ontology is a vocabulary with defined meaning. A description for the use of ontologies, which are a requirement for the Semantic Web, can be found in \parencite{semanticWeb}.
 
 \begin{figure}
 	\begin{subfigure}{1\textwidth}
@@ -104,41 +127,39 @@ For automatic extraction and further processing of information an ontology is ne
 	\label{fig:schemaOrgRecipe}
 \end{figure}
 
-\textit{Schema.org/Recipe} is an existing ontology for recipes \parencite{schemaRecipe}. For example http://cooking.nytimes.com and http://allrecipes.com use it. Its general usage is shown in \cref{fig:schemaOrgRecipe} on the previous page. \parencite{foodBlogger} is a very nice blog article, which describes the value of it and points out, that its main purpose is to provide help for search engines.
+\textit{Schema.org/Recipe} is an existing ontology for recipes \parencite{schemaRecipe}. For example http://cooking.nytimes.com and http://allrecipes.com use it. Its general usage is shown in \cref{fig:schemaOrgRecipe} and its main purpose is to support search engines as described in \parencite{foodBlogger} and \footnote{http://schema.org/docs/datamodel.html}.
 
-It is not precise enough for general extracting of ingredients. As you can see in \cref{fig:schemaOrgRecipe} each line from the list of ingredient is tagged as an ingredient. This is too inaccurate, because the concrete ingredient can still not be understood from the computer and neither its quantity nor unit. Another not suited point is, that the ingredients are only tagged within the list of ingredients, whereby the recipes in our cookbook have no list of ingredients.
+But it is not precise enough for further automatic culinary analysis like extracting the ingredients. As you can see in \cref{fig:schemaOrgRecipe} each line from the list of ingredient is marked as an ingredient. This is too inaccurate, because the concrete ingredient is not marked and neither its quantity nor unit. Therefore a computer can not understand it.
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-	\includegraphics[width=0.5\textwidth]{Images/ingredientsInText}
-	\caption{Different meaning of ingredients in direction text}
-	\label{fig:ingredientsInText}
-\end{wrapfigure}
+That is why we came up with \textbf{culinary editions markup language (cueML)}. It is pronounced like Kümmel, which is the German word for caraway. It is an extension of Schema.org/Recipe. To extend it is a good idea, because this way it keeps all existing advantages of Schema.org/Recipe.
 
-Tagging ingredients from the direction texts leads to more complex phrases, which have to be distinguished. We have spotted four different cases, which are shown in \cref{fig:ingredientsInText}. An additional problem in plain text are cross-references like "prepare dumplings as in previous recipe".
-
-Due to these reasons we came up with \textbf{culinary editions markup language (cueML)}. It is pronounced like Kümmel, which is the German word for caraway. First of all we enclose a \textit{recipeIngredient} element more precisely around the ingredient and not vaguely around the whole phrase. Additional we specify an attribute for the \textit{quantity} of an ingredient and another one for its \textit{unit}. Concerning the variants from \cref{fig:ingredientsInText} we added attributes which specify if an ingredient \textit{is optional}, an \textit{alternative} \todo{value of alternative attri} or should \textit{not be used}. For the cross-referencing problem we added the attribute \textit{reference}. Its value should point to the referenced element. As a last step we keep the \textit{basis form} of an ingredient in an attribute. That makes it possible to check the ingredient against a dictionary or connect external resources with it, which for example could provide additional nutrition information.
+First of all we add the three attributes \textit{quantity}, \textit{unit} and \textit{name}. The name specifies a basis form of the ingredient. That enables a checked against an external source, which for example could provide additional information like nutrition information or a category like vegetable. The markup from \cref{fig:schemaOrgRecipe} stays the same expect that the recipeIngredient's get extra attributes as shown in \cref{fig:exampleCueML}.
 
 \begin{figure}[H]
-	\begin{subfigure}{1\textwidth}
-		\centering
-		\caption{bla}
-	\end{subfigure} \\
-	\begin{subfigure}{1\textwidth}
-		\centering
-		\caption{blubb }
-	\end{subfigure}
+	\centering
+	\includegraphics[width=1\textwidth]{Images/exampleCueML}
 	\caption{Example use of cueML}
 	\label{fig:exampleCueML}
 \end{figure} 
 
-Figure \ref{fig:exampleCueML} shows two example usage of cueML applied to recipes from our targeted cookbook. The full language is described through a RELAX NG grammar, which can be found in appendix \ref{appendix:grammaCueML}.
+Additionally we add an attribute \textit{isOptional}, because we think it is not appropriate to simply state sugar is an ingredient in the case of "sugar if not sweet enough". 
 
-Having cueML in place it is easy to extract an ingredient list. 
+Sometimes an ingredient is composed. For example "potato dumplings" is a reference to a complete different recipe. For capturing this, we add an attribute \textit{reference}, which points to another source.  
 
-\todo{Descripe Alg}
-\todo{Converting back to Schema.org/Recipe}
+Last we also noticed, that ingredients can be alternatives to each other like for example "hollandaise sauce or butter, mustard and a squeeze of lemon juice". Therefore we add an element \textit{recipeIngredientAlt} having arbitrary child elements \textit{alt}, which enclose \textit{recipeIngredient} elements.
+
+The complete cueML ontology is defined through a relax ng grammar, which can be found in \cref{appendix:grammaCueML}. \todo{Gramma "some data is better than none" free to customisations http://schema.org/docs/datamodel.html}
 
 
+\section{Applying cueML to our recipes}
+Due to the point, that we wanted to extend Schema.org/Recipe, cueML should be applied to the list of ingredients as the former does. But our recipes have only a direction text, as you could see in \cref{fig:davidisRecipe}. CueML as well as Schema.org/Recipe is not well suited for direction text. The ingredient phrases are not always tied closely together. Besides they repeat themselves in the text and sometimes they appear in the form of "like the previous one but don't use onions". These points make it hard to apply cueML direct to the direction text. Therefore we decided to bring the structure of our recipes in the form of the example recipe from Schema.org/Recipe shown in \cref{fig:schemaOrgRecipe}. Having extra sections for recipe yield, cook time and list of ingredients is way more nicer to read than only one direction text anyway. Hence we enrich the recipe from \cref{fig:exampleCueMLDavidis} as shown in \cref{fig:davidisRecipe}.
+
+\begin{figure}[H]
+	\centering
+	bla
+	\caption{Example use of cueML}
+	\label{fig:exampleCueMLDavidis}
+\end{figure} 
 
 \section{Need for automation}
 As mentioned in \parencite{manualTagging}, manual tagging is time consuming and error prone. The approach for extracting ingredients from recipes presented in section \ref{sec:crfzeit} emphasises that. They state, that they need 50-100 fields per recipe. And in the evaluation of their approach they discovered mistakes done in manual tagging.
@@ -278,6 +299,17 @@ In their evaluation they apply these two variants to 43 randomly selected recipe
 
 
 \chapter{Development of recipe parser}
+
+\section{Starting position}
+Another not suited point is, that the ingredients are only tagged within the list of ingredients, whereby the recipes in our cookbook have no list of ingredients.
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+	\includegraphics[width=0.5\textwidth]{Images/ingredientsInText}
+	\caption{Different meaning of ingredients in direction text}
+	\label{fig:ingredientsInText}
+\end{wrapfigure}
+
+Tagging ingredients from the direction texts leads to more complex phrases, which have to be distinguished. We have spotted four different cases, which are shown in \cref{fig:ingredientsInText}. An additional problem in plain text are cross-references like "prepare dumplings as in previous recipe".
 
 \section{Overall picture}
 \subsection{workflow}
