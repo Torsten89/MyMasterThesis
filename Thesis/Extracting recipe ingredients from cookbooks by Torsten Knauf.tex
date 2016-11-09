@@ -9,18 +9,49 @@
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{graphicx}
-\usepackage{listings}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage[backend=bibtex, style=authoryear, maxcitenames=2]{biblatex}
 \addbibresource{references.bib}
 \usepackage{cleveref} % cleverref has to be loaded after hyperref!
+\crefname{lstlisting}{listing}{listings}
+\Crefname{lstlisting}{Listing}{Listings}
 \usepackage{wrapfig}
 \usepackage[colorinlistoftodos]{todonotes} % dont forget to remove
 
-\begin{document}
+% listings
+\usepackage{listings}
+\lstset{
+	frame=single,
+	breaklines=true,
+	tabsize=2,
+	literate=%
+		{Ö}{{\"O}}1
+		{Ä}{{\"A}}1
+		{Ü}{{\"U}}1
+		{ß}{{\ss}}1
+		{ü}{{\"u}}1
+		{ä}{{\"a}}1
+		{ö}{{\"o}}1
+		{~}{{\textasciitilde}}1
+}
+\definecolor{maroon}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\lstdefinelanguage{XML}
+{
+	basicstyle=\ttfamily\footnotesize,
+	morestring=[s]{"}{"},
+	morecomment=[s]{?}{?},
+	morecomment=[s]{!--}{--},
+	commentstyle=\color{darkgreen},
+	moredelim=[s][\color{black}]{>}{<},
+	moredelim=[s][\color{red}]{\ }{=},
+	stringstyle=\color{blue},
+	identifierstyle=\color{maroon}
+}
 
-\todo{Alle XMLs gleiche Farbhervorhebung}
+
+\begin{document}
 
 \begin{titlepage}
     \begin{center}
@@ -70,13 +101,15 @@ If I don't profit from nice people in these thesis, I have done something horrib
 \tableofcontents
 
 \listoffigures
-\listoftables
-\lstlistoflistings
+\begingroup
+	\let\clearpage\relax
+	\listoftables
+\endgroup
 
 \clearpage
 \pagenumbering{arabic}  
 \chapter{Introduction}
-A recipe parser, which can tag old and rather unstructured cookbooks according to the ontology of \parencite{schemaRecipe}, is developed in this thesis. Once it is tagged, it is easy to extract the tagged entities. The parser is developed and tested with \textit{Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849} but can be adapted easily to every German cookbook or website. For other languages new training data and dictionaries for the machine learning preparation of the parser have to be provided, but the general algorithm can be inherited.
+A recipe parser, which can tag old and rather unstructured cookbooks according to the ontology of \parencite{schemaOrg}, is developed in this thesis. Once it is tagged, it is easy to extract the tagged entities. The parser is developed and tested with \textit{Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849} but can be adapted easily to every German cookbook or website. For other languages new training data and dictionaries for the machine learning preparation of the parser have to be provided, but the general algorithm can be inherited.
 
 This effort is motivated by nutritional science. Being able to extract the ingredients of a recipe automatically simplifies research according healthy food. But also sociological analysis are enabled through that.
 
@@ -84,25 +117,35 @@ The thesis is structured as follows:
 
 
 \chapter{Making a cookbook machine readable}
-This chapter covers shortly, how we transform a cookbook in a machine readable XML file, which can be arbitrarily processed further. To achieve this, the cookbook has to be digitalized first and afterwards enriched through meta data defined by an ontology.
+This chapter covers shortly, how we transform a cookbook in a machine readable format, which can be arbitrarily processed further. To achieve this, the cookbook has to be digitalized first. Afterwards it hast to be enriched through meta data from an ontology.
 
 \section{Digitalisation}
-In general there are two different ways, how to digitalize a book. The first one is to scan each side and let an optical character recognition program extract the the text of the scanned picture. The second one is to type it manual into a computer.
+In general there are two different ways, how to digitalize a book. The first one is to scan each side and let an optical character recognition program extract the text of the scanned pictures. The second one is to type it manual into a computer.
 
-The German Text Archive provides a collection of German texts from 16th to 19th century including \textit{Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849} in \parencite{DTA}. They digitalized it through double keying, meaning that two people manual typed the book into the computer. Differences in their versions were revised by a third person. They have already enriched the book through \textit{TEI: Text Encoding Initiative}-standard\footnote{http://www.tei-c.org/index.xml}. TEI is a standard for representing printed text in digital form. As many as possible characteristics of the printed medium are kept through meta data. Its main purpose is for analysing in humanities, social sciences and linguistics.
+The German Text Archive provides a collection of German texts from 16th to 19th century including our targeted cookbook \textit{Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849} in \parencite{DTA}. They digitalized it through double keying, meaning that two people independent of each other manual typed the book into the computer. Differences in their versions were revised by a third person. They have already enriched the book through \textit{TEI: Text Encoding Initiative}-standard\footnote{http://www.tei-c.org/index.xml}. TEI is a standard for representing printed text in digital form. As many as possible characteristics of the printed medium are kept through meta data. Its main purpose is for analysing in humanities, social sciences and linguistics.
 
-Because we are only interested in extracting certain data from the recipes and not in linguistic analysis or something else, we have transformed the digitalized version as depicted in \cref{fig:davidisRecipe}. The essence of this version is, that it is clear of for us not relevant information like the encoding of the German \textit{\longs} and has a clear structure. 
+Because we are only interested in extracting certain data from the recipes and not in linguistic analysis or something else, we have transformed the digitalized version as depicted in \cref{fig:davidisRecipe} on the next page. The essence of this version is, that it is clear of for us not relevant information like the encoding of the German \textit{\longs} and has a clear structure. 
 
 \begin{figure}
 	\begin{subfigure}{1\textwidth}
-		\centering
-		\includegraphics[]{Images/davidsRezeptOrig}
-		\caption{Version from \parencite{DTA}}
+	\begin{lstlisting}[language=XML]
+<div n="3">
+	<head>4. Klare braune Rindflei&#x017F;ch&#x017F;uppe.</head> <lb/> <p>Die Bereitung die&#x017F;er braunen Kraftbrühe findet man in<lb/> <hi rendition="#aq">A.</hi> No. 12. Zu einer Ge&#x017F;ell&#x017F;chaft	von 12 Per&#x017F;onen nimmt<lb/> man 6 Pfund Rindflei&#x017F;ch und 1 Pfund rohen Schinken. Es<lb/> werden braune Klöße No. 3 und Schwammklöße darin gemacht.<lb/> Auch kann man nach Belieben braunen Sago darin kochen.
+	</p>
+</div>
+	\end{lstlisting}
+		\caption{Example of version from \parencite{DTA}}
 	\end{subfigure} \\
 	\begin{subfigure}{1\textwidth}
-		\centering
-		\includegraphics[]{Images/davidsRezeptTrans1}
-		\caption{Cleared of for us not relevant data}
+\begin{lstlisting}[language=XML]
+<cue:recipe type="Suppen." rcp-id="B-4">
+	<head>Klare braune Rindfleischsuppe.</head>
+	
+	<p>Die Bereitung dieser braunen Kraftbrühe findet man in A. No. 12. Zu einer Gesellschaft von 12 Personen nimmt man 6 Pfund Rindfleisch und 1 Pfund rohen Schinken. Es werden braune Klöße No. 3 und Schwammklöße darin gemacht. Auch kann man nach Belieben braunen Sago darin kochen.
+	</p>
+</cue:recipe>
+\end{lstlisting}
+		\caption{Example transformed}
 	\end{subfigure}
 	\caption{A recipe from our cookbook}
 	\label{fig:davidisRecipe}
@@ -110,7 +153,7 @@ Because we are only interested in extracting certain data from the recipes and n
 
 
 \section{CueML ontology}\label{sec:cueMLOntology}
-An ontology is needed for automatic extraction and further processing of information. In computer science an ontology is a vocabulary with defined meaning. A description for the use of ontologies, which are a requirement for the Semantic Web, can be found in \parencite{semanticWeb}.
+An ontology is needed for automatic extraction and further processing of information. In computer science an ontology is a vocabulary with defined meaning. A description for the use of ontologies can be found in \parencite{semanticWeb}.
 
 \begin{figure}
 	\begin{subfigure}{1\textwidth}
@@ -123,48 +166,44 @@ An ontology is needed for automatic extraction and further processing of informa
 		\includegraphics[width=0.95\textwidth]{Images/schemaRecipeWithMarkup}
 		\caption{The same recipe enriched with markup}
 	\end{subfigure}
-	\caption{Schema.org/Recipe example from \parencite{schemaRecipe}}
+	\caption{Schema.org/Recipe example from \parencite{schemaOrg}}
 	\label{fig:schemaOrgRecipe}
 \end{figure}
 
-\textit{Schema.org/Recipe} is an existing ontology for recipes \parencite{schemaRecipe}. For example http://cooking.nytimes.com and http://allrecipes.com use it. Its general usage is shown in \cref{fig:schemaOrgRecipe} and its main purpose is to support search engines as described in \parencite{foodBlogger} and \footnote{http://schema.org/docs/datamodel.html}.
+\textit{Schema.org/Recipe} is an existing ontology for recipes \parencite{schemaOrg}. For example http://cooking.nytimes.com and http://allrecipes.com use it. Its general usage is shown in \cref{fig:schemaOrgRecipe} on the next page and its main purpose is to support search engines as described in \parencite{foodBlogger} and \parencite{schemaOrg} \footnote{at http://schema.org/docs/datamodel.html}.
 
 But it is not precise enough for further automatic culinary analysis like extracting the ingredients. As you can see in \cref{fig:schemaOrgRecipe} each line from the list of ingredient is marked as an ingredient. This is too inaccurate, because the concrete ingredient is not marked and neither its quantity nor unit. Therefore a computer can not understand it.
 
 That is why we came up with \textbf{culinary editions markup language (cueML)}. It is pronounced like Kümmel, which is the German word for caraway. It is an extension of Schema.org/Recipe. To extend it is a good idea, because this way it keeps all existing advantages of Schema.org/Recipe.
 
-First of all we add the three attributes \textit{quantity}, \textit{unit} and \textit{name}. The name specifies a basis form of the ingredient. That enables a checked against an external source, which for example could provide additional information like nutrition information or a category like vegetable. The markup from \cref{fig:schemaOrgRecipe} stays the same expect that the recipeIngredient's get extra attributes as shown in \cref{fig:exampleCueML}.
+First of all we add the three attributes \textit{quantity}, \textit{unit} and \textit{name}. The name specifies a basis form of the ingredient. That enables a check against an external source, which for example could provide nutrition information or a category like vegetable. The markup for the recipe from \cref{fig:schemaOrgRecipe} stays the same, expect that the recipeIngredient's get extra attributes as shown in \cref{lst:exampleCueML}.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\textwidth]{Images/exampleCueML}
-	\caption{Example use of cueML}
-	\label{fig:exampleCueML}
-\end{figure} 
+\begin{minipage}{\linewidth} % For avoiding page breaks
+\begin{lstlisting}[language=XML, caption={Example for cueML}, label=lst:exampleCueML]
+Ingredients:
+- <span itemprop="recipeIngredient" quantity="3-4" name="banana">3 or 4 ripe bananas, smashed</span>
+- <span itemprop="recipeIngredient" quantity="1" name="egg">1 egg</span>
+- <span itemprop="recipeIngredient" quantity="0.75" unit="cup" name="sugar">3/4 cup of sugar</span>
+\end{lstlisting}
+\end{minipage}
 
-Additionally we add an attribute \textit{isOptional}, because we think it is not appropriate to simply state sugar is an ingredient in the case of "sugar if not sweet enough". 
+Additional we add an attribute \textit{isOptional}, because we think it is not appropriate to simply state sugar is an ingredient in the case of "sugar if not sweet enough". 
 
-Sometimes an ingredient is composed. For example "potato dumplings" is a reference to a complete different recipe. For capturing this, we add an attribute \textit{reference}, which points to another source.  
+Sometimes an ingredient is composed. For example "potato dumplings" is a reference to a complete different recipe. For capturing this, we add an attribute \textit{reference}, which points to another source. We also allow an element \textit{link} with an attribute \textit{target}. This is just a look up reference for example to general cooking advises. 
 
-Last we also noticed, that ingredients can be alternatives to each other like for example "hollandaise sauce or butter, mustard and a squeeze of lemon juice". Therefore we add an element \textit{recipeIngredientAlt} having arbitrary child elements \textit{alt}, which enclose \textit{recipeIngredient} elements.
+Last we also noticed, that ingredients can be alternatives to each other like in "hollandaise sauce or butter, mustard and a squeeze of lemon juice". Therefore we add an element \textit{recipeIngredientAlternations} having arbitrary child elements \textit{alt}, which enclose \textit{recipeIngredient} elements.
 
-The complete cueML ontology is defined through a relax ng grammar, which can be found in \cref{appendix:grammaCueML}. \todo{Gramma "some data is better than none" free to customisations http://schema.org/docs/datamodel.html}
+An example is provided in \cref{appendix:fullUseOfCueML}. The complete cueML ontology is defined through a relax ng grammar, which can be found in \cref{appendix:grammaCueML}. Due to the point, that Schema.org does not provide a grammar for Schema.org/Recipe, cueML includes also the rules for it. Personal I was surprised that they do not provide an official grammar, because that would provide a clear definition as well as an easy validation method. That is why we provide a grammar. But they state themselves, that "some data is better than none", meaning, that they want to tolerate wrong meta data for reducing the risk of getting no meta data at all. They state furthermore, that it makes it more easy to extend the language \parencite{schemaOrg}\footnote{at http://schema.org/docs/datamodel.html}. Obvious you cannot break, what is not defined. 
 
 
 \section{Applying cueML to our recipes}
-Due to the point, that we wanted to extend Schema.org/Recipe, cueML should be applied to the list of ingredients as the former does. But our recipes have only a direction text, as you could see in \cref{fig:davidisRecipe}. CueML as well as Schema.org/Recipe is not well suited for direction text. The ingredient phrases are not always tied closely together. Besides they repeat themselves in the text and sometimes they appear in the form of "like the previous one but don't use onions". These points make it hard to apply cueML direct to the direction text. Therefore we decided to bring the structure of our recipes in the form of the example recipe from Schema.org/Recipe shown in \cref{fig:schemaOrgRecipe}. Having extra sections for recipe yield, cook time and list of ingredients is way more nicer to read than only one direction text anyway. Hence we enrich the recipe from \cref{fig:exampleCueMLDavidis} as shown in \cref{fig:davidisRecipe}.
+Due to the point, that we wanted to extend Schema.org/Recipe, cueML should be applied to the list of ingredients as the former does. But our recipes have only a direction text, as you could see in \cref{fig:davidisRecipe}. CueML as well as Schema.org/Recipe is not well suited for direction text. The ingredient phrases are not always tied closely together. Besides they repeat themselves in the text and sometimes they appear in the form of "like the previous one but don't use onions". These points make it hard to apply cueML direct to the direction text. Therefore we decided to collect them in an extra \textit{meta}-element. Having extra sections for recipe yield, cook time and list of ingredients is way more nicer to read than only one direction text anyway. \Cref{appendix:fullUseOfCueML} shows a full example usage of cueML. A test with the testing tool for structured data from google\footnote{https://search.google.com/structured-data/testing-tool} reveals, that all extracting which is already in place for Schema.org/Recipe, still works. 
 
-\begin{figure}[H]
-	\centering
-	bla
-	\caption{Example use of cueML}
-	\label{fig:exampleCueMLDavidis}
-\end{figure} 
 
 \section{Need for automation}
-As mentioned in \parencite{manualTagging}, manual tagging is time consuming and error prone. The approach for extracting ingredients from recipes presented in section \ref{sec:crfzeit} emphasises that. They state, that they need 50-100 fields per recipe. And in the evaluation of their approach they discovered mistakes done in manual tagging.
+As mentioned in \parencite{manualTagging}, manual tagging is time consuming and error prone. The approach for extracting ingredients from recipes, which we will present in section \ref{sec:crfzeit}, emphasises that. They state, that they need 50-100 fields per recipe. And in the evaluation of their approach they discovered mistakes done in manual tagging.
 
-For tagging one recipe in our cookbook I need about 5 minutes. That means, that I would need more than 2 weeks for tagging only the recipes from our cookbook. Building a big data pool this way is very time consuming and therefore expensive.
+For tagging one recipe in our cookbook I need about 5 minutes. That means, that I would need more than 2 weeks, for tagging only the recipes from our cookbook. Building a big data pool this way is very time consuming and therefore expensive.
 
 Hence automation, which have to be configured only once and can be applied to many resources afterwards, is clearly preferable.
 
@@ -182,11 +221,13 @@ Precision and recall are metrics, which measure the quality of an information ex
 	Precision = \frac{\#(retrieved \cap relevant)}{\#retrieved}, \hspace{1em} Recall = \frac{\#(retrieved \cap relevant)}{\#relevant}
 \end{equation}
 
-They are defined as show in \cref{eq:precisionAndRecall} according to  \parencite{surveyOfTextMining}. A high precision states, that the algorithm does only find relevant information as intended. A high recall states, that the algorithm finds many of the total relevant information. Both are needed for an evaluation of an algorithm. If only considering precision, the algorithm could only find the information, which are obvious relevant and therefore find only view information, but having an high score this way. On the other side if only considering recall, the algorithm could return everything. This way its score would have the perfect value of one. But both algorithm are obviously not good, which gets covered by a low value by the other formula.
+They are defined as show in \cref{eq:precisionAndRecall} according to  \parencite{surveyOfTextMining}. A high precision states, that the algorithm does only find relevant information as intended. The ideal precision of one would mean, that all extracted data where useful. A high recall states, that the algorithm finds many of the total relevant information. The perfect score of one would mean, that all relevant information were found. Both are needed for the evaluation of an algorithm. If only considering precision, the algorithm could only find the information, which are obvious relevant and therefore find only view information, but having a high score this way. On the other side, if only considering recall, the algorithm could return everything. This way its score would have the perfect value of one. But both algorithm are obvious not good, which gets covered by a low value by the other formula.
 
 
 \section{Skip The Pizza}
-\parencite{REgutGenug} is a project described on WordPress.org. The author wants to combine his two hobbies cooking and software engineering. For being able to answer questions like "How many ingredients does a typical recipe consist of?" or "Which are the most frequent ingredients?", he extracts the ingredients of recipes from the open source platform http://recipes.wikia.com/wiki/Recipes\_Wiki.
+\parencite{REgutGenug} is a project described on WordPress.org. The author wants to combine his two hobbies cooking and software engineering. For being able to answer questions like "How many ingredients does a typical recipe consist of?" or "Which are the most frequent ingredients?", he extracts the ingredients of recipes from a open source platform at http://recipes.wikia.com/wiki/Recipes\_Wiki.
+
+The recipes have a consistent internal representation, which is shown in \cref{lst:recipeWiki}. The semi-structure, that after \texttt{== Ingredients ==} comes a list of ingredients, can be recognized easily. Per line is one ingredient enclosed within \texttt{[[ingredient name]]}. Using this semi-structure a regular expression is already good enough for extracting the ingredients from these recipes.
 
 \begin{lstlisting}[frame=single, basicstyle=\footnotesize\ttfamily,caption={Shortened example recipe from \\ http://recipes.wikia.com/wiki/Recipes\_Wiki}, label=lst:recipeWiki]
 * Makes 6 to 8 servings
@@ -206,30 +247,32 @@ Add tomatoes, [...]
 [...]
 \end{lstlisting}
 
-The recipes have a consistent internal representation, which is shown in \cref{lst:recipeWiki}. The semi-structure, that after \texttt{== Ingredients ==} comes a list of ingredients, can be recognized easily. Per line is one ingredient enclosed within \texttt{[[ingredient name]]}. Using this semi-structure a regular expression is already good enough for extracting the ingredients from these recipes.
 
 \section{Extracting Structured Data From Recipes Using Conditional Random Fields}\label{sec:crfzeit}
-The New York Times (NYT) provides a cooking website with recipes\footnote{http://cooking.nytimes.com/}. Their recipes are enriched through Schema.org/Recipes. For providing a recipe recommendation system based on ingredients, you have to extract the exact ingredients from a recipe, which is not enable through this schema as already discussed in \cref{sec:cueMLOntology}. Nevertheless they are able to extract them automatically. They use the provided structure from Schema.org/Recipe, that each ingredient phrase from the list of ingredients is enclosed within a \textit{recipeIngredient}-tag, and Conditional Random Fields (CRF) for that. Their approach is described in \parencite{CRFZeit}. So we introduce CRF first and afterwards outline their implementation.  
+The New York Times provides a cooking website with recipes\footnote{http://cooking.nytimes.com/}. Their recipes are enriched through Schema.org/Recipes. For providing a recipe recommendation system based on ingredients, you have to extract the exact ingredients from a recipe, which is not enabled through this schema, as already discussed in \cref{sec:cueMLOntology}. Nevertheless they are able to extract them automatically. They use the provided structure from Schema.org/Recipe, that each ingredient phrase from the list of ingredients is marked as a \textit{recipeIngredient}, and Conditional Random Fields (CRF) for that. Their approach is described in \parencite{CRFZeit}. Hence we introduce here CRF first and afterwards outline their implementation.  
 
 \subsection{Conditional Random Fields}
-Given a set of words, CRF wants to predict a suitable set of labels. For example when the set of words is \textit{1 tablespoon salt}, we want to predict \textit{QUANTITY, UNIT, INGREDIENT}, meaning 1 is a quantity, tablespoon an unit and salt an ingredient.
+Given a set of words, CRF wants to predict a suitable set of labels. For example when the set of words is \textit{\{1 tablespoon salt\}}, we want to predict \textit{\{QUANTITY, UNIT, INGREDIENT\}}, meaning 1 is a quantity, tablespoon an unit and salt an ingredient.
 
-A detailed introduction can be found in \parencite{CRFIntroduction}. Here we only want to give a quick overview about linear-chain CRF, because that is the algorithm the NJT uses. Therefore when we write CRF, we mean linear-chain CRF. It is build up from a set of words $X$, which have already a correct set of labels $Y$. Such a labelled set is called training data. A joint probability distribution can be extracted from this training data, which states how likely a set of words have a concrete set of labels. Taking the simplified assumption, that each tag depends only on the previous tag and the given set of words, leads to \cref{eq:jointProb}. This can always be transformed into \cref{eq:magicTransoformation}. The division with $Z(X,Y)$ ensures, that the value of $p(X,Y)$ is between $0$ and $1$. $1_{condition}$ is a function which is $1$ if the condition is true and $0$ otherwise. Smart indexing leads to \cref{eq:smartIndexing}. The $f_k$ are called feature functions. The calculation of the $\Theta_k$'s is a mathematical optimisation problem. Node that there is very likely no exact solution due to the simplified assumption in \cref{eq:jointProb}.
+A detailed introduction to CRF can be found in \parencite{CRFIntroduction}. Here we only want to give a quick overview about linear-chain CRF, because that is the algorithm the New York Times uses. Therefore, when we write CRF, we mean linear-chain CRF.
+
+Its starting point are sets of words $X$, which have already correct sets of labels $Y$. Such labelled sets are called training data. A joint probability distribution can be extracted from this training data, which states how likely a set of words has a corresponding set of labels. Taking the simplified assumption, that each tag depends only on the previous tag and the given set of words, leads to \cref{eq:jointProb}. This can always be transformed into the form of \cref{eq:magicTransoformation}. The division with $Z(X)$ ensures, that the value of $p(X,Y)$ is between zero and one. $1_{condition}$ is a function, which is one if the condition is true and zero otherwise. Smart indexing leads to \cref{eq:smartIndexing}. Each $f_k$ is called a feature function. The calculation of the $\Theta_k$'s is a mathematical optimisation problem. Note that there is very likely no exact solution due to the simplified assumption of \cref{eq:jointProb}.
 
 \begin{equation} \label{eq:jointProb}
 p(X,Y) = \prod_{t=1}^T p(y_t|y_{t-1}) * p(x|y_t), \quad T = \#X
 \end{equation}
-\begin{equation} \label{eq:magicTransoformation}\begin{split}
-p(X,Y) = \frac{1}{Z(X,Y)}\prod_{t=1}^T exp(\sum_{i,j\in S}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in S}^{} \sum_{j \in O}^{} \mu_{o,i} * 1_{y=i} * 1_{x_t=o}),
+\begin{align}\label{eq:magicTransoformation}
+p(X,Y) = \frac{1}{Z(X)}\prod_{t=1}^T exp(\sum_{i,j\in S}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in S}^{} \sum_{j \in O}^{} \mu_{o,i} * 1_{y=i} * 1_{x_t=o}), \nonumber
 \\
-Z(X,Y) = \sum_{X}^{}\sum_{Y}^{}\prod_{t=1}^T exp(\sum_{i,j\in S}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in S}^{} \sum_{j \in O}^{} \mu_{o,i} * 1_{y=i} * 1_{x_t=o}),
-\\ \begin{flalign}
-T = \#X, \quad S = all\ possible\ labels, \quad O = all\ possible\ words
-\end{flalign}
-\end{split}\end{equation}
-\begin{equation} \label{eq:smartIndexing}
-p(X,Y) = \frac{1}{Z(X,Y)}\prod_{t=1}^T exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, X))
-\end{equation}
+Z(X) = \sum_{X}^{}\sum_{Y}^{}\prod_{t=1}^T exp(\sum_{i,j\in S}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in S}^{} \sum_{j \in O}^{} \mu_{o,i} * 1_{y=i} * 1_{x_t=o}), \nonumber
+\\
+S = all\ possible\ labels, \quad O = all\ possible\ words
+\end{align}
+\begin{align} \label{eq:smartIndexing}
+p(X,Y) = \frac{1}{Z(X)}\prod_{t=1}^T exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, X)), \nonumber
+\\
+Z(X) = \sum_{Y}^{}\prod_{t=1}^T exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, X))
+\end{align}
 
 A join probability distribution can always be transformed into a conditional probability as shown in \cref{eq:condProb}.
 
@@ -237,15 +280,56 @@ A join probability distribution can always be transformed into a conditional pro
 p(Y|X) = \frac{p(X,Y)}{\sum_{Y'\in S}^{}p(Y', X)}
 \end{equation}
 
-Having \cref{eq:condProb} in place, a natural prediction function is shown in \cref{eq:CRF}, what is exactly what CRF does. The calculation of $prediction(X)$ can be done in $\#S^2*\#X$through dynamic programming.
+Having \cref{eq:condProb} in place, a natural prediction function is shown in \cref{eq:CRF}, what is exactly what CRF does. The calculation of $prediction(X)$ can be done in $(\#S)^2*\#X$ through dynamic programming.
 
 \begin{equation}\label{eq:CRF}
-prediction(X) = argmax_y(P(Y|X))
+prediction(X) = argmax_Y(P(Y|X))
 \end{equation}
 
-Additional custom feature functions can improve the prediction function. Two example custom feature functions are $f_{k+1}(y_t, y_{t-1}, X) = 1_{X_t\ starts with\ upper\ case}$ or \\ $f_{k+2}(y_t, y_{t-1}, X) = 1_{X_t\ is\ in\ a\ domain\ specific\ dictionary}$.
+Note that we only transformed \cref{eq:jointProb} until \cref{eq:condProb} and than took the $argmax_Y$ as prediction function. Therefore this prediction function can only consider the probabilities of $y_t$ following $y_{t-1}$ as well as the probability, that in $X$ the correct label for $x_t$ is $y_t$, for his oracle task.
+
+Taking only a subset of these feature can improve performance without loosing accuracy. Additional improvement can very likely be achieved through further custom feature functions. Two such custom feature functions could be $f_{k+1}(y_t, y_{t-1}, X) = 1_{X_t\ starts with\ upper\ case}$ and \\ $f_{k+2}(y_t, y_{t-1}, X) = 1_{X_t\ is\ in\ a\ domain\ specific\ dictionary}$.
 
 \subsection{Implementation of New York Times}
+As starting point the New York Times have manual specified labels for over 130,000 ingredient phrases extracted out of their already through Schema.org/Recipe enriched recipes from their website.
+
+An extract of their trainings data is shown in \cref{lst:NYTTrainingData}. They use CRF++\footnote{https://taku910.github.io/crfpp/} as library.
+
+\begin{lstlisting}[frame=single, caption={Extract of the training data for New York Times CRF}, label=lst:NYTTrainingData]
+content...
+\end{lstlisting}
+
+\begin{wrapfigure}{R}{0.35\textwidth}
+\begin{lstlisting}[frame=single, caption={Feature templates for New York Times CRF}, label=lst:NYTfeatureTemplates]
+# Unigram
+U00:%x[-2,0]
+U01:%x[-1,0]
+U02:%x[0,0]
+U03:%x[1,0]
+U04:%x[2,0]
+U05:%x[0,1]
+U06:%x[0,2]
+U07:%x[0,3]
+
+U08:%x[-2,4]
+U09:%x[-1,4]
+U10:%x[0,4]
+U11:%x[1,4]
+U12:%x[2,4]
+
+U13:%x[0,0]/%x[0,2]
+U14:%x[0,1]/%x[0,2]
+U15:%x[0,0]/%x[0,3]
+U16:%x[0,0]/%x[0,4]
+U17:%x[0,0]/%x[0,1]
+
+# Bigram
+B
+\end{lstlisting}
+\end{wrapfigure}
+ 
+The feature functions are not provided through source code, but instead through already set labels. These special labels are also called features. For example U00:\%x[0,1] with the training data from \cref{lst:NYTTrainingData} creates a function $1_{y_t=LABEL and (feature in column COL is LABEL)}$. \textit{B}-features are features about the correlation of the current and previous label. 
+
 feature functions: isCapitalized, inParenthesis, I?, Length of phrases
 
 Eval recall and precision
@@ -326,9 +410,16 @@ Git-tag
 \subsection{Workflow}
 \subsection{Evaluation}
 
+
+
+
+
+%Discussion------------------------------------------------------------------%
 \chapter{Discussion}
 - Übertragung auf beliebige Bücher (Wenn Buch/Webseite hat bereits Zutatenliste erste Phase entfällt)
-- TDD / früh Plausibilitäts-Überprüfungen (insbesondere fürs Schemata, Mengenangaben historische Recherche nötig)
+
+- TDD / früh Plausibilitäts-Überprüfungen - Tagen als Hi-Wi war ne dumme Aktion^^ (insbesondere fürs Schemata, Mengenangaben und Namen historische Recherche nötig (B-17 bzw \cref{appendix:fullUseOfCueML} cook time not clear,	Wurzelwerk, braunes Gewürz,	Engl. Soja))
+
 
 \section{Power of machine readable data}
 Machine readable data are very powerful. But \textit{with great power comes great responsibility}\footnote{A well known proverb which probably has its origin from the French National Convention during the period of French Revolution. \parencite{quoteInvestigator}}. In the context of a recipe parser this might be a little bit exaggerated. But specially in mind of the global surveillance disclosures denounced by Edward Snowed with still uncertain dimension, I think it is important to have a consciousness for what can be done. Therefore I want to think about, what can be done through innocent looking machine readable tags. 
@@ -358,11 +449,71 @@ I declare that I have developed and written the enclosed Master Thesis completel
 \rule{\textwidth}{1pt}
 Location, Date \hfill Signature 
 
-\chapter{RELAX NG grammar for cueML}
-\label{appendix:grammaCueML}
+\chapter{RELAX NG grammar for cueML} \label{appendix:grammaCueML}
 
-\chapter{Something else else}
-hello
+
+\chapter{Full example use of cueML} \label{appendix:fullUseOfCueML}
+\begin{lstlisting}[language=XML]
+<div itemscope itemtype="http://schema.org/Recipe http://cueML.org">
+	<recipe type="Suppen." rcp-id="B-16">
+		<head><span itemprop="name">Mock Turtle Suppe</span></head>
+		
+		<meta>
+			<span itemprop="recipeYield" quantity="24-30" unit="Personen">24-30 Personen</span>
+			
+			<span itemprop="recipeIngredient" name="Bouillon" reference="#Bouillon">Bouillon</span>
+			<span itemprop="recipeIngredient" name="Rindfleisch" quantity="8-10" unit="Pfund">8-10 Pfund Rindfleisch</span>
+			<span itemprop="recipeIngredient">Wurzelwerk</span>
+			<span itemprop="recipeIngredient" name="Kalbskopf" quantity="1">1 Kalbskopf</span>
+			<span itemprop="recipeIngredient" name="Schweineschnauze" quantity="1">1 Schweineschnauze</span>
+			<span itemprop="recipeIngredient" name="Schweineohr">Schweineohren</span>
+			<span itemprop="recipeIngredient" name="Ochsengaumen" quantity="1">1 Ochsengaumen</span>
+			<span itemprop="recipeIngredient" name="Ochsenzunge" quantity="1">1 geräucherte Ochsenzunge</span>
+			<span itemprop="recipeIngredient">braunes Gewürz</span>
+			<span itemprop="recipeIngredient" name="Cayennepfeffer" quantity="vague" unit="Messersptize">ein Paar Messerspitzen Cayenne-Pfeffer</span>
+			<span itemprop="recipeIngredient" name="Kalbsmidder" quantity="vague" reference="#A-16">einige Kalbsmidder</span>
+			<span itemprop="recipeIngredient" name="Saucisson">kleine Saucissen</span>
+			<span itemprop="recipeIngredient" name="Butter">Butter</span>
+			<span itemprop="recipeIngredient" name="Mehl">Mehl</span>
+			<span itemprop="recipeIngredient" name="Kalbfleischklöße" reference="#L-4">Klöße vom Kalbfleisch</span>
+			<span itemprop="recipeIngredient" name="Ei" quantity="vague">einige hart gekochte Eier</span>
+			
+			<span itemprop="recipeIngredient" quantity="vague" unit="EL" isOptional="True">ein Paar Eßlöffel Engl. Soja</span>
+			
+			<recipeIngredientAlternations>
+				<alt>
+					<span itemprop="recipeIngredient" name="Madeira" quantity="0.5" unit="Flasche">Madeira</span>
+				</alt>
+				<alt>
+					<span itemprop="recipeIngredient" name="weißen Franzwein">weißen Franzwein</span>
+					<span itemprop="recipeIngredient" name="Rum">etwas Rum</span>
+				</alt>
+			</recipeIngredientAlternations>
+		</meta>
+
+		<span itemprop="recipeInstructions">
+			<p>Es wird hierzu für 24-30 Personen eine kräftige Bouillon von 8-10 Pfund Rindfleisch
+               mit Wurzelwerk gekocht. Zugleich bringt man einen großen Kalbskopf, eine
+               Schweineschnauze und Ohren, einen Ochsengaumen und eine geräucherte Ochsenzunge zu
+               Feuer und kocht dies Alles gahr, aber nicht zu weich. Kalt, schneidet man es in
+               kleine, länglich viereckige Stückchen, gibt das Fleisch in die Bouillon, nebst
+               braunem Gewürz, ein Paar Messerspitzen Cayenne-Pfeffer, einige Kalbsmidder in
+               Stückchen geschnitten (siehe Vorbereitungsregeln), kleine Saucissen, so viel
+               Kalbskopfbrühe, daß man hinreichend Suppe hat, und macht dies mit in Butter braun
+               gemachtem Mehl gebunden. Nachdem dies Alles 1/4 Stunde gekocht hat, kommen noch Klöße
+               von Kalbfleisch, einige hart gekochte Eier in Würfel geschnitten, ein Paar Eßlöffel
+               Engl. Soja hinzu, und wenn die Klößchen einige Minuten gekocht haben, 1/2 Flasche
+               Madeira und auch Austern, wenn man sie haben kann. Dann wird die Suppe sogleich
+               angerichtet. </p>
+
+            <note>Anmerk. Der Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und
+               statt Madeira kann man weißen Franzwein und etwas Rum nehmen. Sowohl die Bouillon als
+               Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht
+               werden. </note>
+		</span>
+	<recipe>
+</div>		
+\end{lstlisting}
 
 \printbibliography
 

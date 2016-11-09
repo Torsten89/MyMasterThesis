@@ -1,0 +1,67 @@
+﻿<div itemscope itemtype="http://schema.org/Recipe http://cueML.org">
+	<recipe type="Suppen." rcp-id="B-16">
+		<head><span itemprop="name">Mock Turtle Suppe</span></head>
+		
+		<meta>
+			<span itemprop="recipeYield" quantity="24-30" unit="Personen">24-30 Personen</span>
+			
+			<span itemprop="recipeIngredient" name="Bouillon" reference="#Bouillon">Bouillon</span>
+			<span itemprop="recipeIngredient" name="Rindfleisch" quantity="8-10" unit="Pfund">8-10 Pfund Rindfleisch</span>
+			<span itemprop="recipeIngredient">Wurzelwerk</span>
+			<span itemprop="recipeIngredient" name="Kalbskopf" quantity="1">1 Kalbskopf</span>
+			<span itemprop="recipeIngredient" name="Schweineschnauze" quantity="1">1 Schweineschnauze</span>
+			<span itemprop="recipeIngredient" name="Schweineohr">Schweineohren</span>
+			<span itemprop="recipeIngredient" name="Ochsengaumen" quantity="1">1 Ochsengaumen</span>
+			<span itemprop="recipeIngredient" name="Ochsenzunge" quantity="1">1 geräucherte Ochsenzunge</span>
+			<span itemprop="recipeIngredient">braunes Gewürz</span>
+			<span itemprop="recipeIngredient" name="Cayennepfeffer" quantity="vague" unit="Messersptize">ein Paar Messerspitzen Cayenne-Pfeffer</span>
+			<span itemprop="recipeIngredient" name="Kalbsmidder" quantity="vague" reference="#A-16">einige Kalbsmidder</span>
+			<span itemprop="recipeIngredient" name="Saucisson">kleine Saucissen</span>
+			<span itemprop="recipeIngredient" name="Butter">Butter</span>
+			<span itemprop="recipeIngredient" name="Mehl">Mehl</span>
+			<span itemprop="recipeIngredient" name="Kalbfleischklöße" reference="#L-4">Klöße vom Kalbfleisch</span>
+			<span itemprop="recipeIngredient" name="Ei" quantity="vague">einige hart gekochte Eier</span>
+			
+			<span itemprop="recipeIngredient" quantity="vague" unit="EL" isOptional="True">ein Paar Eßlöffel Engl. Soja</span>
+			
+			<alternatives>
+				<alt>
+					<span itemprop="recipeIngredient" name="Madeira" quantity="0.5" unit="Flasche">Madeira</span>
+				</alt>
+				<alt>
+					<span itemprop="recipeIngredient" name="weißen Franzwein">weißen Franzwein</span>
+					<span itemprop="recipeIngredient" name="Rum">etwas Rum</span>
+				</alt>
+			</alternatives>
+		</meta>
+
+		<span itemprop="recipeInstructions">
+			<p>Es wird hierzu für 24-30 Personen eine kräftige Bouillon von 8-10 Pfund Rindfleisch
+               mit Wurzelwerk gekocht. Zugleich bringt man einen großen Kalbskopf, eine
+               Schweineschnauze und Ohren, einen Ochsengaumen und eine geräucherte Ochsenzunge zu
+               Feuer und kocht dies Alles gahr, aber nicht zu weich. Kalt, schneidet man es in
+               kleine, länglich viereckige Stückchen, gibt das Fleisch in die Bouillon, nebst
+               braunem Gewürz, ein Paar Messerspitzen Cayenne-Pfeffer, einige Kalbsmidder in
+               Stückchen geschnitten (siehe Vorbereitungsregeln), kleine Saucissen, so viel
+               Kalbskopfbrühe, daß man hinreichend Suppe hat, und macht dies mit in Butter braun
+               gemachtem Mehl gebunden. Nachdem dies Alles 1/4 Stunde gekocht hat, kommen noch Klöße
+               von Kalbfleisch, einige hart gekochte Eier in Würfel geschnitten, ein Paar Eßlöffel
+               Engl. Soja hinzu, und wenn die Klößchen einige Minuten gekocht haben, 1/2 Flasche
+               Madeira und auch Austern, wenn man sie haben kann. Dann wird die Suppe sogleich
+               angerichtet. </p>
+
+            <note>Anmerk. Der Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und
+               statt Madeira kann man weißen Franzwein und etwas Rum nehmen. Sowohl die Bouillon als
+               Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht
+               werden. </note>
+		</span>
+	<recipe>
+</div>	
+
+<!-- cook time not clear
+	Wurzelwerk
+	braunes gewürz
+	Engl. Soja
+	
+	in B-28 alt und isOptional ineinander verschachtelt auch kein Prob :)
+-->
