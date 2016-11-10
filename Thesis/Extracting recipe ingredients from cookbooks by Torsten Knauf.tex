@@ -6,6 +6,7 @@
 \newcommand*\longs{{\fontencoding{TS1}\selectfont s}}
 \newunicodechar{ſ}{\longs}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{graphicx}
@@ -25,6 +26,8 @@
 	frame=single,
 	breaklines=true,
 	tabsize=2,
+	aboveskip=4pt,
+	belowskip=6pt,
 	literate=%
 		{Ö}{{\"O}}1
 		{Ä}{{\"A}}1
@@ -288,22 +291,37 @@ prediction(X) = argmax_Y(P(Y|X))
 
 Note that we only transformed \cref{eq:jointProb} until \cref{eq:condProb} and than took the $argmax_Y$ as prediction function. Therefore this prediction function can only consider the probabilities of $y_t$ following $y_{t-1}$ as well as the probability, that in $X$ the correct label for $x_t$ is $y_t$, for his oracle task.
 
-Taking only a subset of these feature can improve performance without loosing accuracy. Additional improvement can very likely be achieved through further custom feature functions. Two such custom feature functions could be $f_{k+1}(y_t, y_{t-1}, X) = 1_{X_t\ starts with\ upper\ case}$ and \\ $f_{k+2}(y_t, y_{t-1}, X) = 1_{X_t\ is\ in\ a\ domain\ specific\ dictionary}$.
+Taking only a subset of these feature can improve performance without loosing accuracy. Additional improvement can very likely be achieved through further custom feature functions. Two such custom feature functions could be:
+
+\begin{itemize}
+\item $f_{k+1}(y_t, y_{t-1}, X) = 1_{X_t\ starts with\ upper\ case}$
+\item $f_{k+2}(y_t, y_{t-1}, X) = 1_{X_t\ is\ in\ a\ domain\ specific\ dictionary}$.
+\end{itemize}
+
 
 \subsection{Implementation of New York Times}
-As starting point the New York Times have manual specified labels for over 130,000 ingredient phrases extracted out of their already through Schema.org/Recipe enriched recipes from their website.
+As starting point the New York Times have manual specified labels for over 130,000 ingredient phrases, which they use as training data. They are extracted out of their, already through Schema.org/Recipe enriched recipes, from their website.
 
-An extract of their trainings data is shown in \cref{lst:NYTTrainingData}. They use CRF++\footnote{https://taku910.github.io/crfpp/} as library.
+One example ingredient phrase is shown in \cref{lst:NYTTrainingData}. They use CRF++\footnote{https://taku910.github.io/crfpp/} as library, which is an implementation of CRF. The first word per column is the actual word. The last word is the label, which should be predicted in IOB2 format. It states, that the begin of an entity gets prefixed with \textit{B-} and the continuation with \textit{I-}, as you can see in the last three words. Words, which do not belong to a relevant entity, get labelled with \textit{OTHER}. The labels in between are custom features. 
 
 \begin{lstlisting}[frame=single, caption={Extract of the training data for New York Times CRF}, label=lst:NYTTrainingData]
-content...
+3/4       I1  L12	 NoCAP	NoPAREN	 B-QTY
+pound     I2  L12	 NoCAP	NoPAREN	 OTHER
+shiitake  I3  L12	 NoCAP	NoPAREN	 B-NAME
+mushrooms I4  L12	 NoCAP	NoPAREN	 I-NAME
+,         I5  L12	 NoCAP	NoPAREN	 OTHER
+stemmed   I6  L12	 NoCAP	NoPAREN	 B-COMMENT
+and       I7  L12	 NoCAP	NoPAREN	 I-COMMENT
+quartered I8  L12	 NoCAP	NoPAREN	 I-COMMENT
 \end{lstlisting}
 
-\begin{wrapfigure}{R}{0.35\textwidth}
+The feature functions, which the CRF should use, are not specified through functions in a concrete programming language. Instead they get described through templates of the format U00:\%x[row,column], as shown in \cref{lst:NYTfeatureTemplates}. The row specifies the targeted word in relative position to itself and the column specifies the absolute position. Therefore when the actual word is mushrooms the data from \cref{lst:NYTTrainingData} would be expended to the values in \cref{lst:NYTfeatureTemplatesDerivedValue}.
+
+\begin{minipage}{0.4\textwidth} 
 \begin{lstlisting}[frame=single, caption={Feature templates for New York Times CRF}, label=lst:NYTfeatureTemplates]
-# Unigram
-U00:%x[-2,0]
-U01:%x[-1,0]
+# Unigram               
+U00:%x[-2,0]             
+U01:%x[-1,0]              
 U02:%x[0,0]
 U03:%x[1,0]
 U04:%x[2,0]
@@ -326,33 +344,79 @@ U17:%x[0,0]/%x[0,1]
 # Bigram
 B
 \end{lstlisting}
-\end{wrapfigure}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth} 
+\begin{lstlisting}[frame=single, caption={Derived value when the current word in \cref{lst:NYTTrainingData} is mushrooms}, label=lst:NYTfeatureTemplatesDerivedValue]
+            
+pound            
+shiitake            
+mushrooms
+,
+stemmed
+I4
+L12
+NoCAP
+
+NoPAREN
+NoPAREN
+NoPAREN
+NoPAREN
+NoPAREN
+
+mushrooms/L12
+I4/L12
+mushrooms/NoCAP
+mushrooms/NoPAREN
+mushrooms/I4
+
+# Bigram
+I-NAME B-Name
+\end{lstlisting}
+\end{minipage}
+
+Feature functions are extracted from these templates as shown in \cref{lst:featureFunctionExtraction}. The B-template takes the transition from $y_{t-1}$ to $y_t$ into account. Note that for example the custom feature function, if a word is inside parentheses, gets implemented through adding a label YesPAREN/NoPAREN to the trainings data in the fourth column in a preprocessing step and specifying the feature template U10\%[0,4].
+
+\begin{lstlisting}[frame=single, caption={Extracting of feature functions from templates}, label=lst:featureFunctionExtraction, mathescape]
+U02:%[0,0]          $\rightarrow 1_{y_t=I-Name\ and\ x_t=mushrooms} $
+U02:%[-2,4]         $\rightarrow 1_{y_t=I-Name\ and\ x_{t-2}\ 4th\ label\ is NoPAREN} $
+U13:%x[0,0]/%x[0,2] $\rightarrow 1_{y_t=I-Name\ and\ x_t=mushrooms\ and\ x_t\ 2nd\ label\ is L12} $
+
+B                   $\rightarrow 1_{y_t=A\ and\ y_{t-1}=B}\ for\ each\ A,B\ \in\ possible$
+                                               $prediction\ labels$
+\end{lstlisting}
+
+Hence the only features the New York Times take into account for prediction are the word identity (column 0), the index of the current word (column 1), the length of the sentence (column 2 - rounded to 4, 8, 12, 16 or 20), if the word starts capitalized (column 3) and if the word is inside parenthesis (column 4).
+
+When applying their algorithm to 481 example recipes, they get 89\% sentence-level accuracy, meaning that they get 9 out of 10 ingredient phrases right. They tested only so view recipes, although they had over 130,000 ready labelled recipes, because they found no way for automatic evaluation.
  
-The feature functions are not provided through source code, but instead through already set labels. These special labels are also called features. For example U00:\%x[0,1] with the training data from \cref{lst:NYTTrainingData} creates a function $1_{y_t=LABEL and (feature in column COL is LABEL)}$. \textit{B}-features are features about the correlation of the current and previous label. 
-
-feature functions: isCapitalized, inParenthesis, I?, Length of phrases
-
-Eval recall and precision
  
 \section{Domain Specific Information Extraction for Semantic Annotation}
 \parencite{GrammaBased} is a diploma thesis about extracting ingredients and their further processing from recipes. Their algorithm could be divided into two main parts.
 
-First to check every word if it is occurs in a dictionary of ingredients respectively a dictionary of actions and tag it accordingly. For keeping the dictionaries as small as possible they do a morphological Analysis and only store the lemmas of the words. The second main part, and more sophisticated task, is to identify which action should be applied to which ingredient. They have two different approaches for that.
+First to check every word, if it is in a dictionary of ingredients respectively a dictionary of actions and label it accordingly. For keeping the dictionaries as small as possible they do a morphological Analysis and only store the lemmas of the words. The second main part, and more sophisticated task, is to identify, which action should be applied to which ingredient. They have two different approaches for that.
 
-The first one is to do a part of speech tagging and afterwards trying to apply a small set of rules. The example rule 1 means apply the action to all following ingredients and gets matched. Therefore it is extracted that buttermilk and bananas should be extracted.
+The first one is to do a part of speech tagging (POS) and afterwards try to apply a small set of rules, which define a context free grammar, with predefined meaning. \Cref{lst:ruleBased} shows an example, meaning buttermilk and bananas should be added.
 
-\begin{lstlisting}[frame=single, basicstyle=\footnotesize\ttfamily,caption={Rule based example}, label=lst:ruleBased]
+\begin{lstlisting}[frame=single, basicstyle=\footnotesize\ttfamily,caption={Rule based example}, label=lst:ruleBased, mathescape]
+# Example sentence
 add buttermilk and bananas
-->
-add[ACT] buttermilk[ING] and[CC] bananas[ING]
-->
-rule 1: VP -> ACT NP (,NP)* (CC NP)?
-   -> ACT NP CC NP			und Hilfsregel:  NP -> DT? JJ* ING
-   -> ACT ING CC ING
 
+# Example sentence with POS
+add[ACT] buttermilk[ING] and[CC] bananas[ING]
+
+# Apply rule VP -> ACT NP (,NP)* (CC NP)?
+# Predefined meaning of the rule: Apply ACT to all ING  
+-> ACT NP CC NP
+# Apply rule NP -> DT? JJ* ING twice  
+-> ACT ING CC ING
+
+# With: 
+# VP,NP $\in$ non-terminal symbols, CC $\in$ Conjunctions, DT $\in$ Determiner, ACT := action, ING := ingredient
 \end{lstlisting}
 
-The second one is to do a dependency based parsing, which represent the semantic structure of a sentence in a tree like format.
+The second one is to do a dependency based parsing, which represent the semantic structure of a sentence in a tree like format. For example \cref{fig:johnLikesApple} represents, that the subject of like is John and the liked object is Apple.
+The format as well as building the tree is way more complex than the previous simple rules, but the tree can be build by already existing tools like the Standfod Parser\footnote{http://nlp.stanford.edu/software/lex-parser.shtml}. Having the semantic structure of the sentences, it is obvious to extract, which action should be applied to which ingredient.
 
 \begin{figure}[h]
 	\centering
@@ -361,10 +425,7 @@ The second one is to do a dependency based parsing, which represent the semantic
 	\label{fig:johnLikesApple}
 \end{figure}
 
-For example \cref{fig:johnLikesApple} represents, that the subject of like is John and the liked object is apple.
-The format as well as building the tree is way more complex than the previous simple rules, but the tree can be build by already existing tools like the Standfod Parser\footnote{http://nlp.stanford.edu/software/lex-parser.shtml}. Having the semantic structure of the sentences, it is trivial to extract which action should be applied to which ingredient.
-
-In their evaluation they apply these two variants to 43 randomly selected recipes from the internet. The precision and recall are presented in table \ref{tab:masterEval}.
+In their evaluation they apply these two variants to 43 randomly selected recipes from the internet. Their precision and recall are presented in table \ref{tab:masterEval}. Even the more sophisticated dependency based approach has only a recall of 64\%. This is due to a lack of mapping actions to their corresponding ingredients.
 
 \begin{table}[H]
 	\centering
@@ -379,37 +440,39 @@ In their evaluation they apply these two variants to 43 randomly selected recipe
 \end{table}
 
 \section{Distinction to this work}
+\parencite{REgutGenug} exploits a strict semi-structure, which is not given in our very unstructured cookbook. Therefore we need more advanced algorithm than regular expressions.
+
+\parencite{CRFZeit} take advantage of the point, that they have already marked the ingredient phrases from the list of ingredients. But our cookbook has no list of ingredients. Nevertheless, the ingredient phrases could be extracted from plain text through a CRF-algorithm first and afterwards we could use the algorithm of \parencite{CRFZeit}. However we have to consider, that we do not have near as 130,000 training data. Our lack of training data could be caught up by more sophisticated custom feature functions.
+
+\parencite{GrammaBased} only uses plain text. But they have a bad recall, due to the point, that they are not good in mapping actions to their corresponding ingredients. 
+In contrast to mapping actions to ingredients, we want to map quantities to units and these in turn to ingredients, which is more complex and could therefore lead to an even worse recall. Though the dictionary check, enabled by a morphological analysis, from their algorithm first main part, could be very good feature functions.
 
 
 
 \chapter{Development of recipe parser}
 
 \section{Starting position}
-Another not suited point is, that the ingredients are only tagged within the list of ingredients, whereby the recipes in our cookbook have no list of ingredients.
-
-\begin{wrapfigure}{R}{0.5\textwidth}
-	\includegraphics[width=0.5\textwidth]{Images/ingredientsInText}
-	\caption{Different meaning of ingredients in direction text}
-	\label{fig:ingredientsInText}
-\end{wrapfigure}
-
-Tagging ingredients from the direction texts leads to more complex phrases, which have to be distinguished. We have spotted four different cases, which are shown in \cref{fig:ingredientsInText}. An additional problem in plain text are cross-references like "prepare dumplings as in previous recipe".
+-plain text
+-altes deutsch / alte Zutaten
+-how to test
 
 \section{Overall picture}
-\subsection{workflow}
-\subsection{preparation}
-\subsection{evaluation}
--Precision -Recall F-measure
+Git-tag
+\subsection{Workflow}
+\subsection{Features}
+\subsection{Evaluation}
+-Precision -Recall
 
 \section{First Iteration: Basis CRF}
 Git-tag
-\subsection{Idea}
+\subsection{Workflow}
+\subsection{Features}
 \subsection{Evaluation}
 
 \section{Final recipe parser}
 \subsection{Workflow}
+\subsection{Features}
 \subsection{Evaluation}
-
 
 
 
@@ -429,10 +492,9 @@ Machine readable data are very powerful. But \textit{with great power comes grea
 
  (e.g. \cite{ingredientNetworks} or \cite{recipeRecommendation}).
 
-Further more, having a huge machine-readable base of recipes and its ingredients, can also provide insights in sociological research. For example in (((Flavor network and the principles of food pairing : Scientific Reports))) is a comparison between American and Asian kitchen based on about 56.000 recipes.
+Further more, having a huge machine-readable base of recipes and its ingredients, can also provide insights in sociological research. For example in \parencite{FlavorNetwork} is a comparison between American and Asian kitchen based on about 56.000 recipes.
 
-There are many more interesting questions, which could be analysed like a historic analysis of the development and changes of cooking. Occurrences of non-local ingredients or meals are evidence for inter cultural exchange and globalisation. More expensive ingredients could be an indication for prosperity, while very simple kitchen for poverty or even wartimes...
-\bigskip
+There are many more interesting questions, which could be analysed like a historic analysis of the development and changes of cooking. Occurrences of non-local ingredients or meals are evidence for inter cultural exchange and globalisation. More expensive ingredients could be an indication for prosperity, while very simple kitchen for poverty or even wartimes.
 
 \textbf{In the bad} \parencite{clintonHealth} "schwacher vegetarier"
 
