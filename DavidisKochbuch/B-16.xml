@@ -22,6 +22,7 @@
 			<span itemprop="recipeIngredient" name="Kalbfleischklöße" reference="#L-4">Klöße vom Kalbfleisch</span>
 			<span itemprop="recipeIngredient" name="Ei" quantity="vague">einige hart gekochte Eier</span>
 			
+			<span itemprop="recipeIngredient" name="Auster" isOptional="True">Austern, wenn man sie haben kann</span>
 			<span itemprop="recipeIngredient" quantity="vague" unit="EL" isOptional="True">ein Paar Eßlöffel Engl. Soja</span>
 			
 			<alternatives>
