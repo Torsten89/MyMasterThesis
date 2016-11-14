@@ -1,0 +1,17 @@
+\begin{lstlisting}[frame=single, basicstyle=\footnotesize\ttfamily, caption={Beispiel Rezept von \newline http://recipes.wikia.com/wiki/Recipes\_Wiki}]
+* Makes 6 to 8 servings
+
+== Ingredients ==
+* 2 tbsp extra virgin [[olive oil]]
+* 3 cloves [[garlic]], finely chopped
+[...]
+
+== Directions ==
+Heat olive oil and garlic in large skillet over low heat until
+garlic begins to sizzle.
+Add tomatoes, [...]
+
+[[Category:Cathy's Recipes]]
+[[Category:Garlic Recipes]]
+[...]
+	\end{lstlisting}
