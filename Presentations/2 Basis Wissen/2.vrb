@@ -1,17 +1,17 @@
-\begin{lstlisting}[frame=single, basicstyle=\footnotesize\ttfamily, caption={Beispiel Rezept von \newline http://recipes.wikia.com/wiki/Recipes\_Wiki}]
-* Makes 6 to 8 servings
-
-== Ingredients ==
-* 2 tbsp extra virgin [[olive oil]]
-* 3 cloves [[garlic]], finely chopped
-[...]
-
-== Directions ==
-Heat olive oil and garlic in large skillet over low heat until
-garlic begins to sizzle.
-Add tomatoes, [...]
-
-[[Category:Cathy's Recipes]]
-[[Category:Garlic Recipes]]
-[...]
-	\end{lstlisting}
+\begin{center}
+		\textbf{Implementierung der New York Times}
+\end{center}
+\begin{lstlisting}[basicstyle=\small\ttfamily, frame=single, caption={Extract of the training data for New York Times CRF}]
+3/4       I1  L12	 NoCAP	NoPAREN	 B-QTY
+pound     I2  L12	 NoCAP	NoPAREN	 OTHER
+shiitake  I3  L12	 NoCAP	NoPAREN	 B-NAME
+mushrooms I4  L12	 NoCAP	NoPAREN	 I-NAME
+,         I5  L12	 NoCAP	NoPAREN	 OTHER
+stemmed   I6  L12	 NoCAP	NoPAREN	 B-COMMENT
+and       I7  L12	 NoCAP	NoPAREN	 I-COMMENT
+quartered I8  L12	 NoCAP	NoPAREN	 I-COMMENT
+\end{lstlisting}
+\begin{lstlisting}[basicstyle=\small\ttfamily, frame=single, caption={Feature templates}]
+U01:%x[-1,0] U02:%x[0,0] U03:%x[1,0] U07:%x[0,3] U14:%x[0,1]/%x[0,2]
+B
+\end{lstlisting}
