@@ -1,0 +1,46 @@
+WAS EXTRAHIEREN GEGEN WAS TESTEN??
+	- Vgl. Zeilen der extrahierten Zutatenlisten
+		- Bei Unterschied / Fehler:
+		  Links original / trainings label, Rechts output (farbig css :) )
+	
+	- Finaller Vergleich gegen echte Zutatenliste (per Hand aufgeschrieben)
+
+Vereinfachungen:
+	- Keine Links / "Wird gekocht wie die vorhergehende" (B-2)
+	  "wie in No. 1" (B-6)
+	- Alternative von Ingredients (B-6 Griesmehl oder Mehl)
+	- Optionale Ingredients (B-6 Spargel oder Blumenkohl, was die Jahreszeit hat, jedoch vorher eben abgekocht, und 10 Minuten vor dem Anrichten Fleisch- oder andere beliebige Klöße darin gahr kochen)
+	- Keine Infos aus Allg. Vorteil eines Kapitels (Reis 15g pro Suppe)
+	- <Note> Ignorieren
+	
+Annahmen:
+	- Jede Unit bezieht sich auf linken Quantity nachbar und rechten Ingredient Nachbar
+	
+Problematiken:
+	- Scorzoner-, Sellier-, Petersilienwurzel (B-1)
+	- Abkürzungs-"." kein Satzende (B-6 Das Kalbfleisch wie in No. 1, nach der Personenzahl, doch etwas reichlicher genommen, da solches weniger Kraft gibt, als Rindfleisch)
+		-> Ein Rezept als trainigsdatum?
+	- Fleisch in Rindfleischsuppe ist nicht Rindfleisch erkannt (B-1)
+		
+- CRF weil Wahrscheinlichkeiten über Features wie POS (was im decision tree schwer ist)
+	- isOptional über eigenes output label oder decision tree (if "wenn" occurs in sentence)
+	- Ggf. über output label dicision tree (if "negation" in sentence -> don't use ingredient)
+	- Decision tree für links
+
+
+SCHEMA:
+<ingredientPhrase ingredientName="Apfel" quantity="2" unit="kg">2 kg Äpfel</ingredientPhrase>
+Erweiterungen:
+	Attris:
+		isOptional="True"
+		isAlternative="altnative group identifier" // group-1-1, group-1-2, group-1-2 für Madeira oder weißen Franzwein und Rum 
+		exclude="True"
+		
+Bei mehreren Zutaten in einer ingredientPhrase:
+<ingredientPhrase
+	ingredientName="Scorzonerwurzel Selleriewurzel Petersilienwurzel"
+	quantity="1 unKnown unKnown"
+	unit="unKnown unKnown unKnown"
+	>
+	einigen Scorzoner-, einer Sellerie- und Petersilienwurzel
+</ingredientPhrase>
