@@ -1,0 +1,114 @@
+<recipes>
+    <recipe type="Suppen." rcp-id="B-1">
+        <recipeData>
+            <cookTime quantity="3-3.5" unit="h"/>
+            
+            <listOfIngredients>
+                <ingredient name="Rindfleisch" quantity="0.5-0.75" unit="Pfund pP"/>
+                <ingredient name="Salz"/>
+                <ingredient name="Zwiebel" quantity="1"/>
+                <ingredient name="Scorzonerwurzel" quantity="eingie"/>
+                <ingredient name="Selleriewurzel" quanitity="1"/>
+                <ingredient name="Petersilienwurzel"/>   
+                <ingredient name="Kloß"/>
+                <ingredient name="Reis" quantity="1" unit="EL pP"/>
+                <ingredient name="Ochsenzunge" quantity="1"/>
+                <ingredient name="braunes Gewürz"/>
+                <ingredient name="Cayenne pfeffer" quantity="vague" unit="Messersptize"/>
+                <ingredient name="Kalbsmidder" quantity="vague" reference="#A-16"/>
+                <ingredient name="Saucisson"/>
+                <ingredient name="Butter"/>
+                <ingredient name="Mehl"/>
+                
+                <ingredient name="Spargel" isOptional="True"/>
+                <ingredient name ="Blumenkohl" isOptional="True"/>
+                <ingredient name ="Parmesankäsel" isOptional="True"/>
+            </listOfIngredients>
+        </recipeData>
+        
+        <head>Klare weiße Rindfleischsuppe.</head>
+        
+        <p>Man rechnet, wenn die Gesellschaft klein ist, auf jede Person ¾ Pfund, bei einer
+            großen Gesellschaft ½ Pfund Fleisch. Dasselbe wird gewaschen und mit doppelt so
+            vielem Wasser, als man Suppe haben will, zu Feuer gesetzt. Auf jede Person rechnet
+            man bei einem Gesellschaftsessen ⅜ Maß Suppe, also auch ¾ Maß Wasser, wozu man gleich
+            das nöthige Salz gibt, weil das Fleisch nur in der ersten Stunde des Kochens das Salz
+            annimmt und das spätere Hinzugeben des Salzes nur die Suppe würzt. Ist das Fleisch
+            sorgfältig ausgeschäumt, gibt man eine fein geschnittene Zwiebel hinzu, wodurch die
+            Brühe an Kraft gewinnt, und läßt sie, fest zugedeckt, fortwährend, aber nicht zu
+            stark kochen. Eine Stunde später gießt man die Brühe durch ein Haarsieb, weil sie nie
+            ganz klar ist, spült das Stück Fleisch eben ab und setzt es mit der Brühe, die man
+            vom Bodensatz langsam abschüttet, in dem ebenfalls umgespülten Topfe wieder zu Feuer
+            nebst einigen Scorzoner-, einer Sellerie- und Petersilienwurzel. Hiermit läßt man die
+            Suppe ferner kochen, während man zuweilen das Fett abnimmt, das der Bouillon den
+            feinen Geschmack benimmt. Man kann ein halbes Stündchen vor dem Anrichten Spargel
+            oder Blumenkohl, was die Jahreszeit gerade bietet, hinein geben, nur muß beides eben
+            abgekocht sein, und darf ja nicht in der Bouillon zerkochen. Ist das Fleisch gahr,
+            aber nicht zu weich gekocht, läßt man beliebige Klöße eben darin gahr kochen und
+            richtet die Suppe an. Zugleich hat man Reis, für jede Person einen Eßlöffel
+            gerechnet, abgebrüht und in Bouillon, wozu man so viel mehr Fleisch genommen, gahr
+            und dick gekocht; doch müssen die Körner ganz bleiben. Derselbe wird bei der Suppe
+            (nach Belieben mit geriebenem Parmesankäse) herumgereicht. </p>
+        <p>Rindfleischsuppe muß vom Kochen an, 3—3½ Stunden kochen.</p>
+        
+    </recipe>
+    
+    <recipe type="Suppen." rcp-id="B-16">
+        <recipeData>
+            <recipeYield quantity="24-30" unit="people"/>
+            
+            <listOfIngredients>
+                <ingredient name="Bouillon" reference="#Bouillon"/>
+                <ingredient name="Rindfleisch" quantity="8-10" unit="Pfund"/>
+                <ingredient name="Wurzelwerk"/>
+                <ingredient name="Kalbskopf" quantity="1"/>
+                <ingredient name="Schweineschnauze" quantity="1"/>
+                <ingredient name="Schweineohr"/>
+                <ingredient name="Ochsengaumen" quantity="1"/>
+                <ingredient name="Ochsenzunge" quantity="1"/>
+                <ingredient name="braunes Gewürz"/>
+                <ingredient name="Cayenne pfeffer" quantity="vague" unit="Messersptize"/>
+                <ingredient name="Kalbsmidder" quantity="vague" reference="#A-16"/>
+                <ingredient name="Saucisson"/>
+                <ingredient name="Butter"/>
+                <ingredient name="Mehl"/>
+                <ingredient name="Kalbfleischkloß" reference="#L-4"/>
+                <ingredient name="Ei" quantity="einige"/>
+                
+                <ingredient name="Auster" isOptional="True"/>
+                <ingredient name ="Englische Soja" quantity="einige" unit="EL" isOptional="True"/>
+                
+                <alternativeIngredients>
+                    <alternative>
+                        <ingredient name="Madeira" quantity="0.5" unit="Flasche"/>
+                    </alternative>
+                    <alternative>
+                        <ingredient name="weißer Franzwein"/>
+                        <ingredient name="Rum"/>
+                    </alternative>
+                </alternativeIngredients>
+            </listOfIngredients>
+        </recipeData>
+        
+        <head>Mock Turtle Suppe.</head>
+        
+        <p>Es wird hierzu für 24—30 Personen eine kräftige Bouillon von 8—10 Pfund Rindfleisch
+            mit Wurzelwerk gekocht. Zugleich bringt man einen großen Kalbskopf, eine
+            Schweineschnauze und Ohren, einen Ochsengaumen und eine geräucherte Ochsenzunge zu
+            Feuer und kocht dies Alles gahr, aber nicht zu weich. Kalt, schneidet man es in
+            kleine, länglich viereckige Stückchen, gibt das Fleisch in die Bouillon, nebst
+            braunem Gewürz, ein Paar Messerspitzen Cayenne-Pfeffer, einige Kalbsmidder in
+            Stückchen geschnitten (siehe Vorbereitungsregeln), kleine Saucissen, so viel
+            Kalbskopfbrühe, daß man hinreichend Suppe hat, und macht dies mit in Butter braun
+            gemachtem Mehl gebunden. Nachdem dies Alles ¼ Stunde gekocht hat, kommen noch Klöße
+            von Kalbfleisch, einige hart gekochte Eier in Würfel geschnitten, ein Paar Eßlöffel
+            Engl. Soja hinzu, und wenn die Klößchen einige Minuten gekocht haben, ½ Flasche
+            Madeira und auch Austern, wenn man sie haben kann. Dann wird die Suppe sogleich
+            angerichtet. </p>
+        
+        <note>Anmerk. Der Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und
+            statt Madeira kann man weißen Franzwein und etwas Rum nehmen. Sowohl die Bouillon als
+            Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht
+            werden. </note>
+    <recipe>
+</recipes>

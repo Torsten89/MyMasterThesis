@@ -1,0 +1,78 @@
+<recipes>
+    <recipe type="Suppen." rcp-id="B-1">
+        <head>Klare weiße Rindfleischsuppe.</head>
+
+        <p>Man rechnet, wenn die Gesellschaft klein ist, auf jede Person ¾ Pfund, bei einer großen
+            Gesellschaft ½ Pfund <ingredient name="Rindfleisch" quantity="0.5-0.75" unit="Pfund pP"
+                >Fleisch</ingredient>. Dasselbe wird gewaschen und mit doppelt so vielem Wasser, als
+            man Suppe haben will, zu Feuer gesetzt. Auf jede Person rechnet man bei einem
+            Gesellschaftsessen ⅜ Maß Suppe, also auch ¾ Maß Wasser, wozu man gleich das nöthige
+                <ingredient name="Salz">Salz</ingredient> gibt, weil das Fleisch nur in der ersten
+            Stunde des Kochens das Salz annimmt und das spätere Hinzugeben des Salzes nur die Suppe
+            würzt. Ist das Fleisch sorgfältig ausgeschäumt, gibt man eine fein geschnittene
+                <ingredient name="Zwiebel" quantity="1">Zwiebel</ingredient> hinzu, wodurch die
+            Brühe an Kraft gewinnt, und läßt sie, fest zugedeckt, fortwährend, aber nicht zu stark
+            kochen. Eine Stunde später gießt man die Brühe durch ein Haarsieb, weil sie nie ganz
+            klar ist, spült das Stück Fleisch eben ab und setzt es mit der Brühe, die man vom
+            Bodensatz langsam abschüttet, in dem ebenfalls umgespülten Topfe wieder zu Feuer nebst
+            einigen <ingredient name="Scorzonerwurzel" quantity="eingie">Scorzoner-</ingredient>,
+            einer <ingredient name="Selleriewurzel" quanitity="1">Sellerie-</ingredient> und
+                <ingredient name="Petersilienwurzel">Petersilienwurzel</ingredient>. Hiermit läßt
+            man die Suppe ferner kochen, während man zuweilen das Fett abnimmt, das der Bouillon den
+            feinen Geschmack benimmt. Man kann ein halbes Stündchen vor dem Anrichten <ingredient
+                name="Spargel" isOptional="True">Spargel</ingredient> oder <ingredient
+                name="Blumenkohl" isOptional="True">Blumenkohl</ingredient>, was die Jahreszeit
+            gerade bietet, hinein geben, nur muß beides eben abgekocht sein, und darf ja nicht in
+            der Bouillon zerkochen. Ist das Fleisch gahr, aber nicht zu weich gekocht, läßt man
+            beliebige <ingredient name="Kloß">Klöße</ingredient> eben darin gahr kochen und richtet
+            die Suppe an. Zugleich hat man <ingredient name="Reis" quantity="1" unit="EL pP"
+                >Reis</ingredient>, für jede Person einen Eßlöffel gerechnet, abgebrüht und in
+            Bouillon, wozu man so viel mehr Fleisch genommen, gahr und dick gekocht; doch müssen die
+            Körner ganz bleiben. Derselbe wird bei der Suppe (nach Belieben mit geriebenem
+                <ingredient name="Parmesankäse" isOptional="True">Parmesankäse</ingredient>)
+            herumgereicht. </p>
+        <p><cookTime quantity="3-3.5" unit="h">Rindfleischsuppe muß vom Kochen an, 3—3½ Stunden
+                kochen</cookTime>.</p>
+
+    </recipe>
+
+    <recipe type="Suppen." rcp-id="B-16">
+        <head>Mock Turtle Suppe.</head>
+
+        <p>Es wird hierzu <recipeYield quantity="24-30" unit="people">für 24—30
+                Personen</recipeYield> eine kräftige Bouillon von 8—10 Pfund <ingredient
+                name="Rindfleisch" quantity="8-10" unit="Pfund">Rindfleisch</ingredient> mit
+                <ingredient name="Wurtelwerk">Wurzelwerk</ingredient> gekocht. Zugleich bringt man
+            einen großen <ingredient name="Kalbskopf" quantity="1">Kalbskopf</ingredient>, eine
+                <ingredient name="Schweineschnauze" quantity="1">Schweineschnauze</ingredient> und
+                <ingredient name="Schweineohr">Ohren</ingredient>, einen <ingredient
+                name="Ochsengaumen" quantity="1">Ochsengaumen</ingredient> und eine geräucherte
+                <ingredient name="Ochsenzunge" quantity="1">Ochsenzunge</ingredient> zu Feuer und
+            kocht dies Alles gahr, aber nicht zu weich. Kalt, schneidet man es in kleine, länglich
+            viereckige Stückchen, gibt das Fleisch in die Bouillon, nebst <ingredient
+                name="braunes Gewürz">braunem Gewürz</ingredient>, ein Paar Messerspitzen
+                <ingredient name="Cayennepfeffer" quantity="einige" unit="Messerspitze"
+                >Cayenne-Pfeffer</ingredient>, einige <ingredient name="Kalbsmidder"
+                quantity="einige">Kalbsmidder</ingredient> in Stückchen geschnitten <link
+                target="#A-16">(siehe Vorbereitungsregeln)</link>, kleine <ingredient
+                name="Saucisson">Saucissen</ingredient>, so viel Kalbskopfbrühe, daß man hinreichend
+            Suppe hat, und macht dies mit in <ingredient name="Butter">Butter</ingredient> braun
+            gemachtem <ingredient name="Mehl">Mehl</ingredient> gebunden. Nachdem dies Alles ¼
+            Stunde gekocht hat, kommen noch <ingredient name="Kalbfleischkloß" reference="#L-4"
+                >Klöße von Kalbfleisch</ingredient>, einige hart gekochte <ingredient name="Ei"
+                quantity="einige">Eier</ingredient> in Würfel geschnitten, ein Paar Eßlöffel
+                <ingredient name="Englische Soja" quantity="einige" unit="EL">Engl.
+                Soja</ingredient> hinzu, und wenn die Klößchen einige Minuten gekocht haben, ½
+            Flasche <ingredient name="Madeira" quantity="0.5" unit="Flasche">Madeira</ingredient>
+            und auch <ingredient name="Auster" isOptional="True">Austern</ingredient>, wenn man sie
+            haben kann. Dann wird die Suppe sogleich angerichtet. </p>
+
+        <note>Anmerk. Der <ingredient name="Englische Soja" quantity="einige" unit="EL"
+                isOptional="True">Soja</ingredient> macht die Suppe gewürzreicher, kann jedoch gut
+            wegbleiben, und statt <ingredient name="Madeira" altGr="1-1">Madeira</ingredient> kann
+            man <ingredient name="weißen Franzwein" altGrp="1-2">weißen Franzwein</ingredient> und
+            etwas <ingredient name="Rum" altGrp="1-2">Rum</ingredient> nehmen. Sowohl die Bouillon
+            als Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht
+            werden. </note>
+    </recipe>
+</recipes>

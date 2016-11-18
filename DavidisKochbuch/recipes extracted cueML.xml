@@ -631,9 +631,9 @@
          <cue:recipe type="Suppen." rcp-id="B-16">
             <head>Mock Turtle Suppe.</head>
 
-            <p>Es wird hierzu für 24—30 Personen eine kräftige
+            <p>Es wird hierzu <cue:recipeYield quantity="24-30">für 24—30 Personen</cue:recipeYield> eine kräftige
                   <cue:recipeIngredient>Bouillon</cue:recipeIngredient><link target="#Bouillon"/>
-               von 8—10 Pfund <cue:recipeIngredient quantity="0.33" unit="kg"
+               von 8—10 Pfund <cue:recipeIngredient quantity="4.5" unit="kg"
                   >Rindfleisch</cue:recipeIngredient> mit
                   <cue:recipeIngredient>Wurzelwerk</cue:recipeIngredient> gekocht. Zugleich bringt
                man einen großen <cue:recipeIngredient quantity="1">Kalbskopf</cue:recipeIngredient>,

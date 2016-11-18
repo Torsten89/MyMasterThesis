@@ -20,37 +20,35 @@
          <cue:recipe type="Suppen." rcp-id="B-1">
             <head>Klare weiße Rindfleischsuppe.</head>
 
-            <p><ingredientPhrase ingredientName="Rindfleisch" quantity="0.5-0.75" unit="Pfund">Man
-                  rechnet, wenn die Gesellschaft klein ist, auf jede Person ¾ Pfund, bei einer
-                  großen Gesellschaft ½ Pfund Fleisch</ingredientPhrase>. Dasselbe wird gewaschen
-               und mit doppelt so vielem Wasser, als man Suppe haben will, zu Feuer gesetzt. Auf
-               jede Person rechnet man bei einem Gesellschaftsessen ⅜ Maß Suppe, also auch ¾ Maß
-               Wasser, <ingredientPhrase ingredientName="Salz">wozu man gleich das nöthige Salz
+            <p><ingredientPhrase>Man rechnet, wenn die Gesellschaft klein ist, auf jede Person ¾
+                  Pfund, bei einer großen Gesellschaft ½ Pfund <ingredient
+                     ingredientName="Rindfleisch" quantity="0.5-0.75" unit="Pfund"
+                     >Fleisch</ingredient></ingredientPhrase>. Dasselbe wird gewaschen und mit
+               doppelt so vielem Wasser, als man Suppe haben will, zu Feuer gesetzt. Auf jede Person
+               rechnet man bei einem Gesellschaftsessen ⅜ Maß Suppe, also auch ¾ Maß Wasser,
+               <ingredientPhrase>wozu man gleich das nöthige <ingredient ingredientName="Salz">Salz</ingredient>
                   gibt</ingredientPhrase>, weil das Fleisch nur in der ersten Stunde des Kochens das
                Salz annimmt und das spätere Hinzugeben des Salzes nur die Suppe würzt. Ist das
-               Fleisch sorgfältig ausgeschäumt, <ingredientPhrase ingredientName="Zwiebel"
-                  quantity="1">gibt man eine fein geschnittene Zwiebel hinzu</ingredientPhrase>,
+               Fleisch sorgfältig ausgeschäumt, <ingredientPhrase>gibt man eine fein geschnittene <ingredient ingredientName="Zwiebel"
+                  quantity="1">Zwiebel</ingredient> hinzu</ingredientPhrase>,
                wodurch die Brühe an Kraft gewinnt, und läßt sie, fest zugedeckt, fortwährend, aber
                nicht zu stark kochen. Eine Stunde später gießt man die Brühe durch ein Haarsieb,
                weil sie nie ganz klar ist, spült das Stück Fleisch eben ab und setzt es mit der
                Brühe, die man vom Bodensatz langsam abschüttet, in dem ebenfalls umgespülten Topfe
-               wieder zu Feuer <ingredientPhrase
-                  ingredientName="Scorzonerwurzel Selleriewurzel Petersilienwurzel"
-                  quantity="unknown 1 unknown">nebst einigen Scorzoner-, einer Sellerie- und
-                  Petersilienwurzel</ingredientPhrase>. Hiermit läßt man die Suppe ferner kochen,
+               wieder zu Feuer <ingredientPhrase quantity="unknown 1 unknown">nebst einigen <ingredient ingredientName="Scorzonerwurzel">Scorzoner-</ingredient>, einer <ingredient ingredientName="Selleriewurzel" quantity="1">Sellerie-</ingredient> und
+                  <ingredient name="Petersilienwurzel">Petersilienwurzel</ingredient></ingredientPhrase>. Hiermit läßt man die Suppe ferner kochen,
                während man zuweilen das Fett abnimmt, das der Bouillon den feinen Geschmack benimmt.
-                  <ingredientPhrase ingredientName="Spargel Blumenkohl" isOptional="True">Man kann
-                  ein halbes Stündchen vor dem Anrichten Spargel oder Blumenkohl, was die Jahreszeit
+                  <ingredientPhrase>Man kann
+                     ein halbes Stündchen vor dem Anrichten <ingredient name="Spargel" isOptional="True">Spargel</ingredient> oder <ingredient name="Blumenkohl" isOptional="True">Blumenkohl</ingredient>, was die Jahreszeit
                   gerade bietet, hinein geben</ingredientPhrase>, nur muß beides eben abgekocht
                sein, und darf ja nicht in der Bouillon zerkochen. Ist das Fleisch gahr, aber nicht
-               zu weich gekocht, <ingredientPhrase ingredientName="Klöße">läßt man beliebige Klöße
+               zu weich gekocht, <ingredientPhrase>läßt man beliebige <ingredient ingredientName="Kloß">Klöße</ingredient>
                   eben darin gahr kochen</ingredientPhrase> und richtet die Suppe an. Zugleich hat
-               man <ingredientPhrase ingredientName="Reis" quantity="1" unit="EL pP">Reis, für jede
+               man <ingredientPhrase><ingredient ingredientName="Reis" quantity="1" unit="EL pP">Reis</ingredient>, für jede
                   Person einen Eßlöffel gerechnet</ingredientPhrase>, abgebrüht und in Bouillon,
                wozu man so viel mehr Fleisch genommen, gahr und dick gekocht; doch müssen die Körner
-               ganz bleiben. Derselbe wird bei der Suppe <ingredientPhrase
-                  ingredientName="Parmesankäse">(nach Belieben mit geriebenem
-                  Parmesankäse)</ingredientPhrase> herumgereicht. </p>
+               ganz bleiben. Derselbe wird bei der Suppe <ingredientPhrase>(nach Belieben mit geriebenem
+                  <ingredient ingredientName="Parmesankäse">Parmesankäse</ingredient>)</ingredientPhrase> herumgereicht. </p>
             <p><cookTime quantity="3-3.5" unit="h">Rindfleischsuppe muß vom Kochen an, 3—3½ Stunden
                   kochen</cookTime>.</p>
 
@@ -60,24 +58,22 @@
             <head>Rindfleischsuppe mit Perlgerste und Reis.</head>
 
             <p><link target="#B-1">Wird gekocht wie die vorhergehende</link>, nur mit der
-               Abänderung, daß, wenn die Brühe durch ein Haarsieb geschüttet ist, <ingredientPhrase
-                  ingredientName="Mehl Butter" quantity="1-2 unknown" unit="EL unknown">man
-                  verhältnißmäßig 1—2 Eßlöffel voll Mehl mit frischer Butter
+               Abänderung, daß, wenn die Brühe durch ein Haarsieb geschüttet ist, <ingredientPhrase>man
+                  verhältnißmäßig 1—2 Eßlöffel voll <ingredient name="Mehl" quantity="1-2" unit="EL">Mehl</ingredient> mit frischer <ingredient name="Butter">Butter</ingredient>
                   durchschwitzt</ingredientPhrase>, welches jedoch weiß bleiben muß, und die vom
-               Bodensatz abgeklärte Brühe hinzuschüttet. Zugleich <ingredientPhrase
-                  ingredientName="Perlgerste Wurzelwerk">gibt man feine Gerste nebst etwas
-                  Wurzelwerk in die Suppe</ingredientPhrase>, <ingredientPhrase
-                  ingredientName="Spargel Blumenkohl Scorzonerwurzel" isOptional="True">später auch
-                  Spargel, Blumenkohl oder Scorzonerwurzeln, was die Jahreszeit
-                  bietet</ingredientPhrase>, <ingredientPhrase ingredientName="Klöße">und vor dem
+               Bodensatz abgeklärte Brühe hinzuschüttet. Zugleich <ingredientPhrase>gibt man feine <ingredient name="Perlgerste">Gerste</ingredient> nebst etwas
+                  <ingredient name="Wurzelwerk">Wurzelwerk</ingredient> in die Suppe</ingredientPhrase>, <ingredientPhrase>später auch
+                     <ingredient name="Spargel" isOptional="True">Spargel</ingredient>, <ingredient name="Blumenkohl" isOptional="True">Blumenkohl</ingredient> oder <ingredient name="Scorzonerwurzeln" isOptional="True">Scorzonerwurzeln</ingredient>, was die Jahreszeit
+                  bietet</ingredientPhrase>, <ingredientPhrase>und vor dem
                   Anrichten die Herzblättchen der Sellerieknollen und beliebige
-                  Klöße</ingredientPhrase>. <ingredientPhrase ingredientName="Eidotter"
-                  quantity="1-2">Man rührt die Suppe mit 1—2 Eidotter ab</ingredientPhrase>, indem
+                     <ingredient ingredientName="Kloß">Klöße</ingredient></ingredientPhrase>. <ingredientPhrase>Man rührt die Suppe mit 1—2 <ingredient ingredientName="Eidotter"
+                        quantity="1-2">Eidotter</ingredient> ab</ingredientPhrase>, indem
                man solche mit etwas Wasser zerrührt, und unter fortwährendem Rühren die kochende
                Suppe hinzu gibt. Sie muß gebunden, nur ja nicht zu sämig sein. </p>
 
-            <note>Anmerk. <ingredientPhrase ingredientName="Reis Sago" quantity="1" unit="EL pP"
-                  isOptional="True">Will man Reis oder Sago zur Suppe nehmen, so gibt man dieses
+            <note>Anmerk. <ingredientPhrase>Will man <ingredient quantity="1" unit="EL pP"
+               isOptional="True">Reis</ingredient> oder <ingredient quantity="1" unit="EL pP"
+                  isOptional="True">Sago</ingredient> zur Suppe nehmen, so gibt man dieses
                   später hinein. Man rechnet davon auf jede Person bei allen Fleischsuppen einen
                   gestrichenen Eßlöffel voll</ingredientPhrase>. </note>
          </cue:recipe>
@@ -86,19 +82,16 @@
             <head>Schnell gemachte Rindfleischsuppe.</head>
 
             <p><recipeYield quantity="6-7" unit="people">Für 6—7 Personen</recipeYield>
-               <ingredientPhrase ingredientName="Rindfleisch" quantity="2" unit="Pfund">schneidet
-                  man 2 Pfund Fleisch in kleine Würfel</ingredientPhrase>, <ingredientPhrase
-                  ingredientName="Mehl Butter" quantity="einige 2" unit="EL Stich">läßt einige
-                  Löffel Mehl in 2 Stich frischer Butter gelbbraun werden</ingredientPhrase>, gibt
-               das Fleisch hinzu und läßt es ebenfalls ein wenig rösten, <ingredientPhrase
-                  ingredientName="Sellerieknolle Zwiebel Karotte" quantity="1 1 1">so wie nachher
-                  eine, in 8 Theile geschnittene Sellerieknolle, eine klein geschnittene Zwiebel und
-                  eine geriebene gelbe Murzel (Möhre)</ingredientPhrase>. Dies wird eine Weile
+               <ingredientPhrase>schneidet
+                  man 2 Pfund <ingredient ingredientName="Rindfleisch" quantity="2" unit="Pfund">Fleisch</ingredient> in kleine Würfel</ingredientPhrase>, <ingredientPhrase>läßt einige
+                  Löffel <ingrdient name="Mehl" quantity="einige" unit="EL">Mehl</ingrdient> in 2 Stich frischer <ingredient name="Butter" quantity="2" unit="Stich">Butter</ingredient> gelbbraun werden</ingredientPhrase>, gibt
+               das Fleisch hinzu und läßt es ebenfalls ein wenig rösten, <ingredientPhrase>so wie nachher
+                  eine, in 8 Theile geschnittene <ingredient name="Sellerieknolle" quantity="1">Sellerieknolle</ingredient>, eine klein geschnittene <ingredient name="Zwiebel" quantity="1">Zwiebel</ingredient> und
+                  eine geriebene gelbe Murzel (<ingredient name="Karotte" quantity="1">Möhre</ingredient>)</ingredientPhrase>. Dies wird eine Weile
                gerührt und so viel kochendes Wasser zugegossen, als man, zum Einkochen mitgerechnet,
                Suppe haben will. <cookTime quantity="1.5" unit="h">Eine bis 1½ Stunden läßt man
-                  Alles kochen</cookTime> und schüttet es durch ein Sieb. <ingredientPhrase
-                  ingredientName="Reis Sellerie Eidotter Muskat">Der Reis wird allein gekocht, beim
-                  Anrichten mit dem Sellerie in die Suppe gegeben, und diese mit Eidotter und Muskat
+                  Alles kochen</cookTime> und schüttet es durch ein Sieb. <ingredientPhrase>Der <ingredient name="Reis">Reis</ingredient> wird allein gekocht, beim
+                  Anrichten mit dem <ingredient name="Sellerie">Sellerie</ingredient> in die Suppe gegeben, und diese mit <ingredient name="Eidotter">Eidotter</ingredient> und <ingredient name="Muskat">Muskat</ingredient>
                   abgerührt</ingredientPhrase>. </p>
 
          </cue:recipe>
@@ -109,13 +102,11 @@
             <p><link target="#A-12">Die Bereitung dieser braunen Kraftbrühe findet man in A. No.
                   12</link>. <recipeYield quantity="12" unit="people">Zu einer Gesellschaft von 12
                   Personen</recipeYield>
-               <ingredientPhrase ingredientName="Rindfleisch rohen_Schinken" quantity="6 1"
-                  unit="Pfund Pfund">nimmt man 6 Pfund Rindfleisch und 1 Pfund rohen
-                  Schinken</ingredientPhrase>. <ingredientPhrase
-                  ingredientName="braune_Klöße Schwammklöße">Es werden <link target="#L-3">braune
-                     Klöße No. 3</link> und <link target="#L-6">Schwammklöße</link> darin
-                  gemacht</ingredientPhrase>. <ingredientPhrase ingredientName="brauner_Sago"
-                  isOptional="True">Auch kann man nach Belieben braunen Sago darin
+               <ingredientPhrase>nimmt man 6 Pfund <ingredient name="Rindfleisch" quantity="6" unit="Pfund">Rindfleisch</ingredient> und 1 Pfund <ingredient name="rohen Schinken" quantity="1" unit="Pfund">rohen
+                  Schinken</ingredient></ingredientPhrase>. <ingredientPhrase>Es werden <link target="#L-3"><ingredient name="brauner Kloß">braune
+                     Klöße</ingredient> No. 3</link> und <link target="#L-6"><ingredient name="Schwammkloß">Schwammklöße</ingredient></link> darin
+                     gemacht</ingredientPhrase>. <ingredientPhrase>Auch kann man nach Belieben <ingredient ingredientName="brauner_Sago"
+                        isOptional="True">braunen Sago</ingredient> darin
                   kochen</ingredientPhrase>. </p>
 
          </cue:recipe>
@@ -123,43 +114,39 @@
          <cue:recipe type="Suppen." rcp-id="B-5">
             <head>Eine gute Suppe von Braten-Jus.</head>
 
-            <p><ingredientPhrase ingredientName="Zwiebel Butter" quantity="1 unknown">Man schmort
-                  eine fein geschnittene Zwiebel mit reichlich frischer Butter</ingredientPhrase>,
-                  <ingredientPhrase ingredientName="Mehl" quantity="1-2" unit="EL" isOptional="True"
-                  >läßt ein bis zwei Eßlöffel voll feines Mehl darin anziehen</ingredientPhrase>,
+            <p><ingredientPhrase>Man schmort
+                  eine fein geschnittene <ingredient name="Zwiebel" quantity="1">Zwiebel</ingredient> mit reichlich frischer <ingredient name="Butter">Butter</ingredient></ingredientPhrase>,
+               <ingredientPhrase>läßt ein bis zwei Eßlöffel voll feines <ingredient ingredientName="Mehl" isOptional="True">Mehl</ingredient> darin anziehen</ingredientPhrase>,
                und gießt dann so viel kochendes Wasser hinzu, als man (zum Einkochen mitgerechnet)
-               Suppe haben will. <ingredientPhrase ingredientName="Reis Sellerieknolle">Nachdem Reis
-                  und eine geschnittene Sellerieknolle darin weich gekocht sind</ingredientPhrase>,
+               Suppe haben will. <ingredientPhrase>Nachdem <ingredient name="Reis">Reis</ingredient>
+                  und eine geschnittene <ingredient name="Sellerieknolle">Sellerieknolle</ingredient> darin weich gekocht sind</ingredientPhrase>,
                   <ingredientPhrase ingredientName="Braten-Jus">gibt man Braten-Jus hinzu. Die vom
                      <link target="#Braten-Jus">Rost-Beef No. 3</link> eignet sich vorzüglich zu
-                  dieser Suppe</ingredientPhrase>. Hat man reichlich Jus, so kann man eine
-               Kraftsuppe daraus bereiten, das Mehl bleibt dann weg. </p>
+                  dieser Suppe</ingredientPhrase>. <ingredientPhrase>Hat man reichlich Jus, so kann man eine
+               Kraftsuppe daraus bereiten, das Mehl bleibt dann weg</ingredientPhrase>. </p>
 
          </cue:recipe>
 
          <cue:recipe type="Suppen." rcp-id="B-6">
             <head>Kalbfleischsuppe.</head>
 
-            <p><ingredientPhrase ingredientName="Kalbfleisch">Das Kalbfleisch <link target="#B-1"
+            <p><ingredientPhrase>Das <ingredient name="Kalbfleisch">Kalbfleisch</ingredient> <link target="#B-1"
                      >wie in No. 1, nach der Personenzahl, doch etwas reichlicher genommen, da
                      solches weniger Kraft gibt, als Rindfleisch</link></ingredientPhrase>. Nachdem
-               es gut gewaschen, <ingredientPhrase ingredientName="Salz">mit Wasser und Salz rein
+               es gut gewaschen, <ingredientPhrase>mit Wasser und <ingredient name="Salz">Salz</ingredient> rein
                   ausgeschäumt</ingredientPhrase>, gibt man die Brühe nach Verlauf von einer starken
-               halben Stunde durch ein Sieb, <ingredientPhrase ingredientName="Mehl Butter"><link
-                     target="#B-2">schwitzt wie in No. 2</link>, Mehl in Butter</ingredientPhrase>,
-               schüttet die Kalbfleischbrühe vom Bodensatz langsam hinzu, <ingredientPhrase
-                  ingredientName="Petersilienwurzel Scorzonerwurzel" quantity="1 unknown">gibt eine
-                  Petersilien- und einige Scorzoner-Wurzeln dazu</ingredientPhrase>,
-                  <ingredientPhrase ingredientName="Reis">so wie ½ Stunde vor dem Anrichten
-                  abgebrühten Reis</ingredientPhrase>, und kocht die Suppe langsam, fest zugedeckt,
-               gahr. <ingredientPhrase ingredientName="Spargel Blumenkohl Fleisch Klöße"
-                  isOptional="True">Später kann man Spargel oder Blumenkohl, was die Jahreszeit hat,
-                  jedoch vorher eben abgekocht, und 10 Minuten vor dem Anrichten Fleisch- oder
-                  andere beliebige Klöße darin gahr kochen</ingredientPhrase>. <ingredientPhrase
-                  ingredientName="Muskat Petersilie Eidotter" quantity="unknown unknown 1-2">Die
-                  Suppe wird mit Muskat, etwas fein gehackter Petersilie und 1—2 Eidotter
+               halben Stunde durch ein Sieb, <ingredientPhrase><link
+                     target="#B-2">schwitzt wie in No. 2</link>, <ingredient name="Mehl">Mehl</ingredient> in <ingredient name="Butter">Butter</ingredient></ingredientPhrase>,
+               schüttet die Kalbfleischbrühe vom Bodensatz langsam hinzu, <ingredientPhrase>gibt eine
+                  <ingredient name="Petersilienwurzel" quantity="1">Petersilien-</ingredient> und einige <ingredient name="Scorzonerwurzel">Scorzoner-Wurzeln</ingredient> dazu</ingredientPhrase>,
+                  <ingredientPhrase>so wie ½ Stunde vor dem Anrichten
+                  abgebrühten <ingredient name="Reis">Reis</ingredient></ingredientPhrase>, und kocht die Suppe langsam, fest zugedeckt,
+               gahr. <ingredientPhrase>Später kann man <ingredient name="Spargel" isOptional="True">Spargel</ingredient> oder <ingredient name="Blumenkohl" isOptional="True">Blumenkohl</ingredient>, was die Jahreszeit hat,
+                  jedoch vorher eben abgekocht, und 10 Minuten vor dem Anrichten <ingredient name="Fleischkloß" isOptional="True">Fleisch-</ingredient> oder
+                  andere beliebige <ingredient name="Kloß" isOptional="True">Klöße</ingredient> darin gahr kochen</ingredientPhrase>. <ingredientPhrase>Die
+                  Suppe wird mit <ingredient name="Muskat">Muskat</ingredient>, etwas fein gehackter <ingredient name="Petersilie">Petersilie</ingredient> und 1—2 <ingredient name="Eidotter" quantity="1-2">Eidotter</ingredient>
                   abgerührt</ingredientPhrase>. </p>
-            <p>Soll Griesmehl in der Suppe gekocht werden, bleibt das Mehl weg. Wird das Fleisch
+            <p><ingredientPhrase>Soll <ingredient name="Griesmehl" alternative="1-1">Griesmehl</ingredient> in der Suppe gekocht werden, bleibt das <ingredient name="Mehl" alternative="1-2">Mehl</ingredient> weg</ingredientPhrase>. Wird das Fleisch
                nach derselben gegessen, schneidet man es vor dem Kochen in passende viereckige
                Stückchen, und gibt eine Meerrettig-Sauce dabei. </p>
             <p><cookTime quantity="1.5-2" unit="h">Kalbfleischsuppe muß 1½ — 2 Stunden
@@ -290,22 +277,22 @@
          <cue:recipe type="Suppen." rcp-id="B-16">
             <head>Mock Turtle Suppe.</head>
 
-            <p>Es wird hierzu für 24—30 Personen eine kräftige Bouillon von 8—10 Pfund Rindfleisch
-               mit Wurzelwerk gekocht. Zugleich bringt man einen großen Kalbskopf, eine
-               Schweineschnauze und Ohren, einen Ochsengaumen und eine geräucherte Ochsenzunge zu
-               Feuer und kocht dies Alles gahr, aber nicht zu weich. Kalt, schneidet man es in
-               kleine, länglich viereckige Stückchen, gibt das Fleisch in die Bouillon, nebst
-               braunem Gewürz, ein Paar Messerspitzen Cayenne-Pfeffer, einige Kalbsmidder in
-               Stückchen geschnitten (siehe Vorbereitungsregeln), kleine Saucissen, so viel
-               Kalbskopfbrühe, daß man hinreichend Suppe hat, und macht dies mit in Butter braun
-               gemachtem Mehl gebunden. Nachdem dies Alles ¼ Stunde gekocht hat, kommen noch Klöße
-               von Kalbfleisch, einige hart gekochte Eier in Würfel geschnitten, ein Paar Eßlöffel
-               Engl. Soja hinzu, und wenn die Klößchen einige Minuten gekocht haben, ½ Flasche
-               Madeira und auch Austern, wenn man sie haben kann. Dann wird die Suppe sogleich
+            <p>Es wird hierzu <recipeYield quantity="24-30" unit="people">für 24—30 Personen</recipeYield> <ingredientPhrase>eine kräftige Bouillon von 8—10 Pfund <ingredient name="Rindfleisch" quantity="8-10" unit="Pfund">Rindfleisch</ingredient>
+               mit <ingredient name="Wurzelwerk">Wurzelwerk</ingredient> gekocht</ingredientPhrase>. <ingredientPhrase>Zugleich bringt man einen großen <ingredient name="Kalbskopf" quantity="1">Kalbskopf</ingredient>, eine
+               <ingredient name="Schweineschnauze" quantity="1">Schweineschnauze</ingredient> und <ingredient name="Schweineohr">Ohren</ingredient>, einen <ingredient name="Ochsengaumen" quantity="1">Ochsengaumen</ingredient> und eine geräucherte <ingredient name="Ochsenzunge" quantity="1">Ochsenzunge</ingredient> zu
+               Feuer</ingredientPhrase> und kocht dies Alles gahr, aber nicht zu weich. Kalt, schneidet man es in
+               kleine, länglich viereckige Stückchen, gibt das Fleisch in die Bouillon, <ingredientPhrase>nebst
+                  <ingredient name="braunes Gewürz">braunem Gewürz</ingredient></ingredientPhrase>, <ingredientPhrase>ein Paar Messerspitzen <ingredient name="Cayennepfeffer" quantity="einige" unit="Messerspitze">Cayenne-Pfeffer</ingredient></ingredientPhrase>, <ingredientPhrase>einige <ingredient name="Kalbsmidder" quantity="einige">Kalbsmidder</ingredient> in
+               Stückchen geschnitten (<link target="#A-16">siehe Vorbereitungsregeln</link>)</ingredientPhrase>, <ingredientPhrase>kleine <ingredient name="Saucisson">Saucissen</ingredient></ingredientPhrase>, so viel
+               Kalbskopfbrühe, daß man hinreichend Suppe hat,<ingredientPhrase> und macht dies mit in <ingredient name="Butter">Butter</ingredient> braun
+                  gemachtem <ingredient name="Mehl">Mehl</ingredient> gebunden</ingredientPhrase>. Nachdem dies Alles ¼ Stunde gekocht hat, <ingredientPhrase>kommen noch <ingredient name="Kalbfleischkloß" reference="#L-4">Klöße
+               von Kalbfleisch</ingredient>, einige hart gekochte <ingredient name="Ei" quantity="einige">Eier</ingredient> in Würfel geschnitten, ein Paar Eßlöffel
+               <ingredient name="Englische Soja" quantity="einige" unit="EL" isOptional="True">Engl. Soja</ingredient> hinzu, und wenn die Klößchen einige Minuten gekocht haben, ½ Flasche
+               Madeira und auch <ingredient name="Auster" isOptional="True">Austern</ingredient>, wenn man sie haben kann</ingredientPhrase>. Dann wird die Suppe sogleich
                angerichtet. </p>
 
             <note>Anmerk. Der Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und
-               statt Madeira kann man weißen Franzwein und etwas Rum nehmen. Sowohl die Bouillon als
+               <ingredientPhrase>statt <ingredient name="Madeira" altGr="1-1">Madeira</ingredient> kann man <ingredient name="weißen Franzwein" altGrp="1-2">weißen Franzwein</ingredient> und etwas <ingredient name="Rum" altGrp="1-2">Rum</ingredient> nehmen</ingredientPhrase>. Sowohl die Bouillon als
                Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht
                werden. </note>
          </cue:recipe>

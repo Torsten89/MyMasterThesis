@@ -21,26 +21,28 @@ Problematiken:
 	- Abkürzungs-"." kein Satzende (B-6 Das Kalbfleisch wie in No. 1, nach der Personenzahl, doch etwas reichlicher genommen, da solches weniger Kraft gibt, als Rindfleisch)
 		-> Ein Rezept als trainigsdatum?
 	- Fleisch in Rindfleischsuppe ist nicht Rindfleisch erkannt (B-1)
+	- kein Deutsch (B-6 erster Satz xD)
 		
 - CRF weil Wahrscheinlichkeiten über Features wie POS (was im decision tree schwer ist)
+  & erkennen von quantities (eine artikel oder 1?)
 	- isOptional über eigenes output label oder decision tree (if "wenn" occurs in sentence)
 	- Ggf. über output label dicision tree (if "negation" in sentence -> don't use ingredient)
+	  oder eigens label dontUseIngr
 	- Decision tree für links
+	
 
 
 SCHEMA:
-<ingredientPhrase ingredientName="Apfel" quantity="2" unit="kg">2 kg Äpfel</ingredientPhrase>
-Erweiterungen:
-	Attris:
-		isOptional="True"
-		isAlternative="altnative group identifier" // group-1-1, group-1-2, group-1-2 für Madeira oder weißen Franzwein und Rum 
-		exclude="True"
-		
-Bei mehreren Zutaten in einer ingredientPhrase:
-<ingredientPhrase
-	ingredientName="Scorzonerwurzel Selleriewurzel Petersilienwurzel"
-	quantity="1 unKnown unKnown"
-	unit="unKnown unKnown unKnown"
-	>
-	einigen Scorzoner-, einer Sellerie- und Petersilienwurzel
-</ingredientPhrase>
+Vorteil von im Text tags vs. list of ingredients? 
+(Nachteil:
+	- Suggeriert das alle Infos innerhalb des Tags stehen
+	  (B-1 <ingredient name="Selleriewurzel" quanitity="1">Sellerie-</ingredient>) <- um alles rum geht nicht,
+		da mehrere Zutaten so abgekürzt
+	  (B-16 <ingredient name="Rindfleisch" quantity="8-10" unit="Pfund">Rindfleisch</ingredient>)
+	- Bezüge zwischen Sätze schwer herstellbar
+	  (B-16 "statt Madeira kann man weißen Franzwein und etwas Rum nehmen")
+Vorteile:
+	- Sehr einfach zu lesen
+	- Wenn man irgendwann optionale und alternative Zutaten betrachtet,
+	  muss keine Hiararchie aufgebaut werden zum korrekten Extrahieren (B-1)
+)
