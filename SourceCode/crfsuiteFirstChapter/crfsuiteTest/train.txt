@@ -1,0 +1,16 @@
+Q	2
+U	EL
+I	Zucker
+
+Q	Einen
+U	Schuss
+I	Zucker
+
+Q	Zucker
+P	,
+O	wenn
+O	nicht
+O	suess
+O	genug
+
+I	Mehl
