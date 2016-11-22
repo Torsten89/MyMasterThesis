@@ -17,12 +17,7 @@ class Trainer(crfsuite.Trainer):
     def message(self, s):
         sys.stdout.write(s)
 
-    def trainModel(self):
-        # Use L2-regularized SGD and 1st-order dyad features.
-        self.select('l2sgd', 'crf1d')
-        # Set the coefficient for L2 regularization to 0.1
-        self.set('c2', '0.1')
-    
+    def readModelParameter(self):
         with open(self.pathToTrainingFile, "r") as fil:
             xseq = crfsuite.ItemSequence()
             labels = crfsuite.StringList()
@@ -40,15 +35,21 @@ class Trainer(crfsuite.Trainer):
                 fields = line.split('\t')
                 item = crfsuite.Item()  # item contains all features of one x
                 for field in fields[1:]:
-                    print(field)
                     item.append(crfsuite.Attribute(field))
                 xseq.append(item)
                 labels.append(fields[0])
-                print(line)
-            
-#             for name in trainer.params():
-#                 print(name, trainer.get(name), trainer.help(name))   
-            self.train("lillteExample.model", -1)
+
+    def trainModel(self):
+        # Use L2-regularized SGD and 1st-order dyad features (bigram features).
+        self.select('l2sgd', 'crf1d')
+        # Set the coefficient for L2 regularization to 0.1
+        self.set('c2', '0.1')
+        # also feature with negative values
+        self.set("feature.possible_states", "1")
+    
+        self.readModelParameter()
+                 
+        self.train("lillteExample.model", -1)
 
 if __name__ == '__main__':
     trainer = Trainer("train.txt")  # Trainer("train.txt")

@@ -10,7 +10,7 @@ Q	Zucker
 P	,
 O	wenn
 O	nicht
-O	suess
+O	süß
 O	genug
 
 I	Mehl

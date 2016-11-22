@@ -13,9 +13,7 @@ if __name__ == '__main__':
             if not line:
                 tagger.set(xseq)
                 labels = tagger.viterbi()
-                for t, y in enumerate(labels):
-                    print(y)  # print(y, tagger.marginal(y, t))
-                print()
+                print(labels)
                 xseq = crfsuite.ItemSequence()
                 continue
             
@@ -24,10 +22,9 @@ if __name__ == '__main__':
             for field in fields[1:]:
                 item.append(crfsuite.Attribute(field))
             xseq.append(item)
-            
+        
+        # do the last one    
         tagger.set(xseq)
         labels = tagger.viterbi()
-        for t, y in enumerate(labels):
-            print(y, tagger.marginal(y, t))
-        print()
-        xseq = crfsuite.ItemSequence()
+        print(labels)
+        
