@@ -21,8 +21,8 @@
                 <ingredient name="Mehl"/>
                 
                 <ingredient name="Spargel" isOptional="True"/>
-                <ingredient name ="Blumenkohl" isOptional="True"/>
-                <ingredient name ="Parmesankäsel" isOptional="True"/>
+                <ingredient name="Blumenkohl" isOptional="True"/>
+                <ingredient name="Parmesankäsel" isOptional="True"/>
             </listOfIngredients>
         </recipeData>
         
