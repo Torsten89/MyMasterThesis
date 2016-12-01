@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:teix="http://www.tei-c.org/ns/Examples"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+    ns="http://www.tei-c.org/ns/1.0">
+
+    <include href="basisCueML.rng">
+        <define name="tei_recipeIngredient">
+            <element name="ingredient" ns="http://cueML/ns">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A single ingredient used in the recipe, e.g. sugar, flour or garlic.</a:documentation>
+                
+                <choice>
+                    <group>
+                        <ref name="tei_att.measurement.attribute.quantity"/>
+                        <ref name="tei_att.unitForIngredient"/>
+                    </group>
+                    <ref name="tei_att.ranging.attribute.atLeast"/>
+                    <ref name="tei_att.ranging.attribute.atMost"/>
+                    <ref name="tei_att.unitForIngredient"/>
+                    <attribute name="yield"> <!-- yieldAtLeast yieldAtMost-->
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the envisaged yield of the quantity measured in people.</a:documentation>
+                        <data type="integer"/>
+                    </attribute>
+                </choice>
+                
+                
+                <text/>
+            </element>
+        </define>
+    </include>
+
+
+    <define name="tei_att.unitForIngredient">
+        <optional>
+            <attribute name="unit">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the units used for the measurement.</a:documentation>
+                <choice>
+                    <value>kg</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(kilogram) SI base unit of mass</a:documentation>
+                    <value>Pfund</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Pfund) not standardised unit of mass. Depends on time and location</a:documentation>
+                    <value>Loth</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Loth or Lot) not standardised unit of mass. Depends on time and location</a:documentation>
+                    <value>Stich</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Stich) not standardised unit of mass.</a:documentation>
+                    <value>Messerspitze</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Messrespitze) not standardised unit of mass</a:documentation>
+                    <value>Bohne_dick</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Bohne dick) not standardised unit of mass</a:documentation>
+                    <value>Pfennig</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Pfennig) an unit which refers to purchase value. Therefore depends on time and location</a:documentation>
+                    <value>Eßlöffel</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Eßlöffel or Esslöffel) not standardised unit of mass or volume</a:documentation>
+                    <value>Teelöffel</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Teelöffel) not standardised unit of mass or volume</a:documentation>
+                    <value>Tasse</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Tasse) not standardised unit of mass or volume</a:documentation>
+                    <value>L</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(litre) 1 dm³</a:documentation>
+                    <value>Maß</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Maß) not standardised unit of volume. Depends on time and location</a:documentation>
+                    <value>Flasche</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Flasche) not standardised unit of volume</a:documentation>
+                    <value>Glas</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Flasche) not standardised unit of volume</a:documentation>
+                </choice>
+            </attribute>
+        </optional>
+    </define>
+    
+</grammar>
