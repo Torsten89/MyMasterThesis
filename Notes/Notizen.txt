@@ -1,10 +1,3 @@
-WAS EXTRAHIEREN GEGEN WAS TESTEN??
-	- Vgl. Zeilen der extrahierten Zutatenlisten
-		- Bei Unterschied / Fehler:
-		  Links original / trainings label, Rechts output (farbig css :) )
-	
-	- Finaller Vergleich gegen echte Zutatenliste (per Hand aufgeschrieben)
-
 Vereinfachungen:
 	- Keine Links / "Wird gekocht wie die vorhergehende" (B-2)
 	  "wie in No. 1" (B-6)
@@ -19,7 +12,6 @@ Annahmen:
 Problematiken:
 	- Scorzoner-, Sellier-, Petersilienwurzel (B-1)
 	- Abkürzungs-"." kein Satzende (B-6 Das Kalbfleisch wie in No. 1, nach der Personenzahl, doch etwas reichlicher genommen, da solches weniger Kraft gibt, als Rindfleisch)
-		-> Ein Rezept als trainigsdatum?
 	- Fleisch in Rindfleischsuppe ist nicht Rindfleisch erkannt (B-1)
 	- kein Deutsch (B-6 erster Satz xD)
 		
@@ -29,20 +21,3 @@ Problematiken:
 	- Ggf. über output label dicision tree (if "negation" in sentence -> don't use ingredient)
 	  oder eigens label dontUseIngr
 	- Decision tree für links
-	
-
-
-SCHEMA:
-Vorteil von im Text tags vs. list of ingredients? 
-(Nachteil:
-	- Suggeriert das alle Infos innerhalb des Tags stehen
-	  (B-1 <ingredient name="Selleriewurzel" quanitity="1">Sellerie-</ingredient>) <- um alles rum geht nicht,
-		da mehrere Zutaten so abgekürzt
-	  (B-16 <ingredient name="Rindfleisch" quantity="8-10" unit="Pfund">Rindfleisch</ingredient>)
-	- Bezüge zwischen Sätze schwer herstellbar
-	  (B-16 "statt Madeira kann man weißen Franzwein und etwas Rum nehmen")
-Vorteile:
-	- Sehr einfach zu lesen
-	- Wenn man irgendwann optionale und alternative Zutaten betrachtet,
-	  muss keine Hiararchie aufgebaut werden zum korrekten Extrahieren (B-1)
-)

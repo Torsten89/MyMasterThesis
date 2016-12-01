@@ -11,3 +11,5 @@ if __name__ == '__main__':
     
     for t in tags:
         print(t)
+        
+    print(tt_ger.tag("Meer doof"))
