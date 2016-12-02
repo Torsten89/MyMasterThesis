@@ -23,5 +23,12 @@ Problematiken:
 	- Ggf. über output label dicision tree (if "negation" in sentence -> don't use ingredient)
 	  oder eigens label dontUseIngr
 	- Decision tree für links )
+	- Decision tree für ingredientDef
 
-
+Schema:
+	- Zutaten nicht ins Schema (dynamisch, zu groß bei multi language)
+	- Zutatenliste nicht als Schema, da diese sehr wahrscheinlich bereits Interpretationen enthält
+	
+BLS:
+	- Rindfleisch
+	- in ingredientDef sowas wie notes für Wurzelwerk?

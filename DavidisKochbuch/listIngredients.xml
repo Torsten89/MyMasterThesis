@@ -1,0 +1,24 @@
+<cue:listIngredient xmlns:cue="http://cueML/ns" xmlns="http://www.tei-c.org/ns/1.0">
+	<cue:ingredientDef xml:id="Rindkochfleisch" ref="BLS 3.02" lookupID="U180100">Rind Kochfleisch roh</cue:ingredientDef>
+	<cue:ingredientDef xml:id="Wurzelwerk" ref="BLS 3.02" lookupID="G600000">Wurzel- und Knollengemüse ODER X560003??</cue:ingredientDef>
+	<cue:ingredientDef xml:id="Kalbskopf" ref="BLS 3.02" lookupID="U306100">Kalb Fleisch Kopf roh</cue:ingredientDef>
+	<cue:ingredientDef xml:id="Schweineschnauze" ref="" lookupID=""></cue:ingredientDef>
+	<cue:ingredientDef xml:id="Schweineohr" ref="" lookupID=""></cue:ingredientDef>
+	<cue:ingredientDef xml:id="Ochsengaumen" ref="" lookupID=""></cue:ingredientDef>
+	<cue:ingredientDef xml:id="Ochsenzunge" ref="BLS 3.02" lookupID="Y179323
+">Ochsenzunge gekocht</cue:ingredientDef>
+	<cue:ingredientDef xml:id="braunes_Gewürz" ref="" lookupID=""></cue:ingredientDef>
+	<cue:ingredientDef xml:id="Cayennepfeffer" ref="BLS 3.02" lookupID="R252000">Chili (Cayennepfeffer)</cue:ingredientDef>
+	<cue:ingredientDef xml:id="Midder" ref="BLS 3.02" lookupID="V582100">Kalb Bries roh; "Kalbsmidder ist auch unter dem Synonym: Bries, Kalbsmilch bekannt. Kalbsmilch ist die Thymusdrüse des Kalbes. 100 g frische Kalbsmilch enthalten 99,8 kcal, 3,4 g Fett, 17,2 g Eiweiß, 77,8 g Wasser, 1,91 mg Eisen, 268 mg Cholesterin und 0,42 g Purine. Dieses Organ ist bei Jungtieren voll entwickelt. Bei erwachsenen Tieren bildet sich das Organ zurück. Kalbsmilch wird zur Herstellung von Spezialitäten, wie Suppen, Klöße und Ragout, verwendet." (http://www.cosmiq.de/qa/show/70827/was-ist-kalbsmidder/)
+	</cue:ingredientDef>
+	<cue:ingredientDef xml:id="Saucisse" ref="BLS 3.02" lookupID="W000000">Wurst</cue:ingredientDef>
+	<cue:ingredientDef xml:id="Butter" ref="BLS 3.02" lookupID="Q610000"></cue:ingredientDef>
+	<cue:ingredientDef xml:id="Mehl" ref="BLS 3.02" lookupID="C200000"></cue:ingredientDef>
+	<cue:ingredientDef xml:id="Kalbkochfleisch" ref="BLS 3.02" lookupID="U380100">Kalb Kochfleisch roh</cue:ingredientDef>
+	<cue:ingredientDef xml:id="Ei" ref="BLS 3.02" lookupID="E110000">Hühnerei</cue:ingredientDef>
+	<cue:ingredientDef xml:id="Englische_Soja" ref="" lookupID=""></cue:ingredientDef>
+	<cue:ingredientDef xml:id="Madeira" ref="BLS 3.02" lookupID="P432000">Madeirawein</cue:ingredientDef>
+	<cue:ingredientDef xml:id="Auster" ref="BLS 3.02" lookupID="T780100">Auster roh</cue:ingredientDef>
+	<cue:ingredientDef xml:id="weißer_Franzwein" ref="" lookupID=""></cue:ingredientDef>
+	<cue:ingredientDef xml:id="Rum" ref="BLS 3.02" lookupID="P741000"></cue:ingredientDef>
+</cue:listIngredient>

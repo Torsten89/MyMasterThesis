@@ -1,36 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:teix="http://www.tei-c.org/ns/Examples"
     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
     ns="http://www.tei-c.org/ns/1.0">
-
+    
+    
     <include href="basisCueML.rng">
         <define name="tei_recipeIngredient">
             <element name="ingredient" ns="http://cueML/ns">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A single ingredient used in the recipe, e.g. sugar, flour or garlic.</a:documentation>
-                
-                <choice>
-                    <group>
-                        <ref name="tei_att.measurement.attribute.quantity"/>
-                        <ref name="tei_att.unitForIngredient"/>
-                    </group>
-                    <ref name="tei_att.ranging.attribute.atLeast"/>
-                    <ref name="tei_att.ranging.attribute.atMost"/>
-                    <ref name="tei_att.unitForIngredient"/>
+                <attribute name="ingredientDef">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Should point to its corresponding ingredientDef.</a:documentation>
+                    <data type="anyURI"/>
+                </attribute>
+                <ref name="tei_cue.quantity"/>
+                <ref name="tei_att.unitForIngredient"/>
+                <optional>
                     <attribute name="yield"> <!-- yieldAtLeast yieldAtMost-->
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the envisaged yield of the quantity measured in people.</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the envisaged yield of the ingredient's quantity measured in people.</a:documentation>
                         <data type="integer"/>
                     </attribute>
-                </choice>
-                
+                </optional>
+                <text/>
+            </element>
+        </define> 
+        
+        <define name="tei_recipeYield">
+            <element name="yield" ns="http://cueML/ns">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The quantity produced by the recipe measured in number of people served.</a:documentation>
+                <ref name="tei_cue.quantity"/>
                 
                 <text/>
             </element>
         </define>
+        
+        <define name="tei_recipe">
+            <element name="recipe" ns="http://cueML/ns">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A recipe.</a:documentation>
+                <ref name="tei_model.headLike"/>
+                <optional>
+                    <ref name="tei_div"/>
+                </optional>
+                <optional>
+                    <ref name="tei_recipe"/>
+                </optional>
+                <optional>
+                    <ref name="tei_recipeInstructions"/>
+                </optional>
+                <zeroOrMore>
+                    <ref name="tei_p"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="tei_ab"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="tei_note"/>
+                </zeroOrMore>
+                <ref name="tei_att.typed.attributes"/>
+                <optional>
+                    <attribute name="rcp-id">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies a recipe by giving its entry in the original TOC.</a:documentation>
+                        <text/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <element name="additionalInformation" ns="http://cueML/ns">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A meta element which provides additional information. For Example that some ingredients are an alternative to each other or some ingredients should not be used for sick people.</a:documentation>
+                        <zeroOrMore>
+                            <interleave>
+                                <ref name="tei_model.ptrLike"/>
+                            </interleave>
+                        </zeroOrMore>
+                        
+                        <text/>
+                    </element>
+                </optional>
+            </element>
+        </define>
+        
     </include>
 
+
+    <define name="tei_model.divLike" combine="choice">
+        <element name="listIngredient" ns="http://cueML/ns">
+            <ref name="tei_att.global.attribute.xmlbase"/> <!-- for xinclude -->
+            <zeroOrMore>
+                <element name="ingredientDef">
+                    <attribute name="xml:id">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
+                        <!-- <data type="ID"/> Hilfe!!! -->
+                    </attribute>
+                    <attribute name="ref">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a reference with further information</a:documentation>
+                    </attribute>
+                    <attribute name="lookupID">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies where to find the further information of the ref attribute</a:documentation>
+                    </attribute>
+                    
+                    <text/>
+                </element>
+            </zeroOrMore>
+        </element>
+    </define>
+
+    <define name="tei_cue.quantity">
+        <choice>
+            <ref name="tei_att.measurement.attribute.quantity"/>
+            <group>
+                <ref name="tei_att.ranging.attribute.atLeast"/>
+                <ref name="tei_att.ranging.attribute.atMost"/>
+            </group>
+            <attribute name="quantityPhrase">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A vague quantity specification like "some".</a:documentation>
+            </attribute>
+        </choice>
+    </define>
 
     <define name="tei_att.unitForIngredient">
         <optional>
@@ -44,10 +127,10 @@
                     <value>Messerspitze</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Messrespitze) not standardised unit of mass</a:documentation>
                     <value>Bohne_dick</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Bohne dick) not standardised unit of mass</a:documentation>
                     <value>Pfennig</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Pfennig) an unit which refers to purchase value. Therefore depends on time and location</a:documentation>
-                    <value>Eßlöffel</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Eßlöffel or Esslöffel) not standardised unit of mass or volume</a:documentation>
+                    <value>EL</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Eßlöffel or Esslöffel) not standardised unit of mass or volume</a:documentation>
                     <value>Teelöffel</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Teelöffel) not standardised unit of mass or volume</a:documentation>
                     <value>Tasse</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Tasse) not standardised unit of mass or volume</a:documentation>
-                    <value>L</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(litre) 1 dm³</a:documentation>
+                    <value>l</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(litre) 1 dm³</a:documentation>
                     <value>Maß</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Maß) not standardised unit of volume. Depends on time and location</a:documentation>
                     <value>Flasche</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Flasche) not standardised unit of volume</a:documentation>
                     <value>Glas</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Flasche) not standardised unit of volume</a:documentation>
