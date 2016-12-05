@@ -8,16 +8,23 @@
         <define name="tei_recipeIngredient">
             <element name="ingredient" ns="http://cueML/ns">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A single ingredient used in the recipe, e.g. sugar, flour or garlic.</a:documentation>
-                <attribute name="ingredientDef">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Should point to its corresponding ingredientDef.</a:documentation>
-                    <data type="anyURI"/>
-                </attribute>
+                <optional>
+                    <attribute name="ingredientDef">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Should point to its corresponding ingredientDef.</a:documentation>
+                        <data type="anyURI"/>
+                    </attribute>
+                </optional>
                 <ref name="tei_cue.quantity"/>
                 <ref name="tei_att.unitForIngredient"/>
                 <optional>
                     <attribute name="yield"> <!-- yieldAtLeast yieldAtMost-->
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the envisaged yield of the ingredient's quantity measured in people.</a:documentation>
                         <data type="integer"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="target">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a link to further information like a recipe for dumplings, when the ingredient is dumpling.</a:documentation>
                     </attribute>
                 </optional>
                 <text/>
