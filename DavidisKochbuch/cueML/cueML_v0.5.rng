@@ -6,11 +6,11 @@
     
     <include href="basisCueML.rng">
         <define name="tei_recipeIngredient">
-            <element name="ingredient" ns="http://cueML/ns">
+            <element name="recipeIngredient" ns="http://cueML/ns">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A single ingredient used in the recipe, e.g. sugar, flour or garlic.</a:documentation>
                 <optional>
-                    <attribute name="ingredientDef">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Should point to its corresponding ingredientDef.</a:documentation>
+                    <attribute name="ref">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Should point to an "ingredient" tag</a:documentation>
                         <data type="anyURI"/>
                     </attribute>
                 </optional>
@@ -27,6 +27,22 @@
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a link to further information like a recipe for dumplings, when the ingredient is dumpling.</a:documentation>
                     </attribute>
                 </optional>
+                
+                <optional>
+                    <attribute name="altGrp">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Within a recipe a uniqe identifier for all ingredients, which belong to an alternative..</a:documentation>
+                    </attribute>
+                    <attribute name="altFor">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies which are the other alternatives to its own altGrp.</a:documentation>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="optional">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States that the ingredient is optional to use, e.g. sugar, if not sweet enough.</a:documentation>
+                        <value>True</value>
+                    </attribute>
+                </optional>
+                
                 <text/>
             </element>
         </define> 
@@ -69,18 +85,6 @@
                         <text/>
                     </attribute>
                 </optional>
-                <optional>
-                    <element name="additionalInformation" ns="http://cueML/ns">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A meta element which provides additional information. For Example that some ingredients are an alternative to each other or some ingredients should not be used for sick people.</a:documentation>
-                        <zeroOrMore>
-                            <interleave>
-                                <ref name="tei_model.ptrLike"/>
-                            </interleave>
-                        </zeroOrMore>
-                        
-                        <text/>
-                    </element>
-                </optional>
             </element>
         </define>
         
@@ -91,19 +95,23 @@
         <element name="listIngredient" ns="http://cueML/ns">
             <ref name="tei_att.global.attribute.xmlbase"/> <!-- for xinclude -->
             <zeroOrMore>
-                <element name="ingredientDef">
+                <element name="ingredient">
                     <attribute name="xml:id">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
                         <!-- <data type="ID"/> Hilfe!!! -->
                     </attribute>
-                    <attribute name="ref">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a reference with further information</a:documentation>
-                    </attribute>
-                    <attribute name="lookupID">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies where to find the further information of the ref attribute</a:documentation>
-                    </attribute>
+                    <optional>
+                        <attribute name="BLSref">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies where to find the further information of the ref attribute</a:documentation>
+                        </attribute>
+                    </optional>
                     
-                    <text/>
+                    <zeroOrMore>
+                        <element name="basicForm"><text/></element>
+                    </zeroOrMore>
+                    <zeroOrMore>
+                        <element name="note"><text/></element>
+                    </zeroOrMore>
                 </element>
             </zeroOrMore>
         </element>

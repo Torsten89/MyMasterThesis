@@ -1,0 +1,68 @@
+<cue:listIngredient xmlns="http://www.tei-c.org/ns/1.0" xmlns:cue="http://cueML/ns">
+	<cue:ingredient xml:id="Rindkochfleisch" BLSref="U180100">
+		<cue:basicForm>Rindfleisch</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Wurzelwerk" BLSref="G600000">
+		<cue:basicForm>Wurzelwerk</cue:basicForm>
+		<cue:note>Another possible value for BLSref is "X560003"</cue:note>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Kalbskopf" BLSref="U306100">
+		<cue:basicForm>Kalbskopf</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Schweineschnauze">
+		<cue:basicForm>Schweineschnauze</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Schweineohr">
+		<cue:basicForm>Schweineohr</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Ochsengaumen">
+		<cue:basicForm>Ochsengaumen</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Ochsenzunge" BLSref="Y179323">
+		<cue:basicForm>Ochsenzunge</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="braunes_Gewürz">
+		<cue:basicForm>braunes Gewürz</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Cayennepfeffer" BLSref="R252000">
+		<cue:basicForm>Cayennepfeffer</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Midder" BLSref="V582100">
+		<cue:basicForm>Midder</cue:basicForm>
+		<cue:basicForm>Kalbsmidder</cue:basicForm>
+		<cue:basicForm>Bries</cue:basicForm>
+		<cue:basicForm>Kalbsmilch</cue:basicForm>
+		<cue:note>"Kalbsmidder ist auch unter dem Synonym: Bries, Kalbsmilch bekannt. Kalbsmilch ist die Thymusdrüse des Kalbes. 100 g frische Kalbsmilch enthalten 99,8 kcal, 3,4 g Fett, 17,2 g Eiweiß, 77,8 g Wasser, 1,91 mg Eisen, 268 mg Cholesterin und 0,42 g Purine. Dieses Organ ist bei Jungtieren voll entwickelt. Bei erwachsenen Tieren bildet sich das Organ zurück. Kalbsmilch wird zur Herstellung von Spezialitäten, wie Suppen, Klöße und Ragout, verwendet." (http://www.cosmiq.de/qa/show/70827/was-ist-kalbsmidder/)</cue:note>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Saucisse" BLSref="W000000">
+		<cue:basicForm>Saucisse</cue:basicForm>
+		<cue:note>Frech name for particular sausages (see https://fr.wikipedia.org/wiki/Saucisse)</cue:note>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Butter" BLSref="Q610000">
+		<cue:basicForm>Butter</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Mehl" BLSref="C200000">
+		<cue:basicForm>Mehl</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Kalbkochfleisch" BLSref="U380100">
+		<cue:basicForm>Kalbfleisch</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Ei" BLSref="E110000">
+		<cue:basicForm>Ei</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Englische_Soja">
+		<cue:basicForm>Englische Soja</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Madeira" BLSref="P432000">
+		<cue:basicForm>Madeira</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Auster" BLSref="T780100">
+		<cue:basicForm>Auster</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="weißer_Franzwein">
+		<cue:basicForm>weißer Franzwein</cue:basicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Rum" BLSref="P741000">
+		<cue:basicForm>Rum</cue:basicForm>
+	</cue:ingredient>
+</cue:listIngredient>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="cueML/cueML_v0.5.rng" type="xml"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:cue="http://cueML/ns"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Title</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Information about the source</p>
+            </sourceDesc>
+        </fileDesc>
+
+        <xenoData> </xenoData>
+    </teiHeader>
+    <text>
+        <body>
+            <xi:include href="listIngredients2.xml"/>
+
+
+            <anchor xml:id="A-16-start"/>
+            <cue:recipe type="Allgemeine_Vorbereitungsregeln" rcp-id="A-16">
+                <head><cue:recipeIngredient ref="#Midder">Midder</cue:recipeIngredient> zum
+                    Fricassee.</head>
+
+                <p>Wird mit kaltem Wasser zu Feuer gesetzt; wenn es warm geworden, abgeschüttet und
+                    anderes darauf gegeben, so einige Male, bis es weiß geworden ist. Dann legt man
+                    es in kaltes Wasser, zieht von den länglichen Stücken die Haut ab, löst aus den
+                    andern die fleischigten Theile, schneidet dasselbe in einige Stücke und kocht es
+                        <cue:cookTime dur-iso="PT15M">¼ Stunde</cue:cookTime> im Fricassee gahr.</p>
+            </cue:recipe>
+            <anchor xml:id="A-16-end"/>
+
+            <cue:recipe type="Suppen." rcp-id="B-1">
+                <head>Klare weiße Rindfleischsuppe.</head>
+
+                <p><anchor xml:id="Bouillon-start"/>Man rechnet, wenn die Gesellschaft klein ist,
+                    auf jede Person ¾ Pfund, bei einer großen Gesellschaft ½ Pfund Fleisch. Dasselbe
+                    wird gewaschen und mit doppelt so vielem Wasser, als man Suppe haben will, zu
+                    Feuer gesetzt. Auf jede Person rechnet man bei einem Gesellschaftsessen ⅜ Maß
+                    Suppe, also auch ¾ Maß Wasser, wozu man gleich das nöthige Salz gibt, weil das
+                    Fleisch nur in der ersten Stunde des Kochens das Salz annimmt und das spätere
+                    Hinzugeben des Salzes nur die Suppe würzt. Ist das Fleisch sorgfältig
+                    ausgeschäumt, gibt man eine fein geschnittene Zwiebel hinzu, wodurch die Brühe
+                    an Kraft gewinnt, und läßt sie, fest zugedeckt, fortwährend, aber nicht zu stark
+                    kochen. Eine Stunde später gießt man die Brühe durch ein Haarsieb, weil sie nie
+                    ganz klar ist, spült das Stück Fleisch eben ab und setzt es mit der Brühe, die
+                    man vom Bodensatz langsam abschüttet, in dem ebenfalls umgespülten Topfe wieder
+                    zu Feuer nebst einigen Scorzoner-, einer Sellerie- und Petersilienwurzel.
+                    Hiermit läßt man die Suppe ferner kochen, während man zuweilen das Fett abnimmt,
+                    das der Bouillon den feinen Geschmack benimmt.<anchor xml:id="Bouillon-end"/>
+                    Man kann ein halbes Stündchen vor dem Anrichten Spargel oder Blumenkohl, was die
+                    Jahreszeit gerade bietet, hinein geben, nur muß beides eben abgekocht sein, und
+                    darf ja nicht in der Bouillon zerkochen. Ist das Fleisch gahr, aber nicht zu
+                    weich gekocht, läßt man beliebige Klöße eben darin gahr kochen und richtet die
+                    Suppe an. Zugleich hat man Reis, für jede Person einen Eßlöffel gerechnet,
+                    abgebrüht und in Bouillon, wozu man so viel mehr Fleisch genommen, gahr und dick
+                    gekocht; doch müssen die Körner ganz bleiben. Derselbe wird bei der Suppe (nach
+                    Belieben mit geriebenem Parmesankäse) herumgereicht. </p>
+                <p>Rindfleischsuppe muß vom Kochen an, 3—3½ Stunden kochen.</p>
+
+            </cue:recipe>
+
+
+
+            <cue:recipe type="Suppen." rcp-id="B-16">
+                <head>Mock Turtle Suppe.</head>
+
+                <p>Es wird hierzu für <cue:yield atLeast="24" atMost="30">24—30 Personen</cue:yield>
+                    eine kräftige <ref target="#Bouillon">Bouillon</ref> von 8—10 Pfund
+                        <cue:recipeIngredient ref="#Rindkochfleisch" atLeast="8" atMost="10"
+                        unit="Pfund">Rindfleisch</cue:recipeIngredient> mit <cue:recipeIngredient
+                        ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient> gekocht. Zugleich
+                    bringt man einen großen <cue:recipeIngredient ref="#Kalbskopf" quantity="1"
+                        >Kalbskopf</cue:recipeIngredient>, eine <cue:recipeIngredient
+                        ref="#Schweineschnauze" quantity="1"
+                        >Schweineschnauze</cue:recipeIngredient> und <cue:recipeIngredient
+                        ref="#Schweineohr">Ohren</cue:recipeIngredient>, einen <cue:recipeIngredient
+                        ref="#Ochsengaumen" quantity="1">Ochsengaumen</cue:recipeIngredient> und
+                    eine geräucherte <cue:recipeIngredient ref="#Ochsenzunge" quantity="1"
+                        >Ochsenzunge</cue:recipeIngredient> zu Feuer und kocht dies Alles gahr, aber nicht
+                    zu weich. Kalt, schneidet man es in kleine, länglich viereckige Stückchen, gibt
+                    das Fleisch in die Bouillon, nebst <cue:recipeIngredient
+                        ref="#braunes_Gewürz">braunem Gewürz</cue:recipeIngredient>, ein Paar
+                    Messerspitzen <cue:recipeIngredient ref="#Cayennepfeffer"
+                        quantityPhrase="ein Paar" unit="Messerspitze"
+                        >Cayenne-Pfeffer</cue:recipeIngredient>, einige <cue:recipeIngredient
+                        ref="#Midder" quantityPhrase="einige">Kalbsmidder</cue:recipeIngredient>
+                    in Stückchen geschnitten <ref target="#A-16">(siehe Vorbereitungsregeln)</ref>,
+                    kleine <cue:recipeIngredient ref="#Saucisse">Saucissen</cue:recipeIngredient>, so
+                    viel Kalbskopfbrühe, daß man hinreichend Suppe hat, und macht dies mit in
+                        <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient> braun
+                    gemachtem <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient> gebunden.
+                    Nachdem dies Alles ¼ Stunde gekocht hat, kommen noch <cue:recipeIngredient target="#L-4"
+                        >Klöße von Kalbfleisch</cue:recipeIngredient>, einige hart gekochte
+                        <cue:recipeIngredient ref="#Ei" quantityPhrase="einige"
+                        >Eier</cue:recipeIngredient> in Würfel geschnitten, ein Paar Eßlöffel
+                        <cue:recipeIngredient ref="#Englische_Soja" quantityPhrase="ein Paar"
+                        unit="EL">Engl. Soja</cue:recipeIngredient> hinzu, und wenn die Klößchen einige
+                    Minuten gekocht haben, ½ Flasche <cue:recipeIngredient ref="#Madeira"
+                        quantity="0.5" unit="Flasche">Madeira</cue:recipeIngredient> und auch
+                        <cue:recipeIngredient ref="#Auster">Austern</cue:recipeIngredient>, wenn man
+                    sie haben kann. Dann wird die Suppe sogleich angerichtet.</p>
+
+                <note>Anmerk. Der <cue:recipeIngredient ref="#Englische_Soja" optional="True"
+                        >Soja</cue:recipeIngredient> macht die Suppe gewürzreicher, kann jedoch gut
+                    wegbleiben, und statt <cue:recipeIngredient ref="#Madeira" altGrp="1" altFor="2"
+                        >Madeira</cue:recipeIngredient> kann man <cue:recipeIngredient
+                        ref="weißen_Franzwein" altGrp="2" altFor="1">weißen Franzwein</cue:recipeIngredient> und etwas
+                        <cue:recipeIngredient ref="#Rum" altGrp="2" altFor="1" quantityPhrase="etwas"
+                        >Rum</cue:recipeIngredient> nehmen. Sowohl die Bouillon als Kalbskopf können schon
+                    am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden. </note>
+            </cue:recipe>
+
+
+            <spanGrp type="refs">
+                <span xml:id="Bouillon" from="#Bouillon-start" to="#Bouillon-end">Rezept für
+                    Bouillon</span>
+                <span xml:id="A-16" from="#A-16-start" to="#A-16-end">Allgemeine Vorbereitungsregeln
+                    zu Midder.</span>
+                <span xml:id="L-4" from="#L-4-start" to="#L-4-end">Klöße von Kalb- oder
+                    Hühnerfleisch</span>
+            </spanGrp>
+        </body>
+    </text>
+</TEI>
