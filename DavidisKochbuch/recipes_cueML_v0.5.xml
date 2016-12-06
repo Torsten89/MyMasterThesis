@@ -15,13 +15,10 @@
                 <p>Information about the source</p>
             </sourceDesc>
         </fileDesc>
-
-        <xenoData> </xenoData>
     </teiHeader>
     <text>
         <body>
             <xi:include href="listIngredients2.xml"/>
-
 
             <anchor xml:id="A-16-start"/>
             <cue:recipe type="Allgemeine_Vorbereitungsregeln" rcp-id="A-16">
@@ -67,7 +64,6 @@
             </cue:recipe>
 
 
-
             <cue:recipe type="Suppen." rcp-id="B-16">
                 <head>Mock Turtle Suppe.</head>
 
@@ -75,33 +71,34 @@
                     eine kräftige <ref target="#Bouillon">Bouillon</ref> von 8—10 Pfund
                         <cue:recipeIngredient ref="#Rindkochfleisch" atLeast="8" atMost="10"
                         unit="Pfund">Rindfleisch</cue:recipeIngredient> mit <cue:recipeIngredient
-                        ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient> gekocht. Zugleich
-                    bringt man einen großen <cue:recipeIngredient ref="#Kalbskopf" quantity="1"
+                        ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient> gekocht. Zugleich bringt
+                    man einen großen <cue:recipeIngredient ref="#Kalbskopf" quantity="1"
                         >Kalbskopf</cue:recipeIngredient>, eine <cue:recipeIngredient
-                        ref="#Schweineschnauze" quantity="1"
-                        >Schweineschnauze</cue:recipeIngredient> und <cue:recipeIngredient
-                        ref="#Schweineohr">Ohren</cue:recipeIngredient>, einen <cue:recipeIngredient
-                        ref="#Ochsengaumen" quantity="1">Ochsengaumen</cue:recipeIngredient> und
-                    eine geräucherte <cue:recipeIngredient ref="#Ochsenzunge" quantity="1"
-                        >Ochsenzunge</cue:recipeIngredient> zu Feuer und kocht dies Alles gahr, aber nicht
-                    zu weich. Kalt, schneidet man es in kleine, länglich viereckige Stückchen, gibt
-                    das Fleisch in die Bouillon, nebst <cue:recipeIngredient
+                        ref="#Schweineschnauze" quantity="1">Schweineschnauze</cue:recipeIngredient>
+                    und <cue:recipeIngredient ref="#Schweineohr">Ohren</cue:recipeIngredient>, einen
+                        <cue:recipeIngredient ref="#Ochsengaumen" quantity="1"
+                        >Ochsengaumen</cue:recipeIngredient> und eine geräucherte
+                        <cue:recipeIngredient ref="#Ochsenzunge" quantity="1"
+                        >Ochsenzunge</cue:recipeIngredient> zu Feuer und kocht dies Alles gahr, aber
+                    nicht zu weich. Kalt, schneidet man es in kleine, länglich viereckige Stückchen,
+                    gibt das Fleisch in die Bouillon, nebst <cue:recipeIngredient
                         ref="#braunes_Gewürz">braunem Gewürz</cue:recipeIngredient>, ein Paar
-                    Messerspitzen <cue:recipeIngredient ref="#Cayennepfeffer"
-                        quantityPhrase="ein Paar" unit="Messerspitze"
-                        >Cayenne-Pfeffer</cue:recipeIngredient>, einige <cue:recipeIngredient
-                        ref="#Midder" quantityPhrase="einige">Kalbsmidder</cue:recipeIngredient>
-                    in Stückchen geschnitten <ref target="#A-16">(siehe Vorbereitungsregeln)</ref>,
-                    kleine <cue:recipeIngredient ref="#Saucisse">Saucissen</cue:recipeIngredient>, so
+                    Messerspitzen <cue:recipeIngredient ref="#Cayennepfeffer" quantity="ein Paar"
+                        unit="Messerspitze">Cayenne-Pfeffer</cue:recipeIngredient>, einige
+                        <cue:recipeIngredient ref="#Midder" quantity="einige"
+                        >Kalbsmidder</cue:recipeIngredient> in Stückchen geschnitten <ref
+                        target="#A-16">(siehe Vorbereitungsregeln)</ref>, kleine
+                        <cue:recipeIngredient ref="#Saucisse">Saucissen</cue:recipeIngredient>, so
                     viel Kalbskopfbrühe, daß man hinreichend Suppe hat, und macht dies mit in
                         <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient> braun
-                    gemachtem <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient> gebunden.
-                    Nachdem dies Alles ¼ Stunde gekocht hat, kommen noch <cue:recipeIngredient target="#L-4"
-                        >Klöße von Kalbfleisch</cue:recipeIngredient>, einige hart gekochte
-                        <cue:recipeIngredient ref="#Ei" quantityPhrase="einige"
+                    gemachtem <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
+                    gebunden. Nachdem dies Alles ¼ Stunde gekocht hat, kommen noch
+                        <cue:recipeIngredient target="#L-4">Klöße von
+                        Kalbfleisch</cue:recipeIngredient>, einige hart gekochte
+                        <cue:recipeIngredient ref="#Ei" quantity="einige"
                         >Eier</cue:recipeIngredient> in Würfel geschnitten, ein Paar Eßlöffel
-                        <cue:recipeIngredient ref="#Englische_Soja" quantityPhrase="ein Paar"
-                        unit="EL">Engl. Soja</cue:recipeIngredient> hinzu, und wenn die Klößchen einige
+                        <cue:recipeIngredient ref="#Englische_Soja" quantity="ein Paar" unit="EL"
+                        >Engl. Soja</cue:recipeIngredient> hinzu, und wenn die Klößchen einige
                     Minuten gekocht haben, ½ Flasche <cue:recipeIngredient ref="#Madeira"
                         quantity="0.5" unit="Flasche">Madeira</cue:recipeIngredient> und auch
                         <cue:recipeIngredient ref="#Auster">Austern</cue:recipeIngredient>, wenn man
@@ -109,12 +106,13 @@
 
                 <note>Anmerk. Der <cue:recipeIngredient ref="#Englische_Soja" optional="True"
                         >Soja</cue:recipeIngredient> macht die Suppe gewürzreicher, kann jedoch gut
-                    wegbleiben, und statt <cue:recipeIngredient ref="#Madeira" altGrp="1" altFor="2"
+                    wegbleiben, und statt <cue:recipeIngredient ref="#Madeira" altGrp="1"
                         >Madeira</cue:recipeIngredient> kann man <cue:recipeIngredient
-                        ref="weißen_Franzwein" altGrp="2" altFor="1">weißen Franzwein</cue:recipeIngredient> und etwas
-                        <cue:recipeIngredient ref="#Rum" altGrp="2" altFor="1" quantityPhrase="etwas"
-                        >Rum</cue:recipeIngredient> nehmen. Sowohl die Bouillon als Kalbskopf können schon
-                    am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden. </note>
+                        ref="weißen_Franzwein" altGrp="2">weißen Franzwein</cue:recipeIngredient>
+                    und etwas <cue:recipeIngredient ref="#Rum" altGrp="2" quantity="etwas"
+                        >Rum</cue:recipeIngredient> nehmen.<cue:alt altGrp="1" exclude="2"/><cue:alt
+                        altGrp="2" exclude="1"/> Sowohl die Bouillon als Kalbskopf können schon am
+                    vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden. </note>
             </cue:recipe>
 
 

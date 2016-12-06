@@ -28,7 +28,7 @@ Madeira und auch Austern, wenn man sie haben kann."
 "von", "Kalbfleisch", ",", "einige", "hart", "gekochte", "Eier", "in", "Würfel", "geschnitten", ",", "ein", "Paar", "Eßlöffel", \
 "Engl", ".", "Soja", "hinzu", ",", "und", "wenn", "die", "Klößchen", "einige", "Minuten", "gekocht", "haben", ",", "½", "Flasche", \
 "Madeira", "und", "auch", "Austern", ",", "wenn", "man", "sie", "haben", "kann", "."]
-        self.assertEqual(expectedResult, list(getTokensOfSentence(sentence)))
+        self.assertEqual(expectedResult, list(chunkSentence(sentence)))
         
          
     def testChunkInstructions(self):

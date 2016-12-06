@@ -84,5 +84,11 @@ hinein. Man rechnet davon auf jede Person bei allen Fleischsuppen einen gestrich
 Eßlöffel voll." \
                , recipe.instructions)
         
+    def testGetCertainRecipe(self):
+        dom = createCueMLDom([getRecipeB49(), getRecipeB2()])
+        recipes = list(XmlParser(dom).getRecipes(["B-2"]))
+        self.assertEqual(1, len(recipes))
+        self.assertEqual("B-2", recipes[0].rcpId)
+        
 if __name__ == "__main__":
     unittest.main()

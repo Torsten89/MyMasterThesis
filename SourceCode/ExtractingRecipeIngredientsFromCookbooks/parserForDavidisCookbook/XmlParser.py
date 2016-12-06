@@ -28,10 +28,10 @@ class XmlParser(object):
             </TEI>
         '''
         self.dom = dom
-        
 
-    def getRecipes(self):
-        for xmlRecipe in self.dom.getElementsByTagName(recipeTagName):
+    def getRecipes(self, rcpIds=[]):
+        withAttris = {} if not rcpIds else {"rcp-id":rcpIds}
+        for xmlRecipe in self.getElems(recipeTagName, withAttris):
             yield self.parseRecipe(xmlRecipe)
     
     def parseRecipe(self, xmlRecipe):
@@ -52,6 +52,18 @@ class XmlParser(object):
         
     """ Underneath only helper methods
     """        
+    
+    def getElems(self, elemName, withAttris={}):
+        """ withAttris = {key: iterator with possible values}
+        """
+        for elem in self.dom.getElementsByTagName(elemName):
+            hasAllAttris = True
+            for k, v in withAttris.items():
+                if elem.attributes[k].value not in v:
+                    hasAllAttris = False
+                    break
+            if hasAllAttris:
+                yield elem
     
     def getAllChildText(self, node):
         # " ".join(c.data.split() removes multiple whitespaces

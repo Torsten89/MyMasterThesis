@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:teix="http://www.tei-c.org/ns/Examples"
     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
     ns="http://www.tei-c.org/ns/1.0">
     
@@ -30,10 +33,7 @@
                 
                 <optional>
                     <attribute name="altGrp">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Within a recipe a uniqe identifier for all ingredients, which belong to an alternative..</a:documentation>
-                    </attribute>
-                    <attribute name="altFor">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies which are the other alternatives to its own altGrp.</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Within a recipe a uniqe identifier for all ingredients, which belong to an alternative.</a:documentation>
                     </attribute>
                 </optional>
                 <optional>
@@ -59,6 +59,14 @@
         <define name="tei_recipe">
             <element name="recipe" ns="http://cueML/ns">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A recipe.</a:documentation>
+                <ref name="tei_att.typed.attributes"/>
+                <optional>
+                    <attribute name="rcp-id">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies a recipe by giving its entry in the original TOC.</a:documentation>
+                        <text/>
+                    </attribute>
+                </optional>
+                
                 <ref name="tei_model.headLike"/>
                 <optional>
                     <ref name="tei_div"/>
@@ -78,13 +86,6 @@
                 <zeroOrMore>
                     <ref name="tei_note"/>
                 </zeroOrMore>
-                <ref name="tei_att.typed.attributes"/>
-                <optional>
-                    <attribute name="rcp-id">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies a recipe by giving its entry in the original TOC.</a:documentation>
-                        <text/>
-                    </attribute>
-                </optional>
             </element>
         </define>
         
@@ -96,18 +97,23 @@
             <ref name="tei_att.global.attribute.xmlbase"/> <!-- for xinclude -->
             <zeroOrMore>
                 <element name="ingredient">
-                    <attribute name="xml:id">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
-                        <!-- <data type="ID"/> Hilfe!!! -->
-                    </attribute>
+                    <ref name="tei_att.global.attribute.xmlid"/>
+                    <!-- The xenoData element may not be defined for the use of this attribute (see http://tei-l.970651.n3.nabble.com/Conflicting-ID-types-for-attribute-quot-id-quot-from-namespace-quot-http-www-w3-org-XML-1998-namespa-td4028055.html) -->
                     <optional>
                         <attribute name="BLSref">
-                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies where to find the further information of the ref attribute</a:documentation>
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides the id of the ingredient in the BLS (Bundeslebensmittelschlüssel).</a:documentation>
                         </attribute>
                     </optional>
                     
+                    <element name="prefBasicForm">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the preferred basis form / lemmatization of the ingredient.</a:documentation>
+                        <text/>
+                    </element>
                     <zeroOrMore>
-                        <element name="basicForm"><text/></element>
+                        <element name="altBasicForm">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides an alternative possible basis form / lemmatization of the ingredient.</a:documentation>
+                            <text/>
+                        </element>
                     </zeroOrMore>
                     <zeroOrMore>
                         <element name="note"><text/></element>
@@ -116,17 +122,27 @@
             </zeroOrMore>
         </element>
     </define>
+    
+    <define name="tei_model.segLike" combine="choice">
+        <element name="alt" ns="http://cueML/ns">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies which altGrp are an alternative to each other.</a:documentation>
+            <attribute name="altGrp">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Within a recipe an unique identifire for a set of ingredients, which are an alternative.</a:documentation>
+            </attribute>
+            <ref name="tei_att.global.linking.attribute.exclude"/>
+        </element>
+        
+    </define>
 
     <define name="tei_cue.quantity">
         <choice>
-            <ref name="tei_att.measurement.attribute.quantity"/>
+            <attribute name="quantity">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the number of the specified units that comprise the measurement.</a:documentation>
+            </attribute>
             <group>
                 <ref name="tei_att.ranging.attribute.atLeast"/>
                 <ref name="tei_att.ranging.attribute.atMost"/>
             </group>
-            <attribute name="quantityPhrase">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A vague quantity specification like "some".</a:documentation>
-            </attribute>
         </choice>
     </define>
 

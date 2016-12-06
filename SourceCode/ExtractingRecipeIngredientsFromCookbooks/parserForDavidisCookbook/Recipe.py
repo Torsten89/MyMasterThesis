@@ -1,10 +1,11 @@
 import string
+import chunk
 
 def chunkInstructions(instructions):
         chunksOfSentences = []
         for paragrah in instructions.split("\n"):
             for sentence in getSentencesOfParagraph(paragrah):
-                chunksOfSentences.append(list(getTokensOfSentence(sentence)))
+                chunksOfSentences.append(list(chunkSentence(sentence)))
                 
         # per line one token and two sentences are separated through an empty line
         return "\n".join(["\n".join(chunks) for chunks in chunksOfSentences])
@@ -23,7 +24,7 @@ def getSentencesOfParagraph(paragraph):
             yield sentence.strip()
             sentence = ""
         
-def getTokensOfSentence(sentence):
+def chunkSentence(sentence):
     for word in sentence.split():
         tokens = []
         
@@ -54,6 +55,13 @@ class Recipe(object):
         self.alternativeIngredients = alternativeIngredients
         self.totalTime = totalTime
         self.cookTime = cookTime
-            
+        
+    def chunk(self):
+        for c in chunkSentence(self.name):
+            yield c
+        yield "\n"
+        for c in chunkInstructions(self.instructions):
+            yield c 
+        yield "\n"   
         
         
