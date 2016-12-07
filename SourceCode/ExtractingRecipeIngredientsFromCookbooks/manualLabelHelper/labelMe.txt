@@ -1,25 +1,30 @@
-MockTurtleSuppe
-Mock
-Turtle
-Suppe
-.
-Es
-wird
-hierzu
-für
-24—30
-Personen
-eine
-kräftige
-Bouillon
-von
-8—10
-Pfund
-Rindfleisch
-mit
-Wurzelwerk
-gekocht
-.
+#B-16
+Mock	O
+Turtle	O
+Suppe	O
+
+Es	O
+wird	O
+hierzu	O
+für		O
+24		B-Yield
+—		I-Yield
+30		I-Yield
+Personen	O
+eine	O
+kräftige	O
+Bouillon	O
+von	O
+8	B-Quantity
+—	I-Quantity
+10	I-Quantity
+Pfund	B-Unit
+Rindfleisch	B-Ingredient
+mit	O
+Wurzelwerk	B-Ingredient
+gekocht	O
+.	O
+
 Zugleich
 bringt
 man
@@ -51,6 +56,7 @@ nicht
 zu
 weich
 .
+
 Kalt
 ,
 schneidet
@@ -86,7 +92,8 @@ Stückchen
 geschnitten
 (
 siehe
-Vorbereitungsregeln)
+Vorbereitungsregeln
+)
 ,
 kleine
 Saucissen
@@ -112,6 +119,7 @@ gemachtem
 Mehl
 gebunden
 .
+
 Nachdem
 dies
 Alles
@@ -139,6 +147,7 @@ Paar
 Eßlöffel
 Engl
 .
+
 Soja
 hinzu
 ,
@@ -164,6 +173,7 @@ sie
 haben
 kann
 .
+
 Dann
 wird
 die
@@ -171,8 +181,10 @@ Suppe
 sogleich
 angerichtet
 .
+
 Anmerk
 .
+
 Der
 Soja
 macht
@@ -197,6 +209,7 @@ etwas
 Rum
 nehmen
 .
+
 Sowohl
 die
 Bouillon

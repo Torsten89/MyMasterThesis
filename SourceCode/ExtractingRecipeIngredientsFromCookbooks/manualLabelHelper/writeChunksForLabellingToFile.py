@@ -8,7 +8,7 @@ def writeChunksToFile(cookbook, fileName, rcpIds=[]):
     parser = XmlParser(minidom.parse(targetCookbook))
     recipes = parser.getRecipes(rcpIds)
     
-    with open(fileName, "x") as f:
+    with open(fileName, "w") as f:
         for recipe in recipes:
             for chunk in recipe.chunk():
                 f.write(chunk)
@@ -16,4 +16,4 @@ def writeChunksToFile(cookbook, fileName, rcpIds=[]):
 
 if __name__ == '__main__':
     writeChunksToFile(targetCookbook, "labelMe.txt", targetRecipes)
-    
+    print("finish")

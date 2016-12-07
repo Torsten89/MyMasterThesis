@@ -57,8 +57,7 @@ class XmlParserTest(unittest.TestCase):
         self.assertEqual("B-49", recipe.rcpId)
         self.assertEqual("Suppe von feiner Gerste (Graupen)", recipe.name)
         self.assertEqual("Suppe von feiner Gerste (Graupen)", recipe.name)
-        self.assertEqual("Suppe von feiner Gerste (Graupen)\n\
-Ungefähr zwei Stunden muß die Gerste zu Feuer sein. Sie wird mit etwas Butter in \
+        self.assertEqual("Ungefähr zwei Stunden muß die Gerste zu Feuer sein. Sie wird mit etwas Butter in \
 wenig weiches kochendes Wasser gegeben, kurz eingekocht, frische Milch hinzu \
 geschüttet und zu einer sämigen Suppe gekocht. Salz, Zucker und Zimmet darf nicht \
 darin fehlen." \
@@ -69,8 +68,7 @@ darin fehlen." \
         recipe = XmlParser(dom).getRecipes().__next__()
         self.assertEqual("Suppen", recipe.recipeType)
         self.assertEqual("B-2", recipe.rcpId)
-        self.assertEqual("Rindfleischsuppe mit Perlgerste und Reis\n\
-Wird gekocht wie die vorhergehende, nur mit der Abänderung, daß, wenn die Brühe durch \
+        self.assertEqual("Wird gekocht wie die vorhergehende, nur mit der Abänderung, daß, wenn die Brühe durch \
 ein Haarsieb geschüttet ist, man verhältnißmäßig 1—2 Eßlöffel voll Mehl mit frischer \
 Butter durchschwitzt, welches jedoch weiß bleiben muß, und die vom Bodensatz \
 abgeklärte Brühe hinzuschüttet. Zugleich gibt man feine Gerste nebst etwas Wurzelwerk \
@@ -89,6 +87,11 @@ Eßlöffel voll." \
         recipes = list(XmlParser(dom).getRecipes(["B-2"]))
         self.assertEqual(1, len(recipes))
         self.assertEqual("B-2", recipes[0].rcpId)
+        
+    def testParseName(self):
+        dom = createCueMLDom([getRecipeB49()])
+        recipe = XmlParser(dom).getRecipes().__next__()
+        self.assertEqual("Suppe von feiner Gerste (Graupen)", recipe.name)
         
 if __name__ == "__main__":
     unittest.main()

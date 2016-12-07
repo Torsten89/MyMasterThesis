@@ -8,7 +8,7 @@ def chunkInstructions(instructions):
                 chunksOfSentences.append(list(chunkSentence(sentence)))
                 
         # per line one token and two sentences are separated through an empty line
-        return "\n".join(["\n".join(chunks) for chunks in chunksOfSentences])
+        return "\n\n".join(["\n".join(chunks) for chunks in chunksOfSentences])
 
 def getSentencesOfParagraph(paragraph):
     """ Man kocht solche nach Nro. 22 und richtet sie mit einer Capern-Sauce an."""
@@ -31,6 +31,12 @@ def chunkSentence(sentence):
         if word[0] in string.punctuation:
             tokens.append(word[0])
             word = word[1:]
+            
+        if "—" in word: # 8—10
+            parts = word.split("—")
+            yield parts[0]
+            yield "—"
+            word = parts[1]
             
         if word and word[-1] in string.punctuation and word!="Nro.":
             tokens += [word[:-1], word[-1]]
@@ -57,8 +63,9 @@ class Recipe(object):
         self.cookTime = cookTime
         
     def chunk(self):
+        yield "#{}\n".format(self.rcpId)
         for c in chunkSentence(self.name):
-            yield c
+            yield "{}\n".format(c)
         yield "\n"
         for c in chunkInstructions(self.instructions):
             yield c 

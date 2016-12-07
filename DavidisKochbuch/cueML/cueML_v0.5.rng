@@ -126,10 +126,9 @@
     <define name="tei_model.segLike" combine="choice">
         <element name="alt" ns="http://cueML/ns">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies which altGrp are an alternative to each other.</a:documentation>
-            <attribute name="altGrp">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Within a recipe an unique identifire for a set of ingredients, which are an alternative.</a:documentation>
+            <attribute name="target">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the altGrp-values which are an alternative to each other.</a:documentation>
             </attribute>
-            <ref name="tei_att.global.linking.attribute.exclude"/>
         </element>
         
     </define>

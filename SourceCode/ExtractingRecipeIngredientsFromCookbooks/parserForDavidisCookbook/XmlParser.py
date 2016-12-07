@@ -43,9 +43,7 @@ class XmlParser(object):
         return Recipe(rcpId, recipeType, head, instructions)
     
     def getInstructions(self, xmlRecipe, head):
-        return "\n".join( \
-            [head] \
-            + [self.getAllChildText(p) for p in xmlRecipe.getElementsByTagName("p")] \
+        return "\n".join([self.getAllChildText(p) for p in xmlRecipe.getElementsByTagName("p")] \
             + [self.getAllChildText(note) for note in xmlRecipe.getElementsByTagName("note")] \
         )
         
@@ -67,4 +65,4 @@ class XmlParser(object):
     
     def getAllChildText(self, node):
         # " ".join(c.data.split() removes multiple whitespaces
-        return "".join([(" ".join(c.data.split()) if c.nodeType == node.TEXT_NODE else self.getAllChildText(c)).strip() for c in node.childNodes])
+        return " ".join([(" ".join(c.data.split()) if c.nodeType == node.TEXT_NODE else self.getAllChildText(c)).strip() for c in node.childNodes])

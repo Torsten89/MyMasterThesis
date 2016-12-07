@@ -18,7 +18,7 @@
     </teiHeader>
     <text>
         <body>
-            <xi:include href="listIngredients2.xml"/>
+            <xi:include href="listIngredients.xml"/>
 
             <anchor xml:id="A-16-start"/>
             <cue:recipe type="Allgemeine_Vorbereitungsregeln" rcp-id="A-16">
@@ -104,15 +104,14 @@
                         <cue:recipeIngredient ref="#Auster">Austern</cue:recipeIngredient>, wenn man
                     sie haben kann. Dann wird die Suppe sogleich angerichtet.</p>
 
-                <note>Anmerk. Der <cue:recipeIngredient ref="#Englische_Soja" optional="True"
+                <note>Anmerk. Der <cue:recipeIngredient ref="#Englische_Soja" optional="True" 
                         >Soja</cue:recipeIngredient> macht die Suppe gewürzreicher, kann jedoch gut
                     wegbleiben, und statt <cue:recipeIngredient ref="#Madeira" altGrp="1"
                         >Madeira</cue:recipeIngredient> kann man <cue:recipeIngredient
                         ref="weißen_Franzwein" altGrp="2">weißen Franzwein</cue:recipeIngredient>
                     und etwas <cue:recipeIngredient ref="#Rum" altGrp="2" quantity="etwas"
-                        >Rum</cue:recipeIngredient> nehmen.<cue:alt altGrp="1" exclude="2"/><cue:alt
-                        altGrp="2" exclude="1"/> Sowohl die Bouillon als Kalbskopf können schon am
-                    vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden. </note>
+                        >Rum</cue:recipeIngredient> nehmen.<cue:alt target="1 2"/> Sowohl die Bouillon als Kalbskopf können schon am
+                    vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden.</note>
             </cue:recipe>
 
 
