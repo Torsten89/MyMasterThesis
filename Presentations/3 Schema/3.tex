@@ -48,9 +48,7 @@
 	captionpos=b,
 	frame=single,
 	breaklines=true,
-	tabsize=2,
-	aboveskip=4pt,
-	belowskip=6pt,
+	breakatwhitespace=true,
 	literate=%
 		{Ö}{{\"O}}1
 		{Ä}{{\"A}}1
@@ -60,7 +58,9 @@
 		{ä}{{\"a}}1
 		{ö}{{\"o}}1
 		{~}{{\textasciitilde}}1,
-	alsoletter={{\"u}}
+	tabsize=4,
+	aboveskip=4pt,
+	belowskip=6pt
 }
 \definecolor{maroon}{rgb}{0.5,0,0}
 \definecolor{darkgreen}{rgb}{0,0.5,0}
@@ -122,30 +122,23 @@
 	\end{minipage}
 \end{frame}
 
-\begin{frame}
-	\tableofcontents
-\end{frame}
 
 \begin{frame}[fragile]{Beispiel cueML}
+NOTIZ Kalbskopf einmal nicht getaggt
 	\begin{lstlisting}[language=XML]
-	<cue:recipe type="Suppen." rcp-id="B-16">
+<cue:recipe type="Suppen." rcp-id="B-16">
 	<head>Mock Turtle Suppe.</head>
 	
-	<p>Es wird hierzu für <cue:yield atLeast="24" atMost="30">24—30 Personen</cue:yield>	eine kräftige <ref target="#Bouillon">Bouillon</ref> von 8—10 Pfund	<cue:recipeIngredient ref="#Rindkochfleisch" atLeast="8" atMost="10"	unit="Pfund">Rindfleisch</cue:recipeIngredient> mit <cue:recipeIngredient ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient> gekocht.  [...]</p>
+	<p>Es wird hierzu für <cue:yield atLeast="24" atMost="30">24-30 Personen</cue:yield> eine kräftige <ref target="#Bouillon">Bouillon</ref> von 8-10 Pfund <cue:recipeIngredient ref="#Rindkochfleisch" atLeast="8" atMost="10" unit="Pfund">Rindfleisch</cue:recipeIngredient> mit <cue:recipeIngredient ref="#Wurzelwerk">Wurzelwerk </cue:recipeIngredient> gekocht. [...]</p>
 	
-	<note>Anmerk. Der <cue:recipeIngredient ref="#Englische_Soja" optional="True" 
-	>Soja</cue:recipeIngredient> macht die Suppe gewürzreicher, kann jedoch gut
-	wegbleiben, und statt <cue:recipeIngredient ref="#Madeira" altGrp="1"
-	>Madeira</cue:recipeIngredient> kann man <cue:recipeIngredient
-	ref="weißen_Franzwein" altGrp="2">weißen Franzwein</cue:recipeIngredient>
-	und etwas <cue:recipeIngredient ref="#Rum" altGrp="2" quantity="etwas"
-	>Rum</cue:recipeIngredient> nehmen<cue:alt target="1 2"/>. Sowohl die Bouillon als Kalbskopf können schon am	vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden.</note>
-	</cue:recipe>
+	<note>Anmerk. Der <cue:recipeIngredient ref="#Englische_Soja" optional="True">Soja</cue:recipeIngredient> macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und statt <cue:recipeIngredient ref="#Madeira" altGrp="1">Madeira</cue:recipeIngredient> kann man <cue:recipeIngredient ref="weißen_Franzwein" altGrp="2">weißen Franzwein</cue:recipeIngredient> und etwas <cue:recipeIngredient ref="#Rum" altGrp="2" quantity="etwas">Rum</cue:recipeIngredient> nehmen<cue:alt target="1 2"/>. Sowohl die Bouillon als Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden.</note>
+</cue:recipe>
 	\end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]{Wie man es hätte auch machen können I}
 	\begin{lstlisting}[language=XML]
+	<...>
 	und statt <cue:recipeIngredient ref="#Madeira" altGrp="1">Madeira</cue:recipeIngredient> kann man <cue:recipeIngredient ref="weißen_Franzwein" altGrp="2">weißen Franzwein</cue:recipeIngredient> und etwas <cue:recipeIngredient ref="#Rum" altGrp="2" quantity="etwas">Rum</cue:recipeIngredient> nehmen <cue:alt target="1 2"/>.
 	
 		VS
@@ -160,11 +153,12 @@
 
 \begin{frame}[fragile]{Wie man es hätte auch machen können II}
 	\begin{lstlisting}[language=XML]
-	8—10 Pfund	<cue:recipeIngredient ref="#Rindkochfleisch" atLeast="8" atMost="10"	unit="Pfund">Rindfleisch</cue:recipeIngredient>
+	<...>
+	8-10 Pfund <cue:recipeIngredient ref="#Rindkochfleisch" atLeast="8" atMost="10" unit="Pfund">Rindfleisch</cue:recipeIngredient>
 	
 	VS
 	
-	<atLeast target="B-16-Rindfleisch">8</atLeast>—<atMost target="1">10</atMost> <unit target="B-16-Rindfleisch">Pfund</unit> <ingredient xml:id="B-16-Rindfleisch" ref="#Suppenrindfleisch">Rindfleisch</ingredient>
+	<atLeast target="B-16-Rindfleisch">8</atLeast>-<atMost target="1">10</atMost> <unit target="B-16-Rindfleisch">Pfund</unit> <recipeIngredient xml:id="B-16-Rindfleisch" ref="#Suppenrindfleisch">Rindfleisch</recipeIngredient>
 	\end{lstlisting}
 \end{frame}
 
@@ -172,14 +166,14 @@
 	\vspace{-0.7em}\begin{lstlisting}
 für			...	O
 24			... B-Yield
-—			... I-Yield
+-			... I-Yield
 30			... I-Yield
 Personen	...	O
 kräftige	... O
 Bouillon	... O
 von			...	O
 8			...	B-Quantity
-—			...	I-Quantity
+-			...	I-Quantity
 10			...	I-Quantity
 Pfund		...	B-Unit
 Rindfleisch	... B-Ingredient
@@ -200,6 +194,7 @@ gekocht		...	O
 		\item Mehr Rezepte labeln
 		\item Label-Engineering
 		\item Feature-Engineering
+		\item crfsuite besser verstehen
 		\item Skript um Zutatenliste zu extrahieren
 	\end{itemize}
 \end{frame}
