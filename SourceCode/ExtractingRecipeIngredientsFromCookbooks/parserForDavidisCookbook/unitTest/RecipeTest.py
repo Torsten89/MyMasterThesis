@@ -26,7 +26,7 @@ Madeira und auch Austern, wenn man sie haben kann."
 
         expectedResult=["Nachdem", "dies", "Alles", "¼", "Stunde", "gekocht", "hat", ",", "kommen", "noch", "Klöße", \
 "von", "Kalbfleisch", ",", "einige", "hart", "gekochte", "Eier", "in", "Würfel", "geschnitten", ",", "ein", "Paar", "Eßlöffel", \
-"Engl", ".", "Soja", "hinzu", ",", "und", "wenn", "die", "Klößchen", "einige", "Minuten", "gekocht", "haben", ",", "½", "Flasche", \
+"Engl.", "Soja", "hinzu", ",", "und", "wenn", "die", "Klößchen", "einige", "Minuten", "gekocht", "haben", ",", "½", "Flasche", \
 "Madeira", "und", "auch", "Austern", ",", "wenn", "man", "sie", "haben", "kann", "."]
         self.assertEqual(expectedResult, list(chunkSentence(sentence)))
         
@@ -51,6 +51,18 @@ und\ngibt\nheiße\nButter\ndazu\n."
         
     def testChunkRange(self):
         self.assertEqual(["für", "24", "—", "30"], list(chunkSentence("für 24—30")))
+        
+    def testChunkRangeWithSpaces(self):
+        self.assertEqual(["2½","—","3"], list(chunkSentence("2½ — 3")))
+        
+    def testChunkWithTrunc(self):
+        self.assertEqual(["Scorzoner-", ",", "einer", "Sellerie-", "und"], list(chunkSentence("Scorzoner-, einer Sellerie- und")))
+    
+    def testChunkWithBracketBeforDot(self):
+        self.assertEqual(["(", "Möhre", ")", "."], list(chunkSentence("(Möhre).")))
+        
+    def testChunkWithRecipeRef(self):
+        self.assertEqual(["A.", "No.", "12", "."], list(chunkSentence("A. No. 12.")))
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']

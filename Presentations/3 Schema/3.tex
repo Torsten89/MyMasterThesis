@@ -160,6 +160,7 @@ NOTIZ Kalbskopf einmal nicht getaggt
 	
 	<atLeast target="B-16-Rindfleisch">8</atLeast>-<atMost target="1">10</atMost> <unit target="B-16-Rindfleisch">Pfund</unit> <recipeIngredient xml:id="B-16-Rindfleisch" ref="#Suppenrindfleisch">Rindfleisch</recipeIngredient>
 	\end{lstlisting}
+	Notiz: für unit und quantity eigentlich auch ref oder basis form (Maß -> ? , eine -> 1)
 \end{frame}
 
 \begin{frame}[fragile]{Trainingsdaten}
@@ -191,11 +192,18 @@ gekocht		...	O
 
 \begin{frame}{Nächste Schritte}
 	\begin{itemize}
+		\item SCHMIERZETTEL
+		\item WE :)
 		\item Mehr Rezepte labeln
-		\item Label-Engineering
-		\item Feature-Engineering
+		\item Label-Engineering (Punctuation, Comment (geräucherte))
+		\item Feature-Engineering (PoS, Lemmas, isIngredient, isPunctuation...)
 		\item crfsuite besser verstehen
 		\item Skript um Zutatenliste zu extrahieren
+		\item Links, refs, altGrp, optional (über labels oder decision tree), cookTime
+		\item Tagger
+		\item Source Code review
+		\vspace{1em}
+		\item Webseite
 	\end{itemize}
 \end{frame}
 	

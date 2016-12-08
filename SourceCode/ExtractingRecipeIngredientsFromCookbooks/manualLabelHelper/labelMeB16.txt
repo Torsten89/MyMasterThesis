@@ -6,14 +6,14 @@ Suppe	O
 Es	O
 wird	O
 hierzu	O
-für		O
-24		B-Yield
-—		I-Yield
-30		I-Yield
+für	O
+24	B-Yield
+—	I-Yield
+30	I-Yield
 Personen	O
 eine	O
 kräftige	O
-Bouillon	O
+Bouillon	B-Ingredient
 von	O
 8	B-Quantity
 —	I-Quantity
@@ -25,207 +25,205 @@ Wurzelwerk	B-Ingredient
 gekocht	O
 .	O
 
-Zugleich
-bringt
-man
-einen
-großen
-Kalbskopf
-,
-eine
-Schweineschnauze
-und
-Ohren
-,
-einen
-Ochsengaumen
-und
-eine
-geräucherte
-Ochsenzunge
-zu
-Feuer
-und
-kocht
-dies
-Alles
-gahr
-,
-aber
-nicht
-zu
-weich
-.
+Zugleich	O
+bringt	O
+man	O
+einen	B-Quantity
+großen	O
+Kalbskopf	B-Ingredient
+,	O
+eine	B-Quantity
+Schweineschnauze	B-Ingredient
+und	O
+Ohren	B-Ingredient
+,	O
+einen	B-Quantity
+Ochsengaumen	B-Ingredient
+und	O
+eine	B-Quantity
+geräucherte	O
+Ochsenzunge	B-Ingredient
+zu	O
+Feuer	O
+und	O
+kocht	O
+dies	O
+Alles	O
+gahr	O
+,	O
+aber	O
+nicht	O
+zu	O
+weich	O
+.	O
 
-Kalt
-,
-schneidet
-man
-es
-in
-kleine
-,
-länglich
-viereckige
-Stückchen
-,
-gibt
-das
-Fleisch
-in
-die
-Bouillon
-,
-nebst
-braunem
-Gewürz
-,
-ein
-Paar
-Messerspitzen
-Cayenne-Pfeffer
-,
-einige
-Kalbsmidder
-in
-Stückchen
-geschnitten
-(
-siehe
-Vorbereitungsregeln
-)
-,
-kleine
-Saucissen
-,
-so
-viel
-Kalbskopfbrühe
-,
-daß
-man
-hinreichend
-Suppe
-hat
-,
-und
-macht
-dies
-mit
-in
-Butter
-braun
-gemachtem
-Mehl
-gebunden
-.
+Kalt	O
+,	O
+schneidet	O
+man	O
+es	O
+in	O
+kleine	O
+,	O
+länglich	O
+viereckige	O
+Stückchen	O
+,	O
+gibt	O
+das	O
+Fleisch	B-Ingredient
+in	O
+die	O
+Bouillon	B-Ingredient
+,	O
+nebst	O
+braunem	B-Ingredient
+Gewürz	I-Ingredient
+,	O
+ein	B-Quantity
+Paar	I-Quantity
+Messerspitzen	B-Unit
+Cayenne-Pfeffer	B-Ingredient
+,	O
+einige	B-Quantity
+Kalbsmidder	B-Ingredient
+in	O
+Stückchen	O
+geschnitten	O
+(	B-Link
+siehe	I-Link
+Vorbereitungsregeln	I-Link
+)	I-Link
+,	O
+kleine	O
+Saucissen	B-Ingredient
+,	O
+so	O
+viel	O
+Kalbskopfbrühe	O
+,	O
+daß	O
+man	O
+hinreichend	O
+Suppe	O
+hat	O
+,	O
+und	O
+macht	O
+dies	O
+mit	O
+in	O
+Butter	B-Ingredient
+braun	O
+gemachtem	O
+Mehl	B-Ingredient
+gebunden	O
+.	O
 
-Nachdem
-dies
-Alles
-¼
-Stunde
-gekocht
-hat
-,
-kommen
-noch
-Klöße
-von
-Kalbfleisch
-,
-einige
-hart
-gekochte
-Eier
-in
-Würfel
-geschnitten
-,
-ein
-Paar
-Eßlöffel
-Engl
-.
+Nachdem	O
+dies	O
+Alles	O
+¼	O
+Stunde	O
+gekocht	O
+hat	O
+,	O
+kommen	O
+noch	O
+Klöße	B-Ingredient
+von	I-Ingredient
+Kalbfleisch	I-Ingredient
+,	O
+einige	B-Quantity
+hart	O
+gekochte	O
+Eier	B-Ingredient
+in	O
+Würfel	O
+geschnitten	O
+,	O
+ein	B-Quantity
+Paar	I-Quantity
+Eßlöffel	B-Unit
+Engl.	B-Ingredient
+Soja	I-Ingredient
+hinzu	O
+,	O
+und	O
+wenn	O
+die	O
+Klößchen	B-Ingredient
+einige	O
+Minuten	O
+gekocht	O
+haben	O
+,	O
+½	B-Quantity
+Flasche	B-Unit
+Madeira	B-Ingredient
+und	O
+auch	O
+Austern	B-Ingredient
+,	O
+wenn	O
+man	O
+sie	O
+haben	O
+kann	O
+.	O
 
-Soja
-hinzu
-,
-und
-wenn
-die
-Klößchen
-einige
-Minuten
-gekocht
-haben
-,
-½
-Flasche
-Madeira
-und
-auch
-Austern
-,
-wenn
-man
-sie
-haben
-kann
-.
+Dann	O
+wird	O
+die	O
+Suppe	O
+sogleich	O
+angerichtet	O
+.	O
 
-Dann
-wird
-die
-Suppe
-sogleich
-angerichtet
-.
+Anmerk	O
+.	O
 
-Anmerk
-.
+Der	O
+Soja	B-Ingredient
+macht	O
+die	O
+Suppe	O
+gewürzreicher	O
+,	O
+kann	O
+jedoch	O
+gut	O
+wegbleiben	O
+,	O
+und	O
+statt	O
+Madeira	B-Ingredient
+kann	O
+man	O
+weißen	B-Ingredient
+Franzwein	I-Ingredient
+und	O
+etwas	B-Quantity
+Rum	B-Ingredient
+nehmen	O
+.	O
 
-Der
-Soja
-macht
-die
-Suppe
-gewürzreicher
-,
-kann
-jedoch
-gut
-wegbleiben
-,
-und
-statt
-Madeira
-kann
-man
-weißen
-Franzwein
-und
-etwas
-Rum
-nehmen
-.
-
-Sowohl
-die
-Bouillon
-als
-Kalbskopf
-können
-schon
-am
-vorhergehenden
-Tage
-,
-ohne
-Nachtheil
-der
-Suppe
-,
-gekocht
-werden
-.
+Sowohl	O
+die	O
+Bouillon	B-Ingredient
+als	O
+Kalbskopf	B-Ingredient
+können	O
+schon	O
+am	O
+vorhergehenden	O
+Tage	O
+,	O
+ohne	O
+Nachtheil	O
+der	O
+Suppe	O
+,	O
+gekocht	O
+werden	O
+.	O

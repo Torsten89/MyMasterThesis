@@ -1,5 +1,8 @@
 import crfsuite
 
+# swig and yield does not work
+# (see https://github.com/swig/swig/issues/559)
+
 if __name__ == '__main__':
     tagger = crfsuite.Tagger()
     tagger.open("lillteExample.model")
