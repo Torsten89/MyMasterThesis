@@ -1,6 +1,0 @@
-Mangelnde Masse an Lerndaten im Vergleich zu NYT mit guten Features wegmachen :P
-
-isCapitalized
-isIngredient
-posTag (mit nltk?)-
-isFraction/Number (1 1/2 -> 1$1/2 damit ein Token)

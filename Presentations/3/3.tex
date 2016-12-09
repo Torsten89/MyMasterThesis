@@ -44,6 +44,9 @@
 \newcommand*\longs{{\fontencoding{TS1}\selectfont s}}
 \newunicodechar{ſ}{\longs}
 \usepackage{listings}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
 \lstset{
 	captionpos=b,
 	frame=single,
@@ -60,7 +63,15 @@
 		{~}{{\textasciitilde}}1,
 	tabsize=4,
 	aboveskip=4pt,
-	belowskip=6pt
+	belowskip=6pt,
+	backgroundcolor=\color{white},   % choose the background color
+	basicstyle=\footnotesize,        % size of fonts used for the code
+	breaklines=true,                 % automatic line breaking only at whitespace
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	keywordstyle=\color{blue},       % keyword style
+	stringstyle=\color{mymauve},     % string literal style
 }
 \definecolor{maroon}{rgb}{0.5,0,0}
 \definecolor{darkgreen}{rgb}{0,0.5,0}
@@ -91,7 +102,7 @@
 			\vspace{-1.5cm}
 			\Large{Extracting recipe ingredients \\ from cookbooks} \\
 			\vspace{0.5cm}
-			\large{Irrlichter} \\
+			\large{Heraus aus dem Sumpf} \\
 			\small{von \\ \vspace{-0.1cm} Torsten Knauf}
 		\end{center}
 	\end{minipage}
@@ -124,7 +135,6 @@
 
 
 \begin{frame}[fragile]{Beispiel cueML}
-NOTIZ Kalbskopf einmal nicht getaggt
 	\begin{lstlisting}[language=XML]
 <cue:recipe type="Suppen." rcp-id="B-16">
 	<head>Mock Turtle Suppe.</head>
@@ -146,7 +156,7 @@ NOTIZ Kalbskopf einmal nicht getaggt
 	und statt <recipeIngredient ref="#Madeira" xml:id="B-16-Madeira">Madeira</recipeIngredient> kann man <recipeIngredient ref="weißen_Franzwein" xml:id="B-16-Franzwein">weißen Franzwein</recipeIngredient> und etwas <recipeIngredient ref="#Rum" xml:id="B-16-Rum">Rum</recipeIngredient> nehmen. Sowohl die Bouillon als Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden.
 	
 	<recipeIngredientGrp xml:id="B-16-alt1" target="#B-16-Madeira"/>
-	<recipeIngredient xml:id="B-16-alt2" target="#B-16-Franzwein #B-16-Rum"/>
+	<recipeIngredientGrp xml:id="B-16-alt2" target="#B-16-Franzwein #B-16-Rum"/>
 	<alt target="#B-16-alt1 #B-16-alt2" mode="excl"/>
 	\end{lstlisting}
 \end{frame}
@@ -158,12 +168,18 @@ NOTIZ Kalbskopf einmal nicht getaggt
 	
 	VS
 	
-	<atLeast target="B-16-Rindfleisch">8</atLeast>-<atMost target="1">10</atMost> <unit target="B-16-Rindfleisch">Pfund</unit> <recipeIngredient xml:id="B-16-Rindfleisch" ref="#Suppenrindfleisch">Rindfleisch</recipeIngredient>
+	<atLeast target="#B-16-Rindfleisch">8</atLeast>-<atMost target="#B-16-Rindfleisch">10</atMost> <unit target="#B-16-Rindfleisch">Pfund</unit> <recipeIngredient xml:id="B-16-Rindfleisch" ref="#Suppenrindfleisch">Rindfleisch</recipeIngredient>
 	\end{lstlisting}
-	Notiz: für unit und quantity eigentlich auch ref oder basis form (Maß -> ? , eine -> 1)
+	
+	\begin{center}
+		\textcolor{red}{\Large{$\lightning$}}
+	\end{center}
+	Für Quantity Attribut \textit{ref="EINS"} für eine \\
+	Für Unit Attribut \textit{ref="MaßDef"} für Maß
 \end{frame}
 
-\begin{frame}[fragile]{Trainingsdaten}
+
+\begin{frame}[fragile]{1. CRF Prototyp :)}
 	\vspace{-0.7em}\begin{lstlisting}
 für			...	O
 24			... B-Yield
@@ -185,31 +201,84 @@ gekocht		...	O
 	\end{lstlisting}
 \end{frame}	
 
-\begin{frame}{Ergebnis vom Prototyp}
-	wort | wahrheit | getaggt
+\begin{frame}
+	\includegraphics[scale=0.9]{Images/crfPrototypTagging}
 \end{frame}
 
+\begin{frame}
+	\includegraphics[scale=0.9]{Images/crfPrototypUnterschiede}
+\end{frame}
 
-\begin{frame}{Nächste Schritte}
+\begin{frame}{Was noch fehlt}
 	\begin{itemize}
-		\item SCHMIERZETTEL
-		\item WE :)
-		\item Mehr Rezepte labeln
-		\item Label-Engineering (Punctuation, Comment (geräucherte))
-		\item Feature-Engineering (PoS, Lemmas, isIngredient, isPunctuation...)
-		\item crfsuite besser verstehen
-		\item Skript um Zutatenliste zu extrahieren
-		\item Links, refs, altGrp, optional (über labels oder decision tree), cookTime
-		\item Tagger
-		\item Source Code review
-		\vspace{1em}
-		\item Webseite
+		\item \textcolor{blue}{$\lightning$ \textit{optional="True"}}
+		
+		\item \textcolor{blue}{$\lightning$ \textit{altGrp="x"}}
+		
+		\item "Das Kalbfleisch wie in No. 1, nach der Personenzahl, doch etwas reichlicher genommen, da solches weniger Kraft gibt, als Rindfleisch." \textcolor{blue}{$\lightning$ \large\textit{dontUse="True"}}
+		
+		\item[\Large$\Rightarrow$] Label \& Feature Engineering
+		\begin{itemize}
+			\item Neue Labels: OptionalIngredient, AlternativeIngredient, DontUseIngredient
+			\item Features: w[-1], w[-2], w[1], w[2], ...
+			\item Noch mehr Labels und bigram-Features: "statt"/"oder" $\rightarrow$ IndicatorForAlternativeIngredient, "kann" $\rightarrow$ IndicatorForOptionalIngredient, ... 
+		\end{itemize}
 	\end{itemize}
 \end{frame}
+
+\begin{frame}{Was dann noch immer fehlt}
+	\begin{itemize}
+		\item ist altGrp \textcolor{blue}{$\lightning$ \textit{aber altGrp $\overset{!}{=}$ x}}
+		
+		\item "Rindfleischsuppe [...] das Fleisch" \textcolor{blue}{$\lightning$ \textit{implizite Informationen; ref $\overset{!}{=}$ x}}
+		
+		\item "8-10 Pfund Rindfleisch" $\rightarrow$ "B-Quantity O B-Quantity B-Unit B-Ingredient" \textcolor{blue}{$\lightning$ \textit{Zuordnung von Unit und Quantity}}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Ist CRF überhaupt der richtige Ansatz? :/}
+	\begin{itemize}
+		\item NYT betrachten nur Zeilen aus Zutatenliste \& hatten bereits über 130.000 gelabelte Trainingsdaten
+		\item Labeln ist sehr aufwändig (10 Rezepte $\rightarrow$ 1514 Zeilen $\rightarrow$ 1514/60*3 $\rightarrow$ ca. 1.5h bis zu 3h)
+		\item Wie gut wird das CRF sein?
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Alternativer Ansatz}
+	\begin{enumerate}
+		\item Lemmatisierung
+		\item Dictionary-based Extraktion von Ingredients, Quantities, Units
+		\item Rule-based Entity Weiterverarbeitung
+		\begin{lstlisting}[language=Python]
+if "kann" in sentence:
+	# add "optional='True'" to Ingredient
+
+if "statt" in sentence:
+	# add "altGrp='id1'" to first ingredient
+	# add "altGrp='id2'" to following ingredients  
 	
-\section{}
-\begin{frame}[t,allowframebreaks]{Literaturverzeichnis}
-	\printbibliography[heading=none]
+if ingredient == "Fleisch" and
+		recipe.Name.find("Rind") != -1:
+	# ingredient = Rindfleisch
+if ingredient == "Rindfleisch" and
+		recipe.rcpId == "Suppe":
+	# ingredient = Suppenrindfleisch
+		\end{lstlisting}
+	\end{enumerate}
+\end{frame}
+	
+\begin{frame}
+	\begin{minipage}{0.2\textwidth}
+		\begin{center} \Large
+			Ende\\
+			Der \\
+			Präsentation
+		\end{center}			
+	\end{minipage}
+	\begin{minipage}{0.65\textwidth}
+		\hspace{2cm}\includegraphics[scale=0.7]{Images/Recipes-are-like-a-dating-service}
+	\end{minipage}
 \end{frame}
 
 \end{document}

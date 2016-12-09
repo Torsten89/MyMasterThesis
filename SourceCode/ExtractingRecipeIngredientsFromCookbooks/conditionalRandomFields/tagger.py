@@ -38,11 +38,11 @@ if __name__ == '__main__':
     # flatten all words to one list
     words = [word for sentence in labelledChunks for word, label in sentence]
     
-    diffPositions = [i for i in range(len(words)) if taggedLabels[i] != realLabels[i]]
-    for i in range(len(diffPositions)):
-        print("{:20}{:20}{}".format(realLabels[diffPositions[i]], taggedLabels[diffPositions[i]], words[diffPositions[i]]))
-    print("Insgesamt {} Wörter, {} labels != 'O' und {} Unterschiede".format(len(words), len([1 for label in realLabels if label!="O"]), len(diffPositions)))
-    
-#     for i in range(len(words)):
-#         print("{:20}{:20}{}".format(realLabels[i], tagedLabels[i], words[i]))
+#     diffPositions = [i for i in range(len(words)) if taggedLabels[i] != realLabels[i]]
+#     for i in range(len(diffPositions)):
+#         print("{:20}{:20}{}".format(realLabels[diffPositions[i]], taggedLabels[diffPositions[i]], words[diffPositions[i]]))
+#     print("Insgesamt {} Wörter, {} labels != 'O' und {} Unterschiede".format(len(words), len([1 for label in realLabels if label!="O"]), len(diffPositions)))
+
+    for i in range(len(words)):
+        print("{:20}{:20}{}".format(realLabels[i], taggedLabels[i], words[i]))
     

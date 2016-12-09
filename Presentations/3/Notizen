@@ -1,0 +1,16 @@
+- Man kann auf viele unterschiedliche Art und Weisen taggen!! (nicht einmal exakt definieren wie in Mathe)
+- Kalbkopf nur einmal getaggt
+- quantity ins tag reinziehen <ing>8-10Pfund Fleisch</ing> doof wegen "eine fein geschnittene Zwiebel",
+	"Man rechnet, wenn die Gesellschaft klein ist, auf jede Person ¾ Pfund, bei einer großen Gesellschaft ½ Pfund Fleisch."
+	-> sehr unterschiedlicher Content of tag
+
+- manuell labeln länger als "korrektes Schema"
+
+- CRF: NYT nur ingredients phrases aus Zutatenliste -> Andere Ausgangsposition
+	- manuelle Labeln sehr aufwändig (2-3h für die 10 Rezepte)
+	- Güte von CRF?
+		- Unstruktorierter Fließtext - viele "O"
+		- "Rum" mal Ingredient, OptionalIngredient, AlternativeIngredient
+
+- Rule-based:
+	- viel schneller zu entwickeln
