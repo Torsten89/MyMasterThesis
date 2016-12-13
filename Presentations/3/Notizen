@@ -1,3 +1,5 @@
+Feedback am Ende
+
 - Man kann auf viele unterschiedliche Art und Weisen taggen!! (nicht einmal exakt definieren wie in Mathe)
 - Kalbkopf nur einmal getaggt
 - quantity ins tag reinziehen <ing>8-10Pfund Fleisch</ing> doof wegen "eine fein geschnittene Zwiebel",
@@ -6,11 +8,20 @@
 
 - manuell labeln länger als "korrektes Schema"
 
+Brainstorming CRF gegen Rule-based:
+- 8-10 Feature, Labels vs Nachprocessing:
+	- yield oder atLeast/atMost?	-> Features	-> bläht CRF sehr auf, aber dafür nicht auf ausgesuchte Key-Wörter beschränkt (Spargel oder Blumenkohl, je nachdem was die Jahreszeit so bieten) - da würde Stichwort "kann" versagen, aber ist Sprache von Kochbuch A und B vergleichbar oder hat man die Universialität eh nicht?
+
+	- B-Q, I-Q, I-Q und (if "-" in Q-Term)	
+	- (if "kann" in sentence optional="True") 
+
 - CRF: NYT nur ingredients phrases aus Zutatenliste -> Andere Ausgangsposition
 	- manuelle Labeln sehr aufwändig (2-3h für die 10 Rezepte)
 	- Güte von CRF?
 		- Unstruktorierter Fließtext - viele "O"
 		- "Rum" mal Ingredient, OptionalIngredient, AlternativeIngredient
+		
+Link:
+	- B-2
+	- Wie die vorherige
 
-- Rule-based:
-	- viel schneller zu entwickeln

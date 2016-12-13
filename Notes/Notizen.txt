@@ -3,7 +3,6 @@ Vereinfachungen:
 	  "wie in No. 1" (B-6)
 	- Alternative von Ingredients (B-6 Griesmehl oder Mehl)
 	- Optionale Ingredients (B-6 Spargel oder Blumenkohl, was die Jahreszeit hat, jedoch vorher eben abgekocht, und 10 Minuten vor dem Anrichten Fleisch- oder andere beliebige Klöße darin gahr kochen)
-	- Keine Infos aus Allg. Vorteil eines Kapitels (Reis 15g pro Suppe)
 	- <Note> Ignorieren
 	
 Annahmen:
@@ -31,4 +30,3 @@ Schema:
 	
 BLS:
 	- Rindfleisch
-	- in ingredientDef sowas wie notes für Wurzelwerk?

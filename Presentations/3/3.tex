@@ -174,8 +174,8 @@
 	\begin{center}
 		\textcolor{red}{\Large{$\lightning$}}
 	\end{center}
-	Für Quantity Attribut \textit{ref="EINS"} für eine \\
-	Für Unit Attribut \textit{ref="MaßDef"} für Maß
+	Für quantity-Attribut \textit{ref="\#EINS"} für \textit{eine} \\
+	Für unit-Attribut \textit{ref="\#MaßDef"} für \textit{Maß}
 \end{frame}
 
 
@@ -249,7 +249,7 @@ gekocht		...	O
 	\begin{enumerate}
 		\item Lemmatisierung
 		\item Dictionary-based Extraktion von Ingredients, Quantities, Units
-		\item Rule-based Entity Weiterverarbeitung
+		\item Rule-based Entity Processing
 		\begin{lstlisting}[language=Python]
 if "kann" in sentence:
 	# add "optional='True'" to Ingredient
@@ -267,13 +267,30 @@ if ingredient == "Rindfleisch" and
 		\end{lstlisting}
 	\end{enumerate}
 \end{frame}
+
+
+\begin{frame}{Brainstorming CRF vs. Rule-based Entity Processing}
+	\begin{itemize}
+		\item 8-10
+		\item optional Ingredient
+		\vspace{0.5cm}
+		\item Link target?
+		\item Zuordnungen von altGrps, Quantity / Unit / Ingredients nicht via CRF
+		\item Rule-based schneller zu entwickeln und gezielter Testbar / anpassbar (Feature Labels verändern -> ?, Rules ändern -> Unit tests :) )
+	\end{itemize}
+\end{frame}
+
 	
 \begin{frame}
 	\begin{minipage}{0.2\textwidth}
 		\begin{center} \Large
-			Ende\\
-			Der \\
-			Präsentation
+			Happy\\
+			about\\
+			ALL\\
+			kind\\
+			of\\
+			feedback\\
+			!!!
 		\end{center}			
 	\end{minipage}
 	\begin{minipage}{0.65\textwidth}
