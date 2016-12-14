@@ -1,6 +1,6 @@
 from parserForDavidisCookbook.Recipe import Recipe
 
-recipeTagName = "cue:recipe"
+rcpTagName = "cue:recipe"
 rcpIdTagName = "rcp-id"
 typeTagName = "type"
 
@@ -30,19 +30,22 @@ class XmlParser(object):
         self.dom = dom
 
     def getRecipes(self, rcpIds=[]):
-        withAttris = {} if not rcpIds else {"rcp-id":rcpIds}
-        for xmlRecipe in self.getElems(recipeTagName, withAttris):
+        """ When rcpIds is an empty list, all recipes will be parsed.
+            Otherwise only recipes, which have a in rcpIds specified rcp-id.
+        """ 
+        withAttris = {} if not rcpIds else {rcpIdTagName:rcpIds}
+        for xmlRecipe in self.getElems(rcpTagName, withAttris):
             yield self.parseRecipe(xmlRecipe)
     
     def parseRecipe(self, xmlRecipe):
         rcpId = xmlRecipe.attributes[rcpIdTagName].value
-        recipeType = xmlRecipe.attributes[typeTagName].value[:-1]  # remove . at the end
-        head = self.getAllChildText(xmlRecipe.getElementsByTagName("head")[0])[:-1]  # remove . at the end
-        instructions = self.getInstructions(xmlRecipe, head)
+        rcpType = xmlRecipe.attributes[typeTagName].value[:-1]  # remove . at the end
+        name = self.getAllChildText(xmlRecipe.getElementsByTagName("head")[0])[:-1]  # remove . at the end
+        instructions = self.getInstructions(xmlRecipe)
         
-        return Recipe(rcpId, recipeType, head, instructions)
+        return Recipe(rcpId, rcpType, name, instructions)
     
-    def getInstructions(self, xmlRecipe, head):
+    def getInstructions(self, xmlRecipe):
         return "\n".join([self.getAllChildText(p) for p in xmlRecipe.getElementsByTagName("p")] \
             + [self.getAllChildText(note) for note in xmlRecipe.getElementsByTagName("note")] \
         )
@@ -56,8 +59,8 @@ class XmlParser(object):
         """
         for elem in self.dom.getElementsByTagName(elemName):
             hasAllAttris = True
-            for k, v in withAttris.items():
-                if elem.attributes[k].value not in v:
+            for k, possibleValues in withAttris.items():
+                if elem.attributes[k].value not in possibleValues:
                     hasAllAttris = False
                     break
             if hasAllAttris:

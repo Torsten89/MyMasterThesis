@@ -1,18 +1,20 @@
-labels = ["O",
+labels = ("O",
           "B-Ingredient", "I-Ingredient", 
           "B-Quantity", "I-Quantity",
           "B-Unit", "I-Unit",
           "B-Link", "I-Link",
           "B-Yield", "I-Yield",
           "B-CookTime", "I-CookTime",
-          "B-IngredientYield", "I-IngredientYield"]
+          "B-IngredientYield", "I-IngredientYield")
 
 def getLabelledChunksFromFile(pathToFile):
     """ yields per sentence from file [(word1, label1), (word2, label2), ... ]
     """
     with open(pathToFile, "r") as f:
         labelsOfSentence = []
+        lineNumber = 0 # for finding the error,  when an exception is thrown
         for line in f.read().splitlines():
+            lineNumber += 1
             if not line: # empty line indicates end of sentence
                 yield labelsOfSentence
                 labelsOfSentence = []
@@ -24,9 +26,9 @@ def getLabelledChunksFromFile(pathToFile):
                 try:
                     word, label = line.split("\t")
                 except ValueError:
-                    raise ValueError("in: '{}'".format(line))
+                    raise ValueError("in lineNumber: {}".format(lineNumber))
                 if label not in labels:
-                    raise Exception("{} is not an allowed label".format(label))
+                    raise Exception("'{}' is not an allowed label".format(label))
                 labelsOfSentence.append((word, label))
                 
 

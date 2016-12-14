@@ -53,7 +53,7 @@ class XmlParserTest(unittest.TestCase):
     def testRecipeB49(self):
         dom = createCueMLDom([getRecipeB49()])
         recipe = XmlParser(dom).getRecipes().__next__()
-        self.assertEqual("Suppen", recipe.recipeType)
+        self.assertEqual("Suppen", recipe.rcpType)
         self.assertEqual("B-49", recipe.rcpId)
         self.assertEqual("Suppe von feiner Gerste (Graupen)", recipe.name)
         self.assertEqual("Suppe von feiner Gerste (Graupen)", recipe.name)
@@ -66,7 +66,7 @@ darin fehlen." \
     def testRecipeB2(self):
         dom = createCueMLDom([getRecipeB2()])
         recipe = XmlParser(dom).getRecipes().__next__()
-        self.assertEqual("Suppen", recipe.recipeType)
+        self.assertEqual("Suppen", recipe.rcpType)
         self.assertEqual("B-2", recipe.rcpId)
         self.assertEqual("Wird gekocht wie die vorhergehende, nur mit der Abänderung, daß, wenn die Brühe durch \
 ein Haarsieb geschüttet ist, man verhältnißmäßig 1—2 Eßlöffel voll Mehl mit frischer \

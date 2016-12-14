@@ -10,11 +10,11 @@ class Trainer(crfsuite.Trainer):
     def message(self, s):
         sys.stdout.write(s)
 
-    def readModelParameter(self, parameter):
-        """ Parameter is a iterator over sentences.
-            Each sentence is a list of the form [(word1, label1), (word2, label2), ...]
+    def readModelParameter(self, trainingsData):
+        """ trainingsData is a iterator over sentences.
+            Each sentence is currently a list of the form [(word1, label1), (word2, label2), ...]
         """
-        for sentence in parameter:
+        for sentence in trainingsData:
             labelSeq = crfsuite.StringList()
             featureSeq = crfsuite.ItemSequence()
             

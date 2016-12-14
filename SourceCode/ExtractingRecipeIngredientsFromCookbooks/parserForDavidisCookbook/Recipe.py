@@ -1,8 +1,7 @@
 import string
-import chunk
 
-shortenings = ["Nro.", "No.", "A.", "Engl."]
-punctuation = string.punctuation.replace("-", "")
+shortenings = ["Nro.", "No.", "Engl."] + [chapterNumber+"." for chapterNumber in string.ascii_uppercase[:-3]]
+punctuation = string.punctuation.replace("-", "") # e.g don't split Kartoffel-Klöße as two chunks
   
 
 def chunkInstructions(instructions):
@@ -32,7 +31,7 @@ def chunkSentence(sentence):
     for word in sentence.split():
         tokens = []
         
-        if word[0] in punctuation:
+        if word[0] in punctuation: # e.g. (siehe Vorbereitungsregeln)
             tokens.append(word[0])
             word = word[1:]
             
@@ -42,24 +41,26 @@ def chunkSentence(sentence):
             yield "—"
             word = parts[1]
             
-        if word and word[-1] in punctuation and word not in shortenings:
-            if word[-2] in punctuation: # (Möhren).
-                tokens += [word[:-2], word[-2], word[-1]]
+        if word:
+            if word[-1] in punctuation and word not in shortenings:
+                if len(word)>1 and word[-2] in punctuation: # Möhren).
+                    tokens += [word[:-2], word[-2], word[-1]]
+                else:
+                    tokens += [word[:-1], word[-1]]
             else:
-                tokens += [word[:-1], word[-1]]
-        elif word:
-            tokens.append(word)
+                tokens.append(word)
             
         for token in tokens:
             yield token
 
+
 class Recipe(object):
 
-    def __init__(self, rcpId, recipeType, name, instructions,
+    def __init__(self, rcpId, rcpType, name, instructions,
                  ingredients=None, optionalIngredients=None, alternativeIngredients=None,
-                 totalTime=None, cookTime=None):
-        self.recipeType = recipeType
+                 totalTime=None, cookTime=None, rcpYield=None):
         self.rcpId = rcpId
+        self.rcpType = rcpType
         self.name = name
         self.instructions = instructions
 
@@ -68,6 +69,7 @@ class Recipe(object):
         self.alternativeIngredients = alternativeIngredients
         self.totalTime = totalTime
         self.cookTime = cookTime
+        self.rcpYield = rcpYield
         
     def chunksWithNewlines(self):
         for c in chunkSentence(self.name):

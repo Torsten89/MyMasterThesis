@@ -5,7 +5,7 @@ def tagChunkedSentences(chunkedSentences, pathToModel):
     """ Each sentence is an iterator over its chunks
     """
     
-    # swig (python interface for C) and yield does not work
+    # swig (python interface for C) and yield/generator does not work
     # (see https://github.com/swig/swig/issues/559 and https://docs.python.org/3/library/exceptions.html#StopIteration )
     # Therefore collect labels in labelsOfSentences; each sentence produces a tuple of labels
     labelsOfSentences=[]
@@ -14,7 +14,7 @@ def tagChunkedSentences(chunkedSentences, pathToModel):
     tagger.open(pathToModel)
     
     for chunkedSentence in chunkedSentences:
-        featureSeq = crfsuite.ItemSequence()
+        featureSeq = crfsuite.ItemSequence() # all features of one word
         
         for chunk in chunkedSentence:
             features = crfsuite.Item()
