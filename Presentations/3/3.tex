@@ -168,7 +168,7 @@
 	
 	VS
 	
-	<atLeast target="#B-16-Rindfleisch">8</atLeast>-<atMost target="#B-16-Rindfleisch">10</atMost> <unit target="#B-16-Rindfleisch">Pfund</unit> <recipeIngredient xml:id="B-16-Rindfleisch" ref="#Suppenrindfleisch">Rindfleisch</recipeIngredient>
+	<atLeast target="#Suppenrindfleisch">8</atLeast>-<atMost target="#Suppenrindfleisch">10</atMost> <unit target="#Suppenrindfleisch">Pfund</unit> <recipeIngredient ref="#Suppenrindfleisch">Rindfleisch</recipeIngredient>
 	\end{lstlisting}
 	
 	\begin{center}
@@ -185,7 +185,7 @@ für			...	O
 24			... B-Yield
 -			... I-Yield
 30			... I-Yield
-Personen	...	O
+Personen	...	I-Yield
 kräftige	... O
 Bouillon	... O
 von			...	O
@@ -278,7 +278,7 @@ if ingredient == "Rindfleisch" and
 		\vspace{0.5cm}
 		\item Link target?
 		\item Zuordnungen von altGrps, Quantity / Unit / Ingredients nicht via CRF
-		\item Rule-based schneller zu entwickeln und gezielter Testbar / anpassbar (Feature Labels verändern -> ?, Rules ändern -> Unit tests :) )
+		\item Rule-based schneller zu entwickeln und gezielter testbar / steuerbar (Feature, Labels, Trainingsdaten -> ?, Rules ändern -> Unit tests :) )
 	\end{itemize}
 \end{frame}
 
