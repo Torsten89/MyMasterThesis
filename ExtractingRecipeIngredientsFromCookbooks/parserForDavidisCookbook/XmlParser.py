@@ -7,25 +7,7 @@ rcpIdTagName = "rcp-id"
 class XmlParser(object):
 
     def __init__(self, dom):
-        ''' 
-            It is assumed that the XML has the following TEI-format:
-        
-            <TEI>
-                <teiHeader>...</teiHeader>
-                <text>
-                    <body>
-                        <cue:recipe type="Suppen." rcp-id="B-8">
-                            <head>Suppe von Midder (Kalbsmilch).</head>
-                            
-                            <p> Das Midderwird nach A. No. 16 vorgerichtet, in kleine Würfel geschnitten und...</p>
-                       </cue:recipe>
-                       <cue:recipe>...</cue:recipe>
-                       .
-                       .
-                       .
-                    </body>
-                </text>
-            </TEI>
+        ''' It is assumed that the XML is valid against cueML
         '''
         self.dom = dom
 
