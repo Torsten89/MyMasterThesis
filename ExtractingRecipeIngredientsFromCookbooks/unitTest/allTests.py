@@ -1,5 +1,5 @@
 import unittest
-from parserForDavidisCookbook.unitTest.RecipeTest import RecipeTest
+from recipeModel.unitTest.RecipeTest import RecipeTest
 from parserForDavidisCookbook.unitTest.XmlParserTest import XmlParserTest
 
 def getTests():

@@ -54,29 +54,69 @@ def chunkSentence(sentence):
             yield token
 
 
-class Recipe(object):
+class Recipe:
 
     def __init__(self, rcpId, rcpType, name, instructions,
-                 ingredients=None, optionalIngredients=None, alternativeIngredients=None,
-                 totalTime=None, cookTime=None, rcpYield=None):
+                 ingredients={}, optIngredients={}, altIngredients={},
+                 totalTime=[], cookTime=[], rcpYield=None, refs=[], alts=[]):
         self.rcpId = rcpId
         self.rcpType = rcpType
         self.name = name
         self.instructions = instructions
 
         self.ingredients = ingredients        
-        self.optionalIngredients = optionalIngredients
-        self.alternativeIngredients = alternativeIngredients
+        self.optIngredients = optIngredients
+        self.altIngredients = altIngredients
         self.totalTime = totalTime
         self.cookTime = cookTime
         self.rcpYield = rcpYield
+        self.refs = refs
+        self.alts = alts
         
-    def chunksWithNewlines(self):
+    def chunkRecipeForManualTagging(self):
+        """Yields each word of the recipe separated by a new line
+        """
         for c in chunkSentence(self.name):
             yield "{}\n".format(c)
         yield "\n"
         for c in chunkInstructions(self.instructions):
             yield c 
         yield "\n"   
+        
+    def mergeIngredients(self):
+        for ref, optIng in self.optIngredients.items():
+            if ref in self.ingredients:
+                self.optIngredients[ref] = self.ingredients[ref] #  assuming first entry provides more information
+                del self.ingredients[ref]
+                
+        for ref, altIng in self.altIngredients.items():
+            if ref in self.ingredients:
+                self.ingredients[ref].altGrp = self.altIngredients[ref].altGrp # copy altGrp if not already present
+                self.altIngredients[ref] = self.ingredients[ref] # assuming first entry provides more information
+                del self.ingredients[ref]
+                
+    def __str__(self):
+        result = self.name + "\n\nZutaten:\n"
+        
+        for ing in self.ingredients.values():
+            result += "{}\n".format(str(ing))
+        
+        result += "\nOptionale Zutaten:\n"
+        for ing in self.optIngredients.values():
+            result += "{}\n".format(str(ing))
+        
+        result += "\nAlternative Zutaten:\n"
+        alts = {}
+        for ing in self.altIngredients.values():
+            altGrp = ing.altGrp
+            if not altGrp in alts: alts[altGrp]=[ing]
+            else: alts[altGrp].append(ing)
+        for alt in self.alts:
+            altIs = [" und ".join([str(ing) for ing in alts[i]]) for i in alt]
+            result += ", oder ".join(altIs)
+            
+        return result
+              
+                
         
         

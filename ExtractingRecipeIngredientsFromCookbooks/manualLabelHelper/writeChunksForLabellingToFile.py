@@ -13,7 +13,7 @@ def writeChunksToFile(cookbook, fileName, rcpIds=[]):
     with open(fileName, "w") as f:
         for recipe in recipes:
             f.write("#{}\n".format(recipe.rcpId))
-            for chunk in recipe.chunksWithNewlines():
+            for chunk in recipe.chunkRecipeForManualTagging():
                 f.write(chunk)
             f.write("\n")
         

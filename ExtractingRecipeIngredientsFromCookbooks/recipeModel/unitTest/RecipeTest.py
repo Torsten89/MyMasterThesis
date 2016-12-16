@@ -1,5 +1,5 @@
 import unittest
-from parserForDavidisCookbook.Recipe import *
+from recipeModel.Recipe import *
 
 class RecipeTest(unittest.TestCase):
     def testGetSentences(self):
