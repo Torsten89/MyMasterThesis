@@ -13,23 +13,30 @@ def getLemmas(sentence):
         The result is a list with "tuples" of the form [[word1, pos1, lemma1), [word2, pos2, lemma2], ...]
     """
     tags = treeTagger.tag(sentence)
+            
     for i, [word, pos, lemma] in enumerate(tags):
-        if lemma == unknownTag and pos == truncTag:
-            tags[i][2] = word.replace("-", findTruncedEnd(i, tags))
+        if lemma == unknownTag:
+            tags[i][2] = word # e.g. Kalbsmidder NN <unknown> -.-
+        if pos == truncTag: # e.g. Sellerie- und Petersilienwurzeln -> Selleriewurzel
+            tags[i][2] = word.replace("-", findTruncatedEnd(i, tags))
     
     return tags
             
-def findTruncedEnd(i, tags):
+def findTruncatedEnd(i, tags):
+    """ i is the position of the truncated word in the sentence,
+        and tags is a "tuple" of [word, PoS, lemma] for each word
+    """
     for [word, pos, lemma] in tags[i+1:]: #search next normal nomina
         if pos == nNTag:
-            for truncedEnd in truncedEndings:
-                if lemma.find(truncedEnd) > -1:
-                    return truncedEnd
-                     
+            for truncatedEnd in truncedEndings:
+                if lemma.find(truncatedEnd) > -1:
+                    return truncatedEnd
+    
+    return ""
             
         
 if __name__ == '__main__':
-#     printLemmas("Der Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und statt Madeira kann man weißen Franzwein und etwas Rum nehmen.")
+#     "Der Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und statt Madeira kann man weißen Franzwein und etwas Rum nehmen."
     
     #Kartoffel-Klöße
     #weißer Franzwein
@@ -38,5 +45,6 @@ if __name__ == '__main__':
             ganz klar ist, spült das Stück Fleisch eben ab und setzt es mit der Brühe, die man \
             vom Bodensatz langsam abschüttet, in dem ebenfalls umgespülten Topfe wieder zu Feuer \
             nebst einigen Scorzoner-, einer Sellerie- und Petersilienwurzel'
+    print(getLemmas("braunes Gewürz"))
     
     

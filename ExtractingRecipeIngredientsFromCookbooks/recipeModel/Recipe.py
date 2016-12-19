@@ -116,6 +116,15 @@ class Recipe:
             result += ", oder ".join(altIs)
             
         return result
+    
+    def getSentences(self):
+        """ Yield each sentence of the recipe. The recipe.name is also a sentence
+        """
+        yield self.name
+        
+        for paragrah in self.instructions.split("\n"):
+            for sentence in getSentencesOfParagraph(paragrah):
+                yield sentence
               
                 
         

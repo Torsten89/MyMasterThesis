@@ -175,12 +175,12 @@ werden.', recipe.instructions)
         dom = createCueMLDom([getTaggedRecipeB16()])
         recipe = XmlParser(dom).getRecipes().__next__()
         self.assertIn(Ingredient(target="#Bouillon"), recipe.ingredients.values())
-        self.assertIn(Ingredient(ref="#Englische_Soja"), recipe.optIngredients.values())
+        self.assertIn(Ingredient(ref="#Englische_Soja", optional=True), recipe.optIngredients.values())
         self.assertIn(Ingredient(ref="#Rum", altGrp="2", quantity="etwas"), recipe.altIngredients.values())
         self.assertIn(["1", "2"], recipe.alts)
         
         recipe.mergeIngredients()
-        print(recipe)
+        # print(recipe)
         
     
 if __name__ == "__main__":

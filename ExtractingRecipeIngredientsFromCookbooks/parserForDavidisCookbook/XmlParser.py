@@ -51,6 +51,7 @@ class XmlParser(object):
                 ref = target
             
             if getAttriOrNone(ingredientElem, "optional"):
+                ingredient.optional = True
                 optIngredients[ref] = ingredient
                 continue
             
@@ -59,6 +60,9 @@ class XmlParser(object):
                 ingredient.altGrp = altGrp
                 altIngredients[ref] = ingredient
                 continue
+            
+            if getAttriOrNone(ingredientElem, "dontUse"):
+                ingredient.dontUse = True
             
             ingredients[ref] = ingredient
         

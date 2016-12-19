@@ -1,28 +1,14 @@
 from xml.dom.minidom import parseString
-from parserForDavidisCookbook.xmlHelper import getAllChildText
+import unittest
+from tagger.IngredientDict import buildIngDict
+from recipeModel.Ingredient import Ingredient
 
-def buildIngDict(dom):
-    listIngredient = dom.getElementsByTagName("cue:listIngredient")[0]
-    for ingElem in listIngredient.getElementsByTagName("cue:ingredient"):
-        xmlId = ingElem.attributes["xml:id"].value
-        basicForms = [getAllChildText(ingElem.getElementsByTagName("cue:prefBasicForm")[0])]
-        for altBasicForm in ingElem.getElementsByTagName("cue:altBasicForm"):
-            basicForms.append(getAllChildText(altBasicForm))
-        BLSref = ingElem.attributes["BLSref"].value
-        comment = ""
-        for c in ingElem.getElementsByTagName("cue:note"):
-            comment += getAllChildText(c)
-        print(xmlId, basicForms, BLSref, comment)
 
-class Ingredient:
-    def __init__(self, xmlId, basicForms, BLSref="", comment=""):
-        self.xmlId = xmlId
-        self.basicForms = basicForms
-        self.BLSref = BLSref
-        self.comment = comment
+class IngredientDictTest(unittest.TestCase):
 
-if __name__ == '__main__':
-    dom = parseString('<cue:listIngredient xmlns="http://www.tei-c.org/ns/1.0" xmlns:cue="http://cueML/ns"> \
+    def testBuildIngDict(self):
+        dom = parseString(' \
+<cue:listIngredient xmlns="http://www.tei-c.org/ns/1.0" xmlns:cue="http://cueML/ns"> \
     <cue:ingredient xml:id="Rindkochfleisch" BLSref="U180100"> \
         <cue:prefBasicForm>Rindfleisch</cue:prefBasicForm> \
     </cue:ingredient> \
@@ -36,7 +22,17 @@ if __name__ == '__main__':
         <cue:altBasicForm>Bries</cue:altBasicForm> \
         <cue:altBasicForm>Kalbsmilch</cue:altBasicForm> \
         <cue:note>"Kalbsmidder ist auch unter dem Synonym: Bries, Kalbsmilch bekannt. Kalbsmilch ist die Thymusdrüse des Kalbes. 100 g frische Kalbsmilch enthalten 99,8 kcal, 3,4 g Fett, 17,2 g Eiweiß, 77,8 g Wasser, 1,91 mg Eisen, 268 mg Cholesterin und 0,42 g Purine. Dieses Organ ist bei Jungtieren voll entwickelt. Bei erwachsenen Tieren bildet sich das Organ zurück. Kalbsmilch wird zur Herstellung von Spezialitäten, wie Suppen, Klöße und Ragout, verwendet." (http://www.cosmiq.de/qa/show/70827/was-ist-kalbsmidder/)</cue:note> \
+        <cue:note>2. Note</cue:note> \
     </cue:ingredient> \
 </cue:listIngredient>')
-    
-    buildIngDict(dom)
+        d = buildIngDict(dom)
+        self.assertEqual(6, len(d))
+        self.assertEqual([("Rindkochfleisch", "Rindfleisch"),], d["Rindfleisch"])
+        
+
+    def testRindFleisch(self):
+        pass
+
+if __name__ == "__main__":
+    #import sys;sys.argv = ['', 'Test.testName']
+    unittest.main()
