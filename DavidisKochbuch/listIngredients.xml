@@ -65,4 +65,109 @@
 	<cue:ingredient xml:id="Rum" BLSref="P741000">
 		<cue:prefBasicForm>Rum</cue:prefBasicForm>
 	</cue:ingredient>
+	<cue:ingredient xml:id="Rindkochfleisch" BLSref="U180100">
+		<cue:prefBasicForm>Rindfleisch</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Salz" BLSref="R110000">
+		<cue:prefBasicForm>Salz</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Zwiebel" BLSref="G480000">
+		<cue:prefBasicForm>Zwiebel</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Schwarzwurzel" BLSref="G650100">
+		<cue:prefBasicForm>Scorzonerwurzel</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Knollensellerie" BLSref="G660100">
+		<cue:prefBasicForm>Selleriewurzel</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Wurzelpetersilie" BLSref="G670100">
+		<cue:prefBasicForm>Petersilienwurzel</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="SpargelGekocht" BLSref="G450132">
+		<cue:prefBasicForm>Spargel</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="BlumenkohlGekocht" BLSref="G311132">
+		<cue:prefBasicForm>Blumenkohl</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Reis" BLSref="C350000">
+		<cue:prefBasicForm>Reis</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Hartkäse45" BLSref="M300600">
+		<cue:prefBasicForm>Parmesankäse</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="HühnereiEigelb" BLSref="E112000">
+		<cue:prefBasicForm>Eidotter</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Sago" BLSref="K582000">
+		<cue:prefBasicForm>Sago</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Karotte" BLSref="G620100">
+		<cue:prefBasicForm>Karotte</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Muskatnuß" BLSref="R271000">
+		<cue:prefBasicForm>Muskat</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Schweineschinken" BLSref="U680100">
+		<cue:prefBasicForm>Schinken</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Petersilienblatt" BLSref="G250000">
+		<cue:prefBasicForm>Petersilie</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Weizengrießmehl" BLSref="C215100">
+		<cue:prefBasicForm>Griesmehl</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Meerrettichsauce" BLSref="U990200">
+		<cue:prefBasicForm>Meerrettig-sauce</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Kalbsbrühe" BLSref="X411563">
+		<cue:prefBasicForm>Kalbsfleischbrühe</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Hammelfleisch" BLSref="Y400003">
+		<cue:prefBasicForm>Hammelfleisch</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Kartoffeln" BLSref="K110100">
+		<cue:prefBasicForm>Kartoffeln</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Schalotte" BLSref="G485000">
+		<cue:prefBasicForm>Charlotten</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Gewürze" BLSref="R200000">
+		<cue:prefBasicForm>brauneGewürze</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Arrak" BLSref="P742000">
+		<cue:prefBasicForm>Arrac</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Weißwein/Rotwein" BLSref="P200000">
+		<cue:prefBasicForm>Graves</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Suppenhuhn" BLSref="V432100">
+		<cue:prefBasicForm>Huhn</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Tamarinden" BLSref="H706100">
+		<cue:prefBasicForm>Thamarinden</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Pfeffer" BLSref="R258000">
+		<cue:prefBasicForm>Pfeffer</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Hase" BLSref="V230100">
+		<cue:prefBasicForm>Hase</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Gewürznelken" BLSref="R242000">
+		<cue:prefBasicForm>Nelken</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Pfefferkörner" BLSref="R258500">
+		<cue:prefBasicForm>Pfefferkörner</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Küchenkräuter" BLSref="G060000">
+		<cue:prefBasicForm>Suppenkräuter</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Sahne" BLSref="M116500">
+		<cue:prefBasicForm>Sahne</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Portwein" BLSref="P431000">
+		<cue:prefBasicForm>Portwein</cue:prefBasicForm>
+	</cue:ingredient>
+
+	
+	
 </cue:listIngredient>
