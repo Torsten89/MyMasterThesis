@@ -36,7 +36,7 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Saucisse" BLSref="W000000">
 		<cue:prefBasicForm>Saucisse</cue:prefBasicForm>
-		<cue:note>Frech name for particular sausages (see https://fr.wikipedia.org/wiki/Saucisse)</cue:note>
+		<cue:note>Franz. Name für bestimmte Würste (s. https://fr.wikipedia.org/wiki/Saucisse)</cue:note>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Butter" BLSref="Q610000">
 		<cue:prefBasicForm>Butter</cue:prefBasicForm>
@@ -51,7 +51,7 @@
 		<cue:prefBasicForm>Ei</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Englische_Soja">
-		<cue:prefBasicForm>Englische Soja</cue:prefBasicForm>
+		<cue:prefBasicForm>englische Soja</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Madeira" BLSref="P432000">
 		<cue:prefBasicForm>Madeira</cue:prefBasicForm>
@@ -64,9 +64,6 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Rum" BLSref="P741000">
 		<cue:prefBasicForm>Rum</cue:prefBasicForm>
-	</cue:ingredient>
-	<cue:ingredient xml:id="Rindkochfleisch" BLSref="U180100">
-		<cue:prefBasicForm>Rindfleisch</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Salz" BLSref="R110000">
 		<cue:prefBasicForm>Salz</cue:prefBasicForm>
@@ -107,6 +104,13 @@
 	<cue:ingredient xml:id="Muskatnuß" BLSref="R271000">
 		<cue:prefBasicForm>Muskat</cue:prefBasicForm>
 	</cue:ingredient>
+	<cue:ingredient xml:id="Muskatblüte" BLSref="R243000">
+		<cue:prefBasicForm>Muskatblüte</cue:prefBasicForm>
+		<cue:altBasicForm>Muskatblüthe</cue:altBasicForm>
+		<cue:altBasicForm>Macis</cue:altBasicForm>
+		<cue:note>Muskatblüthe ist alte Rechtschreibung.</cue:note>
+		<cue:note>Stammt wie die Muskatnuss auch vom Muskatbaum, hat aber ein anderes Aroma.</cue:note>
+	</cue:ingredient>
 	<cue:ingredient xml:id="Schweineschinken" BLSref="U680100">
 		<cue:prefBasicForm>Schinken</cue:prefBasicForm>
 	</cue:ingredient>
@@ -129,15 +133,13 @@
 		<cue:prefBasicForm>Kartoffeln</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Schalotte" BLSref="G485000">
-		<cue:prefBasicForm>Charlotten</cue:prefBasicForm>
-	</cue:ingredient>
-	<cue:ingredient xml:id="Gewürze" BLSref="R200000">
-		<cue:prefBasicForm>brauneGewürze</cue:prefBasicForm>
+		<cue:prefBasicForm>Schalotte</cue:prefBasicForm>
+		<cue:altBasicForm>Charlotten</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Arrak" BLSref="P742000">
 		<cue:prefBasicForm>Arrac</cue:prefBasicForm>
 	</cue:ingredient>
-	<cue:ingredient xml:id="Weißwein/Rotwein" BLSref="P200000">
+	<cue:ingredient xml:id="Graves" BLSref="P200000">
 		<cue:prefBasicForm>Graves</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Suppenhuhn" BLSref="V432100">
@@ -167,7 +169,14 @@
 	<cue:ingredient xml:id="Portwein" BLSref="P431000">
 		<cue:prefBasicForm>Portwein</cue:prefBasicForm>
 	</cue:ingredient>
-
+	<cue:ingredient xml:id="Estragon" BLSref="G067000">
+		<cue:prefBasicForm>Estragon</cue:prefBasicForm>
+		<cue:altBasicForm>Dragon</cue:altBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="spanischer_Pfeffer">
+		<cue:prefBasicForm>spanischer Pfeffer</cue:prefBasicForm>
+		<cue:note>Braucht weitere Recherche/Definition (s. https://de.wikipedia.org/wiki/Spanischer_Pfeffer)</cue:note>
+	</cue:ingredient>
 	
 	
 </cue:listIngredient>

@@ -179,6 +179,7 @@
                     <value>Maß</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Maß) not standardised unit of volume. Depends on time and location</a:documentation>
                     <value>Flasche</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Flasche) not standardised unit of volume</a:documentation>
                     <value>Glas</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Flasche) not standardised unit of volume</a:documentation>
+                    <value>Scheibe</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Scheibe) not standardised unit of mass</a:documentation>
                 </choice>
             </attribute>
         </optional>
