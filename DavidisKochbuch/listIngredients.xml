@@ -32,11 +32,17 @@
 		<cue:altBasicForm>Kalbsmidder</cue:altBasicForm>
 		<cue:altBasicForm>Bries</cue:altBasicForm>
 		<cue:altBasicForm>Kalbsmilch</cue:altBasicForm>
-		<cue:note>"Kalbsmidder ist auch unter dem Synonym: Bries, Kalbsmilch bekannt. Kalbsmilch ist die Thymusdrüse des Kalbes. 100 g frische Kalbsmilch enthalten 99,8 kcal, 3,4 g Fett, 17,2 g Eiweiß, 77,8 g Wasser, 1,91 mg Eisen, 268 mg Cholesterin und 0,42 g Purine. Dieses Organ ist bei Jungtieren voll entwickelt. Bei erwachsenen Tieren bildet sich das Organ zurück. Kalbsmilch wird zur Herstellung von Spezialitäten, wie Suppen, Klöße und Ragout, verwendet." (http://www.cosmiq.de/qa/show/70827/was-ist-kalbsmidder/)</cue:note>
+		<cue:note>"Kalbsmidder ist auch unter dem Synonym: Bries, Kalbsmilch bekannt. Kalbsmilch ist
+			die Thymusdrüse des Kalbes. 100 g frische Kalbsmilch enthalten 99,8 kcal, 3,4 g Fett,
+			17,2 g Eiweiß, 77,8 g Wasser, 1,91 mg Eisen, 268 mg Cholesterin und 0,42 g Purine.
+			Dieses Organ ist bei Jungtieren voll entwickelt. Bei erwachsenen Tieren bildet sich das
+			Organ zurück. Kalbsmilch wird zur Herstellung von Spezialitäten, wie Suppen, Klöße und
+			Ragout, verwendet." (http://www.cosmiq.de/qa/show/70827/was-ist-kalbsmidder/)</cue:note>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Saucisse" BLSref="W000000">
 		<cue:prefBasicForm>Saucisse</cue:prefBasicForm>
-		<cue:note>Franz. Name für bestimmte Würste (s. https://fr.wikipedia.org/wiki/Saucisse)</cue:note>
+		<cue:note>Franz. Name für bestimmte Würste (s.
+			https://fr.wikipedia.org/wiki/Saucisse)</cue:note>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Butter" BLSref="Q610000">
 		<cue:prefBasicForm>Butter</cue:prefBasicForm>
@@ -109,7 +115,8 @@
 		<cue:altBasicForm>Muskatblüthe</cue:altBasicForm>
 		<cue:altBasicForm>Macis</cue:altBasicForm>
 		<cue:note>Muskatblüthe ist alte Rechtschreibung.</cue:note>
-		<cue:note>Stammt wie die Muskatnuss auch vom Muskatbaum, hat aber ein anderes Aroma.</cue:note>
+		<cue:note>Stammt wie die Muskatnuss auch vom Muskatbaum, hat aber ein anderes
+			Aroma.</cue:note>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Schweineschinken" BLSref="U680100">
 		<cue:prefBasicForm>Schinken</cue:prefBasicForm>
@@ -175,8 +182,105 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="spanischer_Pfeffer">
 		<cue:prefBasicForm>spanischer Pfeffer</cue:prefBasicForm>
-		<cue:note>Braucht weitere Recherche/Definition (s. https://de.wikipedia.org/wiki/Spanischer_Pfeffer)</cue:note>
+		<cue:note>Braucht weitere Recherche/Definition (s.
+			https://de.wikipedia.org/wiki/Spanischer_Pfeffer)</cue:note>
 	</cue:ingredient>
-	
-	
+	<cue:ingredient xml:id="Perlgraupen" BLSref="C148200">
+		<cue:prefBasicForm>Perlgerste</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Flusskrebs" BLSref="T710100">
+		<cue:prefBasicForm>Krebs</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Birne" BLSref="F130100">
+		<cue:prefBasicForm>Birne</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Aal" BLSref="T041100">
+		<cue:prefBasicForm>Aal</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Zitrone" BLSref="F601100">
+		<cue:prefBasicForm>Zitrone</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Zwieback" BLSref="D030000">
+		<cue:prefBasicForm>Zwieback</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Salbei" BLSref="G079000">
+		<cue:prefBasicForm>Salbei</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Kerbel" BLSref="G069000">
+		<cue:prefBasicForm>Kerbel</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Portulak" BLSref="G460100">
+		<cue:prefBasicForm>Portulac</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Sauerampfer" BLSref="G263100">
+		<cue:prefBasicForm>Sauerampfer</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Thymian" BLSref="R226000">
+		<cue:prefBasicForm>Thimian</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Majoran" BLSref="G074000">
+		<cue:prefBasicForm>Majoran</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Basilikum" BLSref="G061000">
+		<cue:prefBasicForm>Basilikum</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Kopfsalat" BLSref="G105000">
+		<cue:prefBasicForm>Kopfsalat</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Hecht" BLSref="T060100">
+		<cue:prefBasicForm>Hecht</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Karpfen" BLSref="T501100">
+		<cue:prefBasicForm>Karpfen</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="WeißbrotToast" BLSref="B304000">
+		<cue:prefBasicForm>Weißbrotschnitten</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Hasenbraten" BLSref="Y531023">
+		<cue:prefBasicForm>Hasenbraten</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Hasenfleisch" BLSref="V230100">
+		<cue:prefBasicForm>Hasenfleisch</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Sellerieblätter" BLSref="G086000">
+		<cue:prefBasicForm>Sellerie</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Porree" BLSref="G470100">
+		<cue:prefBasicForm>Purree</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Spinat" BLSref="G210100">
+		<cue:prefBasicForm>Spinat</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Erbsen" BLSref="G760100">
+		<cue:prefBasicForm>Erbsen</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Mettwurst" BLSref="W110000">
+		<cue:prefBasicForm>Mettwurst</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Bohnen" BLSref="G710100">
+		<cue:prefBasicForm>Bohnen</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Bauchspeck" BLSref="U605600">
+		<cue:prefBasicForm>Bauchspeck</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Linsen" BLSref="H662100">
+		<cue:prefBasicForm>Linsen</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Essig" BLSref="R120000">
+		<cue:prefBasicForm>Essig</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Schnittlauch" BLSref="G081000">
+		<cue:prefBasicForm>Schnittlauch</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Stärke" BLSref="C216000">
+		<cue:prefBasicForm>Stärke</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Zucker" BLSref="S111000">
+		<cue:prefBasicForm>Zucker</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Zimt" BLSref="R218000">
+		<cue:prefBasicForm>Zimmet</cue:prefBasicForm>
+	</cue:ingredient>
+
+
 </cue:listIngredient>
