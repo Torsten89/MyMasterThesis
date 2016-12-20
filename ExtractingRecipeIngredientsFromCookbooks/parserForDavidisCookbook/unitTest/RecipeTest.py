@@ -1,5 +1,6 @@
 import unittest
-from recipeModel.Recipe import *
+from parserForDavidisCookbook.Recipe import getSentencesOfParagraph,\
+    chunkSentence, chunkInstructions
 
 class RecipeTest(unittest.TestCase):
     def testGetSentences(self):

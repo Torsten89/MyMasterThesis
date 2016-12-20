@@ -21,7 +21,7 @@ def tagChunkedSentences(chunkedSentences, pathToModel):
             features.append(crfsuite.Attribute("w[0]={}".format(chunk))) # use only word identity so far
             featureSeq.append(features)
         tagger.set(featureSeq)
-        labelsOfSentences.append(tagger.viterbi()) # tagger.viterbi() labels the current, through tagger.set(itemSeequence) set, sentence.
+        labelsOfSentences.append(tagger.viterbi()) # informationExtraction.viterbi() labels the current, through informationExtraction.set(itemSeequence) set, sentence.
 
     return labelsOfSentences
         

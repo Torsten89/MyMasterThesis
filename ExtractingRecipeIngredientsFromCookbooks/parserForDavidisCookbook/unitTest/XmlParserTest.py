@@ -1,7 +1,7 @@
 import unittest
 from xml.dom.minidom import parseString
 from parserForDavidisCookbook.XmlParser import XmlParser
-from recipeModel.Ingredient import Ingredient
+from parserForDavidisCookbook.Ingredient import Ingredient
 
 def createCueMLDom(recipes=[]):
     return parseString('\
@@ -181,7 +181,6 @@ werden.', recipe.instructions)
         
         recipe.mergeIngredients()
         # print(recipe)
-        
     
 if __name__ == "__main__":
     unittest.main()

@@ -1,6 +1,6 @@
-from recipeModel.Recipe import Recipe
-from recipeModel.Ingredient import Ingredient
 from parserForDavidisCookbook.xmlHelper import getAllChildText, getAttriOrNone, getElems
+from parserForDavidisCookbook.Recipe import Recipe
+from parserForDavidisCookbook.Ingredient import Ingredient
 
 rcpIdTagName = "rcp-id"
 

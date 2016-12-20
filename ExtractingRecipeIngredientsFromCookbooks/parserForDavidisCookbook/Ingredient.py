@@ -2,9 +2,8 @@
 class Ingredient:
 
     def __init__(self, ref=None, target=None, quantity=None, atLeast=None, atMost=None, unit=None,
-                 altGrp=None, optional=None, dontUse=None, ingYield=None, ingYieldUnit = None,
-                 xmlId=None, basicForms=None, BLSref=None, comments=[]):
-        """ xmlId is id of definition within cue:ingredient-element
+                 altGrp=None, optional=None, dontUse=None, ingYield=None, ingYieldUnit = None):
+        """ See definition of cueML for meaning of these attributes # ToDo link to definition
         """
         self.ref = ref
         self.target = target
@@ -15,11 +14,6 @@ class Ingredient:
         self.altGrp = altGrp
         self.optional = optional
         self.dontUse = dontUse
-        
-        self.xmlId = xmlId
-        self.basicForms = basicForms
-        self.BLSref = BLSref
-        self.comments = comments
         
     
     def __eq__(self, other):

@@ -1,3 +1,4 @@
+
 def getElems(node, elemName, withAttris={}):
     """ withAttris = {key: iterator with possible values}
     """
@@ -29,3 +30,9 @@ def getAttriOrNone(node, attriName):
         return node.attributes[attriName].value
     except KeyError:
         return None
+    
+def getUnitValuesFromCueML(cueMLRngDom):
+    unitForIngredientElem = list(getElems(cueMLRngDom, "define", {"name":["tei_att.unitForIngredient"]}))[0]
+    for valueElem in unitForIngredientElem.getElementsByTagName("value"):
+        yield getAllChildText(valueElem)
+    

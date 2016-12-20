@@ -1,7 +1,6 @@
 from xml.dom.minidom import parseString
 import unittest
-from tagger.IngredientDict import buildIngDict
-from recipeModel.Ingredient import Ingredient
+from informationExtraction.IngredientExtractor import BFormId, buildIngDict
 
 
 class IngredientDictTest(unittest.TestCase):
@@ -26,12 +25,8 @@ class IngredientDictTest(unittest.TestCase):
     </cue:ingredient> \
 </cue:listIngredient>')
         d = buildIngDict(dom)
-        self.assertEqual(6, len(d))
-        self.assertEqual([("Rindkochfleisch", "Rindfleisch"),], d["Rindfleisch"])
-        
-
-    def testRindFleisch(self):
-        pass
+        self.assertEqual([BFormId(bform='Bries', xmlId='Midder')], d["Bries"])
+        self.assertEqual([BFormId(bform='Rindfleisch', xmlId='Rindkochfleisch')], d["Rindfleisch"])
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']

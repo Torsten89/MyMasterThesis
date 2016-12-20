@@ -1,8 +1,8 @@
 import unittest
-from recipeModel.unitTest.RecipeTest import RecipeTest
+from parserForDavidisCookbook.unitTest.RecipeTest import RecipeTest
 from parserForDavidisCookbook.unitTest.XmlParserTest import XmlParserTest
-from tagger.unitTest.IngredientDictTest import IngredientDictTest
-from tagger.unitTest.TaggerTest import TaggerTest
+from informationExtraction.unitTest.IngredientExtractorTest import IngredientDictTest
+from informationExtraction.unitTest.TaggerTest import TaggerTest
 
 def getTests():
     return [unittest.TestLoader().loadTestsFromTestCase(RecipeTest),
