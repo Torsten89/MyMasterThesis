@@ -106,6 +106,7 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Karotte" BLSref="G620100">
 		<cue:prefBasicForm>Karotte</cue:prefBasicForm>
+		<cue:altBasicForm>Wurzel</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Muskatnuß" BLSref="R271000">
 		<cue:prefBasicForm>Muskat</cue:prefBasicForm>
@@ -235,6 +236,9 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="WeißbrotToast" BLSref="B304000">
 		<cue:prefBasicForm>Weißbrotschnitten</cue:prefBasicForm>
+		<cue:altBasicForm>Weißbrotschnitten</cue:altBasicForm>
+		<cue:altBasicForm>Weißbrodschnitten</cue:altBasicForm>
+		<cue:altBasicForm>Weißbrod</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Hasenbraten" BLSref="Y531023">
 		<cue:prefBasicForm>Hasenbraten</cue:prefBasicForm>
@@ -281,6 +285,8 @@
 	<cue:ingredient xml:id="Zimt" BLSref="R218000">
 		<cue:prefBasicForm>Zimmet</cue:prefBasicForm>
 	</cue:ingredient>
-
+	<cue:ingredient xml:id="Taube" BLSref="V490100">
+		<cue:prefBasicForm>Taube</cue:prefBasicForm>
+	</cue:ingredient>
 
 </cue:listIngredient>

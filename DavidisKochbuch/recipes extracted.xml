@@ -91,10 +91,10 @@
 
             <note>Anmerk. Will man <cue:recipeIngredient ref="#Reis" altGrp="1" quantity="1"
                   unit="EL" yield="1">Reis</cue:recipeIngredient> oder <cue:recipeIngredient
-                  ref="Sago" altGrp="2" quantity="1" unit="EL" yield="1">Sago</cue:recipeIngredient>
-               zur Suppe nehmen, so gibt man dieses später hinein<cue:alt target="1 2"/>. Man
-               rechnet davon auf jede Person bei allen Fleischsuppen einen gestrichenen Eßlöffel
-               voll. </note>
+                  ref="#Sago" altGrp="2" quantity="1" unit="EL" yield="1"
+                  >Sago</cue:recipeIngredient> zur Suppe nehmen, so gibt man dieses später
+                  hinein<cue:alt target="1 2"/>. Man rechnet davon auf jede Person bei allen
+               Fleischsuppen einen gestrichenen Eßlöffel voll. </note>
          </cue:recipe>
          <anchor xml:id="B-2-end"/>
 
@@ -110,7 +110,7 @@
                werden, gibt das Fleisch hinzu und läßt es ebenfalls ein wenig rösten, so wie nachher
                eine, in 8 Theile geschnittene <cue:recipeIngredient ref="#Knollenselerie"
                   quantity="1">Sellerieknolle</cue:recipeIngredient>, eine klein geschnittene
-                  <cue:recipeIngredient ref="Zwiebel" quantity="1">Zwiebel</cue:recipeIngredient>
+                  <cue:recipeIngredient ref="#Zwiebel" quantity="1">Zwiebel</cue:recipeIngredient>
                und eine geriebene gelbe <cue:recipeIngredient ref="#Karotte" quantity="1">Murzel
                   (Möhre)</cue:recipeIngredient>. Dies wird eine Weile gerührt und so viel kochendes
                Wasser zugegossen, als man, zum Einkochen mitgerechnet, Suppe haben will. Eine bis 1½
@@ -118,7 +118,7 @@
                   <cue:recipeIngredient ref="#Reis">Reis</cue:recipeIngredient> wird allein gekocht,
                beim Anrichten mit dem Sellerie in die Suppe gegeben, und diese mit
                   <cue:recipeIngredient ref="#Hühnereigelb">Eidotter</cue:recipeIngredient> und
-                  <cue:recipeIngredient ref="Muskatnuß">Muskat</cue:recipeIngredient> abgerührt. </p>
+                  <cue:recipeIngredient ref="#Muskatnuß">Muskat</cue:recipeIngredient> abgerührt. </p>
 
          </cue:recipe>
 
@@ -179,7 +179,7 @@
                die Jahreszeit hat, jedoch vorher eben abgekocht, und 10 Minuten vor dem Anrichten
                   <cue:recipeIngredient optional="True">Fleisch-</cue:recipeIngredient> oder andere
                beliebige <cue:recipeIngredient optional="True">Klöße</cue:recipeIngredient> darin
-               gahr kochen. Die Suppe wird mit <cue:recipeIngredient ref="Muskatnuß"
+               gahr kochen. Die Suppe wird mit <cue:recipeIngredient ref="#Muskatnuß"
                   >Muskat</cue:recipeIngredient>, etwas fein gehackter <cue:recipeIngredient
                   ref="#Petersilie" quantity="etwas">Petersilie</cue:recipeIngredient> und 1—2
                   <cue:recipeIngredient ref="#HühnereiEigelb" atLeast="1" atMost="2"
@@ -206,7 +206,7 @@
                   ref="#SpargelGekocht" optional="True">Spargel</cue:recipeIngredient> oder
                   <cue:recipeIngredient ref="#Schwarzwurzel" optional="True"
                   >Scorzoneren</cue:recipeIngredient>, so kann man solche abgekocht darin weich
-               kochen, auch ein wenig fein gehackte <cue:recipeIngredient ref="Wurzelpetersilie"
+               kochen, auch ein wenig fein gehackte <cue:recipeIngredient ref="#Wurzelpetersilie"
                   quantity="ein wenig">Petersilie</cue:recipeIngredient> dazu geben und die Suppe,
                wenn es dem Kranken erlaubt ist, mit einem frischen <cue:recipeIngredient
                   ref="#HühnereiEigelb" quantity="1" optional="True">Eidotter</cue:recipeIngredient>
@@ -261,21 +261,22 @@
                   ref="#Suppenhuhn" quantity="1">Huhn</cue:recipeIngredient>. Dasselbe wird mit
                   <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient> gehörig
                ausgeschäumt, die Brühe, wie bei allen Fleischsuppen, durch ein Sieb geschüttet und
-               mit einer Petersilien-Wurzel gahr gekocht, was ungefähr 3 Stunden Zeit erfordert. Ein
-               und eine halbe Stunde vorher gibt man gut abgebrühten <cue:recipeIngredient
-                  ref="#Reis">Reis</cue:recipeIngredient>, oder nach Belieben <cue:recipeIngredient
-                  ref="#Perlgraupen" optional="True">Perlgerste</cue:recipeIngredient> zur Suppe,
-               die jedoch wohl ½ Stunde länger kochen muß. <cue:recipeIngredient altGrp="1"
-                  >Krebsklöße</cue:recipeIngredient> und
+               mit einer <cue:recipeIngredient ref="#Wurzelpetersilie" quantity="1"
+                  >Petersilien-Wurzel</cue:recipeIngredient> gahr gekocht, was ungefähr 3 Stunden
+               Zeit erfordert. Ein und eine halbe Stunde vorher gibt man gut abgebrühten
+                  <cue:recipeIngredient ref="#Reis">Reis</cue:recipeIngredient>, oder nach Belieben
+                  <cue:recipeIngredient ref="#Perlgraupen" optional="True"
+                  >Perlgerste</cue:recipeIngredient> zur Suppe, die jedoch wohl ½ Stunde länger
+               kochen muß. <cue:recipeIngredient altGrp="1">Krebsklöße</cue:recipeIngredient> und
                   <cue:recipeIngredient>Krebsbutter</cue:recipeIngredient> sind vorzüglich gut
                darin; in Ermangelung derselben nehme man <cue:recipeIngredient altGrp="2"
                   >Klöße</cue:recipeIngredient> nach Belieben <cue:alt target="1 2"/> und rühre die
                Suppe mit etwas fein gehackter <cue:recipeIngredient ref="#Petersilienblatt"
-                  >Petersilie</cue:recipeIngredient>, <cue:recipeIngredient ref="#Muskatblüte"
-                  >Muskatblüthe</cue:recipeIngredient> und <cue:recipeIngredient
+                  quantity="etwas">Petersilie</cue:recipeIngredient>, <cue:recipeIngredient
+                  ref="#Muskatblüte">Muskatblüthe</cue:recipeIngredient> und <cue:recipeIngredient
                   ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient> ab. Sie muß, wie auch die
                vorhergehenden Fleischsuppen gebunden, nur ja nicht breiig gekocht werden, wodurch
-               das Feine verloren geht. Das Huhn kann mit der Sauce <ref target="P-30">P. No.
+               das Feine verloren geht. Das Huhn kann mit der Sauce <ref target="#P-30">P. No.
                   30</ref> gegessen werden. </p>
             <p>Für Kranke läßt man Klöße und Muskat weg.</p>
 
@@ -284,14 +285,16 @@
          <cue:recipe type="Suppen." rcp-id="B-11">
             <head>Taubensuppe für Kranke.</head>
 
-            <p>Die Tauben werden mit Wasser und <cue:recipeIngredient ref="#Salz"
-                  >Salz</cue:recipeIngredient> rein ausgeschäumt, feine Perlgerste oder Reis
-               hineingegeben, so wie ½ Stunde vor dem Anrichten abgekochte <cue:recipeIngredient
-                  ref="#SpargelGekocht" altGrp="1">Spargelköpfe</cue:recipeIngredient> oder etwas
-                  <cue:recipeIngredient ref="#BlumenkohlGekocht" altGrp="2"
+            <p>Die <cue:recipeIngredient ref="#Taube">Tauben</cue:recipeIngredient> werden mit
+               Wasser und <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient> rein
+               ausgeschäumt, feine Perlgerste oder Reis hineingegeben, so wie ½ Stunde vor dem
+               Anrichten abgekochte <cue:recipeIngredient ref="#SpargelGekocht" altGrp="1"
+                  >Spargelköpfe</cue:recipeIngredient> oder etwas <cue:recipeIngredient
+                  quantity="etwas" ref="#BlumenkohlGekocht" altGrp="2"
                   >Blumenkohl</cue:recipeIngredient>, was man haben kann <cue:alt target="1 2"/>.
-               Ist dem Kranken ein <cue:recipeIngredient ref="#HühnereiEigelb" optional="True"
-                  >Eidotter</cue:recipeIngredient> erlaubt, so wird die Suppe damit abgerührt. </p>
+               Ist dem Kranken ein <cue:recipeIngredient ref="#HühnereiEigelb" quantity="1"
+                  optional="True">Eidotter</cue:recipeIngredient> erlaubt, so wird die Suppe damit
+               abgerührt. </p>
             <p>Sie muß, wenn die Tauben jung sind, 1½, im andern Fall 2 Stunden kochen. </p>
 
          </cue:recipe>
@@ -303,21 +306,20 @@
                   >Bouillon</cue:recipeIngredient> und zu <cue:recipeYield quantity="12"
                   unit="people">12 Personen</cue:recipeYield> etwa 24 Stück <cue:recipeIngredient
                   ref="#Flusskrebs" quantity="24">Krebse</cue:recipeIngredient>. Dann wird das
-               Fleisch aus Scheeren und Schwänzen gebrochen, die sämmtlichen
-                  <cue:recipeIngredient>Schalen</cue:recipeIngredient> im Mörser nicht zu fein
-               gestoßen und über Feuer mit einem großen Stück frischer <cue:recipeIngredient
+               Fleisch aus Scheeren und Schwänzen gebrochen, die sämmtlichen Schalen im Mörser nicht
+               zu fein gestoßen und über Feuer mit einem großen Stück frischer <cue:recipeIngredient
                   ref="#Butter">Butter</cue:recipeIngredient> durchgerührt, bis diese roth wird und
                zu steigen anfängt. Nun läßt man darin so viel <cue:recipeIngredient ref="#Mehl"
                   >Mehl</cue:recipeIngredient> anziehn, daß die Suppe davon gebunden wird, gießt
-                  <cue:recipeIngredient ref="#Kalbsbrühe">Fleischbrühe</cue:recipeIngredient> hinzu
-               und das Ganze durch ein Haarsieb zu der kochenden Bouillon. Kurz vor dem Anrichten
-               giebt man <cue:recipeIngredient>Krebsklöße</cue:recipeIngredient>, nach <ref
-                  target="L-2">L. No. 2</ref>, <cue:recipeIngredient ref="#Midder"
-                  >Midder</cue:recipeIngredient> (Kälbermilch),
-                  <cue:recipeIngredient>Krebsköpfe</cue:recipeIngredient> gefüllt, mit der Masse,
-               von der man Schwammklöße macht, hinein, und rührt die Suppe mit <cue:recipeIngredient
-                  ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient> ab; doch darf sie ja nicht
-               zu sämig sein, was überhaupt bei allen Gesellschaftssuppen vermieden werden muß. </p>
+                  <cue:recipeIngredient>Fleischbrühe</cue:recipeIngredient> hinzu und das Ganze
+               durch ein Haarsieb zu der kochenden Bouillon. Kurz vor dem Anrichten giebt man
+                  <cue:recipeIngredient target="#L-2">Krebsklöße</cue:recipeIngredient>, nach L. No.
+               2, <cue:recipeIngredient ref="#Midder">Midder</cue:recipeIngredient> (Kälbermilch),
+               Krebsköpfe gefüllt, mit der Masse, von der man <cue:recipeIngredient target="#L-6"
+                  >Schwammklöße</cue:recipeIngredient> macht, hinein, und rührt die Suppe mit
+                  <cue:recipeIngredient ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient> ab;
+               doch darf sie ja nicht zu sämig sein, was überhaupt bei allen Gesellschaftssuppen
+               vermieden werden muß. </p>
 
          </cue:recipe>
 
@@ -363,7 +365,7 @@
                   >Kerbel</cue:recipeIngredient>, <cue:recipeIngredient ref="Portulak" altGrp="1"
                   >Portulac</cue:recipeIngredient> oder <cue:recipeIngredient ref="#Sauerampfer"
                   altGrp="2">Sauerampfer</cue:recipeIngredient>
-               <cue:alt target="1 2"/>, etwas <cue:recipeIngredient ref="#Thymian" quantity="einige"
+               <cue:alt target="1 2"/>, etwas <cue:recipeIngredient ref="#Thymian" quantity="etwas"
                   >Thimian</cue:recipeIngredient>, <cue:recipeIngredient ref="#Majoran"
                   >Majoran</cue:recipeIngredient>, <cue:recipeIngredient ref="#Basilikum"
                   >Basilikum</cue:recipeIngredient>, <cue:recipeIngredient ref="#Kopfsalat"
@@ -548,27 +550,29 @@
             <p>Ist noch gutes Fleisch an einem <cue:recipeIngredient ref="#Hasenbraten" quantity="1"
                   >Hasenbraten</cue:recipeIngredient>, der schon zur Tafel gewesen ist, wird dies
                ganz fein gehackt, hinzugegeben: etwa für 8 Pfennig in Wasser eingeweichtes und
-               ausgedrücktes <cue:recipeIngredient ref="#WeißbrotToast"
+               ausgedrücktes <cue:recipeIngredient ref="#WeißbrotToast" quantity="8" unit="Pfennig"
                   >Weißbrod</cue:recipeIngredient>, 1 Ei dick frische <cue:recipeIngredient
-                  ref="#Butter">Butter</cue:recipeIngredient>, 2 <cue:recipeIngredient ref="#Ei"
-                  quantity="2">Eier</cue:recipeIngredient>, <cue:recipeIngredient
-                  ref="#Gewürznelken">Nelken</cue:recipeIngredient>, <cue:recipeIngredient
-                  ref="#Muskatnuß">Muskat</cue:recipeIngredient> und <cue:recipeIngredient
-                  ref="#Salz">Salz</cue:recipeIngredient>. Hiervon kleine Klöße aufgerollt, wovon
-               man erst einen in der Suppe aufkochen läßt, um zu sehen, ob sie locker werden; man
-               gibt sonst ein wenig Wasser, im andern Falle geriebenes <cue:recipeIngredient
-                  ref="#WeißbrotToast" optional="True">Weißbrod</cue:recipeIngredient> hinzu. Dann
-               wird das <cue:recipeIngredient>Knochengerippe</cue:recipeIngredient> in kleine
+                  ref="#Butter" quantity="1" unit="Ei_dick">Butter</cue:recipeIngredient>, 2
+                  <cue:recipeIngredient ref="#Ei" quantity="2">Eier</cue:recipeIngredient>,
+                  <cue:recipeIngredient ref="#Gewürznelken">Nelken</cue:recipeIngredient>,
+                  <cue:recipeIngredient ref="#Muskatnuß">Muskat</cue:recipeIngredient> und
+                  <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>. Hiervon kleine
+               Klöße aufgerollt, wovon man erst einen in der Suppe aufkochen läßt, um zu sehen, ob
+               sie locker werden; man gibt sonst ein wenig Wasser, im andern Falle geriebenes
+                  <cue:recipeIngredient ref="#WeißbrotToast" optional="True"
+                  >Weißbrod</cue:recipeIngredient> hinzu. Dann wird das Knochengerippe in kleine
                Stückchen gehauen. Zugleich schneidet man für <cue:recipeYield quantity="8"
                   unit="people">8 Personen</cue:recipeYield> 2 Pfund <cue:recipeIngredient
                   ref="#Rindkochfleisch" quantity="2" unit="Pfund"
-                  >Rindfleisch</cue:recipeIngredient> in kleine Würfel, macht in reichlich Butter
-               einige Scheiben rohen <cue:recipeIngredient ref="#Schweineschinken" quantity="einige"
-                  unit="Scheibe">Schinken</cue:recipeIngredient>, 4—5 <cue:recipeIngredient
+                  >Rindfleisch</cue:recipeIngredient> in kleine Würfel, macht in reichlich
+                  <cue:recipeIngredient ref="#Butter" quantity="reichlich"
+                  >Butter</cue:recipeIngredient> einige Scheiben rohen <cue:recipeIngredient
+                  ref="#Schweineschinken" quantity="einige" unit="Scheibe"
+                  >Schinken</cue:recipeIngredient>, 4—5 <cue:recipeIngredient ref="#Zwiebel"
                   atLeast="4" atMost="5">Zwiebeln</cue:recipeIngredient>, eine <cue:recipeIngredient
-                  ref="#Wurzelpetersilie">Petersilien-</cue:recipeIngredient>, <cue:recipeIngredient
-                  ref="#Knollensellerie">Sellerie</cue:recipeIngredient> und gelbe
-                  <cue:recipeIngredient ref="#Karotte">Wurzel</cue:recipeIngredient> (Möhren), in
+                  ref="#Wurzelpetersilie" quantity="1">Petersilien-</cue:recipeIngredient>,
+                  <cue:recipeIngredient ref="#Knollensellerie">Sellerie-</cue:recipeIngredient> und
+               gelbe <cue:recipeIngredient ref="#Karotte">Wurzel</cue:recipeIngredient> (Möhren), in
                Scheiben geschnitten, nebst 2—3 Löffel <cue:recipeIngredient ref="#Mehl" atLeast="2"
                   atMost="3" unit="EL">Mehl</cue:recipeIngredient> braun, läßt dann das Fleisch und
                zuletzt die Hasenknochen darin rösten; gibt nun so viel Wasser, als nöthig ist,
@@ -576,10 +580,12 @@
                   optional="True">Sauce</cue:recipeIngredient> vom Hasen da ist, kommt sie hinzu.
                Ist das Fleisch ausgekocht und das Wurzelwerk weich, reibt man die Suppe durch ein
                Sieb, bringt sie wieder zum Kochen, würzt sie mit <cue:recipeIngredient ref="#Salz"
-                  >Salz</cue:recipeIngredient>, Muskat und Nelken, kocht die
+                  >Salz</cue:recipeIngredient>, <cue:recipeIngredient ref="#Muskatnuß"
+                  >Muskat</cue:recipeIngredient> und
+                  <cue:recipeIngredient ref="#Gewürznelken">Nelken</cue:recipeIngredient>, kocht die
                   <cue:recipeIngredient>Klöße</cue:recipeIngredient> darin gahr und richtet sie an.
                In Ermangelung des <cue:recipeIngredient ref="#Hasenfleisch" altGrp="1"
-                  >Hasenfleisches</cue:recipeIngredient> sind auch <cue:recipeIngredient altGrp="2"
+                  >Hasenfleisches</cue:recipeIngredient> sind auch <cue:recipeIngredient target="#L-6" altGrp="2"
                   >Schwammklöße</cue:recipeIngredient> sehr gut darin <cue:alt target="1 2"/>. </p>
             <p>Zum Kochen gehören 1½ Stunden.</p>
 
@@ -8751,6 +8757,7 @@
 
          </cue:recipe>
 
+         <anchor xml:id="L-2-start"/>
          <cue:recipe type="Klöße." rcp-id="L-2">
             <head>Klöße zu Krebs- und Aalsuppen.</head>
 
@@ -8761,6 +8768,7 @@
                oder backe sie auf einem Blech gelbbräunlich und gebe sie beim Vorlegen in die Suppe. </p>
 
          </cue:recipe>
+         <anchor xml:id="L-2-end"/>
 
          <anchor xml:id="L-3-start"/>
          <cue:recipe type="Klöße." rcp-id="L-3">
@@ -10401,6 +10409,7 @@
 
          </cue:recipe>
 
+         <anchor xml:id="P-30-start"/>
          <cue:recipe type="Saucen." rcp-id="P-30">
             <head>Holländische Sauce mit Wein.</head>
 
@@ -10411,6 +10420,7 @@
                auch über Ochsenzunge. </p>
 
          </cue:recipe>
+         <anchor xml:id="P-30-end"/>
 
          <cue:recipe type="Saucen." rcp-id="P-31">
             <head>Sauce zu gekochten Hühnern.</head>
@@ -16305,12 +16315,15 @@
             <span xml:id="B-2" from="#B-2-start" to="#B-2-end">Rindfleischsuppe mit Perlgerste und
                Reis</span>
 
+            <span xml:id="L-2" from="#L-2-start" to="#L-2-end">Rezept für Klöße zu Krebs- und
+               Aalsuppen</span>
+            <span xml:id="L-3" from="#L-3-start" to="#L-3-end">Klöße zu braunen Suppen</span>
             <span xml:id="L-4" from="#L-4-start" to="#L-4-end">Klöße von Kalb- oder
                Hühnerfleisch.</span>
-            <span xml:id="L-3" from="#L-3-start" to="#L-3-end">Klöße zu braunen Suppen</span>
             <span xml:id="L-6" from="#L-6-start" to="#L-6-end">Schwammklöße</span>
             <span xml:id="L-15" from="#L-15-start" to="#L-15-end">Kartoffelnklöße</span>
             <span xml:id="P-23" from="#P-23-start" to="#P-23-end">Meerrettig-Sauce</span>
+            <span xml:id="P-30" from="#P-30-start" to="#P-30-end">Holländische Sauce mit Wein</span>
             <span xml:id="I-3" from="#I-3-start" to="#I-3-end">Rost-Beef im Ofen gebraten</span>
             <span xml:id="B-21" from="#B-21-start" to="B-21-end">Hasensuppe</span>
             <span xml:id="B-28" from="B-28-start" to="B-28-end">Suppe von getrockneten Erbsen</span>

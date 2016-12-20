@@ -171,6 +171,7 @@
                     <value>Stich</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Stich) not standardised unit of mass.</a:documentation>
                     <value>Messerspitze</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Messrespitze) not standardised unit of mass</a:documentation>
                     <value>Bohne_dick</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Bohne dick) not standardised unit of mass</a:documentation>
+                    <value>Ei_dick</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ei dick) not standardised unit of mass</a:documentation>
                     <value>Pfennig</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Pfennig) an unit which refers to purchase value. Therefore depends on time and location</a:documentation>
                     <value>EL</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Eßlöffel or Esslöffel) not standardised unit of mass or volume</a:documentation>
                     <value>Teelöffel</value><a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Teelöffel) not standardised unit of mass or volume</a:documentation>

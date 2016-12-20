@@ -460,11 +460,17 @@ In their evaluation they apply these two variants to 43 randomly selected recipe
 
 \parencite{CRFZeit} take advantage of the point, that they have already marked the ingredient phrases from the list of ingredients. But our cookbook has no list of ingredients. Nevertheless, the ingredient phrases could be extracted from plain text through a CRF algorithm first and afterwards we could use the algorithm of \parencite{CRFZeit}. However we have to consider, that we do not have near as 130,000 training data. Our lack of training data could be caught up by more sophisticated custom feature functions. Maybe good feature functions even enable to extract all wanted data in one CRF algorithm.
 
-\parencite{GrammaBased} only uses plain text. But they have a bad recall, due to the point, that they are not good in mapping actions to their corresponding ingredients. 
+\parencite{GrammaBased} only uses plain text.(Lüge??) But they have a bad recall, due to the point, that they are not good in mapping actions to their corresponding ingredients. 
 In contrast to mapping actions to ingredients, we want to map quantities to units and these in turn to ingredients, which is more complex and could therefore lead to an even worse recall. Though the dictionary check, enabled by a morphological analysis, from their algorithm first main part, could be very good feature functions.
 
 
+\chapter{CRF prototype}
+zu aufwändig
 
+\chapter{Dictionary-based extraction}
+
+
+alter Mist...
 \chapter{Development of recipe parser}
 
 \section{Starting position}
