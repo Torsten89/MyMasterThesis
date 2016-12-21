@@ -1,9 +1,14 @@
-from xml.dom.minidom import parseString
+from xml.dom.minidom import parseString, parse
 import unittest
-from informationExtraction.IngredientExtractor import BFormId, buildIngDict
+from informationExtraction.IngredientExtractor import BFormId, buildIngDict, IngredientExtractor
 
 
 class IngredientDictTest(unittest.TestCase):
+    
+    def setUp(self):
+        unittest.TestCase.setUp(self)
+        dom = parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml")
+        self.ingE = IngredientExtractor(dom, None)
 
     def testBuildIngDict(self):
         dom = parseString(' \
@@ -27,6 +32,22 @@ class IngredientDictTest(unittest.TestCase):
         d = buildIngDict(dom)
         self.assertEqual([BFormId(bform='Bries', xmlId='Midder')], d["Bries"])
         self.assertEqual([BFormId(bform='Rindfleisch', xmlId='Rindkochfleisch')], d["Rindfleisch"])
+        
+    def test1(self):
+        self.assertIsNone(self.ingE.getInformation("Gesellschaft"))
+        self.assertIsNotNone(self.ingE.getInformation("Fleisch"))
+        self.assertEqual(1, len(self.ingE.getInformation("Rindfleisch")))
+        self.assertLess(1, len(self.ingE.getInformation("Fleisch")))
+    
+    def testKablsKlöße(self):
+        self.assertIsNotNone(self.ingE.getInformation("Kalbsklöße"))
+        
+    def testGetRefRindfleisch(self):
+        self.assertEqual("Rindkochfleisch", self.ingE.getRefFromInformation(self.ingE.getInformation("Rindfleisch")))
+        
+    def testGetRefZwiebel(self):
+        self.assertEqual("Zwiebel", self.ingE.getRefFromInformation(self.ingE.getInformation("Zwiebel")))
+
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']

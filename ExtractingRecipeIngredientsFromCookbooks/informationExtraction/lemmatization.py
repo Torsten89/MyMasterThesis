@@ -29,18 +29,3 @@ def findTruncatedEnd(i, tags):
                     return truncatedEnd
     
     return ""
-            
-        
-if __name__ == '__main__':
-#     "Der Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und statt Madeira kann man weißen Franzwein und etwas Rum nehmen."
-    
-    #Kartoffel-Klöße
-    #weißer Franzwein
-    #braunes Gewürz
-    s = 'Eine Stunde später gießt man die Brühe durch ein Haarsieb, weil sie nie \
-            ganz klar ist, spült das Stück Fleisch eben ab und setzt es mit der Brühe, die man \
-            vom Bodensatz langsam abschüttet, in dem ebenfalls umgespülten Topfe wieder zu Feuer \
-            nebst einigen Scorzoner-, einer Sellerie- und Petersilienwurzel'
-    print(getLemmas("braunes Gewürz"))
-    
-    
