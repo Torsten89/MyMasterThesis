@@ -581,12 +581,13 @@
                Ist das Fleisch ausgekocht und das Wurzelwerk weich, reibt man die Suppe durch ein
                Sieb, bringt sie wieder zum Kochen, würzt sie mit <cue:recipeIngredient ref="#Salz"
                   >Salz</cue:recipeIngredient>, <cue:recipeIngredient ref="#Muskatnuß"
-                  >Muskat</cue:recipeIngredient> und
-                  <cue:recipeIngredient ref="#Gewürznelken">Nelken</cue:recipeIngredient>, kocht die
+                  >Muskat</cue:recipeIngredient> und <cue:recipeIngredient ref="#Gewürznelken"
+                  >Nelken</cue:recipeIngredient>, kocht die
                   <cue:recipeIngredient>Klöße</cue:recipeIngredient> darin gahr und richtet sie an.
                In Ermangelung des <cue:recipeIngredient ref="#Hasenfleisch" altGrp="1"
-                  >Hasenfleisches</cue:recipeIngredient> sind auch <cue:recipeIngredient target="#L-6" altGrp="2"
-                  >Schwammklöße</cue:recipeIngredient> sehr gut darin <cue:alt target="1 2"/>. </p>
+                  >Hasenfleisches</cue:recipeIngredient> sind auch <cue:recipeIngredient
+                  target="#L-6" altGrp="2">Schwammklöße</cue:recipeIngredient> sehr gut darin
+                  <cue:alt target="1 2"/>. </p>
             <p>Zum Kochen gehören 1½ Stunden.</p>
 
          </cue:recipe>
@@ -594,7 +595,7 @@
          <anchor xml:id="B-21-start"/>
          <cue:recipe type="Suppen." rcp-id="B-21">
             <head>Einfache Hasensuppe, oder andere braune Suppe.</head>
-
+            
             <p>Recht viel <cue:recipeIngredient ref="#Zwiebel" quantity="recht viel"
                   >Zwiebeln</cue:recipeIngredient> werden in reichlich <cue:recipeIngredient
                   ref="#Butter">Butter</cue:recipeIngredient> braun gemacht, <cue:recipeIngredient
@@ -612,25 +613,20 @@
                gebracht, <cue:recipeIngredient>Schwammoder Griesmehl-Klößchen</cue:recipeIngredient>
                hinein gegeben, oder mit in Butter gebratenen kleinen <cue:recipeIngredient
                   ref="#WeißbrotToast">Weißbrodscheiben</cue:recipeIngredient> angerichtet. </p>
-
-
          </cue:recipe>
          <anchor xml:id="B-21-end"/>
-
+         
          <cue:recipe type="Suppen." rcp-id="B-22">
             <head>Feldhühnersuppe.</head>
-
+            
             <p>Wird wie <cue:recipeIngredient target="#Hasensuppe">Hasensuppe</cue:recipeIngredient>
                bereitet; man kann statt <cue:recipeIngredient altGrp="1"
                   >Klöße</cue:recipeIngredient> das <cue:recipeIngredient altGrp="2"
                   >Brustfleisch</cue:recipeIngredient> in feine Scheiben schneiden und in der Suppe
                   anrichten<cue:alt target="1 2"/>. </p>
-
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-23">
             <head>Krammetsvögelsuppe.</head>
-
             <p>Man rechnet auf jede Person einen
                   <cue:recipeIngredient>Krammetsvogel</cue:recipeIngredient>. Diese werden mit etwas
                   <cue:recipeIngredient ref="#Salz" quantity="etwas">Salz</cue:recipeIngredient>, in
@@ -651,12 +647,9 @@
                   >Griesmehl-Klöße</cue:recipeIngredient> darin gahr gekocht und mit dem
                Brustfleisch und Muskat angerichtet <cue:alt target="1 2"/>. </p>
             <p>Zeit des Kochens 2½ Stunden.</p>
-
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-24">
             <head>Kartoffelsuppe.</head>
-
             <p>Es wird ein Stück <cue:recipeIngredient>Fleisch</cue:recipeIngredient> mit
                   <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient> oder auch
                   <cue:recipeIngredient optional="True">Knochen</cue:recipeIngredient> von gutem
@@ -672,37 +665,31 @@
                   ref="#Sellerieblätter" altGrp="1">Sellerie-</cue:recipeIngredient> oder
                   <cue:recipeIngredient altGrp="2">Petersilienblättern</cue:recipeIngredient> hinein
                gegeben und angerichtet<cue:alt target="1 2"/>. </p>
-
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-25">
             <head>Suppe von jungen Gemüsen.</head>
-
             <p>Man läßt in einem Stich <cue:recipeIngredient ref="#Butter" quantity="1" unit="Stich"
-                  >Butter</cue:recipeIngredient>
-               <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient> anziehn, gibt so viel
-                  <cue:recipeIngredient target="#Boullion" optional="True"
-                  >Bouillon</cue:recipeIngredient> oder Wasser, als man Suppe haben will und
-                  <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient> hinzu, und läßt
-               folgende junge Gemüse, klein geschnitten, darin gahr kochen. <cue:recipeIngredient
-                  ref="#Karotte">Wurzeln</cue:recipeIngredient>, <cue:recipeIngredient
-                  ref="#Kopfsalat">Kopfsalat</cue:recipeIngredient>, <cue:recipeIngredient
-                  ref="#Spinat">Spinat</cue:recipeIngredient>, <cue:recipeIngredient
-                  ref="#Sauerampfer">Sauerampfer</cue:recipeIngredient>, <cue:recipeIngredient
-                  ref="#Portulak">Portulac</cue:recipeIngredient> und junge <cue:recipeIngredient
-                  ref="#Erbsen">Erbsen</cue:recipeIngredient>. Dann wird die Suppe mit fein
-               gehackter <cue:recipeIngredient ref="#Petersilienblatt"
-                  >Petersilie</cue:recipeIngredient> und <cue:recipeIngredient ref="#HühnereiEigelb"
-                  >Eidottern</cue:recipeIngredient> abgerührt und in <cue:recipeIngredient
-                  ref="#Butter">Butter</cue:recipeIngredient> geröstetes <cue:recipeIngredient
-                  ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient> dabei gegeben. </p>
+                  >Butter</cue:recipeIngredient><cue:recipeIngredient ref="#Mehl"
+                  >Mehl</cue:recipeIngredient> anziehn, gibt so viel <cue:recipeIngredient
+                  target="#Boullion" optional="True">Bouillon</cue:recipeIngredient> oder Wasser,
+               als man Suppe haben will und <cue:recipeIngredient ref="#Salz"
+                  >Salz</cue:recipeIngredient> hinzu, und läßt folgende junge Gemüse, klein
+               geschnitten, darin gahr kochen. <cue:recipeIngredient ref="#Karotte"
+                  >Wurzeln</cue:recipeIngredient>, <cue:recipeIngredient ref="#Kopfsalat"
+                  >Kopfsalat</cue:recipeIngredient>, <cue:recipeIngredient ref="#Spinat"
+                  >Spinat</cue:recipeIngredient>, <cue:recipeIngredient ref="#Sauerampfer"
+                  >Sauerampfer</cue:recipeIngredient>, <cue:recipeIngredient ref="#Portulak"
+                  >Portulac</cue:recipeIngredient> und junge <cue:recipeIngredient ref="#Erbsen"
+                  >Erbsen</cue:recipeIngredient>. Dann wird die Suppe mit fein gehackter
+                  <cue:recipeIngredient ref="#Petersilienblatt">Petersilie</cue:recipeIngredient>
+               und <cue:recipeIngredient ref="#HühnereiEigelb">Eidottern</cue:recipeIngredient>
+               abgerührt und in <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
+               geröstetes <cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
+               dabei gegeben. </p>
             <p>Zum Kochen dieser Suppe sind 1½ Stunden hinreichend.</p>
-
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-26">
             <head>Suppe von jungen Erbsen.</head>
-
             <p>Die <cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient> läßt man, ohne
                sie zu waschen, in einem Stück zergangener <cue:recipeIngredient ref="#Butter"
                   >Butter</cue:recipeIngredient> eine Weile schwitzen, so wie später darin nach
@@ -719,12 +706,9 @@
                   >Butter</cue:recipeIngredient> geröstetes <cue:recipeIngredient
                   ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient> dazu. </p>
             <p>Zeit des Kochens wie die vorhergehende Suppe.</p>
-
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-27">
             <head>Suppe von zu hart gewordenen Erbsen.</head>
-
             <p>Diese lassen sich am besten zur Suppe benutzen. Man setzt sie mit einem guten Stück
                   <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient> und weichem
                kochenden Wasser zu Feuer, läßt sie weich kochen und rührt sie durch ein Sieb. Die
@@ -736,12 +720,10 @@
                gehackte <cue:recipeIngredient ref="#Petersilienblatt"
                   >Petersilie</cue:recipeIngredient> durch. </p>
             <p>Zum Kochen gehören 2 Stunden.</p>
-
          </cue:recipe>
          <anchor xml:id="B-28-start"/>
          <cue:recipe type="Suppen." rcp-id="B-28">
             <head>Suppe von getrockneten Erbsen.</head>
-
             <p>Man muß die <cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>, je
                nachdem sie gut sind, 2 auch wohl 3 Stunden vor dem Anrichten zu Feuer bringen und
                zwei Mal, jedes Mal nach einer halben Stunde Kochens abschütten und mit frischem,
@@ -770,7 +752,6 @@
                   ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient> dabei gegeben. </p>
             <p>Die Suppe muß zwar nicht dick, aber sehr gebunden sein. Ist dies nicht der Fall, kann
                man sich mit in Butter angezogenem Mehl helfen. </p>
-
             <note>Anmerk. Hat man Erbsen, die nicht weich werden, so gibt man eine weiße Bohne groß
                gereinigte Pottasche zu denselben. Auch befördert ein Stück Glas von einer Flasche,
                gleich mit den Erbsen zu Feuer gesetzt, einigermaßen das Weichwerden. So auch das
@@ -781,7 +762,6 @@
          <anchor xml:id="B-28-end"/>
          <cue:recipe type="Suppen." rcp-id="B-29">
             <head>Weiße Bohnensuppe.</head>
-
             <p>Wird wie <ref target="B-28">Erbsensuppe</ref> gekocht. Hat man feinschalige
                   <cue:recipeIngredient ref="#Bohnen">Bohnen</cue:recipeIngredient>, kann man sie
                nach Belieben in der Suppe ganz lassen. Es gehört dann mit <cue:recipeIngredient
@@ -790,12 +770,9 @@
                   >Pfeffer</cue:recipeIngredient> und viel <cue:recipeIngredient ref="#Porree"
                   >Purree</cue:recipeIngredient> darin, <cue:recipeIngredient ref="#Zwiebel"
                   dontUse="True">Zwiebeln</cue:recipeIngredient> können dagegen weg bleiben. </p>
-
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-30">
             <head>Linsensuppe.</head>
-
             <p>Auch diese wird wie <ref target="B-28">Erbsensuppe</ref> mit einer
                   <cue:recipeIngredient ref="#Mettwurst" quantity="1" altGrp="1"
                   >Mettwurst</cue:recipeIngredient> oder einem Stück <cue:recipeIngredient
@@ -807,12 +784,9 @@
                die Suppe damit gebunden zu machen. Es wird feiner <cue:recipeIngredient ref="#Essig"
                   >Essig</cue:recipeIngredient> dazu gereicht. </p>
             <p>Die Zeit des Kochens wie bei der Erbsensuppe.</p>
-
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-31">
             <head>Sauerampfersuppe.</head>
-
             <p>Es wird <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient> mit reichlich
                frischer <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient> gelb
                gemacht, ein guter Theil abgestreifte und gewaschene <cue:recipeIngredient
@@ -827,12 +801,9 @@
                   altGrp="2">Eierklößchen</cue:recipeIngredient> darin gemacht <cue:alt target="1 2"
                />. </p>
             <p>Zum Kochen gehören ¾ Stunden.</p>
-
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-32">
             <head>Kerbelsuppe für Kranke passend.</head>
-
             <p><cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient> und
                   <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient> wird gelb gemacht,
                mit <cue:recipeIngredient target="#Boullion"
@@ -845,12 +816,9 @@
                angerichtet. Letzteres bleibt für Kranke weg und statt des Mehls kann man die Suppe
                mit Weißbrod gebunden machen. </p>
             <p>Gleichfalls ¾ Stunden.</p>
-
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-33">
             <head>Kräutersuppe.</head>
-
             <p>Man nehme von <cue:recipeIngredient ref="#Sauerampfer"
                   >Sauerampfer</cue:recipeIngredient>, <cue:recipeIngredient ref="#Portulak"
                   >Portulac</cue:recipeIngredient>, <cue:recipeIngredient ref="#Basilikum"
@@ -874,12 +842,10 @@
                und die Suppe mit <cue:recipeIngredient ref="#HühnereiEigelb">
                   Eidottern</cue:recipeIngredient> abgerührt. </p>
             <p>Deßgleichen ¾ Stunden.</p>
-
          </cue:recipe>
-
+         <anchor xml:id="B-34-start"/>
          <cue:recipe type="Suppen." rcp-id="B-34">
             <head>Weiße Weinsuppe.</head>
-
             <p>Zwei Eßlöffel <cue:recipeIngredient ref="#Stärke" quantity="2" unit="EL" altGrp="1"
                   >Stärke</cue:recipeIngredient> oder feines <cue:recipeIngredient ref="#Mehl"
                   altGrp="2">Mehl</cue:recipeIngredient><cue:alt target="1 2"/>, 6
@@ -901,395 +867,538 @@
                   ref="#Zwieback">Zwieback</cue:recipeIngredient> dabei. Diese Portion ist für
                   <cue:recipeYield atLeast="8" atMost="10" unit="people">8—10
                   Personen</cue:recipeYield> hinreichend. </p>
-
          </cue:recipe>
-
+         <anchor xml:id="B-34-end"/>
          <cue:recipe type="Suppen." rcp-id="B-35">
             <head>Schaumsuppe von weißem Wein.</head>
-
-            <p>Zu dem angegebenen Verhältniß (Nro. 34) nimmt man die ganzen Eier und die Hälfte des
-               Mehls und schlägt Alles über starkem Feuer mit einem Schaumbesen, bis vor dem Kochen,
-               weil durch das Kochen augenblicklich der Schaum vergeht und die Suppe gerinnt. </p>
-
+            <p>Zu dem angegebenen <ref target="#B-34">Verhältniß</ref> (Nro. 34) nimmt man die
+               ganzen <cue:recipeIngredient ref="#Ei">Eier</cue:recipeIngredient> und die Hälfte des
+                  <cue:recipeIngredient ref="#Mehl" quantity="die Hälfte"
+                  >Mehls</cue:recipeIngredient> und schlägt Alles über starkem Feuer mit einem
+               Schaumbesen, bis vor dem Kochen, weil durch das Kochen augenblicklich der Schaum
+               vergeht und die Suppe gerinnt. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-36">
             <head>Sagosuppe mit rothem Wein.</head>
-
-            <p>Der Sago wird zwei Mal mit heißem Wasser abgebrüht, mit kaltem, weichem Wasser zu
-               Feuer gebracht und mit einigen Zitronenscheiben weich gekocht, welches etwa 2 Stunden
-               dauert. Dann gibt man eben so viel rothen Wein, als man Suppe hat, dazu, versüßt sie
-               gehörig mit Zucker, läßt sie eben zum Kochen kommen und richtet sie mit etwas feinem
-               Zimmet an. Man gibt Bisquit oder frischen Zwieback dabei. </p>
-
+            <p>Der <cue:recipeIngredient ref="#Sago">Sago</cue:recipeIngredient> wird zwei Mal mit
+               heißem Wasser abgebrüht, mit kaltem, weichem Wasser zu Feuer gebracht und mit einigen
+                  <cue:recipeIngredient ref="#Zitrone" quantity="einige" unit="Scheibe"
+                  >Zitronenscheiben</cue:recipeIngredient> weich gekocht, welches etwa 2 Stunden
+               dauert. Dann gibt man eben so viel rothen <cue:recipeIngredient ref="#Rotwein"
+                  >Wein</cue:recipeIngredient>, als man Suppe hat, dazu, versüßt sie gehörig mit
+                  <cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>, läßt sie eben
+               zum Kochen kommen und richtet sie mit etwas feinem <cue:recipeIngredient ref="#Zimt"
+                  quantity="etwas">Zimmet</cue:recipeIngredient> an. Man gibt <cue:recipeIngredient
+                  ref="#Biskuit" altGrp="1">Bisquit</cue:recipeIngredient> oder frischen
+                  <cue:recipeIngredient ref="#Zwieback" altGrp="2">Zwieback</cue:recipeIngredient>
+                  dabei<cue:alt target="1 2"/>. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-37">
             <head>Suppe von Perlgerste (Graupen) mit weißem Wein.</head>
-
-            <p>Die Gerste wird in’s kochende Wasser geschüttet, mit etwas frischer Butter und
-               einigen Zitronenscheiben, wodurch sie weißer und schneller weich wird, gahr gekocht.
-               Eine Stunde vorher gibt man gewaschene Rosinen dazu und beim Anrichten Salz, Zimmet,
-               Wein und Zucker, und rührt die Suppe mit 1—2 Eidottern ab. </p>
-
+            <p>Die <cue:recipeIngredient ref="#Perlgraupen">Gerste</cue:recipeIngredient> wird in’s
+               kochende Wasser geschüttet, mit etwas frischer <cue:recipeIngredient ref="#Butter"
+                  quantity="etwas">Butter</cue:recipeIngredient> und einigen <cue:recipeIngredient
+                  ref="#Zitrone" quantity="einige" unit="Scheibe"
+                  >Zitronenscheiben</cue:recipeIngredient>, wodurch sie weißer und schneller weich
+               wird, gahr gekocht. Eine Stunde vorher gibt man gewaschene <cue:recipeIngredient
+                  ref="#Rosinen">Rosinen</cue:recipeIngredient> dazu und beim Anrichten
+                  <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>,
+                  <cue:recipeIngredient ref="#Zimt">Zimmet</cue:recipeIngredient>,
+                  <cue:recipeIngredient ref="#Rotwein">Wein</cue:recipeIngredient> und
+                  <cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>, und rührt die
+               Suppe mit 1—2 <cue:recipeIngredient ref="#HühnereiEigelb" atLeast="1" atMost="2"
+                  >Eidottern</cue:recipeIngredient> ab. </p>
             <note>Anmerk. Auch ohne Wein ist dies eine angenehme Suppe; dann aber muß man, nachdem
                die Gerste eine Stunde gekocht hat, für 6—8 Personen eine ganze in Scheiben
                geschnittene Zitrone ohne Kerne hinein geben und eine Stunde vor dem Anrichten
                reichlicher Rosinen. </note>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-38">
             <head>Eine sehr angenehme Suppe von grober Gerste.</head>
-
-            <p>Es wird ein Pfund grobe Gerste mit einem Stückchen frischer Butter, einigen Stückchen
-               Zimmet und wenig kaltem Wasser zu Feuer gesetzt, nach und nach ein Guß kaltes Wasser
-               dazu gegeben und recht weich gekocht, welches, jenachdem die Gerste sich gut kocht,
-               1½—2 Stunden Zeit erfordert. Dann wird die Suppe scharf durch ein Sieb gerührt,
-               wobei, während des Durchrührens etwas Wasser über die Gerste geschüttet wird, um
-               alles Sämige der Suppe zuzuwenden. Darnach werden ½ Pfund gut gewaschene Rosinen in
-               der Suppe weich gekocht, welches etwa ¾ Stunde dauert, doch kann man diese nach
-               Belieben auch schon früher allein kochen, die Suppe alsdann nach dem Durchrühren zum
-               Kochen bringen und die Rosinen sammt der Brühe dazu schütten. Die Suppe muß recht
-               sämig, doch ja nicht zu dick sein. Etwas Salz darf nicht vergessen werden. Beim
-               Anrichten werden 2 frische Eidotter mit ¼ Maß weißem Wein angerührt und die kochende
-               Suppe nach und nach dazu gerührt. Diese Portion ist auf 8 Personen berechnet. </p>
-
+            <p>Es wird ein Pfund grobe <cue:recipeIngredient ref="#Gerste" quantity="1" unit="Pfund"
+                  >Gerste</cue:recipeIngredient> mit einem Stückchen frischer <cue:recipeIngredient
+                  ref="#Butter">Butter</cue:recipeIngredient>, einigen Stückchen
+                  <cue:recipeIngredient ref="#Zimt">Zimmet</cue:recipeIngredient> und wenig kaltem
+               Wasser zu Feuer gesetzt, nach und nach ein Guß kaltes Wasser dazu gegeben und recht
+               weich gekocht, welches, jenachdem die Gerste sich gut kocht, 1½—2 Stunden Zeit
+               erfordert. Dann wird die Suppe scharf durch ein Sieb gerührt, wobei, während des
+               Durchrührens etwas Wasser über die Gerste geschüttet wird, um alles Sämige der Suppe
+               zuzuwenden. Darnach werden ½ Pfund gut gewaschene <cue:recipeIngredient
+                  ref="#Rosinen">Rosinen</cue:recipeIngredient> in der Suppe weich gekocht, welches
+               etwa ¾ Stunde dauert, doch kann man diese nach Belieben auch schon früher allein
+               kochen, die Suppe alsdann nach dem Durchrühren zum Kochen bringen und die Rosinen
+               sammt der Brühe dazu schütten. Die Suppe muß recht sämig, doch ja nicht zu dick sein.
+               Etwas <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient> darf nicht
+               vergessen werden. Beim Anrichten werden 2 frische <cue:recipeIngredient
+                  ref="#HühnereiEigelb" quantity="2">Eidotter</cue:recipeIngredient> mit ¼ Maß
+               weißem <cue:recipeIngredient ref="#Weißwein" quantity="0,25" unit="Maß"
+                  >Wein</cue:recipeIngredient> angerührt und die kochende Suppe nach und nach dazu
+               gerührt. Diese Portion ist auf <cue:recipeYield quantity="8" unit="people">8
+                  Personen</cue:recipeYield> berechnet. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-39">
             <head>Griesmehlsuppe mit Korinthen und Wein.</head>
-
-            <p>Zu 1¼ Maß Wasser nehme man 3 Loth Griesmehl, 3 Loth Zucker, 3 Loth Korinthen, einen
-               gehäuften Theelöffel Salz, ½ Tasse weißen Wein und 1 Eidotter. Das Wasser wird kalt
-               mit den gewaschenen Korinthen, einer großen Bohne dick Butter und einem Stückchen
-               Zimmet von der Länge eines halben Fingers, zu Feuer gesetzt und wenn es kocht, das
-               Griesmehl langsam hinein gestreut, Zucker und Salz dazu gegeben und zugedeckt so
-               lange, doch nicht zu stark, gekocht, bis das Griesmehl sich nicht mehr senkt. Dann
-               wird das Eidotter mit etwas Wein angerührt, der übrige zur Suppe geschüttet und das
+            <p>Zu 1¼ Maß Wasser nehme man 3 Loth <cue:recipeIngredient ref="#Griesmehl" quantity="3"
+                  unit="Loth">Griesmehl</cue:recipeIngredient>, 3 Loth <cue:recipeIngredient
+                  quantity="3" unit="Loth">Zucker</cue:recipeIngredient>, 3 Loth
+                  <cue:recipeIngredient ref="#Rosinen" quantity="3" unit="Loth"
+                  >Korinthen</cue:recipeIngredient>, einen gehäuften Theelöffel
+                  <cue:recipeIngredient quantity="1" unit="Teelöffel">Salz</cue:recipeIngredient>, ½
+               Tasse weißen <cue:recipeIngredient ref="#Weißwein" quantity="0,5" unit="Tasse"
+                  >Wein</cue:recipeIngredient> und 1 <cue:recipeIngredient ref="#HühnereiEigelb"
+                  quantity="1">Eidotter</cue:recipeIngredient>. Das Wasser wird kalt mit den
+               gewaschenen Korinthen, einer großen <cue:recipeIngredient ref="#Bohnen" quantity="1"
+                  >Bohne</cue:recipeIngredient> dick <cue:recipeIngredient ref="#Butter"
+                  >Butter</cue:recipeIngredient> und einem Stückchen <cue:recipeIngredient
+                  ref="#Zimt">Zimmet</cue:recipeIngredient> von der Länge eines halben Fingers, zu
+               Feuer gesetzt und wenn es kocht, das Griesmehl langsam hinein gestreut,
+                  <cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient> und
+                  <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient> dazu gegeben und
+               zugedeckt so lange, doch nicht zu stark, gekocht, bis das Griesmehl sich nicht mehr
+               senkt. Dann wird das <cue:recipeIngredient ref="#HühnereiEigelb"
+                  >Eidotter</cue:recipeIngredient> mit etwas <cue:recipeIngredient quantity="etwas"
+                  >Wein</cue:recipeIngredient> angerührt, der übrige zur Suppe geschüttet und das
                Eidotter allgemach dazu gerührt. </p>
-            <p>Es ist diese Portion auf zwei Personen berechnet.</p>
-            <p>Auch Rosinen sind in dieser Suppe recht angenehm; diese aber müssen vor dem
-               Einstreuen des Griesmehles eine Weile kochen, weil sie oft ¾—1 Stunde Kochens
-               bedürfen. </p>
-
+            <p>Es ist diese Portion auf <cue:recipeYield quantity="2" unit="people">zwei
+                  Personen</cue:recipeYield> berechnet.</p>
+            <p>Auch <cue:recipeIngredient ref="#Rosinen" optional="True"
+                  >Rosinen</cue:recipeIngredient> sind in dieser Suppe recht angenehm; diese aber
+               müssen vor dem Einstreuen des Griesmehles eine Weile kochen, weil sie oft ¾—1 Stunde
+               Kochens bedürfen. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-40">
             <head>Schaumbiersuppe.</head>
-
-            <p>Ein Maß Bier, eben so viel Wasser, 2 Eßlöffel feines Mehl, 4 ganze Eier, Zucker,
-               Zitronenscheiben und Zimmet nach Geschmack, schlägt man mit einem Schaumbesen über
-               starkem Feuer bis vor dem Kochen, und schüttet es schnell in die Suppenterrine. Man
-               gibt Zwieback dazu. </p>
-
+            <p>Ein Maß <cue:recipeIngredient ref="#Bier" quantity="1" unit="Maß"
+                  >Bier</cue:recipeIngredient>, eben so viel Wasser, 2 Eßlöffel feines
+                  <cue:recipeIngredient quantity="2" unit="EL">Mehl</cue:recipeIngredient>, 4 ganze
+                  <cue:recipeIngredient ref="#Ei" quantity="4">Eier</cue:recipeIngredient>,
+                  <cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>,
+                  <cue:recipeIngredient ref="#Zitrone" unit="Scheibe"
+                  >Zitronenscheiben</cue:recipeIngredient> und <cue:recipeIngredient ref="#Zimt"
+                  optional="True">Zimmet</cue:recipeIngredient> nach Geschmack, schlägt man mit
+               einem Schaumbesen über starkem Feuer bis vor dem Kochen, und schüttet es schnell in
+               die Suppenterrine. Man gibt <cue:recipeIngredient ref="#Zwieback"
+                  >Zwieback</cue:recipeIngredient> dazu. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-41">
             <head>Biersuppe mit Rosinen.</head>
-
-            <p>Man kocht reichlich Rosinen mit Wasser und Weißbrod so lange, bis erstere weich sind.
-               Dann schüttet man so viel Bier hinzu, daß es recht kräftig schmeckt, versüßt es mit
-               Zucker, und gibt, wenn es kocht, nach Portion der Suppe ½—1 Eßlöffel voll mit Wasser
-               angerührtes Mehl hinzu und rührt die Suppe mit einigen Eidottern und etwas Zimmet ab.
-               Sie darf weder zu dünn, noch zu dicklich sein. </p>
-            <p>In Ermangelung der Eier rühre man das Mehl mit guter Sahne oder auch mit Milch an. </p>
-
+            <p>Man kocht reichlich <cue:recipeIngredient ref="#Rosinen"
+                  >Rosinen</cue:recipeIngredient> mit Wasser und <cue:recipeIngredient
+                  ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient> so lange, bis erstere weich
+               sind. Dann schüttet man so viel <cue:recipeIngredient ref="#Bier"
+                  >Bier</cue:recipeIngredient> hinzu, daß es recht kräftig schmeckt, versüßt es mit
+                  <cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>, und gibt, wenn
+               es kocht, nach Portion der Suppe ½—1 Eßlöffel voll mit Wasser angerührtes
+                  <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient> hinzu und rührt die
+               Suppe mit einigen <cue:recipeIngredient ref="#HühnereiEigelb" quantity="einige"
+                  >Eidottern</cue:recipeIngredient> und etwas <cue:recipeIngredient ref="#Zimt"
+                  quantity="etwas">Zimmet</cue:recipeIngredient> ab. Sie darf weder zu dünn, noch zu
+               dicklich sein. </p>
+            <p>In Ermangelung der <cue:recipeIngredient ref="#Ei" altGrp="1"
+                  >Eier</cue:recipeIngredient> rühre man das <cue:recipeIngredient ref="#Mehl"
+                  altGrp="2">Mehl</cue:recipeIngredient> mit guter <cue:recipeIngredient
+                  ref="#Sahne" altGrp="2">Sahne</cue:recipeIngredient> oder auch mit
+                  <cue:recipeIngredient ref="#Kuhmilch" altGrp="2">Milch</cue:recipeIngredient>
+                  an<cue:alt target="1 2"/>. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-42">
             <head>Schnell gemachte Biersuppe.</head>
-
-            <p>Auf jede Person rechne man ¼ Maß Wasser, eben so viel Bier, lasse es kochen, gebe den
-               nöthigen Zucker und eine Messerspitze Salz hinzu. Dann rühre man 1 Eidotter und einen
-               gehäuften Theelöffel Kartoffelmehl zusammen mit etwas kaltem Wasser an, gebe unter
-               beständigem Rühren nach und nach etwas von dem kochenden Bier hinzu und gieße solches
+            <p>Auf jede Person rechne man ¼ Maß Wasser, eben so viel <cue:recipeIngredient
+                  ref="#Bier" quantity="0.25" unit="Maß">Bier</cue:recipeIngredient>, lasse es
+               kochen, gebe den nöthigen <cue:recipeIngredient ref="#Zucker"
+                  >Zucker</cue:recipeIngredient> und eine Messerspitze <cue:recipeIngredient
+                  ref="#Salz" quantity="1" unit="Messerspitze">Salz</cue:recipeIngredient> hinzu.
+               Dann rühre man 1 <cue:recipeIngredient ref="#HühnereiEigelb" quantity="1"
+                  >Eidotter</cue:recipeIngredient> und einen gehäuften Theelöffel
+                  <cue:recipeIngredient ref="#Kartoffelstärkemehl" quantity="1" unit="Teelöffel"
+                  >Kartoffelmehl</cue:recipeIngredient> zusammen mit etwas kaltem Wasser an, gebe
+               unter beständigem Rühren nach und nach etwas von dem kochenden <cue:recipeIngredient
+                  ref="#Bier" quantity="etwas">Bier</cue:recipeIngredient> hinzu und gieße solches
                hinein, indem man die Suppe gut durchrührt, den Topf vom Feuer nimmt und noch eine
                kleine Weile rührt, welches das Gerinnen verhütet. </p>
-            <p>Nach Belieben kann man das Eiweiß mit Zucker zu Schnee schlagen, solches mit einem
-               Löffel abstechen, auf die angerichtete Suppe legen und mit Zucker und Zimmet
+            <p>Nach Belieben kann man das <cue:recipeIngredient ref="#Eiweiß" optional="True"
+                  >Eiweiß</cue:recipeIngredient> mit <cue:recipeIngredient ref="#Zucker"
+                  optional="True">Zucker</cue:recipeIngredient> zu Schnee schlagen, solches mit
+               einem Löffel abstechen, auf die angerichtete Suppe legen und mit
+                  <cue:recipeIngredient ref="#Zucker" optional="True">Zucker</cue:recipeIngredient>
+               und <cue:recipeIngredient ref="#Zimt" optional="True">Zimmet</cue:recipeIngredient>
                bestreuen. </p>
-
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-43">
             <head>Biersuppe mit Brod.</head>
-
-            <p>Halb Schwarz-, halb Weißbrod wird mit wenig Wasser ganz weich gekocht, durch ein Sieb
-               gerührt, Korinthen, Zitronenscheiben, Bier und Zucker hinein gegeben, und wenn die
-               Korinthen weich sind, mit Eidotter abgerührt. </p>
-
+            <p>Halb <cue:recipeIngredient ref="#Vollkornschrotbrot">Schwarz-</cue:recipeIngredient>,
+               halb <cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient> wird
+               mit wenig Wasser ganz weich gekocht, durch ein Sieb gerührt, <cue:recipeIngredient
+                  ref="#Rosinen">Korinthen</cue:recipeIngredient>, <cue:recipeIngredient
+                  ref="#Zitrone" unit="Scheibe">Zitronenscheiben</cue:recipeIngredient>,
+                  <cue:recipeIngredient ref="#Bier">Bier</cue:recipeIngredient> und
+                  <cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient> hinein gegeben,
+               und wenn die Korinthen weich sind, mit <cue:recipeIngredient ref="#HühnereiEigelb"
+                  >Eidotter</cue:recipeIngredient> abgerührt. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-44">
             <head>Biersuppe mit Milch.</head>
-
             <p>Es wird besonders beim Kochen dieser Suppe angenehm sein, sich nach einem genau
                angegebenen Verhältniß richten zu können, weßhalb ich solches hier mittheile. </p>
-            <p>Man nehme also für 2—3 Personen ½ Maß Milch mit der Sahne, ½ Maß Wasser, ¼ Maß gutes,
-               starkes, jedoch kein bitteres Bier, 4 Loth Korinthen, 1½ Loth feines Mehl, 2 Loth
-               Zucker, ½ Theelöffel Salz und ein frisches Eidotter. Es wird dies Alles ohne Ei und
-               Salz in einem tiefen Topf auf sehr starkem Feuer bis vor dem Kochen ohne Aufhören
-               stark gerührt, dann der Topf schnell vom Feuer genommen, die Suppe noch einige
-               Minuten gerührt, weil sie sonst leicht gerinnt, Salz dazu gegeben und mit dem
-               Eidotter und etwas feinem Zimmet abgerührt. </p>
+            <p>Man nehme also für <cue:recipeYield atLeast="2" atMost="3" unit="people">2—3
+                  Personen</cue:recipeYield> ½ Maß <cue:recipeIngredient ref="#Kuhmilch"
+                  quantity="0.5" unit="Maß">Milch</cue:recipeIngredient> mit der
+                  <cue:recipeIngredient ref="#Sahne">Sahne</cue:recipeIngredient>, ½ Maß Wasser, ¼
+               Maß gutes, starkes, jedoch kein bitteres <cue:recipeIngredient ref="#Bier"
+                  quantity="0.25" unit="Maß">Bier</cue:recipeIngredient>, 4 Loth
+                  <cue:recipeIngredient ref="#Rosinen" quantity="4" unit="Loth"
+                  >Korinthen</cue:recipeIngredient>, 1½ Loth feines <cue:recipeIngredient
+                  ref="#Mehl" quantity="1.5" unit="Loth">Mehl</cue:recipeIngredient>, 2 Loth
+                  <cue:recipeIngredient ref="#Zucker" quantity="2" unit="Loth"
+                  >Zucker</cue:recipeIngredient>, ½ Theelöffel <cue:recipeIngredient ref="#Salz"
+                  quantity="0.5" unit="Teelöffel">Salz</cue:recipeIngredient> und ein frisches
+                  <cue:recipeIngredient ref="#HühnereiEigelb" quantity="1"
+                  >Eidotter</cue:recipeIngredient>. Es wird dies Alles ohne Ei und Salz in einem
+               tiefen Topf auf sehr starkem Feuer bis vor dem Kochen ohne Aufhören stark gerührt,
+               dann der Topf schnell vom Feuer genommen, die Suppe noch einige Minuten gerührt, weil
+               sie sonst leicht gerinnt, Salz dazu gegeben und mit dem Eidotter und etwas feinem
+                  <cue:recipeIngredient ref="#Zimt" quantity="etwas">Zimmet</cue:recipeIngredient>
+               abgerührt. </p>
             <p>Hat man keine Zeit, die Suppe gehörig zu rühren, ohne welches sie gerinnt, so lasse
                man Wasser, Bier, Korinthen und Mehl kochen, die Milch besonders zum Kochen kommen,
                nehme beides vom Feuer, mische es unter einander und rühre die Suppe mit dem Eidotter
                ab. </p>
-            <p>In Ermangelung eines Eis, was übrigens sehr dazu gehört, muß man reichlicher Milch
-               und so viel weniger Wasser und auch eine Kleinigkeit Mehl mehr nehmen. Uebrigens
-               versteht es sich von selbst, daß das Verhältniß dieser Flüssigkeiten zu einander vom
-               eigenen Gutdünken abhängt und also zu dieser Suppe mehr Milch oder Bier genommen
-               werden kann, wenn man nur dabei beachten wolle, daß zu 2¼ Maß Flüssigem 1½ Loth
-               feines Mehl und 1 Eidotter hinreichend sind. </p>
-            <p>Es wird zu dieser Suppe Zwieback oder in Butter geröstetes Weißbrod gegeben. </p>
-
+            <p>In Ermangelung eines <cue:recipeIngredient ref="#Ei" altGrp="1"
+                  >Eis</cue:recipeIngredient>, was übrigens sehr dazu gehört, muß man reichlicher
+                  <cue:recipeIngredient ref="#Kuhmilch" altGrp="2">Milch</cue:recipeIngredient> und
+               so viel weniger Wasser und auch eine Kleinigkeit <cue:recipeIngredient ref="#Mehl"
+                  altGrp="2">Mehl</cue:recipeIngredient> mehr nehmen <cue:alt target="1 2"/>.
+               Uebrigens versteht es sich von selbst, daß das Verhältniß dieser Flüssigkeiten zu
+               einander vom eigenen Gutdünken abhängt und also zu dieser Suppe mehr Milch oder Bier
+               genommen werden kann, wenn man nur dabei beachten wolle, daß zu 2¼ Maß Flüssigem 1½
+               Loth feines Mehl und 1 Eidotter hinreichend sind. </p>
+            <p>Es wird zu dieser Suppe <cue:recipeIngredient ref="#Zwieback"
+                  >Zwieback</cue:recipeIngredient> oder in <cue:recipeIngredient ref="#Butter"
+                  >Butter</cue:recipeIngredient> geröstetes <cue:recipeIngredient
+                  ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient> gegeben. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-45">
             <head>Milchsuppe.</head>
-
-            <p>Ein Maß Milch, einen Eßlöffel voll Stärke oder Kartoffelmehl, Zitronenschale oder
-               auch ein Paar frische Pfirsichblätter, Zucker, 2 Eidotter, etwas Salz, über starkem
-               Feuer fortwährend stark gerührt, bis es kocht, dann in die Terrine geschüttet, von
-               dem zu Schaum geschlagenen Eiweiß Klößchen auf die Suppe gelegt, solche mit Zucker
-               und Zimmet bestreut und schnell zugedeckt. </p>
-
+            <p>Ein Maß <cue:recipeIngredient ref="#Kuhmilch" quantity="1" unit="Maß"
+                  >Milch</cue:recipeIngredient>, einen Eßlöffel voll <cue:recipeIngredient
+                  ref="#Stärke" quantity="1" unit="EL" altGrp="1">Stärke</cue:recipeIngredient> oder
+                  <cue:recipeIngredient ref="#Kartoffelstärkemehl" altGrp="2"
+                  >Kartoffelmehl</cue:recipeIngredient><cue:alt target="1 2"/>,
+                  <cue:recipeIngredient ref="#Zitrone">Zitronenschale</cue:recipeIngredient> oder
+               auch ein Paar frische <cue:recipeIngredient ref="#Pfirsich" optional="True"
+                  >Pfirsichblätter</cue:recipeIngredient>, <cue:recipeIngredient ref="#Zucker"
+                  >Zucker</cue:recipeIngredient>, 2 <cue:recipeIngredient ref="#HühnereiEigelb"
+                  quantity="2">Eidotter</cue:recipeIngredient>, etwas <cue:recipeIngredient
+                  ref="#Salz" quantity="etwas">Salz</cue:recipeIngredient>, über starkem Feuer
+               fortwährend stark gerührt, bis es kocht, dann in die Terrine geschüttet, von dem zu
+               Schaum geschlagenen Eiweiß Klößchen auf die Suppe gelegt, solche mit
+                  <cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient> und
+                  <cue:recipeIngredient ref="#Zimt">Zimmet</cue:recipeIngredient> bestreut und
+               schnell zugedeckt. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-46">
             <head>Griesmehlsuppe mit Milch.</head>
-
-            <p>Am wohlschmeckendsten wird diese Suppe, wenn man das Griesmehl mit der kalten Milch
-               und etwas Salz über starkem Feuer rührt, bis sie gehörig kocht, und dann mit Zucker
-               und Zimmet anrichtet. Hat man dazu keine Zeit, wird das Griesmehl in die kochende
-               Milch gestreut und gekocht, bis es sich nicht mehr senkt. </p>
-
+            <p>Am wohlschmeckendsten wird diese Suppe, wenn man das <cue:recipeIngredient
+                  ref="#Griesmehl">Griesmehl</cue:recipeIngredient> mit der kalten
+                  <cue:recipeIngredient ref="#Kuhmilch">Milch</cue:recipeIngredient> und etwas
+                  <cue:recipeIngredient ref="#Salz" quantity="etwas">Salz</cue:recipeIngredient>
+               über starkem Feuer rührt, bis sie gehörig kocht, und dann mit <cue:recipeIngredient
+                  ref="#Zucker">Zucker </cue:recipeIngredient>und <cue:recipeIngredient ref="#Zimt"
+                  >Zimmet</cue:recipeIngredient> anrichtet. Hat man dazu keine Zeit, wird das
+               Griesmehl in die kochende Milch gestreut und gekocht, bis es sich nicht mehr senkt.
+            </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-47">
             <head>Nudelnsuppe mit Milch.</head>
-
             <p>Wird wie Griesmehlsuppe gekocht. (Nro. 46.)</p>
-
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-48">
             <head>Reissuppe mit Milch.</head>
-
-            <p>Der Reis muß 1—1¼ Stunden kochen, wird mit kaltem Wasser zu Feuer gesetzt, und wenn
-               er ganz heiß ist, abgeschüttet, weil mancher Reis etwas Säuerliches hat, wodurch die
-               Milch gerinnt. Dann läßt man zwei Theile frische Milch mit einem Theil Wasser
-               zusammen kochen, schüttet den Reis mit einigen Stückchen Zimmet hinein und läßt die
-               Suppe etwas sämig kochen. Beim Anrichten gibt man wenig Salz und nach Belieben etwas
-               Zucker dazu. Man kann die Suppe auch durch ein wenig Kartoffelmehl gebunden machen
-               und dagegen etwas Reis weniger nehmen. </p>
-
+            <p>Der <cue:recipeIngredient ref="#Reis">Reis</cue:recipeIngredient> muß 1—1¼ Stunden
+               kochen, wird mit kaltem Wasser zu Feuer gesetzt, und wenn er ganz heiß ist,
+               abgeschüttet, weil mancher Reis etwas Säuerliches hat, wodurch die Milch gerinnt.
+               Dann läßt man zwei Theile frische Milch mit einem Theil Wasser zusammen kochen,
+               schüttet den Reis mit einigen Stückchen <cue:recipeIngredient ref="#Zimt"
+                  >Zimmet</cue:recipeIngredient> hinein und läßt die Suppe etwas sämig kochen. Beim
+               Anrichten gibt man wenig <cue:recipeIngredient ref="#Salz"
+                  >Salz</cue:recipeIngredient> und nach Belieben etwas <cue:recipeIngredient
+                  ref="#Zucker" optional="True">Zucker</cue:recipeIngredient> dazu. Man kann die
+               Suppe auch durch ein wenig <cue:recipeIngredient ref="#Kartoffelstärkemehl"
+                  >Kartoffelmehl</cue:recipeIngredient> gebunden machen und dagegen etwas Reis
+               weniger nehmen. </p>
             <note>Anmerk. Das Wasser, auf diese Weise mit der Milch vorher zusammen gekocht, gibt
                der Suppe durchaus keinen wässerigen Geschmack. </note>
          </cue:recipe>
-
+         <anchor xml:id="B-49-sart"/>
          <cue:recipe type="Suppen." rcp-id="B-49">
             <head>Suppe von feiner Gerste (Graupen).</head>
-
-            <p>Ungefähr zwei Stunden muß die Gerste zu Feuer sein. Sie wird mit etwas Butter in
-               wenig weiches kochendes Wasser gegeben, kurz eingekocht, frische Milch hinzu
-               geschüttet und zu einer sämigen Suppe gekocht. Salz, Zucker und Zimmet darf nicht
-               darin fehlen. </p>
-
+            <p>Ungefähr zwei Stunden muß die <cue:recipeIngredient ref="#Perlgraupen"
+                  >Gerste</cue:recipeIngredient> zu Feuer sein. Sie wird mit etwas
+                  <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient> in wenig weiches
+               kochendes Wasser gegeben, kurz eingekocht, frische <cue:recipeIngredient
+                  ref="#Kuhmilch">Milch</cue:recipeIngredient> hinzu geschüttet und zu einer sämigen
+               Suppe gekocht. <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>,
+                  <cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient> und
+                  <cue:recipeIngredient ref="#Zimt">Zimmet</cue:recipeIngredient> darf nicht darin
+               fehlen. </p>
          </cue:recipe>
-
+         <anchor xml:id="B-49-end"/>
          <cue:recipe type="Suppen." rcp-id="B-50">
             <head>Suppe von echtem Sago mit Milch.</head>
-
-            <p>Wird wie Suppe von feiner Gerste (Nro. 49) gekocht.</p>
-
+            <p>Wird wie Suppe von feiner <cue:recipeIngredient ref="#Gerste"
+                  >Gerste</cue:recipeIngredient><ref target="B-49">(Nro. 49)</ref> gekocht.</p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-51">
             <head>Suppe von Kartoffelsago mit Milch.</head>
-
-            <p>Derselbe wird in die kochende Milch gegeben, weil er sich sonst ganz auflösen würde,
-               zugleich rührt man etwas Kartoffelmehl und Salz durch, und nachdem er ½ Stunde
-               gekocht, die Suppe nach Belieben mit Zucker und Zimmet ab. </p>
-
+            <p>Derselbe wird in die kochende <cue:recipeIngredient ref="#Kuhmilch"
+                  >Milch</cue:recipeIngredient> gegeben, weil er sich sonst ganz auflösen würde,
+               zugleich rührt man etwas <cue:recipeIngredient ref="#Kartoffelstärkemehl"
+                  quantity="etwas">Kartoffelmehl</cue:recipeIngredient> und <cue:recipeIngredient
+                  ref="#Salz">Salz</cue:recipeIngredient> durch, und nachdem er ½ Stunde gekocht,
+               die Suppe nach Belieben mit <cue:recipeIngredient ref="#Zucker" optional="True"
+                  >Zucker</cue:recipeIngredient> und <cue:recipeIngredient ref="#Zimt"
+                  optional="True">Zimmet</cue:recipeIngredient> ab. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-52">
             <head>Buchweizen-Grütze mit Milch.</head>
-
-            <p>Man streut die Grütze in die kochende Milch, läßt sie nicht zu weich, etwa ¼ Stunde,
-               kochen und rührt etwas Kartoffelmehl und Salz daran. </p>
-
+            <p>Man streut die <cue:recipeIngredient ref="#Buchweizengrütze"
+                  >Grütze</cue:recipeIngredient> in die kochende <cue:recipeIngredient
+                  ref="#Kuhmilch">Milch</cue:recipeIngredient>, läßt sie nicht zu weich, etwa ¼
+               Stunde, kochen und rührt etwas <cue:recipeIngredient ref="#Salz"
+                  >Kartoffelmehl</cue:recipeIngredient> und <cue:recipeIngredient ref="#Salz"
+                  >Salz</cue:recipeIngredient> daran. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-53">
             <head>Chocoladensuppe.</head>
-
-            <p>Ein Viertelpfund Chocolade wird mit einer Obertasse Wasser zu Feuer gesetzt, und wenn
-               sie ganz weich ist, zu Brei gerührt, 2 Maß Milch und Zucker nach Geschmack
-               hinzugegeben und wenn sie kocht, die Suppe mit Vanille oder Zimmet und 1—2 Eidottern
-               angerichtet. Man kann das Eiweiß zu Schnee schlagen und hiervon Klößchen auf die
-               Suppe legen und solche mit Zucker und Zimmet bestreuen. Es wird Zwieback dabei
+            <p>Ein Viertelpfund <cue:recipeIngredient ref="#Vollmilchschokolade" quantity="0.25"
+                  unit="Pfund">Chocolade</cue:recipeIngredient> wird mit einer Obertasse Wasser zu
+               Feuer gesetzt, und wenn sie ganz weich ist, zu Brei gerührt, 2 Maß
+                  <cue:recipeIngredient ref="#Kuhmilch" quantity="2" unit="Maß"
+                  >Milch</cue:recipeIngredient> und <cue:recipeIngredient ref="#Zucker"
+                  optional="True">Zucker</cue:recipeIngredient> nach Geschmack hinzugegeben und wenn
+               sie kocht, die Suppe mit <cue:recipeIngredient ref="#Vanilleschote" altGrp="1"
+                  >Vanille</cue:recipeIngredient> oder <cue:recipeIngredient altGrp="2"
+                  >Zimmet</cue:recipeIngredient><cue:alt target="1 2"/> und 1—2
+                  <cue:recipeIngredient ref="#HühnereiEigelb" atLeast="1" atMost="2"
+                  >Eidottern</cue:recipeIngredient> angerichtet. Man kann das Eiweiß zu Schnee
+               schlagen und hiervon Klößchen auf die Suppe legen und solche mit
+                  <cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient> und
+                  <cue:recipeIngredient ref="#Zimt">Zimmet</cue:recipeIngredient> bestreuen. Es wird
+                  <cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient> dabei
                gegeben. </p>
-
             <note>Anmerk. Die Vanille wird mit Zucker fein gestoßen.</note>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-54">
             <head>Gebraunte Mehlsuppe.</head>
-
-            <p>Mehl wird ohne Butter gelbbraun gemacht, während man es beständig rühren muß, Milch
-               gekocht und von dem Mehl mit kalter Milch so viel hineingerührt, bis die Suppe
-               gebunden ist. Dann rühre man sie mit Zucker, Zimmet und Eidotter ab und richte sie
-               auf in Butter geröstetem Weißbrod an. </p>
-
+            <p><cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient> wird ohne
+                  <cue:recipeIngredient ref="#Butter" dontUse="True">Butter</cue:recipeIngredient>
+               gelbbraun gemacht, während man es beständig rühren muß, <cue:recipeIngredient
+                  ref="#Milch">Milch</cue:recipeIngredient> gekocht und von dem Mehl mit kalter
+                  <cue:recipeIngredient ref="#Kuhmilch">Milch</cue:recipeIngredient> so viel
+               hineingerührt, bis die Suppe gebunden ist. Dann rühre man sie mit
+                  <cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>,
+                  <cue:recipeIngredient ref="#Zimt">Zimmet</cue:recipeIngredient> und
+                  <cue:recipeIngredient ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient> ab und
+               richte sie auf in <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
+               geröstetem <cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
+               an. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-55">
             <head>Buttermilchsuppe mit Mehl.</head>
-
-            <p>Um das Gerinnen der Buttermilch zu vermeiden, rühre man das Mehl mit der Milch an,
-               setze sie auf ein starkes Feuer und rühre bis sie kocht, Zucker, Zimmet und Salz
-               daran, und wenn man sie gut machen will, auch 1—2 Schoppengläser weißen Wein, und
-               rühre sie mit 1—2 Eidottern ab. Es wird in Butter geröstetes Weißbrod dabei gegeben. </p>
-
+            <p>Um das Gerinnen der <cue:recipeIngredient ref="#Buttermilch"
+                  >Buttermilch</cue:recipeIngredient> zu vermeiden, rühre man das
+                  <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient> mit der
+                  <cue:recipeIngredient ref="#Kuhmilch">Milch</cue:recipeIngredient> an, setze sie
+               auf ein starkes Feuer und rühre bis sie kocht, <cue:recipeIngredient ref="#Zucker"
+                  >Zucker</cue:recipeIngredient>, <cue:recipeIngredient ref="#Zimt"
+                  >Zimmet</cue:recipeIngredient> und <cue:recipeIngredient ref="#Salz"
+                  >Salz</cue:recipeIngredient> daran, und wenn man sie gut machen will, auch 1—2
+               Schoppengläser weißen <cue:recipeIngredient ref="#Weißwein"
+                  >Wein</cue:recipeIngredient>, und rühre sie mit 1—2 <cue:recipeIngredient
+                  ref="#HühnereiEigelb" atLeast="1" atMost="2">Eidottern</cue:recipeIngredient> ab.
+               Es wird in <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
+               geröstetes <cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
+               dabei gegeben. </p>
             <note>Anmerk. Anstatt des Weines kann man saure Aepfel in der Buttermilch weich kochen
                und solche durch ein feines Sieb rühren. </note>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-56">
             <head>Buttermilch mit feiner Perlgerste (Graupen), auch für Kranke passend. </head>
-
-            <p>Man setzt die Gerste mit der Buttermilch zu Feuer, kocht sie weich und gibt Salz,
-               Zucker und Zimmet daran. </p>
-
+            <p>Man setzt die <cue:recipeIngredient ref="#Perlgraupen">Gerste</cue:recipeIngredient>
+               mit der <cue:recipeIngredient ref="#Buttermilch">Buttermilch</cue:recipeIngredient>
+               zu Feuer, kocht sie weich und gibt <cue:recipeIngredient ref="#Salz"
+                  >Salz</cue:recipeIngredient>, <cue:recipeIngredient ref="#Zucker"
+                  >Zucker</cue:recipeIngredient> und <cue:recipeIngredient ref="#Zimt"
+                  >Zimmet</cue:recipeIngredient> daran. </p>
             <note>Anmerk. Die Säure der Buttermilch macht die Gerste schneller weich.</note>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-57">
             <head>Buttermilch mit Pflaumen (Zwetschen).</head>
-
-            <p>Getrocknete Pflaumen werden in Wasser mit Anissamen weich gekocht, dann gibt man
-               geriebenes Weißbrod dazu, nebst der Buttermilch, und sollte es nicht genug gebunden
-               werden, noch etwas Mehl. Beim Anrichten rührt man Salz, Zucker und Zimmet durch. Auch
-               kann man frische Pflaumen darin kochen. Statt Pflaumen sind auch Rosinen gut darin. </p>
-
+            <p>Getrocknete <cue:recipeIngredient ref="#PflaumenGetrocknet"
+                  >Pflaumen</cue:recipeIngredient> werden in Wasser mit <cue:recipeIngredient
+                  ref="#Anis">Anissamen</cue:recipeIngredient> weich gekocht, dann gibt man
+               geriebenes <cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
+               dazu, nebst der <cue:recipeIngredient ref="#Buttermilch"
+                  >Buttermilch</cue:recipeIngredient>, und sollte es nicht genug gebunden werden,
+               noch etwas <cue:recipeIngredient ref="#Mehl" quantity="etwas"
+                  >Mehl</cue:recipeIngredient>. Beim Anrichten rührt man <cue:recipeIngredient
+                  ref="#Salz">Salz</cue:recipeIngredient>, <cue:recipeIngredient ref="#Zucker"
+                  >Zucker</cue:recipeIngredient> und <cue:recipeIngredient ref="#Zimt"
+                  >Zimmet</cue:recipeIngredient> durch. Auch kann man frische <cue:recipeIngredient
+                  ref="#Pflaumenfrisch" altGrp="1">Pflaumen</cue:recipeIngredient> darin kochen.
+               Statt Pflaumen sind auch <cue:recipeIngredient ref="#Rosinen" altGrp="2"
+                  >Rosinen</cue:recipeIngredient> gut darin <cue:alt target="1 2"/>. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-58">
             <head>Mehlsuppe.</head>
-
-            <p>Ein Ei dick frische Butter läßt man zergehen, rührt darin 3 Eßlöffel Mehl gahr,
-               dieses mit Wasser fein und schüttet dann langsam kochendes Wasser hinzu, während man
-               gut rühren muß, damit das Mehl sich auflöse und nicht klümprig werde. Wenn es kocht,
-               gibt man Salz, Muskatblüthe oder abgeriebene Zitronenschale, ganz wenig Zucker und
-               ein Eidotter daran. </p>
-
+            <p>Ein Ei dick frische <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
+               läßt man zergehen, rührt darin 3 Eßlöffel <cue:recipeIngredient ref="#Mehl"
+                  quantity="3" unit="EL">Mehl</cue:recipeIngredient> gahr, dieses mit Wasser fein
+               und schüttet dann langsam kochendes Wasser hinzu, während man gut rühren muß, damit
+               das Mehl sich auflöse und nicht klümprig werde. Wenn es kocht, gibt man
+                  <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>,
+                  <cue:recipeIngredient ref="#Muskatblüte">Muskatblüthe</cue:recipeIngredient> oder
+               abgeriebene <cue:recipeIngredient ref="#Zitronenschale"
+                  >Zitronenschale</cue:recipeIngredient>, ganz wenig <cue:recipeIngredient
+                  ref="#Zucker" quantity="wenig">Zucker</cue:recipeIngredient> und ein
+                  <cue:recipeIngredient ref="#HühnereiEigelb" quantity="1"
+                  >Eidotter</cue:recipeIngredient> daran. </p>
             <note>Anmerk. Man kann auf jede Person einen Eßlöffel voll Mehl rechnen.</note>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-59">
             <head>Griesmehlsuppe.</head>
-
-            <p>Man läßt Griesmehl in nicht zu wenig Butter anziehen, schüttet, indem man gut rührt,
-               langsam kochendes Wasser hinzu, gibt Salz, und wenn es gahr ist, Muskatnuß und 1
-               Eidotter daran, und in Butter geröstetes Weißbrod dabei. </p>
-
+            <p>Man läßt <cue:recipeIngredient ref="#Griesmehl">Griesmehl</cue:recipeIngredient> in
+               nicht zu wenig <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
+               anziehen, schüttet, indem man gut rührt, langsam kochendes Wasser hinzu, gibt
+                  <cue:recipeIngredient ref="#Salz">Salz,</cue:recipeIngredient> und wenn es gahr
+               ist, <cue:recipeIngredient ref="#Muskatnuß">Muskatnuß</cue:recipeIngredient> und 1
+                  <cue:recipeIngredient ref="#HühnereiEigelb" quantity="1"
+                  >Eidotter</cue:recipeIngredient> daran, und in <cue:recipeIngredient ref="#Butter"
+                  >Butter</cue:recipeIngredient> geröstetes <cue:recipeIngredient
+                  ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient> dabei. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-60">
             <head>Gerstensuppe für Kranke.</head>
-
-            <p>Feine Perlgerste wird in kochendes Wasser geschüttet und mit einem Stückchen frischer
-               Butter weich und etwas sämig gekocht, dann gibt man Salz und fein gehackte Petersilie
-               oder Muskatnuß dazu. Letzteres ist bei Magenschwäche zu empfehlen. </p>
-
+            <p>Feine <cue:recipeIngredient ref="#Perlgraupen">Perlgerste</cue:recipeIngredient> wird
+               in kochendes Wasser geschüttet und mit einem Stückchen frischer <cue:recipeIngredient
+                  ref="#Butter">Butter</cue:recipeIngredient> weich und etwas sämig gekocht, dann
+               gibt man <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient> und fein
+               gehackte <cue:recipeIngredient ref="#Petersilienblatt" altGrp="1"
+                  >Petersilie</cue:recipeIngredient> oder <cue:recipeIngredient ref="#Muskatnuß"
+                  altGrp="2">Muskatnuß</cue:recipeIngredient> dazu<cue:alt target="1 2"/>. Letzteres
+               ist bei Magenschwäche zu empfehlen. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-61">
             <head>Suppe von Hafergrütze für Kranke.</head>
-
-            <p>Die Hafergrütze wird mit kochendem Wasser, einem Stückchen Butter und
-               Zitronenscheiben, aus denen die Kerne genommen sind, eine Stunde gekocht, durch ein
-               Haarsieb gerührt, Zucker und wenig Salz hinzugegeben und mit einem Eidotter
-               abgerührt. </p>
-
+            <p>Die <cue:recipeIngredient ref="#Hafergrütze">Hafergrütze</cue:recipeIngredient> wird
+               mit kochendem Wasser, einem Stückchen <cue:recipeIngredient ref="#Butter"
+                  >Butter</cue:recipeIngredient> und <cue:recipeIngredient ref="#Zitrone"
+                  unit="Scheibe">Zitronenscheiben</cue:recipeIngredient>, aus denen die Kerne
+               genommen sind, eine Stunde gekocht, durch ein Haarsieb gerührt, <cue:recipeIngredient
+                  ref="#Zucker">Zucker</cue:recipeIngredient> und wenig <cue:recipeIngredient
+                  ref="#Salz" quantity="wenig">Salz</cue:recipeIngredient> hinzugegeben und mit
+               einem <cue:recipeIngredient ref="#HühnereiEigelb" quantity="1"
+                  >Eidotter</cue:recipeIngredient> abgerührt. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-62">
             <head>Auf andere Art für Kranke.</head>
-
-            <p>Die Hafergrütze wird mit kochendem Wasser und ganz fein gestoßenen Mandeln eine
-               Stunde gekocht, durch ein Haarsieb gerührt, wenig Salz hinzu und nach Belieben mit
-               Zucker versüßt. </p>
-
+            <p>Die <cue:recipeIngredient ref="#Hafergrütze">Hafergrütze</cue:recipeIngredient> wird
+               mit kochendem Wasser und ganz fein gestoßenen <cue:recipeIngredient ref="#Mandelnroh"
+                  >Mandeln</cue:recipeIngredient> eine Stunde gekocht, durch ein Haarsieb gerührt,
+               wenig <cue:recipeIngredient ref="#Salz" quantity="wenig">Salz</cue:recipeIngredient>
+               hinzu und nach Belieben mit <cue:recipeIngredient ref="#Zucker" optional="True"
+                  >Zucker</cue:recipeIngredient> versüßt. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-63">
             <head>Zwiebacksuppe für Kranke.</head>
-
-            <p>Ganz sein gestoßener Zwieback wird mit Wasser und 1—2 Zitronenscheiben so lange
-               gekocht, bis der Zwieback sich nicht mehr senkt, Zucker und sehr wenig Salz dazu
-               gegeben und mit einem Eidotter abgerührt. </p>
-
+            <p>Ganz sein gestoßener <cue:recipeIngredient ref="#Zwieback"
+                  >Zwieback</cue:recipeIngredient> wird mit Wasser und 1—2 <cue:recipeIngredient
+                  ref="#Zitrone" atLeast="1" atMost="2">Zitronenscheiben</cue:recipeIngredient> so
+               lange gekocht, bis der Zwieback sich nicht mehr senkt, <cue:recipeIngredient
+                  ref="#Zucker">Zucker</cue:recipeIngredient> und sehr wenig <cue:recipeIngredient
+                  ref="#Salz" quantity="wenig">Salz</cue:recipeIngredient> dazu gegeben und mit
+               einem <cue:recipeIngredient ref="#HühnereiEigelb" quantity="1"
+                  >Eidotter</cue:recipeIngredient> abgerührt. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-64">
             <head>Brodsuppe für Kranke passend.</head>
-
-            <p>Halb Schwarz-, halb Weißbrod wird in Wasser ganz zerkocht, durch ein Haarsieb
-               gerührt, mit Korinthen, etwas Salz, Zucker und Zitronenscheiben gekocht, bis die
-               Korinthen weich sind, und im Fall es dem Kranken nicht versagt ist, mit etwas Wein
-               und Eidotter abgerührt. </p>
-
+            <p>Halb <cue:recipeIngredient ref="#Vollkornschrotbrot">Schwarz-</cue:recipeIngredient>,
+               halb <cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient> wird
+               in Wasser ganz zerkocht, durch ein Haarsieb gerührt, mit <cue:recipeIngredient
+                  ref="#Rosinen">Korinthen</cue:recipeIngredient>, etwas <cue:recipeIngredient
+                  ref="#Salz" quantity="etwas">Salz</cue:recipeIngredient>, Zucker und
+                  <cue:recipeIngredient ref="#Zitrone" unit="Scheibe"
+                  >Zitronenscheiben</cue:recipeIngredient> gekocht, bis die Korinthen weich sind,
+               und im Fall es dem Kranken nicht versagt ist, mit etwas <cue:recipeIngredient
+                  quantity="etwas" optional="True">Wein</cue:recipeIngredient> und
+                  <cue:recipeIngredient ref="#HühnereiEigelb" optional="True"
+                  >Eidotter</cue:recipeIngredient> abgerührt. </p>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-65">
             <head>Eine gute Krankensuppe bei Rotherruhr und Diarrhöe.</head>
-
-            <p>Es wird ½ Tasse gute Gerste (Graupen) mit einer weißen Bohne dick frischer Butter und
-               einem Stück feinen Zimmet in einen irdenen Topf zu einem ½ Maß kochenden Wasser
-               geschüttet, beim Einkochen noch kaltes Wasser zugegeben und weich gekocht. Dann wird
-               es durch ein Sieb geschüttet, mit Zucker und sehr wenig Salz durchgekocht und mit
-               einem ganz frischen Eidotter abgerührt. Die Suppe darf weder zu dünn, noch zu breiig
-               gekocht sein. </p>
-
+            <p>Es wird ½ Tasse gute <cue:recipeIngredient ref="#Perlgraupen" quantity="0.5"
+                  unit="Tasse">Gerste</cue:recipeIngredient> (Graupen) mit einer weißen
+                  <cue:recipeIngredient ref="#BohneWeiß" quantity="1">Bohne</cue:recipeIngredient>
+               dick frischer <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient> und
+               einem Stück feinen <cue:recipeIngredient ref="#Zimt">Zimmet</cue:recipeIngredient> in
+               einen irdenen Topf zu einem ½ Maß kochenden Wasser geschüttet, beim Einkochen noch
+               kaltes Wasser zugegeben und weich gekocht. Dann wird es durch ein Sieb geschüttet,
+               mit <cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient> und sehr wenig
+                  <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient> durchgekocht und mit
+               einem ganz frischen <cue:recipeIngredient ref="#HühnereiEigelb" quantity="1"
+                  >Eidotter</cue:recipeIngredient> abgerührt. Die Suppe darf weder zu dünn, noch zu
+               breiig gekocht sein. </p>
             <note>Anmerk. Als Getränk wird Reiswasser (siehe Getränke) dem Kranken gegeben. </note>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-66">
             <head>Zitronensuppe, auch für Kranke passend.</head>
-
-            <p>Man koche Weißbrod mit einem Stückchen Butter in Wasser ganz weich, rühre es durch
-               ein Haarsieb und bringe es wieder zum Kochen, gebe Saft und die abgeriebene Schale
-               einer Zitrone, wenig Salz, Zucker nach Belieben, etwas weißen Wein dazu und rühre die
-               Suppe mit 1—2 Eidottern ab. </p>
-
+            <p>Man koche <cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
+               mit einem Stückchen <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
+               in Wasser ganz weich, rühre es durch ein Haarsieb und bringe es wieder zum Kochen,
+               gebe <cue:recipeIngredient>Saft</cue:recipeIngredient> und die abgeriebene
+                  <cue:recipeIngredient ref="#Zitronenschale">Schale</cue:recipeIngredient> einer
+               Zitrone, wenig <cue:recipeIngredient ref="#Salz" quantity="wenig"
+                  >Salz</cue:recipeIngredient>, Zucker nach Belieben, etwas weißen
+                  <cue:recipeIngredient ref="#Weißwein" quantity="etwas">Wein</cue:recipeIngredient>
+               dazu und rühre die Suppe mit 1—2 <cue:recipeIngredient ref="#HühnereiEigelb"
+                  atLeast="1" atMost="2">Eidottern</cue:recipeIngredient> ab. </p>
             <note>Anmerk. Für Kranke lasse man die Schale der Zitrone weg.</note>
          </cue:recipe>
-
          <cue:recipe type="Suppen." rcp-id="B-67">
             <head>Erdbeersuppe.</head>
-
-            <p>Die Erdbeeren läßt man mit Zwieback und Wasser zerkochen, rührt sie durch einen Sieb,
-               läßt dies mit Wein, Zucker und Zimmet wieder zum Kochen kommen, gibt, im Fall die
-               Suppe nicht gebunden genug ist, ein wenig Kartoffelmehl mit Wasser gerührt hinzu, so
+            <p>Die <cue:recipeIngredient ref="#Erdbeere">Erdbeeren</cue:recipeIngredient> läßt man
+               mit <cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient> und Wasser
+               zerkochen, rührt sie durch einen Sieb, läßt dies mit
+                  <cue:recipeIngredient>Wein</cue:recipeIngredient>,<cue:recipeIngredient
+                  ref="#Zucker"> Zucker</cue:recipeIngredient> und <cue:recipeIngredient ref="#Zimt"
+                  >Zimmet</cue:recipeIngredient> wieder zum Kochen kommen, gibt, im Fall die Suppe
+               nicht gebunden genug ist, ein wenig <cue:recipeIngredient ref="#Kartoffelstärkemehl"
+                  quantity="wenig">Kartoffelmehl</cue:recipeIngredient> mit Wasser gerührt hinzu, so
                wie auch nach Portion der Suppe 1—2 Untertassen voll ganz reife Erdbeeren, die man
-               eine Stunde vorher mit Zucker bestreut haben muß. Es werden Bisquitschnittchen
-               dabeigegeben. </p>
-
+               eine Stunde vorher mit <cue:recipeIngredient ref="#Zucker"
+                  >Zucker</cue:recipeIngredient> bestreut haben muß. Es werden <cue:recipeIngredient
+                  ref="#Buiskuitschnitte">Bisquitschnittchen</cue:recipeIngredient> dabeigegeben.
+            </p>
          </cue:recipe>
-
+         
          <cue:recipe type="Suppen." rcp-id="B-68">
             <head>Suppe von frischen Kirschen.</head>
-
-            <p>Man nimmt saure Kirschen, macht aus einigen die Steine, die man im Mörser zerstößt,
-               und kocht sie mit den Kirschen, Zwieback und etwas Zitronenschale oder 2—3 Nelken in
-               Wasser, bis sich das Kirschfleisch zerkocht hat. Dann rührt man es durch ein Sieb und
-               nachdem es wieder zum Kochen gebracht, richtet man die Suppe mit Zucker, rothem Wein,
-               der mit durchkochen darf, etwas Salz und Zimmet an und legt Zuckerplätzchen darauf. </p>
-
+            
+            <p>Man nimmt saure <cue:recipeIngredient ref="#KirscheSauer"
+                  >Kirschen</cue:recipeIngredient>, macht aus einigen die
+                  <cue:recipeIngredient>Steine</cue:recipeIngredient>, die man im Mörser zerstößt,
+               und kocht sie mit den Kirschen, <cue:recipeIngredient ref="#Zwieback"
+                  >Zwieback</cue:recipeIngredient> und etwas <cue:recipeIngredient
+                  ref="#Zitronenschale" quantity="etwas">Zitronenschale</cue:recipeIngredient> oder
+               2—3 <cue:recipeIngredient ref="#Gewürznelken" atLeast="2" atMost="3"
+                  >Nelken</cue:recipeIngredient> in Wasser, bis sich das Kirschfleisch zerkocht hat.
+               Dann rührt man es durch ein Sieb und nachdem es wieder zum Kochen gebracht, richtet
+               man die Suppe mit <cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>,
+               rothem <cue:recipeIngredient ref="#Rotwein">Wein</cue:recipeIngredient>, der mit
+               durchkochen darf, etwas <cue:recipeIngredient ref="#Salz" quantity="etwas"
+                  >Salz</cue:recipeIngredient> und <cue:recipeIngredient ref="#Zimt"
+                  >Zimmet</cue:recipeIngredient> an und legt
+                  <cue:recipeIngredient>Zuckerplätzchen</cue:recipeIngredient> darauf. </p>
          </cue:recipe>
 
          <cue:recipe type="Suppen." rcp-id="B-69">

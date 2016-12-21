@@ -288,5 +288,82 @@
 	<cue:ingredient xml:id="Taube" BLSref="V490100">
 		<cue:prefBasicForm>Taube</cue:prefBasicForm>
 	</cue:ingredient>
-
+	<cue:ingredient xml:id="Rotwein" BLSref="P240000">
+		<cue:prefBasicForm>rotherWein</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Biskuit" BLSref="D077002">
+		<cue:prefBasicForm>Buisquit</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Rosinen" BLSref="F840100">
+		<cue:prefBasicForm>Rosinen</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Gerste" BLSref="C140000">
+		<cue:prefBasicForm>Gerste</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Weißwein" BLSref="P220000">
+		<cue:prefBasicForm>Weißwein</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Griesmehl" BLSref="C215100">
+		<cue:prefBasicForm>Griesmehl</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Bier" BLSref="P161000">
+		<cue:prefBasicForm>Bier</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Kuhmilch" BLSref="M111300">
+		<cue:prefBasicForm>Milch</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Kartoffelstärkemehl" BLSref="K230000">
+		<cue:prefBasicForm>Kartoffelmehl</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Eiweiß" BLSref="E113100">
+		<cue:prefBasicForm>Eiweiß</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Vollkornschrotbrot" BLSref="B102000">
+		<cue:prefBasicForm>Schwarzbrot</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Pfirsich" BLSref="F203100">
+		<cue:prefBasicForm>Pfirsichblätter</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Buchweizengrütze" BLSref="C327000">
+		<cue:prefBasicForm>Buchweizengrütze</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Vollmilchschokolade" BLSref="S539900">
+		<cue:prefBasicForm>Chocolade</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Vanilleschote" BLSref="R264000">
+		<cue:prefBasicForm>Vanille</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Buttermilch" BLSref="M150000">
+		<cue:prefBasicForm>Buttermilch</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="PflaumenGetrocknet" BLSref="F220400">
+		<cue:prefBasicForm>getrocknetePflaumen</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Anis" BLSref="R253000">
+		<cue:prefBasicForm>Anissamen</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Pflaumenfrisch" BLSref="F220100">
+		<cue:prefBasicForm>Pflaumen</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Zitronenschale" BLSref="R382100">
+		<cue:prefBasicForm>Zitronenschale</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Hafergrütze" BLSref="C137000">
+		<cue:prefBasicForm>Hafergrütze</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Mandelnroh" BLSref="H220100">
+		<cue:prefBasicForm>Mandeln</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="BohneWeiß" BLSref="H740100">
+		<cue:prefBasicForm>WeißeBohne</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Erdbeere" BLSref="F301100">
+		<cue:prefBasicForm>Erdbeeren</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Buiskuitschnitte" BLSref="D410100">
+		<cue:prefBasicForm>Buisquitschnittchen</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="KirscheSauer" BLSref="F212000">
+		<cue:prefBasicForm>Saure Kirsche</cue:prefBasicForm>
+	</cue:ingredient>
 </cue:listIngredient>
