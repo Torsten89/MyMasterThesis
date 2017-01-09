@@ -1,5 +1,5 @@
 from informationExtraction import *
-from parserForDavidisCookbook.BFormId import BFormId
+from informationExtraction.BFormId import BFormId
 
 def getElems(node, elemName, withAttris={}):
     """ withAttris = {key: iterator with possible values}
@@ -53,7 +53,7 @@ def buildIngredientDict(dom):
                 if word[0].isupper():
                     __addAllToDict__(ingDict, word, [BFormId(basicForm, xmlId)])
     
-    #add verbose ingredients like Fleisch
+    #add candidates for verbose ingredients like Fleisch
     verboseIngs = ["Fleisch", "Ohr"]
     for verboseIng in verboseIngs:
         ingDict[verboseIng] = []

@@ -7,7 +7,7 @@ nNTag ="NN"
 
 truncatedEndings = ("wurzel", )
 
-def getLemmas(sentence):
+def getWordLemmaTuples(sentence):
     treeTaggerTags = treeTagger.tag(sentence)
             
     for i, [word, pos, lemma] in enumerate(treeTaggerTags):

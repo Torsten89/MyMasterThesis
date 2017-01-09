@@ -3,7 +3,7 @@ quantitiyWords = set(["ein, halb", "eine", "einige", "etwas"])
 
 class QuantityExtractor(object):
     
-    def getInformation(self, lemma):
+    def isQuantity(self, lemma):
         if isNumber(lemma):
             return True
         

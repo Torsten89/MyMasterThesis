@@ -1,8 +1,9 @@
 from xml.dom.minidom import parse
 from parserForDavidisCookbook.xmlHelper import buildIngredientDict
-from parserForDavidisCookbook.BFormId import BFormId
+from informationExtraction.BFormId import BFormId
 
 class IngredientExtractor:
+    composedIngs = ["bouillon", "klöße", "brühe"]
     
     def __init__(self, domOfListOfIngredients, domCookBook=None):
         """ self.__ingDict__ contains ingredients like pepper, eggs...
@@ -11,39 +12,48 @@ class IngredientExtractor:
             (e.g. [(weißer Franzwein, weisser_Franzwein), (rother Franzwein, roter_Franzwein)]
         """
         self.__ingDict__ = buildIngredientDict(domOfListOfIngredients)
-        self.__composedIngDict__ = None
         
-    def getInformation(self, lemma, default=None):
-        ingredientInformation = self.__ingDict__.get(lemma, False)
-        if ingredientInformation:
-            return ingredientInformation
+    def getIngredientCandidates(self, lemma, recipe=None, sentence=None):
+        """ Returns a list of possible xml:ids, which each point to an cue:ingredient definition.
         
-        composedIngredientInformation = self.getComposedIngredientInformation(lemma, False)
-        if composedIngredientInformation:
-            return composedIngredientInformation
-        
-        return default
-    
-    # <cue:ingredient target="#Bouillon" ... 
-    def getComposedIngredientInformation(self, lemma, default=False):
-        composedIngs = ["bouillon", "klöße", "brühe"]
-        for composedIng in composedIngs:
-            if composedIng in lemma.lower():
-                return composedIng
-        
-        return default
-    
-    def getRefFromInformation(self, infos, sentence=None, recipe=None):
-        if len(infos) == 1 and isinstance(infos[0], BFormId):
-            return infos[0].xmlId
-        #else some smart stuff
+            If the lemma is not an ingredient, None is returned.
 
+            An empty list means, that the lemma is an ingredient, but no xml:id could be found.
+            
+            A list with more than one element states, that there are several possibilities (e.g. Whine could be red or white whine).
+            When there are several possibilities the ambiguity can maybe be resolved through providing the sentences of the lemma
+            and/or its recipe.
+        """
+        ingrCandis = self.__ingDict__.get(lemma, False)
+        if ingrCandis:
+            return self.__dissolveAmbiguity__(lemma, ingrCandis, recipe, sentence)
+        
+        if self.isComposedIngredient(lemma):
+            return []
+        
+        return None
+    
+    def isComposedIngredient(self, lemma):
+        for cI in IngredientExtractor.composedIngs:
+            if cI in lemma.lower():
+                return True
+        
+        return False
+    
+    def __dissolveAmbiguity__(self, lemma, candidates, recipe=None, sentence=None):
+        if len(candidates) == 1:
+            return [candidates[0].xmlId]
+        
+        # some smart stuff to pick viewer candidates
+        return [candi.xmlId for candi in candidates]
 
 if __name__ == '__main__':
     dom = parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml")
     ingE = IngredientExtractor(dom, None)
     for k, v in ingE.__ingDict__.items():
         print(k, v)
+    print("hier", ingE.__ingDict__.__contains__("Wein"))
+    print("hier", ingE.__ingDict__["Wein"])
     
     
     

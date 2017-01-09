@@ -6,7 +6,7 @@ class UnitExtractor(object):
     def __init__(self, cueMLRngDom):
         self.__unitSet__ = set(unit for unit in getUnitValuesFromCueML(cueMLRngDom))
         
-    def getInformation(self, lemma, default=None):
+    def getUnit(self, lemma, default=None):
         if lemma in self.__unitSet__:
             return lemma
         

@@ -1,6 +1,7 @@
 from xml.dom.minidom import parseString, parse
 import unittest
-from informationExtraction.IngredientExtractor import BFormId, buildIngDict, IngredientExtractor
+from informationExtraction.IngredientExtractor import BFormId, IngredientExtractor
+from parserForDavidisCookbook.xmlHelper import buildIngredientDict
 
 
 class IngredientDictTest(unittest.TestCase):
@@ -29,24 +30,18 @@ class IngredientDictTest(unittest.TestCase):
         <cue:note>2. Note</cue:note> \
     </cue:ingredient> \
 </cue:listIngredient>')
-        d = buildIngDict(dom)
+        d = buildIngredientDict(dom)
         self.assertEqual([BFormId(bform='Bries', xmlId='Midder')], d["Bries"])
         self.assertEqual([BFormId(bform='Rindfleisch', xmlId='Rindkochfleisch')], d["Rindfleisch"])
         
     def test1(self):
-        self.assertIsNone(self.ingE.getInformation("Gesellschaft"))
-        self.assertIsNotNone(self.ingE.getInformation("Fleisch"))
-        self.assertEqual(1, len(self.ingE.getInformation("Rindfleisch")))
-        self.assertLess(1, len(self.ingE.getInformation("Fleisch")))
+        self.assertIsNone(self.ingE.getIngredientCandidates("Gesellschaft"))
+        self.assertIsNotNone(self.ingE.getIngredientCandidates("Fleisch"))
+        self.assertEqual(1, len(self.ingE.getIngredientCandidates("Rindfleisch")))
+        self.assertLess(1, len(self.ingE.getIngredientCandidates("Fleisch")))
     
     def testKablsKlöße(self):
-        self.assertIsNotNone(self.ingE.getInformation("Kalbsklöße"))
-        
-    def testGetRefRindfleisch(self):
-        self.assertEqual("Rindkochfleisch", self.ingE.getRefFromInformation(self.ingE.getInformation("Rindfleisch")))
-        
-    def testGetRefZwiebel(self):
-        self.assertEqual("Zwiebel", self.ingE.getRefFromInformation(self.ingE.getInformation("Zwiebel")))
+        self.assertIsNotNone(self.ingE.getIngredientCandidates("Kalbsklöße"))
 
 
 if __name__ == "__main__":
