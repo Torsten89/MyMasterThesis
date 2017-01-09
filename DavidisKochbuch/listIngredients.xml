@@ -289,7 +289,9 @@
 		<cue:prefBasicForm>Taube</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Rotwein" BLSref="P240000">
-		<cue:prefBasicForm>rotherWein</cue:prefBasicForm>
+		<cue:prefBasicForm>Rotwein</cue:prefBasicForm>
+		<cue:altBasicForm>rother Wein</cue:altBasicForm>
+		<cue:altBasicForm>roter Wein</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Biskuit" BLSref="D077002">
 		<cue:prefBasicForm>Buisquit</cue:prefBasicForm>
@@ -302,6 +304,7 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Weißwein" BLSref="P220000">
 		<cue:prefBasicForm>Weißwein</cue:prefBasicForm>
+		<cue:altBasicForm>weißer Wein</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Griesmehl" BLSref="C215100">
 		<cue:prefBasicForm>Griesmehl</cue:prefBasicForm>
