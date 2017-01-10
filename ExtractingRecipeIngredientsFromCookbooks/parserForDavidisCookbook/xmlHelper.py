@@ -1,4 +1,3 @@
-from informationExtraction import *
 from informationExtraction.BFormId import BFormId
 
 def getElems(node, elemName, withAttris={}):
@@ -6,8 +5,8 @@ def getElems(node, elemName, withAttris={}):
     """
     for elem in node.getElementsByTagName(elemName):
         hasAllAttris = True
-        for k, possibleValues in withAttris.items():
-            if elem.attributes[k].value not in possibleValues:
+        for attriName, possibleValues in withAttris.items():
+            if elem.attributes[attriName].value not in possibleValues:
                 hasAllAttris = False
                 break
         if hasAllAttris:

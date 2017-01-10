@@ -1,16 +1,14 @@
 
 quantitiyWords = set(["ein, halb", "eine", "einige", "etwas"])
 
-class QuantityExtractor(object):
+def isQuantity(lemma):
+    if isNumber(lemma):
+        return True
     
-    def isQuantity(self, lemma):
-        if isNumber(lemma):
-            return True
-        
-        if "—" in lemma and isNumber(lemma.split("—")[0]):
-            return True
-        
-        return False
+    if "—" in lemma and isNumber(lemma.split("—")[0]):
+        return True
+    
+    return False
 
 
 def isNumber(s):

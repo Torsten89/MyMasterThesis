@@ -178,9 +178,6 @@ werden.', recipe.instructions)
         self.assertIn(Ingredient(ref="#Englische_Soja", optional=True), recipe.optIngredients.values())
         self.assertIn(Ingredient(ref="#Rum", altGrp="2", quantity="etwas"), recipe.altIngredients.values())
         self.assertIn(["1", "2"], recipe.alts)
-        
-        recipe.mergeIngredients()
-        # print(recipe)
     
 if __name__ == "__main__":
     unittest.main()

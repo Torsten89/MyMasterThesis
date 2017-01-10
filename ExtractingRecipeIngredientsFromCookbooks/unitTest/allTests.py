@@ -1,14 +1,16 @@
 import unittest
-from parserForDavidisCookbook.unitTest.RecipeTest import RecipeTest
 from parserForDavidisCookbook.unitTest.XmlParserTest import XmlParserTest
-from informationExtraction.unitTest.IngredientExtractorTest import IngredientDictTest
-from informationExtraction.unitTest.TaggerTest import TaggerTest
+from parserForDavidisCookbook.unitTest.XmlHelperTest import XmlHelperTest
+from informationExtraction.unitTest.IngredientExtractorTest import IngredientExtractorTest
+from informationExtraction.unitTest.DictBasedExtractorTest import DictBasedExtractorTest
+from informationExtraction.unitTest.LemmatizationTest import  LemmatizationTest
 
 def getTests():
-    return [unittest.TestLoader().loadTestsFromTestCase(RecipeTest),
-            unittest.TestLoader().loadTestsFromTestCase(XmlParserTest),
-            unittest.TestLoader().loadTestsFromTestCase(IngredientDictTest),
-            unittest.TestLoader().loadTestsFromTestCase(TaggerTest),
+    return [unittest.TestLoader().loadTestsFromTestCase(XmlParserTest),
+            unittest.TestLoader().loadTestsFromTestCase(XmlHelperTest),
+            unittest.TestLoader().loadTestsFromTestCase(LemmatizationTest),
+            unittest.TestLoader().loadTestsFromTestCase(IngredientExtractorTest),
+            unittest.TestLoader().loadTestsFromTestCase(DictBasedExtractorTest),
             ]
 
 if __name__ == '__main__':

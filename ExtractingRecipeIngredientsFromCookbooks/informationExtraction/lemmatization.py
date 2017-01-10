@@ -1,4 +1,5 @@
 from treetagger import TreeTagger #Environment variable TREETAGGER_HOME=/path/to/TreeTagger/cmd has to be set for TreeTaggers nltk
+import string 
 
 treeTagger = TreeTagger(language='german')
 unknownTag = "<unknown>"
@@ -6,6 +7,7 @@ truncTag = "TRUNC"
 nNTag ="NN"
 
 truncatedEndings = ("wurzel", )
+shortenings = ("Nro.", "No.", "Engl.") + tuple(chapterNumber+"." for chapterNumber in string.ascii_uppercase[:-3])
 
 def getWordLemmaTuples(sentence):
     treeTaggerTags = treeTagger.tag(sentence)
@@ -20,7 +22,7 @@ def getWordLemmaTuples(sentence):
             
 def findTruncatedEnd(i, tags):
     """ i is the position of the truncated word in the sentence,
-        and tags is a "tuple" of [word, PoS, lemma] for each word
+        and each tag in tags is a "tuple" of [word, PoS, lemma] for each word
     """
     for [word, pos, lemma] in tags[i+1:]: #search next normal nomina
         if pos == nNTag:
@@ -29,3 +31,17 @@ def findTruncatedEnd(i, tags):
                     return truncatedEnd
     
     return ""
+
+def yieldSentencesOfParagraph(paragraph):
+    """ paragraph is a string of multiple sentences and a string for each single sentence is yield."""
+    guessedSentences = paragraph.split(".") # !!! Man kocht solche nach Nro. 22 und richtet sie mit einer Capern-Sauce an.
+    sentence = ""
+    for g in guessedSentences:
+        if not g.strip(): # empty word / only spaces
+            continue
+        sentence += g +"."
+        if "{}.".format(g.split()[-1]) in shortenings:
+            continue
+        else:
+            yield sentence.strip()
+            sentence = ""
