@@ -105,6 +105,7 @@ Always do this one last, when knowing the things to praise  yourself for :P
 \chapter*{Acknowledgements}
 If I don't profit from nice people in these thesis, I have done something horrible wrong. So try to remember most of them here at the end... :)
 
+Arbeitsgruppe, stackoverflow
 \tableofcontents
 
 \listoffigures
@@ -119,14 +120,22 @@ If I don't profit from nice people in these thesis, I have done something horrib
 80-120Seiten anpeilen
 \section{Problem-Stellung}
 \section{Mein Beitrag}
-
-A recipe parser, which can tag old and rather unstructured cookbooks according to the ontology of \parencite{schemaOrg}, is developed in this thesis. Once it is tagged, it is easy to extract the tagged entities. The parser is developed and tested with \textit{Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849} but can be adapted easily to every German cookbook or website. For other languages new training data and dictionaries for the machine learning preparation of the parser have to be provided, but the general algorithm can be inherited.
-
-This effort is motivated by nutritional science. Being able to extract the ingredients of a recipe automatically simplifies research according healthy food. But also sociological analysis are enabled through that.
-
+\section{Structure of this thesis}
 The thesis is structured as follows:
 
+
+
 \chapter{Motivation}
+I personally find it an interesting computer science challenge to extract ingredients from plain text and cooking in general is fun anyway. But that would be a bad justification for a master thesis. Therefore this chapter points out some of many applications, which are possible, once the ingredients are extracted. 
+
+\parencite{recipeRecommendation} build a \textbf{recipe recommendation} system for a cooking website, based on which ingredients are liked by the users and which not. WERT VON CHEFKOCH.DE
+
+\parencite{Freyne2010} also build a \textbf{recipe recommendation} system based on ingredients. Its goal is to help with healthy diets.
+
+\parencite{ingredientNetworks} analyse, how far a recipe is liked in relation with its nutrition information, which are based on the ingredient of the recipe. This allows conclusions about the \textbf{health awareness}. They also analyse how far an \textbf{ingredient can be replaced through another ingredient}, which is handy, if it is not available right now, or if you want a low-fat alternative.  
+
+
+
 
 \chapter{Making a cookbook machine readable}
 This chapter covers shortly, how we transform a cookbook in a machine readable format, which can be arbitrarily processed further. To achieve this, the cookbook has to be digitalised first. Afterwards it has to be enriched with meta data from an ontology.
@@ -511,8 +520,10 @@ Git-tag
 - Mengenangaben ohne recipeYield witzlos
 - links/refs erschweren Auswertung
 
-\section{Power of machine readable data}
-Machine readable data are very powerful. But \textit{with great power comes great responsibility}\footnote{A well known proverb which probably has its origin from the French National Convention during the period of French Revolution. \parencite{quoteInvestigator}}. In the context of a recipe parser this might be a little bit exaggerated. But specially in mind of the global surveillance disclosures denounced by Edward Snowed with still uncertain dimension, I think it is important to have a consciousness for what can be done. Therefore I want to think about, what can be done through innocent looking machine readable tags. 
+\section{Knowledge is power}
+\url{https://en.wikipedia.org/wiki/Scientia_potentia_est}
+
+Machine readable data are very powerful. But \textit{with great power comes great responsibility}\footnote{A well known proverb which probably has its origin from the French National Convention during the period of French Revolution. \parencite{quoteInvestigator}}\footnote{In "Die Physiker" sehr gut thematisiert}. In the context of a recipe parser this might be a little bit exaggerated. But specially in mind of the global surveillance disclosures denounced by Edward Snowed with still uncertain dimension, I think it is important to have a consciousness for what can be done. Therefore I want to think about, what can be done through innocent looking machine readable tags. 
 \bigskip
 
 \textbf{For the good} there exists already much effort for services, which require being able to extract ingredient from recipes.
