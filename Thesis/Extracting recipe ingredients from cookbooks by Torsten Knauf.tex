@@ -19,6 +19,10 @@
 \Crefname{lstlisting}{Listing}{Listings}
 \usepackage{wrapfig}
 \usepackage[colorinlistoftodos]{todonotes} % dont forget to remove
+\usepackage{url}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds} % linebreaks of urls at - and other
+\makeatother
 
 % listings
 \usepackage{listings}
@@ -27,8 +31,6 @@
 	frame=single,
 	breaklines=true,
 	tabsize=2,
-	aboveskip=4pt,
-	belowskip=6pt,
 	literate=%
 		{Ö}{{\"O}}1
 		{Ä}{{\"A}}1
@@ -125,16 +127,6 @@ The thesis is structured as follows:
 
 
 
-\chapter{Motivation}
-I personally find it an interesting computer science challenge to extract ingredients from plain text and make them machine readable. But that would be a bad justification for a master thesis. Therefore this chapter points out some of many applications, which are possible, once the ingredients are extracted. Building a database manual for all these applications is way to time consuming, as pointed out in \ref{sec:NeedForAutomation}, what is a good justification and motivation for this master thesis.
-
-\parencite{recipeRecommendation} build a \textbf{recipe recommendation system} for a cooking website, based on which ingredients are liked by the users and which not. WERT VON CHEFKOCH.DE
-
-Beside that, there seems to exist a lot of effort about \textbf{diet, targeting the well being}. \parencite{ingredientNetworks} analyse, how far a recipe is liked in relation with its nutrition information, which are based on the ingredient of the recipe. They also analyse how far an ingredient can be replaced through another ingredient, which is nice, if you want a low-fat alternative, or it is not available right now. \parencite{Freyne2010} as well as \parencite{Geleijnse_extractingvegetable} build a recipe recommendation, which prefer healthy recommendations. As before, the healthiness of a recipe is determined through its used ingredients. 
-
-\textbf{Social science} is also possible through analysing recipes. For example \parencite{BeateHenning} analyses typical characteristics of cookbook through German history. She noticed that recipes before the 18.th century often contained ingredients, which should mask the taste of rotted food, what is clearly a sign for poverty and food shortage. Fasting meals covered about a third of many cookbooks, which emphasises the influence of the church at that time. First mentions of non-native ingredients and meals are indications for intercultural exchange. Rare and expensive ingredients are signs for prosperity while possible substitution of them for poverty. Another example is in \parencite{FlavorNetwork}. They compare American and Asian culinary practice based on about 56.000 recipes.
-
-
 
 \chapter{Making a cookbook machine readable}
 This chapter covers shortly, how a printed cookbook can be transformed into a machine readable format, which can be arbitrarily processed further. To achieve this, the cookbook has to be digitalised first. Afterwards it has to be enriched with meta data from an ontology.
@@ -173,7 +165,11 @@ Because we are only interested in extracting certain data from the recipes and n
 \section{CueML ontology}\label{sec:cueMLOntology}
 An ontology is needed for automatic extraction and further processing of information. In computer science an ontology is a vocabulary with defined meaning. A general description for the use of ontologies can be found in \parencite{semanticWeb}.
 
-\begin{figure}
+\textit{Schema.org/Recipe} is an existing ontology for recipes \parencite{schemaOrg}. For example \footnote{http://cooking.nytimes.com} and \footnote{http://allrecipes.com} use it. An example usage is shown in \cref{fig:schemaOrgRecipe} on the next page and its main purpose is to support search engines as described in \parencite{foodBlogger} and \parencite{schemaOrg} \footnote{at http://schema.org/docs/datamodel.html}.
+
+But it is not precise enough for further automatic culinary analysis like extracting the ingredients. As you can see in \cref{fig:schemaOrgRecipe} each line from the list of ingredients is marked as an ingredient. This is too inaccurate, because the concrete ingredient is not marked and neither its quantity nor unit. Therefore a computer cannot understand it.
+
+\begin{figure}[H]
 	\begin{subfigure}{1\textwidth}
 		\centering
 		\includegraphics[width=0.7\textwidth]{Images/schemaRecipeWithoutMarkup}
@@ -188,41 +184,59 @@ An ontology is needed for automatic extraction and further processing of informa
 	\label{fig:schemaOrgRecipe}
 \end{figure}
 
-\textit{Schema.org/Recipe} is an existing ontology for recipes \parencite{schemaOrg}. For example http://cooking.nytimes.com and http://allrecipes.com use it. An example usage is shown in \cref{fig:schemaOrgRecipe} on the next page and its main purpose is to support search engines as described in \parencite{foodBlogger} and \parencite{schemaOrg} \footnote{at http://schema.org/docs/datamodel.html}.
 
-But it is not precise enough for further automatic culinary analysis like extracting the ingredients. As you can see in \cref{fig:schemaOrgRecipe} each line from the list of ingredients is marked as an ingredient. This is too inaccurate, because the concrete ingredient is not marked and neither its quantity nor unit. Therefore a computer cannot understand it.
+That is why we came up with \textbf{culinary editions markup language (cueML)}. It is pronounced like Kümmel, which is the German word for caraway. CueML extends TEI, retaining the goals and advantages of TEI this way. Its vocabulary sticks close to Schema.org/Recipe, so that it profits from the already established schema and can easily be transformed into it, for the sake of search engines. The main refinements are:
+
+\begin{itemize}
+	\item Add attributes for quantity and unit.
+	\item Allow to mark an ingredient as optional through an additional attribute.
+	\item The ability to specify that some ingredients are an alternative to each other.
+	\item Distinction between basic ingredients like salt and complex ingredients like dumplings.
+	\item Comprehend ingredients as unique resources, with possible different form of appearance.
+\end{itemize}
+
+The last point may seem unremarkable but enables a lot. Imagine there would be an freely available set of unique ingredient resources, which specify extra information like its nutrition information and a taxonomy categorisation like is-vegetable. Having the unique resource identifier (URI) of each ingredient from a recipe, its further processing like specifying its fat-level or if it is suitable for a diet becomes trivial, transparent and comparable to other ratings. The only thing you have to do, is collecting the freely available information of your URIs. Unfortunally we could not find such a set of resources. Therefore we used the Bundeslebensmittelschlüssel\footnote{https://www.blsdb.de/} as first approach, which we could contain with a non-public academic license. The different form of appearance is important, because for example Midder, Kalbsmidder, Kalbsmilch and Bries all describe the same ingredient in German.
+
+A full example is shown on the next two pages. \Cref{fig:B16Scanned} is a scan of a recipe from our printed cookbook. In \cref{fig:ingredientList} is a excerpt, of how we define ingredient resources and \cref{fig:B16Enriched} shows the digital with cueML enriched version of the same recipe.
+
+Schema.org/Recipe is not a well defined grammar. They state "some data is better than none", meaning, that they tolerate wrong meta data for reducing the risk of getting no meta data at all. Furthermore it should be easier to extend the language without an existing grammar. \parencite{schemaOrg}\footnote{at http://schema.org/docs/datamodel.html} That is obvious true, because you cannot break, what is not defined. But in contrast to them we defined cueML in a RELAX NG-grammar, which can be found in the attached cd of this thesis. We believe a grammar is a good documentation. In addition a validation against a grammar prevents simple mistakes like typing errors, which can be easily done, when tagging a lot of data.
 
 \newpage
-That is why we came up with \textbf{culinary editions markup language (cueML)}. It is pronounced like Kümmel, which is the German word for caraway. CueML extends TEI, so that the structure of our cookbook can be obtained. Its vocabulary sticks close to Schema.org/Recipe, so that it profits from the already established schema and can easily be transformed into it, for the sake of search engines. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{Images/B-16}
+	\caption{Recipe B-16 scanned \parencite{DTA}}
+	\label{fig:B16Scanned}
+\end{figure}
 
-First of all we add the four attributes \textit{quantity}, \textit{unit}, \textit{ref} and \textit{target} to the recipeIngredient element. \textit{Ref} is a reference to an ingredient element, which defines the ingredient, as elucidated later. When the ingredient is a composed ingredient like dumplings, the target attribute is used instead of ref. It should reference to a correlating recipe.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{Images/ingredientList}
+	\caption{excerpt of ingredient elements}
+	\label{fig:ingredientList}
+\end{figure}
 
-Each ingredient element defines an ingredient. A BLSref attribute is a reference to the Bundeslebensmittelschlüssel\footnote{https://www.blsdb.de/}-key. That enables a look up for nutrition information of the ingredient. Its child elements are possible names for the ingredient. For example Midder, Kalbsmidder, Kalbsmilch and Bries are all different names for the same ingredient.
+\newpage
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{Images/B-16-enriched}
+	\caption{Recipe B-16 enriched with cueML}
+	\label{fig:B16Enriched}
+\end{figure}
+\newpage
 
-\begin{minipage}{\linewidth} % For avoiding page breaks
-\begin{lstlisting}[language=XML, caption={Example for cueML}, label=lst:exampleCueML]
-Ingredients:
-- <span itemprop="recipeIngredient" quantity="3-4" ref="#F503000">3 or 4 ripe bananas, smashed</span>
-- <span itemprop="recipeIngredient" quantity="1" ref="egg">1 egg</span>
-- <span itemprop="recipeIngredient" quantity="0.75" ref="cup" name="sugar">3/4 cup of sugar</span>
-\end{lstlisting}
-\end{minipage}
-
-Additionally we add an attribute \textit{optional}, because we think it is not appropriate to simply state sugar is an ingredient in the case of "sugar if not sweet enough".  
-
-Last we also noticed, that ingredients can be alternatives to each other like in "hollandaise sauce or butter, mustard and a squeeze of lemon juice". Therefore we add an element \textit{recipeIngredientAlternations} having arbitrary child elements \textit{alt}, which enclose \textit{recipeIngredient} elements.
-
-An example is provided in \cref{appendix:fullUseOfCueML}. The complete cueML ontology is defined through a relax ng grammar, which can be found in \cref{appendix:grammaCueML}. Due to the point, that Schema.org does not provide a grammar for Schema.org/Recipe, cueML includes also the rules for it. Personally I was surprised that they do not provide an official grammar, because that would provide a clear definition as well as an easy validation method. That is why we provide a grammar. But they state themselves, that "some data is better than none", meaning, that they want to tolerate wrong meta data for reducing the risk of getting no meta data at all. They state furthermore, that it makes it more easy to extend the language \parencite{schemaOrg}\footnote{at http://schema.org/docs/datamodel.html}. Obvious you cannot break, what is not defined. 
-
-
-\section{Applying cueML to our recipes}
-Due to the point, that we wanted to extend Schema.org/Recipe, cueML should be applied to the list of ingredients as the former does. But our recipes have only a direction text, as you can see in \cref{fig:davidisRecipe}. CueML as well as Schema.org/Recipe is not well suited for direction text. The ingredient phrases are not always tied closely together. Besides they repeat themselves in the text and sometimes they appear in the form of "like the previous one but don't use onions". These points make it hard to apply cueML directly to the direction text. Therefore we decided to collect them in an extra \textit{meta}-element. Having extra sections for recipe yield, cook time and list of ingredients is way more nicer to read than only one direction text anyway. \Cref{appendix:fullUseOfCueML} shows a full example usage of cueML. A test with the testing tool for structured data from google\footnote{https://search.google.com/structured-data/testing-tool} reveals, that all extracting, which is already in place for Schema.org/Recipe, still works. 
 
 
 \section{Need for automation}\label{sec:NeedForAutomation}
-As mentioned in \parencite{manualTagging}, manual tagging is time consuming and error prone. The approach to extract ingredients from recipes, which we will present in section \ref{sec:crfzeit}, emphasises that. They state, that they need 50-100 fields per recipe. And in the evaluation of their approach they discovered mistakes done in manual tagging.
+- Braucht Domän Wissen Kochen + Taggen (Beispiel Scorzoner Wurzeln) / teuer, Bouillon (heute Maggi, damals link zu eigenem Rezept)
+
+Eigne HIWI
+
+As mentioned in \parencite{manualTagging}, manual tagging is time consuming and error prone. The New York Times's approach to extract ingredients from recipes, which we will present in section \ref{sec:crfzeit}, emphasises that. They state, that they need 50-100 fields per recipe. And in the evaluation of their approach they discovered mistakes done in manual tagging.
 
 For tagging one recipe in our cookbook I need about 5 minutes. That means, that I would need more than 2 weeks, for tagging only the recipes from our cookbook. Building a big data pool this way is very time consuming and therefore expensive.
+
+
 
 Hence automation, which has to be configured only once and can be applied to many resources afterwards, is clearly preferable.
 
@@ -486,57 +500,57 @@ zu aufwändig
 Bekanntes / kleines Vokabular (verstärkt durch Luttenberger)
 
 alter Mist...
-\chapter{Development of recipe parser}
 
-\section{Starting position}
--plain text
--altes deutsch / alte Zutaten
--how to test
-
-\section{Overall picture}
-Git-tag
-\subsection{Workflow}
-\subsection{Features}
-\subsection{Evaluation}
--Precision -Recall
-
-\section{First Iteration: Basis CRF}
-Git-tag
-\subsection{Workflow}
-\subsection{Features}
-\subsection{Evaluation}
-
-\section{Final recipe parser}
-\subsection{Workflow}
-\subsection{Features}
-\subsection{Evaluation}
 
 
 
 
 %Discussion------------------------------------------------------------------%
 \chapter{Discussion}
+
+\section{Usefulness of this thesis}\label{sec:UsefulnessOfThesis}
+I personally feel it is an interesting computer science challenge to extract ingredients from plain text and make them machine readable. But that would be a bad justification for a master thesis. This section points out some of many applications, which are possible, once the ingredients are extracted. Building a database manual for all these applications is way to time consuming, as pointed out in \ref{sec:NeedForAutomation}. Therefore this thesis is useful, what is a good motivation as well as a good justification for this master thesis.
+
+\parencite{recipeRecommendation} build a \textbf{recipe recommendation system} for a cooking website, based on which ingredients are liked by the users and which not.
+
+Beside that, there seems to exist a lot of effort about \textbf{diet, targeting the well being}. \parencite{ingredientNetworks} analyse, how far a recipe is liked in relation with its nutrition information, which are based on the ingredient of the recipe. They also analyse how far an ingredient can be replaced through another ingredient, which is nice, if you want a low-fat alternative, or it is not available right now. \parencite{Freyne2010} as well as \parencite{Geleijnse_extractingvegetable} build a recipe recommendation, which prefer healthy recommendations. As before, the healthiness of a recipe is determined through its used ingredients.
+
+Both, a recommendation system as well as help with healthy diet, do obviously increase the attractiveness of a cooking website. That raises the question, how much are these features worth. Unfortunally it is not an easy task to determine the value of cooking websites. Chefkoch.de, which is the biggest German cooking website, is a 100\% subsidiary of Gruner+Jahr today, but there are no reliable information about the cost of acquisition. They are also not allowed to share any information about their revenue, but have more than 100 employees, what is an indication for a lot of revenue (see \cref{appendix:emailChefkoch}). Therefore these application are probably also worth a lot.
+
+
+\textbf{Social science} is also possible through analysing recipes. For example \parencite{BeateHenning} analyses typical characteristics of cookbook through German history. She noticed that recipes before the 18.th century often contained ingredients, which should mask the taste of rotted food, what is clearly a sign for poverty and food shortage. Fasting meals covered about a third of many cookbooks, which emphasises the influence of the church at that time. First mentions of non-native ingredients and meals are indications for intercultural exchange. Rare and expensive ingredients are signs for prosperity while possible substitution of them for poverty. Another example is in \parencite{FlavorNetwork}. They compare American and Asian culinary practice based on about 56.000 recipes.
+
+
 \section{Übertragung auf beliebige / allgemeine Rezepte}
 
+
+\section{Quality of cueML and the obtained data}
+- Mengenangaben ohne recipeYield witzlos
+- Übersetzung von (historischen) Mengenangaben (Maß)
+- Ungenaue Mengenangaben (ein Stich, 5Pfennig Brot, etwas)
+- links/refs erschweren Auswertung
+- BLS Angaben für alk. freie Getränke :D :D :D, nicht open source, nicht word wide
+- welche Zutat welche BLS key (BLS überraschend schwer :D)
+
+
 \section{Rapid Prototyping}
-- TDD / früh Plausibilitäts-Überprüfungen - Tagen als Hi-Wi war ne dumme Aktion^^ (insbesondere fürs Schemata, Mengenangaben und Namen historische Recherche nötig (B-17 bzw \cref{appendix:fullUseOfCueML} cook time not clear / Gefühl für die Daten, Wurzelwerk, braunes Gewürz,	Engl. Soja))
+- TDD / früh Plausibilitäts-Überprüfungen - Tagen als Hi-Wi war ne dumme Aktion^^ (insbesondere fürs Schemata, Mengenangaben und Namen historische Recherche nötig (Gefühl für die Daten, Wurzelwerk, braunes Gewürz,	Engl. Soja, tagging schema ist schwieriger als gedacht))
 - CRF zu aufwändig 
 
-\section{Güte der Daten}
-- Mengenangaben ohne recipeYield witzlos
-- links/refs erschweren Auswertung
-- BLS Angaben für alk. freie Getränke :D :D :D
-- welche Zutat welche BLS key
-- Übersetzung von Mengenangaben (Maß)
-
 \section{Knowledge is power}
-\url{https://en.wikipedia.org/wiki/Scientia_potentia_est}
+The goal of the following digression is to provide some critical though and to sensitize for the importance of data privacy. Due to the point that the goal of this overall thesis is to facilitate machine readable data, and machine readable data provides a lot of knowledge per definition of itself, this is an important personal concern of me. Because this is not a thesis in humanities, I feel free to over exaggerate a little bit and use sources like Wikipedia here.
 
-Machine readable data are very powerful. But \textit{with great power comes great responsibility}\footnote{A well known proverb which probably has its origin from the French National Convention during the period of French Revolution. \parencite{quoteInvestigator}}\footnote{In "Die Physiker" sehr gut thematisiert}. In the context of a recipe parser this might be a little bit exaggerated. But specially in mind of the global surveillance disclosures denounced by Edward Snowed with still uncertain dimension, I think it is important to have a consciousness for what can be done. Therefore I want to think about, what can be done through innocent looking machine readable tags. 
-\bigskip
+According to Wikipedia \footnote{\url{https://en.wikipedia.org/wiki/Scientia_potentia_est} visted on 01/10/17} the first recorded occurrence of the proverb "Knowledge is power" is already from the tenth-century stating \textit{"Knowledge is power and it can command obedience. A man of knowledge during his lifetime can make people obey and follow him and he is praised and venerated after his death. Remember that knowledge is a ruler and wealth is its subject"}. How this thesis can support wealth was already discussed in \cref{sec:UsefulnessOfThesis}.
 
+But \textbf{with great power comes great responsibility}\footnote{A well known proverb which probably has its origin from the French National Convention during the period of French Revolution. (\url{http://quoteinvestigator.com/2015/07/23/great-power/} visited on 11/02/16)}. I want to give two examples, where knowledge provided through data had/have terrifying power:
 
-\textbf{In the bad} \parencite{clintonHealth} - I seriously wonder if revealing Hillary were a vegetarian would have a bad impact on her survey results. 
+First, the Weimar Republic changed 1919 their constitution, giving the state the right to acquire the religion affiliation of their citizen in a census. That makes sense, because the state does collect the church taxes for the catholic church in Germany and therefore has to know, who is catholic. 1939 the regime of Adolf Hitler used that right, to enforce everybody to tell if they self, one of their parents or one of there grandparents are Jews, leading to a categorization of full Jew, hybrid of level one or hybrid of level two. It is uncertain today, how far the regime used these data, to deport people into concentration camps\footnote{\url{https://de.wikipedia.org/wiki/Volkszählung_im_Deutschen_Reich_1939} visted on 28/12/16}. But in my opinion it is easy to imagine, that they did take use of these information in some way. Otherwise they would not have collected it. And even the possibility that the religion of one of your grandparents could lead to deportation into a concentration camp, frightens me, that insane regime could do anything with any data.
+
+Second it is actual very present in the media, how far "faked news" influence elections\footnote{e.g \url{https://www.nytimes.com/2016/11/18/technology/fake-news-on-facebook-in-foreign-elections-thats-not-new.html?_r=0} visted on 12/11/16}, adjudging news, which are some sort of data and knowldege, huge power. Also very present is the claim, that Russia has collected material to blackmail the next American president Donald Trump\footnote{\url{https://www.nytimes.com/2017/01/10/us/politics/donald-trump-russia-intelligence.html} visted on 10/01/17}. This ability is also clearly very powerful. I personally would be surprised, if they had not done that, because the western countries do the same to some point. The Global surveillance disclosures revealed that the American and British secret services monitored huge parts of the internet\footnote{\url{https://en.wikipedia.org/wiki/Global_surveillance_disclosures_(2013-present)} visited on 11/01/17}. I am convinced, that this is very expensive and that one of their intentions is to find material, they can use for their political advantage. For example the mobile phone of the German chancellor was monitored since 2002\footnote{\url{http://www.spiegel.de/politik/deutschland/handy-der-kanzlerin-die-wichtigsten-fakten-der-abhoeraffaere-a-930411.html} visited on 11/01/17}. It takes not much imagination to associated that with the declining of the Iraq War of the actual chancellor as well as with his closeness to Russia.
+
+In the context of a program, which make recipes machine readable, this all might be total exaggerated. But the health of Hillary Clinton was a topic at the American president election 2016\footnote{\url{https://www.washingtonpost.com/news/the-fix/wp/2016/09/11/hillary-clintons-health-just-became-a-real-issue-in-the-presidential-campaign/} visted on 02/11/16}. I personal know, that you should not eat some ingredients, when you have pancreatic cancer, which gets underlined by forum questions\footnote{\url{http://www.chefkoch.de/forum/2,51,639082/Bauchspeicheldruesen-rezepte.html} visited on 11/02/17}. It probably would have had effected survey results, when someone, who favoured Donald Trump, had tracked Hillary's internet traffic and stated Hillary had pancreatic cancer, based on the fact, that she was interested in recipes, avoiding these ingredients. I also wonder, if revealing Hillary were a vegetarian would have had a bad impact on her survey results. 
+
+As mentioned at the top, this section was not very scientific. But I hope, that I could provide some critical thoughts, keeping in mind.
 
 
 \chapter{Summary}
@@ -551,71 +565,9 @@ I declare that I have developed and written the enclosed Master Thesis completel
 \rule{\textwidth}{1pt}
 Location, Date \hfill Signature 
 
-
-
-\chapter{Full example use of cueML} \label{appendix:fullUseOfCueML}
-
-\begin{lstlisting}[language=XML, caption={Without cueML}]
-<recipe type="Suppen." rcp-id="B-16">
-	<head>Mock Turtle Suppe.</head>
-	
-	<p>Es wird hierzu für 24-30 Personen eine kräftige Bouillon von 8-10 Pfund Rindfleisch mit Wurzelwerk gekocht. Zugleich bringt man einen großen Kalbskopf, eine Schweineschnauze und Ohren, einen Ochsengaumen und eine geräucherte Ochsenzunge zu Feuer und kocht dies Alles gahr, aber nicht zu weich. Kalt, schneidet man es in kleine, länglich viereckige Stückchen, gibt das Fleisch in die Bouillon, nebst braunem Gewürz, ein Paar Messerspitzen Cayenne-Pfeffer, einige Kalbsmidder in Stückchen geschnitten (siehe Vorbereitungsregeln), kleine Saucissen, so viel Kalbskopfbrühe, daß man hinreichend Suppe hat, und macht dies mit in Butter braun gemachtem Mehl gebunden. Nachdem dies Alles 1/4 Stunde gekocht hat, kommen noch Klöße von Kalbfleisch, einige hart gekochte Eier in Würfel geschnitten, ein Paar Eßlöffel Engl. Soja hinzu, und wenn die Klößchen einige Minuten gekocht haben, 1/2 Flasche Madeira und auch Austern, wenn man sie haben kann. Dann wird die Suppe sogleich angerichtet.</p>
-	
-	<note>Anmerk. Der Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und statt Madeira kann man weißen Franzwein und etwas Rum nehmen. Sowohl die Bouillon als Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden. </note>
-</cue:recipe>
-\end{lstlisting}
-
-
-\begin{lstlisting}[language=XML, caption={Enriched with cueML}]
-<div itemscope itemtype="http://schema.org/Recipe http://cueML.org">
-	<recipe type="Suppen." rcp-id="B-16">
-		<head><span itemprop="name">Mock Turtle Suppe</span></head>
-		
-		<meta>
-			<span itemprop="recipeYield" quantity="24-30" unit="Personen">24-30 Personen</span>
-			
-			<span itemprop="recipeIngredient" name="Bouillon" reference="#Bouillon">Bouillon</span>
-			<span itemprop="recipeIngredient" name="Rindfleisch" quantity="8-10" unit="Pfund">8-10 Pfund Rindfleisch</span>
-			<span itemprop="recipeIngredient">Wurzelwerk</span>
-			<span itemprop="recipeIngredient" name="Kalbskopf" quantity="1">1 Kalbskopf</span>
-			<span itemprop="recipeIngredient" name="Schweineschnauze" quantity="1">1 Schweineschnauze</span>
-			<span itemprop="recipeIngredient" name="Schweineohr">Schweineohren</span>
-			<span itemprop="recipeIngredient" name="Ochsengaumen" quantity="1">1 Ochsengaumen</span>
-			<span itemprop="recipeIngredient" name="Ochsenzunge" quantity="1">1 geräucherte Ochsenzunge</span>
-			<span itemprop="recipeIngredient">braunes Gewürz</span>
-			<span itemprop="recipeIngredient" name="Cayennepfeffer" quantity="vague" unit="Messersptize">ein Paar Messerspitzen Cayenne-Pfeffer</span>
-			<span itemprop="recipeIngredient" name="Kalbsmidder" quantity="vague" reference="#A-16">einige Kalbsmidder</span>
-			<span itemprop="recipeIngredient" name="Saucisson">kleine Saucissen</span>
-			<span itemprop="recipeIngredient" name="Butter">Butter</span>
-			<span itemprop="recipeIngredient" name="Mehl">Mehl</span>
-			<span itemprop="recipeIngredient" name="Kalbfleischklöße" reference="#L-4">Klöße vom Kalbfleisch</span>
-			<span itemprop="recipeIngredient" name="Ei" quantity="vague">einige hart gekochte Eier</span>
-			
-			<span itemprop="recipeIngredient" name="Auster" isOptional="True">Austern, wenn man sie haben kann</span>
-			<span itemprop="recipeIngredient" quantity="vague" unit="EL" isOptional="True">ein Paar Eßlöffel Engl. Soja</span>
-			
-			<recipeIngredientAlternations>
-				<alt>
-					<span itemprop="recipeIngredient" name="Madeira" quantity="0.5" unit="Flasche">Madeira</span>
-				</alt>
-				<alt>
-					<span itemprop="recipeIngredient" name="weißen Franzwein">weißen Franzwein</span>
-					<span itemprop="recipeIngredient" name="Rum">etwas Rum</span>
-				</alt>
-			</recipeIngredientAlternations>
-		</meta>
-
-		<span itemprop="recipeInstructions">
-			<p>Es wird hierzu für 24-30 Personen eine kräftige Bouillon von 8-10 Pfund Rindfleisch mit Wurzelwerk gekocht. Zugleich bringt man einen großen Kalbskopf, eine Schweineschnauze und Ohren, einen Ochsengaumen und eine geräucherte Ochsenzunge zu Feuer und kocht dies Alles gahr, aber nicht zu weich. Kalt, schneidet man es in kleine, länglich viereckige Stückchen, gibt das Fleisch in die Bouillon, nebst braunem Gewürz, ein Paar Messerspitzen Cayenne-Pfeffer, einige Kalbsmidder in Stückchen geschnitten (siehe Vorbereitungsregeln), kleine Saucissen, so viel Kalbskopfbrühe, daß man hinreichend Suppe hat, und macht dies mit in Butter braun gemachtem Mehl gebunden. Nachdem dies Alles 1/4 Stunde gekocht hat, kommen noch Klöße von Kalbfleisch, einige hart gekochte Eier in Würfel geschnitten, ein Paar Eßlöffel Engl. Soja hinzu, und wenn die Klößchen einige Minuten gekocht haben, 1/2 Flasche Madeira und auch Austern, wenn man sie haben kann. Dann wird die Suppe sogleich angerichtet. </p>
-
-			<note>Anmerk. Der Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und statt Madeira kann man weißen Franzwein und etwas Rum nehmen. Sowohl die Bouillon als Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden. </note>
-		</span>
-	<recipe>
-</div>		
-\end{lstlisting}
-
-\chapter{RELAX NG grammar for cueML} \label{appendix:grammaCueML}
-
+\chapter{Emails with Chefkoch.de} \label{appendix:emailChefkoch}
+\vspace{-1cm}
+\includegraphics[width=1\linewidth]{Images/emailChefkoch}
 
 \printbibliography
 
