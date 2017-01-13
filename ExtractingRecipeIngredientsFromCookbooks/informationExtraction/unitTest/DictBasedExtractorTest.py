@@ -37,8 +37,8 @@ class DictBasedExtractorTest(unittest.TestCase):
                Muskatblüthe, etwas Zucker und Salz."
         candis = self.ingE.getIngredientCandidates("Wein", recipe=None, sentence=sentence)
 
-        self.assertEqual(1, len(candis))
         self.assertTrue(xmlId in candis)
+        self.assertEqual(1, len(candis))
 
 
 if __name__ == "__main__":
