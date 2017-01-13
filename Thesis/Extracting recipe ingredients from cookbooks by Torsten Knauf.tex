@@ -228,40 +228,27 @@ Schema.org/Recipe is not a well defined grammar. They state "some data is better
 
 
 \section{Need for automation}\label{sec:NeedForAutomation}
-- Braucht Domän Wissen Kochen + Taggen (Beispiel Scorzoner Wurzeln) / teuer, Bouillon (heute Maggi, damals link zu eigenem Rezept)
+The tagging requires some domain knowledge. For example we first assumed that the ingredient "Scorzoner Wurzel" is burgundy truffles. But when we realized, that it should be put into many soups, we started to doubt that. We now reason, that "Scorzonera hispanica" is meant, which is the name of salsify. Another example is bouillon. Today we would simple buy bouillon powder in the super market and mix it with water. But at the time of our cookbook it was common to cook one from the scratch and therefore there is an instruction for bouillon. Beside the cooking domain knowledge also some XML comprehension is needed for the tagging.
 
-Eigne HIWI
+For tagging one recipe in our cookbook I need about 5 minutes in average. That means, that I would need more than 2 weeks of full time work, for tagging about 1000 recipes. We had a student assistant, who has never worked with XML before. In about 18 hours she could tag 66 recipes, meaning she needed more than 15 minutes in average per recipe. To be fair, her average speed would be probably better now, after she got used to XML.
 
-As mentioned in \parencite{manualTagging}, manual tagging is time consuming and error prone. The New York Times's approach to extract ingredients from recipes, which we will present in section \ref{sec:crfzeit}, emphasises that. They state, that they need 50-100 fields per recipe. And in the evaluation of their approach they discovered mistakes done in manual tagging.
+Beside the needed domain knowledge and time effort, the tagging is also error prone. Looking over the tagged recipes, I found mistakes, some done by me and some more done by our student assistant.
 
-For tagging one recipe in our cookbook I need about 5 minutes. That means, that I would need more than 2 weeks, for tagging only the recipes from our cookbook. Building a big data pool this way is very time consuming and therefore expensive.
-
-
+That tagging is time consuming and error prone get emphasised by \parencite{manualTagging} as well as by the New York Times's approach to extract ingredients from recipes, which we will present in section \ref{sec:crfzeit}.
 
 Hence automation, which has to be configured only once and can be applied to many resources afterwards, is clearly preferable.
 
 
 
 \chapter{Related Work}
-In general there exists many works about extracting useful information from textual and unstructured resources. The superordinate term for this field of research is Text Mining. It was first mentioned in \parencite{KDT} and an overview can be found in \parencite{surveyOfTextMining}. 
+In general there exist many works about extracting useful information from textual and unstructured resources. The superordinate term for this field of research is Text Mining. It was first mentioned in \parencite{KDT} and an overview can be found in \parencite{surveyOfTextMining}. 
 
-The algorithms for extracting useful information depend highly on existing semi-structures, which can be taken advantage of. Here we present existing algorithms, which we found in the domain of cooking, and distinct their effort from this thesis. But before that we define precision and recall.
-
-\section{Precision \& Recall}
-NOT HERE
-Precision and recall are metrics, which measure the quality of an information extracting algorithm.
-
-\begin{equation} \label{eq:precisionAndRecall}
-	Precision = \frac{\#(retrieved \cap relevant)}{\#retrieved}, \hspace{1em} Recall = \frac{\#(retrieved \cap relevant)}{\#relevant}
-\end{equation}
-
-They are defined as shown in \cref{eq:precisionAndRecall} according to  \parencite{surveyOfTextMining}. A high precision states, that the algorithm does only find relevant information as intended. The ideal precision of one would mean, that all extracted data where useful. A high recall states, that the algorithm finds many of the total relevant information. The perfect score of one would mean, that all relevant information were found. Both are needed for the evaluation of an algorithm. If only considering precision, the algorithm could only find the information, which are obvious relevant and therefore find only view information, but having a high score this way. On the other side, if only considering recall, the algorithm could return everything. This way its score would have the perfect value of one. But both algorithm are obvious not good, which gets covered by a low value of the other formula.
-
+The algorithms for extracting useful information depend highly on existing semi-structures, which can be taken advantage of. Here we present existing algorithms, which we found in the domain of cooking, and distinct their effort from this thesis.
 
 \section{Skip The Pizza}
-\parencite{REgutGenug} is a project described on WordPress.org. The author wants to combine his two hobbies cooking and software engineering. For being able to answer questions like "How many ingredients does a typical recipe consist of?" or "Which are the most frequent ingredients?", he extracts the ingredients of recipes from an open source platform at http://recipes.wikia.com/wiki/Recipes\_Wiki.
+\parencite{REgutGenug} is a project described on WordPress.org. The author wants to combine his two hobbies cooking and software engineering. For being able to answer questions like "How many ingredients does a typical recipe consist of?" or "Which are the most frequent ingredients?", he extracts the ingredients of recipes from the open source platform http://recipes.wikia.com/wiki/Recipes\_Wiki.
 
-The recipes have a consistent internal representation, which is shown in \cref{lst:recipeWiki}. The semi-structure, that after \texttt{== Ingredients ==} comes a list of ingredients, can be recognized easily. Per line is one ingredient enclosed within \texttt{[[ingredient name]]}. Using this semi-structure a regular expression is already good enough for extracting the ingredients from these recipes.
+The recipes have a consistent internal representation, which is shown in \cref{lst:recipeWiki}. The semi-structure, that after \texttt{== Ingredients ==} comes a list of ingredients, can be recognized easily. Per line is one ingredient enclosed within \texttt{[[ingredient name]]}. Using this semi-structure a regular expression is already good enough for extracting the ingredients from these recipes. The quantities and units of ingredients are not of interest for this work. 
 
 \begin{lstlisting}[frame=single, basicstyle=\footnotesize\ttfamily,caption={Shortened example recipe from \\ http://recipes.wikia.com/wiki/Recipes\_Wiki}, label=lst:recipeWiki]
 * Makes 6 to 8 servings
@@ -283,7 +270,7 @@ Add tomatoes, [...]
 
 
 \section{Extracting Structured Data From Recipes Using Conditional Random Fields}\label{sec:crfzeit}
-The New York Times provides a cooking website with recipes\footnote{http://cooking.nytimes.com/}. Their recipes are enriched with Schema.org/Recipes. For providing a recipe recommendation system based on ingredients, you have to extract the exact ingredients from a recipe, which is not enabled through this schema, as already discussed in \cref{sec:cueMLOntology}. Nevertheless they are able to extract them automatically. They use the provided structure from Schema.org/Recipe, that each ingredient phrase from the list of ingredients is marked as recipeIngredient, and Conditional Random Fields (CRF) for that. Their approach is described in \parencite{CRFZeit}. Hence we introduce here CRF first and afterwards outline their implementation.  
+The New York Times provides a cooking website with recipes\footnote{\url{http://cooking.nytimes.com/}}. Their recipes are enriched with Schema.org/Recipes. For providing a recipe recommendation system based on ingredients, you have to extract the exact ingredients from a recipe, which is not enabled through this schema, as already discussed in \cref{sec:cueMLOntology}. Nevertheless they are able to extract them automatically. They use the provided structure from Schema.org/Recipe, that each ingredient phrase from the list of ingredients is marked as recipeIngredient, and Conditional Random Fields (CRF) for that. Their approach is described in \parencite{CRFZeit}. Hence we introduce here CRF first and afterwards outline their implementation.  
 
 \subsection{Conditional Random Fields}
 Given a vector of words, CRF wants to predict a suitable vector of labels. For example when the vector of words is \textit{[1 tablespoon salt]}, we want to predict \textit{[QUANTITY, UNIT, INGREDIENT]}, meaning 1 is a quantity, tablespoon a unit and salt an ingredient.
@@ -331,7 +318,7 @@ Putting all together leads to \cref{def:defCRF}. Note that after plugging \cref{
     \hspace*{2em}$Y$ vector of labels, $X$ vector of words, $S$ set of all possible labels
 \end{defn}
 
-Having a CRF in place, a natural prediction function is shown in \cref{eq:CRF}. The calculation of $prediction(X)$ can be done in $(\#S)^2*\#X$ through dynamic programming.
+Having a CRF in place, a natural prediction function is shown in \cref{eq:CRF}. The calculation of $prediction(X)$ can be done in $(\#S)^2*\#X$ through dynamic programming techniques.
 
 \begin{equation}\label{eq:CRF}
 prediction(X) = argmax_Y(P(Y|X))
@@ -340,7 +327,7 @@ prediction(X) = argmax_Y(P(Y|X))
 \subsection{Implementation of New York Times}
 As starting point the New York Times have manually specified labels for over 130,000 ingredient phrases, which they use as training data. They are extracted out of their website, where their recipes are already enriched with Schema.org/Recipe.
 
-One example ingredient phrase is shown in \cref{lst:NYTTrainingData}. They use CRF++\footnote{https://taku910.github.io/crfpp/} as library, which is an implementation of CRF. The first word per column is the actual word. The last word is the label, which should be predicted in IOB2 format. It states, that the beginning of an entity gets prefixed with \textit{B-} and the continuation with \textit{I-}, as you can see in the last three words. Words, which do not belong to a relevant entity, get labelled with \textit{OTHER}. The labels in between are custom features. 
+One example ingredient phrase is shown in \cref{lst:NYTTrainingData}. They use CRF++\footnote{\url{https://taku910.github.io/crfpp/}} as library, which is an implementation of CRF. The first word per column is the actual word. The last word is the label, which should be predicted in IOB2 format. The format states, that the beginning of an entity gets prefixed with \textit{B-} and the continuation with \textit{I-}, as you can see in the last three words. Words, which do not belong to a relevant entity, get labelled with \textit{OTHER}. The labels in between are custom features. 
 
 \begin{lstlisting}[frame=single, caption={Extract of the training data for New York Times CRF}, label=lst:NYTTrainingData]
 3/4       I1  L12	 NoCAP	NoPAREN	 B-QTY
@@ -353,7 +340,7 @@ and       I7  L12	 NoCAP	NoPAREN	 I-COMMENT
 quartered I8  L12	 NoCAP	NoPAREN	 I-COMMENT
 \end{lstlisting}
 
-The feature functions, which the CRF should use, are not specified through functions in a concrete programming language. Instead they get described through templates of the format U00:\%x[row,column], as shown in \cref{lst:NYTfeatureTemplates}. The row specifies the targeted word in relative position to itself and the column specifies the absolute position. Therefore when the actual word is mushrooms the data from \cref{lst:NYTTrainingData} would be expended to the values in \cref{lst:NYTfeatureTemplatesDerivedValue}.
+The feature functions, which the CRF should use, are specified through the templates of \cref{lst:NYTfeatureTemplates}. They have the format \textit{U00:\%x[row,column]}. The row specifies the targeted word in relative position to itself and the column specifies the absolute position. Therefore when the actual word is mushrooms the data from \cref{lst:NYTTrainingData} would be expended to the values in \cref{lst:NYTfeatureTemplatesDerivedValue}.
 
 \newpage
 \begin{minipage}{0.4\textwidth} 
@@ -386,7 +373,7 @@ B
 \end{minipage}
 \hfill
 \begin{minipage}{0.5\textwidth} 
-\begin{lstlisting}[frame=single, caption={Derived value when the current word in \cref{lst:NYTTrainingData} is mushrooms}, label=lst:NYTfeatureTemplatesDerivedValue]
+\begin{lstlisting}[frame=single, caption={Derived values when the current word in \cref{lst:NYTTrainingData} is mushrooms}, label=lst:NYTfeatureTemplatesDerivedValue]
             
 pound            
 shiitake            
@@ -414,7 +401,7 @@ I-NAME B-Name
 \end{lstlisting}
 \end{minipage}
 
-Feature functions are extracted from these templates as shown in \cref{lst:featureFunctionExtraction}. The B-template takes the transition from $y_{t-1}$ to $y_t$ into account. Note that for example the custom feature function, if a word is inside parentheses, gets implemented through adding a label YesPAREN/NoPAREN to the trainings data in the fourth column in a preprocessing step and specifying the feature template U10\%[0,4]. Also note, that for each such template $\#(all\ possible\ labels)*\#(all\ possible\ words)$ different feature functions gets created. For the B-template $\#(all\ possible\ labels)*\#(all\ possible\ labels)*\#(all\ possible\ words)$ different feature functions gets created.
+Feature functions are extracted from these templates and the corresponding values of the training data as shown in \cref{lst:featureFunctionExtraction}. The B-template takes the transition from $y_{t-1}$ to $y_t$ into account. Note that for example the custom feature function, if a word is inside parentheses, gets implemented through adding a label YesPAREN/NoPAREN to the trainings data in the fourth column and specifying the feature template U10\%[0,4]. Also note, that for each such template $\#(all\ possible\ labels)*\#(all\ possible\ words)$ different feature functions gets created. For the B-template $\#(all\ possible\ labels)^2*\#(all\ possible\ words)$ different feature functions gets created.
 
 \begin{lstlisting}[frame=single, caption={Extracting of feature functions from templates}, label=lst:featureFunctionExtraction, mathescape]
 U02:%[0,0]          $\rightarrow 1_{y_t=I-Name\ and\ x_t=mushrooms} $
@@ -425,9 +412,9 @@ B                   $\rightarrow 1_{y_t=A\ and\ y_{t-1}=B}\ for\ each\ A,B\ \in\
                                                $prediction\ labels$
 \end{lstlisting}
 
-Hence the only features the New York Times take into account for prediction are the word identity (column 0), the index of the current word (column 1), the length of the sentence (column 2, rounded to 4, 8, 12, 16 or 20), if the word starts capitalized (column 3) and if the word is inside parenthesis (column 4).
+Hence the only custom features the New York Times take into account for prediction are the word identity (column 0), the index of the current word (column 1), the length of the sentence (column 2, rounded to 4, 8, 12, 16 or 20), if the word starts capitalized (column 3) and if the word is inside parenthesis (column 4), in relation with the current word and some surrounding words.
 
-When applying their algorithm to 481 example recipes, they get 89\% sentence-level accuracy, meaning that they get 9 out of 10 ingredient phrases completely right. They tested only so few recipes, although they had over 130,000 ready labelled recipes, because they found no way for automatic evaluation. Their problem was, that there were to many ambiguous phrases and to many mistakes in the manually labelled data.
+When applying their algorithm to 481 example recipes, they get 89\% sentence-level accuracy, meaning that they get 9 out of 10 ingredient phrases completely right. They tested only so few recipes, although they had over 130,000 ready labeled recipes, because they found no way for automatic evaluation. Their problem was, that there were to many ambiguous phrases and to many mistakes in the manually labeled data.
  
  
 \section{Domain Specific Information Extraction for Semantic Annotation}
@@ -455,7 +442,7 @@ add[ACT] buttermilk[ING] and[CC] bananas[ING]
 \end{lstlisting}
 
 The second approach is to do a dependency based parsing, which represents the semantic structure of a sentence in a tree like format. For example \cref{fig:johnLikesApple} represents, that the subject of like is John and the liked object is Apple.
-The format as well as building the tree is way more complex than the previous simple rules, but the tree can be build by already existing tools like the Stanford Parser\footnote{http://nlp.stanford.edu/software/lex-parser.shtml}. The semantic structure of the sentences give strong evidence, which action should be applied to which ingredient.
+The format as well as building the tree is way more complex than the previous simple rules, but the tree can be build by already existing tools like the Stanford Parser\footnote{\url{http://nlp.stanford.edu/software/lex-parser.shtml}}. The semantic structure of the sentences give strong evidence, which action should be applied to which ingredient.
 
 \begin{figure}[H]
 	\centering
@@ -480,27 +467,52 @@ In their evaluation they apply these two variants to 43 randomly selected recipe
 
 
 \section{Data-driven Knowledge Extraction for the Food Domain}
-\parencite{konvens07_wiegand12o}
+\parencite{konvens07_wiegand12o} are interested in relations of ingredients. They analyse the four relations:
+\begin{enumerate}
+	\item INGREDIENT typically suits to EVENT
+	\item INGREDIENT is typically served with other INGREDIENT
+	\item INGREDIENT can be replaced with other INGREDIENT
+	\item INGREDIENT is part of RECIPE
+\end{enumerate}
+
+Their data set consists of pure text, divided into title and body. They use GermaNet\footnote{\url{http://www.sfs.uni-tuebingen.de/GermaNet/}} for the extraction of ingredients. GermaNet is a thesaurus for German words providing a category "Nahrung", which means food. When the lemma of a word appears in this category, the word is assumed to be an ingredient. They have three for us relevant methods for instantiating their relations. We only cover their  connection the relation \textit{Ingredient is part of recipe}, because that is the one we are interested in.
+
+\textbf{Title and body} instantiates for each ingredient of a body a relation, if the title is a recipe. This way they reach a P@10 of 0.776, meaning that when ask for the ingredients of a recipe almost 8 of 10 are right. We want to mention, that this value is a lower boundary. For example when a recipe consists only of 5 ingredients, the maximal possible P@10 value would be 0.5.
+
+The other two methods are \textbf{Pattern-based} and \textbf{Co-occurrence}. Both evaluation are very bad and therefore we only discuss the idea of them. Pattern-based searches for patterns like \textit{RECIPE made of INGREDIENT}. They state, that when a pattern is matched, it is always a good match, but that they match not often. They also state, that patterns, based on dependency based parsing, like in the previous section, are not an improvement, due to domain specific mismatch of the parser. Co-occurrence looks for co-occurrences in the text of a recipe and an ingredient.
+
+Last they note, that the relations 2 and 3 are often mixed-up, because they are very similar to each other.
+ 
 
 
-\section{Distinction to this work}
+\section{Lessons for this work}
 \parencite{REgutGenug} exploits a strict semi-structure, which is not given in our very unstructured cookbook. Therefore we need more advanced algorithm than regular expressions.
 
-\parencite{CRFZeit} take advantage of the point, that they have already marked the ingredient phrases from the list of ingredients. But our cookbook has no list of ingredients. Nevertheless, the ingredient phrases could be extracted from plain text through a CRF algorithm first and afterwards we could use the algorithm of \parencite{CRFZeit}. However we have to consider, that we do not have near as 130,000 training data. Our lack of training data could be caught up by more sophisticated custom feature functions. Maybe good feature functions even enable to extract all wanted data in one CRF algorithm.
+\parencite{CRFZeit} take advantage of the point, that they have already marked the ingredient phrases from the list of ingredients. But our cookbook has no list of ingredients. Nevertheless, the ingredient phrases could be extracted from plain text through a CRF algorithm first and afterwards we could use the algorithm of \parencite{CRFZeit}. Another option would be to just try a CRF on the plain text guessing all the work at once. However we have to consider, that we do not have near as 130,000 training data. Our lack of training data could be caught up by more sophisticated custom feature functions.
 
-\parencite{GrammaBased} only uses plain text.(Lüge??) But they have a bad recall, due to the point, that they are not good in mapping actions to their corresponding ingredients. 
-In contrast to mapping actions to ingredients, we want to map quantities to units and these in turn to ingredients, which is more complex and could therefore lead to an even worse recall. Though the dictionary check, enabled by a morphological analysis, from their algorithm first main part, could be very good feature functions.
+\parencite{GrammaBased} only uses plain text. But they have a bad recall, due to the point, that they are not good in mapping actions to their corresponding ingredients. In contrast to mapping actions to ingredients, we want to map quantities to units and these in turn to ingredients, which could be an easier task. Anyway, the dictionary check, enabled by a morphological analysis, from their algorithm first main part, could be a good  custom feature function for a CRF.
+
+\parencite{konvens07_wiegand12o} is interesting, because we target recipes and therefore can easily do their Title and body method. They also enforce \parencite{GrammaBased}, that pattern-based extraction is good, when the patterns match, what is unfortunately not often the case. The Co-occurrence method is an interesting idea for categorization, if an ingredient is optional, or an alternative to another one. For example the co-occurrence of \textit{two ingredients} and the word \textit{instead} within one sentence indicate, that the two ingredients are an alternative to each other.
 
 
 
 \chapter{CRF prototype}
-zu aufwändig
+We present a very basic prototype for extracting of ingredients from recipes based on CRF in this chapter. The program uses the python binding of crfsuite\footnote{\url{http://www.chokkan.org/software/crfsuite/}}. The program can be found under the following git tag\footnote{\url{https://github.com/Torsten89/SourceCodeExtractingRecipeIngredientsFromCookbooks/tree/FirstCRFPrototype}}.
+
+- how to teach opt and alt group?
+- sowieso nach parsen für zuordnung von quantity, unit und ingredient
+
 
 \chapter{Dictionary-based extraction}
-Bekanntes / kleines Vokabular (verstärkt durch Luttenberger)
 
-alter Mist...
+\section{Evaluation}
+Precision and recall are metrics, which measure the quality of an information extracting algorithm.
 
+\begin{equation} \label{eq:precisionAndRecall}
+Precision = \frac{\#(retrieved \cap relevant)}{\#retrieved}, \hspace{1em} Recall = \frac{\#(retrieved \cap relevant)}{\#relevant}
+\end{equation}
+
+They are defined as shown in \cref{eq:precisionAndRecall} according to  \parencite{surveyOfTextMining}. A high precision states, that the algorithm does only find relevant information as intended. The ideal precision of one would mean, that all extracted data where useful. A high recall states, that the algorithm finds many of the total relevant information. The perfect score of one would mean, that all relevant information were found. Both are needed for the evaluation of an algorithm. If only considering precision, the algorithm could only find the information, which are obvious relevant and therefore find only view information, but having a high score this way. On the other side, if only considering recall, the algorithm could return everything. This way its score would have the perfect value of one. But both algorithm are obvious not good, which gets covered by a low value of the other formula.
 
 
 
@@ -531,6 +543,14 @@ Both, a recommendation system as well as help with healthy diet, do obviously in
 - links/refs erschweren Auswertung
 - BLS Angaben für alk. freie Getränke :D :D :D, nicht open source, nicht word wide
 - welche Zutat welche BLS key (BLS überraschend schwer :D)
+-In B-2 "Anmerk. Will man Reis oder Sago zur Suppe nehmen, so gibt man dieses später
+hinein. Man rechnet davon auf jede Person bei allen Fleischsuppen einen gestrichenen Eßlöffel voll."
+
+Infos aus Allg. Vorteil eines Kapitels (Reis 15g pro Suppe)
+
+-Mensch kann Fehler erkennen (B-10 Rindfleisch ->Hasen /falscher Vreweis)
+
+- Publishen / Sharen von cueML
 
 
 \section{Rapid Prototyping}
@@ -538,15 +558,15 @@ Both, a recommendation system as well as help with healthy diet, do obviously in
 - CRF zu aufwändig 
 
 \section{Knowledge is power}
-The goal of the following digression is to provide some critical though and to sensitize for the importance of data privacy. Due to the point that the goal of this overall thesis is to facilitate machine readable data, and machine readable data provides a lot of knowledge per definition of itself, this is an important personal concern of me. Because this is not a thesis in humanities, I feel free to over exaggerate a little bit and use sources like Wikipedia here.
+The goal of the following digression is to provide some critical though and to sensitize for the importance of data privacy. Due to the point that the goal of this overall thesis is to facilitate some machine readable data, and machine readable data provides a lot of knowledge per definition of itself, this is an important personal concern of me. Because this is not a thesis in humanities, I feel free to over exaggerate a little bit and use sources like Wikipedia here.
 
 According to Wikipedia \footnote{\url{https://en.wikipedia.org/wiki/Scientia_potentia_est} visted on 01/10/17} the first recorded occurrence of the proverb "Knowledge is power" is already from the tenth-century stating \textit{"Knowledge is power and it can command obedience. A man of knowledge during his lifetime can make people obey and follow him and he is praised and venerated after his death. Remember that knowledge is a ruler and wealth is its subject"}. How this thesis can support wealth was already discussed in \cref{sec:UsefulnessOfThesis}.
 
 But \textbf{with great power comes great responsibility}\footnote{A well known proverb which probably has its origin from the French National Convention during the period of French Revolution. (\url{http://quoteinvestigator.com/2015/07/23/great-power/} visited on 11/02/16)}. I want to give two examples, where knowledge provided through data had/have terrifying power:
 
-First, the Weimar Republic changed 1919 their constitution, giving the state the right to acquire the religion affiliation of their citizen in a census. That makes sense, because the state does collect the church taxes for the catholic church in Germany and therefore has to know, who is catholic. 1939 the regime of Adolf Hitler used that right, to enforce everybody to tell if they self, one of their parents or one of there grandparents are Jews, leading to a categorization of full Jew, hybrid of level one or hybrid of level two. It is uncertain today, how far the regime used these data, to deport people into concentration camps\footnote{\url{https://de.wikipedia.org/wiki/Volkszählung_im_Deutschen_Reich_1939} visted on 28/12/16}. But in my opinion it is easy to imagine, that they did take use of these information in some way. Otherwise they would not have collected it. And even the possibility that the religion of one of your grandparents could lead to deportation into a concentration camp, frightens me, that insane regime could do anything with any data.
+First, the Weimar Republic changed 1919 their constitution, giving the state the right to acquire the religion affiliation of their citizen in a census. That makes sense, because the state does collect the church taxes for the catholic church in Germany and therefore has to know, who is catholic. 1939 the regime of Adolf Hitler used that right, to enforce everybody to tell if they self, one of their parents or one of there grandparents are Jews, leading to a categorization of full Jew, hybrid of level one or hybrid of level two. It is uncertain today, how far the regime used these data, to deport people into concentration camps\footnote{\url{https://de.wikipedia.org/wiki/Volkszählung_im_Deutschen_Reich_1939} visted on 28/12/16}. But in my opinion it is easy to imagine, that they did take use of these information in some way. Otherwise they would not have collected it. And even the possibility that the religion of one of your grandparents could lead to deportation into a concentration camp, frightens me, that insane regimes could do anything with any data.
 
-Second it is actual very present in the media, how far "faked news" influence elections\footnote{e.g \url{https://www.nytimes.com/2016/11/18/technology/fake-news-on-facebook-in-foreign-elections-thats-not-new.html?_r=0} visted on 12/11/16}, adjudging news, which are some sort of data and knowldege, huge power. Also very present is the claim, that Russia has collected material to blackmail the next American president Donald Trump\footnote{\url{https://www.nytimes.com/2017/01/10/us/politics/donald-trump-russia-intelligence.html} visted on 10/01/17}. This ability is also clearly very powerful. I personally would be surprised, if they had not done that, because the western countries do the same to some point. The Global surveillance disclosures revealed that the American and British secret services monitored huge parts of the internet\footnote{\url{https://en.wikipedia.org/wiki/Global_surveillance_disclosures_(2013-present)} visited on 11/01/17}. I am convinced, that this is very expensive and that one of their intentions is to find material, they can use for their political advantage. For example the mobile phone of the German chancellor was monitored since 2002\footnote{\url{http://www.spiegel.de/politik/deutschland/handy-der-kanzlerin-die-wichtigsten-fakten-der-abhoeraffaere-a-930411.html} visited on 11/01/17}. It takes not much imagination to associated that with the declining of the Iraq War of the actual chancellor as well as with his closeness to Russia.
+Second it is actual very present in the media, how far "faked news" influence elections\footnote{e.g \url{https://www.nytimes.com/2016/11/18/technology/fake-news-on-facebook-in-foreign-elections-thats-not-new.html?_r=0} visted on 12/11/16}, adjudging news, which are some sort of data and knowldege, huge power. Also very present is the claim, that Russia has collected material to blackmail the next American president Donald Trump\footnote{\url{https://www.nytimes.com/2017/01/10/us/politics/donald-trump-russia-intelligence.html} visted on 10/01/17}. This ability is also clearly very powerful. I personally would be surprised, if they had not done that, because the western countries do the same to some point. The Global surveillance disclosures revealed that the American and British secret services monitored huge parts of the internet\footnote{\url{https://en.wikipedia.org/wiki/Global_surveillance_disclosures_(2013-present)} visited on 11/01/17}. I am convinced, that this is very expensive and that one payback is the hope to find material, they can use for their political advantage. For example the mobile phone of the German chancellor was monitored since 2002\footnote{\url{http://www.spiegel.de/politik/deutschland/handy-der-kanzlerin-die-wichtigsten-fakten-der-abhoeraffaere-a-930411.html} visited on 11/01/17}. It takes not much imagination to associated that with the declining of the Iraq War of the actual chancellor as well as with his closeness to Russia at that time.
 
 In the context of a program, which make recipes machine readable, this all might be total exaggerated. But the health of Hillary Clinton was a topic at the American president election 2016\footnote{\url{https://www.washingtonpost.com/news/the-fix/wp/2016/09/11/hillary-clintons-health-just-became-a-real-issue-in-the-presidential-campaign/} visted on 02/11/16}. I personal know, that you should not eat some ingredients, when you have pancreatic cancer, which gets underlined by forum questions\footnote{\url{http://www.chefkoch.de/forum/2,51,639082/Bauchspeicheldruesen-rezepte.html} visited on 11/02/17}. It probably would have had effected survey results, when someone, who favoured Donald Trump, had tracked Hillary's internet traffic and stated Hillary had pancreatic cancer, based on the fact, that she was interested in recipes, avoiding these ingredients. I also wonder, if revealing Hillary were a vegetarian would have had a bad impact on her survey results. 
 
