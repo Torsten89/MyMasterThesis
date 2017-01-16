@@ -496,14 +496,93 @@ Last they note, that the relations 2 and 3 are often mixed-up, because they are 
 
 
 
-\chapter{CRF prototype}
-We present a very basic prototype for extracting of ingredients from recipes based on CRF in this chapter. The program uses the python binding of crfsuite\footnote{\url{http://www.chokkan.org/software/crfsuite/}}. The program can be found under the following git tag\footnote{\url{https://github.com/Torsten89/SourceCodeExtractingRecipeIngredientsFromCookbooks/tree/FirstCRFPrototype}}.
+\chapter{CRF-based Extraction}
+We present a very basic prototype for extracting ingredients from recipes based on CRF in this chapter.
 
-- how to teach opt and alt group?
-- sowieso nach parsen für zuordnung von quantity, unit und ingredient
+\section{CRF prototype}
+This prototype can be found under the following git tag\footnote{\url{https://github.com/Torsten89/SourceCodeExtractingRecipeIngredientsFromCookbooks/tree/FirstCRFPrototype}}. It uses the SWIG API of crfsuite\footnote{\url{http://www.chokkan.org/software/crfsuite/}} as python binding. For labeling we take the tags \texttt{B-Quantity}, \texttt{I-Quantity}, \texttt{B-Unit}, \texttt{B-Ingredient}, \texttt{I-Ingredient}, \texttt{B-CookTime}, \texttt{I-CookTime},
+\texttt{B-Yield}, \texttt{I-Yield}, \texttt{B-IngredientYield}, \texttt{I-IngredientYield}
+\texttt{B-Link}, \texttt{I-Link} and \texttt{O} for others. We tag 9 of our recipes with these tags. For illustrating the beginning of such a tagged recipe is shown in \cref{lst:trainingsData}. Our used features are word identity and label transitions.
+
+\begin{lstlisting}[caption={Trainings data}, label=lst:trainingsData]
+#B-1
+Klare            O
+weiße            O
+Rindfleischsuppe O
+
+Man	             O
+rechnet	         O
+,                O
+wenn             O
+die	             O
+Gesellschaft     O
+klein            O
+ist              O
+,                O
+auf              O
+jede             O
+Person           O
+3/4	             B-Quantity
+Pfund            B-Unit
+,                O
+bei              O
+einer            O
+großen           O
+Gesellschaft     O
+1/2	             B-Quantity
+Pfund            B-Unit
+Fleisch          B-Ingredient
+.                O
+
+...
+\end{lstlisting}
 
 
-\chapter{Dictionary-based extraction}
+\section{Evaluation of this prototype}
+Although this is only a simple prototype, it raises many questions.
+
+First we do a little test on a recipe from our cookbook, which was not in the training data. It can be found in \cref{appendix:crfTraini}. It consists of 96 words. From these 96 words the CRF got all 83 \texttt{O}-tags correctly. From the 13 tags other than \texttt{O} it missed the 5 shown in \cref{lst:crfResult}. \textit{Eine} and \textit{einige} means \textit{some} and is a vague quantity. The other three are potatoes and potato dumplings.
+
+\begin{lstlisting}[caption={Differences}, label=lst:crfResult]
+eine            B-Quantity      O
+einige          B-Quantity      O
+Kartoffeln      B-Ingredient    O
+Kartoffeln      B-Ingredient    O 
+Kartoffel-Klöße B-Ingredient    O
+\end{lstlisting}
+
+\textit{Eine} and \textit{einige} appear very often in German and are only sometimes the quantity of an ingredient. Therefore it is hard for a CRF to get this right. But because the quantity is vague, it is questionable to mark it anyway.
+
+Potatoes could be likely caught through a custom feature function $1_ {word\ is\ in\ dictionary\ of\ ingredients}$. But having that in place, one has to ask for the advantage of the CRF, when we can already extract the ingredients with a dictionary.
+
+We decided to not follow up the CRF approach, because we bothered with following limitations, as we reasoned about the CRF:
+
+\begin{itemize}
+	\item Further feature and label engineering is not straight forward. First of all we have only considered ingredients. For optional ingredients as well as for alternative ingredients two new labels are required. Also sometimes a recipe introductions tells you to not use an ingredient, which could be marked with an own label. But these four
+	labels are very similar, and therefore the CRF probably needs more features to distinguish between them. One such a feature could be, if \textit{don't} is within the sentence.
+	(Time consuming!)
+	\item A CRF is not able to extract relations between entities. Once the ingredients, quantities and units are extracted, they still have to be matched together. Also when ingredients are marked as alternative ingredients, it is still unclear which one are an alternative to which.
+	\item Only labeling ingredients is a simplification of our cueML. We would also like to distinguish between basic and complex ingredients. When it is a basic ingredient, we would like to add a reference to the Bundeslebensmittelschlüssel. And when it is a complex ingredient, we would like to add a reference to a recipe of it. Also breaking down, what kind of meat, when a sentence only mentions meat, is not possiblle within the CRF.
+	\item Above all a further development is to time consuming for this master thesis. The 9 trainings recipes lead to more than 1400 lines, which have to be tagged manually. Assuming 10 seconds per line, that would take more than three hours. 10 seconds may seem pessimistic, but consider the following translated example from our cookbook: \textit{Take the veal as in number one, according to the number of people take a little bit more, because it has less taste than beef.} When not reading carefully, it is easy to tag \textit{beef} as an ingredient. Building up 130,000 trainings recipes, like the NYT did, or !!!CoNLL task!!!, is not reasonable within this project.
+\end{itemize}
+
+
+\chapter{Dictionary- and Rule-based extraction}
+First we introduce here a basic prototype, which is based upon dictionary extraction and further rule-based processing. After that we continue to develop of this approach, because we find it promising.
+
+\section{Dictionary- and Rule-based prototype}
+-lemmas mit -wurzel aufpimpung
+
+\begin{figure}
+	\includegraphics[width=1\linewidth]{Images/dictBasedExtraction}
+	\caption{Dictionary- and Rule-based workflow}
+	\label{fig:workflowDictbased}
+\end{figure}
+
+
+\subsection{Evaluation}
+- besser testbar (testcase vs crf neue features -> funktioniert alles noch, anderes funktioniert vll besser)
+
 
 \section{Evaluation}
 Precision and recall are metrics, which measure the quality of an information extracting algorithm.
@@ -512,7 +591,7 @@ Precision and recall are metrics, which measure the quality of an information ex
 Precision = \frac{\#(retrieved \cap relevant)}{\#retrieved}, \hspace{1em} Recall = \frac{\#(retrieved \cap relevant)}{\#relevant}
 \end{equation}
 
-They are defined as shown in \cref{eq:precisionAndRecall} according to  \parencite{surveyOfTextMining}. A high precision states, that the algorithm does only find relevant information as intended. The ideal precision of one would mean, that all extracted data where useful. A high recall states, that the algorithm finds many of the total relevant information. The perfect score of one would mean, that all relevant information were found. Both are needed for the evaluation of an algorithm. If only considering precision, the algorithm could only find the information, which are obvious relevant and therefore find only view information, but having a high score this way. On the other side, if only considering recall, the algorithm could return everything. This way its score would have the perfect value of one. But both algorithm are obvious not good, which gets covered by a low value of the other formula.
+They are defined as shown in \cref{eq:precisionAndRecall} according to \parencite{surveyOfTextMining}. A high precision states, that the algorithm does only find relevant information as intended. The ideal precision of one would mean, that all extracted data where useful. A high recall states, that the algorithm finds many of the total relevant information. The perfect score of one would mean, that all relevant information were found. Both are needed for the evaluation of an algorithm. If only considering precision, the algorithm could only find the information, which are obvious relevant and therefore find only view information, but having a high score this way. On the other side, if only considering recall, the algorithm could return everything. This way its score would have the perfect value of one. But both algorithm are obvious not good, which gets covered by a low value of the other formula.
 
 
 
@@ -520,7 +599,7 @@ They are defined as shown in \cref{eq:precisionAndRecall} according to  \parenci
 %Discussion------------------------------------------------------------------%
 \chapter{Discussion}
 
-\section{Usefulness of this thesis}\label{sec:UsefulnessOfThesis}
+\section{Usefulness of automatic extraction of ingredients}\label{sec:UsefulnessOfThesis}
 I personally feel it is an interesting computer science challenge to extract ingredients from plain text and make them machine readable. But that would be a bad justification for a master thesis. This section points out some of many applications, which are possible, once the ingredients are extracted. Building a database manual for all these applications is way to time consuming, as pointed out in \ref{sec:NeedForAutomation}. Therefore this thesis is useful, what is a good motivation as well as a good justification for this master thesis.
 
 \parencite{recipeRecommendation} build a \textbf{recipe recommendation system} for a cooking website, based on which ingredients are liked by the users and which not.
@@ -533,12 +612,15 @@ Both, a recommendation system as well as help with healthy diet, do obviously in
 \textbf{Social science} is also possible through analysing recipes. For example \parencite{BeateHenning} analyses typical characteristics of cookbook through German history. She noticed that recipes before the 18.th century often contained ingredients, which should mask the taste of rotted food, what is clearly a sign for poverty and food shortage. Fasting meals covered about a third of many cookbooks, which emphasises the influence of the church at that time. First mentions of non-native ingredients and meals are indications for intercultural exchange. Rare and expensive ingredients are signs for prosperity while possible substitution of them for poverty. Another example is in \parencite{FlavorNetwork}. They compare American and Asian culinary practice based on about 56.000 recipes.
 
 
-\section{Übertragung auf beliebige / allgemeine Rezepte}
+\section{Contribution to field of research}
+- rule-based nicht exakt match sondern co-occurrence von Indikationswörtern (Ingredients und "anstatt")
+- Übertragung auf beliebige / allgemeine Rezepte
 
 
 \section{Quality of cueML and the obtained data}
 - Mengenangaben ohne recipeYield witzlos
 - Übersetzung von (historischen) Mengenangaben (Maß)
+- ganzes Gewürz
 - Ungenaue Mengenangaben (ein Stich, 5Pfennig Brot, etwas)
 - links/refs erschweren Auswertung
 - BLS Angaben für alk. freie Getränke :D :D :D, nicht open source, nicht word wide
@@ -551,7 +633,8 @@ Infos aus Allg. Vorteil eines Kapitels (Reis 15g pro Suppe)
 -Mensch kann Fehler erkennen (B-10 Rindfleisch ->Hasen /falscher Vreweis)
 
 - Publishen / Sharen von cueML
-
+	- \parencite{GrammaBased} also points out that ontology building is time consuming and expensive
+	- Schema alignment paper - nicht ein schema für alle Zwecke
 
 \section{Rapid Prototyping}
 - TDD / früh Plausibilitäts-Überprüfungen - Tagen als Hi-Wi war ne dumme Aktion^^ (insbesondere fürs Schemata, Mengenangaben und Namen historische Recherche nötig (Gefühl für die Daten, Wurzelwerk, braunes Gewürz,	Engl. Soja, tagging schema ist schwieriger als gedacht))
@@ -590,5 +673,239 @@ Location, Date \hfill Signature
 \includegraphics[width=1\linewidth]{Images/emailChefkoch}
 
 \printbibliography
+
+\chapter{For CRF tagged trainings recipe} \label{appendix:crfTraini}
+\begin{lstlisting}
+#B-16                
+Mock                O
+Turtle              O
+Suppe               O
+
+Es                  O
+wird                O
+hierzu              O
+für                 O
+24                  B-Yield
+-                   I-Yield
+30                  I-Yield
+Personen            O
+eine                O
+kräftige            O
+Bouillon            B-Ingredient
+von                 O
+8                   B-Quantity
+-                   I-Quantity
+10                  I-Quantity
+Pfund               B-Unit
+Rindfleisch         B-Ingredient
+mit                 O
+Wurzelwerk          B-Ingredient
+gekocht             O
+.                   O
+
+Zugleich            O
+bringt              O
+man                 O
+einen               B-Quantity
+großen              O
+Kalbskopf           B-Ingredient
+,                   O
+eine                B-Quantity
+Schweineschnauze    B-Ingredient
+und                 O
+Ohren               B-Ingredient
+,                   O
+einen               B-Quantity
+Ochsengaumen        B-Ingredient
+und                 O
+eine                B-Quantity
+geräucherte         O
+Ochsenzunge         B-Ingredient
+zu                  O
+Feuer               O
+und                 O
+kocht               O
+dies                O
+Alles               O
+gahr                O
+,                   O
+aber                O
+nicht               O
+zu                  O
+weich               O
+.                   O
+
+Kalt                O
+,                   O
+schneidet           O
+man                 O
+es                  O
+in                  O
+kleine              O
+,                   O
+länglich            O
+viereckige          O
+Stückchen           O
+,                   O
+gibt                O
+das                 O
+Fleisch             B-Ingredient
+in                  O
+die                 O
+Bouillon            B-Ingredient
+,                   O
+nebst               O
+braunem             B-Ingredient
+Gewürz              I-Ingredient
+,                   O
+ein                 B-Quantity
+Paar                I-Quantity
+Messerspitzen       B-Unit
+Cayenne-Pfeffer     B-Ingredient
+,                   O
+einige              B-Quantity
+Kalbsmidder         B-Ingredient
+in                  O
+Stückchen           O
+geschnitten         O
+(                   B-Link
+siehe               I-Link
+Vorbereitungsregeln I-Link
+)                   I-Link
+,                   O
+kleine              O
+Saucissen           B-Ingredient
+,                   O
+so                  O
+viel                O
+Kalbskopfbrühe      O
+,                   O
+daß                 O
+man                 O
+hinreichend         O
+Suppe               O
+hat                 O
+,                   O
+und                 O
+macht               O
+dies                O
+mit                 O
+in                  O
+Butter              B-Ingredient
+braun               O
+gemachtem           O
+Mehl                B-Ingredient
+gebunden            O
+.                   O
+
+Nachdem             O
+dies                O
+Alles               O
+1/4                 O
+Stunde              O
+gekocht             O
+hat                 O
+,                   O
+kommen              O
+noch                O
+Klöße               B-Ingredient
+von                 I-Ingredient
+Kalbfleisch         I-Ingredient
+,                   O
+einige              B-Quantity
+hart                O
+gekochte            O
+Eier                B-Ingredient
+in                  O
+Würfel              O
+geschnitten         O
+,                   O
+ein                 B-Quantity
+Paar                I-Quantity
+Eßlöffel            B-Unit
+Engl.               B-Ingredient
+Soja                I-Ingredient
+hinzu               O
+,                   O
+und                 O
+wenn                O
+die                 O
+Klößchen            B-Ingredient
+einige              O
+Minuten             O
+gekocht             O
+haben               O
+,                   O
+1/2                 B-Quantity
+Flasche             B-Unit
+Madeira             B-Ingredient
+und                 O
+auch                O
+Austern             B-Ingredient
+,                   O
+wenn                O
+man                 O
+sie                 O
+haben               O
+kann                O
+.                   O
+
+Dann                O
+wird                O
+die                 O
+Suppe               O
+sogleich            O
+angerichtet         O
+.                   O
+
+Anmerk              O
+.                   O
+
+Der                 O
+Soja                B-Ingredient
+macht               O
+die                 O
+Suppe               O
+gewürzreicher       O
+,                   O
+kann                O
+jedoch              O
+gut                 O
+wegbleiben          O
+,                   O
+und                 O
+statt               O
+Madeira             B-Ingredient
+kann                O
+man                 O
+weißen              B-Ingredient
+Franzwein           I-Ingredient
+und                 O
+etwas               B-Quantity
+Rum                 B-Ingredient
+nehmen              O
+.                   O
+
+Sowohl              O
+die                 O
+Bouillon            B-Ingredient
+als                 O
+Kalbskopf           B-Ingredient
+können              O
+schon               O
+am                  O
+vorhergehenden      O
+Tage                O
+,                   O
+ohne                O
+Nachtheil           O
+der                 O
+Suppe               O
+,                   O
+gekocht             O
+werden              O
+.                   O
+
+\end{lstlisting}
 
 \end{document}
