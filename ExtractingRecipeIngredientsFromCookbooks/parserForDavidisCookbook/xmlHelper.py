@@ -12,9 +12,13 @@ def getElems(node, elemName, withAttris={}):
         if hasAllAttris:
             yield elem
 
+def getTextOfNode(node):
+    """ Removes \t, \n and many whitespace from the text node. """
+    return " ".join(node.data.split())
+    
 def getAllChildText(node):
     if node.nodeType == node.TEXT_NODE:
-        return " ".join(node.data.split()) # removes \t and many whitespace
+        return getTextOfNode(node)
     
     childTexts = [" ".join(getAllChildText(childNode).split()) for childNode in node.childNodes]              
     if not childTexts:
@@ -22,7 +26,7 @@ def getAllChildText(node):
     result = childTexts[0]
     for childText in childTexts[1:]:
         if not childText: continue
-        if childText[0] in ".,;:": result += childText
+        if childText[0] in ".,;:": result += childText # handle whitespaces at sentence endings
         else: result += " {}".format(childText)
     return result
 

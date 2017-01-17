@@ -1,6 +1,9 @@
-from parserForDavidisCookbook.xmlHelper import getAllChildText, getAttriOrNone, getElems
+from parserForDavidisCookbook.xmlHelper import getAllChildText, getAttriOrNone, getElems,\
+    getTextOfNode
 from parserForDavidisCookbook.Recipe import Recipe
 from parserForDavidisCookbook.Ingredient import Ingredient
+from xml.dom.minidom import parse
+from informationExtraction.lemmatization import truncatedEndings
 
 rcpIdTagName = "rcp-id"
 
@@ -11,63 +14,58 @@ class XmlParser(object):
         '''
         self.dom = dom
 
-    def getRecipes(self, rcpIds=[]):
+    def getXmlRecipes(self, rcpIds=[]):
         """ When rcpIds is an empty list, all recipes will be parsed.
             Otherwise only recipes, which have a in rcpIds specified rcp-id.
         """ 
         withAttris = {} if not rcpIds else {rcpIdTagName:rcpIds}
         for xmlRecipe in getElems(self.dom, "cue:recipe", withAttris):
-            yield self.parseRecipe(xmlRecipe)
+            yield xmlRecipe
     
-    def parseRecipe(self, xmlRecipe):
+    def parseXmlRecipe(self, xmlRecipe):
         rcpId = xmlRecipe.attributes[rcpIdTagName].value
         rcpType = xmlRecipe.attributes["type"].value[:-1]  # remove . at the end
-        name = getAllChildText(xmlRecipe.getElementsByTagName("head")[0])[:-1]  # remove . at the end
-        instructions = self.getInstructions(xmlRecipe)
-        ingredients, optIngredients, altIngredients = self.getIngredients(xmlRecipe)
         alts = self.getAlts(xmlRecipe)
+        sentences = self.getSentenecsFromNode(xmlRecipe)
+        for s in sentences:
+            print("SENTENCE: ", s)
 
-        return Recipe(rcpId, rcpType, name, instructions, ingredients, optIngredients, altIngredients, alts=alts)
+    def getSentenecsFromNode(self, node):
+        sentence = []
+        for w in self.getWords(node):
+            sentence.append(w)
+            
+            if w.endswith(".") and w not in truncatedEndings: # ingredient tag end gefolgt von . !!!
+                yield " ".join(sentence)
+                sentence = []
+                
+        #yield "BYE"
+                
+    def getWords(self, node):
+        for childNode in node.childNodes:
+            if childNode.nodeType == childNode.TEXT_NODE:
+                for w in childNode.data.split():
+                    yield w
+            elif childNode.localName == "recipeIngredient":
+                for w in getAllChildText(childNode).split():
+                    yield w
+                # parse Ingredient Object
+            else:
+                yield from self.getWords(childNode)
     
     def getInstructions(self, xmlRecipe):
         return "\n".join([getAllChildText(p) for p in xmlRecipe.getElementsByTagName("p")] \
             + [getAllChildText(note) for note in xmlRecipe.getElementsByTagName("note")] \
         )
         
-    def getIngredients(self, xmlRecipe):
-        ingredients, optIngredients, altIngredients, ingredientsWithLinks = {}, {}, {}, []
-        for ingredientElem in xmlRecipe.getElementsByTagName("cue:recipeIngredient"):
-            ref = getAttriOrNone(ingredientElem, "ref")
-            target = getAttriOrNone(ingredientElem, "target")
-            quantity = getAttriOrNone(ingredientElem, "quantity")
-            atLeast = getAttriOrNone(ingredientElem, "atLeast")
-            atMost = getAttriOrNone(ingredientElem, "atMost")
-            unit = getAttriOrNone(ingredientElem, "unit")
-            ingYield = getAttriOrNone(ingredientElem, "yield")
-            ingYieldUnit = getAttriOrNone(ingredientElem, "yieldUnit")
-            ingredient = Ingredient(ref, target, quantity, atLeast, atMost, unit, ingYield, ingYieldUnit)
-            
-            if target:
-                ref = target
-            
-            if getAttriOrNone(ingredientElem, "optional"):
-                ingredient.optional = True
-                optIngredients[ref] = ingredient
-                continue
-            
-            altGrp = getAttriOrNone(ingredientElem, "altGrp")
-            if altGrp:
-                ingredient.altGrp = altGrp
-                altIngredients[ref] = ingredient
-                continue
-            
-            if getAttriOrNone(ingredientElem, "dontUse"):
-                ingredient.dontUse = True
-            
-            ingredients[ref] = ingredient
-        
-        return ingredients, optIngredients, altIngredients
     
     def getAlts(self, xmlRecipe):
         return [getAttriOrNone(alt, "target").split() for alt in xmlRecipe.getElementsByTagName("cue:alt")]
         
+        
+if __name__ == "__main__":
+    # /home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/
+    # cookbook = parse("../recipesExtracted.xml")
+    cookbook = XmlParser(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipesExtracted.xml"))
+    for xmlRecipe in cookbook.getXmlRecipes(["B-1"]):
+        cookbook.parseXmlRecipe(xmlRecipe)

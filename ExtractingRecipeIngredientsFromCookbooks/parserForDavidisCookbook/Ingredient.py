@@ -1,8 +1,8 @@
 
 class Ingredient:
 
-    def __init__(self, ref=None, target=None, quantity=None, atLeast=None, atMost=None, unit=None,
-                 altGrp=None, optional=None, dontUse=None, ingYield=None, ingYieldUnit = None):
+    def __init__(self, ref=None, target=None, quantity=None, atLeast=None, atMost=None,
+                 unit=None, altGrp=None, optional=None, ingYield=None):
         """ See definition of cueML for meaning of these attributes # ToDo link to definition
         """
         self.ref = ref
@@ -13,7 +13,7 @@ class Ingredient:
         self.unit = unit
         self.altGrp = altGrp
         self.optional = optional
-        self.dontUse = dontUse
+        self.ingYield = ingYield
         
     
     def __eq__(self, other):
