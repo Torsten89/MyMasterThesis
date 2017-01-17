@@ -21,15 +21,9 @@
                 <ref name="tei_att.unitForIngredient"/>
                 <optional>
                     <attribute name="yield"> <!-- yieldAtLeast yieldAtMost-->
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the envisaged yield of the ingredient's quantity. If yieldUnit is not specified its unit is served people.</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the envisaged yield of the ingredient's quantity, specified in served people.</a:documentation>
                         <data type="float"/>
                     </attribute>
-                    <optional>
-                        <attribute name="yieldUnit"> <!-- yieldAtLeast yieldAtMost-->
-                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the envisaged yield unit of the ingredient's, e.g. people served or litre.</a:documentation>
-                            <data type="string"/>
-                        </attribute>
-                    </optional>
                 </optional>
                 <optional>
                     <attribute name="target">

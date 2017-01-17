@@ -563,7 +563,9 @@ We decided to not follow up the CRF approach, because we bothered with following
 	(Time consuming!)
 	\item A CRF is not able to extract relations between entities. Once the ingredients, quantities and units are extracted, they still have to be matched together. Also when ingredients are marked as alternative ingredients, it is still unclear which one are an alternative to which.
 	\item Only labeling ingredients is a simplification of our cueML. We would also like to distinguish between basic and complex ingredients. When it is a basic ingredient, we would like to add a reference to the Bundeslebensmittelschlüssel. And when it is a complex ingredient, we would like to add a reference to a recipe of it. Also breaking down, what kind of meat, when a sentence only mentions meat, is not possiblle within the CRF.
-	\item Above all a further development is to time consuming for this master thesis. The 9 trainings recipes lead to more than 1400 lines, which have to be tagged manually. Assuming 10 seconds per line, that would take more than three hours. 10 seconds may seem pessimistic, but consider the following translated example from our cookbook: \textit{Take the veal as in number one, according to the number of people take a little bit more, because it has less taste than beef.} When not reading carefully, it is easy to tag \textit{beef} as an ingredient. Building up 130,000 trainings recipes, like the NYT did, or !!!CoNLL task!!!, is not reasonable within this project.
+	\item Above all a further development is to time consuming for this master thesis. The 9 trainings recipes lead to more than 1400 lines, which have to be tagged manually. Assuming 10 seconds per line, that would take more than three hours. 10 seconds may seem pessimistic, but consider the following translated example from our cookbook: \textit{Take the veal as in number one, according to the number of people take a little bit more, because it has less taste than beef.} When not reading carefully, it is easy to tag \textit{beef} as an ingredient. And as mentioned before we not only need to tag it once, but probably multiple times, because our labels and features are not clear yet.
+	
+	The New York Times had more than 130,000 manual labeled trainings recipes. The CoNLL-task\footnote{\parencite{TjongKimSang2003}}, what is a common reference for CRF tasks, provides more than 10,000 labeled sentences. Building such a huge trainings set is out of scope for this project.
 \end{itemize}
 
 
@@ -615,6 +617,7 @@ Both, a recommendation system as well as help with healthy diet, do obviously in
 \section{Contribution to field of research}
 - rule-based nicht exakt match sondern co-occurrence von Indikationswörtern (Ingredients und "anstatt")
 - Übertragung auf beliebige / allgemeine Rezepte
+-CRF (co-reference von wörtern, pos etc automatisch (wie groß/langsam wird das Model?)) vs Dict based (gut genug, besser testbar, auf andere Sprachen überetztbar in dem nur Regel überetzten und nicht neue Trainingsdaten (wie viele werden überhaupt benötigt?))
 
 
 \section{Quality of cueML and the obtained data}
