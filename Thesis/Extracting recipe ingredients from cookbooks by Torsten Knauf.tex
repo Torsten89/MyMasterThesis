@@ -565,7 +565,7 @@ We decided to not follow up the CRF approach, because we bothered with following
 	\item Only labeling ingredients is a simplification of our cueML. We would also like to distinguish between basic and complex ingredients. When it is a basic ingredient, we would like to add a reference to the Bundeslebensmittelschlüssel. And when it is a complex ingredient, we would like to add a reference to a recipe of it. Also breaking down, what kind of meat, when a sentence only mentions meat, is not possiblle within the CRF.
 	\item Above all a further development is to time consuming for this master thesis. The 9 trainings recipes lead to more than 1400 lines, which have to be tagged manually. Assuming 10 seconds per line, that would take more than three hours. 10 seconds may seem pessimistic, but consider the following translated example from our cookbook: \textit{Take the veal as in number one, according to the number of people take a little bit more, because it has less taste than beef.} When not reading carefully, it is easy to tag \textit{beef} as an ingredient. And as mentioned before we not only need to tag it once, but probably multiple times, because our labels and features are not clear yet.
 	
-	The New York Times had more than 130,000 manual labeled trainings recipes. The CoNLL-task\footnote{\parencite{TjongKimSang2003}}, what is a common reference for CRF tasks, provides more than 10,000 labeled sentences. Building such a huge trainings set is out of scope for this project.
+	The New York Times had more than 130,000 manual labeled trainings recipes. The CoNLL-task\footnote{\parencite{TjongKimSang2003}}, what is a common reference for CRF tasks, provides more than 10,000 labeled sentences. Building such huge training sets is out of scope for this project.
 \end{itemize}
 
 
@@ -585,6 +585,8 @@ First we introduce here a basic prototype, which is based upon dictionary extrac
 \subsection{Evaluation}
 - besser testbar (testcase vs crf neue features -> funktioniert alles noch, anderes funktioniert vll besser)
 
+\section{Weitere Rules}
+Für altGrp, optional, dontUse
 
 \section{Evaluation}
 Precision and recall are metrics, which measure the quality of an information extracting algorithm.
@@ -639,9 +641,11 @@ Infos aus Allg. Vorteil eines Kapitels (Reis 15g pro Suppe)
 	- \parencite{GrammaBased} also points out that ontology building is time consuming and expensive
 	- Schema alignment paper - nicht ein schema für alle Zwecke
 
-\section{Rapid Prototyping}
+\section{Developing}
 - TDD / früh Plausibilitäts-Überprüfungen - Tagen als Hi-Wi war ne dumme Aktion^^ (insbesondere fürs Schemata, Mengenangaben und Namen historische Recherche nötig (Gefühl für die Daten, Wurzelwerk, braunes Gewürz,	Engl. Soja, tagging schema ist schwieriger als gedacht))
-- CRF zu aufwändig 
+- CRF zu aufwändig abre vll gut wegen co-occurence of indicator words automatisch statt manuelle rules (die abre auch nicht so schlimm sind^^)
+
+- wenn weitere tags (Links, cooktime, yield, ...) xmlElems (kind, start, end) statt ingsOfSentence = [], linksOfSentence = []... (ref Bachelorarbeit, smell)
 
 \section{Knowledge is power}
 The goal of the following digression is to provide some critical though and to sensitize for the importance of data privacy. Due to the point that the goal of this overall thesis is to facilitate some machine readable data, and machine readable data provides a lot of knowledge per definition of itself, this is an important personal concern of me. Because this is not a thesis in humanities, I feel free to over exaggerate a little bit and use sources like Wikipedia here.
