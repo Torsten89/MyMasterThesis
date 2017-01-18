@@ -1,9 +1,3 @@
-'''
-Created on Jan 9, 2017
-
-@author: torsten
-'''
-
 from informationExtraction.IngredientExtractor import IngredientExtractor
 from informationExtraction.UnitExtractor import UnitExtractor
 from informationExtraction.lemmatization import getWordLemmaTuples
@@ -74,7 +68,7 @@ class WordProperties(object):
 
 
 if __name__ == '__main__':
-    ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"), None)
+    ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
     unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng"))
     
     s1 = "Es wird hierzu für 24—30 Personen eine kräftige Bouillon von 8—10 Pfund Rindfleisch mit Wurzelwerk gekocht."
@@ -83,5 +77,6 @@ if __name__ == '__main__':
             vom Bodensatz langsam abschüttet, in dem ebenfalls umgespülten Topfe wieder zu Feuer \
             nebst einigen Scorzoner-, einer Sellerie- und Petersilienwurzel.'
     
-    extract(s1, ingE, unitE, isQuantity)
+    for extracted in extract(s1, ingE, unitE, isQuantity):
+        print(extracted)
         

@@ -1,5 +1,5 @@
 import unittest
-from informationExtraction.lemmatization import getWordLemmaTuples
+from informationExtraction.lemmatization import getWordLemmaTuples, tokenise
 
 class LemmatizationTest(unittest.TestCase):
 
@@ -11,6 +11,12 @@ class LemmatizationTest(unittest.TestCase):
         lemmas = (lemma for (word, lemma) in getWordLemmaTuples(sentence))
         self.assertTrue("Scorzonerwurzel" in lemmas)
         self.assertTrue("Selleriewurzel" in lemmas)
+        
+    def testTokenise(self):
+        self.assertEqual(["(", "Graupen", ")", "."], list(tokenise("(Graupen).")))
+        
+    def testTokeniseShortening(self):
+        self.assertEqual(["Engl."], list(tokenise("Engl.")))
 
 
 if __name__ == "__main__":

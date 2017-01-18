@@ -2,6 +2,7 @@ import unittest
 from xml.dom.minidom import parseString
 from parserForDavidisCookbook.XmlParser import XmlParser
 from parserForDavidisCookbook.Ingredient import Ingredient
+from informationExtraction.lemmatization import tokenise
 
 def createCueMLDom(recipes=[]):
     return parseString('\
@@ -100,84 +101,57 @@ eine kräftige <cue:recipeIngredient target="#Bouillon" \
             Bouillon als Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der \
             Suppe, gekocht werden.</note> \
     </cue:recipe>'
+    
+
+def ingredientInRecipe(recipe, ingredient):
+    for (_, ingTuples) in recipe.sentencesWithExtractedIngs:
+        for (ing, _ , _) in ingTuples:
+            if ing == ingredient:
+                return True
+        
+    return False
 
 class XmlParserTest(unittest.TestCase):
-
     def testFindRecipesInDom(self):
         dom = createCueMLDom([getRecipeB49(), getRecipeB2()])
         self.assertEqual(2, len(list(XmlParser(dom).getRecipes())))
-
+         
     def testRecipeB49(self):
         dom = createCueMLDom([getRecipeB49()])
         recipe = XmlParser(dom).getRecipes().__next__()
         self.assertEqual("Suppen", recipe.rcpType)
         self.assertEqual("B-49", recipe.rcpId)
-        self.assertEqual("Suppe von feiner Gerste (Graupen)", recipe.name)
-        self.assertEqual("Suppe von feiner Gerste (Graupen)", recipe.name)
-        self.assertEqual("Ungefähr zwei Stunden muß die Gerste zu Feuer sein. Sie wird mit etwas Butter in \
-wenig weiches kochendes Wasser gegeben, kurz eingekocht, frische Milch hinzu \
-geschüttet und zu einer sämigen Suppe gekocht. Salz, Zucker und Zimmet darf nicht \
-darin fehlen.", recipe.instructions)
-        
+         
     def testRecipeB2(self):
         dom = createCueMLDom([getRecipeB2()])
         recipe = XmlParser(dom).getRecipes().__next__()
         self.assertEqual("Suppen", recipe.rcpType)
         self.assertEqual("B-2", recipe.rcpId)
-        self.assertEqual("Wird gekocht wie die vorhergehende, nur mit der Abänderung, daß, wenn die Brühe durch \
-ein Haarsieb geschüttet ist, man verhältnißmäßig 1—2 Eßlöffel voll Mehl mit frischer \
-Butter durchschwitzt, welches jedoch weiß bleiben muß, und die vom Bodensatz \
-abgeklärte Brühe hinzuschüttet. Zugleich gibt man feine Gerste nebst etwas Wurzelwerk \
-in die Suppe, später auch Spargel, Blumenkohl oder Scorzonerwurzeln, was die \
-Jahreszeit bietet, und vor dem Anrichten die Herzblättchen der Sellerieknollen und \
-beliebige Klöße. Man rührt die Suppe mit 1—2 Eidotter ab, indem man solche mit etwas \
-Wasser zerrührt, und unter fortwährendem Rühren die kochende Suppe hinzu gibt. Sie \
-muß gebunden, nur ja nicht zu sämig sein.\
-\n\
-Anmerk. Will man Reis oder Sago zur Suppe nehmen, so gibt man dieses später \
-hinein. Man rechnet davon auf jede Person bei allen Fleischsuppen einen gestrichenen \
-Eßlöffel voll.", recipe.instructions)
-        
+         
     def testGetCertainRecipe(self):
         dom = createCueMLDom([getRecipeB49(), getRecipeB2()])
         recipes = list(XmlParser(dom).getRecipes(["B-2"]))
         self.assertEqual(1, len(recipes))
         self.assertEqual("B-2", recipes[0].rcpId)
-        
-    def testParseName(self):
-        dom = createCueMLDom([getRecipeB49()])
-        recipe = XmlParser(dom).getRecipes().__next__()
-        self.assertEqual("Suppe von feiner Gerste (Graupen)", recipe.name)
-        
-    def testGetTaggedRecipeInstructionB16(self):
+         
+         
+    def testGetTaggedRecipeIngsInB16(self):
         dom = createCueMLDom([getTaggedRecipeB16()])
         recipe = XmlParser(dom).getRecipes().__next__()
-        self.assertEqual('Es wird hierzu für 24—30 Personen eine kräftige Bouillon von 8—10 Pfund Rindfleisch \
-mit Wurzelwerk gekocht. Zugleich bringt man einen großen Kalbskopf, eine \
-Schweineschnauze und Ohren, einen Ochsengaumen und eine geräucherte Ochsenzunge zu \
-Feuer und kocht dies Alles gahr, aber nicht zu weich. Kalt, schneidet man es in \
-kleine, länglich viereckige Stückchen, gibt das Fleisch in die Bouillon, nebst \
-braunem Gewürz, ein Paar Messerspitzen Cayenne-Pfeffer, einige Kalbsmidder in \
-Stückchen geschnitten (siehe Vorbereitungsregeln), kleine Saucissen, so viel \
-Kalbskopfbrühe, daß man hinreichend Suppe hat, und macht dies mit in Butter braun \
-gemachtem Mehl gebunden. Nachdem dies Alles ¼ Stunde gekocht hat, kommen noch Klöße \
-von Kalbfleisch, einige hart gekochte Eier in Würfel geschnitten, ein Paar Eßlöffel \
-Engl. Soja hinzu, und wenn die Klößchen einige Minuten gekocht haben, ½ Flasche \
-Madeira und auch Austern, wenn man sie haben kann. Dann wird die Suppe sogleich \
-angerichtet.\
-\n\
-Anmerk. Der Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und \
-statt Madeira kann man weißen Franzwein und etwas Rum nehmen. Sowohl die Bouillon als \
-Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht \
-werden.', recipe.instructions)
+        self.assertTrue(ingredientInRecipe(recipe, Ingredient({"target":"#Bouillon"})))
+        self.assertTrue(ingredientInRecipe(recipe, Ingredient({"ref":"#Englische_Soja", "optional":"True"})))
+        self.assertTrue(ingredientInRecipe(recipe, Ingredient({"ref":"#Rum", "altGrp":"2", "quantity":"etwas"})))
+        self.assertFalse(ingredientInRecipe(recipe, Ingredient({"target":"#Banane"})))
         
-    def testGetTaggedRecipeIngredientsB16(self):
+    def testGetTaggedRecipeIngsPosB16(self):
         dom = createCueMLDom([getTaggedRecipeB16()])
         recipe = XmlParser(dom).getRecipes().__next__()
-        self.assertIn(Ingredient(target="#Bouillon"), recipe.ingredients.values())
-        self.assertIn(Ingredient(ref="#Englische_Soja", optional=True), recipe.optIngredients.values())
-        self.assertIn(Ingredient(ref="#Rum", altGrp="2", quantity="etwas"), recipe.altIngredients.values())
-        self.assertIn(["1", "2"], recipe.alts)
-    
+        for (sentence, ingsInSentence) in recipe.sentencesWithExtractedIngs:
+            for (ing, start, end) in ingsInSentence:
+                if ing == Ingredient({"ref":"#Englische_Soja", "quantity":"ein Paar", "unit":"EL"}):
+                    self.assertEqual(26, start)
+                    self.assertEqual(27, end)
+                    
+         
 if __name__ == "__main__":
     unittest.main()

@@ -29,7 +29,7 @@ class IngredientExtractor:
             return self.__dissolveAmbiguity__(lemma, ingrCandis, recipe, sentence)
         
         if self.__isComposedIngredient__(lemma):
-            return set()
+            return set((lemma,))
         
         return None
     
