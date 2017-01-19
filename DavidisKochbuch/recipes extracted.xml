@@ -426,7 +426,7 @@
                   ref="#Midder" quantity="einige">Kalbsmidder</cue:recipeIngredient> in Stückchen
                geschnitten <ref target="#A-16">(siehe Vorbereitungsregeln)</ref>, kleine
                   <cue:recipeIngredient ref="#Saucisse">Saucissen</cue:recipeIngredient>, so viel
-               Kalbskopfbrühe, daß man hinreichend Suppe hat, und macht dies mit in
+               <cue:recipeIngredient ref="#Kalbsbrühe">Kalbskopfbrühe</cue:recipeIngredient>, daß man hinreichend Suppe hat, und macht dies mit in
                   <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient> braun gemachtem
                   <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient> gebunden. Nachdem
                dies Alles ¼ Stunde gekocht hat, kommen noch <cue:recipeIngredient target="#L-4"

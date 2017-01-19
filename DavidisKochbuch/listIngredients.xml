@@ -26,6 +26,7 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Cayennepfeffer" BLSref="R252000">
 		<cue:prefBasicForm>Cayennepfeffer</cue:prefBasicForm>
+		<cue:altBasicForm>Cayenne-Pfeffer</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Midder" BLSref="V582100">
 		<cue:prefBasicForm>Midder</cue:prefBasicForm>

@@ -617,6 +617,8 @@ Both, a recommendation system as well as help with healthy diet, do obviously in
 
 
 \section{Contribution to field of research}
+- CueML
+	- validation durch prog da mensch nicht einheitlich tagt (Brühe mal und mal nicht zutat)
 - rule-based nicht exakt match sondern co-occurrence von Indikationswörtern (Ingredients und "anstatt")
 - Übertragung auf beliebige / allgemeine Rezepte
 -CRF (co-reference von wörtern, pos etc automatisch (wie groß/langsam wird das Model?)) vs Dict based (gut genug, besser testbar, auf andere Sprachen überetztbar in dem nur Regel überetzten und nicht neue Trainingsdaten (wie viele werden überhaupt benötigt?))
@@ -632,6 +634,7 @@ Both, a recommendation system as well as help with healthy diet, do obviously in
 - welche Zutat welche BLS key (BLS überraschend schwer :D)
 -In B-2 "Anmerk. Will man Reis oder Sago zur Suppe nehmen, so gibt man dieses später
 hinein. Man rechnet davon auf jede Person bei allen Fleischsuppen einen gestrichenen Eßlöffel voll."
+- Wichtigkeit der Basisformen (Cayennepfeppfer entdeckt nicht Cayenne-Pfeffer)
 
 Infos aus Allg. Vorteil eines Kapitels (Reis 15g pro Suppe)
 
@@ -642,10 +645,13 @@ Infos aus Allg. Vorteil eines Kapitels (Reis 15g pro Suppe)
 	- Schema alignment paper - nicht ein schema für alle Zwecke
 
 \section{Developing}
+- Bachelorarbeit prototypen die out of hand gingen...
+- Prototype, Metapher der 2 Hüte (neues feature und refaktorisieren), tests
+
 - TDD / früh Plausibilitäts-Überprüfungen - Tagen als Hi-Wi war ne dumme Aktion^^ (insbesondere fürs Schemata, Mengenangaben und Namen historische Recherche nötig (Gefühl für die Daten, Wurzelwerk, braunes Gewürz,	Engl. Soja, tagging schema ist schwieriger als gedacht))
 - CRF zu aufwändig abre vll gut wegen co-occurence of indicator words automatisch statt manuelle rules (die abre auch nicht so schlimm sind^^)
 
-- wenn weitere tags (Links, cooktime, yield, ...) xmlElems (kind, start, end) statt ingsOfSentence = [], linksOfSentence = []... (ref Bachelorarbeit, smell)
+- wenn weitere tags (Links, cooktime, yield, ...) xmlElems (kind, start, end) statt ingsOfSentence = [], linksOfSentence = []..., gleiches mit if else in __getTokensWithExtractedIngs__ (ref Bachelorarbeit, smell)
 
 \section{Knowledge is power}
 The goal of the following digression is to provide some critical though and to sensitize for the importance of data privacy. Due to the point that the goal of this overall thesis is to facilitate some machine readable data, and machine readable data provides a lot of knowledge per definition of itself, this is an important personal concern of me. Because this is not a thesis in humanities, I feel free to over exaggerate a little bit and use sources like Wikipedia here.
