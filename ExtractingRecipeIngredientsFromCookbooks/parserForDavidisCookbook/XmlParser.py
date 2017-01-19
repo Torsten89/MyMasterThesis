@@ -39,7 +39,6 @@ class XmlParser(object):
         sentence = []
         ingsOfSentence = [] # [(ing, startIndex, endIndex)]
         for (tokens, ing) in self.__getTokensWithExtractedIngs__(node):
-            #print(sentence, tokens)
             if ing: ingsOfSentence.append((ing, len(sentence), len(sentence)+len(tokens)-1))
             sentence += tokens
             sentenceCopy = sentence[:]
@@ -55,8 +54,8 @@ class XmlParser(object):
                     i = 0
              
     def __getTokensWithExtractedIngs__(self, node):
-        """ Yields ([words of text], Ingredient) for each childNode .
-            If there is no Ingredient within a childNode Ingredient is None
+        """ Yields ([tokens of text], Ingredient) for each text in the childNodes of the given node .
+            If there is no Ingredient within a childNode, Ingredient is None.
         """
         for childNode in node.childNodes:
             if childNode.nodeType == childNode.TEXT_NODE:
