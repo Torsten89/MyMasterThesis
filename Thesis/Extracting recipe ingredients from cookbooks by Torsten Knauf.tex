@@ -204,7 +204,7 @@ Schema.org/Recipe is not a well defined grammar. They state "some data is better
 \newpage
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{Images/B-16}
+	\includegraphics[width=1\textwidth]{../Images/B-16}
 	\caption{Recipe B-16 scanned \parencite{DTA}}
 	\label{fig:B16Scanned}
 \end{figure}
@@ -496,7 +496,7 @@ Last they note, that the relations 2 and 3 are often mixed-up, because they are 
 
 
 
-\chapter{CRF-based Extraction}
+\chapter{CRF-based extraction}
 We present a very basic prototype for extracting ingredients from recipes based on CRF in this chapter.
 
 \section{CRF prototype}
@@ -576,7 +576,7 @@ First we introduce here a basic prototype, which is based upon dictionary extrac
 -lemmas mit -wurzel aufpimpung
 
 \begin{figure}
-	\includegraphics[width=1\linewidth]{Images/dictBasedExtraction}
+	\includegraphics[width=1\linewidth]{../Images/dictBasedExtraction}
 	\caption{Dictionary- and Rule-based workflow}
 	\label{fig:workflowDictbased}
 \end{figure}
@@ -599,8 +599,6 @@ They are defined as shown in \cref{eq:precisionAndRecall} according to \parencit
 
 
 
-
-%Discussion------------------------------------------------------------------%
 \chapter{Discussion}
 
 \section{Usefulness of automatic extraction of ingredients}\label{sec:UsefulnessOfThesis}
@@ -621,24 +619,24 @@ Both, a recommendation system as well as help with healthy diet, do obviously in
 	- validation durch prog da mensch nicht einheitlich tagt (Brühe mal und mal nicht zutat)
 - rule-based nicht exakt match sondern co-occurrence von Indikationswörtern (Ingredients und "anstatt")
 - Übertragung auf beliebige / allgemeine Rezepte
--CRF (co-reference von wörtern, pos etc automatisch (wie groß/langsam wird das Model?)) vs Dict based (gut genug, besser testbar, auf andere Sprachen überetztbar in dem nur Regel überetzten und nicht neue Trainingsdaten (wie viele werden überhaupt benötigt?))
+-CRF (co-reference von wörtern, pos etc automatisch (wie groß/langsam wird das Model?), aber eigentlich nicht der richtige Alg) vs Dict based (gut genug, besser testbar, auf andere Sprachen überetztbar in dem nur Regel überetzten und nicht neue Trainingsdaten (wie viele werden überhaupt benötigt?))
 
 
-\section{Quality of cueML and the obtained data}
+\section{Quality of the extracted data}
 - Mengenangaben ohne recipeYield witzlos
 - Übersetzung von (historischen) Mengenangaben (Maß)
 - ganzes Gewürz
 - Ungenaue Mengenangaben (ein Stich, 5Pfennig Brot, etwas)
-- links/refs erschweren Auswertung
-- BLS Angaben für alk. freie Getränke :D :D :D, nicht open source, nicht word wide
-- welche Zutat welche BLS key (BLS überraschend schwer :D)
+- links/refs erschweren Auswertung (koche Nr. 7 vs wie in Nr. 7)
 -In B-2 "Anmerk. Will man Reis oder Sago zur Suppe nehmen, so gibt man dieses später
 hinein. Man rechnet davon auf jede Person bei allen Fleischsuppen einen gestrichenen Eßlöffel voll."
 - Wichtigkeit der Basisformen (Cayennepfeppfer entdeckt nicht Cayenne-Pfeffer)
-
 Infos aus Allg. Vorteil eines Kapitels (Reis 15g pro Suppe)
 
 -Mensch kann Fehler erkennen (B-10 Rindfleisch ->Hasen /falscher Vreweis)
+
+- BLS Angaben für alk. freie Getränke :D :D :D, nicht open source, nicht word wide
+- welche Zutat welche BLS key (BLS überraschend schwer :D)
 
 - Publishen / Sharen von cueML
 	- \parencite{GrammaBased} also points out that ontology building is time consuming and expensive
@@ -651,22 +649,22 @@ Infos aus Allg. Vorteil eines Kapitels (Reis 15g pro Suppe)
 - TDD / früh Plausibilitäts-Überprüfungen - Tagen als Hi-Wi war ne dumme Aktion^^ (insbesondere fürs Schemata, Mengenangaben und Namen historische Recherche nötig (Gefühl für die Daten, Wurzelwerk, braunes Gewürz,	Engl. Soja, tagging schema ist schwieriger als gedacht))
 - CRF zu aufwändig abre vll gut wegen co-occurence of indicator words automatisch statt manuelle rules (die abre auch nicht so schlimm sind^^)
 
-- wenn weitere tags (Links, cooktime, yield, ...) xmlElems (kind, start, end) statt ingsOfSentence = [], linksOfSentence = []..., gleiches mit if else in __getTokensWithExtractedIngs__ (ref Bachelorarbeit, smell)
+- wenn weitere tags (Links, cooktime, yield, ...) xmlElems (kind, start, end) statt ingsOfSentence = [], linksOfSentence = []..., gleiches mit if else in getTokensWithExtractedIngs (ref Bachelorarbeit, smell)
 
 \section{Knowledge is power}
-The goal of the following digression is to provide some critical though and to sensitize for the importance of data privacy. Due to the point that the goal of this overall thesis is to facilitate some machine readable data, and machine readable data provides a lot of knowledge per definition of itself, this is an important personal concern of me. Because this is not a thesis in humanities, I feel free to over exaggerate a little bit and use sources like Wikipedia here.
+The goal of this thesis is to facilitate some machine readable data and machine readable data provides a lot of knowledge. The following has not the claim to be a scientific research. It should provide some critical thoughts and sensitize for the power of data. From my point of view it should be discussed controversially, because that would strengthen the awareness of this topic.
 
-According to Wikipedia \footnote{\url{https://en.wikipedia.org/wiki/Scientia_potentia_est} visted on 01/10/17} the first recorded occurrence of the proverb "Knowledge is power" is already from the tenth-century stating \textit{"Knowledge is power and it can command obedience. A man of knowledge during his lifetime can make people obey and follow him and he is praised and venerated after his death. Remember that knowledge is a ruler and wealth is its subject"}. How this thesis can support wealth was already discussed in \cref{sec:UsefulnessOfThesis}.
+Already in the seventh-century Imam Ali said \textit{"Knowledge is power and it can command obedience. A man of knowledge during his lifetime can make people obey and follow him and he is praised and venerated after his death. Remember that knowledge is a ruler and wealth is its subject"}\footnote{Imam Ali, Nahj Al-Balagha, Saying 146}. How this thesis can support wealth was already discussed in \cref{sec:UsefulnessOfThesis}.
 
-But \textbf{with great power comes great responsibility}\footnote{A well known proverb which probably has its origin from the French National Convention during the period of French Revolution. (\url{http://quoteinvestigator.com/2015/07/23/great-power/} visited on 11/02/16)}. I want to give two examples, where knowledge provided through data had/have terrifying power:
+But \textbf{with great power comes great responsibility}\footnote{A well known proverb which probably has its origin from the French National Convention during the period of French Revolution. (\url{http://quoteinvestigator.com/2015/07/23/great-power/} visited on 11/02/16)}. I want to give three examples, where knowledge, provided through data, is powerful and could be abused:
 
-First, the Weimar Republic changed 1919 their constitution, giving the state the right to acquire the religion affiliation of their citizen in a census. That makes sense, because the state does collect the church taxes for the catholic church in Germany and therefore has to know, who is catholic. 1939 the regime of Adolf Hitler used that right, to enforce everybody to tell if they self, one of their parents or one of there grandparents are Jews, leading to a categorization of full Jew, hybrid of level one or hybrid of level two. It is uncertain today, how far the regime used these data, to deport people into concentration camps\footnote{\url{https://de.wikipedia.org/wiki/Volkszählung_im_Deutschen_Reich_1939} visted on 28/12/16}. But in my opinion it is easy to imagine, that they did take use of these information in some way. Otherwise they would not have collected it. And even the possibility that the religion of one of your grandparents could lead to deportation into a concentration camp, frightens me, that insane regimes could do anything with any data.
+Article 136 from the constitution of the Weimar Republic from 1919 gave the state the right to acquire the religion affiliation of their citizen in a census. That makes sense, because the state does collect the church taxes. 1939 the regime of Adolf Hitler used that right in a census, to force everybody to tell if they self, one of their parents or one of there grandparents are Jews. The result lead to a categorization of full Jew, hybrid of level one or hybrid of level two. It is uncertain today, how far the regime accessed and used these data\footnote{\url{https://de.wikipedia.org/wiki/Volkszählung_im_Deutschen_Reich_1939#Kontroverse_Deutungen} visted on 28/12/16}. In my opinion it is likely, that they did take use of these information in some way. Otherwise they would not have collected it. But it is undoubted, that the knowledge, if your family are Jews, could lead to deportation into a concentration camp.
 
-Second it is actual very present in the media, how far "faked news" influence elections\footnote{e.g \url{https://www.nytimes.com/2016/11/18/technology/fake-news-on-facebook-in-foreign-elections-thats-not-new.html?_r=0} visted on 12/11/16}, adjudging news, which are some sort of data and knowldege, huge power. Also very present is the claim, that Russia has collected material to blackmail the next American president Donald Trump\footnote{\url{https://www.nytimes.com/2017/01/10/us/politics/donald-trump-russia-intelligence.html} visted on 10/01/17}. This ability is also clearly very powerful. I personally would be surprised, if they had not done that, because the western countries do the same to some point. The Global surveillance disclosures revealed that the American and British secret services monitored huge parts of the internet\footnote{\url{https://en.wikipedia.org/wiki/Global_surveillance_disclosures_(2013-present)} visited on 11/01/17}. I am convinced, that this is very expensive and that one payback is the hope to find material, they can use for their political advantage. For example the mobile phone of the German chancellor was monitored since 2002\footnote{\url{http://www.spiegel.de/politik/deutschland/handy-der-kanzlerin-die-wichtigsten-fakten-der-abhoeraffaere-a-930411.html} visited on 11/01/17}. It takes not much imagination to associated that with the declining of the Iraq War of the actual chancellor as well as with his closeness to Russia at that time.
+Second the question how far \textit{Fake News} influence elections is actual very present in the media\footnote{E.g \url{https://www.nytimes.com/2016/11/18/technology/fake-news-on-facebook-in-foreign-elections-thats-not-new.html?_r=0} visted on 12/11/16}. News are also data and many citizen take their political knowledge from them. A person, who can change arbitrarily opinions of people before an election, is clearly powerful.   
 
-In the context of a program, which make recipes machine readable, this all might be total exaggerated. But the health of Hillary Clinton was a topic at the American president election 2016\footnote{\url{https://www.washingtonpost.com/news/the-fix/wp/2016/09/11/hillary-clintons-health-just-became-a-real-issue-in-the-presidential-campaign/} visted on 02/11/16}. I personal know, that you should not eat some ingredients, when you have pancreatic cancer, which gets underlined by forum questions\footnote{\url{http://www.chefkoch.de/forum/2,51,639082/Bauchspeicheldruesen-rezepte.html} visited on 11/02/17}. It probably would have had effected survey results, when someone, who favoured Donald Trump, had tracked Hillary's internet traffic and stated Hillary had pancreatic cancer, based on the fact, that she was interested in recipes, avoiding these ingredients. I also wonder, if revealing Hillary were a vegetarian would have had a bad impact on her survey results. 
+Third, also very present in the media, is the claim, that Russia has collected material to blackmail the next American president Donald Trump\footnote{\url{E.g. https://www.nytimes.com/2017/01/10/us/politics/donald-trump-russia-intelligence.html} visted on 10/01/17}. This ability is clearly powerful, too. I personally would be surprised, if they had not done that, because I accuse western countries to do the same to some point. The global surveillance disclosures revealed that the American and British secret services monitored huge parts of the internet. Certain that is expensive. I assume, that one payback is the hope to find material, which they can use for their political advantage. For example the mobile phone of the German chancellor was monitored since 2002\footnote{\url{http://www.spiegel.de/politik/deutschland/handy-der-kanzlerin-die-wichtigsten-fakten-der-abhoeraffaere-a-930411.html} visited on 11/01/17}. It takes not much imagination to associated that with the declining of the Iraq War of the actual chancellor as well as with his closeness to Russia.
 
-As mentioned at the top, this section was not very scientific. But I hope, that I could provide some critical thoughts, keeping in mind.
+In the context of a program, which makes recipes machine readable, this all might be total exaggerated. But the health of Hillary Clinton was a topic at the American president election 2016\footnote{E.g. see \url{https://www.washingtonpost.com/news/the-fix/wp/2016/09/11/hillary-clintons-health-just-became-a-real-issue-in-the-presidential-campaign/} visited on 02/11/16}. I personal know, that you should not eat some ingredients, when you have pancreatic cancer. It probably would have had effected survey results, when someone had tracked Hillary's internet traffic and stated Hillary had pancreatic cancer, based on the fact, that she was interested in recipes, avoiding these ingredients. I also wonder, if revealing Hillary were a vegetarian would have had a bad impact on her survey results. 
 
 
 \chapter{Summary}
