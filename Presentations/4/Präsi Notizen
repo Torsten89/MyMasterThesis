@@ -1,0 +1,30 @@
+Introduction:
+	- Worüber
+	- Eigener Beitrag
+	- Struktur
+
+Making a cookbook machine readable:
+	- Digitalisieren: Scan und Texterkennung (Kollege Spalten) | Manuell
+	- CueML: Angelehnt an Schema.org/Recipe; optionale, alternataive, zusammengesetzte Zutaten...
+	- Need for autpomation: Manuell error prone und Ich 5min/Rezept, SHK-Dame 15min/Rezept
+	
+Related Work:
+	- Sehr von struktur abhängig
+	- Dict-based + Kontextfreie Grammatik oder Dependency parsed (domain missmatch)
+	- co-occurence
+	
+CRF-Prototpye: ( Computational Natural Language Learning )
+	- Trainingsdaten (NYT 130k, CoNLL 10kSätze)erstellen zu zeitaufwendig (9 Rezepte 1400Zeilen; 10sek/Zeile...)
+	- Falscher Alg. da keine Beziehungen zwischen Labels (alt zu was? quantity von was? ...)
+	
+Rule-based:
+	- Weitere Regeln für altGrp, optional, dontUse
+	
+Discussion:
+	- cueML and obtained data: Ontology nur Sinn wenn public | Mengen angabe ohne yield witzlos, "Maß, 2 pfennig Brot..."
+	- development process: Prototyping^3 (SHK Taggen war dumme Aktion)
+
+Abkürzungen in Überschriften?
+Tagger machen?
+Webseite zeigen
+

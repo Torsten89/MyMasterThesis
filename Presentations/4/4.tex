@@ -177,9 +177,61 @@
 \end{frame}
 
 \begin{frame}{5. Dictionary- and Rule-based extraction}
-	\begin{center}
+	\vspace{-0.3cm}\begin{center}
 		\includegraphics[width=1\linewidth, height=\textheight,keepaspectratio]{../../Images/dictBasedExtraction}
 	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{5. Dictionary- and Rule-based extraction}
+	\begin{minipage}{0.4\textwidth}
+		\begin{lstlisting}[language=XML, caption={Auszug aus cue:listIngredients}]
+<cue:ingredient xml:id="Midder" BLSref="V582100">
+	<cue:prefBasicForm>
+		Midder
+	</cue:prefBasicForm>
+	<cue:altBasicForm>
+		Kalbsmidder
+	</cue:altBasicForm>
+	<cue:altBasicForm>
+		Bries
+	</cue:altBasicForm>
+	<cue:altBasicForm>
+		Kalbsmilch
+	</cue:altBasicForm>
+	<cue:note>
+		"Kalbsmidder ist auch
+		unter dem Synonym [...]"
+		(http://www.[...])
+	</cue:note>
+</cue:ingredient>
+<cue:ingredient xml:id="Rindkochfleisch" BLSref="U180100">
+	<cue:prefBasicForm>
+		Rindfleisch
+	</cue:prefBasicForm>
+<cue:ingredient xml:id="Hammelfleisch" BLSref="Y400003">
+	<cue:prefBasicForm>
+		Hammelfleisch
+	</cue:prefBasicForm>
+</cue:ingredient>
+		\end{lstlisting}
+	\end{minipage}
+	\hspace*{0.2cm}\begin{minipage}{0.57\textwidth}
+		\vspace{-1cm}\begin{center}Ingredient dictionary\end{center}\vspace{-0.5cm}
+		\begin{lstlisting}
+{
+	Midder        : V582100
+	Kalbsmidder   : V582100
+	[...]
+	Rindfleisch   : U180100
+	Hammelfleisch : Y400003
+	[...]
+	Fleisch       : [U180100,
+	                 Y400003,
+	                 ...
+	                ]
+}
+		\end{lstlisting}
+	\end{minipage}
 \end{frame}
 
 \begin{frame}{5. Dictionary- and Rule-based extraction}
@@ -219,16 +271,16 @@
 		\end{enumerate}
 		\item Refinement of prototype
 		\begin{enumerate}
-			\item Illustrative enhancements
+			\item Illustrative enhanced rules
 			\item Evaluation
 		\end{enumerate}
+		\item GermaNet
 	\end{enumerate}
 \end{frame}
 
 \begin{frame}{6. Discussion}
 	\begin{enumerate}
 		\item Usefulness of automatic extraction of ingredients
-		\item Contribution to field of research
 		\item Quality of cueML and the obtained data
 		\item The development process
 		\item Knowledge is power
@@ -248,9 +300,11 @@
 			\item Alle Informationen aus dem Buch extrahieren
 			\item Eine wunderschöne Webseite zum Kochbuch erstellen und mit Inhalt füllen
 
-			\vspace*{0.5cm}			
+			\vspace*{0.6cm}			
 			\item Einen Nutellabaum pflanzen
 		\end{itemize}
+		
+	\vspace{0.3cm}\hspace{3.5cm}\textcolor{blue}{\footnotesize{*XML-Tagger}}
 	\end{minipage}
 \end{frame}
 
