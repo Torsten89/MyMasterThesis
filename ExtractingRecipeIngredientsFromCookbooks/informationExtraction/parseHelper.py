@@ -8,24 +8,22 @@ nNTag ="NN"
 
 truncatedEndings = ("wurzel", )
 shortenings = ("Nro.", "No.", "Engl.") + tuple(chapterNumber+"." for chapterNumber in string.ascii_uppercase[:-3])
-punctuations =  string.punctuation.replace("-","")
 
 def getWordLemmaTuples(sentence):
     treeTaggerTags = treeTagger.tag(sentence)
             
     for i, [word, pos, lemma] in enumerate(treeTaggerTags):
         if lemma == unknownTag:
-            treeTaggerTags[i][2] = word # take the word as lemma when its lemma is unknown
+            treeTaggerTags[i][2] = word # take the word as lemma, when its lemma is unknown
         if pos == truncTag: # e.g. Sellerie- und Petersilienwurzeln -> Selleriewurzel
             treeTaggerTags[i][2] = word.replace("-", findTruncatedEnd(i, treeTaggerTags))
     
     return [(word, lemma) for [word, _, lemma] in treeTaggerTags]
             
 def findTruncatedEnd(i, tags):
-    """ i is the position of the truncated word in the sentence,
-        and each tag in tags is a "tuple" of [word, PoS, lemma] for each word
+    """ i is the position of the truncated word in the sentence.
     """
-    for [word, pos, lemma] in tags[i+1:]: #search next normal nomina
+    for [_, pos, lemma] in tags[i+1:]: #search next normal nomina
         if pos == nNTag:
             for truncatedEnd in truncatedEndings:
                 if lemma.find(truncatedEnd) > -1:
@@ -33,22 +31,16 @@ def findTruncatedEnd(i, tags):
     
     return ""
 
-def tokenise(word):
-    if not word: raise StopIteration()
-    
-    if word[0] in punctuations:
-        yield word[0]
-        word = word[1:]
-       
-    if word and word[-1] in punctuations and word not in shortenings:
-        yield from tokenise(word[:-1])
-        yield word[-1]
-    else:
-        yield word    
-    
-def tokeniseWords(words):
-    return [token for word in words for token in tokenise(word) if token]
-    
-            
-if __name__ == "__main__":
-    print(treeTagger.tag("Irgendwas , (etwas) ."))
+def getSentences(text):
+    guessSentences = text.split(".") # guessed because e.g.: " Man kocht solche nach Nro. 22 und richtet sie mit einer Capern-Sauce an."
+    sentence = ""
+    for g in guessSentences:
+        if not g.strip(): # empty word / only spaces
+            continue
+        sentence += g + "."
+        if "{}.".format(g.split()[-1]) in shortenings:
+            continue
+        else:
+            yield sentence.strip()
+            sentence = ""
+

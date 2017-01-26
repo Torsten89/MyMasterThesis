@@ -1,5 +1,5 @@
 
-quantitiyWords = set(["ein, halb", "eine", "einige", "etwas"])
+quantitiyWords = set(["ein", "eine", "einige", "etwas"])
 
 def isQuantity(lemma):
     if isNumber(lemma):

@@ -2,7 +2,6 @@ import unittest
 from xml.dom.minidom import parseString
 from parserForDavidisCookbook.XmlParser import XmlParser
 from parserForDavidisCookbook.Ingredient import Ingredient
-from informationExtraction.lemmatization import tokenise
 
 def createCueMLDom(recipes=[]):
     return parseString('\

@@ -1,18 +1,12 @@
-from xml.dom.minidom import parseString, parse
+from xml.dom.minidom import parseString
 import unittest
-from informationExtraction.IngredientExtractor import IngredientExtractor
-from parserForDavidisCookbook.xmlHelper import buildIngredientDict
-from informationExtraction.BFormId import BFormId
+from parserForDavidisCookbook.xmlHelper import buildIngredientDict,\
+    getAllChildText
 
 
 class XmlHelperTest(unittest.TestCase):
-    
-    def setUp(self):
-        unittest.TestCase.setUp(self)
-        dom = parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml")
-        self.ingE = IngredientExtractor(dom)
 
-    def testBuildIngDict(self):
+    def testMidder(self):
         dom = parseString(' \
 <cue:listIngredient xmlns="http://www.tei-c.org/ns/1.0" xmlns:cue="http://cueML/ns"> \
     <cue:ingredient xml:id="Rindkochfleisch" BLSref="U180100"> \
@@ -31,17 +25,31 @@ class XmlHelperTest(unittest.TestCase):
         <cue:note>2. Note</cue:note> \
     </cue:ingredient> \
 </cue:listIngredient>')
+                    
         d = buildIngredientDict(dom)
-        self.assertEqual([BFormId(bform='Bries', xmlId='Midder')], d["Bries"])
-        self.assertEqual([BFormId(bform='Rindfleisch', xmlId='Rindkochfleisch')], d["Rindfleisch"])
+        self.assertIsNotNone(d.get("Bries"))
+        self.assertEqual(1, len(d.get("Bries")))
+        self.assertEqual("Midder", d["Bries"][0].xmlID)
         
-    def testBuildIngDictBasisCases(self):
-        self.assertIsNone(self.ingE.getIngredientCandidates("Gesellschaft"))
-        self.assertEqual(1, len(self.ingE.getIngredientCandidates("Rindfleisch")))
-        self.assertLess(1, len(self.ingE.getIngredientCandidates("Fleisch")))
-    
-    def testBuildIngDictKablsklöße(self):
-        self.assertIsNotNone(self.ingE.getIngredientCandidates("Kalbsklöße"))
+    def testWein(self):
+        dom = parseString(' \
+<cue:listIngredient xmlns="http://www.tei-c.org/ns/1.0" xmlns:cue="http://cueML/ns"> \
+    <cue:ingredient xml:id="Rotwein" BLSref="P240000"> \
+        <cue:prefBasicForm>Rotwein</cue:prefBasicForm> \
+        <cue:altBasicForm>roter Wein</cue:altBasicForm> \
+    </cue:ingredient> \
+    <cue:ingredient xml:id="Weißwein" BLSref="P220000"> \
+        <cue:prefBasicForm>Weißwein</cue:prefBasicForm> \
+        <cue:altBasicForm>weißer Wein</cue:altBasicForm> \
+    </cue:ingredient> \
+</cue:listIngredient>')
+        
+        d = buildIngredientDict(dom)
+        self.assertIsNotNone(d.get("Wein"))
+        self.assertEqual(2, len(d.get("Wein")))
+        self.assertEqual("Rotwein", d["Wein"][0].xmlID)
+        self.assertEqual("roter Wein", d["Wein"][0].basicForm)
+
 
 
 if __name__ == "__main__":

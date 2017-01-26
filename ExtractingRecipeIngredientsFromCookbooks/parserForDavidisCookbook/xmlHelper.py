@@ -1,5 +1,4 @@
-from informationExtraction.BFormId import BFormId
-
+from model.IngredientCandi import IngredientCandi
 def getElems(node, elemName, withAttris={}):
     """ withAttris = {key: iterator with possible values}
     """
@@ -43,21 +42,21 @@ def getUnitValuesFromCueML(cueMLRngDom):
      
 def buildIngredientDict(dom):
     """ Returns dictionary of ingredients from a cue:listIngredient-element. The key is the noun of an ingredient (e.g. Wein for weißer Wein)
-        and the value is a list of tuples (full name, possible xml:id) (e.g. [("weißer Wein", "weißer_Wein"), ("roter Wein", "roter_Wein")])
+        and the value is a list of possible IngredientCandis.
     """
     ingDict = {}
     
     for ingElem in dom.getElementsByTagName("cue:listIngredient")[0].getElementsByTagName("cue:ingredient"):
-        xmlId = ingElem.attributes["xml:id"].value
+        xmlID = ingElem.attributes["xml:id"].value
         basicForms = [getAllChildText(ingElem.getElementsByTagName("cue:prefBasicForm")[0])] \
             + [getAllChildText(altBasicForm) for altBasicForm in ingElem.getElementsByTagName("cue:altBasicForm")]
         for basicForm in basicForms:
             for word in basicForm.split():
                 if word[0].isupper():
-                    __addAllToDict__(ingDict, word, [BFormId(basicForm, xmlId)])
+                    __addAllToDict__(ingDict, word, [IngredientCandi(xmlID, basicForm)])
     
     #add candidates for verbose ingredients like Fleisch
-    verboseIngs = ["Fleisch", "Ohr"]
+    verboseIngs = ["Fleisch"]
     for verboseIng in verboseIngs:
         ingDict[verboseIng] = []
     for key in ingDict.keys():

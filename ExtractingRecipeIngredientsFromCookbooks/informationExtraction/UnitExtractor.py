@@ -1,5 +1,4 @@
 from parserForDavidisCookbook.xmlHelper import getUnitValuesFromCueML
-from xml.dom.minidom import parse
 
 class UnitExtractor(object):
 
@@ -11,9 +10,4 @@ class UnitExtractor(object):
             return lemma
         
         return default
-
-
-if __name__ == '__main__':
-    dom = parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng")
-    uE = UnitExtractor(dom)
-    print(uE.__unitSet__)
+    
