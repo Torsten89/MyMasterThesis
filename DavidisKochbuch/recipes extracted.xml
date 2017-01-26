@@ -59,7 +59,7 @@
                Fleisch genommen, gahr und dick gekocht; doch müssen die Körner ganz bleiben.
                Derselbe wird bei der Suppe (nach Belieben mit geriebenem <cue:recipeIngredient
                   ref="Hartkäse45" optional="True">Parmesankäse</cue:recipeIngredient>)
-               herumgereicht. </p>
+               herumgereicht.</p>
             <p>Rindfleischsuppe muß vom Kochen an, 3—3½ Stunden kochen.</p>
 
          </cue:recipe>
@@ -70,7 +70,7 @@
             <head>Rindfleischsuppe mit Perlgerste und Reis.</head>
 
             <p><ref target="#B-1">Wird gekocht wie die vorhergehende</ref>, nur mit der Abänderung,
-               daß, wenn die Brühe durch ein Haarsieb geschüttet ist, man verhältnißmäßig 1—2
+               daß, wenn die <cue:recipeIngredient>Brühe</cue:recipeIngredient> durch ein Haarsieb geschüttet ist, man verhältnißmäßig 1—2
                Eßlöffel voll <cue:recipeIngredient ref="#Mehl" atLeast="1" atMost="2" unit="EL"
                   >Mehl</cue:recipeIngredient> mit frischer <cue:recipeIngredient ref="#Butter"
                   >Butter</cue:recipeIngredient> durchschwitzt, welches jedoch weiß bleiben muß, und
@@ -125,7 +125,7 @@
          <cue:recipe type="Suppen." rcp-id="B-4">
             <head>Klare braune Rindfleischsuppe.</head>
 
-            <p>Die Bereitung dieser braunen Kraftbrühe findet man in <ref target="#A-12">A. No.
+            <p>Die Bereitung dieser braunen <cue:recipeIngredient>Kraftbrühe</cue:recipeIngredient> findet man in <ref target="#A-12">A. No.
                   12</ref>. Zu einer Gesellschaft von <cue:recipeYield quantity="12" unit="people"
                   >12 Personen</cue:recipeYield> nimmt man 6 Pfund <cue:recipeIngredient
                   ref="#Rindkochfleisch" quantity="6" unit="Pfund"
@@ -164,7 +164,7 @@
                wie in <ref target="#B-1">No. 1</ref>, nach der Personenzahl, doch etwas reichlicher
                genommen, da solches weniger Kraft gibt, als Rindfleisch. Nachdem es gut gewaschen,
                mit Wasser und <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient> rein
-               ausgeschäumt, gibt man die Brühe nach Verlauf von einer starken halben Stunde durch
+               ausgeschäumt, gibt man die <cue:recipeIngredient>Brühe</cue:recipeIngredient> nach Verlauf von einer starken halben Stunde durch
                ein Sieb, schwitzt wie in <ref target="#B-2">No. 2</ref>, <cue:recipeIngredient
                   ref="#Mehl">Mehl</cue:recipeIngredient> in <cue:recipeIngredient ref="#Butter"
                   >Butter</cue:recipeIngredient>, schüttet die Kalbfleischbrühe vom Bodensatz
@@ -200,7 +200,7 @@
 
             <p>Es wird dazu ein gutes, <cue:recipeIngredient ref="#Kalbkochfleisch">fleischiges
                   Stück</cue:recipeIngredient> genommen, wie oben mit etwas <cue:recipeIngredient
-                  ref="#Salz">Salz</cue:recipeIngredient> ausgeschäumt, die Brühe durch ein Sieb
+                  ref="#Salz">Salz</cue:recipeIngredient> ausgeschäumt, die <cue:recipeIngredient>Brühe</cue:recipeIngredient> durch ein Sieb
                geschüttet, mit <cue:recipeIngredient ref="#Reis">Reis</cue:recipeIngredient>, der in
                kochendem Wasser abgebrüht ist, gahr gekocht. Hat man <cue:recipeIngredient
                   ref="#SpargelGekocht" optional="True">Spargel</cue:recipeIngredient> oder
@@ -260,7 +260,7 @@
                   Personen</cue:recipeYield> rechnet man ein großes, fettes <cue:recipeIngredient
                   ref="#Suppenhuhn" quantity="1">Huhn</cue:recipeIngredient>. Dasselbe wird mit
                   <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient> gehörig
-               ausgeschäumt, die Brühe, wie bei allen Fleischsuppen, durch ein Sieb geschüttet und
+               ausgeschäumt, die <cue:recipeIngredient>Brühe</cue:recipeIngredient>, wie bei allen Fleischsuppen, durch ein Sieb geschüttet und
                mit einer <cue:recipeIngredient ref="#Wurzelpetersilie" quantity="1"
                   >Petersilien-Wurzel</cue:recipeIngredient> gahr gekocht, was ungefähr 3 Stunden
                Zeit erfordert. Ein und eine halbe Stunde vorher gibt man gut abgebrühten
@@ -712,7 +712,7 @@
             <p>Diese lassen sich am besten zur Suppe benutzen. Man setzt sie mit einem guten Stück
                   <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient> und weichem
                kochenden Wasser zu Feuer, läßt sie weich kochen und rührt sie durch ein Sieb. Die
-               Brühe bringt man wieder zum Kochen, gibt <cue:recipeIngredient ref="#Salz"
+               <cue:recipeIngredient>Brühe</cue:recipeIngredient> bringt man wieder zum Kochen, gibt <cue:recipeIngredient ref="#Salz"
                   >Salz</cue:recipeIngredient>, in Butter gelb geröstetes <cue:recipeIngredient
                   ref="#Mehl">Mehl</cue:recipeIngredient> mit <cue:recipeIngredient ref="#Zwiebel"
                   >Zwiebeln</cue:recipeIngredient> hinein, kocht
@@ -927,7 +927,7 @@
                   ref="#Rosinen">Rosinen</cue:recipeIngredient> in der Suppe weich gekocht, welches
                etwa ¾ Stunde dauert, doch kann man diese nach Belieben auch schon früher allein
                kochen, die Suppe alsdann nach dem Durchrühren zum Kochen bringen und die Rosinen
-               sammt der Brühe dazu schütten. Die Suppe muß recht sämig, doch ja nicht zu dick sein.
+               sammt der <cue:recipeIngredient>Brühe</cue:recipeIngredient> dazu schütten. Die Suppe muß recht sämig, doch ja nicht zu dick sein.
                Etwas <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient> darf nicht
                vergessen werden. Beim Anrichten werden 2 frische <cue:recipeIngredient
                   ref="#HühnereiEigelb" quantity="2">Eidotter</cue:recipeIngredient> mit ¼ Maß

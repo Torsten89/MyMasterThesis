@@ -291,7 +291,6 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Rotwein" BLSref="P240000">
 		<cue:prefBasicForm>Rotwein</cue:prefBasicForm>
-		<cue:altBasicForm>rother Wein</cue:altBasicForm>
 		<cue:altBasicForm>roter Wein</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Biskuit" BLSref="D077002">
