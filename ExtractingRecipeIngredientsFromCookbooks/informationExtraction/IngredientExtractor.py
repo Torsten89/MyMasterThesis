@@ -59,7 +59,7 @@ class IngredientExtractor:
     def __dissolveAmbiguityFleisch__(self, lemma, candidates, recipe, sentence):
         if not recipe: return set(c.xmlId for c in candidates)
         
-        if recipe.type=="Suppe":
+        if recipe.type == "Suppe":
             if "rind" in recipe.name.lower():
                 return set("Rindkochfleisch")
             if "kalb" in recipe.name.lower():

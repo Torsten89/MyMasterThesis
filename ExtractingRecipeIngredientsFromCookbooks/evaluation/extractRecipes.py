@@ -79,11 +79,11 @@ def extractRecipes(recipes, ingE, unitE, ):
             a, b = ingsFromCueMLRetrieved(s, extracted[i], recipe.sentencesWithExtractedIngs[i].ings)
             numberIngsExtractedAndInCueML += a
             numberIngsInCueML += b
-            
+             
             a, b = ingsRetrievedInCueML(s, extracted[i], recipe.sentencesWithExtractedIngs[i].ings, ingsInCueMLRecipe)
             numberRetievedAndInCuML += a
             numberRetrieved += b
-                
+                 
     print("Recall:", recall(numberIngsExtractedAndInCueML, numberIngsInCueML), "{}/{}".format(numberIngsExtractedAndInCueML, numberIngsInCueML))
     print("Precision:", precision(numberRetievedAndInCuML, numberRetrieved), "{}/{}".format(numberRetievedAndInCuML, numberRetrieved))    
             
