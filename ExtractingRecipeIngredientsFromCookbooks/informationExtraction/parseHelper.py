@@ -31,7 +31,7 @@ def findTruncatedEnd(i, tags):
     
     return ""
 
-def getSentences(text):
+def splitIntoSentences(text):
     guessSentences = text.split(".") # guessed because e.g.: " Man kocht solche nach Nro. 22 und richtet sie mit einer Capern-Sauce an."
     sentence = ""
     for g in guessSentences:

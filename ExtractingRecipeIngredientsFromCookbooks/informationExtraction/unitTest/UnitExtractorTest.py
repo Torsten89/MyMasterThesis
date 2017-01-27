@@ -3,7 +3,7 @@ from informationExtraction.UnitExtractor import UnitExtractor
 from xml.dom.minidom import parse
 
 
-class Test(unittest.TestCase):
+class UnitExtractorTest(unittest.TestCase):
     
     def setUp(self):
         unittest.TestCase.setUp(self)
@@ -18,5 +18,4 @@ class Test(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    #import sys;sys.argv = ['', 'Test.testName']
     unittest.main()

@@ -102,54 +102,35 @@ eine kräftige <cue:recipeIngredient target="#Bouillon" \
     </cue:recipe>'
     
 
-def ingredientInRecipe(recipe, ingredient):
-    for (_, ingTuples) in recipe.sentencesWithExtractedIngs:
-        for (ing, _ , _) in ingTuples:
-            if ing == ingredient:
-                return True
-        
-    return False
-
 class XmlParserTest(unittest.TestCase):
     def testFindRecipesInDom(self):
         dom = createCueMLDom([getRecipeB49(), getRecipeB2()])
-        self.assertEqual(2, len(list(XmlParser(dom).getRecipes())))
+        self.assertEqual(2, len(list(XmlParser(dom).getPlainTextRecipes())))
          
     def testRecipeB49(self):
         dom = createCueMLDom([getRecipeB49()])
-        recipe = XmlParser(dom).getRecipes().__next__()
+        recipe = XmlParser(dom).getPlainTextRecipes().__next__()
         self.assertEqual("Suppen", recipe.rcpType)
         self.assertEqual("B-49", recipe.rcpId)
+        self.assertEqual("Suppe von feiner Gerste (Graupen).", recipe.name)
+        instructionSentences = ["Ungefähr zwei Stunden muß die Gerste zu Feuer sein.",
+            "Sie wird mit etwas Butter in wenig weiches kochendes Wasser gegeben, kurz eingekocht, frische Milch hinzu geschüttet und zu einer sämigen Suppe gekocht.",
+            "Salz, Zucker und Zimmet darf nicht darin fehlen."]
+        self.assertEqual(instructionSentences, recipe.instructionSentences)
+        
          
     def testRecipeB2(self):
         dom = createCueMLDom([getRecipeB2()])
-        recipe = XmlParser(dom).getRecipes().__next__()
+        recipe = XmlParser(dom).getPlainTextRecipes().__next__()
         self.assertEqual("Suppen", recipe.rcpType)
         self.assertEqual("B-2", recipe.rcpId)
+        self.assertEqual("Rindfleischsuppe mit Perlgerste und Reis.", recipe.name)
          
     def testGetCertainRecipe(self):
         dom = createCueMLDom([getRecipeB49(), getRecipeB2()])
-        recipes = list(XmlParser(dom).getRecipes(["B-2"]))
+        recipes = list(XmlParser(dom).getPlainTextRecipes(["B-2"]))
         self.assertEqual(1, len(recipes))
         self.assertEqual("B-2", recipes[0].rcpId)
-         
-         
-    def testGetTaggedRecipeIngsInB16(self):
-        dom = createCueMLDom([getTaggedRecipeB16()])
-        recipe = XmlParser(dom).getRecipes().__next__()
-        self.assertTrue(ingredientInRecipe(recipe, Ingredient({"target":"#Bouillon"})))
-        self.assertTrue(ingredientInRecipe(recipe, Ingredient({"ref":"#Englische_Soja", "optional":"True"})))
-        self.assertTrue(ingredientInRecipe(recipe, Ingredient({"ref":"#Rum", "altGrp":"2", "quantity":"etwas"})))
-        self.assertFalse(ingredientInRecipe(recipe, Ingredient({"target":"#Banane"})))
-        
-    def testGetTaggedRecipeIngsPosB16(self):
-        dom = createCueMLDom([getTaggedRecipeB16()])
-        recipe = XmlParser(dom).getRecipes().__next__()
-        for (sentence, ingsInSentence) in recipe.sentencesWithExtractedIngs:
-            for (ing, start, end) in ingsInSentence:
-                if ing == Ingredient({"ref":"#Englische_Soja", "quantity":"ein Paar", "unit":"EL"}):
-                    self.assertEqual(26, start)
-                    self.assertEqual(27, end)
                     
          
 if __name__ == "__main__":

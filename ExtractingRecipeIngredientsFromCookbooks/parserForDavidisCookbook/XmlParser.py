@@ -1,5 +1,5 @@
 from model.PlainTextRecipe import PlainTextRecipe
-from informationExtraction.parseHelper import getSentences
+from informationExtraction.parseHelper import splitIntoSentences
 from parserForDavidisCookbook.xmlHelper import getElems, getAllChildText
 
 rcpIdTagName = "rcp-id"
@@ -17,12 +17,12 @@ class XmlParser(object):
         """ 
         withAttris = {} if not rcpIds else {rcpIdTagName:rcpIds}
         for xmlRecipe in getElems(self.dom, "cue:recipe", withAttris):
-            yield self.__parseXmlPlainTextRecipe__(xmlRecipe)
+            yield self.__parseXml2PlainTextRecipe__(xmlRecipe)
     
-    def __parsePlainTextRecipe__(self, xmlRecipe):
+    def __parseXml2PlainTextRecipe__(self, xmlRecipe):
         rcpId = xmlRecipe.attributes[rcpIdTagName].value
         rcpType = xmlRecipe.attributes["type"].value[:-1]  # remove . at the end
-        sentences = list(getSentences(getAllChildText(xmlRecipe)))
+        sentences = list(splitIntoSentences(getAllChildText(xmlRecipe)))
         name = sentences[0]
         return PlainTextRecipe(rcpId, rcpType, name, sentences[1:])
 

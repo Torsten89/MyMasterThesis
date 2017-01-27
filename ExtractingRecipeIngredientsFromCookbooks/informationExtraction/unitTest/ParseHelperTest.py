@@ -1,5 +1,5 @@
 import unittest
-from informationExtraction.parseHelper import getWordLemmaTuples, getSentences
+from informationExtraction.parseHelper import getWordLemmaTuples, splitIntoSentences
 
 class ParseHelperTest(unittest.TestCase):
 
@@ -26,7 +26,7 @@ gekocht.",
         "Dann hackt man 2 hart gekochte Eier mit Petersilie klein, rührt Muskat und \
 gestoßenen Zwieback darunter, legt die Fische in eine Schüssel, bestreut sie damit \
 und gibt heiße Butter dazu."]
-        self.assertEqual(expectedResult, list(getSentences(text)))
+        self.assertEqual(expectedResult, list(splitIntoSentences(text)))
 
 
 if __name__ == "__main__":

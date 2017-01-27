@@ -1,7 +1,13 @@
 from model.IngredientCandi import IngredientCandi
 from model.WordProperty import WordProperty
 
-def dissolveAmbiguity(i, wps, rcp=None,):
+def dissolveAmbiguityRule(wps, rcp):
+    for i in range(len(wps)):
+        if wps[i].properties.get(WordProperty.ingredient): wps = dissolveAmbiguity(i, wps, rcp)
+
+    return wps
+
+def dissolveAmbiguity(i, wps, rcp):
     oldCandis = wps[i].properties[WordProperty.ingredient]
     if len(oldCandis) == 1: # there is no ambiguity :)
         return wps
@@ -14,16 +20,16 @@ def dissolveAmbiguity(i, wps, rcp=None,):
     
     return wps
 
-def dissolveAmbiguityFleisch(rcp, default):
-    if not rcp: return default # nothing there which helps guessing :(
+def dissolveAmbiguityFleisch(rcp, candis):
+    if not rcp: return candis # nothing there which helps guessing :(
     
-    if rcp.rcpType == "Suppe":
+    if rcp.rcpType == "Suppen":
         if "rind" in rcp.name.lower():
             return [IngredientCandi("Rindkochfleisch", "Rindkochfleisch")]
         if "kalb" in rcp.name.lower():
             return [IngredientCandi("Kalbkochfleisch", "Kalbkochfleisch")]
 
-    return default # end of wisdom is reached, so return default
+    return candis # end of wisdom is reached, so just return
 
 def dissolveAmbiguityWein(wps, oldCandis):
     for wp in wps:

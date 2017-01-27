@@ -61,6 +61,7 @@ def buildIngredientDict(dom):
         ingDict[verboseIng] = []
     for key in ingDict.keys():
         for verboseIng in verboseIngs:
+            if verboseIng == "Fleisch" and "brühe" in key: continue
             if verboseIng.lower() in key: ingDict[verboseIng] += ingDict[key]
     
     return ingDict

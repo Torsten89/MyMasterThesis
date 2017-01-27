@@ -6,8 +6,7 @@ import time
 from informationExtraction.Extractor import Extractor
 from informationExtraction.dictBasedExtractor import dictBasedEnrichment
 from informationExtraction.ruleBasedExtractor import applyRulesToWordProperties
- 
-ergFilePath = "erg.xml" 
+
    
 if __name__ == '__main__':
     startTime = time.time()    
@@ -15,11 +14,20 @@ if __name__ == '__main__':
     cookbook = XmlParser(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted.xml"))
     ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
     unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng")) 
-     
-    rcpIds = ["B-{}".format(i) for i in range(1,2)]
-    recipes = cookbook.getPlainTextRecipes(rcpIds)
     extractor = Extractor(ingE, unitE)
-    extractor.extractRecipesToXml(recipes, ergFilePath)
+    s="Später kann man Spargel oder Blumenkohl, was die Jahreszeit hat, jedoch vorher eben abgekocht, und 10 Minuten vor dem Anrichten Fleisch- oder andere beliebige Klöße darin gahr kochen." 
+    
+    wps = dictBasedEnrichment(s, ingE, unitE)
+    for wp in wps:
+        print(wp.word, wp.lemma, wp.properties)
+    
+    print("-----")
+    improvedWps = applyRulesToWordProperties(wps, None)
+    for wp in improvedWps:
+        print(wp.word, wp.lemma, wp.properties)
+        
+    for wp in improvedWps:
+        print(wp.toXml())
 
 
 

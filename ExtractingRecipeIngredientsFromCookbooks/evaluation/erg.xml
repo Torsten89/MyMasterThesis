@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<TEI xmlns="tei">
+
+	<teiHeader>
+
+		<fileDesc>
+
+			<titleStmt>
+
+				<title>Title</title>
+
+			</titleStmt>
+
+			<publicationStmt>
+
+				<p>Publication Information</p>
+
+			</publicationStmt>
+
+			<sourceDesc>
+
+				<p>Information about the source</p>
+
+			</sourceDesc>
+
+		</fileDesc>
+
+	</teiHeader>
+
+	<text>
+		<body>
+
+			<cue:recipe rcp-id="B-1" type="Suppen" xmlns:cue="http://cueML/ns">
+				<head> Klare weiße Rindfleischsuppe.</head>
+				<p> Man rechnet, wenn die Gesellschaft klein ist, auf jede Person ¾ Pfund, bei einer
+					großen Gesellschaft ½ Pfund <cue:recipeIngredient quantity="0.5"
+						ref="#Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient> .
+					Dasselbe wird gewaschen und mit doppelt so vielem Wasser, als man Suppe haben
+					will, zu Feuer gesetzt. Auf jede Person rechnet man bei einem Gesellschaftsessen
+					⅜ Maß Suppe, also auch ¾ Maß Wasser, wozu man gleich das nöthige
+						<cue:recipeIngredient quantity="0.75" ref="#Salz" unit="Maß"
+						>Salz</cue:recipeIngredient> gibt, weil das <cue:recipeIngredient
+						ref="#Rindkochfleisch">Fleisch</cue:recipeIngredient> nur in der ersten
+					Stunde des Kochens das <cue:recipeIngredient ref="#Salz"
+						>Salz</cue:recipeIngredient> annimmt und das spätere Hinzugeben des
+						<cue:recipeIngredient ref="#Salz">Salzes</cue:recipeIngredient> nur die
+					Suppe würzt. Ist das <cue:recipeIngredient ref="#Rindkochfleisch"
+						>Fleisch</cue:recipeIngredient> sorgfältig ausgeschäumt, gibt man eine fein
+					geschnittene <cue:recipeIngredient quantity="1" ref="#Zwiebel"
+						>Zwiebel</cue:recipeIngredient> hinzu, wodurch die Brühe an Kraft gewinnt,
+					und läßt sie, fest zugedeckt, fortwährend, aber nicht zu stark kochen. Eine
+					Stunde später gießt man die Brühe durch ein Haarsieb, weil sie nie ganz klar
+					ist, spült das Stück <cue:recipeIngredient quantity="1" ref="#Rindkochfleisch"
+						>Fleisch</cue:recipeIngredient> eben ab und setzt es mit der Brühe, die man
+					vom Bodensatz langsam abschüttet, in dem ebenfalls umgespülten Topfe wieder zu
+					Feuer nebst einigen <cue:recipeIngredient quantity="einige" ref="#Schwarzwurzel"
+						>Scorzoner-</cue:recipeIngredient> , einer <cue:recipeIngredient
+						quantity="1" ref="#Knollensellerie">Sellerie-</cue:recipeIngredient> und
+						<cue:recipeIngredient ref="#Wurzelpetersilie"
+						>Petersilienwurzel</cue:recipeIngredient> . Hiermit läßt man die Suppe
+					ferner kochen, während man zuweilen das Fett abnimmt, das der Bouillon den
+					feinen Geschmack benimmt. Man kann ein halbes Stündchen vor dem Anrichten
+						<cue:recipeIngredient quantity="1" ref="#SpargelGekocht"
+						>Spargel</cue:recipeIngredient> oder <cue:recipeIngredient
+						ref="#BlumenkohlGekocht">Blumenkohl</cue:recipeIngredient> , was die
+					Jahreszeit gerade bietet, hinein geben, nur muß beides eben abgekocht sein, und
+					darf ja nicht in der Bouillon zerkochen. Ist das <cue:recipeIngredient
+						ref="#Rindkochfleisch">Fleisch</cue:recipeIngredient> gahr, aber nicht zu
+					weich gekocht, läßt man beliebige Klöße eben darin gahr kochen und richtet die
+					Suppe an. Zugleich hat man <cue:recipeIngredient ref="#Reis"
+						>Reis</cue:recipeIngredient> , für jede Person einen Eßlöffel gerechnet,
+					abgebrüht und in Bouillon, wozu man so viel mehr <cue:recipeIngredient
+						ref="#Rindkochfleisch">Fleisch</cue:recipeIngredient> genommen, gahr und
+					dick gekocht; doch müssen die Körner ganz bleiben. Derselbe wird bei der Suppe(
+					nach Belieben mit geriebenem <cue:recipeIngredient ref="#Hartkäse45"
+						>Parmesankäse</cue:recipeIngredient> ) herumgereicht. Rindfleischsuppe muß
+					vom Kochen an, 3—3½ Stunden kochen. </p>
+			</cue:recipe>
+
+		</body>
+	</text>
+</TEI>

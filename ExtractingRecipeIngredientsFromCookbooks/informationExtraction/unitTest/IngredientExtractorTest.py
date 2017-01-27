@@ -30,6 +30,14 @@ class IngredientExtractorTest(unittest.TestCase):
         self.assertIsNotNone(candis)
         self.assertEqual(0, len(candis))
         
+    def testFleisch(self):
+        candis = self.ingE.getIngredientCandidates("Fleisch")
+        self.assertLess(1, len(candis))
+        self.assertIn("Rindfleisch", [candi.basicForm for candi in candis])
+        
+    def testAbbrühen(self):
+        self.assertIsNone(self.ingE.getIngredientCandidates("abbrühen"))
+        
         
 if __name__ == "__main__":
     unittest.main()

@@ -1,13 +1,8 @@
-'''
-Created on Jan 26, 2017
-
-@author: torsten
-'''
 import unittest
-from informationExtraction.QuantityExtractor import isQuantity
+from informationExtraction.QuantityExtractor import isQuantity, str2Quantity
 
 
-class Test(unittest.TestCase):
+class QuantityExtractorTest(unittest.TestCase):
 
     def testFraction(self):
         self.assertTrue(isQuantity("¾"))
@@ -23,7 +18,15 @@ class Test(unittest.TestCase):
         
     def testFromTo(self):
         self.assertTrue(isQuantity("1—2"))
-
+    
+    def testIngredientIsNoQuantity(self):
+        self.assertFalse(isQuantity("Bouillon"))
+        
+    def testQuantity2String16(self):
+        self.assertEqual(16, str2Quantity("16"))
+        
+    def testQuantity2String1AndHalf(self):
+        self.assertEqual(1.5, str2Quantity("1½"))
 
 if __name__ == "__main__":
     unittest.main()
