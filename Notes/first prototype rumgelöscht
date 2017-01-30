@@ -1,0 +1,43 @@
+--- Needed for extracting and writingTo "erg.xml": 144.9719660282135 seconds ---
+Plural Lemmatisierungsfehler: Scorzonerwurzeln, Sellerieknollen, Kartoffeln, Eidottern, Saucissen, Suppenkräutern, Pfefferkörnern,
+	Petersilienblättern, Sauerampferblätter
+	! Achtung Hasenbraten n korrekt
+Bindestrich Lemmatisierungsfehler: Scorzoner-Wurzeln, Petersilien-Wurzel
+Lemma / R-Fehler: In Ermangelung eines Eis (Ei) (einfach falsch im org)
+Saucen nicht erkannt (Meerrettig-Sauce, Sauce vom Hasen) !Achtung mit obigen Bindestrich-Fehler beseitigen
+Bratenjus
+Target Recipe: Kerry-Pulver (A-33)
+Nicht erkannt: 'fleischiges Stück' (B-7), Hasenfleisches, Krebsbutter, Spargelköpfe, Zitronenscheiben, gesalzen (Salz), Fleischklößchen,
+	Brustfleisch, Eierklößchen
+Nicht in Dict: Ohr (Schweineohr), Ochsenmaul, Knochen (B-21), Hasengerippe, Krammetsvogel, Pimpernell, Blüthe (noch immer nicht - B34),
+	Korinthe
+Nicht als altBasisForm: Sellerieknolle, Möhre, Scorzoneren (pl. von Scorzonera), Schweinschnauze
+Plural in dict statt Singular: Thamarinden, Nelken, Erbsen, Linsen, Rosinen
+Fehler im manuellen Tagging: B-22 Wird wie Hasensuppe als Ing, B34 Klöchßen ist kein Ing diesmal, Tippfehler in "Buisquit", Milch vergessen zu taggen (B-47)
+Nicht in truncatedEndings: Klöße, Brod
+
+
+
+
+1.0 10 10
+1.0 11 10
+1.0 5 5
+1.0 8 5
+1 0 0
+Not relevant but retrieved: positionInRecipe=(2, 2), ref=#Kuhmilch, words=['Milch']
+0.0 0 0
+B-47
+Golden Standard:
+----
+Retrieved:
+positionInRecipe=(2, 2), ref=#Kuhmilch, words=['Milch']
+----
+
+1.0 5 5
+1.0 12 5
+1.0 6 6
+1.0 7 6
+1.0 1 1
+1.0 3 1
+--- Needed for evaluating: 0.6353816986083984 seconds ---
+
