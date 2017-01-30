@@ -11,6 +11,7 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Schweineschnauze">
 		<cue:prefBasicForm>Schweineschnauze</cue:prefBasicForm>
+		<cue:altBasicForm>Schweinschnauze</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Schweineohr">
 		<cue:prefBasicForm>Schweineohr</cue:prefBasicForm>
@@ -80,9 +81,11 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Schwarzwurzel" BLSref="G650100">
 		<cue:prefBasicForm>Scorzonerwurzel</cue:prefBasicForm>
+		<cue:altBasicForm>Scorzoneren</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Knollensellerie" BLSref="G660100">
 		<cue:prefBasicForm>Selleriewurzel</cue:prefBasicForm>
+		<cue:altBasicForm>Sellerieknolle</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Wurzelpetersilie" BLSref="G670100">
 		<cue:prefBasicForm>Petersilienwurzel</cue:prefBasicForm>
@@ -108,6 +111,7 @@
 	<cue:ingredient xml:id="Karotte" BLSref="G620100">
 		<cue:prefBasicForm>Karotte</cue:prefBasicForm>
 		<cue:altBasicForm>Wurzel</cue:altBasicForm>
+		<cue:altBasicForm>Möhre</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Muskatnuß" BLSref="R271000">
 		<cue:prefBasicForm>Muskat</cue:prefBasicForm>
@@ -155,7 +159,7 @@
 		<cue:prefBasicForm>Huhn</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Tamarinden" BLSref="H706100">
-		<cue:prefBasicForm>Thamarinden</cue:prefBasicForm>
+		<cue:prefBasicForm>Thamarinde</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Pfeffer" BLSref="R258000">
 		<cue:prefBasicForm>Pfeffer</cue:prefBasicForm>
@@ -164,7 +168,7 @@
 		<cue:prefBasicForm>Hase</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Gewürznelken" BLSref="R242000">
-		<cue:prefBasicForm>Nelken</cue:prefBasicForm>
+		<cue:prefBasicForm>Nelke</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Pfefferkörner" BLSref="R258500">
 		<cue:prefBasicForm>Pfefferkörner</cue:prefBasicForm>
@@ -236,9 +240,9 @@
 		<cue:prefBasicForm>Karpfen</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="WeißbrotToast" BLSref="B304000">
-		<cue:prefBasicForm>Weißbrotschnitten</cue:prefBasicForm>
-		<cue:altBasicForm>Weißbrotschnitten</cue:altBasicForm>
-		<cue:altBasicForm>Weißbrodschnitten</cue:altBasicForm>
+		<cue:prefBasicForm>Weißbrotschnitte</cue:prefBasicForm>
+		<cue:altBasicForm>Weißbrodscheiben</cue:altBasicForm>
+		<cue:altBasicForm>Weißbrodschnitte</cue:altBasicForm>
 		<cue:altBasicForm>Weißbrod</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Hasenbraten" BLSref="Y531023">
@@ -257,7 +261,7 @@
 		<cue:prefBasicForm>Spinat</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Erbsen" BLSref="G760100">
-		<cue:prefBasicForm>Erbsen</cue:prefBasicForm>
+		<cue:prefBasicForm>Erbse</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Mettwurst" BLSref="W110000">
 		<cue:prefBasicForm>Mettwurst</cue:prefBasicForm>
@@ -269,7 +273,7 @@
 		<cue:prefBasicForm>Bauchspeck</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Linsen" BLSref="H662100">
-		<cue:prefBasicForm>Linsen</cue:prefBasicForm>
+		<cue:prefBasicForm>Linse</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Essig" BLSref="R120000">
 		<cue:prefBasicForm>Essig</cue:prefBasicForm>
@@ -294,10 +298,11 @@
 		<cue:altBasicForm>roter Wein</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Biskuit" BLSref="D077002">
-		<cue:prefBasicForm>Buisquit</cue:prefBasicForm>
+		<cue:prefBasicForm>Bisquit</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Rosinen" BLSref="F840100">
-		<cue:prefBasicForm>Rosinen</cue:prefBasicForm>
+		<cue:prefBasicForm>Rosine</cue:prefBasicForm>
+		<cue:altBasicForm>Korinthe</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Gerste" BLSref="C140000">
 		<cue:prefBasicForm>Gerste</cue:prefBasicForm>
@@ -323,6 +328,7 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Vollkornschrotbrot" BLSref="B102000">
 		<cue:prefBasicForm>Schwarzbrot</cue:prefBasicForm>
+		<cue:altBasicForm>Schwarzbrod</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Pfirsich" BLSref="F203100">
 		<cue:prefBasicForm>Pfirsichblätter</cue:prefBasicForm>
@@ -358,7 +364,7 @@
 		<cue:prefBasicForm>Mandeln</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="BohneWeiß" BLSref="H740100">
-		<cue:prefBasicForm>WeißeBohne</cue:prefBasicForm>
+		<cue:prefBasicForm>weiße Bohne</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Erdbeere" BLSref="F301100">
 		<cue:prefBasicForm>Erdbeeren</cue:prefBasicForm>
@@ -367,6 +373,13 @@
 		<cue:prefBasicForm>Buisquitschnittchen</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="KirscheSauer" BLSref="F212000">
-		<cue:prefBasicForm>Saure Kirsche</cue:prefBasicForm>
+		<cue:prefBasicForm>saure Kirsche</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Krammetsvogel">
+		<cue:prefBasicForm>Krammetsvogel</cue:prefBasicForm>
+		<cue:note>Alte Bezichnung für Wacholderdrossel (https://de.wikipedia.org/wiki/Wacholderdrossel)</cue:note>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Pimpernell">
+		<cue:prefBasicForm>Pimpernell</cue:prefBasicForm>
 	</cue:ingredient>
 </cue:listIngredient>
