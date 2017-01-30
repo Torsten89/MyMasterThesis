@@ -6,7 +6,7 @@ unknownTag = "<unknown>"
 truncTag = "TRUNC"
 nNTag ="NN"
 
-truncatedEndings = ("wurzel", )
+truncatedEndings = ("wurzel", "klöße", "kloß")
 shortenings = ("Nro.", "No.", "Engl.") + tuple(chapterNumber+"." for chapterNumber in string.ascii_uppercase[:-3])
 
 def getWordLemmaTuples(sentence):
@@ -44,3 +44,26 @@ def splitIntoSentences(text):
             yield sentence.strip()
             sentence = ""
 
+
+def splitAndRemovePunctuations(s):
+    return [removePunctuations(word) for word in s.split() if removePunctuations(word)]
+
+def removePunctuations(word):
+    if word[0] in string.punctuation:
+        word = word[1:]
+       
+    if word and word[-1] in string.punctuation:
+        return word[:-1]
+    else:
+        return word    
+    
+if __name__ == "__main__":
+    s = "Zugleich gibt man feine Gerste nebst etwas Wurzelwerk in die Suppe, später auch \
+später auch Spargel Blumenkohl oder Scorzonerwurzeln, was die Jahreszeit bietet,\
+und vor dem Anrichten die Herzblättchen der Sellerieknollen und beliebige Klöße."
+    for w, pos, l in treeTagger.tag(s):
+        print(w, pos, l)
+    
+    print(treeTagger.tag("Korinthen"))
+    
+    

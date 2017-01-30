@@ -13,7 +13,7 @@ class WordProperty(object):
     def toXml(self, cueMLPrefix="cue:"):
         ingProp = self.properties.get(WordProperty.ingredient)
         
-        if not ingProp:
+        if ingProp is None:
             return self.word
         else:
             return "<{}recipeIngredient {}>{}</{}recipeIngredient>".format(cueMLPrefix, self.attrisToXml(), self.word, cueMLPrefix)

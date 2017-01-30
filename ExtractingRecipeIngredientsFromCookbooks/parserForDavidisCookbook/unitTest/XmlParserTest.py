@@ -1,7 +1,7 @@
 import unittest
 from xml.dom.minidom import parseString
-from parserForDavidisCookbook.XmlParser import XmlParser
-from parserForDavidisCookbook.Ingredient import Ingredient
+from parserForDavidisCookbook.XmlParser import XmlParser, getIngsFromNode
+from model.Ingredient import Ingredient
 
 def createCueMLDom(recipes=[]):
     return parseString('\
@@ -49,7 +49,7 @@ def getRecipeB2():
          
 def getTaggedRecipeB16():
     return '\
-    <cue:recipe type="Suppen." rcp-id="B-16"> \
+    <cue:recipe type="Suppen." rcp-id="B-16" xmlns:cue="cueml"> \
         <head>Mock Turtle Suppe.</head> \
          \
         <p>Es wird hierzu für <cue:recipeYield atLeast="24" atMost="30" unit="people">24—30 Personen</cue:recipeYield> \
@@ -131,6 +131,11 @@ class XmlParserTest(unittest.TestCase):
         recipes = list(XmlParser(dom).getPlainTextRecipes(["B-2"]))
         self.assertEqual(1, len(recipes))
         self.assertEqual("B-2", recipes[0].rcpId)
+        
+    def testParseIngsFromRecipeB16(self):
+        ings = getIngsFromNode(parseString(getTaggedRecipeB16()))
+        self.assertIn(Ingredient({"target":"#Bouillon"}, ["Bouillon"], (11,11)), ings)
+        self.assertIn(Ingredient({"ref":"#Rindkochfleisch", "unit":"Pfund", "atLeast":"8", "atMost":"10"}, ["Rindfleisch"], (15,15)), ings)
                     
          
 if __name__ == "__main__":

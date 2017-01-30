@@ -1,6 +1,6 @@
 from model.WordProperty import WordProperty
 from informationExtraction.QuantityExtractor import isQuantity
-from informationExtraction.parseHelper import getWordLemmaTuples
+from informationExtraction.textualHelper import getWordLemmaTuples
 
 def dictBasedEnrichment(text, ingE, unitE):
     """ Returns a list containing a WordProperty for each word of the given string """

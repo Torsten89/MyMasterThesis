@@ -40,9 +40,7 @@ class Extractor():
 
         return "".join(xmlStrings)
     
-    def extractRecipesToXml(self, rcps, ergFilePath):
-        startTime = time.time()     
-      
+    def extractRecipesToXml(self, rcps, ergFilePath):    
         xmlString = ['<TEI xmlns="tei">\
             <teiHeader>\
             <fileDesc>\
@@ -65,7 +63,6 @@ class Extractor():
         with open(ergFilePath, 'w') as f:
             f.write(parseString(" ".join(xmlString)).toprettyxml())
           
-        print('--- Needed for extracting and writingTo "{}": {} seconds ---'.format(ergFilePath, time.time() - startTime))
         
 
     

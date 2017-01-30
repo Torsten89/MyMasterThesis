@@ -1,7 +1,7 @@
 import unittest
-from informationExtraction.parseHelper import getWordLemmaTuples, splitIntoSentences
+from informationExtraction.textualHelper import getWordLemmaTuples, splitIntoSentences
 
-class ParseHelperTest(unittest.TestCase):
+class TextualHelperTest(unittest.TestCase):
 
     def testWurzelTrunc(self):
         sentence = 'Eine Stunde später gießt man die Brühe durch ein Haarsieb, weil sie nie \
