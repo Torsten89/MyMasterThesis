@@ -19,25 +19,5 @@ Nicht in truncatedEndings: Klöße, Brod
 
 
 
-1.0 10 10
-1.0 11 10
-1.0 5 5
-1.0 8 5
-1 0 0
-Not relevant but retrieved: positionInRecipe=(2, 2), ref=#Kuhmilch, words=['Milch']
-0.0 0 0
-B-47
-Golden Standard:
-----
-Retrieved:
-positionInRecipe=(2, 2), ref=#Kuhmilch, words=['Milch']
-----
-
-1.0 5 5
-1.0 12 5
-1.0 6 6
-1.0 7 6
-1.0 1 1
-1.0 3 1
---- Needed for evaluating: 0.6353816986083984 seconds ---
+B50: Gerste (Wird wie Suppe von feiner <ref target="#Gerste">Gerste (Nro. 49)</ref> gekocht) ref als ing^^
 
