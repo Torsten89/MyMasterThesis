@@ -1,6 +1,6 @@
 from informationExtraction.IngredientExtractor import IngredientExtractor
-def ingInGoldenStandardIngsExactMatch(ing, goldenStandardIngs, attris):
-    """ Ing must have an exact match in ings """
+
+def ingInIngsExactMatch(ing, goldenStandardIngs, attris):
     for i in getPossibleMatchesBasedOnWordPosition(ing, goldenStandardIngs):
         if compare(ing, i, attris):
             return True
@@ -8,36 +8,43 @@ def ingInGoldenStandardIngsExactMatch(ing, goldenStandardIngs, attris):
     return False 
 
 
-def ingInGoldenStandardIngsRoughMatch(ing, goldenStandardIngs, retrievedIngs, attris):
-    """ Ing must have an exact match in ings """
+def ingInIngsRoughMatch(ing, goldenStandardIngs, retrievedIngs, attris):
+    """ When ing has an exact match it was relevant. It is also assumed to be relevant,
+        when it is in IngredientExtractor.composedIngs.
+        It was also relevant, when it was mentioned at another place in the recipe and that was an exact match - 
+        e.g. in "Man nehme 1-2 Pfund <recipeIngredient>Rindfleisch</recipeIngredient>. [...]
+        Das Fleisch wird 2h gekocht." "Fleisch" should not be assumed as false match.
+    """
     
-    # Fleisch ok wenn irgendein Fleisch ingredient
-    if ingInGoldenStandardIngsExactMatch(ing, goldenStandardIngs, attris):
+    # exact match
+    if ingInIngsExactMatch(ing, goldenStandardIngs, attris):
         return True
     
+    # composed ing is OK
     for composedIng in IngredientExtractor.composedIngs:
+        # ing.words[0] is good enough, because we need the roughMatch only for recipes extracted by this program
+        # and this program tags only one noun of an ingredient. Therefore words is something like ["Kalbfleischbrühe"]
         if composedIng in ing.words[0].lower(): return True
     
-    # Butter ohne quantity ok wenn butter vorher exact match hatte
+    # Mention of an ing at another place
     possibleRefs = ing.__dict__.get("ref")
-    if not possibleRefs: return
-    for possibleRef in possibleRefs:
-        for retrievedIng in retrievedIngs:
-            refs = retrievedIng.__dict__.get("ref")
+    if not possibleRefs: return False
+    for possibleRef in possibleRefs.split():
+        for goldenStandardIng in goldenStandardIngs:
+            refs = goldenStandardIng.__dict__.get("ref")
             if not refs: continue
-            if possibleRef in refs and ingInGoldenStandardIngsExactMatch(retrievedIng, goldenStandardIngs, attris):
+            if possibleRef in refs.split() and ingInIngsExactMatch(goldenStandardIng, retrievedIngs, attris):
                 return True
-    
-    
-
+            
+    return False
 
 def getPossibleMatchesBasedOnWordPosition(ing, ings):
-    return [i for i in ings if isBetween(i, ing)]
+    return [i for i in ings if isBetween(i.positionInRecipe, ing.positionInRecipe)]
 
-def isBetween(i1, i2):
-    if i1.positionInRecipe[0]>i2.positionInRecipe[1] or i2.positionInRecipe[0]>i1.positionInRecipe[1]:
+def isBetween(t1, t2):
+    if t1[0]>t2[1] or t2[0]>t1[1]:
         return False # start posi is behind end posi
-    if i1.positionInRecipe[1]<i2.positionInRecipe[0] or i2.positionInRecipe[1]<i1.positionInRecipe[0]:
+    if t1[1]<t2[0] or t2[1]<t1[0]:
         return False # end posi is before start posi
     return True
 

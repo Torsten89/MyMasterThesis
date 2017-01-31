@@ -5,7 +5,7 @@ def getElems(node, elemName, withAttris={}):
     for elem in node.getElementsByTagName(elemName):
         hasAllAttris = True
         for attriName, possibleValues in withAttris.items():
-            if elem.attributes[attriName].value not in possibleValues:
+            if getAttriOrNone(elem, attriName) not in possibleValues:
                 hasAllAttris = False
                 break
         if hasAllAttris:

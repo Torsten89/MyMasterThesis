@@ -1,9 +1,9 @@
-import unicodedata
 from informationExtraction.QuantityExtractor import str2Quantity
+
 class WordProperty(object):
     quantity = "quantity"
     unit = "unit"
-    ingredient = "ingredient"
+    ingredient = "ingredient" # self.properties["ingredient"] contains a list of model.IngredientCandi objects
     
     def __init__(self, word, lemma, properties):
         self.word = word
@@ -43,14 +43,7 @@ class WordProperty(object):
         # altGrp
             
         return " ".join(resultAttris)
-        
-if __name__ =="__main__":
-    s = "⅜"
-    print(unicodedata.numeric("2"))
-    print(s)
-    print(unicodedata.numeric(s))
-    print(str(unicodedata.numeric(s)))
-    print("Zahlt ist: {}".format(unicodedata.numeric(s)))
+
     
     
         

@@ -1,7 +1,6 @@
 from xml.dom.minidom import parseString
 import unittest
-from parserForDavidisCookbook.xmlHelper import buildIngredientDict,\
-    getAllChildText
+from parserForDavidisCookbook.xmlHelper import buildIngredientDict
 
 
 class XmlHelperTest(unittest.TestCase):

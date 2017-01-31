@@ -11,6 +11,7 @@ from informationExtraction.unitTest.QuantityExtractorTest import QuantityExtract
 from informationExtraction.unitTest.UnitExtractorTest import UnitExtractorTest
 from informationExtraction.unitTest.ExtractorTest import ExtractorTest
 from evaluation.unitTest.EvalRecipesTest import EvalRecipesTest 
+from evaluation.unitTest.ComparatorTest import ComparatorTest 
 
 def getTests():
     return [unittest.TestLoader().loadTestsFromTestCase(XmlParserTest),
@@ -24,7 +25,8 @@ def getTests():
             unittest.TestLoader().loadTestsFromTestCase(QuantityExtractorTest),
             unittest.TestLoader().loadTestsFromTestCase(UnitExtractorTest),
             unittest.TestLoader().loadTestsFromTestCase(ExtractorTest),
-            unittest.TestLoader().loadTestsFromTestCase(EvalRecipesTest)
+            unittest.TestLoader().loadTestsFromTestCase(EvalRecipesTest),
+            unittest.TestLoader().loadTestsFromTestCase(ComparatorTest)
             ]
 
 if __name__ == '__main__':

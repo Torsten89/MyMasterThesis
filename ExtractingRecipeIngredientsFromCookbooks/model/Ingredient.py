@@ -16,6 +16,11 @@ class Ingredient:
                      "ingYield":"yield"}
 
     def __init__(self, d, words, positionInRecipe):
+        """ d is a dictionary of cueML attris.
+            words are the words of the ingredient as list.
+            positionInRecipe is the absolute (start and end) position of the words in the recipe, ignoring punctuation - 
+                E.g. in "Suppe von Sago und..." it would be (2,2) for "Sago".
+        """
         self.words = words
         self.positionInRecipe = positionInRecipe # important for evaluation
         for attriName, value in d.items():
@@ -30,13 +35,10 @@ class Ingredient:
             if value:
                 entries.append("{}={}".format(prop, value))
                 
-        return ", ".join(entries)
-    
-    def __repr__(self):
-        return "Ingredient({})".format(self.__str__())
+        return "Ingredient: {}".format(", ".join(entries))
     
     def __eq__(self, other):
-#         for k, v in self.__dict__.items():
+#         for k, v in self.__dict__.items(): # for debugging
 #             if v != other.__dict__.get(k):
 #                 print(k, v)
 #                 print(k, other.__dict__.get(k))

@@ -5,4 +5,4 @@ class PlainTextRecipe:
         self.rcpId = rcpId
         self.rcpType = rcpType
         self.name = name
-        self.instructionSentences = sentences #
+        self.instructionSentences = sentences

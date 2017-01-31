@@ -1,3 +1,0 @@
-
-def tag(recipe):
-    pass

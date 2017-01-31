@@ -10,37 +10,44 @@ from evaluation.metrics import recall, precision
 
 
 class EvalRecipesTest(unittest.TestCase):
+    ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
+    unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng")) 
+    extractor = Extractor(ingE, unitE)
 
     def testPrecisionOf2Recipes(self):
-        b50 = '<cue:recipe type="Suppen." rcp-id="B-50" xmlns:cue="cueML"> \
+        iEIngs, goldenStandardIngs = getIEIngsAndGoldenStandardIngs()
+        attris = ("ref")
+        retrievedAndRelevant, relevant = recallOf2Recipes(goldenStandardIngs, iEIngs, attris)
+        self.assertEqual(1, retrievedAndRelevant)
+        self.assertEqual(1, relevant)
+
+    def testRecallOf2Recipes(self):
+        iEIngs, goldenStandardIngs = getIEIngsAndGoldenStandardIngs()
+        attris = ("ref")
+        retrievedAndRelevant, retrieved = precisionOf2Recipes(goldenStandardIngs, iEIngs, attris)
+        self.assertEqual(1, retrievedAndRelevant)
+        self.assertEqual(3, retrieved)
+
+iEIngs = None
+goldenStandardIngs = None
+def getIEIngsAndGoldenStandardIngs():
+    global iEIngs, goldenStandardIngs
+    if iEIngs:
+        return iEIngs, goldenStandardIngs
+    
+    b50 = getB50XMLRecipe()
+    goldenStandardIngs = getIngsFromNode(b50)
+    extractedXMLString = EvalRecipesTest.extractor.extractRecipe(parseXml2PlainTextRecipe(b50))                                          
+    iEIngs = getIngsFromNode(parseString(extractedXMLString).getElementsByTagName("cue:recipe")[0])
+    return getIEIngsAndGoldenStandardIngs()
+    
+def getB50XMLRecipe():
+    return parseString('<cue:recipe type="Suppen." rcp-id="B-50" xmlns:cue="cueML" xml:id="b50"> \
 <head>Suppe von echtem Sago mit Milch.</head> \
 <p>Wird wie Suppe von feiner <cue:recipeIngredient ref="#Gerste" \
 >Gerste</cue:recipeIngredient><ref target="B-49">(Nro. 49)</ref> gekocht.</p> \
-</cue:recipe>'
-#Milch sollte extrahiret werden -> ein "nicht relevantes extrahiert"
+</cue:recipe>').getElementsByTagName("cue:recipe")[0]
 
-        ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
-        unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng")) 
-        extractor = Extractor(ingE, unitE)
-        
-        attris = ("ref")
-        goldenStandardIngs = getIngsFromNode(parseString(b50))
-        iEIngs = getIngsFromNode(extractor.extractRecipe(parseXml2PlainTextRecipe(parseString(b50)))) # get recipe akutell ganzes document
-        
-        retrievedAndRelevantRecall, relevant = recallOf2Recipes(goldenStandardIngs, iEIngs, attris)
-        print(recall(retrievedAndRelevantRecall, relevant), retrievedAndRelevantRecall, relevant)
-        retrievedAndRelevantPrecision, retrieved = precisionOf2Recipes(goldenStandardIngs, iEIngs, attris)
-        print(precision(retrievedAndRelevantPrecision, retrieved), retrievedAndRelevantPrecision, relevant)
-
-        print("Golden Standard:")
-        for ing in goldenStandardIngs:
-            print(ing)
-        print("----")
-        print("Retrieved:")
-        for ing in iEIngs:
-            print(ing)
-        print("----")
-        print()
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testPrecisionOf2Recipes']

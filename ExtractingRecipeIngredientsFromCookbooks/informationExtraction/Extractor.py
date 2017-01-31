@@ -1,7 +1,6 @@
 from informationExtraction.dictBasedExtractor import dictBasedEnrichment
 from informationExtraction.ruleBasedExtractor import applyRulesToWordProperties
 import string
-import time
 from xml.dom.minidom import parseString
 
 class Extractor():
@@ -40,7 +39,7 @@ class Extractor():
 
         return "".join(xmlStrings)
     
-    def extractRecipesToXml(self, rcps, ergFilePath):    
+    def extractRecipes2TEICueML(self, rcps, ergFilePath):    
         xmlString = ['<TEI xmlns="tei">\
             <teiHeader>\
             <fileDesc>\

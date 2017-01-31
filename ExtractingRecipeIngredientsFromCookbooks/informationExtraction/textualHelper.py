@@ -57,6 +57,7 @@ def removePunctuations(word):
     else:
         return word    
     
+    
 if __name__ == "__main__":
     s = "Zugleich gibt man feine Gerste nebst etwas Wurzelwerk in die Suppe, später auch \
 später auch Spargel Blumenkohl oder Scorzonerwurzeln, was die Jahreszeit bietet,\
