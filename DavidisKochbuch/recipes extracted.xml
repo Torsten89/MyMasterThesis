@@ -67,7 +67,8 @@
 
          <anchor xml:id="B-2-start"/>
          <cue:recipe type="Suppen." rcp-id="B-2">
-            <head>Rindfleischsuppe mit <cue:recipeIngredient ref="#Perlgraupen">Perlgerste</cue:recipeIngredient> und Reis.</head>
+            <head>Rindfleischsuppe mit <cue:recipeIngredient ref="#Perlgraupen"
+                  >Perlgerste</cue:recipeIngredient> und Reis.</head>
 
             <p><ref target="#B-1">Wird gekocht wie die vorhergehende</ref>, nur mit der Abänderung,
                daß, wenn die <cue:recipeIngredient>Brühe</cue:recipeIngredient> durch ein Haarsieb
@@ -109,7 +110,7 @@
                   unit="EL">Mehl</cue:recipeIngredient> in 2 Stich frischer <cue:recipeIngredient
                   ref="#Butter" quantity="2" unit="Stich">Butter</cue:recipeIngredient> gelbbraun
                werden, gibt das Fleisch hinzu und läßt es ebenfalls ein wenig rösten, so wie nachher
-               eine, in 8 Theile geschnittene <cue:recipeIngredient ref="#Knollenselerie"
+               eine, in 8 Theile geschnittene <cue:recipeIngredient ref="#Knollensellerie"
                   quantity="1">Sellerieknolle</cue:recipeIngredient>, eine klein geschnittene
                   <cue:recipeIngredient ref="#Zwiebel" quantity="1">Zwiebel</cue:recipeIngredient>
                und eine geriebene gelbe Murzel (<cue:recipeIngredient ref="#Karotte" quantity="1"
@@ -292,9 +293,11 @@
 
             <p>Die <cue:recipeIngredient ref="#Taube">Tauben</cue:recipeIngredient> werden mit
                Wasser und <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient> rein
-               ausgeschäumt, feine Perlgerste oder Reis hineingegeben, so wie ½ Stunde vor dem
-               Anrichten abgekochte <cue:recipeIngredient ref="#SpargelGekocht" altGrp="1"
-                  >Spargelköpfe</cue:recipeIngredient> oder etwas <cue:recipeIngredient
+               ausgeschäumt, feine <cue:recipeIngredient ref="#Perlgraupen" altGrp="1"
+                  >Perlgerste</cue:recipeIngredient> oder <cue:recipeIngredient ref="#Reis"
+                  altGrp="2">Reis</cue:recipeIngredient> hineingegeben<cue:alt target="1 2"/>, so
+               wie ½ Stunde vor dem Anrichten abgekochte <cue:recipeIngredient ref="#SpargelGekocht"
+                  altGrp="1">Spargelköpfe</cue:recipeIngredient> oder etwas <cue:recipeIngredient
                   quantity="etwas" ref="#BlumenkohlGekocht" altGrp="2"
                   >Blumenkohl</cue:recipeIngredient>, was man haben kann <cue:alt target="1 2"/>.
                Ist dem Kranken ein <cue:recipeIngredient ref="#HühnereiEigelb" quantity="1"
@@ -583,8 +586,9 @@
                zuletzt die Hasenknochen darin rösten; gibt nun so viel Wasser, als nöthig ist,
                hinzu, auf jede Person etwa ½ bis ¾ Maß gerechnet. Wenn <cue:recipeIngredient
                   optional="True">Sauce</cue:recipeIngredient> vom Hasen da ist, kommt sie hinzu.
-               Ist das Fleisch ausgekocht und das Wurzelwerk weich, reibt man die Suppe durch ein
-               Sieb, bringt sie wieder zum Kochen, würzt sie mit <cue:recipeIngredient ref="#Salz"
+               Ist das Fleisch ausgekocht und das <cue:recipeIngredient ref="#Wurzelwerk"
+                  >Wurzelwerk</cue:recipeIngredient> weich, reibt man die Suppe durch ein Sieb,
+               bringt sie wieder zum Kochen, würzt sie mit <cue:recipeIngredient ref="#Salz"
                   >Salz</cue:recipeIngredient>, <cue:recipeIngredient ref="#Muskatnuß"
                   >Muskat</cue:recipeIngredient> und <cue:recipeIngredient ref="#Gewürznelken"
                   >Nelken</cue:recipeIngredient>, kocht die
@@ -637,33 +641,32 @@
                   <cue:recipeIngredient>Krammetsvogel</cue:recipeIngredient>. Diese werden mit etwas
                   <cue:recipeIngredient ref="#Salz" quantity="etwas">Salz</cue:recipeIngredient>, in
                reichlich <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient> fest
-               zugedeckt, langsam weich gebraten. Das
-                  <cue:recipeIngredient>Brustfleisch</cue:recipeIngredient> in feine Scheiben
-               geschnitten, das Knochengerippe im Mörser zerstoßen. Dann wird letzteres mit einigen
-               Scheiben <cue:recipeIngredient ref="#Sellerieblätter" quantity="einige"
-                  unit="Scheibe">Sellerie</cue:recipeIngredient>, <cue:recipeIngredient
-                  ref="#Karotte">Möhren</cue:recipeIngredient> und <cue:recipeIngredient
-                  ref="#Zwiebel">Zwiebeln</cue:recipeIngredient> in der Krammetsvögel-Butter
-               gedämpft, <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient> darin eine
-               Weile gerührt und mit guter <cue:recipeIngredient target="#Boullion"
+               zugedeckt, langsam weich gebraten. Das Brustfleisch in feine Scheiben geschnitten,
+               das Knochengerippe im Mörser zerstoßen. Dann wird letzteres mit einigen Scheiben
+                  <cue:recipeIngredient ref="#Sellerieblätter" quantity="einige" unit="Scheibe"
+                  >Sellerie</cue:recipeIngredient>, <cue:recipeIngredient ref="#Karotte"
+                  >Möhren</cue:recipeIngredient> und <cue:recipeIngredient ref="#Zwiebel"
+                  >Zwiebeln</cue:recipeIngredient> in der Krammetsvögel-Butter gedämpft,
+                  <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient> darin eine Weile
+               gerührt und mit guter <cue:recipeIngredient target="#Boullion"
                   >Bouillon</cue:recipeIngredient> oder Wasser eine Stunde langsam gekocht. Das Fett
                abgenommen, durchgegeben, wieder aufgekocht, <cue:recipeIngredient altGrp="1"
                   >Schwamm-</cue:recipeIngredient> oder <cue:recipeIngredient altGrp="2"
                   >Griesmehl-Klöße</cue:recipeIngredient> darin gahr gekocht und mit dem
-               Brustfleisch und Muskat angerichtet <cue:alt target="1 2"/>. </p>
+               Brustfleisch und <cue:recipeIngredient ref="#Muskatnuß">Muskat</cue:recipeIngredient>
+               angerichtet <cue:alt target="1 2"/>. </p>
             <p>Zeit des Kochens 2½ Stunden.</p>
          </cue:recipe>
 
          <cue:recipe type="Suppen." rcp-id="B-24">
             <head>Kartoffelsuppe.</head>
             <p>Es wird ein Stück <cue:recipeIngredient>Fleisch</cue:recipeIngredient> mit
-                  <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient> oder auch
-                  <cue:recipeIngredient optional="True">Knochen</cue:recipeIngredient> von gutem
-               Fleisch, die klein gehauen und gewaschen sind, zeitig zu Feuer gesetzt, ausgeschäumt,
-                  <cue:recipeIngredient ref="#Kartoffeln">Kartoffeln</cue:recipeIngredient>,
-                  <cue:recipeIngredient ref="#Zwiebel">Zwiebeln</cue:recipeIngredient>, recht viel
-                  <cue:recipeIngredient ref="#Porree">Purree</cue:recipeIngredient> und
-                  <cue:recipeIngredient ref="#Knollensellerie"
+                  <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient> oder auch Knochen
+               von gutem Fleisch, die klein gehauen und gewaschen sind, zeitig zu Feuer gesetzt,
+               ausgeschäumt, <cue:recipeIngredient ref="#Kartoffeln"
+                  >Kartoffeln</cue:recipeIngredient>, <cue:recipeIngredient ref="#Zwiebel"
+                  >Zwiebeln</cue:recipeIngredient>, recht viel <cue:recipeIngredient ref="#Porree"
+                  >Purree</cue:recipeIngredient> und <cue:recipeIngredient ref="#Knollensellerie"
                   >Sellerieknollen</cue:recipeIngredient> hinein gegeben und dies Alles fest
                zugedeckt, stark und wohl 3 Stunden gekocht. Die Sellerieknollen werden jedoch,
                sobald sie weich sind, herausgenommen, die Suppe durch ein Sieb gerührt, wieder zum
@@ -694,6 +697,7 @@
                dabei gegeben. </p>
             <p>Zum Kochen dieser Suppe sind 1½ Stunden hinreichend.</p>
          </cue:recipe>
+
          <cue:recipe type="Suppen." rcp-id="B-26">
             <head>Suppe von jungen Erbsen.</head>
             <p>Die <cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient> läßt man, ohne
@@ -713,8 +717,10 @@
                   ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient> dazu. </p>
             <p>Zeit des Kochens wie die vorhergehende Suppe.</p>
          </cue:recipe>
+
          <cue:recipe type="Suppen." rcp-id="B-27">
-            <head>Suppe von zu hart gewordenen Erbsen.</head>
+            <head>Suppe von zu hart gewordenen <cue:recipeIngredient ref="#Erbsen"
+                  >Erbsen</cue:recipeIngredient>.</head>
             <p>Diese lassen sich am besten zur Suppe benutzen. Man setzt sie mit einem guten Stück
                   <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient> und weichem
                kochenden Wasser zu Feuer, läßt sie weich kochen und rührt sie durch ein Sieb. Die
@@ -727,6 +733,7 @@
                   >Petersilie</cue:recipeIngredient> durch. </p>
             <p>Zum Kochen gehören 2 Stunden.</p>
          </cue:recipe>
+
          <anchor xml:id="B-28-start"/>
          <cue:recipe type="Suppen." rcp-id="B-28">
             <head>Suppe von getrockneten Erbsen.</head>
@@ -757,15 +764,18 @@
                Knollen eben durchkochen. Es wird in Butter geröstetes <cue:recipeIngredient
                   ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient> dabei gegeben. </p>
             <p>Die Suppe muß zwar nicht dick, aber sehr gebunden sein. Ist dies nicht der Fall, kann
-               man sich mit in Butter angezogenem Mehl helfen. </p>
+               man sich mit in Butter angezogenem <cue:recipeIngredient ref="#Mehl" optional="True"
+                  >Mehl</cue:recipeIngredient> helfen. </p>
             <note>Anmerk. Hat man Erbsen, die nicht weich werden, so gibt man eine weiße Bohne groß
-               gereinigte Pottasche zu denselben. Auch befördert ein Stück Glas von einer Flasche,
-               gleich mit den Erbsen zu Feuer gesetzt, einigermaßen das Weichwerden. So auch das
-               Hineinschneiden einiger Zwiebeln gleich nach dem Abschütten. Man hüte sich aber,
-               sowohl Erbsen, als jede andere Art von Hülsenfrüchten in weiß glasirten Töpfen zu
-               kochen, weil sie darin gekocht, völlig hart bleiben. </note>
+               gereinigte <cue:recipeIngredient ref="#Kaliumcarbonat"
+                  >Pottasche</cue:recipeIngredient> zu denselben. Auch befördert ein Stück Glas von
+               einer Flasche, gleich mit den Erbsen zu Feuer gesetzt, einigermaßen das Weichwerden.
+               So auch das Hineinschneiden einiger Zwiebeln gleich nach dem Abschütten. Man hüte
+               sich aber, sowohl Erbsen, als jede andere Art von Hülsenfrüchten in weiß glasirten
+               Töpfen zu kochen, weil sie darin gekocht, völlig hart bleiben. </note>
          </cue:recipe>
          <anchor xml:id="B-28-end"/>
+
          <cue:recipe type="Suppen." rcp-id="B-29">
             <head>Weiße Bohnensuppe.</head>
             <p>Wird wie <ref target="B-28">Erbsensuppe</ref> gekocht. Hat man feinschalige
@@ -777,6 +787,7 @@
                   >Purree</cue:recipeIngredient> darin, <cue:recipeIngredient ref="#Zwiebel"
                   dontUse="True">Zwiebeln</cue:recipeIngredient> können dagegen weg bleiben. </p>
          </cue:recipe>
+
          <cue:recipe type="Suppen." rcp-id="B-30">
             <head>Linsensuppe.</head>
             <p>Auch diese wird wie <ref target="B-28">Erbsensuppe</ref> mit einer
@@ -786,8 +797,9 @@
                   target="1 2"/>, jedoch bleiben die <cue:recipeIngredient ref="Linsen"
                   >Linsen</cue:recipeIngredient> darin ganz und man macht mit den
                   <cue:recipeIngredient ref="#Zwiebel">Zwiebeln</cue:recipeIngredient> zugleich
-                  <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient> in Butter gelb, um
-               die Suppe damit gebunden zu machen. Es wird feiner <cue:recipeIngredient ref="#Essig"
+                  <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient> in
+                  <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient> gelb, um die
+               Suppe damit gebunden zu machen. Es wird feiner <cue:recipeIngredient ref="#Essig"
                   >Essig</cue:recipeIngredient> dazu gereicht. </p>
             <p>Die Zeit des Kochens wie bei der Erbsensuppe.</p>
          </cue:recipe>
@@ -800,10 +812,11 @@
                   ref="#Sauerampfer">Sauerampferblätter</cue:recipeIngredient> darin durchgerührt,
                bis sie zergehn, dann mit <cue:recipeIngredient target="#Boullion"
                   >Kalbfleischbouillon</cue:recipeIngredient> oder Wasser und <cue:recipeIngredient
-                  ref="#Salz">Salz</cue:recipeIngredient> durchgekocht, mit Muskat, dicker Sahne und
-               einigen <cue:recipeIngredient ref="#HühnereiEigelb" quantity="einige"
-                  >Eidottern</cue:recipeIngredient> abgerührt und auf geröstetem
-                  <cue:recipeIngredient ref="#WeißbrotToast" altGrp="1"
+                  ref="#Salz">Salz</cue:recipeIngredient> durchgekocht, mit <cue:recipeIngredient
+                  ref="#Muskatnuß">Muskat</cue:recipeIngredient>, dicker <cue:recipeIngredient
+                  ref="#Sahne">Sahne</cue:recipeIngredient> und einigen <cue:recipeIngredient
+                  ref="#HühnereiEigelb" quantity="einige">Eidottern</cue:recipeIngredient> abgerührt
+               und auf geröstetem <cue:recipeIngredient ref="#WeißbrotToast" altGrp="1"
                   >Weißbrod</cue:recipeIngredient> angerichtet, oder <cue:recipeIngredient
                   altGrp="2">Eierklößchen</cue:recipeIngredient> darin gemacht <cue:alt target="1 2"
                />. </p>
@@ -879,7 +892,7 @@
          </cue:recipe>
          <anchor xml:id="B-34-end"/>
          <cue:recipe type="Suppen." rcp-id="B-35">
-            <head>Schaumsuppe von weißem Wein.</head>
+            <head>Schaumsuppe von <cue:recipeIngredient ref="#Weißwein">weißem Wein</cue:recipeIngredient>.</head>
             <p>Zu dem angegebenen <ref target="#B-34">Verhältniß</ref> (Nro. 34) nimmt man die
                ganzen <cue:recipeIngredient ref="#Ei">Eier</cue:recipeIngredient> und die Hälfte des
                   <cue:recipeIngredient ref="#Mehl" quantity="die Hälfte"
@@ -903,7 +916,7 @@
                   dabei<cue:alt target="1 2"/>. </p>
          </cue:recipe>
          <cue:recipe type="Suppen." rcp-id="B-37">
-            <head>Suppe von Perlgerste (Graupen) mit weißem Wein.</head>
+            <head>Suppe von Perlgerste (Graupen) mit <cue:recipeIngredient ref="#Weißwein">weißem Wein</cue:recipeIngredient>.</head>
             <p>Die <cue:recipeIngredient ref="#Perlgraupen">Gerste</cue:recipeIngredient> wird in’s
                kochende Wasser geschüttet, mit etwas frischer <cue:recipeIngredient ref="#Butter"
                   quantity="etwas">Butter</cue:recipeIngredient> und einigen <cue:recipeIngredient
@@ -913,7 +926,7 @@
                   ref="#Rosinen">Rosinen</cue:recipeIngredient> dazu und beim Anrichten
                   <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>,
                   <cue:recipeIngredient ref="#Zimt">Zimmet</cue:recipeIngredient>,
-                  <cue:recipeIngredient ref="#Rotwein">Wein</cue:recipeIngredient> und
+                  <cue:recipeIngredient>Wein</cue:recipeIngredient> und
                   <cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>, und rührt die
                Suppe mit 1—2 <cue:recipeIngredient ref="#HühnereiEigelb" atLeast="1" atMost="2"
                   >Eidottern</cue:recipeIngredient> ab. </p>

@@ -90,6 +90,7 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Wurzelpetersilie" BLSref="G670100">
 		<cue:prefBasicForm>Petersilienwurzel</cue:prefBasicForm>
+		<cue:altBasicForm>Petersilienblätter</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="SpargelGekocht" BLSref="G450132">
 		<cue:prefBasicForm>Spargel</cue:prefBasicForm>
@@ -135,7 +136,7 @@
 		<cue:prefBasicForm>Griesmehl</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Meerrettichsauce" BLSref="U990200">
-		<cue:prefBasicForm>Meerrettig-sauce</cue:prefBasicForm>
+		<cue:prefBasicForm>Meerrettigsauce</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Kalbsbrühe" BLSref="X411563">
 		<cue:prefBasicForm>Kalbsfleischbrühe</cue:prefBasicForm>
@@ -144,7 +145,7 @@
 		<cue:prefBasicForm>Hammelfleisch</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Kartoffeln" BLSref="K110100">
-		<cue:prefBasicForm>Kartoffeln</cue:prefBasicForm>
+		<cue:prefBasicForm>Kartoffel</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Schalotte" BLSref="G485000">
 		<cue:prefBasicForm>Schalotte</cue:prefBasicForm>
@@ -172,7 +173,7 @@
 		<cue:prefBasicForm>Nelke</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Pfefferkörner" BLSref="R258500">
-		<cue:prefBasicForm>Pfefferkörner</cue:prefBasicForm>
+		<cue:prefBasicForm>Pfefferkorn</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Küchenkräuter" BLSref="G060000">
 		<cue:prefBasicForm>Suppenkräuter</cue:prefBasicForm>
@@ -222,6 +223,8 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Sauerampfer" BLSref="G263100">
 		<cue:prefBasicForm>Sauerampfer</cue:prefBasicForm>
+		<cue:altBasicForm>Sauerampferblatt</cue:altBasicForm>
+		<cue:altBasicForm>Sauerampferblätter</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Thymian" BLSref="R226000">
 		<cue:prefBasicForm>Thimian</cue:prefBasicForm>
@@ -379,7 +382,8 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Krammetsvogel">
 		<cue:prefBasicForm>Krammetsvogel</cue:prefBasicForm>
-		<cue:note>Alte Bezeichnung für Wacholderdrossel (https://de.wikipedia.org/wiki/Wacholderdrossel)</cue:note>
+		<cue:note>Alte Bezeichnung für Wacholderdrossel
+			(https://de.wikipedia.org/wiki/Wacholderdrossel)</cue:note>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Pimpernell">
 		<cue:prefBasicForm>Pimpernell</cue:prefBasicForm>
@@ -396,7 +400,7 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Currypulver">
 		<cue:prefBasicForm>Currypulver</cue:prefBasicForm>
-		<cue:altBasicForm>Kerry-Pulver</cue:altBasicForm>		
+		<cue:altBasicForm>Kerrypulver</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Krebsbutter">
 		<cue:prefBasicForm>Krebsbutter</cue:prefBasicForm>
@@ -407,8 +411,18 @@
 	<cue:ingredient xml:id="Zitronenscheibe">
 		<cue:prefBasicForm>Zitronenscheibe</cue:prefBasicForm>
 	</cue:ingredient>
+	<cue:ingredient xml:id="Kaliumcarbonat">
+		<cue:prefBasicForm>Kaliumcarbonat</cue:prefBasicForm>
+		<cue:altBasicForm>Pottasche</cue:altBasicForm>
+		<cue:note>"Kaliumcarbonat (fachsprachlich) oder Kaliumkarbonat (gemeinsprachlich Pottasche),
+			K2CO3, ist ein Alkali und das Kaliumsalz der Kohlensäure. Es bildet ein weißes,
+			hygroskopisches Pulver mit einer Schmelztemperatur von 891 °C und einer Dichte von 2,428
+			g·cm−3. Der Name Pottasche stammt von der alten Methode zur Anreicherung von
+			Kaliumcarbonat aus Pflanzenasche (vor allem Holz-, aber auch Seetangasche) durch
+			Auswaschen mit Wasser (daher auch die Bezeichnung als ein „Laugensalz“) und
+			anschließendes Eindampfen in Pötten (Töpfen). Der traditionelle Name stand auch Pate für
+			die englischen Namen potash und potassium, wobei potash viele mineralische Kaliumsalze
+			einschließt (z. B. Kaliumchlorid) und besser mit Kalisalz übersetzt werden
+			sollte." (https://de.wikipedia.org/wiki/Kaliumcarbonat)</cue:note>
+	</cue:ingredient>
 </cue:listIngredient>
-
-
-
-
