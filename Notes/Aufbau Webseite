@@ -2,21 +2,17 @@ Blog:
 - Startschuss
 - Unsere "Word-Blogs"
 - Meine Präsentationen
-
 Digitale Edition:
 - Forschungsstand:
-	- Auszeichnen von Rezepten:
-		- TEI und Schema.org/Recipe, Chefkoch.de in JS, NYT eigene DB
-	- Information Extraction in der Koch-Domäne:
-		- RE-based
-		- NYT
-		- Dict-based
-		
+    - Auszeichnen von Rezepten: TEI und Schema.org/Recipe, Chefkoch.de in JS, NYT eigene DB
+    - Information Extraction in der Koch-Domäne:
+        - RE-based
+        - CRF-based
+        - Dict-based
+        
 - Transkription
-	
-- Domain spezifisches Vokabular cueML:
-	- CueML kombiniert und erweitert TEI und Schema.org/Recipe -> leicht in HTML umwandelbar
-
-- Automatisches anwenden von cueML: (IE (domain spezifisch))
-	- CRF-based Prototype
-	- Dict- & Rule-based Prototype
+    
+- Domain spezifisches Vokabular cueML: CueML kombiniert und erweitert TEI und Schema.org/Recipe -> leicht in HTML umwandelbar
+- Automatisches anreichern mit cueML: (IE (domain spezifisch))
+    - CRF-based Prototype
+    - Dict- & Rule-based Prototype

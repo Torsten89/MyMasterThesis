@@ -67,7 +67,7 @@
 
          <anchor xml:id="B-2-start"/>
          <cue:recipe type="Suppen." rcp-id="B-2">
-            <head>Rindfleischsuppe mit Perlgerste und Reis.</head>
+            <head>Rindfleischsuppe mit <cue:recipeIngredient ref="#Perlgraupen">Perlgerste</cue:recipeIngredient> und Reis.</head>
 
             <p><ref target="#B-1">Wird gekocht wie die vorhergehende</ref>, nur mit der Abänderung,
                daß, wenn die <cue:recipeIngredient>Brühe</cue:recipeIngredient> durch ein Haarsieb
@@ -151,10 +151,11 @@
                Nachdem <cue:recipeIngredient ref="#Reis">Reis</cue:recipeIngredient> und eine
                geschnittene <cue:recipeIngredient ref="#Knollensellerie" quantity="1"
                   >Sellerieknolle</cue:recipeIngredient> darin weich gekocht sind, gibt man
-               Braten-Jus hinzu. Die vom Rost-Beef <ref target="#I-3">No. 3</ref> eignet sich
-               vorzüglich zu dieser Suppe. Hat man reichlich Jus, so kann man eine Kraftsuppe daraus
-               bereiten, das <cue:recipeIngredient ref="#Mehl" optional="True"
-                  >Mehl</cue:recipeIngredient> bleibt dann weg. </p>
+                  <cue:recipeIngredient ref="#Bratenjus">Braten-Jus</cue:recipeIngredient> hinzu.
+               Die vom Rost-Beef <ref target="#I-3">No. 3</ref> eignet sich vorzüglich zu dieser
+               Suppe. Hat man reichlich Jus, so kann man eine Kraftsuppe daraus bereiten, das
+                  <cue:recipeIngredient ref="#Mehl" optional="True">Mehl</cue:recipeIngredient>
+               bleibt dann weg. </p>
 
          </cue:recipe>
 
@@ -280,8 +281,8 @@
                   ref="#Muskatblüte">Muskatblüthe</cue:recipeIngredient> und <cue:recipeIngredient
                   ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient> ab. Sie muß, wie auch die
                vorhergehenden Fleischsuppen gebunden, nur ja nicht breiig gekocht werden, wodurch
-               das Feine verloren geht. Das Huhn kann mit der Sauce <ref target="#P-30">P. No.
-                  30</ref> gegessen werden. </p>
+               das Feine verloren geht. Das Huhn kann mit der <cue:recipeIngredient target="#P-30"
+                  optional="True">Sauce P. No. 30</cue:recipeIngredient> gegessen werden. </p>
             <p>Für Kranke läßt man Klöße und Muskat weg.</p>
 
          </cue:recipe>
@@ -609,14 +610,15 @@
                   <cue:alt target="1 2"/>, gutem gebratenem <cue:recipeIngredient
                   ref="#Hasenfleisch">Fleische</cue:recipeIngredient> nebst <cue:recipeIngredient
                   ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient> eine Weile darin durchgebraten
-               und kochendes Wasser und <cue:recipeIngredient>Bratenjus</cue:recipeIngredient>
-               hinzugeschüttet, mit <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>,
-                  <cue:recipeIngredient ref="#Muskatnuß">Muskat</cue:recipeIngredient> und
-                  <cue:recipeIngredient ref="#Gewürznelken">Nelken</cue:recipeIngredient> gewürzt
-               und nachdem es 1—1½ Stunde gekocht, durch ein Sieb gegeben, wieder zum Kochen
-               gebracht, <cue:recipeIngredient>Schwammoder Griesmehl-Klößchen</cue:recipeIngredient>
-               hinein gegeben, oder mit in Butter gebratenen kleinen <cue:recipeIngredient
-                  ref="#WeißbrotToast">Weißbrodscheiben</cue:recipeIngredient> angerichtet. </p>
+               und kochendes Wasser und <cue:recipeIngredient ref="#Bratenjus"
+                  >Bratenjus</cue:recipeIngredient> hinzugeschüttet, mit <cue:recipeIngredient
+                  ref="#Salz">Salz</cue:recipeIngredient>, <cue:recipeIngredient ref="#Muskatnuß"
+                  >Muskat</cue:recipeIngredient> und <cue:recipeIngredient ref="#Gewürznelken"
+                  >Nelken</cue:recipeIngredient> gewürzt und nachdem es 1—1½ Stunde gekocht, durch
+               ein Sieb gegeben, wieder zum Kochen gebracht, <cue:recipeIngredient>Schwammoder
+                  Griesmehl-Klößchen</cue:recipeIngredient> hinein gegeben, oder mit in Butter
+               gebratenen kleinen <cue:recipeIngredient ref="#WeißbrotToast"
+                  >Weißbrodscheiben</cue:recipeIngredient> angerichtet. </p>
          </cue:recipe>
          <anchor xml:id="B-21-end"/>
 
@@ -1073,15 +1075,12 @@
                man Wasser, Bier, Korinthen und Mehl kochen, die Milch besonders zum Kochen kommen,
                nehme beides vom Feuer, mische es unter einander und rühre die Suppe mit dem Eidotter
                ab. </p>
-            <p>In Ermangelung eines <cue:recipeIngredient ref="#Ei" altGrp="1"
-                  >Eis</cue:recipeIngredient>, was übrigens sehr dazu gehört, muß man reichlicher
-                  <cue:recipeIngredient ref="#Kuhmilch" altGrp="2">Milch</cue:recipeIngredient> und
-               so viel weniger Wasser und auch eine Kleinigkeit <cue:recipeIngredient ref="#Mehl"
-                  altGrp="2">Mehl</cue:recipeIngredient> mehr nehmen <cue:alt target="1 2"/>.
-               Uebrigens versteht es sich von selbst, daß das Verhältniß dieser Flüssigkeiten zu
-               einander vom eigenen Gutdünken abhängt und also zu dieser Suppe mehr Milch oder Bier
-               genommen werden kann, wenn man nur dabei beachten wolle, daß zu 2¼ Maß Flüssigem 1½
-               Loth feines Mehl und 1 Eidotter hinreichend sind. </p>
+            <p>In Ermangelung eines Eis, was übrigens sehr dazu gehört, muß man reichlicher Milch
+               und so viel weniger Wasser und auch eine Kleinigkeit Mehl mehr nehmen <cue:alt
+                  target="1 2"/>. Uebrigens versteht es sich von selbst, daß das Verhältniß dieser
+               Flüssigkeiten zu einander vom eigenen Gutdünken abhängt und also zu dieser Suppe mehr
+               Milch oder Bier genommen werden kann, wenn man nur dabei beachten wolle, daß zu 2¼
+               Maß Flüssigem 1½ Loth feines Mehl und 1 Eidotter hinreichend sind. </p>
             <p>Es wird zu dieser Suppe <cue:recipeIngredient ref="#Zwieback"
                   >Zwieback</cue:recipeIngredient> oder in <cue:recipeIngredient ref="#Butter"
                   >Butter</cue:recipeIngredient> geröstetes <cue:recipeIngredient
@@ -1101,10 +1100,10 @@
                   quantity="2">Eidotter</cue:recipeIngredient>, etwas <cue:recipeIngredient
                   ref="#Salz" quantity="etwas">Salz</cue:recipeIngredient>, über starkem Feuer
                fortwährend stark gerührt, bis es kocht, dann in die Terrine geschüttet, von dem zu
-               Schaum geschlagenen Eiweiß Klößchen auf die Suppe gelegt, solche mit
-                  <cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient> und
-                  <cue:recipeIngredient ref="#Zimt">Zimmet</cue:recipeIngredient> bestreut und
-               schnell zugedeckt. </p>
+               Schaum geschlagenen <cue:recipeIngredient ref="#Eiweiß">Eiweiß</cue:recipeIngredient>
+               Klößchen auf die Suppe gelegt, solche mit <cue:recipeIngredient ref="#Zucker"
+                  >Zucker</cue:recipeIngredient> und <cue:recipeIngredient ref="#Zimt"
+                  >Zimmet</cue:recipeIngredient> bestreut und schnell zugedeckt. </p>
          </cue:recipe>
 
          <anchor xml:id="B-46-start"/>
@@ -1150,7 +1149,7 @@
          <anchor xml:id="B-49-sart"/>
          <cue:recipe type="Suppen." rcp-id="B-49">
             <head>Suppe von feiner Gerste (Graupen).</head>
-            <p>Ungefähr zwei Stunden muß die <cue:recipeIngredient ref="#Perlgraupen"
+            <p>Ungefähr zwei Stunden muß die <cue:recipeIngredient ref="#Gerste"
                   >Gerste</cue:recipeIngredient> zu Feuer sein. Sie wird mit etwas
                   <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient> in wenig weiches
                kochendes Wasser gegeben, kurz eingekocht, frische <cue:recipeIngredient

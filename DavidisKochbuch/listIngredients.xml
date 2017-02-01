@@ -86,6 +86,7 @@
 	<cue:ingredient xml:id="Knollensellerie" BLSref="G660100">
 		<cue:prefBasicForm>Selleriewurzel</cue:prefBasicForm>
 		<cue:altBasicForm>Sellerieknolle</cue:altBasicForm>
+		<cue:altBasicForm>Sellerie</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Wurzelpetersilie" BLSref="G670100">
 		<cue:prefBasicForm>Petersilienwurzel</cue:prefBasicForm>
@@ -193,6 +194,7 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Perlgraupen" BLSref="C148200">
 		<cue:prefBasicForm>Perlgerste</cue:prefBasicForm>
+		<cue:altBasicForm>Gerste</cue:altBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Flusskrebs" BLSref="T710100">
 		<cue:prefBasicForm>Krebs</cue:prefBasicForm>
@@ -377,9 +379,36 @@
 	</cue:ingredient>
 	<cue:ingredient xml:id="Krammetsvogel">
 		<cue:prefBasicForm>Krammetsvogel</cue:prefBasicForm>
-		<cue:note>Alte Bezichnung für Wacholderdrossel (https://de.wikipedia.org/wiki/Wacholderdrossel)</cue:note>
+		<cue:note>Alte Bezeichnung für Wacholderdrossel (https://de.wikipedia.org/wiki/Wacholderdrossel)</cue:note>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Pimpernell">
 		<cue:prefBasicForm>Pimpernell</cue:prefBasicForm>
 	</cue:ingredient>
+	<cue:ingredient xml:id="Bratenjus">
+		<cue:prefBasicForm>Bratenjus</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Ohr">
+		<cue:prefBasicForm>Ohr</cue:prefBasicForm>
+		<cue:note>Kann das Ohr eines Tieres oder ein Gebäck sein.</cue:note>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Ochsenmaul">
+		<cue:prefBasicForm>Ochsenmaul</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Currypulver">
+		<cue:prefBasicForm>Currypulver</cue:prefBasicForm>
+		<cue:altBasicForm>Kerry-Pulver</cue:altBasicForm>		
+	</cue:ingredient>
+	<cue:ingredient xml:id="Krebsbutter">
+		<cue:prefBasicForm>Krebsbutter</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Spargelkopf">
+		<cue:prefBasicForm>Spargelkopf</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Zitronenscheibe">
+		<cue:prefBasicForm>Zitronenscheibe</cue:prefBasicForm>
+	</cue:ingredient>
 </cue:listIngredient>
+
+
+
+

@@ -1,23 +1,1003 @@
 --- Needed for extracting and writingTo "erg.xml": 144.9719660282135 seconds ---
 Plural Lemmatisierungsfehler: Scorzonerwurzeln, Sellerieknollen, Kartoffeln, Eidottern, Saucissen, Suppenkräutern, Pfefferkörnern,
 	Petersilienblättern, Sauerampferblätter
-	! Achtung Hasenbraten n korrekt
-Bindestrich Lemmatisierungsfehler: Scorzoner-Wurzeln, Petersilien-Wurzel
-Lemma / R-Fehler: In Ermangelung eines Eis (Ei) (einfach falsch im org)
-Saucen nicht erkannt (Meerrettig-Sauce, Sauce vom Hasen) !Achtung mit obigen Bindestrich-Fehler beseitigen
-Bratenjus
-Target Recipe: Kerry-Pulver (A-33)
-Nicht erkannt: 'fleischiges Stück' (B-7), Hasenfleisches, Krebsbutter, Spargelköpfe, Zitronenscheiben, gesalzen (Salz), Fleischklößchen,
-	Brustfleisch, Eierklößchen
-Nicht in Dict: Ohr (Schweineohr), Ochsenmaul, Knochen (B-21), Hasengerippe, Krammetsvogel, Pimpernell, Blüthe (noch immer nicht - B34),
-	Korinthe
 Nicht als altBasisForm: Sellerieknolle, Möhre, Scorzoneren (pl. von Scorzonera), Schweinschnauze
+Bindestrich Lemmatisierungsfehler: Scorzoner-Wurzeln, Petersilien-Wurzel
 Plural in dict statt Singular: Thamarinden, Nelken, Erbsen, Linsen, Rosinen
-Fehler im manuellen Tagging: B-22 Wird wie Hasensuppe als Ing, B34 Klöchßen ist kein Ing diesmal, Tippfehler in "Buisquit", Milch vergessen zu taggen (B-47)
-Nicht in truncatedEndings: Klöße, Brod
+Fehler im manuellen Tagging: B-22 Wird wie Hasensuppe als Ing, B34 Klöchßen ist kein Ing diesmal, Tippfehler in "Buisquit", Milch vergessen zu taggen, falsche BLS/ref
+Nicht in Dict: Bratenjus, Krammetsvogel, Pimpernell, Korinthe, Ochsenmaul, Kerry-Pulver (Currypulver!=Curry!), Krebsbutter, Spargelköpfe, 
+	Noch immer nicht: Knochen (B-21), Hasengerippe, Blüthe
+Saucen nicht erkannt (Meerrettig-Sauce, Sauce vom Hasen) -> in composedIngs
+Nicht in truncatedEndings: Klöße, Klößchen (Eierklöchen), Brod
+
+
+
+Nicht erkannt: Zitronenscheiben (Zitronenscheibe in dict), gesalzen (Salz)
+
+
 
 
 
 
 B50: Gerste (Wird wie Suppe von feiner <ref target="#Gerste">Gerste (Nro. 49)</ref> gekocht) ref als ing^^
+Lemma / Genetiv: In Ermangelung eines Eis (Ei)
+B45: ohne Ei
+B1 abgebrüht (brühe)
+
+
+
+Not relevant but retrieved: Ingredient: words=['Sellerie'], positionInRecipe=(97, 97), ref=#Knollensellerie #Sellerieblätter
+B-3
+Golden Standard:
+Ingredient: words=['Fleisch'], quantity=2, positionInRecipe=(10, 10), unit=Pfund, ref=#Rindkochfleisch
+Ingredient: words=['Mehl'], quantity=einige, positionInRecipe=(17, 17), unit=EL, ref=#Mehl
+Ingredient: words=['Butter'], quantity=2, positionInRecipe=(22, 22), unit=Stich, ref=#Butter
+Ingredient: words=['Sellerieknolle'], quantity=1, positionInRecipe=(44, 44), ref=#Knollenselerie
+Ingredient: words=['Zwiebel'], quantity=1, positionInRecipe=(48, 48), ref=#Zwiebel
+Ingredient: words=['Möhre'], quantity=1, positionInRecipe=(54, 54), ref=#Karotte
+Ingredient: words=['Reis'], positionInRecipe=(89, 89), ref=#Reis
+Ingredient: words=['Eidotter'], positionInRecipe=(105, 105), ref=#Hühnereigelb
+Ingredient: words=['Muskat'], positionInRecipe=(107, 107), ref=#Muskatnuß
+----
+Retrieved:
+Ingredient: words=['Fleisch'], quantity=2.0, positionInRecipe=(10, 10), unit=Pfund, ref=#Rindkochfleisch
+Ingredient: words=['Mehl'], quantity=einige, positionInRecipe=(17, 17), ref=#Mehl
+Ingredient: words=['Butter'], quantity=2.0, positionInRecipe=(22, 22), unit=Stich, ref=#Butter
+Ingredient: words=['Fleisch'], positionInRecipe=(27, 27), ref=#Rindkochfleisch
+Ingredient: words=['Sellerieknolle'], quantity=8.0, positionInRecipe=(44, 44), ref=#Knollensellerie
+Ingredient: words=['Zwiebel'], quantity=1, positionInRecipe=(48, 48), ref=#Zwiebel
+Ingredient: words=['Möhre'], quantity=1, positionInRecipe=(54, 54), ref=#Karotte
+Ingredient: words=['Reis'], positionInRecipe=(89, 89), ref=#Reis
+Ingredient: words=['Sellerie'], positionInRecipe=(97, 97), ref=#Knollensellerie #Sellerieblätter
+Ingredient: words=['Eidotter'], positionInRecipe=(105, 105), ref=#HühnereiEigelb
+Ingredient: words=['Muskat'], positionInRecipe=(107, 107), ref=#Muskatnuß
+----
+
+Not retrieved: Ingredient: words=['Petersilien'], quantity=1, positionInRecipe=(62, 62), ref=#Wurzelpetersilie
+Not retrieved: Ingredient: words=['Scorzoner-Wurzeln'], quantity=einige, positionInRecipe=(65, 65), ref=#Schwarzwurzeln
+Not relevant but retrieved: Ingredient: words=['Rindfleisch'], quantity=etwas, positionInRecipe=(20, 20), ref=#Rindkochfleisch
+B-6
+Golden Standard:
+Ingredient: words=['Kalbfleisch'], positionInRecipe=(2, 2), ref=#Kalbkochfleisch
+Ingredient: words=['Salz'], positionInRecipe=(28, 28), ref=#Salz
+Ingredient: words=['Brühe'], positionInRecipe=(34, 34)
+Ingredient: words=['Mehl'], positionInRecipe=(50, 50), ref=#Mehl
+Ingredient: words=['Butter'], positionInRecipe=(52, 52), ref=#Butter
+Ingredient: words=['Petersilien'], quantity=1, positionInRecipe=(62, 62), ref=#Wurzelpetersilie
+Ingredient: words=['Scorzoner-Wurzeln'], quantity=einige, positionInRecipe=(65, 65), ref=#Schwarzwurzeln
+Ingredient: words=['Reis'], positionInRecipe=(75, 75), ref=#Reis
+Ingredient: words=['Spargel'], optional=True, positionInRecipe=(87, 87), ref=#SpargelGekocht
+Ingredient: words=['Blumenkohl'], optional=True, positionInRecipe=(89, 89), ref=#BlumenkohlGekocht
+Ingredient: words=['Fleisch'], optional=True, positionInRecipe=(104, 104)
+Ingredient: words=['Klöße'], optional=True, positionInRecipe=(108, 108)
+Ingredient: words=['Muskat'], positionInRecipe=(116, 116), ref=#Muskatnuß
+Ingredient: words=['Petersilie'], quantity=etwas, positionInRecipe=(120, 120), ref=#Petersilie
+Ingredient: atLeast=1, words=['Eidotter'], atMost=2, positionInRecipe=(123, 123), ref=#HühnereiEigelb
+Ingredient: words=['Griesmehl'], altGrp=1, positionInRecipe=(126, 126), ref=#Weizengrießmehl
+Ingredient: words=['Mehl'], altGrp=2, positionInRecipe=(134, 134), ref=#Mehl
+Ingredient: words=['Meerrettig-Sauce'], target=#P-23, positionInRecipe=(155, 155)
+----
+Retrieved:
+Ingredient: words=['Kalbfleisch'], positionInRecipe=(2, 2), ref=#Kalbkochfleisch
+Ingredient: words=['Rindfleisch'], quantity=etwas, positionInRecipe=(20, 20), ref=#Rindkochfleisch
+Ingredient: words=['Salz'], positionInRecipe=(28, 28), ref=#Salz
+Ingredient: words=['Brühe'], positionInRecipe=(34, 34)
+Ingredient: words=['Mehl'], quantity=2.0, positionInRecipe=(50, 50), ref=#Mehl
+Ingredient: words=['Butter'], positionInRecipe=(52, 52), ref=#Butter
+Ingredient: words=['Kalbfleischbrühe'], positionInRecipe=(55, 55)
+Ingredient: words=['Reis'], positionInRecipe=(75, 75), ref=#Reis
+Ingredient: words=['Spargel'], positionInRecipe=(87, 87), ref=#SpargelGekocht
+Ingredient: words=['Blumenkohl'], positionInRecipe=(89, 89), ref=#BlumenkohlGekocht
+Ingredient: words=['Fleisch'], positionInRecipe=(104, 104), ref=#Kalbkochfleisch
+Ingredient: words=['Klöße'], positionInRecipe=(108, 108)
+Ingredient: words=['Muskat'], positionInRecipe=(116, 116), ref=#Muskatnuß
+Ingredient: words=['Petersilie'], quantity=etwas, positionInRecipe=(120, 120), ref=#Petersilienblatt
+Ingredient: atLeast=1.0, words=['Eidotter'], atMost=2.0, positionInRecipe=(123, 123), ref=#HühnereiEigelb
+Ingredient: words=['Griesmehl'], positionInRecipe=(126, 126), ref=#Weizengrießmehl #Griesmehl
+Ingredient: words=['Mehl'], positionInRecipe=(134, 134), ref=#Mehl
+Ingredient: words=['Fleisch'], positionInRecipe=(138, 138), ref=#Kalbkochfleisch
+Ingredient: words=['Meerrettig-Sauce'], quantity=1, positionInRecipe=(155, 155)
+----
+
+Not retrieved: Ingredient: words=['fleischiges', 'Stück'], positionInRecipe=(8, 9), ref=#Kalbkochfleisch
+Not retrieved: Ingredient: words=['Scorzoneren'], optional=True, positionInRecipe=(37, 37), ref=#Schwarzwurzel
+Not relevant but retrieved: Ingredient: words=['abgebrüht'], positionInRecipe=(29, 29)
+B-7
+Golden Standard:
+Ingredient: words=['fleischiges', 'Stück'], positionInRecipe=(8, 9), ref=#Kalbkochfleisch
+Ingredient: words=['Salz'], positionInRecipe=(15, 15), ref=#Salz
+Ingredient: words=['Brühe'], positionInRecipe=(18, 18)
+Ingredient: words=['Reis'], positionInRecipe=(24, 24), ref=#Reis
+Ingredient: words=['Spargel'], optional=True, positionInRecipe=(35, 35), ref=#SpargelGekocht
+Ingredient: words=['Scorzoneren'], optional=True, positionInRecipe=(37, 37), ref=#Schwarzwurzel
+Ingredient: words=['Petersilie'], quantity=ein wenig, positionInRecipe=(51, 51), ref=#Wurzelpetersilie
+Ingredient: words=['Eidotter'], quantity=1, optional=True, positionInRecipe=(66, 66), ref=#HühnereiEigelb
+----
+Retrieved:
+Ingredient: words=['Salz'], quantity=etwas, positionInRecipe=(15, 15), ref=#Salz
+Ingredient: words=['Brühe'], positionInRecipe=(18, 18)
+Ingredient: words=['Reis'], quantity=1, positionInRecipe=(24, 24), ref=#Reis
+Ingredient: words=['abgebrüht'], positionInRecipe=(29, 29)
+Ingredient: words=['Spargel'], positionInRecipe=(35, 35), ref=#SpargelGekocht
+Ingredient: words=['Petersilie'], quantity=1, positionInRecipe=(51, 51), ref=#Petersilienblatt
+Ingredient: words=['Eidotter'], quantity=1, positionInRecipe=(66, 66), ref=#HühnereiEigelb
+----
+
+Not relevant but retrieved: Ingredient: words=['Gewürz'], quantity=1, positionInRecipe=(50, 50), ref=#braunes_Gewürz
+B-8
+Golden Standard:
+Ingredient: words=['Midder'], positionInRecipe=(5, 5), ref=#Midder
+Ingredient: words=['Butter'], positionInRecipe=(18, 18), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(20, 20), ref=#Mehl
+Ingredient: words=['Kalbfleischbrühe'], positionInRecipe=(24, 24), ref=#Kalbsbrühe
+Ingredient: words=['Petersilie'], quantity=etwas, positionInRecipe=(33, 33), ref=#Petersilienblatt
+Ingredient: words=['Muskatblüthe'], positionInRecipe=(34, 34), ref=#Muskatblüte
+Ingredient: words=['Eidotter'], positionInRecipe=(36, 36), ref=#HühnereiEigelb
+----
+Retrieved:
+Ingredient: words=['Midder'], positionInRecipe=(2, 2), ref=#Midder
+Ingredient: words=['Midder'], positionInRecipe=(5, 5), ref=#Midder
+Ingredient: words=['Butter'], quantity=16.0, positionInRecipe=(18, 18), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(20, 20), ref=#Mehl
+Ingredient: words=['Kalbfleischbrühe'], positionInRecipe=(24, 24)
+Ingredient: words=['Petersilie'], quantity=etwas, positionInRecipe=(33, 33), ref=#Petersilienblatt
+Ingredient: words=['Muskatblüthe'], positionInRecipe=(34, 34), ref=#Muskatblüte
+Ingredient: words=['Eidotter'], positionInRecipe=(36, 36), ref=#HühnereiEigelb
+Ingredient: words=['Gewürz'], quantity=1, positionInRecipe=(50, 50), ref=#braunes_Gewürz
+Ingredient: words=['Mehl'], positionInRecipe=(54, 54), ref=#Mehl
+Ingredient: words=['Butter'], positionInRecipe=(57, 57), ref=#Butter
+----
+
+Not retrieved: Ingredient: words=['Kartoffeln'], quantity=einige, positionInRecipe=(22, 22), ref=#Kartoffeln
+B-9
+Golden Standard:
+Ingredient: words=['Fleisch'], positionInRecipe=(2, 2), ref=#Hammelfleisch
+Ingredient: words=['Salz'], positionInRecipe=(10, 10), ref=#Salz
+Ingredient: words=['Wurzelwerk'], positionInRecipe=(12, 12), ref=#Wurzelwerk
+Ingredient: words=['Zwiebel'], quantity=1, positionInRecipe=(16, 16), ref=#Zwiebel
+Ingredient: words=['Kartoffeln'], quantity=einige, positionInRecipe=(22, 22), ref=#Kartoffeln
+Ingredient: words=['Griesmehl'], positionInRecipe=(54, 54), ref=#Weizengrießmehl
+Ingredient: words=['Kartoffel-Klöße'], target=#L-15, positionInRecipe=(64, 64)
+Ingredient: words=['Petersilie'], positionInRecipe=(78, 78), ref=#Petersilienblatt
+Ingredient: words=['Muskat'], positionInRecipe=(79, 79), ref=#Muskatnuß
+Ingredient: words=['Eidotter'], positionInRecipe=(81, 81), ref=#HühnereiEigelb
+----
+Retrieved:
+Ingredient: words=['Fleisch'], positionInRecipe=(2, 2), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: words=['Salz'], positionInRecipe=(10, 10), ref=#Salz
+Ingredient: words=['Wurzelwerk'], positionInRecipe=(12, 12), ref=#Wurzelwerk
+Ingredient: words=['Zwiebel'], quantity=1, positionInRecipe=(16, 16), ref=#Zwiebel
+Ingredient: words=['Griesmehl'], positionInRecipe=(54, 54), ref=#Weizengrießmehl #Griesmehl
+Ingredient: words=['Kartoffel-Klöße'], positionInRecipe=(64, 64)
+Ingredient: words=['Petersilie'], positionInRecipe=(78, 78), ref=#Petersilienblatt
+Ingredient: words=['Muskat'], positionInRecipe=(79, 79), ref=#Muskatnuß
+Ingredient: words=['Eidotter'], positionInRecipe=(81, 81), ref=#HühnereiEigelb
+----
+
+Not relevant but retrieved: Ingredient: words=['Muskat'], positionInRecipe=(127, 127), ref=#Muskatnuß
+B-10
+Golden Standard:
+Ingredient: words=['Huhn'], quantity=1, positionInRecipe=(9, 9), ref=#Suppenhuhn
+Ingredient: words=['Salz'], positionInRecipe=(13, 13), ref=#Salz
+Ingredient: words=['Brühe'], positionInRecipe=(17, 17)
+Ingredient: words=['Petersilien-Wurzel'], quantity=1, positionInRecipe=(29, 29), ref=#Wurzelpetersilie
+Ingredient: words=['Reis'], positionInRecipe=(48, 48), ref=#Reis
+Ingredient: words=['Perlgerste'], optional=True, positionInRecipe=(52, 52), ref=#Perlgraupen
+Ingredient: words=['Krebsklöße'], altGrp=1, positionInRecipe=(63, 63)
+Ingredient: words=['Krebsbutter'], positionInRecipe=(65, 65)
+Ingredient: words=['Klöße'], altGrp=2, positionInRecipe=(75, 75)
+Ingredient: words=['Petersilie'], quantity=etwas, positionInRecipe=(86, 86), ref=#Petersilienblatt
+Ingredient: words=['Muskatblüthe'], positionInRecipe=(87, 87), ref=#Muskatblüte
+Ingredient: words=['Eidotter'], positionInRecipe=(89, 89), ref=#HühnereiEigelb
+Ingredient: words=['Sauce', 'P', 'No', '30'], target=#P-30, optional=True, positionInRecipe=(115, 118)
+----
+Retrieved:
+Ingredient: words=['Huhn'], quantity=1, positionInRecipe=(9, 9), ref=#Suppenhuhn
+Ingredient: words=['Salz'], positionInRecipe=(13, 13), ref=#Salz
+Ingredient: words=['Brühe'], positionInRecipe=(17, 17)
+Ingredient: words=['Petersilien-Wurzel'], quantity=1, positionInRecipe=(29, 29), ref=#Wurzelpetersilie
+Ingredient: words=['Reis'], positionInRecipe=(48, 48), ref=#Reis
+Ingredient: words=['Perlgerste'], positionInRecipe=(52, 52), ref=#Perlgraupen
+Ingredient: words=['Krebsklöße'], positionInRecipe=(63, 63)
+Ingredient: words=['Krebsbutter'], positionInRecipe=(65, 65), ref=#Krebsbutter
+Ingredient: words=['Klöße'], positionInRecipe=(75, 75)
+Ingredient: words=['Petersilie'], quantity=etwas, positionInRecipe=(86, 86), ref=#Petersilienblatt
+Ingredient: words=['Muskatblüthe'], positionInRecipe=(87, 87), ref=#Muskatblüte
+Ingredient: words=['Eidotter'], positionInRecipe=(89, 89), ref=#HühnereiEigelb
+Ingredient: words=['Huhn'], positionInRecipe=(111, 111), ref=#Suppenhuhn
+Ingredient: words=['Sauce'], positionInRecipe=(115, 115)
+Ingredient: words=['Klöße'], positionInRecipe=(125, 125)
+Ingredient: words=['Muskat'], positionInRecipe=(127, 127), ref=#Muskatnuß
+----
+
+Not relevant but retrieved: Ingredient: words=['Perlgerste'], positionInRecipe=(13, 13), ref=#Perlgraupen
+Not relevant but retrieved: Ingredient: words=['Reis'], positionInRecipe=(15, 15), ref=#Reis
+B-11
+Golden Standard:
+Ingredient: words=['Tauben'], positionInRecipe=(4, 4), ref=#Taube
+Ingredient: words=['Salz'], positionInRecipe=(9, 9), ref=#Salz
+Ingredient: words=['Spargelköpfe'], altGrp=1, positionInRecipe=(25, 25), ref=#SpargelGekocht
+Ingredient: words=['Blumenkohl'], altGrp=2, quantity=etwas, positionInRecipe=(28, 28), ref=#BlumenkohlGekocht
+Ingredient: words=['Eidotter'], quantity=1, optional=True, positionInRecipe=(37, 37), ref=#HühnereiEigelb
+----
+Retrieved:
+Ingredient: words=['Tauben'], positionInRecipe=(4, 4), ref=#Taube
+Ingredient: words=['Salz'], positionInRecipe=(9, 9), ref=#Salz
+Ingredient: words=['Perlgerste'], positionInRecipe=(13, 13), ref=#Perlgraupen
+Ingredient: words=['Reis'], positionInRecipe=(15, 15), ref=#Reis
+Ingredient: words=['Spargelköpfe'], positionInRecipe=(25, 25), ref=#Spargelkopf
+Ingredient: words=['Blumenkohl'], quantity=etwas, positionInRecipe=(28, 28), ref=#BlumenkohlGekocht
+Ingredient: words=['Eidotter'], quantity=1, positionInRecipe=(37, 37), ref=#HühnereiEigelb
+Ingredient: words=['Tauben'], positionInRecipe=(49, 49), ref=#Taube
+----
+
+Not relevant but retrieved: Ingredient: words=['Fleisch'], positionInRecipe=(20, 20), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+B-12
+Golden Standard:
+Ingredient: words=['Bouillon'], target=#Boullion, positionInRecipe=(8, 8)
+Ingredient: words=['Krebse'], quantity=24, positionInRecipe=(16, 16), ref=#Flusskrebs
+Ingredient: words=['Butter'], positionInRecipe=(43, 43), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(59, 59), ref=#Mehl
+Ingredient: words=['Fleischbrühe'], positionInRecipe=(68, 68)
+Ingredient: words=['Krebsklöße'], target=#L-2, positionInRecipe=(86, 86)
+Ingredient: words=['Midder'], positionInRecipe=(91, 91), ref=#Midder
+Ingredient: words=['Schwammklöße'], target=#L-6, positionInRecipe=(101, 101)
+Ingredient: words=['Eidotter'], positionInRecipe=(109, 109), ref=#HühnereiEigelb
+----
+Retrieved:
+Ingredient: words=['Bouillon'], quantity=1, positionInRecipe=(8, 8)
+Ingredient: words=['Krebse'], quantity=24.0, positionInRecipe=(16, 16), ref=#Flusskrebs
+Ingredient: words=['Fleisch'], positionInRecipe=(20, 20), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: words=['Butter'], quantity=1, positionInRecipe=(43, 43), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(59, 59), ref=#Mehl
+Ingredient: words=['Fleischbrühe'], positionInRecipe=(68, 68)
+Ingredient: words=['Bouillon'], quantity=1, positionInRecipe=(79, 79)
+Ingredient: words=['Krebsklöße'], positionInRecipe=(86, 86)
+Ingredient: words=['Midder'], quantity=2.0, positionInRecipe=(91, 91), ref=#Midder
+Ingredient: words=['Schwammklöße'], positionInRecipe=(101, 101)
+Ingredient: words=['Eidotter'], positionInRecipe=(109, 109), ref=#HühnereiEigelb
+----
+
+Not retrieved: Ingredient: words=['Rindfleisch-Bouillon'], target=#Boullion, positionInRecipe=(5, 5)
+B-13
+Golden Standard:
+Ingredient: words=['Rindfleisch-Bouillon'], target=#Boullion, positionInRecipe=(5, 5)
+Ingredient: words=['Sellerie'], positionInRecipe=(9, 9), ref=#Knollensellerie
+Ingredient: words=['Petersilienwurzeln'], positionInRecipe=(11, 11), ref=#Wurzelpetersilie
+Ingredient: words=['Birnen'], positionInRecipe=(23, 23), ref=#Birne
+Ingredient: atLeast=2, words=['Aale'], atMost=3, positionInRecipe=(31, 31), unit=Pfund, ref=#Aal
+Ingredient: words=['Salz'], positionInRecipe=(53, 53), ref=#Salz
+Ingredient: words=['Suppenkräutern'], positionInRecipe=(64, 64), ref=#Küchenkräuter
+Ingredient: words=['Zitronenscheiben'], quantity=einige, positionInRecipe=(66, 66), unit=Scheibe, ref=#Zitrone
+Ingredient: words=['Butter'], positionInRecipe=(71, 71), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(74, 74), ref=#Mehl
+Ingredient: words=['Fleisch'], altGrp=1, positionInRecipe=(82, 82)
+Ingredient: words=['Schwammklöße'], altGrp=2, positionInRecipe=(84, 84)
+----
+Retrieved:
+Ingredient: words=['Bouillon'], positionInRecipe=(2, 2)
+Ingredient: words=['Sellerie'], positionInRecipe=(9, 9), ref=#Knollensellerie
+Ingredient: words=['Petersilienwurzeln'], positionInRecipe=(11, 11), ref=#Wurzelpetersilie
+Ingredient: words=['Birnen'], quantity=4.0, positionInRecipe=(23, 23), ref=#Birne
+Ingredient: atLeast=2.0, words=['Aale'], atMost=3.0, positionInRecipe=(31, 31), unit=Pfund, ref=#Aal
+Ingredient: words=['Salz'], quantity=3.0, positionInRecipe=(53, 53), ref=#Salz
+Ingredient: words=['Suppenkräutern'], positionInRecipe=(64, 64), ref=#Küchenkräuter
+Ingredient: words=['Zitronenscheiben'], quantity=einige, positionInRecipe=(66, 66), ref=#Zitronenscheibe
+Ingredient: words=['Butter'], positionInRecipe=(71, 71), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(74, 74), ref=#Mehl
+Ingredient: words=['Fleisch'], positionInRecipe=(82, 82)
+Ingredient: words=['Schwammklöße'], positionInRecipe=(84, 84)
+----
+
+Not retrieved: Ingredient: words=['gesalzen'], positionInRecipe=(13, 13), ref=#Salz
+Not retrieved: Ingredient: words=['Thimian'], quantity=etwas, positionInRecipe=(51, 51), ref=#Thymian
+B-14
+Golden Standard:
+Ingredient: words=['Aale'], positionInRecipe=(4, 4), ref=#Aal
+Ingredient: words=['gesalzen'], positionInRecipe=(13, 13), ref=#Salz
+Ingredient: words=['Zwieback'], positionInRecipe=(18, 18), ref=#Zwieback
+Ingredient: words=['Salbei'], positionInRecipe=(20, 20), ref=#Salbei
+Ingredient: words=['Butter'], positionInRecipe=(23, 23), ref=#Butter
+Ingredient: words=['Mehl'], quantity=einige, positionInRecipe=(31, 31), unit=EL, ref=#Mehl
+Ingredient: words=['Kerbel'], positionInRecipe=(46, 46), ref=#Kerbel
+Ingredient: words=['Portulac'], altGrp=1, positionInRecipe=(47, 47), ref=Portulak
+Ingredient: words=['Sauerampfer'], altGrp=2, positionInRecipe=(49, 49), ref=#Sauerampfer
+Ingredient: words=['Thimian'], quantity=etwas, positionInRecipe=(51, 51), ref=#Thymian
+Ingredient: words=['Majoran'], positionInRecipe=(52, 52), ref=#Majoran
+Ingredient: words=['Basilikum'], positionInRecipe=(53, 53), ref=#Basilikum
+Ingredient: words=['Kopfsalat'], positionInRecipe=(54, 54), ref=#Kopfsalat
+Ingredient: words=['Muskat'], positionInRecipe=(66, 66), ref=#Muskatnuß
+Ingredient: words=['Pfeffer'], quantity=etwas, positionInRecipe=(69, 69), ref=#Pfeffer
+Ingredient: atLeast=1, words=['Eidottern'], atMost=2, positionInRecipe=(80, 80), ref=#HühnereiEigelb
+----
+Retrieved:
+Ingredient: words=['Aale'], positionInRecipe=(4, 4), ref=#Aal
+Ingredient: words=['Zwieback'], quantity=3.0, positionInRecipe=(18, 18), ref=#Zwieback
+Ingredient: words=['Salbei'], positionInRecipe=(20, 20), ref=#Salbei
+Ingredient: words=['Butter'], positionInRecipe=(23, 23), ref=#Butter
+Ingredient: words=['Mehl'], quantity=einige, positionInRecipe=(31, 31), ref=#Mehl
+Ingredient: words=['Butter'], positionInRecipe=(33, 33), ref=#Butter
+Ingredient: words=['Kerbel'], quantity=1, positionInRecipe=(46, 46), ref=#Kerbel
+Ingredient: words=['Portulac'], positionInRecipe=(47, 47), ref=#Portulak
+Ingredient: words=['Sauerampfer'], positionInRecipe=(49, 49), ref=#Sauerampfer
+Ingredient: words=['Majoran'], quantity=etwas, positionInRecipe=(52, 52), ref=#Majoran
+Ingredient: words=['Basilikum'], positionInRecipe=(53, 53), ref=#Basilikum
+Ingredient: words=['Kopfsalat'], positionInRecipe=(54, 54), ref=#Kopfsalat
+Ingredient: words=['Muskat'], positionInRecipe=(66, 66), ref=#Muskatnuß
+Ingredient: words=['Pfeffer'], quantity=etwas, positionInRecipe=(69, 69), ref=#Pfeffer #spanischer_Pfeffer
+Ingredient: words=['Aale'], positionInRecipe=(72, 72), ref=#Aal
+Ingredient: atLeast=1.0, words=['Eidottern'], atMost=2.0, positionInRecipe=(80, 80), ref=#HühnereiEigelb
+----
+
+Not retrieved: Ingredient: words=['Ochsengaumen'], quantity=1, positionInRecipe=(30, 30), ref=#Ochsengaumen
+Not retrieved: Ingredient: words=['weißen', 'Franzwein'], altGrp=2, positionInRecipe=(161, 162), ref=weißen_Franzwein
+B-16
+Golden Standard:
+Ingredient: words=['Bouillon'], target=#Bouillon, positionInRecipe=(11, 11)
+Ingredient: atLeast=8, words=['Rindfleisch'], atMost=10, positionInRecipe=(15, 15), unit=Pfund, ref=#Rindkochfleisch
+Ingredient: words=['Wurzelwerk'], positionInRecipe=(17, 17), ref=#Wurzelwerk
+Ingredient: words=['Kalbskopf'], positionInRecipe=(24, 24), ref=#Kalbskopf
+Ingredient: words=['Schweineschnauze'], quantity=1, positionInRecipe=(26, 26), ref=#Schweineschnauze
+Ingredient: words=['Ohren'], positionInRecipe=(28, 28), ref=#Schweineohr
+Ingredient: words=['Ochsengaumen'], quantity=1, positionInRecipe=(30, 30), ref=#Ochsengaumen
+Ingredient: words=['Ochsenzunge'], quantity=1, positionInRecipe=(34, 34), ref=#Ochsenzunge
+Ingredient: words=['braunem', 'Gewürz'], positionInRecipe=(62, 63), ref=#braunes_Gewürz
+Ingredient: words=['Cayenne-Pfeffer'], quantity=ein Paar, positionInRecipe=(67, 67), unit=Messerspitze, ref=#Cayennepfeffer
+Ingredient: words=['Kalbsmidder'], quantity=einige, positionInRecipe=(69, 69), ref=#Midder
+Ingredient: words=['Saucissen'], positionInRecipe=(76, 76), ref=#Saucisse
+Ingredient: words=['Kalbskopfbrühe'], positionInRecipe=(79, 79), ref=#Kalbsbrühe
+Ingredient: words=['Butter'], positionInRecipe=(90, 90), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(93, 93), ref=#Mehl
+Ingredient: words=['Klöße', 'von', 'Kalbfleisch'], target=#L-4, positionInRecipe=(104, 106)
+Ingredient: words=['Eier'], quantity=einige, positionInRecipe=(110, 110), ref=#Ei
+Ingredient: words=['Engl', 'Soja'], quantity=ein Paar, positionInRecipe=(117, 118), unit=EL, ref=#Englische_Soja
+Ingredient: words=['Madeira'], quantity=0.5, positionInRecipe=(130, 130), unit=Flasche, ref=#Madeira
+Ingredient: words=['Austern'], optional=True, positionInRecipe=(133, 133), ref=#Auster
+Ingredient: words=['Soja'], optional=True, positionInRecipe=(147, 147), ref=#Englische_Soja
+Ingredient: words=['Madeira'], altGrp=1, positionInRecipe=(158, 158), ref=#Madeira
+Ingredient: words=['weißen', 'Franzwein'], altGrp=2, positionInRecipe=(161, 162), ref=weißen_Franzwein
+Ingredient: words=['Rum'], altGrp=2, quantity=etwas, positionInRecipe=(165, 165), ref=#Rum
+Ingredient: words=['Bouillon'], positionInRecipe=(169, 169), ref=#Boullion
+Ingredient: words=['Kalbskopf'], quantity=1, positionInRecipe=(171, 171), ref=#Kalbskopf
+----
+Retrieved:
+Ingredient: words=['Bouillon'], quantity=1, positionInRecipe=(11, 11)
+Ingredient: atLeast=8.0, words=['Rindfleisch'], atMost=10.0, positionInRecipe=(15, 15), unit=Pfund, ref=#Rindkochfleisch
+Ingredient: words=['Wurzelwerk'], positionInRecipe=(17, 17), ref=#Wurzelwerk
+Ingredient: words=['Kalbskopf'], quantity=1, positionInRecipe=(24, 24), ref=#Kalbskopf
+Ingredient: words=['Schweineschnauze'], quantity=1, positionInRecipe=(26, 26), ref=#Schweineschnauze
+Ingredient: words=['Ohren'], positionInRecipe=(28, 28), ref=#Ohr
+Ingredient: words=['Ochsenzunge'], quantity=1, positionInRecipe=(34, 34), ref=#Ochsenzunge
+Ingredient: words=['Fleisch'], positionInRecipe=(57, 57), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: words=['Bouillon'], positionInRecipe=(60, 60)
+Ingredient: words=['Gewürz'], positionInRecipe=(63, 63), ref=#braunes_Gewürz
+Ingredient: words=['Cayenne-Pfeffer'], quantity=1, positionInRecipe=(67, 67), ref=#Cayennepfeffer
+Ingredient: words=['Kalbsmidder'], quantity=einige, positionInRecipe=(69, 69), ref=#Midder
+Ingredient: words=['Saucissen'], positionInRecipe=(76, 76), ref=#Saucisse
+Ingredient: words=['Kalbskopfbrühe'], positionInRecipe=(79, 79)
+Ingredient: words=['Butter'], positionInRecipe=(90, 90), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(93, 93), ref=#Mehl
+Ingredient: words=['Klöße'], positionInRecipe=(104, 104)
+Ingredient: words=['Kalbfleisch'], positionInRecipe=(106, 106), ref=#Kalbkochfleisch
+Ingredient: words=['Eier'], quantity=einige, positionInRecipe=(110, 110), ref=#Ei
+Ingredient: words=['Soja'], quantity=1, positionInRecipe=(118, 118), ref=#Englische_Soja
+Ingredient: words=['Klößchen'], positionInRecipe=(123, 123)
+Ingredient: words=['Madeira'], quantity=0.5, positionInRecipe=(130, 130), unit=Flasche, ref=#Madeira
+Ingredient: words=['Austern'], positionInRecipe=(133, 133), ref=#Auster
+Ingredient: words=['Soja'], positionInRecipe=(147, 147), ref=#Englische_Soja
+Ingredient: words=['Madeira'], positionInRecipe=(158, 158), ref=#Madeira
+Ingredient: words=['Rum'], quantity=etwas, positionInRecipe=(165, 165), ref=#Rum
+Ingredient: words=['Bouillon'], positionInRecipe=(169, 169)
+Ingredient: words=['Kalbskopf'], positionInRecipe=(171, 171), ref=#Kalbskopf
+----
+
+Not retrieved: Ingredient: words=['Charlotten'], quantity=einige, positionInRecipe=(35, 35), ref=#Schalotte
+Not retrieved: Ingredient: words=['Dragon'], positionInRecipe=(36, 36), ref=#Estragon
+Not relevant but retrieved: Ingredient: words=['Wein'], positionInRecipe=(101, 101), ref=#Rotwein #Weißwein
+B-17
+Golden Standard:
+Ingredient: words=['Kalbskopf'], quantity=1, positionInRecipe=(7, 7), ref=#Kalbskopf
+Ingredient: words=['Ochsenmaul'], quantity=1, positionInRecipe=(13, 13)
+Ingredient: words=['Wurzelwerk'], positionInRecipe=(14, 14), ref=#Wurzelwerk
+Ingredient: words=['Möhren'], positionInRecipe=(16, 16), ref=#Karotte
+Ingredient: words=['Charlotten'], quantity=einige, positionInRecipe=(35, 35), ref=#Schalotte
+Ingredient: words=['Dragon'], positionInRecipe=(36, 36), ref=#Estragon
+Ingredient: words=['Mehl'], positionInRecipe=(38, 38), ref=#Mehl
+Ingredient: words=['Butter'], positionInRecipe=(41, 41), ref=#Butter
+Ingredient: words=['Bouillon'], target=#Bouillon, positionInRecipe=(45, 45)
+Ingredient: words=['Kalbskopfbrühe'], positionInRecipe=(47, 47), ref=#Kalbsbrühe
+Ingredient: words=['Fleisch'], positionInRecipe=(52, 52), ref=#Kalbkochfleisch
+Ingredient: words=['Cayenne-Pfeffer'], positionInRecipe=(53, 53), ref=#Cayennepfeffer
+Ingredient: words=['braunes', 'Gewürz'], positionInRecipe=(55, 56), ref=#braunes_Gewürz
+Ingredient: words=['Madeira'], positionInRecipe=(69, 69), ref=#Madeira
+Ingredient: words=['Graves'], quantity=0,5, positionInRecipe=(72, 72), unit=Flasche, ref=#Graves
+Ingredient: words=['Arrac'], quantity=1, positionInRecipe=(76, 76), unit=Glas, ref=#Arrak
+Ingredient: words=['Kalbfleisch-Klöße'], target=#L-4, positionInRecipe=(77, 77)
+Ingredient: words=['Eier'], quantity=einige, positionInRecipe=(85, 85), ref=#Ei
+Ingredient: words=['Mehl'], optional=True, positionInRecipe=(108, 108), ref=#Weizenmehl
+----
+Retrieved:
+Ingredient: words=['Kalbskopf'], quantity=1, positionInRecipe=(7, 7), ref=#Kalbskopf
+Ingredient: words=['Ochsenmaul'], quantity=1, positionInRecipe=(13, 13), ref=#Ochsenmaul
+Ingredient: words=['Wurzelwerk'], positionInRecipe=(14, 14), ref=#Wurzelwerk
+Ingredient: words=['Möhren'], positionInRecipe=(16, 16), ref=#Karotte
+Ingredient: words=['Mehl'], quantity=einige, positionInRecipe=(38, 38), ref=#Mehl
+Ingredient: words=['Butter'], positionInRecipe=(41, 41), ref=#Butter
+Ingredient: words=['Bouillon'], positionInRecipe=(45, 45)
+Ingredient: words=['Kalbskopfbrühe'], positionInRecipe=(47, 47)
+Ingredient: words=['Fleisch'], positionInRecipe=(52, 52), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: words=['Cayenne-Pfeffer'], positionInRecipe=(53, 53), ref=#Cayennepfeffer
+Ingredient: words=['Gewürz'], positionInRecipe=(56, 56), ref=#braunes_Gewürz
+Ingredient: words=['Madeira'], positionInRecipe=(69, 69), ref=#Madeira
+Ingredient: words=['Graves'], quantity=0.5, positionInRecipe=(72, 72), unit=Flasche, ref=#Graves
+Ingredient: words=['Arrac'], quantity=1, positionInRecipe=(76, 76), unit=Glas, ref=#Arrak
+Ingredient: words=['Kalbfleisch-Klöße'], positionInRecipe=(77, 77)
+Ingredient: words=['Eier'], quantity=einige, positionInRecipe=(85, 85), ref=#Ei
+Ingredient: words=['Wein'], positionInRecipe=(101, 101), ref=#Rotwein #Weißwein
+Ingredient: words=['Mehl'], positionInRecipe=(108, 108), ref=#Mehl
+Ingredient: words=['Brühe'], positionInRecipe=(110, 110)
+----
+
+Not retrieved: Ingredient: words=['Kerry-Pulver'], target=#A-33, quantity=0.5, positionInRecipe=(36, 36), unit=EL
+B-18
+Golden Standard:
+Ingredient: words=['Hühner'], quantity=2, positionInRecipe=(6, 6), ref=#Suppenhuhn
+Ingredient: words=['Butter'], positionInRecipe=(8, 8), ref=#Butter
+Ingredient: words=['Zwiebeln'], positionInRecipe=(10, 10), ref=#Zwiebel
+Ingredient: words=['Kalbfleischbrühe'], positionInRecipe=(15, 15), ref=#Kalbsbrühe
+Ingredient: words=['Thamarinde'], quantity=1, positionInRecipe=(21, 21), unit=Loth, ref=#Tamarinden
+Ingredient: words=['Pfeffer'], quantity=1, positionInRecipe=(26, 26), unit=Messerspitze, ref=#spanischer_Pfeffer
+Ingredient: words=['Kerry-Pulver'], target=#A-33, quantity=0.5, positionInRecipe=(36, 36), unit=EL
+Ingredient: words=['Kalbfleischklöße'], target=#L-4, positionInRecipe=(51, 51)
+----
+Retrieved:
+Ingredient: words=['Hühner'], quantity=2.0, positionInRecipe=(6, 6), ref=#Suppenhuhn
+Ingredient: words=['Butter'], positionInRecipe=(8, 8), ref=#Butter
+Ingredient: words=['Zwiebeln'], positionInRecipe=(10, 10), ref=#Zwiebel
+Ingredient: words=['Kalbfleischbrühe'], positionInRecipe=(15, 15)
+Ingredient: words=['Thamarinde'], quantity=1, positionInRecipe=(21, 21), unit=Loth, ref=#Tamarinden
+Ingredient: words=['Pfeffer'], quantity=1, positionInRecipe=(26, 26), unit=Messerspitze, ref=#Pfeffer #spanischer_Pfeffer
+Ingredient: words=['Kalbfleischklöße'], quantity=0.5, positionInRecipe=(51, 51)
+Ingredient: words=['Hühner'], positionInRecipe=(57, 57), ref=#Suppenhuhn
+----
+
+Not retrieved: Ingredient: words=['Pfefferkörnern'], positionInRecipe=(39, 39), ref=#Pfefferkörner
+B-19
+Golden Standard:
+Ingredient: words=['Hasen'], quantity=1, positionInRecipe=(9, 9), ref=#Hase
+Ingredient: atLeast=2, words=['Rindfleisch'], atMost=3, positionInRecipe=(32, 32), unit=Pfund, ref=#Rindkochfleisch
+Ingredient: words=['Zwiebeln'], quantity=3, positionInRecipe=(35, 35), unit=Loth, ref=#Zwiebel
+Ingredient: words=['Nelken'], quantity=einige, positionInRecipe=(37, 37), ref=#Gewürznelken
+Ingredient: words=['Pfefferkörnern'], positionInRecipe=(39, 39), ref=#Pfefferkörner
+Ingredient: words=['gelben', 'Wurzeln'], positionInRecipe=(40, 41), ref=#Karotte
+Ingredient: words=['Suppenkräutern'], positionInRecipe=(42, 42)
+Ingredient: words=['Schinken'], quantity=einige, positionInRecipe=(47, 47), unit=Scheibe, ref=#Schweineschinken
+Ingredient: words=['Butter'], quantity=reichlich, positionInRecipe=(55, 55), ref=#Butter
+Ingredient: words=['Sahne'], positionInRecipe=(57, 57), ref=#Sahne
+Ingredient: words=['Fleischklößchen'], positionInRecipe=(67, 67)
+Ingredient: words=['Mehl'], positionInRecipe=(87, 87), ref=#Mehl
+Ingredient: words=['Portwein'], quantity=0.25, positionInRecipe=(102, 102), unit=Flasche, ref=#Portwein
+Ingredient: words=['Cayenne-Pfeffer'], quantity=1, positionInRecipe=(106, 106), unit=Messerspitze, ref=#Cayennepfeffer
+Ingredient: words=['Salz'], positionInRecipe=(110, 110), ref=#Salz
+----
+Retrieved:
+Ingredient: words=['Hasen'], quantity=1, positionInRecipe=(4, 4), ref=#Hase
+Ingredient: words=['Hasen'], quantity=1, positionInRecipe=(9, 9), ref=#Hase
+Ingredient: words=['Fleisch'], positionInRecipe=(20, 20), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: atLeast=2.0, words=['Rindfleisch'], atMost=3.0, positionInRecipe=(32, 32), unit=Pfund, ref=#Rindkochfleisch
+Ingredient: words=['Zwiebeln'], quantity=3.0, positionInRecipe=(35, 35), unit=Loth, ref=#Zwiebel
+Ingredient: words=['Nelken'], quantity=einige, positionInRecipe=(37, 37), ref=#Gewürznelken
+Ingredient: words=['Wurzeln'], positionInRecipe=(41, 41), ref=#Karotte
+Ingredient: words=['Suppenkräutern'], positionInRecipe=(42, 42), ref=#Küchenkräuter
+Ingredient: words=['Schinken'], quantity=einige, positionInRecipe=(47, 47), ref=#Schweineschinken
+Ingredient: words=['Butter'], positionInRecipe=(55, 55), ref=#Butter
+Ingredient: words=['Sahne'], positionInRecipe=(57, 57), ref=#Sahne
+Ingredient: words=['Fleischklößchen'], quantity=einige, positionInRecipe=(67, 67)
+Ingredient: words=['Sauce'], positionInRecipe=(75, 75)
+Ingredient: words=['Mehl'], positionInRecipe=(87, 87), ref=#Mehl
+Ingredient: words=['Portwein'], quantity=0.25, positionInRecipe=(102, 102), unit=Flasche, ref=#Portwein
+Ingredient: words=['Cayenne-Pfeffer'], quantity=1, positionInRecipe=(106, 106), unit=Messerspitze, ref=#Cayennepfeffer
+Ingredient: words=['Salz'], positionInRecipe=(110, 110), ref=#Salz
+Ingredient: words=['Rindfleisches'], positionInRecipe=(141, 141), ref=#Rindkochfleisch
+----
+
+Not retrieved: Ingredient: words=['Petersilien'], quantity=1, positionInRecipe=(107, 107), ref=#Wurzelpetersilie
+Not retrieved: Ingredient: words=['Hasenfleisches'], altGrp=1, positionInRecipe=(197, 197), ref=#Hasenfleisch
+Not relevant but retrieved: Ingredient: words=['Hasen'], positionInRecipe=(152, 152), ref=#Hase
+Not relevant but retrieved: Ingredient: words=['Wurzelwerk'], positionInRecipe=(164, 164), ref=#Wurzelwerk
+B-20
+Golden Standard:
+Ingredient: words=['Hasenbraten'], quantity=1, positionInRecipe=(10, 10), ref=#Hasenbraten
+Ingredient: words=['Weißbrod'], quantity=8, positionInRecipe=(32, 32), unit=Pfennig, ref=#WeißbrotToast
+Ingredient: words=['Butter'], quantity=1, positionInRecipe=(37, 37), unit=Ei_dick, ref=#Butter
+Ingredient: words=['Eier'], quantity=2, positionInRecipe=(39, 39), ref=#Ei
+Ingredient: words=['Nelken'], positionInRecipe=(40, 40), ref=#Gewürznelken
+Ingredient: words=['Muskat'], positionInRecipe=(41, 41), ref=#Muskatnuß
+Ingredient: words=['Salz'], positionInRecipe=(43, 43), ref=#Salz
+Ingredient: words=['Weißbrod'], optional=True, positionInRecipe=(74, 74), ref=#WeißbrotToast
+Ingredient: words=['Rindfleisch'], quantity=2, positionInRecipe=(92, 92), unit=Pfund, ref=#Rindkochfleisch
+Ingredient: words=['Butter'], quantity=reichlich, positionInRecipe=(99, 99), ref=#Butter
+Ingredient: words=['Schinken'], quantity=einige, positionInRecipe=(103, 103), unit=Scheibe, ref=#Schweineschinken
+Ingredient: atLeast=4, words=['Zwiebeln'], atMost=5, positionInRecipe=(105, 105), ref=#Zwiebel
+Ingredient: words=['Petersilien'], quantity=1, positionInRecipe=(107, 107), ref=#Wurzelpetersilie
+Ingredient: words=['Sellerie'], positionInRecipe=(108, 108), ref=#Knollensellerie
+Ingredient: words=['Wurzel'], positionInRecipe=(111, 111), ref=#Karotte
+Ingredient: atLeast=2, words=['Mehl'], atMost=3, positionInRecipe=(119, 119), unit=EL, ref=#Mehl
+Ingredient: words=['Sauce'], optional=True, positionInRecipe=(150, 150)
+Ingredient: words=['Salz'], positionInRecipe=(181, 181), ref=#Salz
+Ingredient: words=['Muskat'], positionInRecipe=(182, 182), ref=#Muskatnuß
+Ingredient: words=['Nelken'], positionInRecipe=(184, 184), ref=#Gewürznelken
+Ingredient: words=['Klöße'], positionInRecipe=(187, 187)
+Ingredient: words=['Hasenfleisches'], altGrp=1, positionInRecipe=(197, 197), ref=#Hasenfleisch
+Ingredient: words=['Schwammklöße'], altGrp=2, target=#L-6, positionInRecipe=(200, 200)
+----
+Retrieved:
+Ingredient: words=['Hasenbraten'], positionInRecipe=(3, 3), ref=#Hasenbraten
+Ingredient: words=['Fleisch'], positionInRecipe=(7, 7), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: words=['Hasenbraten'], quantity=1, positionInRecipe=(10, 10), ref=#Hasenbraten
+Ingredient: words=['Weißbrod'], quantity=8.0, positionInRecipe=(32, 32), unit=Pfennig, ref=#WeißbrotToast
+Ingredient: words=['Ei'], quantity=1.0, positionInRecipe=(34, 34), ref=#Ei
+Ingredient: words=['Butter'], positionInRecipe=(37, 37), ref=#Butter
+Ingredient: words=['Eier'], quantity=2.0, positionInRecipe=(39, 39), ref=#Ei
+Ingredient: words=['Nelken'], positionInRecipe=(40, 40), ref=#Gewürznelken
+Ingredient: words=['Muskat'], positionInRecipe=(41, 41), ref=#Muskatnuß
+Ingredient: words=['Salz'], positionInRecipe=(43, 43), ref=#Salz
+Ingredient: words=['Klöße'], positionInRecipe=(46, 46)
+Ingredient: words=['Weißbrod'], quantity=1, positionInRecipe=(74, 74), ref=#WeißbrotToast
+Ingredient: words=['Rindfleisch'], quantity=2.0, positionInRecipe=(92, 92), unit=Pfund, ref=#Rindkochfleisch
+Ingredient: words=['Butter'], positionInRecipe=(99, 99), ref=#Butter
+Ingredient: words=['Schinken'], quantity=einige, positionInRecipe=(103, 103), unit=Scheibe, ref=#Schweineschinken
+Ingredient: atLeast=4.0, words=['Zwiebeln'], atMost=5.0, positionInRecipe=(105, 105), ref=#Zwiebel
+Ingredient: words=['Sellerie'], quantity=1, positionInRecipe=(108, 108), ref=#Knollensellerie #Sellerieblätter
+Ingredient: words=['Wurzel'], positionInRecipe=(111, 111), ref=#Karotte
+Ingredient: words=['Möhren'], positionInRecipe=(112, 112), ref=#Karotte
+Ingredient: atLeast=2.0, words=['Mehl'], atMost=3.0, positionInRecipe=(119, 119), unit=Scheibe, ref=#Mehl
+Ingredient: words=['Fleisch'], positionInRecipe=(124, 124), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: words=['Sauce'], positionInRecipe=(150, 150)
+Ingredient: words=['Hasen'], positionInRecipe=(152, 152), ref=#Hase
+Ingredient: words=['Fleisch'], positionInRecipe=(160, 160), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: words=['Wurzelwerk'], positionInRecipe=(164, 164), ref=#Wurzelwerk
+Ingredient: words=['Salz'], quantity=1, positionInRecipe=(181, 181), ref=#Salz
+Ingredient: words=['Muskat'], positionInRecipe=(182, 182), ref=#Muskatnuß
+Ingredient: words=['Nelken'], positionInRecipe=(184, 184), ref=#Gewürznelken
+Ingredient: words=['Klöße'], positionInRecipe=(187, 187)
+Ingredient: words=['Schwammklöße'], positionInRecipe=(200, 200)
+----
+
+Not retrieved: Ingredient: words=['Hasengerippe'], altGrp=1, positionInRecipe=(21, 21)
+Not retrieved: Ingredient: words=['Knochen'], altGrp=2, positionInRecipe=(24, 24)
+Not retrieved: Ingredient: words=['Schwammoder', 'Griesmehl-Klößchen'], positionInRecipe=(62, 63)
+Not retrieved: Ingredient: words=['Weißbrodscheiben'], positionInRecipe=(72, 72), ref=#WeißbrotToast
+B-21
+Golden Standard:
+Ingredient: words=['Zwiebeln'], quantity=recht viel, positionInRecipe=(8, 8), ref=#Zwiebel
+Ingredient: words=['Butter'], positionInRecipe=(12, 12), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(15, 15), ref=#Mehl
+Ingredient: words=['Hasengerippe'], altGrp=1, positionInRecipe=(21, 21)
+Ingredient: words=['Knochen'], altGrp=2, positionInRecipe=(24, 24)
+Ingredient: words=['Fleische'], positionInRecipe=(29, 29), ref=#Hasenfleisch
+Ingredient: words=['Wurzelwerk'], positionInRecipe=(31, 31), ref=#Wurzelwerk
+Ingredient: words=['Bratenjus'], positionInRecipe=(40, 40), ref=#Bratenjus
+Ingredient: words=['Salz'], positionInRecipe=(43, 43), ref=#Salz
+Ingredient: words=['Muskat'], positionInRecipe=(44, 44), ref=#Muskatnuß
+Ingredient: words=['Nelken'], positionInRecipe=(46, 46), ref=#Gewürznelken
+Ingredient: words=['Schwammoder', 'Griesmehl-Klößchen'], positionInRecipe=(62, 63)
+Ingredient: words=['Weißbrodscheiben'], positionInRecipe=(72, 72), ref=#WeißbrotToast
+----
+Retrieved:
+Ingredient: words=['Zwiebeln'], positionInRecipe=(8, 8), ref=#Zwiebel
+Ingredient: words=['Butter'], positionInRecipe=(12, 12), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(15, 15), ref=#Mehl
+Ingredient: words=['Fleische'], positionInRecipe=(29, 29), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: words=['Wurzelwerk'], positionInRecipe=(31, 31), ref=#Wurzelwerk
+Ingredient: words=['Bratenjus'], quantity=1, positionInRecipe=(40, 40), ref=#Bratenjus
+Ingredient: words=['Salz'], positionInRecipe=(43, 43), ref=#Salz
+Ingredient: words=['Muskat'], positionInRecipe=(44, 44), ref=#Muskatnuß
+Ingredient: words=['Nelken'], positionInRecipe=(46, 46), ref=#Gewürznelken
+Ingredient: words=['Butter'], quantity=1, positionInRecipe=(69, 69), ref=#Butter
+----
+
+Not retrieved: Ingredient: words=['Brustfleisch'], altGrp=2, positionInRecipe=(10, 10)
+B-22
+Golden Standard:
+Ingredient: words=['Klöße'], altGrp=1, positionInRecipe=(8, 8)
+Ingredient: words=['Brustfleisch'], altGrp=2, positionInRecipe=(10, 10)
+----
+Retrieved:
+Ingredient: words=['Klöße'], positionInRecipe=(8, 8)
+----
+
+Not retrieved: Ingredient: words=['Brustfleisch'], positionInRecipe=(22, 22)
+Not retrieved: Ingredient: words=['Schwamm'], altGrp=1, positionInRecipe=(67, 67)
+Not relevant but retrieved: Ingredient: words=['Muskat'], positionInRecipe=(78, 78), ref=#Muskatnuß
+B-23
+Golden Standard:
+Ingredient: words=['Krammetsvogel'], positionInRecipe=(7, 7)
+Ingredient: words=['Salz'], quantity=etwas, positionInRecipe=(12, 12), ref=#Salz
+Ingredient: words=['Butter'], positionInRecipe=(15, 15), ref=#Butter
+Ingredient: words=['Brustfleisch'], positionInRecipe=(22, 22)
+Ingredient: words=['Sellerie'], quantity=einige, positionInRecipe=(38, 38), unit=Scheibe, ref=#Sellerieblätter
+Ingredient: words=['Möhren'], positionInRecipe=(39, 39), ref=#Karotte
+Ingredient: words=['Zwiebeln'], positionInRecipe=(41, 41), ref=#Zwiebel
+Ingredient: words=['Mehl'], positionInRecipe=(46, 46), ref=#Mehl
+Ingredient: words=['Bouillon'], target=#Boullion, positionInRecipe=(54, 54)
+Ingredient: words=['Schwamm'], altGrp=1, positionInRecipe=(67, 67)
+Ingredient: words=['Griesmehl-Klöße'], altGrp=2, positionInRecipe=(69, 69)
+----
+Retrieved:
+Ingredient: words=['Krammetsvogel'], quantity=1, positionInRecipe=(7, 7), ref=#Krammetsvogel
+Ingredient: words=['Salz'], quantity=etwas, positionInRecipe=(12, 12), ref=#Salz
+Ingredient: words=['Butter'], positionInRecipe=(15, 15), ref=#Butter
+Ingredient: words=['Sellerie'], quantity=einige, positionInRecipe=(38, 38), unit=Scheibe, ref=#Knollensellerie #Sellerieblätter
+Ingredient: words=['Möhren'], positionInRecipe=(39, 39), ref=#Karotte
+Ingredient: words=['Zwiebeln'], positionInRecipe=(41, 41), ref=#Zwiebel
+Ingredient: words=['Mehl'], positionInRecipe=(46, 46), ref=#Mehl
+Ingredient: words=['Bouillon'], quantity=1, positionInRecipe=(54, 54)
+Ingredient: words=['Griesmehl-Klöße'], positionInRecipe=(69, 69)
+Ingredient: words=['Muskat'], positionInRecipe=(78, 78), ref=#Muskatnuß
+----
+
+Not retrieved: Ingredient: words=['Knochen'], optional=True, positionInRecipe=(10, 10)
+Not retrieved: Ingredient: words=['Kartoffeln'], positionInRecipe=(25, 25), ref=#Kartoffeln
+Not retrieved: Ingredient: words=['Petersilienblättern'], altGrp=2, positionInRecipe=(70, 70)
+Not relevant but retrieved: Ingredient: words=['Fleisch'], positionInRecipe=(13, 13), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+B-24
+Golden Standard:
+Ingredient: words=['Fleisch'], positionInRecipe=(5, 5)
+Ingredient: words=['Salz'], positionInRecipe=(7, 7), ref=#Salz
+Ingredient: words=['Knochen'], optional=True, positionInRecipe=(10, 10)
+Ingredient: words=['Kartoffeln'], positionInRecipe=(25, 25), ref=#Kartoffeln
+Ingredient: words=['Zwiebeln'], positionInRecipe=(26, 26), ref=#Zwiebel
+Ingredient: words=['Purree'], positionInRecipe=(29, 29), ref=#Porree
+Ingredient: words=['Sellerieknollen'], positionInRecipe=(31, 31), ref=#Knollensellerie
+Ingredient: words=['Sellerie'], altGrp=1, positionInRecipe=(68, 68), ref=#Sellerieblätter
+Ingredient: words=['Petersilienblättern'], altGrp=2, positionInRecipe=(70, 70)
+----
+Retrieved:
+Ingredient: words=['Fleisch'], quantity=1, positionInRecipe=(5, 5), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: words=['Salz'], positionInRecipe=(7, 7), ref=#Salz
+Ingredient: words=['Fleisch'], positionInRecipe=(13, 13), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: words=['Zwiebeln'], positionInRecipe=(26, 26), ref=#Zwiebel
+Ingredient: words=['Purree'], positionInRecipe=(29, 29), ref=#Porree
+Ingredient: words=['Sellerieknollen'], positionInRecipe=(31, 31), ref=#Knollensellerie
+Ingredient: words=['Sellerieknollen'], positionInRecipe=(46, 46), ref=#Knollensellerie
+Ingredient: words=['Sellerieknollen'], quantity=1, positionInRecipe=(65, 65), ref=#Knollensellerie
+Ingredient: words=['Sellerie'], positionInRecipe=(68, 68), ref=#Knollensellerie #Sellerieblätter
+----
+
+Not relevant but retrieved: Ingredient: words=['Erbsen'], positionInRecipe=(5, 5), ref=#Erbsen
+B-27
+Golden Standard:
+Ingredient: words=['Butter'], positionInRecipe=(21, 21), ref=#Butter
+Ingredient: words=['Brühe'], positionInRecipe=(39, 39)
+Ingredient: words=['Salz'], positionInRecipe=(46, 46), ref=#Salz
+Ingredient: words=['Mehl'], positionInRecipe=(51, 51), ref=#Mehl
+Ingredient: words=['Zwiebeln'], positionInRecipe=(53, 53), ref=#Zwiebel
+Ingredient: words=['Kartoffelklöße'], positionInRecipe=(56, 56)
+Ingredient: words=['Petersilie'], positionInRecipe=(61, 61), ref=#Petersilienblatt
+----
+Retrieved:
+Ingredient: words=['Erbsen'], positionInRecipe=(5, 5), ref=#Erbsen
+Ingredient: words=['Butter'], quantity=1, positionInRecipe=(21, 21), ref=#Butter
+Ingredient: words=['Brühe'], positionInRecipe=(39, 39)
+Ingredient: words=['Salz'], positionInRecipe=(46, 46), ref=#Salz
+Ingredient: words=['Butter'], positionInRecipe=(48, 48), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(51, 51), ref=#Mehl
+Ingredient: words=['Zwiebeln'], positionInRecipe=(53, 53), ref=#Zwiebel
+Ingredient: words=['Kartoffelklöße'], positionInRecipe=(56, 56)
+Ingredient: words=['Petersilie'], positionInRecipe=(61, 61), ref=#Petersilienblatt
+----
+
+Not relevant but retrieved: Ingredient: words=['Mehl'], positionInRecipe=(225, 225), ref=#Mehl
+Not relevant but retrieved: Ingredient: words=['Bohne'], quantity=1, positionInRecipe=(240, 240), ref=#BohneWeiß
+B-28
+Golden Standard:
+Ingredient: words=['Erbsen'], positionInRecipe=(7, 7), ref=#Erbsen
+Ingredient: words=['Rindfleisch'], optional=True, positionInRecipe=(49, 49), ref=#Rindkochfleisch
+Ingredient: words=['Mettwurst'], positionInRecipe=(53, 53), ref=#Mettwurst
+Ingredient: words=['Schweinschnauze'], positionInRecipe=(55, 55)
+Ingredient: words=['Ohren'], positionInRecipe=(57, 57)
+Ingredient: words=['Salz'], positionInRecipe=(114, 114), ref=#Salz
+Ingredient: words=['Purree'], positionInRecipe=(135, 135), ref=#Porree
+Ingredient: words=['Sellerieknollen'], positionInRecipe=(137, 137), ref=#Knollensellerie
+Ingredient: words=['Butter'], positionInRecipe=(183, 183), ref=#Butter
+Ingredient: words=['Zwiebeln'], positionInRecipe=(186, 186), ref=#Zwiebel
+Ingredient: words=['Salz'], positionInRecipe=(187, 187), ref=#Salz
+Ingredient: words=['Weißbrod'], positionInRecipe=(200, 200), ref=#WeißbrotToast
+----
+Retrieved:
+Ingredient: words=['Erbsen'], positionInRecipe=(3, 3), ref=#Erbsen
+Ingredient: words=['Erbsen'], positionInRecipe=(7, 7), ref=#Erbsen
+Ingredient: words=['Rindfleisch'], quantity=1, positionInRecipe=(49, 49), ref=#Rindkochfleisch
+Ingredient: words=['Mettwurst'], quantity=1, positionInRecipe=(53, 53), ref=#Mettwurst
+Ingredient: words=['Schweinschnauze'], positionInRecipe=(55, 55), ref=#Schweineschnauze
+Ingredient: words=['Ohren'], positionInRecipe=(57, 57), ref=#Ohr
+Ingredient: words=['Salz'], positionInRecipe=(80, 80), ref=#Salz
+Ingredient: words=['Erbsen'], positionInRecipe=(82, 82), ref=#Erbsen
+Ingredient: words=['Fleisch'], positionInRecipe=(109, 109), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: words=['Salz'], positionInRecipe=(114, 114), ref=#Salz
+Ingredient: words=['Erbsen'], positionInRecipe=(119, 119), ref=#Erbsen
+Ingredient: words=['Fleisch'], positionInRecipe=(125, 125), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: words=['Erbsen'], positionInRecipe=(132, 132), ref=#Erbsen
+Ingredient: words=['Purree'], positionInRecipe=(135, 135), ref=#Porree
+Ingredient: words=['Sellerieknollen'], positionInRecipe=(137, 137), ref=#Knollensellerie
+Ingredient: words=['Fleisch'], positionInRecipe=(167, 167), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: words=['Erbsen'], positionInRecipe=(174, 174), ref=#Erbsen
+Ingredient: words=['Butter'], quantity=1, positionInRecipe=(183, 183), ref=#Butter
+Ingredient: words=['Zwiebeln'], positionInRecipe=(186, 186), ref=#Zwiebel
+Ingredient: words=['Salz'], positionInRecipe=(187, 187), ref=#Salz
+Ingredient: words=['Fleisch'], positionInRecipe=(189, 189), ref=#Kalbkochfleisch #Hammelfleisch #Rindkochfleisch #Hasenfleisch
+Ingredient: words=['Butter'], positionInRecipe=(198, 198), ref=#Butter
+Ingredient: words=['Weißbrod'], positionInRecipe=(200, 200), ref=#WeißbrotToast
+Ingredient: words=['Butter'], positionInRecipe=(223, 223), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(225, 225), ref=#Mehl
+Ingredient: words=['Erbsen'], positionInRecipe=(230, 230), ref=#Erbsen
+Ingredient: words=['Bohne'], quantity=1, positionInRecipe=(240, 240), ref=#BohneWeiß
+Ingredient: words=['Erbsen'], quantity=1, positionInRecipe=(257, 257), unit=Flasche, ref=#Erbsen
+Ingredient: words=['Zwiebeln'], quantity=einige, positionInRecipe=(269, 269), ref=#Zwiebel
+Ingredient: words=['Erbsen'], positionInRecipe=(279, 279), ref=#Erbsen
+----
+
+Not retrieved: Ingredient: words=['Linsen'], positionInRecipe=(17, 17), ref=Linsen
+Not relevant but retrieved: Ingredient: words=['Butter'], positionInRecipe=(29, 29), ref=#Butter
+B-30
+Golden Standard:
+Ingredient: words=['Mettwurst'], altGrp=1, quantity=1, positionInRecipe=(8, 8), ref=#Mettwurst
+Ingredient: words=['Bauchspeck'], altGrp=2, positionInRecipe=(12, 12), ref=#Bauchspeck
+Ingredient: words=['Linsen'], positionInRecipe=(17, 17), ref=Linsen
+Ingredient: words=['Zwiebeln'], positionInRecipe=(25, 25), ref=#Zwiebel
+Ingredient: words=['Mehl'], positionInRecipe=(27, 27), ref=#Mehl
+Ingredient: words=['Essig'], positionInRecipe=(41, 41), ref=#Essig
+----
+Retrieved:
+Ingredient: words=['Mettwurst'], quantity=1, positionInRecipe=(8, 8), ref=#Mettwurst
+Ingredient: words=['Bauchspeck'], quantity=1, positionInRecipe=(12, 12), ref=#Bauchspeck
+Ingredient: words=['Zwiebeln'], positionInRecipe=(25, 25), ref=#Zwiebel
+Ingredient: words=['Mehl'], positionInRecipe=(27, 27), ref=#Mehl
+Ingredient: words=['Butter'], positionInRecipe=(29, 29), ref=#Butter
+Ingredient: words=['Essig'], positionInRecipe=(41, 41), ref=#Essig
+----
+
+Not retrieved: Ingredient: words=['Sauerampferblätter'], positionInRecipe=(16, 16), ref=#Sauerampfer
+Not retrieved: Ingredient: words=['Kalbfleischbouillon'], target=#Boullion, positionInRecipe=(24, 24)
+Not retrieved: Ingredient: words=['Eierklößchen'], altGrp=2, positionInRecipe=(44, 44)
+Not relevant but retrieved: Ingredient: words=['Muskat'], positionInRecipe=(31, 31), ref=#Muskatnuß
+Not relevant but retrieved: Ingredient: words=['Sahne'], positionInRecipe=(33, 33), ref=#Sahne
+B-31
+Golden Standard:
+Ingredient: words=['Mehl'], positionInRecipe=(3, 3), ref=#Mehl
+Ingredient: words=['Butter'], positionInRecipe=(7, 7), ref=#Butter
+Ingredient: words=['Sauerampferblätter'], positionInRecipe=(16, 16), ref=#Sauerampfer
+Ingredient: words=['Kalbfleischbouillon'], target=#Boullion, positionInRecipe=(24, 24)
+Ingredient: words=['Salz'], positionInRecipe=(28, 28), ref=#Salz
+Ingredient: words=['Eidottern'], quantity=einige, positionInRecipe=(36, 36), ref=#HühnereiEigelb
+Ingredient: words=['Weißbrod'], altGrp=1, positionInRecipe=(41, 41), ref=#WeißbrotToast
+Ingredient: words=['Eierklößchen'], altGrp=2, positionInRecipe=(44, 44)
+----
+Retrieved:
+Ingredient: words=['Mehl'], positionInRecipe=(3, 3), ref=#Mehl
+Ingredient: words=['Butter'], positionInRecipe=(7, 7), ref=#Butter
+Ingredient: words=['Salz'], quantity=1, positionInRecipe=(28, 28), ref=#Salz
+Ingredient: words=['Muskat'], positionInRecipe=(31, 31), ref=#Muskatnuß
+Ingredient: words=['Sahne'], positionInRecipe=(33, 33), ref=#Sahne
+Ingredient: words=['Eidottern'], quantity=einige, positionInRecipe=(36, 36), ref=#HühnereiEigelb
+Ingredient: words=['Weißbrod'], positionInRecipe=(41, 41), ref=#WeißbrotToast
+----
+
+Not retrieved: Ingredient: words=['Kalbfleisch-Bouillon'], target=#Boullion, positionInRecipe=(11, 11)
+B-32
+Golden Standard:
+Ingredient: words=['Butter'], positionInRecipe=(4, 4), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(6, 6), ref=#Mehl
+Ingredient: words=['Kalbfleisch-Bouillon'], target=#Boullion, positionInRecipe=(11, 11)
+Ingredient: words=['Salz'], positionInRecipe=(17, 17), ref=#Salz
+Ingredient: words=['Kerbel'], positionInRecipe=(25, 25), ref=#Kerbel
+Ingredient: words=['Eidotter'], positionInRecipe=(29, 29), ref=#HühnereiEigelb
+Ingredient: words=['Weißbrod'], positionInRecipe=(34, 34), ref=#WeißbrotToast
+----
+Retrieved:
+Ingredient: words=['Butter'], positionInRecipe=(4, 4), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(6, 6), ref=#Mehl
+Ingredient: words=['Salz'], positionInRecipe=(17, 17), ref=#Salz
+Ingredient: words=['Kerbel'], quantity=1, positionInRecipe=(25, 25), ref=#Kerbel
+Ingredient: words=['Eidotter'], quantity=1.0, positionInRecipe=(29, 29), ref=#HühnereiEigelb
+Ingredient: words=['Weißbrod'], positionInRecipe=(34, 34), ref=#WeißbrotToast
+Ingredient: words=['Mehls'], positionInRecipe=(44, 44), ref=#Mehl
+Ingredient: words=['Weißbrod'], positionInRecipe=(50, 50), ref=#WeißbrotToast
+----
+
+Not retrieved: Ingredient: words=['Dragon'], positionInRecipe=(9, 9), ref=#Estragon
+B-33
+Golden Standard:
+Ingredient: words=['Sauerampfer'], positionInRecipe=(4, 4), ref=#Sauerampfer
+Ingredient: words=['Portulac'], positionInRecipe=(5, 5), ref=#Portulak
+Ingredient: words=['Basilikum'], positionInRecipe=(6, 6), ref=#Basilikum
+Ingredient: words=['Kopfsalat'], positionInRecipe=(7, 7), ref=#Kopfsalat
+Ingredient: words=['Spinat'], positionInRecipe=(8, 8), ref=#Spinat
+Ingredient: words=['Dragon'], positionInRecipe=(9, 9), ref=#Estragon
+Ingredient: words=['Pimpernell'], positionInRecipe=(10, 10)
+Ingredient: words=['Schnittlauch'], positionInRecipe=(11, 11), ref=#Schnittlauch
+Ingredient: words=['Butter'], positionInRecipe=(39, 39), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(43, 43), ref=#Mehl
+Ingredient: words=['Bouillon'], target=#Boullion, optional=True, positionInRecipe=(58, 58)
+Ingredient: words=['Salz'], positionInRecipe=(67, 67), ref=#Salz
+Ingredient: words=['Kerbel'], positionInRecipe=(68, 68), ref=#Kerbel
+Ingredient: words=['Kartoffel'], altGrp=1, positionInRecipe=(74, 74)
+Ingredient: words=['Eierklöße'], altGrp=2, positionInRecipe=(76, 76)
+Ingredient: words=['Eidottern'], positionInRecipe=(84, 84), ref=#HühnereiEigelb
+----
+Retrieved:
+Ingredient: words=['Sauerampfer'], positionInRecipe=(4, 4), ref=#Sauerampfer
+Ingredient: words=['Portulac'], positionInRecipe=(5, 5), ref=#Portulak
+Ingredient: words=['Basilikum'], positionInRecipe=(6, 6), ref=#Basilikum
+Ingredient: words=['Kopfsalat'], positionInRecipe=(7, 7), ref=#Kopfsalat
+Ingredient: words=['Spinat'], positionInRecipe=(8, 8), ref=#Spinat
+Ingredient: words=['Pimpernell'], positionInRecipe=(10, 10), ref=#Pimpernell
+Ingredient: words=['Schnittlauch'], positionInRecipe=(11, 11), ref=#Schnittlauch
+Ingredient: words=['Butter'], quantity=1, positionInRecipe=(39, 39), ref=#Butter
+Ingredient: words=['Mehl'], positionInRecipe=(43, 43), ref=#Mehl
+Ingredient: words=['Bouillon'], positionInRecipe=(58, 58)
+Ingredient: words=['Salz'], positionInRecipe=(67, 67), ref=#Salz
+Ingredient: words=['Kerbel'], positionInRecipe=(68, 68), ref=#Kerbel
+Ingredient: words=['Kartoffel'], positionInRecipe=(74, 74)
+Ingredient: words=['Eierklöße'], positionInRecipe=(76, 76)
+Ingredient: words=['Eidottern'], positionInRecipe=(84, 84), ref=#HühnereiEigelb
+----
+
+Not retrieved: Ingredient: words=['Blüthe'], quantity=etwas, positionInRecipe=(55, 55)
+B-34
+Golden Standard:
+Ingredient: words=['Stärke'], altGrp=1, quantity=2, positionInRecipe=(4, 4), unit=EL, ref=#Stärke
+Ingredient: words=['Mehl'], altGrp=2, positionInRecipe=(7, 7), ref=#Mehl
+Ingredient: words=['Eidotter'], quantity=6, positionInRecipe=(9, 9), ref=#HühnereiEigelb
+Ingredient: words=['Wein'], quantity=1, positionInRecipe=(14, 14), unit=Flasche
+Ingredient: words=['Zucker'], positionInRecipe=(21, 21), ref=#Zucker
+Ingredient: words=['Zitronenscheiben'], quantity=einige, positionInRecipe=(27, 27), unit=Scheibe, ref=#Zitrone
+Ingredient: words=['Blüthe'], quantity=etwas, positionInRecipe=(55, 55)
+Ingredient: words=['Zucker'], positionInRecipe=(88, 88), ref=#Zucker
+Ingredient: words=['Zimmet'], positionInRecipe=(90, 90), ref=#Zimt
+Ingredient: words=['Zwieback'], positionInRecipe=(104, 104), ref=#Zwieback
+----
+Retrieved:
+Ingredient: words=['Stärke'], positionInRecipe=(4, 4), ref=#Stärke
+Ingredient: words=['Mehl'], positionInRecipe=(7, 7), ref=#Mehl
+Ingredient: words=['Eidotter'], quantity=6.0, positionInRecipe=(9, 9), ref=#HühnereiEigelb
+Ingredient: words=['Wein'], quantity=1, positionInRecipe=(14, 14), unit=Flasche, ref=#Rotwein #Weißwein
+Ingredient: words=['Zucker'], quantity=1, positionInRecipe=(21, 21), unit=Flasche, ref=#Zucker
+Ingredient: words=['Zitronenscheiben'], quantity=einige, positionInRecipe=(27, 27), ref=#Zitronenscheibe
+Ingredient: words=['Zucker'], positionInRecipe=(71, 71), ref=#Zucker
+Ingredient: words=['Klößchen'], quantity=1, positionInRecipe=(80, 80)
+Ingredient: words=['Zucker'], positionInRecipe=(88, 88), ref=#Zucker
+Ingredient: words=['Zimmet'], positionInRecipe=(90, 90), ref=#Zimt
+Ingredient: words=['Zwieback'], positionInRecipe=(104, 104), ref=#Zwieback
+----
+
+Not relevant but retrieved: Ingredient: words=['Wein'], positionInRecipe=(3, 3), ref=#Weißwein
+B-35
+Golden Standard:
+Ingredient: words=['Eier'], positionInRecipe=(14, 14), ref=#Ei
+Ingredient: words=['Mehls'], quantity=die Hälfte, positionInRecipe=(19, 19), ref=#Mehl
+----
+Retrieved:
+Ingredient: words=['Wein'], positionInRecipe=(3, 3), ref=#Weißwein
+Ingredient: words=['Eier'], positionInRecipe=(14, 14), ref=#Ei
+Ingredient: words=['Mehls'], positionInRecipe=(19, 19), ref=#Mehl
+----
+
+Not relevant but retrieved: Ingredient: words=['abgebrüht'], positionInRecipe=(12, 12)
+B-36
+Golden Standard:
+Ingredient: words=['Sago'], positionInRecipe=(5, 5), ref=#Sago
+Ingredient: words=['Zitronenscheiben'], quantity=einige, positionInRecipe=(23, 23), unit=Scheibe, ref=#Zitrone
+Ingredient: words=['Wein'], positionInRecipe=(38, 38), ref=#Rotwein
+Ingredient: words=['Zucker'], positionInRecipe=(48, 48), ref=#Zucker
+Ingredient: words=['Zimmet'], quantity=etwas, positionInRecipe=(61, 61), ref=#Zimt
+Ingredient: words=['Bisquit'], altGrp=1, positionInRecipe=(65, 65), ref=#Biskuit
+Ingredient: words=['Zwieback'], altGrp=2, positionInRecipe=(68, 68), ref=#Zwieback
+----
+Retrieved:
+Ingredient: words=['Wein'], positionInRecipe=(3, 3), ref=#Rotwein
+Ingredient: words=['Sago'], positionInRecipe=(5, 5), ref=#Sago
+Ingredient: words=['abgebrüht'], positionInRecipe=(12, 12)
+Ingredient: words=['Zitronenscheiben'], quantity=einige, positionInRecipe=(23, 23), ref=#Zitronenscheibe
+Ingredient: words=['Wein'], positionInRecipe=(38, 38), ref=#Rotwein
+Ingredient: words=['Zucker'], positionInRecipe=(48, 48), ref=#Zucker
+Ingredient: words=['Zimmet'], quantity=etwas, positionInRecipe=(61, 61), ref=#Zimt
+Ingredient: words=['Bisquit'], positionInRecipe=(65, 65), ref=#Biskuit
+Ingredient: words=['Zwieback'], positionInRecipe=(68, 68), ref=#Zwieback
+----
+
+Not relevant but retrieved: Ingredient: words=['Wein'], positionInRecipe=(6, 6), ref=#Weißwein
+B-37
+Golden Standard:
+Ingredient: words=['Gerste'], positionInRecipe=(8, 8), ref=#Perlgraupen
+Ingredient: words=['Butter'], quantity=etwas, positionInRecipe=(17, 17), ref=#Butter
+Ingredient: words=['Zitronenscheiben'], quantity=einige, positionInRecipe=(20, 20), unit=Scheibe, ref=#Zitrone
+Ingredient: words=['Rosinen'], positionInRecipe=(36, 36), ref=#Rosinen
+Ingredient: words=['Salz'], positionInRecipe=(41, 41), ref=#Salz
+Ingredient: words=['Zimmet'], positionInRecipe=(42, 42), ref=#Zimt
+Ingredient: words=['Wein'], positionInRecipe=(43, 43), ref=#Rotwein
+Ingredient: words=['Zucker'], positionInRecipe=(45, 45), ref=#Zucker
+Ingredient: atLeast=1, words=['Eidottern'], atMost=2, positionInRecipe=(52, 52), ref=#HühnereiEigelb
+----
+Retrieved:
+Ingredient: words=['Perlgerste'], positionInRecipe=(2, 2), ref=#Perlgraupen
+Ingredient: words=['Wein'], positionInRecipe=(6, 6), ref=#Weißwein
+Ingredient: words=['Gerste'], positionInRecipe=(8, 8), ref=#Perlgraupen #Gerste
+Ingredient: words=['Butter'], quantity=etwas, positionInRecipe=(17, 17), ref=#Butter
+Ingredient: words=['Zitronenscheiben'], quantity=einige, positionInRecipe=(20, 20), ref=#Zitronenscheibe
+Ingredient: words=['Rosinen'], positionInRecipe=(36, 36), ref=#Rosinen
+Ingredient: words=['Salz'], positionInRecipe=(41, 41), ref=#Salz
+Ingredient: words=['Zimmet'], positionInRecipe=(42, 42), ref=#Zimt
+Ingredient: words=['Wein'], positionInRecipe=(43, 43), ref=#Rotwein #Weißwein
+Ingredient: words=['Zucker'], positionInRecipe=(45, 45), ref=#Zucker
+Ingredient: atLeast=1.0, words=['Eidottern'], atMost=2.0, positionInRecipe=(52, 52), ref=#HühnereiEigelb
+Ingredient: words=['Wein'], positionInRecipe=(57, 57), ref=#Rotwein #Weißwein
+Ingredient: words=['Gerste'], quantity=1, positionInRecipe=(69, 69), ref=#Perlgraupen #Gerste
+Ingredient: words=['Zitrone'], quantity=1, positionInRecipe=(82, 82), unit=Scheibe, ref=#Zitrone
+Ingredient: words=['Rosinen'], positionInRecipe=(94, 94), ref=#Rosinen
+----
+
+Not relevant but retrieved: Ingredient: words=['Ei'], positionInRecipe=(71, 71), ref=#Ei
+B-44
+Golden Standard:
+Ingredient: words=['Milch'], quantity=0.5, positionInRecipe=(34, 34), unit=Maß, ref=#Kuhmilch
+Ingredient: words=['Sahne'], positionInRecipe=(37, 37), ref=#Sahne
+Ingredient: words=['Bier'], quantity=0.25, positionInRecipe=(48, 48), unit=Maß, ref=#Bier
+Ingredient: words=['Korinthen'], quantity=4, positionInRecipe=(51, 51), unit=Loth, ref=#Rosinen
+Ingredient: words=['Mehl'], quantity=1.5, positionInRecipe=(55, 55), unit=Loth, ref=#Mehl
+Ingredient: words=['Zucker'], quantity=2, positionInRecipe=(58, 58), unit=Loth, ref=#Zucker
+Ingredient: words=['Salz'], quantity=0.5, positionInRecipe=(61, 61), unit=Teelöffel, ref=#Salz
+Ingredient: words=['Eidotter'], quantity=1, positionInRecipe=(65, 65), ref=#HühnereiEigelb
+Ingredient: words=['Zimmet'], quantity=etwas, positionInRecipe=(118, 118), ref=#Zimt
+Ingredient: words=['Zwieback'], positionInRecipe=(243, 243), ref=#Zwieback
+Ingredient: words=['Butter'], positionInRecipe=(246, 246), ref=#Butter
+Ingredient: words=['Weißbrod'], positionInRecipe=(248, 248), ref=#WeißbrotToast
+----
+Retrieved:
+Ingredient: words=['Milch'], positionInRecipe=(2, 2), ref=#Kuhmilch
+Ingredient: words=['Milch'], quantity=0.5, positionInRecipe=(34, 34), unit=Maß, ref=#Kuhmilch
+Ingredient: words=['Sahne'], positionInRecipe=(37, 37), ref=#Sahne
+Ingredient: words=['Bier'], quantity=0.25, positionInRecipe=(48, 48), unit=Maß, ref=#Bier
+Ingredient: words=['Korinthen'], quantity=4.0, positionInRecipe=(51, 51), unit=Loth, ref=#Rosinen
+Ingredient: words=['Mehl'], quantity=1.5, positionInRecipe=(55, 55), unit=Loth, ref=#Mehl
+Ingredient: words=['Zucker'], quantity=2.0, positionInRecipe=(58, 58), unit=Loth, ref=#Zucker
+Ingredient: words=['Salz'], quantity=0.5, positionInRecipe=(61, 61), ref=#Salz
+Ingredient: words=['Eidotter'], quantity=1, positionInRecipe=(65, 65), ref=#HühnereiEigelb
+Ingredient: words=['Ei'], positionInRecipe=(71, 71), ref=#Ei
+Ingredient: words=['Salz'], positionInRecipe=(73, 73), ref=#Salz
+Ingredient: words=['Salz'], positionInRecipe=(108, 108), ref=#Salz
+Ingredient: words=['Eidotter'], positionInRecipe=(114, 114), ref=#HühnereiEigelb
+Ingredient: words=['Zimmet'], quantity=etwas, positionInRecipe=(118, 118), ref=#Zimt
+Ingredient: words=['Bier'], positionInRecipe=(137, 137), ref=#Bier
+Ingredient: words=['Korinthen'], positionInRecipe=(138, 138), ref=#Rosinen
+Ingredient: words=['Mehl'], positionInRecipe=(140, 140), ref=#Mehl
+Ingredient: words=['Milch'], positionInRecipe=(143, 143), ref=#Kuhmilch
+Ingredient: words=['Eidotter'], positionInRecipe=(162, 162), ref=#HühnereiEigelb
+Ingredient: words=['Milch'], quantity=1, positionInRecipe=(176, 176), ref=#Kuhmilch
+Ingredient: words=['Mehl'], quantity=1, positionInRecipe=(186, 186), ref=#Mehl
+Ingredient: words=['Milch'], positionInRecipe=(212, 212), ref=#Kuhmilch
+Ingredient: words=['Bier'], positionInRecipe=(214, 214), ref=#Bier
+Ingredient: words=['Mehl'], quantity=1.5, positionInRecipe=(232, 232), unit=Loth, ref=#Mehl
+Ingredient: words=['Eidotter'], quantity=1.0, positionInRecipe=(235, 235), ref=#HühnereiEigelb
+Ingredient: words=['Zwieback'], positionInRecipe=(243, 243), ref=#Zwieback
+Ingredient: words=['Butter'], positionInRecipe=(246, 246), ref=#Butter
+Ingredient: words=['Weißbrod'], positionInRecipe=(248, 248), ref=#WeißbrotToast
+----
+
+Not relevant but retrieved: Ingredient: words=['Gerste'], positionInRecipe=(11, 11), ref=#Perlgraupen #Gerste
+B-50
+Golden Standard:
+Ingredient: words=['Sago'], positionInRecipe=(3, 3), ref=#Sago
+Ingredient: words=['Milch'], positionInRecipe=(5, 5), ref=#Kuhmilch
+----
+Retrieved:
+Ingredient: words=['Sago'], positionInRecipe=(3, 3), ref=#Sago
+Ingredient: words=['Milch'], positionInRecipe=(5, 5), ref=#Kuhmilch
+Ingredient: words=['Gerste'], positionInRecipe=(11, 11), ref=#Perlgraupen #Gerste
+----
+
+Recall: 0.9334677419354839, 463, 496
+Precision: 0.9587458745874587, 581, 606
+--- Needed for evaluating: 0.8760614395141602 seconds ---
 
