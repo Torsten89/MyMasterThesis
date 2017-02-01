@@ -1,4 +1,5 @@
 from model.IngredientCandi import IngredientCandi
+
 def getElems(node, elemName, withAttris={}):
     """ withAttris = {key: iterator with possible values}
     """
@@ -56,7 +57,7 @@ def buildIngredientDict(dom):
                     __addAllToDict__(ingDict, word, [IngredientCandi(xmlID, basicForm)])
     
     #add candidates for verbose ingredients like Fleisch
-    verboseIngs = ["Fleisch"]
+    verboseIngs = ["Fleisch"] 
     for verboseIng in verboseIngs:
         ingDict[verboseIng] = []
     for key in ingDict.keys():

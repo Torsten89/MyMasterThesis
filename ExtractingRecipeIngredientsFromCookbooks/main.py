@@ -10,7 +10,8 @@ from evaluation.evalRecipes import evalFromFiles
 debug = True
 ergFilePath = "erg.xml"
 goldenStandardPath = "/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted.xml"
-rcpIds = ["B-{}".format(i) for i in range(1,51)]
+rcpIds = ["B-{}".format(i) for i in range(1, 51)]
+attris=("ref")
 ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
 unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng"))    
 if __name__ == '__main__':
@@ -21,8 +22,7 @@ if __name__ == '__main__':
     print('--- Needed for extracting and writingTo "{}": {} seconds ---'.format(ergFilePath, time.time() - startTime))
     
     startTime = time.time()  
-    evalFromFiles(goldenStandardPath, ergFilePath,
-                  rcpIds=["B-{}".format(i) for i in range(1,51)], attris=("ref"), debug=True)  
+    evalFromFiles(goldenStandardPath, ergFilePath, attris=attris, rcpIds=rcpIds, debug=True)  
     print('--- Needed for evaluating: {} seconds ---'.format(time.time() - startTime)) 
 
     

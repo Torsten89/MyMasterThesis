@@ -11,7 +11,7 @@ class TextualHelperTest(unittest.TestCase):
         lemmas = (lemma for (word, lemma) in getWordLemmaTuples(sentence))
         self.assertTrue("Scorzonerwurzel" in lemmas)
         self.assertTrue("Selleriewurzel" in lemmas)
-        
+         
     def testGetSentences(self):
         text = "Die Bärsche werden nicht wie in Nro. 20 bloß auf dem Bauche, sondern mit einem \
 Reibeisen ganz geschuppt und gereinigt und mit kochendem Salzwasser, Zwiebeln, ganzem \
@@ -27,7 +27,31 @@ gekocht.",
 gestoßenen Zwieback darunter, legt die Fische in eine Schüssel, bestreut sie damit \
 und gibt heiße Butter dazu."]
         self.assertEqual(expectedResult, list(splitIntoSentences(text)))
-
+         
+    def testHasenbraten(self):
+        s = 'Ist noch gutes Fleisch an einem Hasenbraten der schon zur Tafel gewesen ist, wird dies ganz fein gehackt, hinzugegeben:'
+        lemmaOfHasenbraten = getWordLemmaTuples(s)[6][1]
+        self.assertEqual(lemmaOfHasenbraten, "Hasenbraten")
+        
+    def testPersilien_Wurzel(self):
+        s = "Petersilien-Wurzel"
+        lemma = getWordLemmaTuples(s)[0][1]
+        self.assertEqual(lemma, "Petersilienwurzel")
+        
+    def testScorzoner_Wurzeln(self):
+        s = "Scorzoner-Wurzeln"
+        lemma = getWordLemmaTuples(s)[0][1]
+        self.assertEqual(lemma, "Scorzonerwurzel")
+        
+    def testSchwarz_brod(self):
+        s = "Halb Schwarz- halb Weißbrod wird mit wenig Wasser ganz weich gekocht."
+        lemma = getWordLemmaTuples(s)[1][1]
+        self.assertEqual(lemma, "Schwarzbrod")
+        
+    def testRindfleisch_Bouillon(self):
+        s = "Rindfleisch-Bouillon"
+        lemma = getWordLemmaTuples(s)[0][1]
+        self.assertEqual(lemma, "Rindfleischbouillon")
 
 if __name__ == "__main__":
     unittest.main()
