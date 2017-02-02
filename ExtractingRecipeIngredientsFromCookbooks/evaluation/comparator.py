@@ -51,6 +51,14 @@ def isBetween(t1, t2):
 
 def compare(i1, i2, attris):
     """ Compares 2 model.Ingriedent objects based on the given attri-set. """
+    if "ref" in attris:
+        #when many possible refs are given, it is assumed to be correct, when they share a common one
+        i1refs = i1.__dict__.get("ref").split()
+        i2refs = i2.__dict__.get("ref").split()
+        if not (i1refs == i2refs or any([i1ref in i2refs for i1ref in i1refs])):
+            return False
+        attris.remove("ref")
+        
     for attriName in attris:
         if i1.__dict__.get(attriName) != i2.__dict__.get(attriName):
             return False

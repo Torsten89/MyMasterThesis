@@ -10,6 +10,9 @@ from informationExtraction.unitTest.TextualHelperTest import TextualHelperTest
 from informationExtraction.unitTest.QuantityExtractorTest import QuantityExtractorTest
 from informationExtraction.unitTest.UnitExtractorTest import UnitExtractorTest
 from informationExtraction.unitTest.ExtractorTest import ExtractorTest
+from informationExtraction.unitTest.DontUseRulesTest import DontUseRuleTest
+from informationExtraction.unitTest.OptionalRulesTest import OptionalRuleTest
+from informationExtraction.unitTest.AltGrpRulesTest import AltGrpRuleTest
 from evaluation.unitTest.EvalRecipesTest import EvalRecipesTest 
 from evaluation.unitTest.ComparatorTest import ComparatorTest 
 
@@ -25,6 +28,9 @@ def getTests():
             unittest.TestLoader().loadTestsFromTestCase(QuantityExtractorTest),
             unittest.TestLoader().loadTestsFromTestCase(UnitExtractorTest),
             unittest.TestLoader().loadTestsFromTestCase(ExtractorTest),
+            unittest.TestLoader().loadTestsFromTestCase(DontUseRuleTest),
+            unittest.TestLoader().loadTestsFromTestCase(OptionalRuleTest),
+            unittest.TestLoader().loadTestsFromTestCase(AltGrpRuleTest),
             unittest.TestLoader().loadTestsFromTestCase(EvalRecipesTest),
             unittest.TestLoader().loadTestsFromTestCase(ComparatorTest)
             ]

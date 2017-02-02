@@ -4,6 +4,8 @@ class WordProperty(object):
     quantity = "quantity"
     unit = "unit"
     ingredient = "ingredient" # self.properties["ingredient"] contains a list of model.IngredientCandi objects
+    optional = "optional"
+    altGrp = "altGrp"
     
     def __init__(self, word, lemma, properties):
         self.word = word
@@ -38,9 +40,12 @@ class WordProperty(object):
         if refCandis:
             resultAttris.append('ref="{}"'.format(" ".join(["#"+candi for candi in refCandis])))
         
-        # target    
-        # optional
-        # altGrp
+        if self.properties.get(WordProperty.optional):
+            resultAttris.append('optional="True"')
+        
+        altGrp = self.properties.get(WordProperty.altGrp)
+        if altGrp:
+            resultAttris.append('altGrp="{}"'.format(altGrp))
             
         return " ".join(resultAttris)
 

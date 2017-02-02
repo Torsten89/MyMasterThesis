@@ -68,7 +68,8 @@ def removePunctuations(word):
     
     
 if __name__ == "__main__":
-    s = "Linsen"
+    s = "Der Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und \
+statt Madeira kann man weißen Franzwein und etwas Rum nehmen"
     for w, pos, l in treeTagger.tag(s):
         print(w, pos, l)
 

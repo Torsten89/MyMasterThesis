@@ -6,8 +6,11 @@
 
 from informationExtraction.dissolveAmbiguityRules import dissolveAmbiguityRule
 from informationExtraction.entityRelationRules import findQuantityAnfUnitOfIngredientRule
+from informationExtraction.dontUseRules import dontUseRule
+from informationExtraction.altGrpRules import altGrpRule
+from informationExtraction.optionalRules import optionalRule
 
-rules = set([dissolveAmbiguityRule, findQuantityAnfUnitOfIngredientRule])
+rules = (dissolveAmbiguityRule, findQuantityAnfUnitOfIngredientRule, dontUseRule, altGrpRule, optionalRule)
 #rule for opt
 #rule for alt (append WP with alt target="1 2")
 #rule for dontUse (set WordProperty.ingredient to empty) 

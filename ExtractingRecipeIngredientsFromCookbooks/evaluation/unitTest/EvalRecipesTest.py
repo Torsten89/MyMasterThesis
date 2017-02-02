@@ -16,14 +16,14 @@ class EvalRecipesTest(unittest.TestCase):
 
     def testPrecisionOf2Recipes(self):
         iEIngs, goldenStandardIngs = getIEIngsAndGoldenStandardIngs()
-        attris = ("ref")
+        attris = set(("ref",))
         retrievedAndRelevant, relevant = recallOf2Recipes(goldenStandardIngs, iEIngs, attris)
         self.assertEqual(1, retrievedAndRelevant)
         self.assertEqual(1, relevant)
 
     def testRecallOf2Recipes(self):
         iEIngs, goldenStandardIngs = getIEIngsAndGoldenStandardIngs()
-        attris = ("ref")
+        attris = set(("ref",))
         retrievedAndRelevant, retrieved = precisionOf2Recipes(goldenStandardIngs, iEIngs, attris)
         self.assertEqual(1, retrievedAndRelevant)
         self.assertEqual(3, retrieved)

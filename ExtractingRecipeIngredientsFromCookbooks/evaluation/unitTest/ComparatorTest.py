@@ -22,56 +22,71 @@ class ComparatorTest(unittest.TestCase):
         self.assertFalse(isBetween((4,6), (3,3)))
         
     def testCompare1(self):
-        i1 = Ingredient({"ref":"#Knollenselerie", "quantity":"1"}, ['Sellerieknolle'], (0,0))
-        i2 = Ingredient({"ref":"#Knollenselerie", "quantity":"8"}, ['Sellerieknolle'], (0,0))
-        self.assertTrue(compare(i1, i2, attris=("ref")))
+        i1 = Ingredient({"ref":"#Knollensellerie", "quantity":"1"}, ['Sellerieknolle'], (0,0))
+        i2 = Ingredient({"ref":"#Knollensellerie", "quantity":"8"}, ['Sellerieknolle'], (0,0))
+        self.assertTrue(compare(i1, i2, attris=set(("ref",))))
         
     def testCompare2(self):
-        i1 = Ingredient({"ref":"#Knollenselerie", "quantity":"1"}, ['Sellerieknolle'], (0,0))
-        i2 = Ingredient({"ref":"#Knollenselerie", "quantity":"8"}, ['Sellerieknolle'], (0,0))
-        self.assertFalse(compare(i1, i2, attris=("ref", "quantity")))
-         
+        i1 = Ingredient({"ref":"#Knollensellerie", "quantity":"1"}, ['Sellerieknolle'], (0,0))
+        i2 = Ingredient({"ref":"#Weizengrießmehl #Griesmehl", "quantity":"8"}, ['Sellerieknolle'], (0,0))
+        self.assertFalse(compare(i1, i2, attris=set(("ref",))))
+        
+    def testCompareRef1(self):
+        i1 = Ingredient({"ref":"#Griesmehl", "quantity":"1"}, ['Sellerieknolle'], (0,0))
+        i2 = Ingredient({"ref":"#Knollensellerie", "quantity":"8"}, ['Sellerieknolle'], (0,0))
+        self.assertFalse(compare(i1, i2, attris=set(("ref",))))
+        
+    def testCompareRef2(self):
+        i1 = Ingredient({"ref":"#Knollensellerie #Griesmehl", "quantity":"1"}, ['Sellerieknolle'], (0,0))
+        i2 = Ingredient({"ref":"#Knollensellerie", "quantity":"8"}, ['Sellerieknolle'], (0,0))
+        self.assertTrue(compare(i1, i2, attris=set(("ref"))))
+        
+    def testCompareRef3(self):
+        i1 = Ingredient({"ref":"#Knollensellerie #Griesmehl", "quantity":"1"}, ['Sellerieknolle'], (0,0))
+        i2 = Ingredient({"ref":"#Knollensellerie", "quantity":"8"}, ['Sellerieknolle'], (0,0))
+        self.assertFalse(compare(i1, i2, attris=set(("ref", "quantity"))))
+        
     def testIngInIngsExactMatch1(self):
         ing = Ingredient({"ref":"#Mehl"}, ["Mehl"], (3,3))
-        self.assertTrue(ingInIngsExactMatch(ing, getIngs(), ("ref",)))
+        self.assertTrue(ingInIngsExactMatch(ing, getIngs(), set(("ref",))))
          
     def testIngInIngsExactMatch2(self):
         ing = Ingredient({"ref":"#Mehl"}, ["Mehl"], (4,4))
-        self.assertFalse(ingInIngsExactMatch(ing, getIngs(), ("ref",)))
+        self.assertFalse(ingInIngsExactMatch(ing, getIngs(), set(("ref",))))
        
     def testIngInIngsExactMatch3(self):
         ing = Ingredient({"ref":"#Mehl", "quantity":"2"}, ["Mehl"], (3,3))
-        self.assertTrue(ingInIngsExactMatch(ing, getIngs(), ("ref",)))
+        self.assertTrue(ingInIngsExactMatch(ing, getIngs(), set(("ref",))))
            
     def testIngInIngsExactMatch4(self):
         ing = Ingredient({"ref":"#Mehl", "quantity":"2"}, ["Mehl"], (3,3))
-        self.assertFalse(ingInIngsExactMatch(ing, getIngs(), ("ref", "quantity")))
+        self.assertFalse(ingInIngsExactMatch(ing, getIngs(), set(("ref", "quantity"))))
          
     def testIngInIngsRoughMatch1(self):
         ing = Ingredient({"ref":"#Zucker", "quantity":"1", "unit":"EL"}, ["Zucker"], (0,0))
-        self.assertTrue(ingInIngsRoughMatch(ing, getIngs(), getIngs(), ("ref", "quantity", "unit")))
+        self.assertTrue(ingInIngsRoughMatch(ing, getIngs(), getIngs(), set(("ref", "quantity", "unit"))))
          
     def testIngInIngsRoughMatch2(self):
         ing = Ingredient({"ref":"#Zucker"}, ["Zucker"], (0,0))
-        self.assertTrue(ingInIngsRoughMatch(ing, getIngs(), getIngs(), ("ref", "quantity", "unit")))
+        self.assertTrue(ingInIngsRoughMatch(ing, getIngs(), getIngs(), set(("ref", "quantity", "unit"))))
          
     def testIngInIngsRoughMatch3(self):
         ing = Ingredient({"ref":"#Zucker"}, ["Zucker"], (0,0))
         ingsExtracted = [ing]
-        self.assertFalse(ingInIngsRoughMatch(ing, getIngs(), ingsExtracted, ("ref", "quantity", "unit")))
+        self.assertFalse(ingInIngsRoughMatch(ing, getIngs(), ingsExtracted, set(("ref", "quantity", "unit"))))
          
     def testIngInIngsRoughMatch4(self):
         ing = Ingredient({"ref":"#Kalsbrühe"}, ["Kalbsbrühe"], (0,0))
-        self.assertTrue(ingInIngsRoughMatch(ing, getIngs(), getIngs(), ("ref", "quantity", "unit")))
+        self.assertTrue(ingInIngsRoughMatch(ing, getIngs(), getIngs(), set(("ref", "quantity", "unit"))))
          
     def testIngInIngsRoughMatch5(self):
         ing = Ingredient({"ref":"#asf"}, ["Biokleidung"], (0,0))
-        self.assertFalse(ingInIngsRoughMatch(ing, getIngs(), getIngs(), ("ref", "quantity", "unit")))
+        self.assertFalse(ingInIngsRoughMatch(ing, getIngs(), getIngs(), set(("ref", "quantity", "unit"))))
         
     def testIngInIngsRoughMatch6(self):
         ing = Ingredient({"ref":"#Knollensellerie #Sellerieblätter"}, ["Sellerie"], (17,17))
         goldenStandardIngs = [Ingredient({"ref":"#Knollensellerie"}, ["Knollensellerie"], (0,0))]
-        self.assertTrue(ingInIngsRoughMatch(ing, goldenStandardIngs, [ing]+goldenStandardIngs, ("ref")))
+        self.assertTrue(ingInIngsRoughMatch(ing, goldenStandardIngs, [ing]+goldenStandardIngs, set(("ref",))))
         
         
 def getIngs():
