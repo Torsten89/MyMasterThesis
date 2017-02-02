@@ -193,7 +193,7 @@
                   <cue:recipeIngredient ref="#Mehl" altGrp="2">Mehl</cue:recipeIngredient> weg
                   <cue:alt target="1 2"/>. Wird das Fleisch nach derselben gegessen, schneidet man
                es vor dem Kochen in passende viereckige Stückchen, und gibt eine
-                  <cue:recipeIngredient target="#P-23">Meerrettig-Sauce</cue:recipeIngredient>
+                  <cue:recipeIngredient target="#P-23" optional="True">Meerrettig-Sauce</cue:recipeIngredient>
                dabei. </p>
             <p>Kalbfleischsuppe muß 1½ — 2 Stunden kochen.</p>
 
@@ -274,7 +274,7 @@
                   ref="#Perlgraupen" optional="True">Perlgerste</cue:recipeIngredient> zur Suppe,
                die jedoch wohl ½ Stunde länger kochen muß. <cue:recipeIngredient altGrp="1"
                   >Krebsklöße</cue:recipeIngredient> und
-                  <cue:recipeIngredient>Krebsbutter</cue:recipeIngredient> sind vorzüglich gut
+                  <cue:recipeIngredient altGrp="1">Krebsbutter</cue:recipeIngredient> sind vorzüglich gut
                darin; in Ermangelung derselben nehme man <cue:recipeIngredient altGrp="2"
                   >Klöße</cue:recipeIngredient> nach Belieben <cue:alt target="1 2"/> und rühre die
                Suppe mit etwas fein gehackter <cue:recipeIngredient ref="#Petersilienblatt"
@@ -297,9 +297,9 @@
                   >Perlgerste</cue:recipeIngredient> oder <cue:recipeIngredient ref="#Reis"
                   altGrp="2">Reis</cue:recipeIngredient> hineingegeben<cue:alt target="1 2"/>, so
                wie ½ Stunde vor dem Anrichten abgekochte <cue:recipeIngredient ref="#SpargelGekocht"
-                  altGrp="1">Spargelköpfe</cue:recipeIngredient> oder etwas <cue:recipeIngredient
-                  quantity="etwas" ref="#BlumenkohlGekocht" altGrp="2"
-                  >Blumenkohl</cue:recipeIngredient>, was man haben kann <cue:alt target="1 2"/>.
+                  altGrp="3">Spargelköpfe</cue:recipeIngredient> oder etwas <cue:recipeIngredient
+                  quantity="etwas" ref="#BlumenkohlGekocht" altGrp="4"
+                  >Blumenkohl</cue:recipeIngredient>, was man haben kann <cue:alt target="3 4"/>.
                Ist dem Kranken ein <cue:recipeIngredient ref="#HühnereiEigelb" quantity="1"
                   optional="True">Eidotter</cue:recipeIngredient> erlaubt, so wird die Suppe damit
                abgerührt. </p>
@@ -422,7 +422,7 @@
                   <cue:recipeIngredient ref="#Kalbskopf">Kalbskopf</cue:recipeIngredient>, eine
                   <cue:recipeIngredient ref="#Schweineschnauze" quantity="1"
                   >Schweineschnauze</cue:recipeIngredient> und <cue:recipeIngredient
-                  ref="#Schweineohr">Ohren</cue:recipeIngredient>, einen <cue:recipeIngredient
+                  ref="#Ohr">Ohren</cue:recipeIngredient>, einen <cue:recipeIngredient
                   ref="#Ochsengaumen" quantity="1">Ochsengaumen</cue:recipeIngredient> und eine
                geräucherte <cue:recipeIngredient ref="#Ochsenzunge" quantity="1"
                   >Ochsenzunge</cue:recipeIngredient> zu Feuer und kocht dies Alles gahr, aber nicht
@@ -452,7 +452,7 @@
                   >Soja</cue:recipeIngredient> macht die Suppe gewürzreicher, kann jedoch gut
                wegbleiben, und statt <cue:recipeIngredient ref="#Madeira" altGrp="1"
                   >Madeira</cue:recipeIngredient> kann man <cue:recipeIngredient
-                  ref="weißen_Franzwein" altGrp="2">weißen Franzwein</cue:recipeIngredient> und
+                  ref="weißer_Franzwein" altGrp="2">weißen Franzwein</cue:recipeIngredient> und
                etwas <cue:recipeIngredient ref="#Rum" altGrp="2" quantity="etwas"
                   >Rum</cue:recipeIngredient> nehmen<cue:alt target="1 2"/>. Sowohl die
                   <cue:recipeIngredient ref="#Boullion">Bouillon</cue:recipeIngredient> als

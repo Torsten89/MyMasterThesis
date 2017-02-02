@@ -13,9 +13,6 @@
 		<cue:prefBasicForm>Schweineschnauze</cue:prefBasicForm>
 		<cue:altBasicForm>Schweinschnauze</cue:altBasicForm>
 	</cue:ingredient>
-	<cue:ingredient xml:id="Schweineohr">
-		<cue:prefBasicForm>Schweineohr</cue:prefBasicForm>
-	</cue:ingredient>
 	<cue:ingredient xml:id="Ochsengaumen">
 		<cue:prefBasicForm>Ochsengaumen</cue:prefBasicForm>
 	</cue:ingredient>
