@@ -304,7 +304,7 @@
 				<head> Hammelfleischsuppe.</head>
 				<p>
 					 Das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
 					 wird in Stückchen gehauen, gut gewaschen, mit 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 ausgeschäumt, 
@@ -399,7 +399,7 @@
 					 und zu 12 Personen etwa 24 Stück 
 					<cue:recipeIngredient quantity="24.0" ref="#Flusskrebs">Krebse</cue:recipeIngredient>
 					. Dann wird das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
 					 aus Scheeren und Schwänzen gebrochen, die sämmtlichen Schalen im Mörser nicht zu fein gestoßen und über Feuer mit einem großen Stück frischer 
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 durchgerührt, bis diese roth wird und zu steigen anfängt. Nun läßt man darin so viel 
@@ -549,7 +549,7 @@
 					 und eine geräucherte 
 					<cue:recipeIngredient quantity="1" ref="#Ochsenzunge">Ochsenzunge</cue:recipeIngredient>
 					 zu Feuer und kocht dies Alles gahr, aber nicht zu weich. Kalt, schneidet man es in kleine, länglich viereckige Stückchen, gibt das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
 					 in die 
 					<cue:recipeIngredient>Bouillon</cue:recipeIngredient>
 					, nebst braunem 
@@ -620,7 +620,7 @@
 					 und 
 					<cue:recipeIngredient>Kalbskopfbrühe</cue:recipeIngredient>
 					 dazu, gibt das geschnittene 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Cayennepfeffer">Cayenne-Pfeffer</cue:recipeIngredient>
 					 und braunes 
@@ -680,7 +680,7 @@
 					 Man reinige einen großen 
 					<cue:recipeIngredient quantity="1" ref="#Hase">Hasen</cue:recipeIngredient>
 					, fange das Blut sorgfältig auf, zerschlage die Knochen, zerschneide das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
 					, jedoch wird der Rücken zurückgelegt, und koche Beides mit 2—3 Pfund 
 					<cue:recipeIngredient atLeast="2.0" atMost="3.0" ref="#Rindkochfleisch" unit="Pfund">Rindfleisch</cue:recipeIngredient>
 					, 3 Loth 
@@ -725,7 +725,7 @@
 				</head>
 				<p>
 					 Ist noch gutes 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
 					 an einem 
 					<cue:recipeIngredient quantity="1" ref="#Hasenbraten">Hasenbraten</cue:recipeIngredient>
 					, der schon zur Tafel gewesen ist, wird dies ganz fein gehackt, hinzugegeben: etwa für 8 Pfennig in Wasser eingeweichtes und ausgedrücktes 
@@ -765,13 +765,13 @@
 					), in Scheiben geschnitten, nebst 2—3 Löffel 
 					<cue:recipeIngredient atLeast="2.0" atMost="3.0" ref="#Mehl" unit="Scheibe">Mehl</cue:recipeIngredient>
 					 braun, läßt dann das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
 					 und zuletzt die Hasenknochen darin rösten; gibt nun so viel Wasser, als nöthig ist, hinzu, auf jede Person etwa ½ bis ¾ Maß gerechnet. Wenn 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 vom 
 					<cue:recipeIngredient ref="#Hase">Hasen</cue:recipeIngredient>
 					 da ist, kommt sie hinzu. Ist das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
 					 ausgekocht und das 
 					<cue:recipeIngredient ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient>
 					 weich, reibt man die Suppe durch ein Sieb, bringt sie wieder zum Kochen, würzt sie mit 
@@ -798,7 +798,7 @@
 					 braun gemacht, 
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					 gleichfalls darin gebräunt, das zerhackte Hasengerippe, oder auch Knochen von anderem, gutem gebratenem 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleische</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleische</cue:recipeIngredient>
 					 nebst 
 					<cue:recipeIngredient ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient>
 					 eine Weile darin durchgebraten und kochendes Wasser und 
@@ -861,11 +861,11 @@
 				<head> Kartoffelsuppe.</head>
 				<p>
 					 Es wird ein Stück 
-					<cue:recipeIngredient quantity="1" ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
 					 mit 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 oder auch Knochen von gutem 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
 					, die klein gehauen und gewaschen sind, zeitig zu Feuer gesetzt, ausgeschäumt, 
 					<cue:recipeIngredient ref="#Kartoffeln">Kartoffeln</cue:recipeIngredient>
 					, 
@@ -1003,13 +1003,13 @@
 					 die 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					 hart macht. Die geräucherte Wurst muß heiß abgewaschen und wenn sie etwa sehr trocken sein sollte, die vorige Nacht eingewässert sein, wodurch sie weicher wird. Das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
 					 muß man mit wenig 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 ausschäumen und die abgeschütteten 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					 hineingeben. Was es nun an 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
 					 sein soll, läßt man mit den 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					 und reichlich 
@@ -1017,7 +1017,7 @@
 					 und 
 					<cue:recipeIngredient ref="#Knollensellerie">Sellerieknollen</cue:recipeIngredient>
 					 weich werden, während man im Anfang zuweilen einen Guß kaltes Wasser nachschüttet, welches das schnellere Weichwerden befördert. Sie müssen ununterbrochen, aber nicht zu stark kochen. Dann nimmt man das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
 					 und die Knollen heraus, reibt die 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					 durch einen Durchschlag und läßt sie mit in 
@@ -1027,7 +1027,7 @@
 					, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, dem 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hasenfleisch #Kalbkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Hasenfleisch #Kalbkochfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
 					 und den Knollen eben durchkochen. Es wird in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 geröstetes 
