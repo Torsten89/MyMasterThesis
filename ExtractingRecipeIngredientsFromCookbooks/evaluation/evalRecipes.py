@@ -68,6 +68,7 @@ def evalFromFiles(pathToGoldenStandardRcps, pathToIERcps, attris, rcpIds=[], deb
             
     print("Recall: {}, {}, {}".format(recall(relevantAndRetrieved, relevant), relevantAndRetrieved, relevant)) 
     print("Precision: {}, {}, {}".format(precision(retrievedAndRelevant, retrieved), retrievedAndRelevant, retrieved))
+         
             
 if __name__ == '__main__':
     startTime = time.time()    

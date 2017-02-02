@@ -12,8 +12,14 @@ def dictBasedEnrichment(text, ingE, unitE):
         elif unitE.getUnit(lemma):
             properties[WordProperty.unit] = lemma
         else:
-            ingCandis = ingE.getIngredientCandidates(lemma)
-            if ingCandis is not None: properties[WordProperty.ingredient] = ingCandis
+            if lemma[0].isupper():
+                ingCandis = ingE.getIngredientCandidates(lemma)
+                if ingCandis is None:
+                    # Mrs. Davidis often uses an "n" in the plural form, which our lemmatisation / TreeTagger could not handle.
+                    # E.g.: 2 Eidottern, 2 Saucissen, 2 Pfefferkörnern, ...
+                    # Only trigger, when word is not an ingredient. Otherwise it would ruin words like 'Thimian' or 'Majoran'
+                    if lemma[-1]=="n": ingCandis = ingE.getIngredientCandidates(lemma[:-1])
+                if ingCandis is not None: properties[WordProperty.ingredient] = ingCandis
                 
         result.append(WordProperty(word, lemma, properties))
     

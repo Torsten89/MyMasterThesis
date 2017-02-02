@@ -47,6 +47,11 @@ class DictBasedExtractorTest(unittest.TestCase):
         wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)
         self.assertIsNotNone(wordProperties[14].properties.get(WordProperty.ingredient))
         
+    def testAbbrühen(self):
+        s = "Das Fleisch abbrühen."
+        wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)
+        self.assertIsNone(wordProperties[2].properties.get(WordProperty.ingredient))
+        
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']

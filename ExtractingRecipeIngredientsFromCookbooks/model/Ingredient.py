@@ -1,7 +1,8 @@
 class Ingredient:
     """ A class which bundles attributes of an ingredient.
         It can only have attributes, which are specified in Ingredient.allowedAttris,
-        which correspond to cueML recipeIngredient Element, and must have the words, which are tagged as an ingredient.
+        which correspond to cueML recipeIngredient Element, and must have the words,
+        as well as their absolute position in the recipe, which are tagged as an ingredient.
         When an ingredient doesn't specify an attribute, this attribute does not exist in the object.
     """
     # {attriName: cueMLName} these two can be different. E.G. yield is a cueML name, but not a valid identifier for python
@@ -21,7 +22,7 @@ class Ingredient:
             positionInRecipe is the absolute (start and end) position of the words in the recipe, ignoring punctuation - 
                 E.g. in "Suppe von Sago und..." it would be (2,2) for "Sago".
         """
-        self.words = words
+        self.words = words # nice for debugging
         self.positionInRecipe = positionInRecipe # important for evaluation
         for attriName, value in d.items():
             if attriName not in Ingredient.allowedAttris:
