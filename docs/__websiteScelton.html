@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Davidis's Kochbuch</title>
+		<title>Davidis Kochbuch</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         
@@ -13,37 +13,21 @@
 	
 	<body style="padding-top:50px"> <!-- padding because otherwise navbar is over the beginning of the content -->
         <div id="navbar"></div>
-	
+
 		<div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <center>
-                        <h2><b>Digitale Aufarbeitung:</b></h2>
-                        <h1><i>Praktisches Kochbuch für die gewöhnliche und feinere Küche</i></h1>
-                        <h2>von Henriette Davidis<br/>4. Aufl. Bielefeld, 1849</h2>
-                    </center>
                 </div>
             </div>
-            
-            <div class="row">
-				<div class="col-md-8 col-md-push-4">
-					<div class="row">
-                        Kacheln
-                    </div>
-				</div>
-				
-				<div class="col-md-4 col-md-pull-8">
-					Foto vom Buch
-				</div>
-			</div>
         </div>
 		
         
-		<script>
+        <script>
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                    $("#navbar").html(xhr.responseText);
+                   //$("#Problemstellung").addClass("active");
                 }
             };
             xhr.open("GET", "fragments/navbar.html", false);
