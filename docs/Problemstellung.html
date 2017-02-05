@@ -6,80 +6,114 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/myStyle.css">
         
 		<script src="js/jquery.min.js"></script>
-		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-        <script src="js/references.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	</head>
 	
 	<body style="padding-top:50px"> <!-- padding because otherwise navbar is over the beginning of the content -->
         <div id="navbar"></div>
-
-		<div class="container">
+        
+<div class="navbar navbar-fixed-left">
+  <ul class="nav navbar-nav">
+   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+     <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Sub Menu1</a></li>
+      <li><a href="#">Sub Menu2</a></li>
+      <li><a href="#">Sub Menu3</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Sub Menu4</a></li>
+      <li><a href="#">Sub Menu5</a></li>
+     </ul>
+   </li>
+   <li><a href="#">Link2</a></li>
+   <li><a href="#">Link3</a></li>
+   <li><a href="#">Link4</a></li>
+   <li><a href="#">Link5</a></li>
+  </ul>
+</div>
+<div class="container">
+ <div class="row">
+   <h2>Left side Navigation bar (Fixed)</h2>
+   
+   <p>Left side Navigation</p>
+ </div>
+</div>
+        
+        
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h1>Problemstellung</h1>
-                    <p>Ziel dieser Arbeit ist die Erstellung einer digitalen Edition von Davidis "Praktisches Kochbuch für die gewöhnliche und feinere Küche", welche für kulinarische Analysen weiter verwendet werden kann. Eine <a href="http://www.deutschestextarchiv.de/book/view/davidis_kochbuch_1849?p=7">Transkription des Kochbuches</a> wurde bereits vom Deutschem Text Archiv angefertigt. Ein beispielhafter Auszug ist in Abb. 1 gezeigt.  In Abb. 1c ist die <i>TEI</i>-basierte Kodierung der Transkription zu sehen, welche einen Schwerpunkt auf linguistische Features legt.
+                    <p>Ziel dieser Arbeit ist die Erstellung einer digitalen Edition von Davidis "Praktisches Kochbuch für die gewöhnliche und feinere Küche", welche für kulinarische Analysen weiter verwendet werden kann. Eine <a href="http://www.deutschestextarchiv.de/book/view/davidis_kochbuch_1849?p=7" title="Link zur Transkription">Transkription des Kochbuches</a> wurde bereits vom Deutschem Text Archiv angefertigt. Ein beispielhafter Auszug ist in Abb. 1 zu sehen. Abb. 1a zeigt den Scan eines Rezeptes, Abb. 1b die textuelle Form und Abb. 1c die <i>TEI</i>-basierte Kodierung der textuellen Form, welche einen Schwerpunkt auf linguistische Features legt.
                     </p>
-                    
+
                     <p>
-                        <figure>
-                            <img src="images/Problemstellung/B3Bild.jpg" alt="bla" width="304" height="228"/>
-                            <figcaption>Fig1. - bla</figcaption>
+                        <figure class="supFigure">
+                            <figcaption>Abb. 1: Transkription des Deutschen Text Archivs</figcaption>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <figure>
+                                        <figcaption>Abb. 1a</figcaption>
+                                        <img src="images/Problemstellung/B3Bild.jpg" alt="Eingescanntes Rezept B-3"/>
+                                    </figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure>
+                                        <figcaption>Abb. 1b</figcaption>
+                                        <img src="images/Problemstellung/B3Text.png" alt="Textuelle Form Rezept B-3"/>
+                                    </figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure>
+                                        <figcaption>Abb. 1c</figcaption>
+                                        <img src="images/Problemstellung/B3Text.png" alt="TEI kodiertes Rezept B-3"/>
+                                    </figure>
+                                </div>
+                            </div>
                         </figure>
                     </p>
-                    
+
                     <p>Für kulinarische Analysen sind insbesondere Zutatenlisten wünschenswert, welche bei den Rezepten nicht vorhanden sind. Für eine maschinen lesbare Auszeichnung wird des Weiteren ein <b>domänenspezifisches Vokabular</b> benötigt. Da die manuelle Auszeichnung sehr zeitaufwendig und fehleranfällig ist, forschen wir des Weiteren im Bereich <b>Information Extraction</b> an Möglichkeiten zum automatischen Auszeichnen.
                     </p>
-                    
-                    
+
+
                     <h2>Domän-spezifisches Vokabular</h2>
-                    <p>TEI hat kein spezifisches Vokabular um Rezepte auszuzeichnen. <a href="https://schema.org/Recipe">Schema.org/Recipe</a> ist ein Vokabular, welches das Ziel hat, Treffer von Suchmachinen anzureichern (QUELLE). Es wird davon ausgegangen, dass jedes Rezept eine Zutatenliste hat. In dieser wird jede Zeile mit einem <i>recipeIngredient</i>-Tag versehen; z.B. <i>&lt;recipeIngredient&gt;2 EL Zucker&lt;/recipeIngredient&gt;</i>. Für den Computer stellt der Tag-Inhalt jedoch nur einen String da. Für eine kulinarische Analyse müsste die Mengenangane (2), die Einheit (EL), sowie die Zutat (Zucker) explizit ausgezeichnet werden. Das Auszeichnen von Zutaten im Fließtext muss auch einige Sonderfälle beachten, was anhand folgender zwei Beispielsätzen aus dem Kochbuch symbolhaft verdeutlicht wird:
+                    <p>TEI hat kein spezifisches Vokabular um Rezepte auszuzeichnen. <a href="https://schema.org/Recipe">Schema.org/Recipe</a> ist ein Vokabular, welches das Ziel hat, Treffer von Suchmachinen anzureichern <span cite="Schema.org"></span>. Es wird davon ausgegangen, dass jedes Rezept eine Zutatenliste hat. In dieser wird jede Zeile mit Microdata angereichert; z.B. <i>&lt;span itemprop="recipeIngredient"&gt;2 EL Zucker&lt;/span&gt;</i>. Für den Computer stellt der Tag-Inhalt jedoch nur einen String da. Für eine kulinarische Analyse müsste die Mengenangane (2), die Einheit (EL), sowie die Zutat (Zucker) explizit ausgezeichnet werden. Das Auszeichnen von Zutaten im Fließtext muss auch einige Sonderfälle beachten, was anhand folgender zwei Beispielsätzen aus dem Kochbuch symbolhaft verdeutlicht wird:
                     </p>
-                    
+
                     <ol>
-                        <li><i>"Der [Englische] Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und statt Madeira kann man weißen Franzwein und etwas Rum nehmen."</i> (QUELLE)</li>
-                        <li><i>"Das Kalbfleisch wie in No. 1, nach der Personenzahl, doch etwas reichlicher genommen, da solches weniger Kraft gibt, als Rindfleisch."</i> (QUELLE)</li>
+                        <li><i>"Der [Englische] Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und statt Madeira kann man weißen Franzwein und etwas Rum nehmen."</i> <span cite="DavidisKochbuch" supplement=", S. TODO"></span></li>
+                        <li><i>"Das Kalbfleisch wie in No. 1, nach der Personenzahl, doch etwas reichlicher genommen, da solches weniger Kraft gibt, als Rindfleisch."</i> <span cite="DavidisKochbuch" supplement=", S. TODO"></span></li>
                     </ol>
-                    
+
                     <p>In Erstens ist Soja eine optionale Zutat. Je nachdem ob sie verwendet wird, hat das Gericht eine unterschiedliche Geschmacksrichtung. In das Rezept gehören auch nicht Madeira, weißer Franzwein und Rum, sondern Madeira oder weißer Franzwein und Rum. Desweiteren sind alle drei Zutaten vage Begriffe. Rum zum Beispiel gibt es in vielen verschiedenen Preisklassen und mit unterschiedlichen Geschmacksausprägungen.
                     </p>
                     <p>In Zweitens ist Rindfleisch keine Zutat, sondern dient nur als Vergleich für eine ungefähre Mengenangabe. Wenn dieser Satz nur schnell gelesen wird, wird Rindfleisch hingegen leicht als Zutat eingeordnet (mir selber ist es erst beim dritten Mal lesen aufgefallen, dass es gar keine Zutat ist).
                     </p>
-                    
-                    
-                    <h2>Information Extraction in der Kochdömäne</h2>
-                    <p>Information Extraction beschäftigt sich damit, nützliche Informationen aus unstrukturiertem Text zu extrahieren. Es wurde erstmals in <span cite="KDT"></span> als eigene Diziplin erwähnt. Ein allgemeiner Überblick kann in (QUELLE) gefunden werden. Die Algorithmen versuchen meist bestehende Semi-Strukturen auszunutzen.</p>
-                    
+                    <p>TODO: Zutaten als Resourcen
+                    </p>
+
+
+                    <h2>Information Extraction in der Koch-Dömäne</h2>
+                    <p>Information Extraction beschäftigt sich damit, nützliche Informationen aus unstrukturiertem Text zu extrahieren. Es wurde erstmals in <span cite="KDT"></span> als eigene Diziplin erwähnt. Ein allgemeiner Überblick kann in <span cite="TextMining"></span> gefunden werden. Die Algorithmen versuchen meist bestehende Semi-Strukturen auszunutzen.</p>
+
                     <p>In der Koch-Domäne haben wir drei unterschiedliche automatisierte Ansätze gefunden, auf die wir genauer eingehen werden:</p>
                     <ul>
                         <li>Regular Expression based</li>
                         <li>Conditional Random Field based</li>
                         <li>Dictionary- and Rule-based</li>
-                    </ul><span cite="KDT">asdf</span>
-                    
-                    
+                    </ul>
+
+
                     <h2>Struktur der Arbeit / Webseite</h2>
                 </div>
             </div>
+
+            <script>activeTab = "Problemstellung"</script>
+            <script src="js/navbar.js"></script>
+            <script src="js/references.js"></script>
         </div>
-		
-        
-        <script>
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                   $("#navbar").html(xhr.responseText);
-                   $("#Problemstellung").addClass("active");
-                }
-            };
-            xhr.open("GET", "fragments/navbar.html", false);
-            xhr.send();
-            
-            var cites = $("span[cite]");
-            for(var i=0; i<cites.length; i++) {
-                cites[i].innerHTML = cite(cites[i].attributes[0].value);
-            }
-        </script>
 	</body>
 </html> 
