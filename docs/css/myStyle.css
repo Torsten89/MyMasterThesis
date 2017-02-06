@@ -1,3 +1,4 @@
+/* -------------- figures - start -------------- */
 figure.supFigure {
     border: 1.5px solid;
     padding: 0.5em;
@@ -20,27 +21,52 @@ figure img {
     margin-left: auto;
     margin-right: auto;
 }
+/* -------------- figures - end -------------- */
 
-
-
-.navbar-fixed-left {
-  width: 140px;
-  position: fixed;
-  border-radius: 0;
-  height: 100%;
+/* -------------- left navigation bar - start -------------- */
+@media(min-width:992px) { /* 992px is the trigger for col-md 2 / 10 relation */
+    .myLeftNavBar {
+        position: fixed;
+        max-width: 16%; /* col-md-2 -> 2/12 - manual because position:fexied ruins auto resizing */
+    }
+}
+@media(max-width:992px) { /* otherwise .myAnchorWithFixedheader:before can overlap and thus make unclickable -.- */
+    .myLeftNavBar {
+        position: relative;
+        z-index: 5;
+    }
 }
 
-.navbar-fixed-left .navbar-nav > li {
-  float: none;  /* Cancel default li float: left */
-  width: 139px;
+
+.myLeftNavBar div.in { /* div.in -> indent of expanded items */
+    padding-left: 1em;
 }
 
-.navbar-fixed-left + .container {
-  padding-left: 160px;
+.myHeaderForSideWithMyLeftNavBar {
+    position: fixed;
+    width: 100%;
+    height:5em;
+    background: white;
+    z-index: 10;
+    overflow-x: auto;
 }
 
-/* On using dropdown menu (To right shift popuped) */
-.navbar-fixed-left .navbar-nav > li > .dropdown-menu {
-  margin-top: -50px;
-  margin-left: 140px;
+.myHeaderForSideWithMyLeftNavBar a, a:focus, a:hover {
+    color: #337ab7; /* overwrite inherited*/
+    text-decoration: none;
 }
+
+.myHeaderForSideWithMyLeftNavBar + div.row {
+    padding-top: 5em;
+}
+
+.myAnchorWithFixedheader:before {
+    display: block; 
+    content: ""; 
+    margin-top: -5em; 
+    height: 5em; 
+    visibility: hidden;
+}
+/* -------------- left navigation bar - end -------------- */
+
+

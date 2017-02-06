@@ -5,7 +5,8 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         
-        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/tiles.css"/>
         
 		<script src="js/jquery.min.js"></script>
 		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
@@ -14,7 +15,7 @@
 	<body style="padding-top:50px"> <!-- padding because otherwise navbar is over the beginning of the content -->
         <div id="navbar"></div>
 	
-		<div class="container">
+		<div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <center>
@@ -26,28 +27,29 @@
             </div>
             
             <div class="row">
-				<div class="col-md-8 col-md-push-4">
-					<div class="row">
-                        Kacheln
-                    </div>
-				</div>
-				
-				<div class="col-md-4 col-md-pull-8">
+                <div class="col-md-6">
 					Foto vom Buch
 				</div>
+                
+				<div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-5 tile tile-1"><a href="#"><b>Rezepte</b> aus Davidis Kochbuch</a></div>
+                        <div class="col-md-5 tile tile-2"><a href="#">Unser Entwickler-<b>Blog</b></a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 tile tile-3"><a href="http://www.deutschestextarchiv.de/book/show/davidis_kochbuch_1849">Zur <b>transkribierten Version</b> des DTA</a></a></div>
+                        <div class="col-md-5 tile tile-4-6"><a href="#">Domän-spezifisches Vokabular <b>cueML</b></a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 tile tile-4-6"><a href="#"><b>Automatisches anreichern</b> mit cueML</a></div>
+                        <div class="col-md-5 tile tile-4-6"><a href="Impressum.html"><b>Impressum</b></a></div>
+                    </div>
+				</div>
+
 			</div>
         </div>
 		
         
-		<script>
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                   $("#navbar").html(xhr.responseText);
-                }
-            };
-            xhr.open("GET", "fragments/navbar.html", false);
-            xhr.send();
-        </script>
+		<script src="js/navbar.js"></script>
 	</body>
 </html> 

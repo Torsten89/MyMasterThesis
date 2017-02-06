@@ -1,0 +1,61 @@
+.tile {
+    border-radius: 0.5em;
+    height: 7em;
+    margin: 0.2em;
+    padding: 1em; 
+    font-size: 200%;
+}
+
+.tile a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+.tile:hover {
+    opacity: 0.9;
+}
+
+.tile-1 {
+    background-color: rgb(242, 104, 5);
+}
+.tile-1 a, a:hover, a:focus {
+    color: #5C5C5C;
+}
+.tile-1 b {
+    color: #4A4A4A
+}
+
+.tile-2 {
+    background-color: rgb(143, 24, 24);
+}
+.tile-2 a, a:hover, a:focus {
+    color: #EDF8E9;
+}
+.tile-2 b {
+    color: rgb(178, 240, 168);
+}
+
+.tile-3 {
+    background-color: rgb(255, 208, 66);
+}
+.tile-3 a, a:hover, a:focus {
+    color: #5C5C5C;
+}
+.tile-3 b {
+    color: #4A4A4A
+}
+
+.tile-4-6 {
+    background-image: url("../images/index/wood.png");
+}
+.tile-4-6 b {
+    color: #BDD7E7;
+}
+.tile-4-6 a, a:hover, a:focus {
+    color: #EFF3FF;
+}
+
+
+

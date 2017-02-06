@@ -32,6 +32,15 @@ references = [
         "title":"Praktisches Kochbuch für die gewöhnliche und feinere Küche, 4. vermehrte u. verbesserte Auflage ",
         "publisher":"Velhagen und Klasing",
         location:"Bielefeld"
+    },
+    {
+        "id":"DavidisKochbuchDTA",
+        "authors":"Deutsches Textarchiv",
+        "year":"2008",
+        "title":"Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849 - Digitalisiert vom Deutschem Text Archiv",
+        "location":"Berlin-Brandenburgische Akademie der Wissenschaften",
+        "url":"http://www.deutschestextarchiv.de/book/show/davidis_kochbuch_1849",
+        "date":"2017-01.06"
     }
 ].sort(function(a,b) {
    return a.authors > b.authors;
