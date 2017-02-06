@@ -20,11 +20,11 @@
 .tile-1 {
     background-color: rgb(242, 104, 5);
 }
+.tile-1 b {
+    color: #4A4A4A;
+}
 .tile-1 a, a:hover, a:focus {
     color: #5C5C5C;
-}
-.tile-1 b {
-    color: #4A4A4A
 }
 
 .tile-2 {
@@ -40,11 +40,11 @@
 .tile-3 {
     background-color: rgb(255, 208, 66);
 }
+.tile-3 b {
+    color: #4A4A4A;
+}
 .tile-3 a, a:hover, a:focus {
     color: #5C5C5C;
-}
-.tile-3 b {
-    color: #4A4A4A
 }
 
 .tile-4-6 {
