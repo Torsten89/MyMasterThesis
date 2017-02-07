@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Davidis Kochbuch</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/myStyle.css">
+        
+		<script src="js/jquery.min.js"></script>
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</head>
+	
+	<body style="padding-top:50px"> <!-- padding because otherwise navbar is over the beginning of the content -->
+        <div id="navbar"></div>
+
+		<div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Transkription</h1>
+                    
+                    <p>Das Deutsche Text Archiv (DTA) erfasst strukturelle und linguistische Merkmale deutschsprachige Texte des 17. bis zum 19. Jahrhunderts, mit dem Ziel "ein ausgewogenes historisches Referenzkorpus in deutscher Sprache zu schaffen" <span cite="ZielDTA" class="beforePunctuation"></span>. Unter anderem stellen sie eine frei verfügbare Transkription von Davidis Kochbuch in <span cite="DavidisKochbuchDTA"></span> zur Verfügung. Abb. 1a zeigt den Scan eines Rezeptes und Abb. 1b die in <a href="http://www.tei-c.org/index.xml" title="TEI: Text Encoding Initiative">TEI</a> transkripierte Version des Rezeptes. Wir sind allerdings nicht an linguistischen oder strukturellen Merkmalen interessiert sind, sondern bereiten eine kulinarische Analyse vor. Dementsprechend haben wir die Kodierung des DTA für unsere Zwecke überarbeitet, was in Abb. 1c zu sehen ist. 
+                    </p>
+                    
+                    <p>
+                        <figure class="supFigure">
+                            <figcaption>Abb. 1: Transkription von Davidis Kochbuch</figcaption>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <figure>
+                                        <figcaption>Abb. 1a <span cite="DavidisKochbuchDTA"></span></figcaption>
+                                        <img src="images/Problemstellung/B3Bild.jpg" alt="Eingescanntes Rezept B-3"/>
+                                    </figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure>
+                                        <figcaption>Abb. 1b <span cite="DavidisKochbuchDTA"></span></figcaption>
+                                        <img src="images/Transkription/B3TEIOrig.png" alt="TEI Kodierung von Rezept B-3"/>
+                                    </figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure>
+                                        <figcaption>Abb. 1c</figcaption>
+                                        <img src="images/Problemstellung/B3TEI.png" alt="Unsere überarbeitete TEI Kodierung von Rezept B-3"/>
+                                    </figure>
+                                </div>
+                            </div>
+                        </figure>
+                    </p>
+                    
+                    <p>Zum einen haben wir kodierte Sonderzeichen zu Gunsten der Lesbarkeit durch ihr entsprechendes Standard-Pendant ersetzt; z.B das "&#x017F;" (Lange S) durch ein heute übliches Rundes S. Dazu haben wir strukturelle Merkmale wie die Kodierung von Zeilenumbrüchen (&lt;lb/&gt;) oder die Verschachtelungstiefe innerhalb des Buches (&lt;div n="3"/&gt;) entfernt. Stattdessen haben wir jedes Rezept, welches zu unseren Zielobjekten gehört, in einem einheitliches Tag (&lt;cue:recipe&gt;) gekapselt. Zusätzlich haben wir das Tag für Rezepte mit der Kapitelüberschrift als Typ angereichert (type="Suppen"), sowie eine eindeutige ID vergeben (rcp-id="B-3"). Des Weiteren haben wir die interne Kapitel&shy;nummerierung (3.) aus der Rezept-Überschrift entfernt, da diese nichts zur kulinaischen Analyse beiträgt, jedoch bei separaten Betrachtung irreführend ist.
+                    </p>
+                    
+                    <p>Der Vollständigkeitshalber sei erwähnt, dass das DTA die Transkription von Nicht-Muttersprachlern im Double-Keying-Verfahren hat durchführen lassen. Ihre Intention dabei ist, dass so unbewusste Modernisierungen, Korrekturen und Wertungen beim transkribieren vermieden werden. Allerdings führt das zu Fehlern wie <i>Eßlö&#x017F;&#x017F;el</i> statt <i>Eßlöffel</i>. Dem aufmerksamen Leser wird aufgefallen sein, dass Ersteres (<i>Eßlössel</i>) wahrscheinlich nicht im Original steht. Sofern uns solche Fehler aufgefallen sind, haben wir sie stillschweigend nebenbei sofort korrigiert.
+                    </p>
+                    <p>Abschließend sei erwähnt, das sämtliche Anerkennung der Arbeit, die Kodierung des DTA zu unserer Kodierung zu transformieren, meinem betreuenden Prof. Herr Luttenberger gebührt, wie in <a href="#">diesem Blog-Abschnitt</a> zu lesen ist.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+		
+        
+        <script>activeTab = "DigitaleEdition"</script>
+        <script src="js/navbar.js"></script>
+        <script src="js/references.js"></script>
+	</body>
+</html> 

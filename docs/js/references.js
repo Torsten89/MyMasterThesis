@@ -35,38 +35,80 @@ references = [
     },
     {
         "id":"DavidisKochbuchDTA",
-        "authors":"Deutsches Textarchiv",
+        "authors":"Deutsches Textarchiv (A)",
         "year":"2008",
         "title":"Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849 - Digitalisiert vom Deutschem Text Archiv",
         "location":"Berlin-Brandenburgische Akademie der Wissenschaften",
         "url":"http://www.deutschestextarchiv.de/book/show/davidis_kochbuch_1849",
         "date":"2017-01.06"
+    },
+    {
+        "id":"ZielDTA",
+        "authors":"Deutsches Textarchiv (B)",
+        "year":"2017",
+        "title":"DTA - Projektüberblick",
+        "location":"Berlin-Brandenburgische Akademie der Wissenschaften",
+        "url":"http://www.deutschestextarchiv.de/doku/ueberblick",
+        "date":"2017-01.07"
+    },
+    {
+        "id":"TEI",
+        "authors":"TEI-Konsortium (A)",
+        "year":"2017",
+        "title":"TEI-Konsortium",
+        "location":"University of Virginia Library, Charlottesville VA 22904-4114, USA",
+        "url":"http://www.tei-c.org/index.xml"
+    },
+    {
+        "id":"TEIP5",
+        "authors":"TEI-Konsortium (B)",
+        "year":"2017",
+        "title":"TEI P5: Guidelines for Electronic Text Encoding and Interchange. Version 3.1.0.",
+        "url":"http://www.tei-c.org/Guidelines/P5/",
+        "date":"2017-01-07"
+    },
+    {
+        "id":"ChefkochPfannekuchen",
+        "authors":"06onkel von Chefkoch.de",
+        "year":"2017",
+        "title":"Rezept für Pfannekuchen",
+        "url":"http://www.chefkoch.de/rezepte/363861121870267/Pfannekuchen.html",
+        "date":"2017-01-07"
+    },
+    {
+        "id":"CRFNYT",
+        "authors":"Greene",
+        "year":"2015",
+        "title":"Extracting Structured Data From Recipes Using Conditional Random Fields",
+        "in":"The New York Times",
+        "url":"https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/?_r=1",
+        "date":"2017-01-08"
     }
 ].sort(function(a,b) {
    return a.authors > b.authors;
 });
 
 
-var cites = $("span[cite]");
-for(var i=0; i<cites.length; i++) {
-    var attris = cites[i].attributes;
-    var supplement = (attris.length > 1) ? attris[1].value : "";
-    cites[i].innerHTML = cite(attris[0].value, supplement);
-}
+$("span[cite]").each(function() {
+    var stem = $(this)[0].hasAttribute("stem") ? $(this).attr("stem") : "";
+    var supplement = $(this)[0].hasAttribute("supplement") ? $(this).attr("supplement") : "";
+    $(this).html(cite($(this).attr("cite"), stem, supplement));
+});
 
 
-function cite(id, supplement) {
+
+function cite(id, stem, supplement) {
     for(var i=0; i<references.length; i++) {
        if(references[i].id == id) {
-           return ref2Cite(references[i], supplement);
+           return ref2Cite(references[i], stem, supplement);
        }
     }
 }
 
-function ref2Cite(ref, supplement){
+function ref2Cite(ref, stem, supplement){
     var href = "Quellen.html#" + ref.id;
     return "<a href='" + href + "' title='" + ref.title + "'> \
-                (" + getAuthorRepresentationOfRef(ref) + ", " + ref.year + supplement + ") \
+                (" + stem + getAuthorRepresentationOfRef(ref) + ", " + ref.year + supplement + ") \
             </a>";
 }
 
@@ -105,6 +147,6 @@ function ref2Bib(ref) {
 }
 
 function getAuthorRepresentationOfRef(ref) {
-    var authors = ref.authors.split(", ")
+    var authors = ref.authors.split(", ");
     return (authors.length > 2) ? authors[0]+" et al." : ref.authors;
 }
