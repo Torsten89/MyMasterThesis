@@ -1,0 +1,10 @@
+Anforderungen:
+- Zutaten als Resourcen (Semantic Web) (mit Nährwertangaben, Lemmas (Zutatenliste), Taxonomi (ist Gemüse, ist Fleisch))
+- Q als Ressoruce mit Umrechnung (ein Stich Butter, 2 Pfennig Brot, 1 Maß)
+- Link auf Rezepte (Bouillon innerhlab Zutaten)
+- Mengenangabe IN YIELD
+
+
+cueML:	culinary editions markup language (cueML, auf Deutsch passenderweise wie "Kümmel" auszusprechen).
+- I als Ressource (Q auch)
+- Umrechnung SoC pP manuell Fehleranfällig und krumm
