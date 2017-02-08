@@ -37,7 +37,7 @@ figure.floating {
 @media(min-width:992px) { /* 992px is the trigger for col-md 2 / 10 relation */
     .myLeftNavBar {
         position: fixed;
-        max-width: 16%; /* col-md-2 -> 2/12 - manual because position:fexied ruins auto resizing */
+        width: 15%; /* col-md-2 -> 2/12 (a lillte less for optic reason :p ) - manual because position:fexied ruins auto resizing */
     }
 }
 @media(max-width:992px) { /* otherwise .myAnchorWithFixedheader:before can overlap and thus make unclickable -.- */
@@ -76,6 +76,13 @@ figure.floating {
     margin-top: -5em; 
     height: 5em; 
     visibility: hidden;
+}
+
+@media print {
+    .myHeaderForSideWithMyLeftNavBar {
+        position: relative;
+        overflow: visible;
+    }
 }
 /* -------------- left navigation bar - end -------------- */
 

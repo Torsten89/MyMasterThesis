@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Davidis's Kochbuch</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/myStyle.css">
+        
+		<script src="js/jquery.min.js"></script>
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</head>
+	
+	<body style="padding-top:50px"> <!-- padding because otherwise navbar is over the beginning of the content -->
+        <div id="navbar"></div>
+
+		<div class="container-fluid">
+            <div class="row myHeaderForSideWithMyLeftNavBar">
+                <div class="col-md-12">
+                    <h1 ><a href="#">Domänen-spezifisches Vokabular <i>cueML</i></a></h1>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="list-group panel myLeftNavBar">
+                        <a href="#Anforderungen" class="list-group-item">Anforderungen</a>
+                        <a href="#cueML" class="list-group-item">cueML</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-10">
+                    <p>Zunächst werden hier die Anforderungen an ein Vokabular in der Koch-Dömane dargelegt, welche sich aus unserem Kochbuch ergeben. Da die <a href="AuszeichnenRezepte.html" title="Auszeichnen von Rezepten">zuvor vorgestellten Auszeichnugssprachen</a> diesen Anforderungen nicht genügen, stellen wir anschließend unser <i>cueML</i>-Vokabular vor.
+                    </p>
+                    
+                    <h2 id="Anforderungen" class="myAnchorWithFixedheader">Anforderungen</h2>
+                    
+                    <p>Folgend erklären wir, was für uns ein Rezept ausmacht und was das Vokabular dementsprechend abbilden können muss. Die einzelnen Punkte werden zusammenfassend am Ende noch einmal aufgelistet.
+                    </p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Ein Rezept besteht für uns nicht nur aus reinem Text. Aus unserer Sicht <b>ist ein Rezept in Themenbereiche unterteilt</b>. Das Beispiel-Rezept aus Abb. 1 ist eindeutig in einen Bereich für ein Bild, eine Überschrift/Namen einen einleitenden Text, usw. aufgeteilt. Für uns sollte jedes Rezept folgende Bereiche klar strukturiert und separiert haben:
+                            </p>
+
+                            <ul>
+                                <li>Eine Überschrift/Namen</li>
+                                <li>Optional einen einleitenden Text, der nett zu lesen ist (z.B. "Meine absoluten Lieblings-Pfannekuchen nach dem geheimen Rezept meiner Oma!" (welches wohl spätestens nach der Veröffentlichung des Rezeptes nicht mehr ganz so geheim ist)</li>
+                                <li>Optional (und sehr empfehlenswert) ein Bild vom Gericht</li>
+                                <li>Geschätze Zubereitungszeit</li>
+                                <li>Nährwertangaben pro Person</li>
+                                <li>Anzahl der produzierten Portionen</li>
+                                <li>Eine Zutatenliste</li>
+                                <li>Zubereitungs-Anweisungen</li>
+                            </ul>
+
+                            <p>Ein Vokabular sollte diese Struktur erfassen können. Sofern in einem Rezept die Struktur noch nicht gegeben ist, sollten die im Rezept vorhandenen Informationen nach einer Anreicherung mit dem Vokabular automatisch in so eine Struktur umgewandelt werden können. 
+                            </p>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <p>
+                                <figure>
+                                    <figcaption>Abb 1. Beispiel Rezept <span></span></figcaption>
+                                    <img src="images/cueML/PfannekuchenChefkochGekuertzt.png" alt="Beispiel-Rezept abgeschnitten" data-toggle="modal" data-target="#BeispielRezept" style="cursor:pointer;" title="Klicke um ganzes Rezept zu sehen"/>
+                                </figure>
+                            </p>
+                            
+                            <div class="modal fade" id="BeispielRezept" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title"><span cite="ChefkochPfannekuchen" stem="Nach: "></span></h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <figure>
+                                                <img src="images/AuszeichnungRezepte/PfannekuchenChefkoch.png" alt="Beispiel-Rezept"/>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <p>In unserem Kochbuch ist keine Zutatenliste vorhanden. Die Zutaten sind allerdings in den Zubereitungs-Anweisungen zu finden. Dementsprechend sollte nach einer Auszeichnung mit dem Vokabular <b>eine Zutatenliste aus den Zubereitungs-Anweisungen eines Rezeptes extrahiertbar sein</b>. Daraus ergeben sich weitere Anforderungen, wie folgende zwei Beispiel-Sätze verdeutlichen:
+                    </p>
+                    
+                    <ol>
+                        <li><i>"Der [Englische] Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und statt Madeira kann man weißen Franzwein und etwas Rum nehmen."</i> <span cite="DavidisKochbuch" supplement=", S. 33 f."></span></li>
+                        <li><i>"Man kocht nach No. 1 eine gute Bouillon [...]"</i> <span cite="DavidisKochbuch" supplement=", S. 32"></span></li>
+                    </ol>
+                    
+                    <p>Im Ersteren <i>kann</i> Soja zum würzen verwendet werden. Da Soja jedoch sehr geschmacksintensiv ist, hat das Gericht, je nachdem ob Soja verwendet wird, eine ganz andere Geschmacksrichtung. Dementsprechend wäre eine Festlegung, ob Soja in die Zutatenliste kommt oder nicht, eine Reduzierung des Rezeptes. Daher soll das Vokabular <b>optionale Zutaten</b> unterscheiden können.</p>
+                    
+                    <p>Des Weiteren gehören in das Rezept nicht Madeira, weißer Franzwein <i>und</i> Rum, sondern Madeira <i>oder</i> weißer Franzwein und Rum. Also muss das Vokabular <b>alternative Zutaten</b> abbilden können.
+                    </p>
+                    
+                    <p>Im Zweiten soll <i>nach No. 1</i> eine Bouillon gekocht werden. Rezept No. 1 ist jedoch nicht ein Rezept für Bouillon, sondern ein Rezept für Rindfleischsuppe, in welches das Rezept für Bouillon integriert ist. <span cite="DavidisKochbuch" supplement=", S. 28"></span> Dementsprechend sollte das Vokabular <b>Verweise auf (Teil-) Rezepte</b> ermöglichen.
+                    </p>
+                    
+                    <p>Für eine kulinarische Analyse sind offensichtlich nicht nur die Zutaten wichtig, sondern auch die Mengenangaben der Zutat. Da eine Mengenangabe ohne Einheit aussagelos ist, wird im Vokabular eine Möglichkeit zur Auszeichnung von <b>Mengenangaben</b> und <b>Mengeneinheiten</b> benötigt.   
+                    </p>
+                    
+                    <p>Im Sinne des semantischen Webs ist es zudem wünschenswert, dass die <b>Zutaten und Mengeneinheiten als weltweit frei verfügbare und eindeutige Ressourcen</b> (mittels URIs) verstanden werden. Eine gute und anschauliche Erklärung des Begriffes <i>semantisches Web</i> ist in <span cite="SemanticWeb"></span> zu finden. Zu der URI einer Zutat können Nährwertangaben und Einordnungen in Taxonomien wie ist-vegetarisch hinterlegt werden. Die Mengeneinheiten sind erst dann sinnvoll verwendbar, wenn Informationen zur Umrechnung in standardisierte Einheiten vorliegen; z.B. die Mengenangabe <i>"für 8 Pfennig [...] Weißbrod"</i> <span cite="DavidisKochbuch" supplement=", S. 20 f."></span> ist ohne die Information, wie viel Gramm/Scheiben Weißbrot man nach Meinung von Frau Davidis für 8 Pfennig kriegt, wertlos. Erst die Verknüpfung beider Ressourcen ermögtlicht eine transparente Extraktion von Nährwertangaben aus einer Zutatenliste.
+                    </p>
+                    
+                    <h4><b>Zusammengefasst ergeben sich daraus folgende Anforderungen:</b></h4>
+                    <ul>
+                        <li>Auszeichnung von Themenbereichen</li>
+                        <li>Unterscheidung von Zutaten, optionalen Zutaten und alternativen Zutaten</li>
+                        <li>Extraktion einer Zutatenliste aus den Zubereitungs-Anweisungen</li>
+                        <li>Verweise zwischen Rezepten</li>
+                        <li>Zutaten und Mengeneinheiten als frei verfügbare und eindeutige Ressourcen</li>
+                    </ul>
+                    
+                    
+                    
+                    <h2 id="cueML" class="myAnchorWithFixedheader">cueML</h2>
+                    <p>Die <a href="AuszeichnenRezepte.html" title="Auszeichnen von Rezepten">zuvor vorgestellten Auszeichnugssprachen</a> erfüllen die oben gennanten Anforderungen an das benötigte Vokabular nicht, wie folgend knapp an je einem Punkt erläutert wird: <i>TEI</i> erhält zwar die Struktur des Rezeptes, stellt allerdings bereits keine Vokabeln zur Verfügung, um die einzelnen Themenbereiche wie Zutatenliste oder Zubereitungs-Anweisung als solche auszuzeichnen. <i>Schema.org/Recipe</i> bietet zwar die Möglichkeit Zutaten als solche zu markieren, aus dem eingeschlossenen Text der Markierungen kann der Computer jedoch weder die konkrete Zutat noch die Mengenangabe mit dazugehörender Einheit ableiten. Die eigenen Vokabulare von <i>Chefkoch.de</i> und <i>Cooking.nytimes.com</i> zeichnen die bestehende Zutatenliste aus, welche bei unserem Kochbuch nicht vorhanden sind. Des Weiteren sind sie nicht frei zugänglich und somit von uns sowieso nicht nutzbar.
+                    </p>
+                    
+                    <p>Abb. zeigt TEI -> cueML. Grammatik hier</p>
+                    
+                    <p>Bild TEI -> cueML</p>
+                    
+                    <p>Bild extrahiertes Rezept</p>
+                    
+                    <p>Daher haben wir <b>culinary editions markup language (cueML)</b> entwickelt, was unserem Verständnis nach netterweise wie Kümmel auszusprechen ist. TEI ist ein Standard, um gedruckten Text digital abzubilden. Da die Transkription bereits in TEI vorliegt, ist es naheliegend TEI zu erweitern. Das Vokabular von Schema.org/Recipe übernehmen wir. Zusätzlich erweitern wir es um Attribute für Mengenangaben und Mengeneinheiten, sowie Möglichkeiten um optionale und alternative Zutaten auszuzeichnen. Des Weiteren führen wir Möglichkeiten ein, um eine Zutat auf Bereiche in Kochbuch verweisen zu lassen, sowie allgemeine Verweise innerhalb eines Rezeptes kenntlich zu machen. 
+                    </p>
+                    
+                    <p>Einen Ressourcen Bestand von Zutaten, wie in den Anforderungen beschrieben, konnten wir leider nicht finden. BLS...</p>
+                    
+                    <p>Ebenso wenig konnten wir einen Ressourcen Bestand für Mengenangaben finden. Auf einen Ressourcen Bestand, der Frau Davidis's Einheiten wie <i>1 Maß</i>, oder <i>für 8 Pfennig Weißbrod</i> umrechnet, wird nicht weiter eingegangen, da das nicht Teil dieser Informatik-Arbeit ist. Unabhängig davon sei erwähnt, dass es ganz im Sinne der Programmier-Prinzipen <i>Seperation of Concerns</i> und <i>DRY</i> keine gute Idee ist, die Umrechnung in der Auszeichnung vorzunehmen. Sollte sich beispielsweise bei späteren Recherchen ergeben, dass 1 Maß nach Frau Davids doch nicht 0.8l sondern 1.2l entsprechen, müssten sämtlich ausgezeichneten Umrechnungen erneut vorgenommen werden. Bei einem Verweis auf eine URI, welche zu der Mengeneinheit 1 Maß von Frau Davidis geört, muss nur der Eintrag bei der entsprechenden URI geändert werden.</p>
+                
+                </div>
+            </div>
+        </div>
+		
+        
+        <script>activeTab = ""</script>
+        <script src="js/navbar.js"></script>
+        <script src="js/references.js"></script>
+	</body>
+</html> 

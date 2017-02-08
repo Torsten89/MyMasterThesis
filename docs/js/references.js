@@ -83,6 +83,13 @@ references = [
         "in":"The New York Times",
         "url":"https://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/?_r=1",
         "date":"2017-01-08"
+    },
+    {
+        "id":"SemanticWeb",
+        "authors":"Berners-Lee, Hendler, Lassila",
+        "year":"2001",
+        "title":"The Semantic Web",
+        "in":"Scientific American, 2001-05, S. 29-37",
     }
 ].sort(function(a,b) {
    return a.authors > b.authors;
