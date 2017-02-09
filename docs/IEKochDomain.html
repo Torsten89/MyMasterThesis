@@ -10,6 +10,12 @@
         
 		<script src="js/jquery.min.js"></script>
 		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              TeX: { equationNumbers: { autoNumber: "AMS" } }
+            });
+        </script>
+        <script type="text/javascript" src="js/MathJax-2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 	</head>
 	
 	<body style="padding-top:50px"> <!-- padding because otherwise navbar is over the beginning of the content -->
@@ -36,26 +42,92 @@
                 </div>
 
                 <div class="col-md-10">
-                    <p>Folgend werden existierende Algorithmen zum extrahieren von Zutaten aus Semi-Strukturierten Text vorgestellt, die wir gefunden haben.</p>
+                    <p>Folgend werden Algorithmen zum Extrahieren von Zutaten aus semi-strukturierten Text vorgestellt, die wir gefunden haben. Sie die Zutaten erst einmal von einem Programm extrahiert, kann das Progamm diese leicht mit <a href="cueML.html">cueML</a> anreichern und zurückschreiben. Dies ist wünschenswert, da <b>das manuelle Auszeichnen...</b>
+                    </p>
+                    
+                    <ul>
+                        <li><b>zeitaufwendig ist.</b> Die Erfahrung hat gezeigt, dass ich selber im Schnitt ca. 5 Minuten pro Rezept zum Auszeichnen brauche. Eine SHK, welche nicht im Umgang mit XML geübt war, hat netterweise ebenfalls ein paar Rezepte ausgezeichnet. Sie hat im Schnitt sogar 15 Minuten für ein Rezept gebraucht.</li>
+                        <li><b>Fehler anfällig ist.</b> Diese Feststellung bei mir selbst, wie bei der SHK werden u.A. durch <span cite="manualTaggingErrorProne"></span> und <span cite="CRFNYT"></span> bestätigt.</li>
+                        <li><b>domänen-spezifisches Wissen benötigt.</b> Wir sind z.B. über die Zutat <i>Scorzonerwurzel</i> gestolpert. Das Nachfragen bei einer Ernährungswissenschaftlerin der Kieler Uni ergab, dass damit wahrscheinlich Scorzone, bzw. Sommer-Trüffel gemeint sind. Später ist uns jedoch aufgefallen, dass Frau Davidis in viele Suppen Scorzonerwurzel reingibt. Dies hat bei uns die Frage aufgeworfen, ob sie wirklich so geschmackslos ist, die teuren Sommer-Trüffel in einer Suppe zu zerkochen. Nach einer weiterer Recherche glauben wir nun, dass sie mit Scorzonerwurzel Scorzonera hispanica bzw. Schwarzwurzeln meint, welche sicherlich in einer Suppe angebrachter sind als Sommer-Trüffel.</li>
+                    </ul>
 
+                    
+                    
                     <h2 id="REBased" class="myAnchorWithFixedheader">Regular Expression based</h2>
-                    <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>In <span cite="SkipThePizza"></span> kombiniert der Autor seine zwei Hobbies Programmieren und Kochen. Um Fragen wie <i>aus wie vielen Zutaten besteht ein Rezept im Schnitt?</i>, oder <i>welche sind die meist benutzen Zutaten?</i> beantworten zu können, will er die Zutaten aus über 29.000 Rezepten von <a href="http://recipes.wikia.com/wiki/Recipes_Wiki">Recipes wikia</a> extrahieren.
+                            </p>
+                            
+                            <p>Abb. 1 zeigt, wie die Rezepte in Recipes wikia abgespeichert sind. Offenbar haben die Rezepte die Semi-Struktur, dass jede Zutat innerhalb <i>[[...]]</i> eingeschlossen ist. Der Autor nutzt diese Semi-Struktur aus, um mittels Reguläre Ausdrücken die Zutaten zu extrahieren.
+                            </p>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <figure myModal="images/IEKochDomaene/SkipThePizzaModel.png">
+                                <figcaption>Abb. 1: Interne Struktur der Rezepte von <a href="http://recipes.wikia.com/wiki/Recipes_Wiki">Recipes wikia</a></figcaption>
+                                <img src="images/IEKochDomaene/SkipThePizzaModel.png"/>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <h2 id="CRFBased" class="myAnchorWithFixedheader">CRF based</h2>
+                    <p>Die New York Times betreibt eine eigene <a href="https://cooking.nytimes.com/" title="https://cooking.nytimes.com/">Kochseite</a>. Greene behauptet, dass sie mittels Linear-chain Conditional Random Fields (CRF) in der Lage sind <i>"automatisch den unstrukturierten Text von Rezepten in strukturierte Daten umzuwandeln"</i> <span cite="CRFNYT"></span>. Dies beinhaltet insbesondere das Extrahieren der Zutaten mit ihren Mengenangaben und Einheiten. Da diese Behauptung genau unserer Problemstellung entspricht, stellen wir zunächst die Idee von CRF vor und gehen anschließend auf die Implementierung von Greene ein.
+                    </p>
+                    
+                    <h3 id="CRFTheorie" class="myAnchorWithFixedheader">CRF erklärt</h3>
+                    <p>CRF <i>orakelt</i> zu einem Vektor von Wörtern ein Vektor von Labels. Im Folgenden bezeichnen wir daher CRF auch als Orakel. Wenn wir dem Orakel z.B. den Vektor <i>[Man, süße, mit, 2, EL, Zucker, .]</i> geben, orakelt er uns idealerweise die Labels <i>[OTHER, OTHER, OTHER, QUANTITY, UNIT, INGREDIENT, OTHER]</i>. Wenn wir so ein Orakel hätten, würden wir ihm unsere Rezepte, in solche Wort-Vektoren aufgespalten, geben und könnten aus der Antwort die Zutaten mit Mengenangaben und Einheiten ablesen.
+                    </p>
+                    
+                    <p>Jetzt stellt sich nur noch die Frage, woher wir unser Orakel nehmen. Folgend erläutern wir die Idee, wie so ein Orakel antrainiert werden kann. Eine detailierte Einführung ist in <span cite="CRFIntroduction"></span> zu finden. Wir <i>bauen</i> das Orakel auf, in dem wir ihm zunächst eine Reihe von Wort-Vektoren geben und ihm für diese bereits die Lösung von Label-Vektoren geben. Solch eine Menge von Wort- und entsprechenden Label-Vektoren werden auch <i>Trainingsdaten</i> genannt. Fragen wir es nun nach den Labels von einen dieser Wort-Vektoren, könnte er uns einfach den entsprechenden Label-Vektor orakeln.
+                    </p>
+                    
+                    <p>Spannend ist die Frage, wie er Labels für Wort-Vektoren rät, von denen er nicht die Lösung kennt. Dafür leitet er zunächst aus den Trainingsdaten eine multivariate  Wahrscheinlichkeits&shy;verteilung ( p(X,Y) \) ab, wie wahrscheinlich zu einem Wort-Vektor \( X \) ein Label-Vektor \( Y \) gehört. Wenn wir jetzt vereinfacht davon ausgehen, dass jedes Label \( y_i \) nur vom vorherigen Label \( y_{i-1} \) und dem entsprechenden Wort \( x_i \) abhängt, ergibt sich Formel (1).
+                    </p>
+                    \begin{equation} p(X,Y) = \prod_{t=1}^{\#X} p(y_t|y_{t-1}) * p(y_t|x_t) \end{equation}
+                    <p>Formeln der Form von (1) können immer in die Form von Formel (2) überführt werden. Die Division durch \( Z(X,Y) \) stellt sicher, dass \( p(X,Y) \) nicht größer als eins werden kann und somit eine Wahrscheinlichkeit bleibt. \( 1_Bedingung \) ist eine Funktion, die genau dann Eins ist, wenn die Bedingung erfüllt ist und ansonsten null.
+                    </p> 
+                    \begin{align}
+                        p(X,Y) = \frac{1}{Z(X,Y)}\prod_{t=1}^{\#X} exp(\sum_{i,j \in L}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in L}^{} \sum_{j \in W}^{} \mu_{o,i} * 1_{y=i} * 1_{x_t=o}),
+                        \\
+                        mit\ \Theta_{i,j} \in \mathbb{R},\ L = alle\ moeglichen\ Labels, \ W = alle\ moeglichen\ Woerter \nonumber
+                        \\
+                        und\ Z(X,Y) = \sum_{X}^{}\sum_{Y}^{}\prod_{t=1}^{\#X} exp(\sum_{i,j\in L}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in L}^{} \sum_{j \in W}^{} \mu_{o,i} * 1_{y=i} * 1_{x_t=o}), \nonumber
+                    \end{align}
+                    <p>Eine Abbildung der Indizies \( i \) und \( j \) auf \( k \) führt wiederum zu der vereinfachten Formel (3).
+                    </p>
+                    \begin{align}
+                        p(X,Y) = \frac{1}{Z(X,Y)}\prod_{t=1}^{\#X} exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, x_t)),
+                        \\
+                        mit,\ Z(X,Y) = \sum_{X,Y}^{}\prod_{t=1}^{\#X} exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, x_t)) \nonumber
+                    \end{align}
+                    <p>Wie in Formel (4) zu sehen ist, kann jede multivariate Wahrscheinlichkeit in eine bedingte Wahrscheinlichkeit umgerechnet werden.
+                    </p>
+                    \begin{equation} p(Y|X) = \frac{p(X,Y)}{\sum_{Y'\in L}^{}p(Y', X)} \end{equation}
+                    <p><b>Eine nahe liegende Art zu Orakeln ist nun Formel (5)</b>, was nebenbei erwähnt bis hierhin erläutert, ein Hidden Markov Model/Orakel wäre:
+                    </p>
+                        \begin{equation} orakel(X)=argmax_Y(p(Y|X) \end{equation} 
+                    <p>Aufgrund der vereinfachten Annahme, dass jedes Label \( y_i \) nur vom vorherigen Label \( y_{i-1} \) und dem entsprechenden Wort \( x_i \) abhängt, können die \( \Theta_{k} \) sowieso nicht so bestimmt werden, dass die Formeln \( p(Y|X) \) exakt treffen. Daher versucht ein CRF Orakel im Gegensatz zum Hidden Markov Model nun einige \Theta_{k} \) und entsprechende \f_{k} \) im Model auszulassen, um die Berechnung so zu verkürzen, unter der Bedingung dass das berechnete \( p(Y|X) \) dadruch nicht groß verändert wird. Des Weiteren können in einem CRF sogenannte <i>custom feature functions \( f_{k'}(y_t, y_{t-1}, X) \)</i> angegeben werden, die nicht nur vom entsprechendem Wort \( x_i \) sondern vom ganzen Wort-Vektor \( X \) abhängig sein können. Die Hoffnung ist, dass diese custom feature functions eine bessere Annäherung an \( p(Y|X) \) ermöglichen. Typische custom feature functions wären z.B.:
+                    </p>
+                    <ul>
+                        <li>\( f_{k'_1}(y_t, y_{t-1}, X) = 1_{x_t\ ist\ ein\ Nomen} \)</li>
+                        <li>\( f_{k'_2}(y_t, y_{t-1}, X) = 1_{x_t\ ist\ in\ einem\ domaenen-spezifischem\ Woerterbuch} \)</li>
+                        <li>\( f_{k'_2}(y_t, y_{t-1}, X) = 1_{x_t\ ist\ in\ einem\ domaenen-spezifischem\ Woerterbuch\ und\ x_{t-1}\ ist\ ein\ Nomen} \)</li>
+                    </ul>
+                    
+                    <p>Abschließend zu CRF sei noch eine schlechte und eine gute Bemerkung erwähnt: Die Schlechte ist folgende: Aufgrund der Vereinfachung des Models, wie auch den custom feature functions ist es möglich, dass das CRF ein Wort-Vektor, der in den Trainingsdaten enthalten war, falsch orakelt. Die gute Bemerkung ist, dass sich die erste Befürchtung eines Informatikers, dass die Funktion \( orakel(X)=argmax_Y(p(Y|X) \) in Laufzeit von \( O({\#L}^{\#X}) \) berechnet werden muss, sich nicht bestätigt. Stattdessen kann sie durch dynamisches Programmieren auch in \( O({\#L}^2*{\#X}) \) berechnet werden.
                     </p>
                     
                     
-                    <h2 id="CRFBased" class="myAnchorWithFixedheader">Conditional Random Field based</h2>
-                    <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-                    
-                    <h3 id="CRFTheorie" class="myAnchorWithFixedheader">CRF erklärt</h3>
-                    <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
                     
                     <h3 id="CRFNYT" class="myAnchorWithFixedheader">Implementierung der NYT</h3>
-                    <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <p></p>
                     
                     <h3 id="DictBased" class="myAnchorWithFixedheader">Dictionary and rule based</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    <p>Lorem ipsum dolor sit amet, [...].
                     </p>
                 </div>
 
@@ -65,6 +137,7 @@
         
         <script>activeTab = "DigitaleEdition"</script>
         <script src="js/navbar.js"></script>
+        <script src="js/figure2modal.js"></script>
         <script src="js/references.js"></script>
 	</body>
 </html> 

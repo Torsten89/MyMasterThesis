@@ -48,7 +48,7 @@
                         <div class="col-md-8">
                             <figure class="supFigure">
                                 <figcaption>Abb. 1: Rezept mit TEI <span cite="TEIP5" stem="Nach: " supplement=", S. 1036 f."></span></figcaption>
-                                <div class="row" data-toggle="modal" data-target="#TEIRecipe" style="cursor:pointer;" title="Zeige Rezept vergrößert und untereinander">
+                                <div class="row" myModal="images/AuszeichnungRezepte/TEIRecipe.png" myModalTitle="Vollständiges Rezept mit TEI <span cite='TEIP5' stem='Nach: ' supplement=', S. 1036 f.'></span>" title="Zeige Rezept vergrößert und untereinander">
                                     <div class="col-md-6">
                                         <figure>
                                             <figcaption>Teil 1</figcaption>
@@ -63,22 +63,6 @@
                                     </div>
                                 </div>
                             </figure>
-                            
-                            <div class="modal fade" id="TEIRecipe" role="dialog">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Vollständiges Rezept mit TEI <span cite="TEIP5" stem="Nach: " supplement=", S. 1036 f."></span></h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <figure>
-                                                <img src="images/AuszeichnungRezepte/TEIRecipe.png" alt="Rezept mit TEI"/>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     
@@ -89,7 +73,7 @@
                             </p>
                             
                             <p>
-                                <figure>
+                                <figure myModal="images/AuszeichnungRezepte/GooglePfannekuchen.png">
                                     <figcaption>Abb. 2 Beispielhafter Google Treffer zu "Pfannekuchen"</figcaption>
                                     <img src="images/AuszeichnungRezepte/GooglePfannekuchen.png" alt='Beispielhafter Google Treffer zu "Pfannekuchen"'/>
                                 </figure>
@@ -98,29 +82,14 @@
                             <p>In Abb. 3 sind die hinterlegten Meta-Informationen auf der Webseite des Treffers in JSON-LD-Format. Es wird unter anderem ersichtlich, dass das Vorschau-Bild in Google eine Vorschau des <i>image</i>-Attributes ist, die Bewertung des <i>aggregateRating.ratingValue</i>-Attributes und der Vorschau-Text der Beginn des <i>description</i>-Attributes ist.
                             </p>
                             
-                            <p>Die wesentlichen Bestandteile der Webseite mit dem eigentlichen Rezept sind <a href="#" data-toggle="modal" data-target="#PfannekuchenModal"><b>hier</b></a> zu sehen.</p>
-                            
-                            <div class="modal fade" id="PfannekuchenModal" role="dialog">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title"><span cite="ChefkochPfannekuchen" stem="Nach: "></span></h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <figure>
-                                                <img src="images/AuszeichnungRezepte/PfannekuchenChefkoch.png" alt="Pfannekuchen-Rezept von Chefkoch.de"/>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
+                            <p>Die wesentlichen Bestandteile der Webseite mit dem eigentlichen Rezept sind <a href="#" myModal="images/AuszeichnungRezepte/PfannekuchenChefkoch.png" myModalTitle="<span cite='ChefkochPfannekuchen' stem='Nach: '></span>"><b>hier</b></a> zu sehen.
+                            </p>
                         </div>
+                        
                         <div class="col-md-4">
-                            <figure>
+                            <figure myModal="images/AuszeichnungRezepte/PfannekuchenJSON-LD.png">
                                 <figcaption>Abb. 3 JSON-LD Anwendung von Schema.org/Recipe auf das Pfannekuchen-Rezept <span cite="ChefkochPfannekuchen" stem="Nach: "></span></figcaption>
-                                <img src="images/AuszeichnungRezepte/PfannekuchenJSON-LD.png" alt='JSON-LD Anwendung von Schema.org auf das Pfannekuchen-Rezept'/>
+                                <img src="images/AuszeichnungRezepte/PfannekuchenJSON-LD.png"/>
                             </figure>
                         </div>
                     </div>
@@ -130,9 +99,9 @@
                     </p>
                     
                     <p>
-                        <figure>
+                        <figure myModal="images/AuszeichnungRezepte/kommerzielleAuszeichnungChefkoch.png">
                             <figcaption>Abb. 4 Extra JSON-Attribute für Zutaten <span cite="ChefkochPfannekuchen" stem="Nach: "></span></figcaption>
-                            <img src="images/AuszeichnungRezepte/kommerzielleAuszeichnungChefkoch.png" alt='Extra JSON-Attribute für Zutaten'/>
+                            <img src="images/AuszeichnungRezepte/kommerzielleAuszeichnungChefkoch.png"/>
                         </figure>
                     </p>
                     
@@ -145,6 +114,7 @@
         
         <script>activeTab = "DigitaleEdition"</script>
         <script src="js/navbar.js"></script>
+        <script src="js/figure2modal.js"></script>
         <script src="js/references.js"></script>
 	</body>
 </html> 

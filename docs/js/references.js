@@ -18,12 +18,12 @@ references = [
         "in":"LDV Forum - GLDV Journal for Computational Linguistics and Language Technology"
     },
     {
-        "id":"Schema.org",
+        "id":"Schema.orgNoGrammar",
         "authors":"Schema.org",
         "year":"2017",
         "title":"http://schema.org/docs/datamodel.html",
         "url":"http://schema.org/docs/datamodel.html",
-        "date":"2017-01-05"
+        "date":"2017-01-09"
     },
     {
         "id":"DavidisKochbuch",
@@ -89,7 +89,28 @@ references = [
         "authors":"Berners-Lee, Hendler, Lassila",
         "year":"2001",
         "title":"The Semantic Web",
-        "in":"Scientific American, 2001-05, S. 29-37",
+        "in":"Scientific American, 2001-05, S. 29-37"
+    }, 
+    {
+        "id":"manualTaggingErrorProne",
+        "authors":"Erdmann, Maedche, Schnurr, Staab",
+        "year":"2001",
+        "title":"From Manual to Semi-automatic Semantic Annotation: About Ontology-based Text Annotation Tools"
+    },
+    {
+        "id":"SkipThePizza",
+        "authors":"Skip The Pizza auf WordPress.org",
+        "year":"2012",
+        "title":"Skip The Pizza",
+        "url":"http://skipthepizza.com/blog/analyzing-the-ingredients-of-29200-recipes",
+        "date":"2016-10-28"
+    }, 
+    {
+        "id":"CRFIntroduction",
+        "authors":"Sutton, McCallum",
+        "year":"2012",
+        "title":"An Introduction to Conditional Random Fields",
+        "url":"http://dx.doi.org/10.1561/2200000013"
     }
 ].sort(function(a,b) {
    return a.authors > b.authors;

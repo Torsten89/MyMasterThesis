@@ -25,21 +25,14 @@
                         24114 Kiel <br/>
                         stu121256@mail.uni-kiel.de
                     </p>
+                    
+                    <p><b>Bedanken möchte ich mich bei allen Leuten, die mich während der Arbeit unterstützt haben - vor allem:</b></p>
                 </div>
             </div>
         </div>
 		
         
-        <script>
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                   $("#navbar").html(xhr.responseText);
-                   $("#Impressum").addClass("active");
-                }
-            };
-            xhr.open("GET", "fragments/navbar.html", false);
-            xhr.send();
-        </script>
+        <script>activeTab = "Impressum"</script>
+        <script src="js/navbar.js"></script>
 	</body>
 </html> 
