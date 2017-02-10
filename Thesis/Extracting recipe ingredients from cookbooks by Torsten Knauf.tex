@@ -408,8 +408,7 @@ U02:%[0,0]          $\rightarrow 1_{y_t=I-Name\ and\ x_t=mushrooms} $
 U02:%[-2,4]         $\rightarrow 1_{y_t=I-Name\ and\ x_{t-2}\ 4th\ label\ is NoPAREN} $
 U13:%x[0,0]/%x[0,2] $\rightarrow 1_{y_t=I-Name\ and\ x_t=mushrooms\ and\ x_t\ 2nd\ label\ is L12} $
 
-B                   $\rightarrow 1_{y_t=A\ and\ y_{t-1}=B}\ for\ each\ A,B\ \in\ possible$
-                                               $prediction\ labels$
+B                   $\rightarrow 1_{y_t=A\ and\ y_{t-1}=B}\ for\ each\ A,B\ \in\ possible\ prediction\ labels$
 \end{lstlisting}
 
 Hence the only custom features the New York Times take into account for prediction are the word identity (column 0), the index of the current word (column 1), the length of the sentence (column 2, rounded to 4, 8, 12, 16 or 20), if the word starts capitalized (column 3) and if the word is inside parenthesis (column 4), in relation with the current word and some surrounding words.

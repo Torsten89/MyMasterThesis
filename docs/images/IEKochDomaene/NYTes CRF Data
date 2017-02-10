@@ -1,0 +1,62 @@
+3/4       I1  L12  NoCAP  NoPAREN  B-QTY
+pound     I2  L12  NoCAP  NoPAREN  OTHER
+shiitake  I3  L12  NoCAP  NoPAREN  B-NAME
+mushrooms I4  L12  NoCAP  NoPAREN  I-NAME
+,         I5  L12  NoCAP  NoPAREN  OTHER
+stemmed   I6  L12  NoCAP  NoPAREN  B-COMMENT
+and       I7  L12  NoCAP  NoPAREN  I-COMMENT
+quartered I8  L12  NoCAP  NoPAREN  I-COMMENT
+
+
+# Unigram               
+U00:%x[-2,0]             
+U01:%x[-1,0]              
+U02:%x[0,0]
+U03:%x[1,0]
+U04:%x[2,0]
+U05:%x[0,1]
+U06:%x[0,2]
+U07:%x[0,3]
+
+U08:%x[-2,4]
+U09:%x[-1,4]
+U10:%x[0,4]
+U11:%x[1,4]
+U12:%x[2,4]
+
+U13:%x[0,0]/%x[0,2]
+U14:%x[0,1]/%x[0,2]
+U15:%x[0,0]/%x[0,3]
+U16:%x[0,0]/%x[0,4]
+U17:%x[0,0]/%x[0,1]
+
+# Bigram
+B
+
+
+pound            
+shiitake            
+mushrooms
+,
+stemmed
+I4
+L12
+NoCAP
+
+NoPAREN
+NoPAREN
+NoPAREN
+NoPAREN
+NoPAREN
+
+mushrooms/L12
+I4/L12
+mushrooms/NoCAP
+mushrooms/NoPAREN
+mushrooms/I4
+
+
+I-NAME B-Name
+
+
+

@@ -18,6 +18,11 @@ figure figure figcaption {
     font-style: italic;
 }
 
+figure table {
+    width: 100%;
+    border: 1px solid;
+}
+
 figure img {
     max-width: 100%;
     max-height: 100%;
@@ -26,10 +31,6 @@ figure img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-figure.floating {
-    float: right;
 }
 /* -------------- figures - end -------------- */
 

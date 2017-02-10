@@ -24,7 +24,7 @@
         <div class="container-fluid">
             <div class="row myHeaderForSideWithMyLeftNavBar">
                 <div class="col-md-12">
-                    <h1><a href="#">Überblick: Information Extraction in der Koch-Domäne</a></h1>
+                    <h1><a href="#">Information Extraction in der Koch-Domäne</a></h1>
                 </div>
             </div>
 
@@ -37,7 +37,7 @@
                             <a href="#CRFTheorie" class="list-group-item">CRF erklärt</a>
                             <a href="#CRFNYT" class="list-group-item">Implementierung der NYT</a>
                         </div>
-                        <a href="#DictBased" class="list-group-item">Dictionary and rule based</a>
+                        <a href="#DictBased" class="list-group-item">Dictionary- and rule-based</a>
                     </div>
                 </div>
 
@@ -75,62 +75,213 @@
                     
                     
                     <h2 id="CRFBased" class="myAnchorWithFixedheader">CRF based</h2>
-                    <p>Die New York Times betreibt eine eigene <a href="https://cooking.nytimes.com/" title="https://cooking.nytimes.com/">Kochseite</a>. Greene behauptet, dass sie mittels Linear-chain Conditional Random Fields (CRF) in der Lage sind <i>"automatisch den unstrukturierten Text von Rezepten in strukturierte Daten umzuwandeln"</i> <span cite="CRFNYT"></span>. Dies beinhaltet insbesondere das Extrahieren der Zutaten mit ihren Mengenangaben und Einheiten. Da diese Behauptung genau unserer Problemstellung entspricht, stellen wir zunächst die Idee von CRF vor und gehen anschließend auf die Implementierung von Greene ein.
+                    <p>Die New York Times (NYT) betreibt eine eigene <a href="https://cooking.nytimes.com/" title="https://cooking.nytimes.com/">Kochseite</a>. Greene behauptet, dass sie mittels Linear-chain Conditional Random Fields (CRF) in der Lage sind <i>"automatisch den unstrukturierten Text von Rezepten in strukturierte Daten umzuwandeln"</i> <span cite="CRFNYT"></span>. Dies beinhaltet insbesondere das Extrahieren der Zutaten mit ihren Mengenangaben und Einheiten. Da diese Behauptung genau unserer Problemstellung entspricht, stellen wir zunächst die Idee von CRF vor und gehen anschließend auf die Implementierung von Greene ein.
                     </p>
                     
                     <h3 id="CRFTheorie" class="myAnchorWithFixedheader">CRF erklärt</h3>
-                    <p>CRF <i>orakelt</i> zu einem Vektor von Wörtern ein Vektor von Labels. Im Folgenden bezeichnen wir daher CRF auch als Orakel. Wenn wir dem Orakel z.B. den Vektor <i>[Man, süße, mit, 2, EL, Zucker, .]</i> geben, orakelt er uns idealerweise die Labels <i>[OTHER, OTHER, OTHER, QUANTITY, UNIT, INGREDIENT, OTHER]</i>. Wenn wir so ein Orakel hätten, würden wir ihm unsere Rezepte, in solche Wort-Vektoren aufgespalten, geben und könnten aus der Antwort die Zutaten mit Mengenangaben und Einheiten ablesen.
+                    <p>CRF <i>orakelt</i> zu einem Vektor von Wörtern ein Vektor von Labels. Im Folgenden bezeichnen wir daher CRF auch als ein Orakel. Wenn wir dem Orakel z.B. den Vektor <i>[Man, süße, mit, 2, EL, Zucker, .]</i> geben, orakelt er uns idealerweise die Labels <i>[OTHER, OTHER, OTHER, QUANTITY, UNIT, INGREDIENT, OTHER]</i>. Wenn wir so ein Orakel hätten, würden wir ihm unsere Rezepte, in solche Wort-Vektoren aufgespalten, geben und könnten aus der Antwort die Zutaten mit Mengenangaben und Einheiten ablesen.
                     </p>
                     
-                    <p>Jetzt stellt sich nur noch die Frage, woher wir unser Orakel nehmen. Folgend erläutern wir die Idee, wie so ein Orakel antrainiert werden kann. Eine detailierte Einführung ist in <span cite="CRFIntroduction"></span> zu finden. Wir <i>bauen</i> das Orakel auf, in dem wir ihm zunächst eine Reihe von Wort-Vektoren geben und ihm für diese bereits die Lösung von Label-Vektoren geben. Solch eine Menge von Wort- und entsprechenden Label-Vektoren werden auch <i>Trainingsdaten</i> genannt. Fragen wir es nun nach den Labels von einen dieser Wort-Vektoren, könnte er uns einfach den entsprechenden Label-Vektor orakeln.
+                    <p>Jetzt stellt sich nur noch die Frage, woher man so ein Orakel bekommt. Folgend erläutern wir die Idee, wie so ein Orakel antrainiert werden kann. Eine detailierte Einführung ist in <span cite="CRFIntroduction"></span> zu finden. Wir fangen damit an, dass wir dem Orakel eine Reihe von Wort-Vektoren geben und ihm für diese bereits die passenden Antworten von Label-Vektoren geben. Solch eine Menge von Wort- und entsprechenden Label-Vektoren werden auch <i>Trainingsdaten</i> genannt. Fragen wir es nun nach den Labels von einen dieser Wort-Vektoren, könnte er uns einfach den entsprechenden Label-Vektor orakeln.
                     </p>
                     
-                    <p>Spannend ist die Frage, wie er Labels für Wort-Vektoren rät, von denen er nicht die Lösung kennt. Dafür leitet er zunächst aus den Trainingsdaten eine multivariate  Wahrscheinlichkeits&shy;verteilung ( p(X,Y) \) ab, wie wahrscheinlich zu einem Wort-Vektor \( X \) ein Label-Vektor \( Y \) gehört. Wenn wir jetzt vereinfacht davon ausgehen, dass jedes Label \( y_i \) nur vom vorherigen Label \( y_{i-1} \) und dem entsprechenden Wort \( x_i \) abhängt, ergibt sich Formel (1).
+                    <p>Spannend ist die Frage, wie er Labels für Wort-Vektoren rät, von denen er die Lösung nicht kennt. Dafür leitet er zunächst aus den Trainingsdaten eine multivariate  Wahrscheinlichkeits&shy;verteilung \( p(X,Y) \) ab, wie wahrscheinlich zu einem Wort-Vektor \( X \) ein Label-Vektor \( Y \) gehört. Wenn wir jetzt vereinfacht davon ausgehen, dass jedes Label \( y_i \) nur vom vorherigen Label \( y_{i-1} \) und dem entsprechenden Wort \( x_i \) abhängt, ergibt sich Formel (1).
                     </p>
-                    \begin{equation} p(X,Y) = \prod_{t=1}^{\#X} p(y_t|y_{t-1}) * p(y_t|x_t) \end{equation}
-                    <p>Formeln der Form von (1) können immer in die Form von Formel (2) überführt werden. Die Division durch \( Z(X,Y) \) stellt sicher, dass \( p(X,Y) \) nicht größer als eins werden kann und somit eine Wahrscheinlichkeit bleibt. \( 1_Bedingung \) ist eine Funktion, die genau dann Eins ist, wenn die Bedingung erfüllt ist und ansonsten null.
+                    
+                    \begin{equation} \boldsymbol{ p(X,Y) = \prod_{t=1}^{\#X} p(y_t|y_{t-1}) * p(y_t|x_t) } \end{equation}
+                    
+                    <p>Wahrscheinlichkeiten der Form von (1) können immer in die Form von Formel (2) überführt werden. \( 1_{Bedingung} \) ist dabei eine Funktion, die genau dann Eins ist, wenn die Bedingung erfüllt ist und ansonsten Null. So öfter \( y_t=i \) und \( y_{t-1}=j \) gemeinsam in der Verteilung vorkommen, so größer wird \( \Theta_ {i,j} \) sein. Kommen \( y_t=i \) und \( y_{t-1}=j \) gar nicht gemeinsam vor, gilt \( \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} = 0 \). Gleiches gilt für \( y_t=i \), \( x_t=o \) und \( \mu_{i,o} \). \( Z(X,Y) \) bildet die Summe über alle möglichen Vorkommen von \( X \) und \( Y \). Nach der Division mit \( Z(X,Y) \) ist somit sicher gestellt, dass Formel (2) zwischen \( 0 \) und \( 1 \) liegt, wie es sich für eine Wahrscheinlichkeitsverteilung gehört. 
                     </p> 
+                    
                     \begin{align}
-                        p(X,Y) = \frac{1}{Z(X,Y)}\prod_{t=1}^{\#X} exp(\sum_{i,j \in L}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in L}^{} \sum_{j \in W}^{} \mu_{o,i} * 1_{y=i} * 1_{x_t=o}),
+                        mit\ \Theta_{i,j} \in \mathbb{R}^+,\ L = alle\ moeglichen\ Labels, \ W = alle\ moeglichen\ Woerter \nonumber
                         \\
-                        mit\ \Theta_{i,j} \in \mathbb{R},\ L = alle\ moeglichen\ Labels, \ W = alle\ moeglichen\ Woerter \nonumber
+                        und\ Z(X,Y) = \sum_{X}^{}\sum_{Y}^{}\prod_{t=1}^{\#X} exp(\sum_{i,j\in L}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in L}^{} \sum_{o \in W}^{} \mu_{i,o} * 1_{y=i} * 1_{x_t=o}), \nonumber
                         \\
-                        und\ Z(X,Y) = \sum_{X}^{}\sum_{Y}^{}\prod_{t=1}^{\#X} exp(\sum_{i,j\in L}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in L}^{} \sum_{j \in W}^{} \mu_{o,i} * 1_{y=i} * 1_{x_t=o}), \nonumber
+                        \boldsymbol{ p(X,Y) = \frac{1}{Z(X,Y)}\prod_{t=1}^{\#X} exp(\sum_{i,j \in L}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in L}^{} \sum_{o \in W}^{} \mu_{i,o} * 1_{y=i} * 1_{x_t=o}) }
                     \end{align}
-                    <p>Eine Abbildung der Indizies \( i \) und \( j \) auf \( k \) führt wiederum zu der vereinfachten Formel (3).
+                    
+                    <p>Durch eine Abbildung der Indizies \( i \), \( j \) und \( o \) auf \( k \) kann dies wiederum zu Formel (3) vereinfacht werden.
                     </p>
+                    
                     \begin{align}
-                        p(X,Y) = \frac{1}{Z(X,Y)}\prod_{t=1}^{\#X} exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, x_t)),
+                        \boldsymbol{ p(X,Y) = \frac{1}{Z(X,Y)}\prod_{t=1}^{\#X} exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, x_t)) },
                         \\
                         mit,\ Z(X,Y) = \sum_{X,Y}^{}\prod_{t=1}^{\#X} exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, x_t)) \nonumber
                     \end{align}
+                    
                     <p>Wie in Formel (4) zu sehen ist, kann jede multivariate Wahrscheinlichkeit in eine bedingte Wahrscheinlichkeit umgerechnet werden.
                     </p>
-                    \begin{equation} p(Y|X) = \frac{p(X,Y)}{\sum_{Y'\in L}^{}p(Y', X)} \end{equation}
-                    <p><b>Eine nahe liegende Art zu Orakeln ist nun Formel (5)</b>, was nebenbei erwähnt bis hierhin erläutert, ein Hidden Markov Model/Orakel wäre:
+                    
+                    \begin{equation} \boldsymbol{ p(Y|X) = \frac{p(X,Y)}{\sum_{Y'\in L}^{}p(Y', X)} } \end{equation}
+                    
+                    <p><b>Eine nahe liegende Art zu Orakeln ist nun Formel (5)</b>, was nebenbei erwähnt, bis hierhin erläutert, ein Hidden Markov Model (HMM) ist:
                     </p>
-                        \begin{equation} orakel(X)=argmax_Y(p(Y|X) \end{equation} 
-                    <p>Aufgrund der vereinfachten Annahme, dass jedes Label \( y_i \) nur vom vorherigen Label \( y_{i-1} \) und dem entsprechenden Wort \( x_i \) abhängt, können die \( \Theta_{k} \) sowieso nicht so bestimmt werden, dass die Formeln \( p(Y|X) \) exakt treffen. Daher versucht ein CRF Orakel im Gegensatz zum Hidden Markov Model nun einige \Theta_{k} \) und entsprechende \f_{k} \) im Model auszulassen, um die Berechnung so zu verkürzen, unter der Bedingung dass das berechnete \( p(Y|X) \) dadruch nicht groß verändert wird. Des Weiteren können in einem CRF sogenannte <i>custom feature functions \( f_{k'}(y_t, y_{t-1}, X) \)</i> angegeben werden, die nicht nur vom entsprechendem Wort \( x_i \) sondern vom ganzen Wort-Vektor \( X \) abhängig sein können. Die Hoffnung ist, dass diese custom feature functions eine bessere Annäherung an \( p(Y|X) \) ermöglichen. Typische custom feature functions wären z.B.:
+                    
+                    \begin{equation} \boldsymbol{ orakel(X)=argmax_Y(p(Y|X)) } \end{equation} 
+                    
+                    <p>Aufgrund der vereinfachten Annahme, dass jedes Label \( y_i \) nur vom vorherigen Label \( y_{i-1} \) und dem entsprechenden Wort \( x_i \) abhängt, können die \( \Theta_{k} \) sowieso nicht so bestimmt werden, dass die Formeln \( p(Y|X) \) exakt treffen. Ein CRF versucht im Gegensatz zum HMM nun einige \( \Theta_{k} \) und entsprechende \( f_{k} \) im Model auszulassen. Durch das Weglassen von viele kleine \( \Theta_{k} \) kann ein CRF die Berechnungzseit beschleunigen, wobei die berechnete Verteilung und somit das spätere Orakeln nur maginal verändert wird. Auch erlaubt ein CRF negative Werte für \( \Theta_{k} \). Der Intuition nach sagen diese aus, dass ein Vorkommen von \( X \) und \( Y \) sehr unwahrscheinlich ist und geben somit Strafpunkte für die \( argmax_Y \)-Orakel-Funktion. Des Weiteren können in einem CRF sogenannte <i>custom feature functions</i> \( f_{k'}(y_t, y_{t-1}, X) \) angegeben werden, die nicht nur vom entsprechenden Wort \( x_i \) sondern vom ganzen Wort-Vektor \( X \) abhängig sein können. Die Praxis zeigt, dass ein CRF mit guten custom feature functions besser orakelt als ein HMM. Typische custom feature functions wären z.B.:
                     </p>
+                    
                     <ul>
                         <li>\( f_{k'_1}(y_t, y_{t-1}, X) = 1_{x_t\ ist\ ein\ Nomen} \)</li>
                         <li>\( f_{k'_2}(y_t, y_{t-1}, X) = 1_{x_t\ ist\ in\ einem\ domaenen-spezifischem\ Woerterbuch} \)</li>
                         <li>\( f_{k'_2}(y_t, y_{t-1}, X) = 1_{x_t\ ist\ in\ einem\ domaenen-spezifischem\ Woerterbuch\ und\ x_{t-1}\ ist\ ein\ Nomen} \)</li>
                     </ul>
                     
-                    <p>Abschließend zu CRF sei noch eine schlechte und eine gute Bemerkung erwähnt: Die Schlechte ist folgende: Aufgrund der Vereinfachung des Models, wie auch den custom feature functions ist es möglich, dass das CRF ein Wort-Vektor, der in den Trainingsdaten enthalten war, falsch orakelt. Die gute Bemerkung ist, dass sich die erste Befürchtung eines Informatikers, dass die Funktion \( orakel(X)=argmax_Y(p(Y|X) \) in Laufzeit von \( O({\#L}^{\#X}) \) berechnet werden muss, sich nicht bestätigt. Stattdessen kann sie durch dynamisches Programmieren auch in \( O({\#L}^2*{\#X}) \) berechnet werden.
+                    <p>Abschließend sei zu CRF noch eine überraschende und eine gute Bemerkung erwähnt. Die Überraschende ist folgende: Aufgrund der Vereinfachung des Models, wie auch den custom feature functions ist es möglich, dass ein CRF ein Wort-Vektor, der in den Trainingsdaten enthalten war, falsch orakelt. Die gute Bemerkung ist, dass sich die erste Befürchtung eines Informatikers nicht bestätigt, dass die Funktion \( orakel(X)=argmax_Y(p(Y|X) \) in Laufzeit von \( O({\#L}^{\#X}) \) berechnet werden muss. Stattdessen kann sie durch dynamisches Programmieren auch in \( O({\#L}^2*{\#X}) \) berechnet werden.
                     </p>
                     
                     
                     
                     <h3 id="CRFNYT" class="myAnchorWithFixedheader">Implementierung der NYT</h3>
-                    <p></p>
                     
-                    <h3 id="DictBased" class="myAnchorWithFixedheader">Dictionary and rule based</h3>
-                    <p>Lorem ipsum dolor sit amet, [...].
+                    <p>Die Rezepte der Kochseite der NYT haben alle eine Zutatenliste. Jede Zeile der Zutatenliste ist in einer Datenbank abgespeichert, aufgespalten nach der Zutat, einer Mengenangabe, der Mengeneinheit und Anderes. In dieser Datenbank sind mehr als 130.000 solcher Einträge, welche alle als Trainingsdaten für das CRF genutzt werden können. Die Zutat erhält dabei das Label <i>NAME</i>, die Mengenangabe <i>QTY</i> und die Einheit <i>UNIT</i>. Nach dem <a href="https://en.wikipedia.org/wiki/Inside_Outside_Beginning">IOB2-Format</a> erhält das erste Wort eines Labels den Prefix B- und folgende den Prefix I-. Als CRF-Bibliothek verwenden sie <a href="https://taku910.github.io/crfpp/" title="CRF++">CRF++</a>. Abb. 2-4 zeigt die von Greene in CRF++-Format angegebenen custom feature functions.
                     </p>
-                </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Die Trainingsdaten in Abb. 2 unten enthalten neben dem Wort-Vektor (1. Spalte) und dem Label-Vektor (letzte Spalte) eine Reihe von Feature-Labels (2.-5. Spalte). Die 2. Spalte gibt zu jedem Wort den Index des Wortes im Satz an. Die 3. Spalte klassifiziert die Sätze nach der Anzahl ihrer Wörter in vierer Abständen. Sätze der Länge 0-3 kriegen L0, 4-7 L1, usw. Die 3. und 4. Spalte geben an, ob das jeweilige Wort mit einem großen Buchstaben anfängt, oder im Satz eingeklammert ist.
+                            </p>
 
+                            <p>Die vom CRF zu verwendenden Features werden durch das Template in Abb. 3 angegeben. Ein Template hat das Format U<i>ID</i>:%x[<i>Zeile</i>,<i>Spalte</i>]. Das B-Template entspricht \( p(y_t|y_{t-1}) \). Abb 4. zeigt die aus den Template abgeleiteten Features, wenn dass aktuelle Wort in Abb. 2 "mushrooms" ist.
+                            </p>
+                            
+                            <p>
+                                <figure myModal="images/IEKochDomaene/NYTTrainingsdatenMitFeatureLabels.png">
+                                    <figcaption>Abb. 2: Traininigsdaten mit Feature Labels</figcaption>
+                                    <img src="images/IEKochDomaene/NYTTrainingsdatenMitFeatureLabels.png"/>
+                                </figure>
+                            </p>
+                            
+                            <p>Aus den Trainingsdaten mit den Feature-Labels und den Templates generiert CRF++ custom feature functions wie in Abb. 5 zu sehen ist.</p>
+                            
+                            <p>
+                                <figure>
+                                    <figcaption>Abb. 5: Beispiele für von CRF++ aus Abb. 2 und 3. extrahierte custom feature functions</figcaption>
+                                    <table>
+                                        <tr>
+                                            <td>U02:%[0,0]</td>
+                                            <td>\( \rightarrow \)</td>
+                                            <td>\( 1_{y_t=I-Name\ und\ x_t=mushrooms} \)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>U02:%[-2,4]</td>
+                                            <td>\( \rightarrow \)</td>
+                                            <td>\( 1_{y_t=I-Name\ und\ x_{t-2}\ 4.Spalte\ ist\ NoPAREN} \)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>U13:%x[0,0]/%x[0,2]</td>
+                                            <td>\( \rightarrow \)</td>
+                                            <td>\( 1_{y_t=I-Name\ and\ x_t=mushrooms\ und\ x_t\ 2.Spalte\ ist\ L12} \)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>B</td>
+                                            <td>\( \rightarrow \)</td>
+                                            <td>\( 1_{y_t=A\ und\ y_{t-1}=B}\ \forall\ A,B\ \in\ L\)</td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                            </p>
+                            
+                        </div>
+                        <div class="col-md-3">
+                            <figure myModal="images/IEKochDomaene/NYTFeatures.png">
+                                <figcaption>Abb. 3:<br/> Feature Templates</figcaption>
+                                <img src="images/IEKochDomaene/NYTFeatures.png"/>
+                            </figure>
+                        </div>
+                        <div class="col-md-3">
+                            <figure myModal="images/IEKochDomaene/NYTDerivedValues.png">
+                                <figcaption>Abb. 4:<br/> Anwendung der Templates</figcaption>
+                                <img src="images/IEKochDomaene/NYTDerivedValues.png"/>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                    <p>Diese CRF Implementierung berücksichtigt für ihre custom feature functions also nur die Position im Satz, die Länge des Satzes, ob ein Wort groß geschrieben wird und ob es eingeklammert ist. Bei einem Test mit 481 Rezepten orakelt dieser CRF 89% aller Zeilen einer Zutatenliste korrekt. Sie testen nur 481 Rezepte, obwohl sie über 130.000 zur Verfügung haben, da sie keine Möglichkeit zur automatischen Auswertung hatten. Wenn das CRF was anderes orakelt hat, als in der Datenbank stand, dann war manchmal das Orakel falsch, manchmal aber auch die manuell aufgebaute Datenbank und manchmal waren sogar beide falsch.
+                    </p>
+                    
+                    
+                    
+                    <h3 id="DictBased" class="myAnchorWithFixedheader">Dictionary- and rule-based</h3>
+                    
+                    <p>Die beiden unabhängigen Arbeiten von <span cite="DictBased1"></span> und <span cite="DictBased2"></span>, kategorisieren wir als <i>Dictionary- and rule-based</i>. Die Grundidee ist in Abb. 6 zu sehen.
+                    </p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Sämtliche gesuchten <i>Entities</i> sind in einem Wörterbuch gespeichert. Da wir uns auf die Koch-Domäne beschränken, ist die Annahme eines solchen Wörterbuches vertretbar. Für uns wäre dass z.B. ein Wörterbuch, welches alle Zutaten enthält, eins für alle Mengenangaben und eins für alle Mengeneinheiten. Um diese Wörterbücher möglichst klein zu halten, werden nur die Lemmata der gesuchten Entities gespeichert. Um nun Informationen aus einem Satz zu extrahieren, wird der Satzt zuerst Lemmatisiert und die einzelnen Lemmatas danach in den Wörterbüchern nachgeschaut. Ohne die Lemmatisierung könnte beispielsweise bei <i>"Man zerkocht die Äpfel"</i> Äpfel nicht extrahiret werden, obwohl <i>Apfel</i> im Wörterbuch steht. Die auf diese weise extrahierten Entities können anschließend noch weiterverarbeitet werden, was wir als <i>rule-based</i> Weiterverarbeitung bezeichnen.
+                            </p>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <p>
+                                <figure myModal="images/IEKochDomaene/DictAndRuleBasedGrundidee.png">
+                                    <figcaption>Abb. 6: Grundidee von Dictionary- and rule-based extraction</figcaption>
+                                    <img src="images/IEKochDomaene/DictAndRuleBasedGrundidee.png"/>
+                                </figure>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <p><span cite="DictBased1"></span> möchte aus Rezepten die Zutaten extrahieren und herausfinden, wie diese verarbeitet werden. Zum Beispiel ob sie gekocht, oder gebacken werden. Nachdem er mit einem Wörterbuch von Zutaten und einem von Verarbeitungs-Verben die gesuchten Entities gefunden hat, muss er noch verbinden welche Verarbeitungs-Verben zu welchen Zutaten gehören. Er hat dafür zwei unterschiedliche Ansätze:
+                    </p>
+                    
+                    <div style="padding-left:2em;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Die erste ist mittels einer <b>Kontextfreien Grammatik</b>. Abb. 7 verdeutlich das Prinzip beispielhaft. Die Terminal-Symbole der Grammatik sind Part-of-Speech-Tags sowie Tags für die bereits gefundenen Entities. Die Ableitugnsregeln der Grammatik haben alle eine vordefinierte Bedeutung, wie z.B. <i>wende das Verarbeitungs-Verb auf alle Zutaten in diesen Satz an</i>. Ein Satz wird nun wie folgt bearbeitet: Zunächst wird er in Terminal-Symbole übersetzt. Anschließend wird geschaut, durch welche Regeln in der Grammatik diese Terminal-Symbole abgeleitet werden können. Wurde eine gültige Ableitung gefunden, wird abschließend die vordefinierte Bedeutung der Regel auf den Satz angewendet. Das Beispiel in Abb. 7 kommt so zu dem Ergebnnise, dass bei dem Satz <i>Koche Erbsen und Bohnen</i> die <i>Erbsen</i> und die <i>Bohnen</i> gekocht werden sollen.
+                                </p>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <p>
+                                    <figure myModal="images/IEKochDomaene/KontextFreieGramma.png">
+                                        <figcaption>Abb. 7: Beispielhafte Kontextfreie Grammatik-basierte Weiterverarbeitung</figcaption>
+                                        <img src="images/IEKochDomaene/KontextFreieGramma.png"/>
+                                    </figure>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Die Zweite ist mittels einem <b>dependency-based parsing</b>. Abb. 8 zeigt ein exemplarisches Ergebnis eines dependency-based parsing des Satzes <i>Koche die Erbsen und Bohnen</i>. Aus diesem wird sofort ersichtlich, dass sich das Verb <i>kochen</i> auf die Subjekte <i>Erbsen</i> und <i>Bohnen</i> bezieht. Das dependency-based parsing kann von Bibliotheken wie den <a href="http://nlp.stanford.edu/software/lex-parser.shtml">Stanford Parser</a> erledigt werden.
+                                </p>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <p>
+                                    <figure myModal="images/IEKochDomaene/dependencyBased.png">
+                                        <figcaption>Abb. 8: Beispielhafte dependency-based parsing Weiterverarbeitung</figcaption>
+                                        <img src="images/IEKochDomaene/dependencyBased.png"/>
+                                    </figure>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <table border="1">
+                            <tr>
+                                <th></th>
+                                <th>Precision</th>
+                                <th>Recall</th>
+                            </tr>
+                            <tr>
+                                <th>Mit Kontextfreier Grammatik</th>
+                                <td>97,39%</td>
+                                <td>51,54%</td>
+                            </tr>
+                            <tr>
+                                <th>Mit dependency-based parsing</th>
+                                <td>95,40%</td>
+                                <td>64,12%</td>
+                            </tr>
+                        </table>
+                    
+                    </div>
+                    
+                </div>
             </div>
         </div>
 		

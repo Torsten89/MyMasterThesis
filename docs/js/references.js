@@ -111,6 +111,20 @@ references = [
         "year":"2012",
         "title":"An Introduction to Conditional Random Fields",
         "url":"http://dx.doi.org/10.1561/2200000013"
+    },
+    {
+        "id":"DictBased1",
+        "authors":"Zeeshan",
+        "year":"2009",
+        "title":"Domain Specific Information Extraction for Semantic Annotation",
+        "location":"Diplom-Arbeit an der Charles University in Prague, Tschechien und der University of Nancy in Frankreich"
+    },
+    {
+        "id":"DictBased2",
+        "authors":"Wiegand, Roth, Klakow",
+        "year":"2012",
+        "title":"Data-driven Knowledge Extraction for the Food Domain",
+        "location":"Saarbrücken, Deutschland"
     }
 ].sort(function(a,b) {
    return a.authors > b.authors;
