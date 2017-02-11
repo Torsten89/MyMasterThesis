@@ -42,13 +42,13 @@
                 </div>
 
                 <div class="col-md-10">
-                    <p>Folgend werden Algorithmen zum Extrahieren von Zutaten aus semi-strukturierten Text vorgestellt, die wir gefunden haben. Sie die Zutaten erst einmal von einem Programm extrahiert, kann das Progamm diese leicht mit <a href="cueML.html">cueML</a> anreichern und zurückschreiben. Dies ist wünschenswert, da <b>das manuelle Auszeichnen...</b>
+                    <p>Folgend werden Algorithmen zum Extrahieren von Zutaten aus semi-strukturierten Text vorgestellt, die wir gefunden haben. Sind die Zutaten erst einmal von einem Programm extrahiert, kann das Progamm diese leicht mit <a href="cueML.html">cueML</a> auszeichnen und zurückschreiben. Das automatische Auszeichnen ist wünschenswert, <b>da das manuelle Auszeichnen...</b>
                     </p>
                     
                     <ul>
                         <li><b>zeitaufwendig ist.</b> Die Erfahrung hat gezeigt, dass ich selber im Schnitt ca. 5 Minuten pro Rezept zum Auszeichnen brauche. Eine SHK, welche nicht im Umgang mit XML geübt war, hat netterweise ebenfalls ein paar Rezepte ausgezeichnet. Sie hat im Schnitt sogar 15 Minuten für ein Rezept gebraucht.</li>
-                        <li><b>Fehler anfällig ist.</b> Diese Feststellung bei mir selbst, wie bei der SHK werden u.A. durch <span cite="manualTaggingErrorProne"></span> und <span cite="CRFNYT"></span> bestätigt.</li>
-                        <li><b>domänen-spezifisches Wissen benötigt.</b> Wir sind z.B. über die Zutat <i>Scorzonerwurzel</i> gestolpert. Das Nachfragen bei einer Ernährungswissenschaftlerin der Kieler Uni ergab, dass damit wahrscheinlich Scorzone, bzw. Sommer-Trüffel gemeint sind. Später ist uns jedoch aufgefallen, dass Frau Davidis in viele Suppen Scorzonerwurzel reingibt. Dies hat bei uns die Frage aufgeworfen, ob sie wirklich so geschmackslos ist, die teuren Sommer-Trüffel in einer Suppe zu zerkochen. Nach einer weiterer Recherche glauben wir nun, dass sie mit Scorzonerwurzel Scorzonera hispanica bzw. Schwarzwurzeln meint, welche sicherlich in einer Suppe angebrachter sind als Sommer-Trüffel.</li>
+                        <li><b>fehleranfällig ist.</b> Diese Feststellung bei mir selbst, wie auch bei der SHK werden u.A. durch <span cite="manualTaggingErrorProne"></span> und <span cite="CRFNYT"></span> bestätigt.</li>
+                        <li><b>domänen-spezifisches Wissen benötigt.</b> Wir sind z.B. über die Zutat <i>Scorzonerwurzel</i> gestolpert. Das Nachfragen bei einer Ernährungswissenschaftlerin der Kieler Uni ergab, dass damit wahrscheinlich Scorzone, bzw. Sommer-Trüffel gemeint ist. Später ist uns jedoch aufgefallen, dass Frau Davidis in viele Suppen Scorzonerwurzeln reingibt. Dies hat bei uns die Frage aufgeworfen, ob sie wirklich so geschmackslos ist, die teuren Sommer-Trüffel in einer Suppe zu zerkochen. Nach einer weiteren Recherche glauben wir nun, dass sie mit Scorzonerwurzel Scorzonera hispanica bzw. Schwarzwurzel meint, welche sicherlich in einer Suppe angebrachter sind als Sommer-Trüffel.</li>
                     </ul>
 
                     
@@ -57,7 +57,7 @@
                     
                     <div class="row">
                         <div class="col-md-6">
-                            <p>In <span cite="SkipThePizza"></span> kombiniert der Autor seine zwei Hobbies Programmieren und Kochen. Um Fragen wie <i>aus wie vielen Zutaten besteht ein Rezept im Schnitt?</i>, oder <i>welche sind die meist benutzen Zutaten?</i> beantworten zu können, will er die Zutaten aus über 29.000 Rezepten von <a href="http://recipes.wikia.com/wiki/Recipes_Wiki">Recipes wikia</a> extrahieren.
+                            <p>In <span cite="SkipThePizza"></span> kombiniert der Autor seine zwei Hobbies Programmieren und Kochen. Um Fragen beantworten zu können wie <i>aus wie vielen Zutaten besteht ein Rezept im Schnitt?</i>, oder <i>welche sind die meist benutzen Zutaten?</i>, will er die Zutaten aus über 29.000 Rezepten von <a href="http://recipes.wikia.com/wiki/Recipes_Wiki">Recipes wikia</a> extrahieren.
                             </p>
                             
                             <p>Abb. 1 zeigt, wie die Rezepte in Recipes wikia abgespeichert sind. Offenbar haben die Rezepte die Semi-Struktur, dass jede Zutat innerhalb <i>[[...]]</i> eingeschlossen ist. Der Autor nutzt diese Semi-Struktur aus, um mittels Reguläre Ausdrücken die Zutaten zu extrahieren.
@@ -82,7 +82,7 @@
                     <p>CRF <i>orakelt</i> zu einem Vektor von Wörtern ein Vektor von Labels. Im Folgenden bezeichnen wir daher CRF auch als ein Orakel. Wenn wir dem Orakel z.B. den Vektor <i>[Man, süße, mit, 2, EL, Zucker, .]</i> geben, orakelt er uns idealerweise die Labels <i>[OTHER, OTHER, OTHER, QUANTITY, UNIT, INGREDIENT, OTHER]</i>. Wenn wir so ein Orakel hätten, würden wir ihm unsere Rezepte, in solche Wort-Vektoren aufgespalten, geben und könnten aus der Antwort die Zutaten mit Mengenangaben und Einheiten ablesen.
                     </p>
                     
-                    <p>Jetzt stellt sich nur noch die Frage, woher man so ein Orakel bekommt. Folgend erläutern wir die Idee, wie so ein Orakel antrainiert werden kann. Eine detailierte Einführung ist in <span cite="CRFIntroduction"></span> zu finden. Wir fangen damit an, dass wir dem Orakel eine Reihe von Wort-Vektoren geben und ihm für diese bereits die passenden Antworten von Label-Vektoren geben. Solch eine Menge von Wort- und entsprechenden Label-Vektoren werden auch <i>Trainingsdaten</i> genannt. Fragen wir es nun nach den Labels von einen dieser Wort-Vektoren, könnte er uns einfach den entsprechenden Label-Vektor orakeln.
+                    <p>Jetzt stellt sich nur noch die Frage, woher man so ein Orakel bekommt. Folgend erläutern wir die Idee, wie so ein Orakel antrainiert werden kann. Eine detailierte Einführung ist in <span cite="CRFIntroduction"></span> zu finden. Wir fangen damit an, dass wir dem Orakel eine Reihe von Wort-Vektoren geben und ihm für diese bereits die passenden Antworten von Label-Vektoren mitgeben. Solch eine Menge von Wort- und entsprechenden Label-Vektoren werden auch <i>Trainingsdaten</i> genannt. Fragen wir es nun nach den Labels von einen dieser Wort-Vektoren, könnte er uns einfach den entsprechenden Label-Vektor orakeln.
                     </p>
                     
                     <p>Spannend ist die Frage, wie er Labels für Wort-Vektoren rät, von denen er die Lösung nicht kennt. Dafür leitet er zunächst aus den Trainingsdaten eine multivariate  Wahrscheinlichkeits&shy;verteilung \( p(X,Y) \) ab, wie wahrscheinlich zu einem Wort-Vektor \( X \) ein Label-Vektor \( Y \) gehört. Wenn wir jetzt vereinfacht davon ausgehen, dass jedes Label \( y_i \) nur vom vorherigen Label \( y_{i-1} \) und dem entsprechenden Wort \( x_i \) abhängt, ergibt sich Formel (1).
@@ -136,7 +136,7 @@
                     
                     <h3 id="CRFNYT" class="myAnchorWithFixedheader">Implementierung der NYT</h3>
                     
-                    <p>Die Rezepte der Kochseite der NYT haben alle eine Zutatenliste. Jede Zeile der Zutatenliste ist in einer Datenbank abgespeichert, aufgespalten nach der Zutat, einer Mengenangabe, der Mengeneinheit und Anderes. In dieser Datenbank sind mehr als 130.000 solcher Einträge, welche alle als Trainingsdaten für das CRF genutzt werden können. Die Zutat erhält dabei das Label <i>NAME</i>, die Mengenangabe <i>QTY</i> und die Einheit <i>UNIT</i>. Nach dem <a href="https://en.wikipedia.org/wiki/Inside_Outside_Beginning">IOB2-Format</a> erhält das erste Wort eines Labels den Prefix B- und folgende den Prefix I-. Als CRF-Bibliothek verwenden sie <a href="https://taku910.github.io/crfpp/" title="CRF++">CRF++</a>. Abb. 2-4 zeigt die von Greene in CRF++-Format angegebenen custom feature functions.
+                    <p>Die Rezepte der Kochseite der NYT haben alle eine Zutatenliste. Jede Zeile der Zutatenliste ist in einer Datenbank abgespeichert, aufgespalten nach der Zutat, einer Mengenangabe, der Mengeneinheit und Anderes. In dieser Datenbank sind mehr als 130.000 solcher Einträge, welche alle als Trainingsdaten für das CRF genutzt werden können. Die Zutat erhält dabei das Label <i>NAME</i>, die Mengenangabe <i>QTY</i> und die Einheit <i>UNIT</i>. Nach dem <a href="https://en.wikipedia.org/wiki/Inside_Outside_Beginning">IOB2-Format</a> erhält das erste Wort eines Labels den Prefix B- und folgende den Prefix I-. Als CRF-Bibliothek verwenden sie <a href="https://taku910.github.io/crfpp/" title="CRF++">CRF++</a>. Abb. 2 bis 4 zeigt die von Greene in CRF++-Format angegebenen custom feature functions.
                     </p>
                     
                     <div class="row">
@@ -144,7 +144,7 @@
                             <p>Die Trainingsdaten in Abb. 2 unten enthalten neben dem Wort-Vektor (1. Spalte) und dem Label-Vektor (letzte Spalte) eine Reihe von Feature-Labels (2.-5. Spalte). Die 2. Spalte gibt zu jedem Wort den Index des Wortes im Satz an. Die 3. Spalte klassifiziert die Sätze nach der Anzahl ihrer Wörter in vierer Abständen. Sätze der Länge 0-3 kriegen L0, 4-7 L1, usw. Die 3. und 4. Spalte geben an, ob das jeweilige Wort mit einem großen Buchstaben anfängt, oder im Satz eingeklammert ist.
                             </p>
 
-                            <p>Die vom CRF zu verwendenden Features werden durch das Template in Abb. 3 angegeben. Ein Template hat das Format U<i>ID</i>:%x[<i>Zeile</i>,<i>Spalte</i>]. Das B-Template entspricht \( p(y_t|y_{t-1}) \). Abb 4. zeigt die aus den Template abgeleiteten Features, wenn dass aktuelle Wort in Abb. 2 "mushrooms" ist.
+                            <p>Die vom CRF zu verwendenden Features werden durch das Template in Abb. 3 angegeben. Ein Template hat das Format U<i>ID</i>:%x[<i>Zeile</i>,<i>Spalte</i>]. Das B-Template entspricht \( p(y_t|y_{t-1}) \). Abb. 4 zeigt die aus den Template abgeleiteten Features, wenn dass aktuelle Wort in Abb. 2 "mushrooms" ist.
                             </p>
                             
                             <p>
@@ -154,7 +154,7 @@
                                 </figure>
                             </p>
                             
-                            <p>Aus den Trainingsdaten mit den Feature-Labels und den Templates generiert CRF++ custom feature functions wie in Abb. 5 zu sehen ist.</p>
+                            <p>Aus den Trainingsdaten mit den Feature-Labels und den Templates generiert CRF++ custom feature functions wie in Abb. 5 exemplarisch gezeigt ist.</p>
                             
                             <p>
                                 <figure>
@@ -178,7 +178,7 @@
                                         <tr>
                                             <td>B</td>
                                             <td>\( \rightarrow \)</td>
-                                            <td>\( 1_{y_t=A\ und\ y_{t-1}=B}\ \forall\ A,B\ \in\ L\)</td>
+                                            <td>\( 1_{y_t=i\ und\ y_{t-1}=j}\ \forall\ i,j\ \in\ L\)</td>
                                         </tr>
                                     </table>
                                 </figure>
@@ -199,19 +199,19 @@
                         </div>
                     </div>
                     
-                    <p>Diese CRF Implementierung berücksichtigt für ihre custom feature functions also nur die Position im Satz, die Länge des Satzes, ob ein Wort groß geschrieben wird und ob es eingeklammert ist. Bei einem Test mit 481 Rezepten orakelt dieser CRF 89% aller Zeilen einer Zutatenliste korrekt. Sie testen nur 481 Rezepte, obwohl sie über 130.000 zur Verfügung haben, da sie keine Möglichkeit zur automatischen Auswertung hatten. Wenn das CRF was anderes orakelt hat, als in der Datenbank stand, dann war manchmal das Orakel falsch, manchmal aber auch die manuell aufgebaute Datenbank und manchmal waren sogar beide falsch.
+                    <p>Diese CRF Implementierung berücksichtigt für ihre custom feature functions also nur die Position im Satz, die Länge des Satzes, ob ein Wort groß geschrieben wird und ob es eingeklammert ist. Bei einem Test mit 481 Rezepten orakelt dieses CRF 89% aller Zeilen einer Zutatenliste korrekt. Sie testen nur 481 Rezepte, obwohl sie über 130.000 zur Verfügung haben, da sie keine Möglichkeit zur automatischen Auswertung gefunden hatten. Wenn das CRF was anderes orakelt hat, als in der Datenbank stand, dann war manchmal das Orakel falsch, manchmal aber auch die manuell aufgebaute Datenbank und manchmal waren sogar beide falsch.
                     </p>
                     
                     
                     
                     <h3 id="DictBased" class="myAnchorWithFixedheader">Dictionary- and rule-based</h3>
                     
-                    <p>Die beiden unabhängigen Arbeiten von <span cite="DictBased1"></span> und <span cite="DictBased2"></span>, kategorisieren wir als <i>Dictionary- and rule-based</i>. Die Grundidee ist in Abb. 6 zu sehen.
+                    <p>Die beiden unabhängigen Arbeiten von <span cite="DictBased1"></span> und <span cite="DictBased2"></span> kategorisieren wir als <i>Dictionary- and rule-based</i>. Die Grundidee ist in Abb. 6 zu sehen.
                     </p>
                     
                     <div class="row">
                         <div class="col-md-6">
-                            <p>Sämtliche gesuchten <i>Entities</i> sind in einem Wörterbuch gespeichert. Da wir uns auf die Koch-Domäne beschränken, ist die Annahme eines solchen Wörterbuches vertretbar. Für uns wäre dass z.B. ein Wörterbuch, welches alle Zutaten enthält, eins für alle Mengenangaben und eins für alle Mengeneinheiten. Um diese Wörterbücher möglichst klein zu halten, werden nur die Lemmata der gesuchten Entities gespeichert. Um nun Informationen aus einem Satz zu extrahieren, wird der Satzt zuerst Lemmatisiert und die einzelnen Lemmatas danach in den Wörterbüchern nachgeschaut. Ohne die Lemmatisierung könnte beispielsweise bei <i>"Man zerkocht die Äpfel"</i> Äpfel nicht extrahiret werden, obwohl <i>Apfel</i> im Wörterbuch steht. Die auf diese weise extrahierten Entities können anschließend noch weiterverarbeitet werden, was wir als <i>rule-based</i> Weiterverarbeitung bezeichnen.
+                            <p>Sämtliche gesuchten <i>Entities</i> sind in einem Wörterbuch gespeichert. Da wir uns auf die Koch-Domäne beschränken, ist die Annahme eines solchen Wörterbuches vertretbar. Für uns wäre dass z.B. ein Wörterbuch, welches alle Zutaten enthält, eins für alle Mengenangaben und eins für alle Mengeneinheiten. Um diese Wörterbücher möglichst klein zu halten, werden nur die Lemmata der gesuchten Entities gespeichert. Um nun Informationen aus einem Satz zu extrahieren, wird der Satz zuerst lemmatisiert und die einzelnen Lemmatas danach in den Wörterbüchern nachgeschaut. Ohne die Lemmatisierung könnte beispielsweise bei <i>"Man zerkocht die Äpfel"</i> Äpfel nicht extrahiret werden, obwohl <i>Apfel</i> im Wörterbuch steht. Die auf diese weise extrahierten Entities können anschließend noch weiterverarbeitet werden, was wir als <i>rule-based</i> Weiterverarbeitung bezeichnen.
                             </p>
                         </div>
                         
@@ -225,20 +225,20 @@
                         </div>
                     </div>
                     
-                    <p><span cite="DictBased1"></span> möchte aus Rezepten die Zutaten extrahieren und herausfinden, wie diese verarbeitet werden. Zum Beispiel ob sie gekocht, oder gebacken werden. Nachdem er mit einem Wörterbuch von Zutaten und einem von Verarbeitungs-Verben die gesuchten Entities gefunden hat, muss er noch verbinden welche Verarbeitungs-Verben zu welchen Zutaten gehören. Er hat dafür zwei unterschiedliche Ansätze:
+                    <p><b><span cite="DictBased1"></span></b> möchte aus Rezepten die Zutaten extrahieren und herausfinden, wie diese verarbeitet werden. Zum Beispiel ob sie gekocht, oder gebacken werden. Nachdem er mit einem Wörterbuch von Zutaten und einem von Verarbeitungs-Verben die gesuchten Entities gefunden hat, muss er noch verbinden welche Verarbeitungs-Verben zu welchen Zutaten gehören. Er hat dafür zwei unterschiedliche Ansätze:
                     </p>
                     
                     <div style="padding-left:2em;">
                         <div class="row">
                             <div class="col-md-6">
-                                <p>Die erste ist mittels einer <b>Kontextfreien Grammatik</b>. Abb. 7 verdeutlich das Prinzip beispielhaft. Die Terminal-Symbole der Grammatik sind Part-of-Speech-Tags sowie Tags für die bereits gefundenen Entities. Die Ableitugnsregeln der Grammatik haben alle eine vordefinierte Bedeutung, wie z.B. <i>wende das Verarbeitungs-Verb auf alle Zutaten in diesen Satz an</i>. Ein Satz wird nun wie folgt bearbeitet: Zunächst wird er in Terminal-Symbole übersetzt. Anschließend wird geschaut, durch welche Regeln in der Grammatik diese Terminal-Symbole abgeleitet werden können. Wurde eine gültige Ableitung gefunden, wird abschließend die vordefinierte Bedeutung der Regel auf den Satz angewendet. Das Beispiel in Abb. 7 kommt so zu dem Ergebnnise, dass bei dem Satz <i>Koche Erbsen und Bohnen</i> die <i>Erbsen</i> und die <i>Bohnen</i> gekocht werden sollen.
+                                <p>Die Erste ist mittels einer <b>kontextfreien Grammatik</b>. Abb. 7 verdeutlich das Prinzip beispielhaft. Die Terminal-Symbole der Grammatik sind Part-of-Speech-Tags sowie Tags für die bereits gefundenen Entities. Die Ableitugnsregeln der Grammatik haben alle eine vordefinierte Bedeutung, wie z.B. <i>wende das Verarbeitungs-Verb auf alle Zutaten in diesen Satz an</i>. Ein Satz wird nun wie folgt bearbeitet: Zunächst wird er in Terminal-Symbole übersetzt. Anschließend wird geschaut, durch welche Regeln in der Grammatik diese Terminal-Symbole abgeleitet werden können. Wurde eine gültige Ableitung gefunden, wird abschließend die vordefinierte Bedeutung der Regel auf den Satz angewendet. Das Beispiel in Abb. 7 kommt so zu dem Ergebnnise, dass bei dem Satz <i>Koche Erbsen und Bohnen</i> die <i>Erbsen</i> und die <i>Bohnen</i> <i>gekocht </i> werden sollen.
                                 </p>
                             </div>
                             
                             <div class="col-md-6">
                                 <p>
                                     <figure myModal="images/IEKochDomaene/KontextFreieGramma.png">
-                                        <figcaption>Abb. 7: Beispielhafte Kontextfreie Grammatik-basierte Weiterverarbeitung</figcaption>
+                                        <figcaption>Abb. 7: Beispielhafte kontextfreie Grammatik-basierte Weiterverarbeitung</figcaption>
                                         <img src="images/IEKochDomaene/KontextFreieGramma.png"/>
                                     </figure>
                                 </p>
@@ -261,25 +261,49 @@
                             </div>
                         </div>
                         
-                        <table border="1">
-                            <tr>
-                                <th></th>
-                                <th>Precision</th>
-                                <th>Recall</th>
-                            </tr>
-                            <tr>
-                                <th>Mit Kontextfreier Grammatik</th>
-                                <td>97,39%</td>
-                                <td>51,54%</td>
-                            </tr>
-                            <tr>
-                                <th>Mit dependency-based parsing</th>
-                                <td>95,40%</td>
-                                <td>64,12%</td>
-                            </tr>
-                        </table>
-                    
                     </div>
+                        
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p>Beide Ansätze werden anhand von 43 Rezepten evaluiert. Tabelle 1 zeigt die Ergebnisse. Die precision zeigt, dass nahezu alle extrahierten Entitites und ihre Beziehungen zu&shy;einander korrekt sind. Allerdings werden nur gut die Hälfte aller relevanten Informationen extrahiert, wie der Recall zeigt. Die Schlussfolgerung ist, dass das dictionary-based Extrahieren nahezu perfekt funktioniert. Wenn bei der rule-based Weiterverarbeitung eine Regel der kontextfreien Grammatik erflogreich angewendet werden kann, sind die extrahierten Informationen ebenfalls korrekt. Allerdings sind viele Informationen nicht von einer Regel abgedeckt und werden somit nicht extrahiert. Gleiches gilt für das dependency&shy;-based parsing. Es werden zwar ein wenig mehr korrekte Informationen erfasst, dafür extrahiert dieser Ansatz auch einige zusätzliche Informationen, die falsch sind.
+                            </p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <table border="1">
+                                <caption>Tabelle 1</caption>
+                                <tr>
+                                    <th></th>
+                                    <th>Precision</th>
+                                    <th>Recall</th>
+                                </tr>
+                                <tr>
+                                    <th>Mit kontextfreier Grammatik</th>
+                                    <td>97,39%</td>
+                                    <td>51,54%</td>
+                                </tr>
+                                <tr>
+                                    <th>Mit dependency-based parsing</th>
+                                    <td>95,40%</td>
+                                    <td>64,12%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <p><b><span cite="DictBased2"></span></b> sind an folgenden vier Fragen interessiert: <i>Welche Lebensmittel passen zu welchem Anlass?</i>, <i>Welche Lebensmittel werden oft kombiniert?</i>, <i>Welche Lebensmittel können untereinander ausgetauscht werden?</i> und <i>Welche Lebensmittel sind Teil eines Gerichtes</i>. Um diese Fragen zu beantworten, extrahieren sie Informationen aus Wikipedia und dem Forum von Chefkoch.de. Sie arbeiten also mit rein textuellen Daten und können beispielsweise nicht auf die Struktur eines Rezeptes mit Zutatenliste aufbauen. Für uns relevant sind ihre Methoden <i>Surface Patterns</i> und <i>Statistical Co-occurrence</i>.
+                    </p>
+                    
+                    <div style="padding-left:2em;">
+                        <p><b>Surface Patterns</b> ist von der Idee her identisch mit der zuvor vorgestellten kontextfreien Grammatik von <span cite="DictBased1" class="beforePunctuation"></span>. Sie stellen ebenfalls fest, dass die extrahierten Informationen meist korrekt sind, aber viele Informationen nicht gefunden werden. Im Gegensatz zu <span cite="DictBased1"></span> schreiben sie jedoch, dass sie mit einer dependency-based parsing Weiterverarbeitung nicht mehr korrekte Informationen extrahieren konnten. Sie führen das auf systematische Fehler bestehender Parser für die deutsche Sprache zurück. Diese sind mit Zeitungsartikel antrainiert, in welchen im Allgemeinen anders formuliert wird als in der Koch-Domäne.
+                        </p>
+                        
+                        <p><b>Statistical Co-occurrence</b> sucht nach gemeinsamen Vorkommen von Entities. Wenn beispielsweise ein Lebensmittel (Popcorn) mit einem Anlass (Kinobesuch) im gleichen Text steht, wird extrahiert, dass das Lebensmittel zu diesem Anlass passt (Popcorn passt zum Kinobesuch).
+                        </p>
+                    </div>
+                    
+                    <p>Das Ergebnis der Extraktion ist je eine Liste von Lebensmittel für jede der vier Fragen. Da eine Liste von Ergebnissen nicht passend mit Percision und Recall ausgewertet werden kann und die Evaluierung keine weiteren Erkenntnisse für diese Arbeit bringt, sei für die Evaluierung auf die originale Ausarbeitung verwiesen.
+                    </p>
                     
                 </div>
             </div>
