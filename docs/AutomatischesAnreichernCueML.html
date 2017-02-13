@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Davidis's Kochbuch</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/myStyle.css">
+        
+		<script src="js/jquery.min.js"></script>
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</head>
+	
+	<body style="padding-top:50px"> <!-- padding because otherwise navbar is over the beginning of the content -->
+        <div id="navbar"></div>
+
+		<div class="container-fluid">
+            <div class="row myHeaderForSideWithMyLeftNavBar">
+                <div class="col-md-12">
+                    <h1><a href="#">Automatisches Anreichern mit <i>cueML</i></a></h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="list-group panel myLeftNavBar">
+                        <a href="#CRFPrototyp" class="list-group-item">CRF-based Prototyp</a>
+                        <a data-toggle="collapse" class="list-group-item" href="#collapse1">Dictionary- and rule-based Prototyp<span class="caret"></span></a>
+                        <div id="collapse1" class="collapse">
+                            <a href="#DictBasedV01" class="list-group-item">Version 0.1</a>
+                            <a href="#DictBasedV02" class="list-group-item">Version 0.2</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-10">
+                    <p>Inspiriert von dem vorherigen Abschnitt <a href="IEKochDomain.html">Information Extraction in der Koch-Domäne</a> stellen wir hier zwei verschiedene Prototypen vor, um aus den Zubereitungs-Anweisungen von unserem Kochbuch eine Zutatenliste zu extrahieren. Da wir auf keine vorhandene Semi-Struktur aufbauen können, ist ein Regular Expression-based Ansatz nicht möglich. Der CRF-based Prototyp ist sehr simpel, da uns während der Konstruktion klar geworden ist, dass wir andere Voraussetzungen als <span cite="CRFNYT"></span> haben.
+                    </p>
+                    
+                    
+                    <h2 id="CRFPrototyp" class="myAnchorWithFixedheader">CRF-based Prototyp</h2>
+                    
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p>Unser CRF-based Prototyp ist in unserem Git-Repository unter dem Tag <a href="#">CRF-BasedPrototypeV0.1</a> zu finden. Er verwendet das <a href="http://www.swig.org/" title="Simplified Wrapper and Interface Generator">SWIG</a> Interface für <i>Python 3</i> von <a href="http://www.chokkan.org/software/crfsuite/">CRFsuite 0.12</a>.
+                            </p>
+                            
+                            <p>Wie in <a href="IEKochDomain.html#CRFTheorie">CRF erklärt</a> erläutert, muss der Prototyp zuerst antrainiert werden. Abb. 1 zeigt einen kleinen Ausschnitt unserer Trainingsdaten für den CRF-based Prototypen. Nebenbei sei erwähnt, dass wir diese Anweisungen heute als eine Mehlschwitze bezeichnen würden.
+                            </p>
+                            
+                            <p>Aus diesem kleinen Ausschnitt der Trainingsdaten sind bereits viele Problematiken ersichtlich, was später in der <a href="Evaluierung.html#CRFPrototyp" >Evaluierung dieses Prototypens</a> genauer erläutert wird. Daher haben wir zunächst einen simplen Prototypen gebaut, um zu schauen, ob CRF wirklich der richtige algorithmische Ansatz für unser Problem ist. Wie in Abb. 1 haben wir 10 Rezepte gelabelt. Mit <a href="#" title="Link zu den gelabelten Trainings-Rezepten">9</a> davon haben wir den CRF-based Prototypen trainiert und an dem <a href="#" title="Link zu dem gelabelten Test-Rezept">10.</a> getestet. Als features verwenden wir ausschließlich die Wort-Identität, sowie den Übergang von zwei benachtbarten Labels (B-Template). Für die Gewichte der features erlauben wir auch negative Werte.
+                            </p>
+                        </div>
+                        
+                        <div class="coll-md-3">
+                                <figure myModal="images/AutomatischesAnreichrenCueML/AusschnittCRFTrainingsdaten.png">
+                                    <figcaption>Abb. 1: Ausschnitt unserer CRF Trainingsdaten</figcaption>
+                                    <img src="images/AutomatischesAnreichrenCueML/AusschnittCRFTrainingsdaten.png"/>
+                                </figure>
+                        </div>
+                    
+                    </div>
+                    
+                    
+                    
+                    
+                    <h2 class="myAnchorWithFixedheader">Dictionary- and rule-based Prototyp</h2>
+                    <h3 id="DictBasedV01" class="myAnchorWithFixedheader">Version 0.1</h3>
+                    <h3 id="DictBasedV02" class="myAnchorWithFixedheader">Version 0.2</h3>
+                </div>
+                
+            </div>
+        </div>
+		
+        
+        <script>activeTab = "DigitalEdition"</script>
+        <script src="js/navbar.js"></script>
+        <script src="js/figure2modal.js"></script>
+        <script src="js/references.js"></script>
+	</body>
+</html> 

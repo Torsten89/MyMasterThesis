@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Davidis's Kochbuch</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/myStyle.css">
+        
+		<script src="js/jquery.min.js"></script>
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</head>
+	
+	<body style="padding-top:50px"> <!-- padding because otherwise navbar is over the beginning of the content -->
+        <div id="navbar"></div>
+
+		<div class="container-fluid">
+            <div class="row myHeaderForSideWithMyLeftNavBar">
+                <div class="col-md-12">
+                    <h1><a href="#">Evaluierung</a></h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="list-group panel myLeftNavBar">
+                        <a href="#CRFPrototyp" class="list-group-item">CRF-based Prototyp</a>
+                        <a data-toggle="collapse" class="list-group-item" href="#collapse1">Dictionary- and rule-based Prototyp<span class="caret"></span></a>
+                        <div id="collapse1" class="collapse">
+                            <a href="#DictBasedV01" class="list-group-item">Version 0.1</a>
+                            <a href="#DictBasedV02" class="list-group-item">Version 0.2</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-10">
+                    <h2 id="CRFPrototyp" class="myAnchorWithFixedheader">CRF-based Prototyp</h2>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Antrainiert haben wir den CRF-based Prototypen mit <a href="#">9 Rezepten</a>. <a href="#" title="Link zu unserer digitalen Version des Rezeptes">Unser Test-Rezept</a> besteht aus 96 Wörtern. Von den dazugehörenden Labels sind 83 <i>O</i> für <i>others</i>.
+                            </p>
+                            
+                            <p>Tabelle 1 zeigt die Stellen, wo sich die manuellen und die vom Prototypen extrahierten Labels unterscheiden. Die beiden Zutaten <i>Kartoffeln </i> und <i>Kartoffel-Klöße</i>, die nicht extrahiert wurden, sind auch nicht in den Trainings-Rezepten vorhanden. <i>Eine</i> und <i>einige</i> hingegen sind in den Trainingsdaten vorhanden. Sie sind mal als Mengenangabe gelabelt (z.B. in <i>eine geriebene gelbe Murzel</i>) und mal nicht (z.B. in <i>dies wird eine Weile gerührt</i>). Wenn dem CRF nur positive Gewichte erlaubt sind, orakelt er auch <i>Griesmehl</i> als <i>O</i>, obwohl Griesmehl in den Trainingsdaten nur einmal als <i>B-Ingredient</i> gelabelt vorkommt.
+                            </p>
+                            
+                            <p>Tabelle 2 zeigt die Precision und Recall von dem CRF mit ausschließlich positiven, wie auch mit negativen Gewichten. Alle extrahierten Entities sind korrekt. Allerdings wurden 5 bzw. 6 der 13 Entitites des Rezeptes nicht als solche sondern als <i>O</i> gelabelt.
+                            </p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <table border="1">
+                                <caption>Tabelle 1: Unterschiede zwischen den manuellen und extrahierten Labels</caption>
+                                <tr>
+                                    <th>Wort im Satz</th>
+                                    <th>Manuelle Labels</th>
+                                    <th>Labels vom CRF</th>
+                                </tr>
+                                <tr>
+                                    <td>eine</td>
+                                    <td>B-Quantity</td>
+                                    <td>O</td>
+                                </tr>
+                                <tr>
+                                    <td>einige</td>
+                                    <td>B-Quantity</td>
+                                    <td>O</td>
+                                </tr>
+                                <tr>
+                                    <td>Kartoffeln</td>
+                                    <td>B-Ingredient</td>
+                                    <td>O</td>
+                                </tr>
+                                <tr>
+                                    <td>Kartoffeln</td>
+                                    <td>B-Ingredient</td>
+                                    <td>O</td>
+                                </tr>
+                                <tr>
+                                    <td>Kartoffel-Klöße</td>
+                                    <td>B-Ingredient</td>
+                                    <td>O</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div class="col-md-3">
+                            <table border="1">
+                                <caption>Tabelle 2:<br/> Precision and Recall</caption>
+                                <tr>
+                                    <th></th>
+                                    <th>Precision</th>
+                                    <th>Recall</th>
+                                </tr>
+                                <tr>
+                                    <th>Prototyp mit negativen Gewichten</th>
+                                    <td>100,00%</td>
+                                    <td>61,54%</td>
+                                </tr>
+                                <tr>
+                                    <th>Prototyp ohne negativen Gewichten</th>
+                                    <td>100,00%</td>
+                                    <td>53,85%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    
+                    <p>Das Antrainieren mit 9 Rezepten, sowie das Auswerten anhand nur einem Rezept ist natürlich kein Maßstab für eine echte Evaluierung. Allerdings sind uns bereits an diesem simplen Prototypen viele Stolpersteine aufgefallen.
+                    </p>
+                
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p>
+                                <figure myModal="images/AutomatischesAnreichrenCueML/cueMLvonAusschnittCRFTrainingsdaten.png">
+                                    <figcaption>Abb. 1: Zu Abb. 2 entsprechender mit cueML ausgezeichneter Text</figcaption>
+                                    <img src="images/AutomatischesAnreichrenCueML/cueMLvonAusschnittCRFTrainingsdaten.png"/>
+                                </figure>
+                            </p>
+                            
+                            <p>Abb. 1 zeigt den, zu den gelabelten Trainingsdaten aus Abb. 2, entsprechenden mit cueML ausgezeichneten Text. Bereits in diesem kleinen Ausschnitt der Trainingsdaten lassen sich viele Stolpersteine finden:
+                            </p>
+                            
+                            <ul>
+                                <li><i>"ein bis zwei Eßlöffel"</i> sind in cueML eindeutig mit den Attributen <i>atLeast="1"</i> und <i>atMost="2"</i> abzubilden. <b>Eine eindeutige Abbildung auf Labels ist jedoch schwieriger</b>. Um den reinen Text mittels den Labels aus Abb. 2 mit cueML auszuzeichnen, müssten diese noch in die entsprechenden Attribute übersetzt werden. Alternativ hätte man auch folgende Labels überlegen können; <i>ein (B-atLeast) bis (O) zwei (B-atMost)</i> oder <i>ein (B-atLeast) bis (B-IndicatorForAtLeastAtMost) zwei (B-atMost).</i>
+                                </li>
+                                <li>Ungeachtet davon, welche Labels beispielsweise für <i>ein bis zwei</i> verwendet wurden, geht aus ihnen noch nicht hervor, dass sich diese Mengenangabe auf das <i>Mehl</i> bezieht. Wir stehen damit vor dem allgemeinen Problem, <b>dass mittels CRF zwar Entities extrahiert werden können, aber nicht Beziehungen zwischen diesen</b>. <span cite="CRFNYT"></span> hatte dieses Problem nicht. Wenn ein CRF-Orakel auf jede Zeile einer bestehenden Zutatenliste angewendet wird, ist klar, dass sich die extrahierte Mengenangabe auf die <b>eine</b> Zutat bezieht. Bei seinem Beispiel <i>"4 tablespoons melted nonhydrogenated margarine, melted coconut oil or canola oil"</i> stellt er selber fest, dass sein CRF dafür nicht gerüstet ist (<i>"This ingredient phrase contains multiple ingredient names, which is a situation that is not accounted for in our database schema. We need to rethink the way we label ingredient parts to account for examples like this."</i> <span cite="CRFNYT" class="beforePunctuation"></span>).
+                                </li>
+                                <li>Es ist schwierig aus dem cueML-Attribut <i>quantity="1"</i> abzuleiten, dass zu dem vorherigen Wort <i>eine</i> das Label <i>B-Quantity</i> gehört. Daher muss <b>das Labeln der Trainingsdaten manuell erledigt werden, obwohl es bereits mit cueML ausgezeichnete Rezepte gibt</b>. Aus den 10 verwendeten Rezepten ergeben sich mehr als 1.500 Zeilen, die gelabelt werden müssen. Wie <span cite="CRFNYT"></span> den CRF mit mehr als 130.000 Trainingsdaten anzutrainieren, ist somit ein nicht zu stemmender Aufwand. Dies gilt insbesondere, da nach dem ersten Punkt die zu verwendeten Labels nicht eindeutig sind. Dementsprechend müssen unterschiedliche Labels evaluiert werden und somit die Trainingsdaten mehrmals mit unterschiedlichen Labels erstellt werden.
+                                </li>
+                                <li>Im Gegensatz zu <span cite="CRFNYT"></span> labeln wir ganze Sätze und nicht nur eine Zutatenliste. <b>Die meisten unserer Labels sind daher <i>O</i> für Other</b>. Dies führt dazu, dass das CRF-Orakel Wörter wie <i>eine</i> bevorzugt als <i>O</i> orakelt anstatt als <i>B-Quantity</i>.
+                                </li>
+                                <li>Daran das <i>Kartoffeln</i> nicht erkannt wird, wird auch deutlich, <b>dass der CRF nur Wörter als Zutaten erkennen kann, die auch in den Trainings&shy;daten waren</b>. Wäre in den Trainingsdaten <i>eine Kartoffel</i> vorhanden, so könnte der CRF <i>Kartoffeln</i> immer noch nicht erkennen. Daher ist als custom feature das Lemma des Wortes nötig. Wenn wir nun allerdings davon ausgehen, dass wir alle Zutaten (in den Trainingsdaten) kennen und zusätzlich die Lemmatas der Wörter haben, können wir die Zutaten-Entities auch über einen Wörterbuch-Check extrahieren und brauchen den CRF dafür nicht.
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="coll-md-3">
+                                <figure myModal="images/AutomatischesAnreichrenCueML/AusschnittCRFTrainingsdaten.png">
+                                    <figcaption>Abb. 2: Ausschnitt unserer CRF Trainingsdaten</figcaption>
+                                    <img src="images/AutomatischesAnreichrenCueML/AusschnittCRFTrainingsdaten.png"/>
+                                </figure>
+                        </div>
+                    </div>
+                    
+                    <p>Des Weiteren ist uns unklar, <b>wie die Unterscheidung zwischen Zutaten, optionalen Zutaten, alternativen Zutaten und nicht zu verwendenten Zutaten zu modelieren ist</b>. Für diese sind auf jeden Fall eigene Labels nötig. Da die Wörter/Zutaten zu den unterschiedlichen Labels jeweils die selben sind, braucht das CRF zur Unterscheidung wahrscheinlich zusätzlich weitere Labels und Features. Diese zu entwickeln und zu evaluieren ist jedoch wieder aufwendig.
+                    </p>
+                    
+                    <p>Wir wollen damit nicht ausschließen, dass es möglich ist, die Zutaten mittels CRF zu extrahieren. Allerdings ist dieser Algorithmus bei den schlecht strukturierten Zubereitungs-Anweisungen von Frau Davides's mit vielen Stolpersteinen verbunden. Eine sinnvolle Umsetzung ist daher aus den oben genannten Gründen nicht im Rahmen dieser Arbeit zu erledigen. Stattdessen haben wir den <i>Dictionary- and rule-based</i>-Ansatz weiterverfolgt.
+                    </p>
+                    
+                    
+                    
+                    <h2 class="myAnchorWithFixedheader">Dictionary- and rule-based Prototyp</h2>
+                    <h3 id="DictBasedV01" class="myAnchorWithFixedheader">Version 0.1</h3>
+                    <h3 id="DictBasedV02" class="myAnchorWithFixedheader">Version 0.2</h3>
+                    
+                </div>
+                
+            </div>
+        </div>
+		
+        
+        <script>activeTab = "DigitalEdition"</script>
+        <script src="js/navbar.js"></script>
+        <script src="js/figure2modal.js"></script>
+        <script src="js/references.js"></script>
+	</body>
+</html> 

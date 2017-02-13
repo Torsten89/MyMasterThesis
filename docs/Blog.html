@@ -15,12 +15,33 @@
 	<body style="padding-top:50px"> <!-- padding because otherwise navbar is over the beginning of the content -->
         <div id="navbar"></div>
 
-		<div class="container-fluid">
-            <div class="row">
+        <div class="container-fluid">
+            <div class="row myHeaderForSideWithMyLeftNavBar">
                 <div class="col-md-12">
+                    <h1><a href="#">Blog</a></h1>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="list-group panel myLeftNavBar">
+                        <a href="#CRFPrototyp" class="list-group-item">CRF-based Prototyp</a>
+                        <a data-toggle="collapse" class="list-group-item" href="#collapse1">Dictionary- and rule-based Prototyp<span class="caret"></span></a>
+                        <div id="collapse1" class="collapse">
+                            <a href="#DictBasedV01" class="list-group-item">Version 0.1</a>
+                            <a href="#DictBasedV02" class="list-group-item">Version 0.2</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-10">
+                    <p>test</p>
+                    <object type="application/pdf" data="Blog/3.pdf" width="100%" height="800px"></object>
+                </div>
+
+            </div>
         </div>
+
 		
         
         <script>activeTab = "Blog"</script>

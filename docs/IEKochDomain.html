@@ -31,8 +31,8 @@
             <div class="row">
                 <div class="col-md-2">
                     <div class="list-group panel myLeftNavBar">
-                        <a href="#REBased" class="list-group-item">Regular Expression based</a>
-                        <a data-toggle="collapse" class="list-group-item" href="#collapse1">Conditional Random Field based <span class="caret"></span></a>
+                        <a href="#REBased" class="list-group-item">Regular Expression-based</a>
+                        <a data-toggle="collapse" class="list-group-item" href="#collapse1">Conditional Random Field-based <span class="caret"></span></a>
                         <div id="collapse1" class="collapse">
                             <a href="#CRFTheorie" class="list-group-item">CRF erklärt</a>
                             <a href="#CRFNYT" class="list-group-item">Implementierung der NYT</a>
@@ -53,7 +53,7 @@
 
                     
                     
-                    <h2 id="REBased" class="myAnchorWithFixedheader">Regular Expression based</h2>
+                    <h2 id="REBased" class="myAnchorWithFixedheader">Regular Expression-based</h2>
                     
                     <div class="row">
                         <div class="col-md-6">
@@ -74,7 +74,7 @@
                     
                     
                     
-                    <h2 id="CRFBased" class="myAnchorWithFixedheader">CRF based</h2>
+                    <h2 id="CRFBased" class="myAnchorWithFixedheader">Conditional Random Field-based</h2>
                     <p>Die New York Times (NYT) betreibt eine eigene <a href="https://cooking.nytimes.com/" title="https://cooking.nytimes.com/">Kochseite</a>. Greene behauptet, dass sie mittels Linear-chain Conditional Random Fields (CRF) in der Lage sind <i>"automatisch den unstrukturierten Text von Rezepten in strukturierte Daten umzuwandeln"</i> <span cite="CRFNYT"></span>. Dies beinhaltet insbesondere das Extrahieren der Zutaten mit ihren Mengenangaben und Einheiten. Da diese Behauptung genau unserer Problemstellung entspricht, stellen wir zunächst die Idee von CRF vor und gehen anschließend auf die Implementierung von Greene ein.
                     </p>
                     
@@ -90,7 +90,7 @@
                     
                     \begin{equation} \boldsymbol{ p(X,Y) = \prod_{t=1}^{\#X} p(y_t|y_{t-1}) * p(y_t|x_t) } \end{equation}
                     
-                    <p>Wahrscheinlichkeiten der Form von (1) können immer in die Form von Formel (2) überführt werden. \( 1_{Bedingung} \) ist dabei eine Funktion, die genau dann Eins ist, wenn die Bedingung erfüllt ist und ansonsten Null. So öfter \( y_t=i \) und \( y_{t-1}=j \) gemeinsam in der Verteilung vorkommen, so größer wird \( \Theta_ {i,j} \) sein. Kommen \( y_t=i \) und \( y_{t-1}=j \) gar nicht gemeinsam vor, gilt \( \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} = 0 \). Gleiches gilt für \( y_t=i \), \( x_t=o \) und \( \mu_{i,o} \). \( Z(X,Y) \) bildet die Summe über alle möglichen Vorkommen von \( X \) und \( Y \). Nach der Division mit \( Z(X,Y) \) ist somit sicher gestellt, dass Formel (2) zwischen \( 0 \) und \( 1 \) liegt, wie es sich für eine Wahrscheinlichkeitsverteilung gehört. 
+                    <p>Wahrscheinlichkeiten der Form von (1) können immer in die Form von Formel (2) überführt werden. \( 1_{Bedingung} \) ist dabei eine Funktion, die genau dann Eins ist, wenn die Bedingung erfüllt ist und ansonsten Null. So öfter \( y_t=i \) und \( y_{t-1}=j \) gemeinsam in der Verteilung vorkommen, so größer wird \( \Theta_ {i,j} \) sein. Kommen \( y_t=i \) und \( y_{t-1}=j \) gar nicht gemeinsam vor, gilt \( \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} = 0 \). Gleiches gilt für \( y_t=i \), \( x_t=o \) und \( \mu_{i,o} \). Die Thetas werden auch als <i>Gewichte</i> bezeichnet. \( Z(X,Y) \) bildet die Summe über alle möglichen Vorkommen von \( X \) und \( Y \). Nach der Division mit \( Z(X,Y) \) ist somit sicher gestellt, dass Formel (2) zwischen \( 0 \) und \( 1 \) liegt, wie es sich für eine Wahrscheinlichkeitsverteilung gehört. 
                     </p> 
                     
                     \begin{align}
