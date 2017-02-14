@@ -125,6 +125,15 @@ references = [
         "year":"2012",
         "title":"Data-driven Knowledge Extraction for the Food Domain",
         "location":"Saarbrücken, Deutschland"
+    },
+    {
+        "id":"FlavorNetwork",
+        "authors":"Ahn, Ahnert, Bagrow,  Barabási",
+        "year":"2011",
+        "title":"Flavor network and the principles of food pairing",
+        "url":"http://www.nature.com/articles/srep00196",
+        "date":"2017-01-14"
+        
     }
 ].sort(function(a,b) {
    return a.authors > b.authors;

@@ -1,0 +1,19 @@
+{
+	Rindfleisch	: U180100
+	Midder		: V582100
+	Kalbsmidder	: V582100
+	Wein		: [
+			    P220000, 
+			    P240000
+			  ]
+	Weißwein	: P220000
+	Butter		: Q610000
+	Rotwein		: P240000
+	Kalbfleisch	: U380100
+	Fleisch		: [
+			    U180100,
+			    U380100
+			  ]
+}
+
+

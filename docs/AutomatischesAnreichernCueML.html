@@ -35,7 +35,7 @@
                 </div>
                 
                 <div class="col-md-10">
-                    <p>Inspiriert von dem vorherigen Abschnitt <a href="IEKochDomain.html">Information Extraction in der Koch-Domäne</a> stellen wir hier zwei verschiedene Prototypen vor, um aus den Zubereitungs-Anweisungen von unserem Kochbuch eine Zutatenliste zu extrahieren. Da wir auf keine vorhandene Semi-Struktur aufbauen können, ist ein Regular Expression-based Ansatz nicht möglich. Der CRF-based Prototyp ist sehr simpel, da uns während der Konstruktion klar geworden ist, dass wir andere Voraussetzungen als <span cite="CRFNYT"></span> haben.
+                    <p>Inspiriert von dem vorherigen Abschnitt <a href="IEKochDomain.html">Information Extraction in der Koch-Domäne</a> stellen wir hier zwei verschiedene Prototypen vor, um aus den Zubereitungs-Anweisungen von unserem Kochbuch eine Zutatenliste zu extrahieren. Da wir auf keine vorhandene Semi-Struktur aufbauen können, ist ein Regular Expression-based Ansatz nicht möglich. Der CRF-based Prototyp ist sehr simpel. Uns ist bereits während der Konstruktion klar geworden, dass wir andere Voraussetzungen als <span cite="CRFNYT"></span> haben und dies daher nicht der richtige Ansatz für diese Arbeit ist.
                     </p>
                     
                     
@@ -66,7 +66,85 @@
                     
                     
                     <h2 class="myAnchorWithFixedheader">Dictionary- and rule-based Prototyp</h2>
+                    
+                    <p>Nach dem wir zu der Erkenntnis gekommen sind, das <a href="Evaluierung.html#CRFPrototyp" title="Link zur Evaluierung">der vorherige Ansatz für diese Arbeit nicht zielführend ist</a>, stellen wir hier einen Dictionary- and rule-based Prototypen vor. Unsere Lemmatisierung für den dendictionary-based Teil baut auf <a href="https://github.com/miotto/treetagger-python">treetagger Version 1.0.1</a> auf.
+                    </p>
+                    
+                    
                     <h3 id="DictBasedV01" class="myAnchorWithFixedheader">Version 0.1</h3>
+                    
+                    <p>Ein erster Prototyp ist in unserem Git-Repository unter dem Tag <a href="#">Dict-AndRule-BasedPrototypeV0.1</a> zu finden. Das Ziel dieses Prototypens ist erst einmal ausschließlich zu testen, ob das dictionary-based extrahieren unserer gesuchten Entities (Zutaten, Mengenangaben und Einheiten) funktioniert. Deswegen ist er nach dem Motto <i>quick and dirty</i> implementiert. Nach dem <a href="#Evaluierung.html/#DictBasedV01">die erste Evaluierung</a> positiv stimmt, haben wir den Prototypen quasi weggeworfen und in der folgeden Version 0.2 redesigned, wie es sich für einen quick and dirty Prototypen gehört. Daher wird hier auch nicht weiter auf Implementierung-Details sondern nur auf konzeptionelle Ideen eingegangen.
+                    </p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Abb. 2 zeigt den nahezu identischen Ablauf der dictionary-based Extraktion aus der <a href="IEKochDomain.html#DictBased" title="Information Extraction in der Koch-Domäne: Dictionary- and rule-based">vorherigen Sektion</a>. Die Überschrift eines Rezeptes wird als normaler Satz gesehen. Die Überschrift muss bei der Extraktion berücksichtigt werden, da manchmal eine Zutat nur in dieser erwähnt wird. Die Sätze splitten wir anhand von Satzzeichen. Um beispielsweise aus <i>Nach Nro. 2 wird [...]</i> nicht 2 Sätze zu machen, haben wir eine Menge von Abkürzungen, bei denen der Split wieder zusammengeführt wird.
+                            </p>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <figure myModal="images/AutomatischesAnreichrenCueML/DictAndRuleBasedV0.1.png">
+                                <figcaption>Abb. 2: Dictionary-based Extraktion der Entities</figcaption>
+                                <img src="images/AutomatischesAnreichrenCueML/DictAndRuleBasedV0.1.png"/>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>In Abb. 3 ist in einem ersten Schritt der Output eines Satzes von TreeTagger zu sehen. Neben dem Lemma gibt er zusätzlich ein Part-of-Speech-Tag (PoS) zu jedem Wort aus. Wie bei <i>Sellerie-</i> und <i>Scorzonerwurzeln</i> kann TreeTagger allerdings manchmal kein Lemma finden. Deswegen nehmen wir in einem ersten Schritt von jedem Wort ohne Lemma die Wort-Identität als Lemma. In einem zweiten Schritt versuchen wir bei jedem abgekürzten Wort die Endung zu finden. Abgekürzte Wörter haben das PoS "TRUNC" für truncation. Da alle abgekürzten Wörtern, an denen wir interessiert sind, Zutaten und somit Nomen sind, suchen wir das nächste Nomen im Satz, welche eine typisch abgekürzte Endung hat. der Prototyp testet, ob in dem Nomen "wurzel" bzw. "Wurzel" vorkommt, da dies die einzige Endung ist, die uns aufgefallen ist, dass sie von Frau Davidis regelmäßig abgekürzt wird. Ist dies der Fall, wird in dem abgekürzten Lemma das "-" durch die entsprechende Endung ersetzt.
+                            </p>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <figure myModal="images/AutomatischesAnreichrenCueML/nachLemmatisierung.png">
+                                <figcaption>Abb. 3: Nachbearbeitung von TreeTaggers Lemmatisierung</figcaption>
+                                <img src="images/AutomatischesAnreichrenCueML/nachLemmatisierung.png"/>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <p>Was jetzt noch fehlt, sind die einzelnen Wörterbücher der zu extrahierten Entities:
+                        </p>
+
+                        <div style="padding-left: 2em;">
+                            <p>In unserer <a href="DavidisesKochbuch/cueML/cueML_v0.5.rng">cueML-Schema Definition</a> ist eine Liste von erlaubten <b>Mengeneinheiten</b> (unit). Diese Liste von erlaubten Werten nehmen wir als Wörterbuch der Einheiten.
+                            </p>
+                        </div>
+                        
+                        <div style="padding-left: 2em;">
+                            <p>Für die <b>Mengenangaben</b> verwenden wir kein echtes Wörterbuch sondern eine Funktion. Diese kriegt ein Lemma und liefert in folgenden drei Fällen ein positives Ergebnis:
+                            </p>
+                            <ul>
+                                <li>Das Lemma ist eine Zahl.</li>
+                                <li>Das Lemma hat die Form <i>Zahl-Zahl</i>.</li>
+                                <li>Das Lemma ist in einer Menge von vordefinierter Mengen-Wörter <i>(ein, eine, einige, ...)</i>.</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="padding-left: 2em;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>Wie in <a href="cueML.html">Domänen-spezifisches Vokabular cueML</a> erläutert, haben wir alle ausgezeichneten Zutaten mittels einer Liste von <i>ingredient</i>-Elementen an den BLS angeschlossen. Abb. 4 zeigt, wie wir aus diesen ein <b>Wörterbuch von Zutaten</b> extrahiert haben.
+                                    </p>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <figure myModal="images/AutomatischesAnreichrenCueML/nachLemmatisierung.png">
+                                        <figcaption>Abb. 3: Nachbearbeitung von TreeTaggers Lemmatisierung</figcaption>
+                                        <img src="images/AutomatischesAnreichrenCueML/nachLemmatisierung.png"/>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    
+                    </div>
+
+                    
+                    
+                    
                     <h3 id="DictBasedV02" class="myAnchorWithFixedheader">Version 0.2</h3>
                 </div>
                 
