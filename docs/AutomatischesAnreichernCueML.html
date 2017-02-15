@@ -92,7 +92,7 @@
                     
                     <div class="row">
                         <div class="col-md-6">
-                            <p>In Abb. 3 ist in einem ersten Schritt der Output eines Satzes von TreeTagger zu sehen. Neben dem Lemma gibt er zusätzlich ein Part-of-Speech-Tag (PoS) zu jedem Wort aus. Wie bei <i>Sellerie-</i> und <i>Scorzonerwurzeln</i> kann TreeTagger allerdings manchmal kein Lemma finden. Deswegen nehmen wir in einem ersten Schritt von jedem Wort ohne Lemma die Wort-Identität als Lemma. In einem zweiten Schritt versuchen wir bei jedem abgekürzten Wort die Endung zu finden. Abgekürzte Wörter haben das PoS "TRUNC" für truncation. Da alle abgekürzten Wörtern, an denen wir interessiert sind, Zutaten und somit Nomen sind, suchen wir das nächste Nomen im Satz, welche eine typisch abgekürzte Endung hat. der Prototyp testet, ob in dem Nomen "wurzel" bzw. "Wurzel" vorkommt, da dies die einzige Endung ist, die uns aufgefallen ist, dass sie von Frau Davidis regelmäßig abgekürzt wird. Ist dies der Fall, wird in dem abgekürzten Lemma das "-" durch die entsprechende Endung ersetzt.
+                            <p>In Abb. 3 ist in einem ersten Schritt der Output eines Satzes von TreeTagger zu sehen. Neben dem Lemma gibt er zusätzlich ein Part-of-Speech-Tag (PoS) zu jedem Wort aus. Wie bei <i>Sellerie-</i> und <i>Scorzonerwurzeln</i> kann TreeTagger allerdings manchmal kein Lemma finden. Deswegen nehmen wir in zuerst von jedem Wort ohne Lemma die Wort-Identität als Lemma. Anschließend versuchen wir bei jedem abgekürzten Wort die Endung zu finden. Abgekürzte Wörter haben das PoS "TRUNC" für truncation. Da alle abgekürzten Wörtern, an denen wir interessiert sind, Zutaten und somit Nomen sind, suchen wir das nächste Nomen im Satz, welche eine typisch abgekürzte Endung hat. Der Prototyp testet, ob in dem Nomen "wurzel" bzw. "Wurzel" vorkommt, da dies die einzige Endung ist, die uns aufgefallen ist, dass sie von Frau Davidis regelmäßig abgekürzt wird. Ist dies der Fall, wird in dem abgekürzten Lemma das "-" durch die entsprechende Endung ersetzt.
                             </p>
                         </div>
                         
@@ -104,48 +104,58 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <p>Was jetzt noch fehlt, sind die einzelnen Wörterbücher der zu extrahierten Entities:
-                        </p>
+                    <p>Was jetzt noch fehlt, sind die einzelnen Wörterbücher der zu extrahierten Entities:
+                    </p>
 
-                        <div style="padding-left: 2em;">
-                            <p>In unserer <a href="DavidisesKochbuch/cueML/cueML_v0.5.rng">cueML-Schema Definition</a> ist eine Liste von erlaubten <b>Mengeneinheiten</b> (unit). Diese Liste von erlaubten Werten nehmen wir als Wörterbuch der Einheiten.
-                            </p>
-                        </div>
-                        
-                        <div style="padding-left: 2em;">
-                            <p>Für die <b>Mengenangaben</b> verwenden wir kein echtes Wörterbuch sondern eine Funktion. Diese kriegt ein Lemma und liefert in folgenden drei Fällen ein positives Ergebnis:
-                            </p>
+                    <ul>
+                        <li>In unserer <a href="DavidisesKochbuch/cueML/cueML_v0.5.rng">cueML-Schema Definition</a> ist eine Liste von erlaubten <b>Mengeneinheiten</b> (unit). Diese Liste von erlaubten Werten nehmen wir als Wörterbuch der Einheiten.
+                        </li>
+                        <li>Für die <b>Mengenangaben</b> verwenden wir kein echtes Wörterbuch sondern eine Funktion. Diese kriegt ein Lemma und liefert in folgenden drei Fällen ein positives Ergebnis:
                             <ul>
                                 <li>Das Lemma ist eine Zahl.</li>
                                 <li>Das Lemma hat die Form <i>Zahl-Zahl</i>.</li>
                                 <li>Das Lemma ist in einer Menge von vordefinierter Mengen-Wörter <i>(ein, eine, einige, ...)</i>.</li>
                             </ul>
-                        </div>
-                        
-                        <div style="padding-left: 2em;">
+                        </li>
+                        <li>Wie in <a href="cueML.html">Domänen-spezifisches Vokabular cueML</a> erläutert, haben wir alle ausgezeichneten Zutaten mittels einer Liste von <i>ingredient</i>-Elementen an den BLS angeschlossen. Unten stehende Abb. 4 zeigt, wie wir aus diesen ein <b>Wörterbuch von Zutaten</b> extrahiert haben. Jedes Nomen einer Basisform ist ein Eintrag im Wörterbuch. Zu jedem Eintrag speichern wir zusätzlich eine Liste von möglichen xml:ids ab. Wein könnte z.B. Weißwein wie auch Rotwein sein. Bei einer rule-based Weiterverarbeitung kann aus der Liste der möglichen xml:ids ggf. eine eindeutige bestimmt werden. Dies werden wir in der <a href="#DictBasedV02">Version 0.2</a> in Angriff nehmen. Der letzte Eintrag in Abb. 4b ist besonders. Frau Davidis verwendet oft Fleisch als Zutat und aus dem Kontext wird ersichtlich, was für ein Fleisch gemeint ist. Bei einer Rindfleischsuppe zum Beispiel ist mit Fleisch ziemlich sicher Rindfleisch gemeint. Um auch das Lemma Fleisch als Zutat extrahieren zu können, fügen wir dieses dem Wörterbuch hinzu. Der hinterlegte Wert ist eine Liste von allen xml:ids, in dessen Einträgen das Wort Fleisch vorkommt.
+                            
+                            <p style="padding-top: 1em;">Die Einschränkung auf das Nomen einer Zutat ist eine große Beschleunigung der Laufzeit der dictionary-based Extraktion. Bei einem Satz der Länge <i>n</i> werden so <i>n look ups</i> im Wörterbuch benötigt. Um Zutaten der Länge eins und zwei nachschlagen zu können, wären bereits <i>n * (n-1) look ups</i> nötig. Problematisch wären auch Fälle, in denen die Wörter einer Zutat nicht benachtbart sind wie z.B. <i>Man nehme Wein; bevorzug Weißen</i>.
+                            </p>
+                            
+                            <p style="padding-top: 1em;">Wenn ein Lemma nicht im Zutaten-Wörterbuch ist, überprüfen wir zusätzlich, ob es eine zusammengesetzte Zutat ist, bzw. ein eigenes Rezept. Ist im Wort eins der Wörter <i>bouillon, klöße oder kloß</i> enhtalten, ist dies auch ein positives Ergebnis und es wird eine leere Liste von möglichen BLS zurückgegeben.
+                            </p>
+                        </li>
+                    </ul>
+                    
+                    <p>
+                        <figure class="supFigure">
+                            <figcaption>Abb. 4: Extraktion eines Zutaten-Wörterbuches aus den <i>cueML ingredient</i>-Elementen</figcaption>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <p>Wie in <a href="cueML.html">Domänen-spezifisches Vokabular cueML</a> erläutert, haben wir alle ausgezeichneten Zutaten mittels einer Liste von <i>ingredient</i>-Elementen an den BLS angeschlossen. Abb. 4 zeigt, wie wir aus diesen ein <b>Wörterbuch von Zutaten</b> extrahiert haben.
-                                    </p>
+                                <div class="col-md-7">
+                                    <figure myModal="images/AutomatischesAnreichrenCueML/ingListCueML.png">
+                                        <figcaption>Abb. 4a: Beispielhafter Aussschnitt von <i>cueML ingredient</i>-Elementen</figcaption>
+                                        <img src="images/AutomatischesAnreichrenCueML/ingListCueML.png"/>
+                                    </figure>
                                 </div>
-
-                                <div class="col-md-6">
-                                    <figure myModal="images/AutomatischesAnreichrenCueML/nachLemmatisierung.png">
-                                        <figcaption>Abb. 3: Nachbearbeitung von TreeTaggers Lemmatisierung</figcaption>
-                                        <img src="images/AutomatischesAnreichrenCueML/nachLemmatisierung.png"/>
+                                <div class="col-md-5">
+                                    <figure myModal="images/AutomatischesAnreichrenCueML/ingDict.png">
+                                        <figcaption>Abb. 4b: Aus Abb. 4a extrahiertes Zutaten-Wörterbuch</figcaption>
+                                        <img src="images/AutomatischesAnreichrenCueML/ingDict.png"/>
                                     </figure>
                                 </div>
                             </div>
-                        </div>
-                        
-                    
-                    </div>
+                        </figure>
+                    </p>
 
-                    
-                    
+
+    
                     
                     <h3 id="DictBasedV02" class="myAnchorWithFixedheader">Version 0.2</h3>
+                    
+                    <p>Die <a href="Evaluierung.html/#DictBasedV01">Evaluierung der Version 0.1</a> zeigt, dass die dict-based Extraktion funktioniert.  Daher lohnt sich die Weiterverfolgung des dictionary- and rule-based Ansatzes. Bevor wir uns jedoch mit der rule-based Weiterverarbeitung beschäftigen, erinnern wir uns daran, dass der Prototyp bis jetzt eine quick and dirty Machbarkeitsanalyse war. Daher haben wir vor der Weiterentwicklung zunächst ein sauberes Design entworfen, welches wir hier zuerst vorstellen. Die Konzeptuelle Idee ist dabei identisch zum vorherigen Prototypen.
+                    </p>
+                    
+                    
                 </div>
                 
             </div>

@@ -1,4 +1,4 @@
-<cue:listIngredient xmlns="http://www.tei-c.org/ns/1.0" xmlns:cue="http://cueML/ns">
+<cue:listIngredient xmlns="http://www.tei-c.org/ns/1.0" xmlns:cue="cueML">
 	<cue:ingredient xml:id="Rindkochfleisch" BLSref="U180100">
 		<cue:prefBasicForm>Rindfleisch</cue:prefBasicForm>
 	</cue:ingredient>

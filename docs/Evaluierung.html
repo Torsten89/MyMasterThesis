@@ -31,6 +31,7 @@
                             <a href="#DictBasedV01" class="list-group-item">Version 0.1</a>
                             <a href="#DictBasedV02" class="list-group-item">Version 0.2</a>
                         </div>
+                        <a href="#Metrics" class="list-group-item">Recall &amp; Precision</a>
                     </div>
                 </div>
                 
@@ -137,11 +138,11 @@
                             </ul>
                         </div>
                         
-                        <div class="coll-md-3">
-                                <figure myModal="images/AutomatischesAnreichrenCueML/AusschnittCRFTrainingsdaten.png">
-                                    <figcaption>Abb. 2: Ausschnitt unserer CRF Trainingsdaten</figcaption>
-                                    <img src="images/AutomatischesAnreichrenCueML/AusschnittCRFTrainingsdaten.png"/>
-                                </figure>
+                        <div class="col-md-3">
+                            <figure myModal="images/AutomatischesAnreichrenCueML/AusschnittCRFTrainingsdaten.png">
+                                <figcaption>Abb. 2: Ausschnitt unserer CRF Trainingsdaten</figcaption>
+                                <img src="images/AutomatischesAnreichrenCueML/AusschnittCRFTrainingsdaten.png"/>
+                            </figure>
                         </div>
                     </div>
                     
@@ -154,8 +155,52 @@
                     
                     
                     <h2 class="myAnchorWithFixedheader">Dictionary- and rule-based Prototyp</h2>
+                    <p>Manuell getaggtes als Golden Standard</p>
+                    
                     <h3 id="DictBasedV01" class="myAnchorWithFixedheader">Version 0.1</h3>
+                    
+                    <p>Das Ziel dieses Prototypens ist es zu testen, ob unsere gesuchten Entities (Zutaten, Mengenangaben und Einheiten) extrahiert werden können. Da bei den Mengenangaben und Einheiten meine Intuition nicht Alarm schlägt, reichen mir ein paar Beispiel Daten, um zu verifizieren, dass das funktioniert. Dies scheint der Fall zu sein. Daher wird eine genauere Evaluation der Mengenangaben und Einheiten auf einen ausgereifteren Prototypen verschoben.
+                    </p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Abb. 3 zeigt, wie wir den <b>Recall</b> ausgewertet haben. Idealerweise ist in den extrahierten Zutaten jede Zutat wiederzufinden, die in unserem Golden Standard auch manuell ausgezeichnet wurden. Ist ein Wort im Golden Standard Rezept als Zutat ausgezeichnet, überprüfen wir einfach, ob unser Prototyp an der gleichen Stelle eine Zutat extrahiert hat.
+                            </p>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <figure myModal="images/Evaluierung/recall.png">
+                                <figcaption>Abb. 3: Recall</figcaption>
+                                <img src="images/Evaluierung/recall.png"/>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Die Auswertung der <b>Precision</b> ist komplexer, wie in Abb. 4 zu sehen ist. Wenn eine Zutat in unserem Golden Standard Rezept mehrfach erwähnt wird, ist es erlaubt, dass sie dort nur einmal als solche ausgezeichnet ist. Das unser Prototyp alle Vorkommen auszeichnet, ist kein Fehler. Die Relevanz kann aber somit nicht mehr ausschließelich über die Wortposition verifiziert werden. Wenn die Verifizierung über die Wortposition fehlschlägt, versuchen wir es daher anschließend noch über die möglichen BLS. Beim Nachschlagen in unserem Zutaten-Wörterbuch speichern wir uns die möglichen BLS. Ist im Golden Standard Rezept einer der möglichen extrahierten BLS ausgezeichnet, wird die extrahierte Zutat ebenfalls als relevant evaluiert.
+                            </p>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <p>
+                                <figure myModal="images/Evaluierung/precision.png">
+                                    <figcaption>Abb. 4: Precision</figcaption>
+                                    <img src="images/Evaluierung/precision.png"/>
+                                </figure>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <p>Die Extraktion und Evaluation der ersten 50 Suppen dauert knapp <b>2:30 Min</b>. Der <b>Recall</b> liegt bei <b>90%</b> (457 der 506 Zutaten wurden extrahiert) und die <b>Precision</b> ist <b>88%</b> (511 von 583 extrahierten Zutaten sind relevant). Diese Ergebnisse zeugen davon, dass die dictionary-based Extraktion funktioniert.
+                    </p>
+                    
+                    
                     <h3 id="DictBasedV02" class="myAnchorWithFixedheader">Version 0.2</h3>
+                    
+                    
+                    
+                    <h2 id="Metrics" class="myAnchorWithFixedheader">Recall &amp; Precision</h2>
                     
                 </div>
                 
