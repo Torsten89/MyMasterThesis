@@ -73,7 +73,7 @@
                     
                     <h3 id="DictBasedV01" class="myAnchorWithFixedheader">Version 0.1</h3>
                     
-                    <p>Ein erster Prototyp ist in unserem Git-Repository unter dem Tag <a href="#">Dict-AndRule-BasedPrototypeV0.1</a> zu finden. Das Ziel dieses Prototypens ist erst einmal ausschließlich zu testen, ob das dictionary-based extrahieren unserer gesuchten Entities (Zutaten, Mengenangaben und Einheiten) funktioniert. Deswegen ist er nach dem Motto <i>quick and dirty</i> implementiert. Nach dem <a href="#Evaluierung.html/#DictBasedV01">die erste Evaluierung</a> positiv stimmt, haben wir den Prototypen quasi weggeworfen und in der folgeden Version 0.2 redesigned, wie es sich für einen quick and dirty Prototypen gehört. Daher wird hier auch nicht weiter auf Implementierung-Details sondern nur auf konzeptionelle Ideen eingegangen.
+                    <p>Ein erster Prototyp ist in unserem Git-Repository unter dem Tag <a href="#">Dict-AndRule-BasedPrototypeV0.1</a> zu finden. Das Ziel dieses Prototypens ist erst einmal ausschließlich zu testen, ob das dictionary-based extrahieren unserer gesuchten Entities (Zutaten, Mengenangaben und Einheiten) funktioniert. Deswegen ist er nach dem Motto <i>quick and dirty</i> implementiert. Nach dem <a href="#Evaluierung.html/#DictBasedV01">die erste Evaluierung</a> positiv stimmt, haben wir den Prototypen quasi weggeworfen und in der folgeden Version 0.2 redesigned, wie es sich für einen quick and dirty Prototypen gehört. Daher wird hier auch nicht weiter auf Implementierung-Details eingegangen sondern nur auf konzeptionelle Ideen.
                     </p>
                     
                     <div class="row">
@@ -92,7 +92,7 @@
                     
                     <div class="row">
                         <div class="col-md-6">
-                            <p>In Abb. 3 ist in einem ersten Schritt der Output eines Satzes von TreeTagger zu sehen. Neben dem Lemma gibt er zusätzlich ein Part-of-Speech-Tag (PoS) zu jedem Wort aus. Wie bei <i>Sellerie-</i> und <i>Scorzonerwurzeln</i> kann TreeTagger allerdings manchmal kein Lemma finden. Deswegen nehmen wir in zuerst von jedem Wort ohne Lemma die Wort-Identität als Lemma. Anschließend versuchen wir bei jedem abgekürzten Wort die Endung zu finden. Abgekürzte Wörter haben das PoS "TRUNC" für truncation. Da alle abgekürzten Wörtern, an denen wir interessiert sind, Zutaten und somit Nomen sind, suchen wir das nächste Nomen im Satz, welche eine typisch abgekürzte Endung hat. Der Prototyp testet, ob in dem Nomen "wurzel" bzw. "Wurzel" vorkommt, da dies die einzige Endung ist, die uns aufgefallen ist, dass sie von Frau Davidis regelmäßig abgekürzt wird. Ist dies der Fall, wird in dem abgekürzten Lemma das "-" durch die entsprechende Endung ersetzt.
+                            <p>In Abb. 3 ist in einem ersten Schritt der Output eines Satzes von TreeTagger zu sehen. Neben dem Lemma gibt er zusätzlich ein Part-of-Speech-Tag (PoS) zu jedem Wort aus. Wie bei <i>Sellerie-</i> und <i>Scorzonerwurzeln</i> kann TreeTagger allerdings manchmal kein Lemma finden. Deswegen nehmen wir zuerst von jedem Wort ohne Lemma die Wort-Identität als Lemma. Anschließend versuchen wir bei jedem abgekürzten Wort die Endung zu finden. Abgekürzte Wörter haben das PoS "TRUNC" für truncation. Da alle abgekürzten Wörtern, an denen wir interessiert sind, Zutaten und somit Nomen sind, suchen wir das nächste Nomen im Satz, welche eine typisch abgekürzte Endung hat. Der Prototyp testet, ob in dem Nomen "wurzel" bzw. "Wurzel" vorkommt, da dies die einzige Endung ist, die uns aufgefallen ist, dass sie von Frau Davidis regelmäßig abgekürzt wird. Ist dies der Fall, wird in dem abgekürzten Lemma das "-" durch die entsprechende Endung ersetzt.
                             </p>
                         </div>
                         
@@ -117,7 +117,7 @@
                                 <li>Das Lemma ist in einer Menge von vordefinierter Mengen-Wörter <i>(ein, eine, einige, ...)</i>.</li>
                             </ul>
                         </li>
-                        <li>Wie in <a href="cueML.html">Domänen-spezifisches Vokabular cueML</a> erläutert, haben wir alle ausgezeichneten Zutaten mittels einer Liste von <i>ingredient</i>-Elementen an den BLS angeschlossen. Unten stehende Abb. 4 zeigt, wie wir aus diesen ein <b>Wörterbuch von Zutaten</b> extrahiert haben. Jedes Nomen einer Basisform ist ein Eintrag im Wörterbuch. Zu jedem Eintrag speichern wir zusätzlich eine Liste von möglichen xml:ids ab. Wein könnte z.B. Weißwein wie auch Rotwein sein. Bei einer rule-based Weiterverarbeitung kann aus der Liste der möglichen xml:ids ggf. eine eindeutige bestimmt werden. Dies werden wir in der <a href="#DictBasedV02">Version 0.2</a> in Angriff nehmen. Der letzte Eintrag in Abb. 4b ist besonders. Frau Davidis verwendet oft Fleisch als Zutat und aus dem Kontext wird ersichtlich, was für ein Fleisch gemeint ist. Bei einer Rindfleischsuppe zum Beispiel ist mit Fleisch ziemlich sicher Rindfleisch gemeint. Um auch das Lemma Fleisch als Zutat extrahieren zu können, fügen wir dieses dem Wörterbuch hinzu. Der hinterlegte Wert ist eine Liste von allen xml:ids, in dessen Einträgen das Wort Fleisch vorkommt.
+                        <li>Wie in <a href="cueML.html">Domänen-spezifisches Vokabular cueML</a> erläutert, haben wir alle ausgezeichneten Zutaten mittels einer Liste von <i>ingredient</i>-Elementen an den BLS angeschlossen. Unten stehende Abb. 4 zeigt, wie wir aus diesen ein <b>Wörterbuch von Zutaten</b> extrahieren. Jedes Nomen einer Basisform ist ein Eintrag im Wörterbuch. Zu jedem Eintrag speichern wir zusätzlich eine Liste von möglichen xml:ids ab. Wein könnte z.B. Weißwein wie auch Rotwein sein. Bei einer rule-based Weiterverarbeitung kann aus der Liste der möglichen xml:ids ggf. eine eindeutige bestimmt werden. Dies werden wir in der <a href="#DictBasedV02">Version 0.2</a> in Angriff nehmen. Der letzte Eintrag in Abb. 4b ist besonders. Frau Davidis verwendet oft Fleisch als Zutat und aus dem Kontext wird ersichtlich, was für ein Fleisch gemeint ist. Bei einer Rindfleischsuppe zum Beispiel ist mit Fleisch ziemlich sicher Rindfleisch gemeint. Um auch das Lemma Fleisch als Zutat extrahieren zu können, fügen wir dieses dem Wörterbuch hinzu. Der hinterlegte Wert ist eine Liste von allen xml:ids, in dessen Einträgen das Wort Fleisch vorkommt.
                             
                             <p style="padding-top: 1em;">Die Einschränkung auf das Nomen einer Zutat ist eine große Beschleunigung der Laufzeit der dictionary-based Extraktion. Bei einem Satz der Länge <i>n</i> werden so <i>n look ups</i> im Wörterbuch benötigt. Um Zutaten der Länge eins und zwei nachschlagen zu können, wären bereits <i>n * (n-1) look ups</i> nötig. Problematisch wären auch Fälle, in denen die Wörter einer Zutat nicht benachtbart sind wie z.B. <i>Man nehme Wein; bevorzug Weißen</i>.
                             </p>
@@ -152,9 +152,66 @@
                     
                     <h3 id="DictBasedV02" class="myAnchorWithFixedheader">Version 0.2</h3>
                     
-                    <p>Die <a href="Evaluierung.html/#DictBasedV01">Evaluierung der Version 0.1</a> zeigt, dass die dict-based Extraktion funktioniert.  Daher lohnt sich die Weiterverfolgung des dictionary- and rule-based Ansatzes. Bevor wir uns jedoch mit der rule-based Weiterverarbeitung beschäftigen, erinnern wir uns daran, dass der Prototyp bis jetzt eine quick and dirty Machbarkeitsanalyse war. Daher haben wir vor der Weiterentwicklung zunächst ein sauberes Design entworfen, welches wir hier zuerst vorstellen. Die Konzeptuelle Idee ist dabei identisch zum vorherigen Prototypen.
+                    <p>Die <a href="Evaluierung.html/#DictBasedV01">Evaluierung der Version 0.1</a> zeigt, dass die dictionary-based Extraktion funktioniert.  Daher lohnt sich die Weiterverfolgung des dictionary- and rule-based Ansatzes. Bevor wir uns jedoch mit der rule-based Weiterverarbeitung beschäftigen, erinnern wir uns daran, dass der Prototyp bis jetzt eine quick and dirty Machbarkeitsanalyse war, welche wir zuerst redesignen wollten.
                     </p>
                     
+                    
+                    <h4><b>Design der dictionary-based Extraktion</b></h4>
+                    <p>Abb. 5 zeigt die aufs wesentliche reduzierten Bestandteile des Designs. Jedes Rezept wird zunächst in ein <b>PlainTextRecipe</b> umgewandelt, welches zu jedem Rezept die rcp-id, den Rezept-Typ, den Namen und eine Liste von Zubereitungs-Anweisungen speichert. Satzweise führt der <b>Extractor</b> dann mittels <b>dictBasedEnrichment</b> eine Extraktion der gesuchten Entities durch. Dazu werden zunächst mit der Hilfe von <b>TreeTagger</b> die Lemmatas zu jedem Wort gebildet. Diese Lemmatas werden dann durch den <b>IngredientExtractor</b>, <b>UnitExtractor</b> und <b>QuantityExtractor</b> getestet. Ist einer dieser Tests positiv, wird in der entsprechenden <b>WordProperty</b> im <b>properties</b>-dict das Ergebnis des Tests hinterlegt. Der <b>QuantityExtractor</b> besteht nur aus der Funktion <b>isQuantity</b>, welche ein Lemma bekommt und <i>True</i> bzw <i>False</i> wieder gibt. Der <b>IngredientExtractor</b> sowie der <b>UnitExtractor</b> werden mittels dem <b>XmlParser</b>, wie zuvor beschrieben, aus dem manuell mit cueML angereicherten Kochbuch extrahiert.
+                    </p>
+                    
+                    <p>Das Ergebnis des Satzes <i>"Schütte 1 Maß Wein hinzu."</i> mit dem Zutaten-Wörterbuch aus Abb. 4b wäre zum Beispiel: <br/>
+                    <i>[<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="Schütte", lemma="schütten", properties={} )<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="1", lemma="1", properties={"quantity":"1"} )<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="Maß", lemma="Maß", properties={"unit":"Maß"} )<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="Wein", lemma="Wein", properties={"ingredient":["Weißwein, "Rotwein"]} )<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="hinzu", lemma="hinzu", properties={} )<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word=".", lemma=".", properties={} )<br/>
+                        ]
+                    </i>
+                    </p>
+                    
+                    <p>
+                        <figure myModal="images/AutomatischesAnreichrenCueML/SourceCodeDesign1.png">
+                            <figcaption>Abb. 5: Design der dictionary-based Extraktion</figcaption>
+                            <img src="images/AutomatischesAnreichrenCueML/SourceCodeDesign1.png"/>
+                        </figure>
+                    </p>
+                    
+                    
+                    <h4><b>Rule-based Weiterverarbeitung</b></h4>
+                    <p>In das saubere Design aus Abb. 5 fügen wir nun eine rule-based Weiterverarbeitung ein. Diese ist in Abb. 6 zu sehen. Nachdem die <i>WordProperties</i> extrahiert sind, wird auf diese eine Menge von Regeln angewendet. Zur Zeit sind folgende Regeln implementiert:
+                    </p>
+                    <ul class="myIndentLis">
+                        <li><b>findQuantityAndUnitOfIngredientRule:</b> Die Regel versucht zu jeder WordProperty (wp), die als Zutat ausgezeichnet ist (<i>key "ingredient" &isin; wp.properties</i>), eine Mengenangabe und Einheit zu finden. Sie sucht dafür den nächsten Nachbar von links (wp'), dessen WordProperty als Mengenangabe bzw. Einheit ausgezeichnet ist und fügt diese der wp hinzu (<i>wp.properties["quantity"] = wp'.properties["quantity"]</i>). Um zu verhindern, dass beispielsweise bei <i>"Man nehme 2 EL Mehl und Butter"</i> 2 EL Butter extrahiert wird, bricht diese Regel ab, wenn vor der Mengenangabe bzw. Einheit eine andere Entity kommt.
+                        </li>
+                        <li>asdf asdf asfd</li>
+                        <li>asdf asdf asfd</li>
+                    </ul>
+                    
+                    <p>
+                        <figure myModal="images/AutomatischesAnreichrenCueML/SourceCodeDesign2.png">
+                            <figcaption>Abb. 6: Design mit rule-based Weiterverarbeitung</figcaption>
+                            <img src="images/AutomatischesAnreichrenCueML/SourceCodeDesign2.png"/>
+                        </figure>
+                    </p>
+                    
+                    <p>Des Weiteren haben wir noch folgende Sachen gegenüber der Version 0.1 verbessert:</p>
+                    <ul>
+                        <li>Um zu vermeiden dass beispielsweise <i>abgebrüht</i> als Zutat extrahiert wird, da in ihm <i>brühe</i> vorkommt, schlägt der Test mit dem IngredientExtractor bei klein geschrieben Wörtern immer fehl.
+                        </li>
+                        <li>TreeTagger kann zu Pluralen die mit <i>n</i> gebildet werden, oft das Lemma nicht bilden (z.B. bei <i>Scorzonerwurzeln</i> oder <i>Kartoffeln</i>). Daher überprüfen wir beim Test mit dem Zutatenwörterbuch in der Methode <i>dictBasedEnrichment</i> das Lemma sowie das Lemma ohne n am Ende, wenn es auf n aufhört.
+                        </li>
+                        <li>TreeTagger findet manchmal mehrere Lemmas durch <i>|</i> getrennt. Beispielsweise kann das Lemma zu <i>"Linsen"</i> <i>"Linse|Linsen"</i> sein, was nicht in unserem Zutaten-Wörterbuch zufinden ist. Ist dies der Fall, nehmen wir daher nur das erste Lemma (Linse).
+                        </li>
+                        <li>Manchmal schreibt Frau Davidis eine Zutat als zusammengesetztes Wort (z.B. <i>Petersilien-Wurzel</i>) und manchmal nicht (<i>Petersilienwurzel</i>). Man könnte die zusammengesetzte Schreibeweise ins Wörterbuch als alternative Schreibeweise hinzufügen. Wir fangen das hingegen im Programm ab. Wenn das Lemma zu einem Wort nicht gefunden werden konnte, eliminieren wir den Bindestrich aus dem Wort, und versuchen dann erneut ein Lemma zu finden.
+                        </li>
+                        <li>Die Liste der typischen Endungen von abgekürzten Wörtern wurde um <i>klöchen</i>, <i>brot</i> und <i>brod</i> erweitert.
+                        </li>
+                        <li>Uns sind einige Fehler im manuell ausgezeichneten Kochbuch aufgefallen, welches unseren Golden Standard bildet, die wir korrigiert haben.
+                        </li>
+                    </ul>
                     
                 </div>
                 

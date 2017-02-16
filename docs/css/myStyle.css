@@ -1,3 +1,12 @@
+h4 {
+    padding-top: 1em;
+}
+
+ul.myIndentLis li {
+    text-indent: -2em;
+    padding-left: 2em;
+}
+
 /* -------------- references - start -------------- */
 span[cite].beforePunctuation {
     margin-right: -0.3em; /* "removes" space after inline span element */
