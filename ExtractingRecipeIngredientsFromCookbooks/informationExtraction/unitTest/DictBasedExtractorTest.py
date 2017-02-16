@@ -16,41 +16,41 @@ class DictBasedExtractorTest(unittest.TestCase):
     def testWP0(self):
         s = "Es wird hierzu für 24—30 Personen eine kräftige Bouillon von 8—10 Pfund Rindfleisch mit Wurzelwerk gekocht."
         wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)     
-        self.assertIsNone(wordProperties[0].properties.get(WordProperty.ingredient))
-        self.assertIsNone(wordProperties[0].properties.get(WordProperty.unit))
-        self.assertIsNone(wordProperties[0].properties.get(WordProperty.quantity))
+        self.assertIsNone(wordProperties[0].properties.get(WordProperty.INGREDIENT))
+        self.assertIsNone(wordProperties[0].properties.get(WordProperty.UNIT))
+        self.assertIsNone(wordProperties[0].properties.get(WordProperty.QUANTITY))
 
     def testQuantity1(self):
         s = "Es wird hierzu für 24—30 Personen eine kräftige Bouillon von 8—10 Pfund Rindfleisch mit Wurzelwerk gekocht."
         wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)
-        self.assertEqual("24—30", wordProperties[4].properties.get(WordProperty.quantity))
+        self.assertEqual("24—30", wordProperties[4].properties.get(WordProperty.QUANTITY))
         
     def testQuantity2(self):
         s = "Es wird hierzu für 24—30 Personen eine kräftige Bouillon von 8—10 Pfund Rindfleisch mit Wurzelwerk gekocht."
         wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)
-        self.assertEqual("8—10", wordProperties[10].properties.get(WordProperty.quantity))
+        self.assertEqual("8—10", wordProperties[10].properties.get(WordProperty.QUANTITY))
         
     def testIngredient1(self):
         s = "Es wird hierzu für 24—30 Personen eine kräftige Bouillon von 8—10 Pfund Rindfleisch mit Wurzelwerk gekocht."
         wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)
-        self.assertIsNotNone(wordProperties[8].properties.get(WordProperty.ingredient))
-        self.assertEqual(0, len(wordProperties[8].properties.get(WordProperty.ingredient)))
+        self.assertIsNotNone(wordProperties[8].properties.get(WordProperty.INGREDIENT))
+        self.assertEqual(0, len(wordProperties[8].properties.get(WordProperty.INGREDIENT)))
         
     def testIngredient2(self):
         s = "Es wird hierzu für 24—30 Personen eine kräftige Bouillon von 8—10 Pfund Rindfleisch mit Wurzelwerk gekocht."
         wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)
-        self.assertIsNotNone(wordProperties[12].properties.get(WordProperty.ingredient))
-        self.assertIn("Rindkochfleisch", [candi.xmlID for candi in wordProperties[12].properties.get(WordProperty.ingredient)])
+        self.assertIsNotNone(wordProperties[12].properties.get(WordProperty.INGREDIENT))
+        self.assertIn("Rindkochfleisch", [candi.xmlID for candi in wordProperties[12].properties.get(WordProperty.INGREDIENT)])
     
     def testIngredient3(self):
         s = "Es wird hierzu für 24—30 Personen eine kräftige Bouillon von 8—10 Pfund Rindfleisch mit Wurzelwerk gekocht."
         wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)
-        self.assertIsNotNone(wordProperties[14].properties.get(WordProperty.ingredient))
+        self.assertIsNotNone(wordProperties[14].properties.get(WordProperty.INGREDIENT))
         
     def testAbbrühen(self):
         s = "Das Fleisch abbrühen."
         wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)
-        self.assertIsNone(wordProperties[2].properties.get(WordProperty.ingredient))
+        self.assertIsNone(wordProperties[2].properties.get(WordProperty.INGREDIENT))
         
 
 if __name__ == "__main__":

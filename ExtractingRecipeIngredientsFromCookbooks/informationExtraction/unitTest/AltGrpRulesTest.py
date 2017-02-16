@@ -18,9 +18,9 @@ class AltGrpRuleTest(unittest.TestCase):
 statt Madeira kann man weißen Franzwein und etwas Rum nehmen"
         wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)
         wordProperties = altGrpRule(wordProperties, None)
-        self.assertEqual("1", wordProperties[14].properties.get(WordProperty.altGrp))
-        self.assertEqual("2", wordProperties[18].properties.get(WordProperty.altGrp))
-        self.assertEqual("2", wordProperties[21].properties.get(WordProperty.altGrp))
+        self.assertEqual("1", wordProperties[14].properties.get(WordProperty.ALT_GRP))
+        self.assertEqual("2", wordProperties[18].properties.get(WordProperty.ALT_GRP))
+        self.assertEqual("2", wordProperties[21].properties.get(WordProperty.ALT_GRP))
         
         
     def test2(self):
@@ -28,9 +28,9 @@ statt Madeira kann man weißen Franzwein und etwas Rum nehmen"
 statt Madeira kann man weißen Franzwein nehmen, desweiteren Rum rein tun"
         wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)
         wordProperties = altGrpRule(wordProperties, None)
-        self.assertEqual("1", wordProperties[14].properties.get(WordProperty.altGrp))
-        self.assertEqual("2", wordProperties[18].properties.get(WordProperty.altGrp))
-        self.assertIsNone(wordProperties[22].properties.get(WordProperty.altGrp))
+        self.assertEqual("1", wordProperties[14].properties.get(WordProperty.ALT_GRP))
+        self.assertEqual("2", wordProperties[18].properties.get(WordProperty.ALT_GRP))
+        self.assertIsNone(wordProperties[22].properties.get(WordProperty.ALT_GRP))
         
 
 

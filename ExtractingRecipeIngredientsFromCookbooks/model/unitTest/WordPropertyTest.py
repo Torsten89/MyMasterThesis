@@ -4,7 +4,7 @@ from model.WordProperty import WordProperty
 class WordPropertyTest(unittest.TestCase):
 
     def testIngWithNoRefToHtml(self):
-        wp = WordProperty("Klöße", "Kloß", {WordProperty.ingredient:[]})
+        wp = WordProperty("Klöße", "Kloß", {WordProperty.INGREDIENT:[]})
         self.assertEqual("<recipeIngredient >Klöße</recipeIngredient>", wp.toXml(""))
 
 

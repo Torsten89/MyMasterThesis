@@ -3,20 +3,20 @@ from model.WordProperty import WordProperty
 
 def dissolveAmbiguityRule(wps, rcp):
     for i in range(len(wps)):
-        if wps[i].properties.get(WordProperty.ingredient): wps = dissolveAmbiguity(i, wps, rcp)
+        if wps[i].properties.get(WordProperty.INGREDIENT): wps = dissolveAmbiguity(i, wps, rcp)
 
     return wps
 
 def dissolveAmbiguity(i, wps, rcp):
-    oldCandis = wps[i].properties[WordProperty.ingredient]
+    oldCandis = wps[i].properties[WordProperty.INGREDIENT]
     if len(oldCandis) == 1: # there is no ambiguity :)
         return wps
     
     lemma2lowercase = wps[i].lemma.lower()
     if "fleisch" in lemma2lowercase:
-        wps[i].properties[WordProperty.ingredient] = dissolveAmbiguityFleisch(rcp, oldCandis)
+        wps[i].properties[WordProperty.INGREDIENT] = dissolveAmbiguityFleisch(rcp, oldCandis)
     elif "wein" in lemma2lowercase:
-        wps[i].properties[WordProperty.ingredient] = dissolveAmbiguityWein(wps, oldCandis)
+        wps[i].properties[WordProperty.INGREDIENT] = dissolveAmbiguityWein(wps, oldCandis)
     
     return wps
 

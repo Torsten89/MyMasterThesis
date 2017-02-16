@@ -8,9 +8,9 @@ def dictBasedEnrichment(text, ingE, unitE):
     for (word, lemma) in getWordLemmaTuples(text):
         properties = {}
         if isQuantity(lemma):
-            properties[WordProperty.quantity] = lemma
+            properties[WordProperty.QUANTITY] = lemma
         elif unitE.getUnit(lemma):
-            properties[WordProperty.unit] = lemma
+            properties[WordProperty.UNIT] = lemma
         else:
             if lemma[0].isupper():
                 ingCandis = ingE.getIngredientCandidates(lemma)
@@ -19,7 +19,7 @@ def dictBasedEnrichment(text, ingE, unitE):
                     # E.g.: 2 Eidottern, 2 Saucissen, 2 Pfefferkörnern, ...
                     # Only trigger, when word is not an ingredient. Otherwise it would ruin words like 'Thimian' or 'Majoran'
                     if lemma[-1]=="n": ingCandis = ingE.getIngredientCandidates(lemma[:-1])
-                if ingCandis is not None: properties[WordProperty.ingredient] = ingCandis
+                if ingCandis is not None: properties[WordProperty.INGREDIENT] = ingCandis
                 
         result.append(WordProperty(word, lemma, properties))
     

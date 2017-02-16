@@ -17,9 +17,9 @@ class OptionalRuleTest(unittest.TestCase):
         s = "Der Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und \
 statt Madeira kann man weißen Franzwein und etwas Rum nehmen"
         wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)
-        self.assertIsNotNone(wordProperties[1].properties.get(WordProperty.ingredient), "dictbasedEnrichment is already broken")
+        self.assertIsNotNone(wordProperties[1].properties.get(WordProperty.INGREDIENT), "dictbasedEnrichment is already broken")
         wordProperties = optionalRule(wordProperties, None)
-        self.assertTrue(wordProperties[1].properties.get(WordProperty.optional))
+        self.assertTrue(wordProperties[1].properties.get(WordProperty.OPTIONAL))
         
         
 

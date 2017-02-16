@@ -17,9 +17,9 @@ class DontUseRuleTest(unittest.TestCase):
         s = "Das Kalbfleisch wie in No. 1, nach der Personenzahl, doch etwas reichlicher \
 genommen, da solches weniger Kraft gibt, als Rindfleisch."
         wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)
-        self.assertIsNotNone(wordProperties[23].properties.get(WordProperty.ingredient), "dictbasedEnrichment is already broken")
+        self.assertIsNotNone(wordProperties[23].properties.get(WordProperty.INGREDIENT), "dictbasedEnrichment is already broken")
         wordProperties = dontUseRule(wordProperties, None)
-        self.assertIsNone(wordProperties[23].properties.get(WordProperty.ingredient))
+        self.assertIsNone(wordProperties[23].properties.get(WordProperty.INGREDIENT))
         
         
 

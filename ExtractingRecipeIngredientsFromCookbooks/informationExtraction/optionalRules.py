@@ -3,8 +3,8 @@ from informationExtraction.entityRelationRules import otherEntity
 
 def optionalRule(wps, rcp):
     for i in range(len(wps)):
-        if wps[i].properties.get(WordProperty.ingredient) is not None and testOptional(wps, i):
-            wps[i].properties[WordProperty.optional] = True
+        if wps[i].properties.get(WordProperty.INGREDIENT) is not None and testOptional(wps, i):
+            wps[i].properties[WordProperty.OPTIONAL] = True
              
     return wps
 

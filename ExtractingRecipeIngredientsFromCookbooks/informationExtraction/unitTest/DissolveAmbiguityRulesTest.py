@@ -21,7 +21,7 @@ class DissolveAmbiguityRulesTest(unittest.TestCase):
                Muskatblüthe, etwas Zucker und Salz."   
         wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)    
         wordProperties = dissolveAmbiguityRule(wordProperties, None)
-        dissolvedCandis = wordProperties[21].properties.get(WordProperty.ingredient)
+        dissolvedCandis = wordProperties[21].properties.get(WordProperty.INGREDIENT)
         
         self.assertEqual(1, len(dissolvedCandis))
         self.assertEqual("Rotwein", dissolvedCandis[0].xmlID)
@@ -30,7 +30,7 @@ class DissolveAmbiguityRulesTest(unittest.TestCase):
         wordProperties = dictBasedEnrichment("Fleisch", self.ingE, self.unitE)
         rcp = PlainTextRecipe("", "Suppen", "Rindfleischsuppe", "")
         wordProperties = dissolveAmbiguityRule(wordProperties, rcp)
-        dissolvedCandis = wordProperties[0].properties.get(WordProperty.ingredient)
+        dissolvedCandis = wordProperties[0].properties.get(WordProperty.INGREDIENT)
         
         self.assertEqual(1, len(dissolvedCandis))
         self.assertEqual("Rindkochfleisch", dissolvedCandis[0].xmlID)         
