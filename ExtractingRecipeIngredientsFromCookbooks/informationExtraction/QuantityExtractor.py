@@ -1,6 +1,6 @@
 import unicodedata
 
-#Caution with something like "ein Paar"!
+#not really good cause of things like "ein Paar", "schüttet es durch ein Sieb"... -.-
 quantityWords = {"ein":"1", "eine":"1", "einige":"einige", "etwas":"etwas"}
 
 def isQuantity(lemma):
@@ -29,12 +29,16 @@ def isNumber(s):
     return False
 
 def str2Quantity(s):
-    try: return float(s)
-    except: pass # is unicode fraction or in quantityWords
+    try:
+        s = str(float(s))
+        if s.endswith(".0"): return s[:-2] # is int
+        else: return s
+    except:
+        pass # is unicode fraction or in quantityWords
     
     if s.isnumeric():
         frac = unicodedata.numeric(s[-1])
-        if len(s)>1: return str2Quantity(frac) + str2Quantity(s[:-1])
-        else: return frac
+        if len(s)>1: return s[:-1] + "."+ str(frac)[2:]
+        else: return str(frac)
     else:
         return quantityWords[s]

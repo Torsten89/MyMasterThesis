@@ -68,8 +68,11 @@ def removePunctuations(word):
     
     
 if __name__ == "__main__":
-    s = "Der Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und \
-statt Madeira kann man weißen Franzwein und etwas Rum nehmen"
+    s = "Dann nimmt man 2—3 Pfund kleine Aale, zieht die Haut ab, schneidet sie in 3 \
+Finger breite Stücke, wäscht sie rein, und läßt sie in kochendem Wasser und Salz halb \
+gahr kochen, thut sie in die Suppe, nebst feinen Suppenkräutern, einigen \
+Zitronenscheiben, macht dieselbe mit in Butter gelb geröstetem Mehl gebunden und gibt \
+kurz vor dem Anrichten Fleisch- oder Schwammklöße hinein."
     for w, pos, l in treeTagger.tag(s):
         print(w, pos, l)
 

@@ -9,16 +9,11 @@ def ingInIngsExactMatch(ing, goldenStandardIngs, attris):
 
 
 def ingInIngsRoughMatch(ing, goldenStandardIngs, retrievedIngs, attris):
-    """ When ing has an exact match it was relevant. It is also assumed to be relevant,
-        when it is in IngredientExtractor.composedIngs.
-        It was also relevant, when it was mentioned at another place in the recipe and that was an exact match - 
+    """ An ing is assumed to be relevant, when it is in IngredientExtractor.composedIngs.
+        It is also relevant, when it was mentioned at another place in the recipe and that was an exact match - 
         e.g. in "Man nehme 1-2 Pfund <recipeIngredient>Rindfleisch</recipeIngredient>. [...]
         Das Fleisch wird 2h gekocht." "Fleisch" should not be assumed as false match.
     """
-    
-    # exact match
-    if ingInIngsExactMatch(ing, goldenStandardIngs, attris):
-        return True
     
     # composed ing is OK
     for composedIng in IngredientExtractor.composedIngs:
@@ -48,8 +43,8 @@ def isBetween(t1, t2):
         return False # end posi is before start posi
     return True
 
-
 def compare(i1, i2, attris):
+    global eineEineMist;
     """ Compares 2 model.Ingriedent objects based on the given attri-set. """
     if "ref" in attris:
         #when many possible refs are given, it is assumed to be correct, when they share a common one

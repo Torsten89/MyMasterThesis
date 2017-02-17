@@ -1,7 +1,6 @@
 from evaluation.comparator import ingInIngsExactMatch, ingInIngsRoughMatch
 from parserForDavidisCookbook.XmlParser import XmlParser, getIngsFromNode
 from xml.dom.minidom import parse
-import time
 from evaluation.metrics import recall, precision
 
 def recallOf2Recipes(ingsOfGoldenStandardRcp, ingsOfIERcp, attris, debug=False):
@@ -21,8 +20,10 @@ def precisionOf2Recipes(ingsOfGoldenStandardRcp, retrievedIngs, attris, debug=Fa
     retrievedAndRelevant = 0
     
     for ing in retrievedIngs:
-        if ingInIngsRoughMatch(ing, ingsOfGoldenStandardRcp, retrievedIngs, attris):
+        if ingInIngsExactMatch(ing, ingsOfGoldenStandardRcp, attris):
             retrievedAndRelevant += 1
+        elif ingInIngsRoughMatch(ing, ingsOfGoldenStandardRcp, retrievedIngs, attris):
+            retrieved -= 1
         elif debug:
             print("Not relevant but retrieved: {}".format(ing))
             
@@ -68,16 +69,7 @@ def evalFromFiles(pathToGoldenStandardRcps, pathToIERcps, attris, rcpIds=[], deb
             
     print("Recall: {}, {}, {}".format(recall(relevantAndRetrieved, relevant), relevantAndRetrieved, relevant)) 
     print("Precision: {}, {}, {}".format(precision(retrievedAndRelevant, retrieved), retrievedAndRelevant, retrieved))
-         
-            
-if __name__ == '__main__':
-    startTime = time.time()    
-    
-    evalFromFiles("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted.xml",
-                  "../erg.xml",
-                  rcpIds=["B-{}".format(i) for i in range(1,51)], attris=("ref"), debug=True)
-    
-    print('--- Needed for evaluating: {} seconds ---'.format(time.time() - startTime)) 
+
            
             
             

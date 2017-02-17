@@ -23,10 +23,16 @@ class QuantityExtractorTest(unittest.TestCase):
         self.assertFalse(isQuantity("Bouillon"))
         
     def testQuantity2String16(self):
-        self.assertEqual(16, str2Quantity("16"))
+        self.assertEqual("16", str2Quantity("16"))
         
     def testQuantity2String1AndHalf(self):
-        self.assertEqual(1.5, str2Quantity("1½"))
+        self.assertEqual("1.5", str2Quantity("1½"))
+        
+    def testQuantity2StringFloat(self):
+        self.assertEqual("2", str2Quantity("2"))
+        
+    def testQuantity2StringAHalf(self):
+        self.assertEqual("0.5", str2Quantity("½"))
 
 if __name__ == "__main__":
     unittest.main()

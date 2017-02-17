@@ -10,7 +10,7 @@ def dictBasedEnrichment(text, ingE, unitE):
         if isQuantity(lemma):
             properties[WordProperty.QUANTITY] = lemma
         elif unitE.getUnit(lemma):
-            properties[WordProperty.UNIT] = lemma
+            properties[WordProperty.UNIT] = unitE.getUnit(lemma)
         else:
             if lemma[0].isupper():
                 ingCandis = ingE.getIngredientCandidates(lemma)

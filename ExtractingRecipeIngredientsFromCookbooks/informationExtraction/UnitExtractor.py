@@ -9,5 +9,8 @@ class UnitExtractor(object):
         if lemma in self.__unitSet__:
             return lemma
         
+        if lemma == "Eßlöffel" or lemma == "Löffel":
+            return "EL"
+        
         return default
     

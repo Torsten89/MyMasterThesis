@@ -14,12 +14,11 @@ class DontUseRuleTest(unittest.TestCase):
         self.unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng"))
         
     def testIngredient1(self):
-        s = "Das Kalbfleisch wie in No. 1, nach der Personenzahl, doch etwas reichlicher \
-genommen, da solches weniger Kraft gibt, als Rindfleisch."
+        s = " Es wird dies Alles ohne Ei und Salz in einem tiefen Topf auf sehr starkem Feuer bis vor dem Kochen ohne Aufhören stark gerührt."
         wordProperties = dictBasedEnrichment(s, self.ingE, self.unitE)
-        self.assertIsNotNone(wordProperties[23].properties.get(WordProperty.INGREDIENT), "dictbasedEnrichment is already broken")
+        self.assertIsNotNone(wordProperties[5].properties.get(WordProperty.INGREDIENT), "dictbasedEnrichment is already broken")
         wordProperties = dontUseRule(wordProperties, None)
-        self.assertIsNone(wordProperties[23].properties.get(WordProperty.INGREDIENT))
+        self.assertIsNone(wordProperties[5].properties.get(WordProperty.INGREDIENT))
         
         
 
