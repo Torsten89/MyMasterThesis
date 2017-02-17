@@ -10,6 +10,12 @@
         
 		<script src="js/jquery.min.js"></script>
 		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              TeX: { equationNumbers: { autoNumber: "AMS" } }
+            });
+        </script>
+        <script type="text/javascript" src="js/MathJax-2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 	</head>
 	
 	<body style="padding-top:50px"> <!-- padding because otherwise navbar is over the beginning of the content -->
@@ -25,17 +31,32 @@
             <div class="row">
                 <div class="col-md-2">
                     <div class="list-group panel myLeftNavBar">
+                        <a href="#Metrics" class="list-group-item">Recall &amp; Precision</a>
                         <a href="#CRFPrototyp" class="list-group-item">CRF-based Prototyp</a>
                         <a data-toggle="collapse" class="list-group-item" href="#collapse1">Dictionary- and rule-based Prototyp<span class="caret"></span></a>
                         <div id="collapse1" class="collapse">
                             <a href="#DictBasedV01" class="list-group-item">Version 0.1</a>
                             <a href="#DictBasedV02" class="list-group-item">Version 0.2</a>
                         </div>
-                        <a href="#Metrics" class="list-group-item">Recall &amp; Precision</a>
                     </div>
                 </div>
                 
                 <div class="col-md-10">
+                    <p>Auf dieser Seite werden die <a href="AutomatischesAnreichernCueML.html">zuvor vorgestellten Prototypen</a> evaluiert. Beim CRF-based Prototyp wird erläutert, dass CRF für uns nicht umsetzbar ist. Die Dictionary- and rule-based Prototypen werten wir mit den Metriken Recall und Precision aus, weswegen wir diese als erstes einführen.
+                    </p>
+                    
+                    <h2 id="Metrics" class="myAnchorWithFixedheader">Recall &amp; Precision</h2>
+                    <p>Wir definieren Recall und Precision wie in den Formeln (1) und (2) nach <span cite="TextMining" class="beforePunctuation"></span>.
+                    </p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">\begin{equation} Recall = \frac{\#(retrieved \cap relevant)}{\#relevant} \end{equation}</div>
+                        <div class="col-md-6">\begin{equation} Precision = \frac{\#(retrieved \cap relevant)}{\#retrieved} \end{equation}</div>
+                    </div>
+                    
+                    <p>Ein hoher Recall-Wert zeugt davon, dass viele relevante Informationen extrahiert werden. Ein hoher Precision-Wert zeugt davon, dass nur wenig falsche Informationen als relevant extrahiert werden. Beide Metriken sind nur zusammen aussagekräftig. Ein perfekter Recall-Wert von eins könnte ansonsten erreicht werden, in dem einfach alle Informationen als relevant extrahiert werden. Dies würde jedoch die Precision sehr wahrscheinlich ruinieren. Ein perfekter Wert von eins für die Precision könnte hingegen dadurch erreicht werden, dass keine Information als relevant extrahiert wird. Der Recall wäre dann allerdings null.
+                    </p>
+                    
                     <h2 id="CRFPrototyp" class="myAnchorWithFixedheader">CRF-based Prototyp</h2>
                     
                     <div class="row">
@@ -155,7 +176,8 @@
                     
                     
                     <h2 class="myAnchorWithFixedheader">Dictionary- and rule-based Prototyp</h2>
-                    <p>Manuell getaggtes als Golden Standard</p>
+                    <p>Unsere Dictionary- and rule-based Prototypen testen wir anhand von Recall and Precision. Wir haben dazu die <a href="DavidisesKochbuch/Rezepte%20mit%20cueML.xml">die ersten 50 Suppen von Frau Davidis's Kochbuch</a> manuell ausgezeichnet und verwenden dies als Golden Standard.
+                    </p>
                     
                     <h3 id="DictBasedV01" class="myAnchorWithFixedheader">Version 0.1</h3>
                     
@@ -178,7 +200,7 @@
                     
                     <div class="row">
                         <div class="col-md-6">
-                            <p>Die Auswertung der <b>Precision</b> ist komplexer, wie in Abb. 4 zu sehen ist. Wenn eine Zutat in unserem Golden Standard Rezept mehrfach erwähnt wird, ist es erlaubt, dass sie dort nur einmal als solche ausgezeichnet ist. Das unser Prototyp alle Vorkommen auszeichnet, ist kein Fehler. Die Relevanz kann aber somit nicht mehr ausschließelich über die Wortposition verifiziert werden. Wenn die Verifizierung über die Wortposition fehlschlägt, versuchen wir es daher anschließend noch über die möglichen BLS. Beim Nachschlagen in unserem Zutaten-Wörterbuch speichern wir uns die möglichen BLS. Ist im Golden Standard Rezept einer der möglichen extrahierten BLS ausgezeichnet, wird die extrahierte Zutat ebenfalls als relevant evaluiert.
+                            <p>Die Auswertung der <b>Precision</b> ist komplexer, wie in Abb. 4 zu sehen ist. Wenn eine Zutat in unserem Golden Standard Rezept mehrfach erwähnt wird, ist es valide, dass sie dort nur einmal als solche ausgezeichnet ist. Das unser Prototyp alle Vorkommen auszeichnet, ist kein Fehler. Die Relevanz kann aber somit nicht mehr ausschließelich über die Wortposition verifiziert werden. Wenn die Verifizierung über die Wortposition fehlschlägt, versuchen wir es daher anschließend noch über die möglichen <i>ref</i>-Elemente. Beim Nachschlagen in unserem Zutaten-Wörterbuch speichern wir uns die möglichen <i>xml:ids</i>. Ist im Golden Standard Rezept einer der möglichen extrahierten xml:ids ausgezeichnet, wird die extrahierte Zutat ebenfalls als relevant evaluiert.
                             </p>
                         </div>
                         
@@ -192,15 +214,36 @@
                         </div>
                     </div>
                     
-                    <p>Die Extraktion und Evaluation der ersten 50 Suppen dauert knapp <b>2:30 Min</b>. Der <b>Recall</b> liegt bei <b>90%</b> (457 der 506 Zutaten wurden extrahiert) und die <b>Precision</b> ist <b>88%</b> (511 von 583 extrahierten Zutaten sind relevant). Diese Ergebnisse zeugen davon, dass die dictionary-based Extraktion funktioniert.
+                    <p>Die Extraktion und Evaluation der ersten 50 Suppen dauert <b>knapp 2:30 Min</b>. Der <b>Recall</b> liegt bei <b>90%</b> (457 der 506 Zutaten wurden extrahiert) und die <b>Precision</b> ist <b>88%</b> (511 von 583 extrahierten Zutaten sind relevant). Diese Ergebnisse zeugen davon, dass die dictionary-based Extraktion funktioniert.
                     </p>
                     
                     
                     <h3 id="DictBasedV02" class="myAnchorWithFixedheader">Version 0.2</h3>
-                    
-                    
-                    
-                    <h2 id="Metrics" class="myAnchorWithFixedheader">Recall &amp; Precision</h2>
+                    <p><a href="verbliebeneFehler.html">verbliebene Fehler Zutaten extrahieren</a>
+                    </p>
+                    <table border="1">
+                        <caption>Tabelle 3</caption>
+                        <tr>
+                            <th></th>
+                            <th>Recall</th>
+                            <th>Precision</th>
+                        </tr>
+                        <tr>
+                            <th>Option 1 (nur Zutaten): </th>
+                            <td>98,62% (499 von 506)</td>
+                            <td>98,23% (500 von 509)</td>
+                        </tr>
+                        <tr>
+                            <th>Option 2 (mit Mengenangaben und Einheiten): </th>
+                            <td>84,78% (429 von 506)</td>
+                            <td>83,66% (430 von 514)</td><!-- weil roughMatch nicht mehr funktioniert mehr als 509 -->
+                        </tr>
+                        <tr>
+                            <th>Option 3 (mit optionalen und alternativen Zutaten): </th>
+                            <td>71,34% (361 von 506</td>
+                            <td>72,84% (362 von 497)</td><!-- 2. erwähnung einer Zutat -> optional vorher exakt, nun aber durch roughMatch -->
+                        </tr>
+                    </table>
                     
                 </div>
                 
