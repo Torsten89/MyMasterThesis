@@ -29,7 +29,7 @@ references = [
         "id":"DavidisKochbuch",
         "authors":"Davidis",
         "year":"1849",
-        "title":"Praktisches Kochbuch für die gewöhnliche und feinere Küche, 4. vermehrte u. verbesserte Auflage ",
+        "title":"Praktisches Kochbuch für die gewöhnliche und feinere Küche, 4. vermehrte u. verbesserte Auflage",
         "publisher":"Velhagen und Klasing",
         location:"Bielefeld"
     },
@@ -133,7 +133,41 @@ references = [
         "title":"Flavor network and the principles of food pairing",
         "url":"http://www.nature.com/articles/srep00196",
         "date":"2017-01-14"
-        
+    },
+    {
+        "id":"rcpRec1",
+        "authors":"Ueda, Takahata, Nakajima",
+        "year":"2011",
+        "title":"User&#39;s Food Preference Extraction for Personalized Cooking Recipe Recommendation",
+        "url":"http://dl.acm.org/citation.cfm?id=2887675.2887686"
+    },
+    {
+        "id":"rcpRec2",
+        "authors":"Teng, Lin, Adamic",
+        "year":"2012",
+        "title":"Recipe Recommendation Using Ingredient Networks",
+        "url":"http://doi.acm.org/10.1145/2380718.2380757"
+    },
+    {
+        "id":"rcpRec3",
+        "authors":"Freyne",
+        "year":"2010",
+        "title":"Recommending Food: Reasoning on Recipes and Ingredients",
+        "url":"http://dx.doi.org/10.1007/978-3-642-13470-8_36"
+    },
+    {
+        "id":"rcpRec4",
+        "authors":"Geleijnse, Overbeek, Van Der Veeken",
+        "year":"2010",
+        "title":"Extracting Vegetable Information from Recipes to Facilitate Health-Aware Choices"
+    },
+    {
+        "id":"deutscheHistorischeKochbuecher",
+        "authors":"Henning",
+        "year":"2008",
+        "title":"Daz ist ein guot geriht und versaltz ez niht",
+         "in":"Texte für Technik - Ausgabe Herbst 2008",
+         "pages":"4-5"
     }
 ].sort(function(a,b) {
    return a.authors > b.authors;
