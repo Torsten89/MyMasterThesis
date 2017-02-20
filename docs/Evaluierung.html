@@ -219,9 +219,23 @@
                     
                     
                     <h3 id="DictBasedV02" class="myAnchorWithFixedheader">Version 0.2</h3>
-                    <p><a href="verbliebeneFehler.html">verbliebene Fehler Zutaten extrahieren</a>
+                    
+                    <p>Folgend testen wir nicht mehr nur die Machbarkeitsanalyse, sondern wollen eine echte Evaluierung. Daher machen wir uns zunächst genauere Gedanken, wie wir evaluieren, ob eine extrahierte Entitiy bezüglich einem manuell getagtem Rezept relevant und korrekt ist. Wie in Abb. 4 zu sehen ist, brauchen wir zwei unterschiedliche Vergleich-Ansätze, die wir <b>Exact match</b> und <b>Rough match</b> nennen wollen:
                     </p>
-                    <table border="1">
+                    <div class="myIndent">
+                        <p>Ein <b>Exact match</b> kann nur vorliegen, wenn an gleicher Position im Rezept eine Zutat extrahiert wurde. Des Weiteren evaluieren wir alle weiteren extrahierten Entities anhand der Zutaten, da nur diese ausgezeichnet werden. Wenn beispielsweise korrekterweise <i>2 EL</i> extrahiert wurde, aber es keiner Zutat zugeordnet werden kann, ist die extrahierte Information wertlos.  In der <i>Option 2</i> muss für einen exact match zusätzlich zu einer Zutat die Mengenangabe (das <i>quantitiy</i>-Attribut) und Einheit (<i>unit</i>-Attribut) korrekt extrahiret sein. <i>Option 3</i> überprüft zusätzlich die Attribute <i>optional</i> und <i>altGrp</i>. Die zu überprüfenden Attribute werden im Programm in <i>main.py</i> in der <i>attris</i>-variabel gesetzt.
+                        </p>
+                        
+                        <p>Wenn bei der Precision kein Exact match vorliegt, folgt daraus nicht sofort, dass die Zutat unrelevant ist, wie in Abb. 4 zu sehen ist. Wenn die extrahierte Zutat kein Exact match ist, aber ebenfalls an einer anderen Stelle im Rezept extrahiert wurde und sie an der anderen Stelle ein Exact Match ist, liegt ein <b>Rough match</b> vor. Da diese Zutat weder unrelevant ist, noch zu den relevanten Zutaten gehört, ignorieren wir sie für die Evaluation.
+                        </p>
+                    </div>
+                    
+                        
+                    <p>Tabelle 3 zeigt die Ergebnisse mit unserer finalen Version 0.2.
+                    </p>
+                    
+                    
+                    <table border="1" style="margin-bottom: 1em;">
                         <caption>Tabelle 3</caption>
                         <tr>
                             <th></th>
@@ -245,13 +259,28 @@
                         </tr>
                     </table>
                     
+                    <p>Der Recall und die Precision der Option 1 von fast 100% zeigen, dass nahezu alle Zutaten nach den Verbesserungen in der Version 0.2 extrahiert werden. Die verbliebenen Fehler sind <a href="verbliebeneFehler.html">hier</a> aufgelistet.
+                    </p>
+                    
+                    <p>Option 2 zeigt, dass wir zu mehr als 8 von 10 Zutaten die Mengenangabe und Einheit richtig zuordnen. Wir haben dabei zwei systematische Fehler festgestellt. Zu einem können wir textuelle Mengenspannen der Form <i>"auf jede Person ¾ Pfund, bei einer großen Gesellschaft ½ Pfund"</i> nicht extrahieren. Stattdessen wird nur ½ Pfund extrahiert. Zum anderen sind unsere vagen Mengenwörter wie <i>ein</i> oder <i>eine</i> Problematisch. Wenn wir diese bei der Extraktion verwendeten wird zum Beispiel in <i>"gibt man die Brühe [...] ein Sieb, schwitzt [...] Mehl in Butter [...]"</i> fälschlicherweise die Mengenangabe <i>ein/1</i> für Mehl extrahiert. Wenn wir solche Mengenwörter nicht berücksichtigen wird jedoch die Mengenanagabe <i>1</i> beispielsweise bei <i>"gibt man eine fein geschnittene Zwiebel hinzu"</i> nicht erkannt. In beiden Varianten gehen gut 20 Fehler auf die Verwendung bzw. nicht Verwendung solcher Mengenwörter zurück. Um die Mengenwörtern von den unbestimmten Artikeln besser differenzieren zu können, werden offensichtlich weitere Regeln benötigt.
+                    </p>
+                    
+                    <p>Unsere zwei beispielhaften Regeln für optionale und alternative Zutaten triggern so gut wie gar nicht. Dementsprechend geht der Recall und die Precision in der Option 3 stark nach unten. Das Differnezieren dieser Entities durch Regeln muss definitiv noch weiter erforscht werden.
+                    </p>
+                    
+                    <p>Dass die Anzahl unser extrahierten Entities mit den Optionen variert, liegt an unsrerem Rough match. In Option 1 wird z.B. im Rezept B-1 das erste Vorkommen von Fleisch als Exact match identifiziert. Alle weiteren Vorkommen werden daher durch einen Rough match vom Ergebnis ignoriert. In Option 2 wird jedoch beim ersten Vorkommen von Fleisch die Mengenangabe als falsch evaluiert. Daher schlägt anschließend auch der Rough match fehl und alle weiteren Vorkommen von Fleisch werden als Fehler identifiziert. In der Option 3 kommt es vor, dass Zutaten nun nicht mehr ein Exact match sind, da ihnen das <i>optional</i>-Attribut fehlt. Statt dessen werden sie jedoch durch einen Rough match gefangen. Daher tauchen in der Option 3 insgesammt weniger Entities in der Precision auf.
+                    </p>
+                    
+                    <p>Insgesamt werten wir den dictionary- and rule-based Prototypen als viel versprechend, auch wenn in zukünftigen Arbeiten mehr als die einfachen Beispiel-Regeln entwickeln werden müssen.
+                    </p>
+                    
                 </div>
                 
             </div>
         </div>
 		
         
-        <script>activeTab = "DigitalEdition"</script>
+        <script>activeTab = "DigitaleEdition"</script>
         <script src="js/navbar.js"></script>
         <script src="js/figure2modal.js"></script>
         <script src="js/references.js"></script>

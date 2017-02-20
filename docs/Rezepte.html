@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Davidis's Kochbuch</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/myStyle.css">
+        
+		<script src="js/jquery.min.js"></script>
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</head>
+	
+	<body style="padding-top:50px"> <!-- padding because otherwise navbar is over the beginning of the content -->
+        <div id="navbar"></div>
+
+		<div class="container-fluid">
+            <div class="row myHeaderForSideWithMyLeftNavBar">
+                <div class="col-md-12">
+                    <h1><a href="#">Rezepte</a></h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="list-group panel myLeftNavBar" id="rcpsPanel">
+                    </div>
+                </div>
+                
+                <div class="col-md-10" id="content">
+                </div>
+                
+                
+            </div>
+        </div>
+                
+		
+        
+        <script type="text/javascript" src="Rezepte/Rezepte.json"></script>
+        <script>
+            for(var rcpType in rcps) {
+/*                if(!rcps.hasOwnProperty(rcpType)) 
+                    continue;*/
+                
+                $("#rcpsPanel").append('<a data-toggle="collapse" class="list-group-item" href="#'+rcpType+'">'+rcpType+'<span class="caret" style="float:right;"></span></a>');
+                var expandable = '<div id="'+rcpType+'" class="collapse">';
+                for(var i=0; i<rcps[rcpType].length; i++) {
+                   expandable += '<a href="#" class="list-group-item" onclick="showRecipe(&#39;'+rcpType+'&#39;,'+i+')">'+rcps[rcpType][i]["name"]+'</a>';
+                }
+                expandable += '</div>';
+                $("#rcpsPanel").append(expandable);
+            }
+            
+            function showRecipe(rcpType, i) {
+                var rcp = rcps[rcpType][i];
+                var innerHtml = "<h2>"+rcp["name"]+"</h2>";
+                innerHtml += '<div class="row">';
+                
+                    innerHtml += '<div class="col-md-4">';
+                        innerHtml += getIngredientList(rcp);
+                    innerHtml += "</div>";
+                
+                    innerHtml += '<div class="col-md-4">';
+                        innerHtml += getInstructions(rcp);
+                    innerHtml += "</div>";
+                
+                    innerHtml += '<div class="col-md-4">';
+                        innerHtml += getPicture(rcp["rcp-id"]);
+                    innerHtml += "</div>";
+                
+                innerHtml += "</div>";
+                $("#content").html(innerHtml);
+            }
+            
+            function getIngredientList(rcp) {
+                var heading = "<h3>Zutatenliste</h3>";
+                var ings = "<ul style='list-style-type:none'>";
+                var optIngs = "<ul style='list-style-type:none'>";
+                var cueAlts = rcp["cueAlts"];
+                var alreadyHandledIngs = [];
+                
+                for(var i=0; i<rcp["ingredients"].length; i++) {
+                    if (alreadyHandledIngs.indexOf(i)>=0)
+                        continue;
+                    var ing = rcp["ingredients"][i];
+                    if(ing["optional"]=="True") {
+                        optIngs += "<li>"+ing["words"].join(" ")+"</li>";
+                    } else if (ing["altGrp"]!=undefined) {
+                        var cueAlt = ing["altGrp"]
+                        //ADD j=i+1...
+                        //alreadyHandle+j....asdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                        
+                    } else {
+                        ings += "<li>"+ing["words"].join(" ")+"</li>";
+                    }
+                }
+                
+                return heading+ings+"</ul><br/><br/><b>Optional:</b>"+optIngs+"</ul>";
+            }
+            
+            function getInstructions(rcp) {
+                return "<h3>Zubereitung</h3><p>"+rcp["instructions"].join(" ")+"</p>";
+            }
+            
+            function getPicture(rcpId) {
+                var result = "<h3>Bild</h3>"
+                var http = new XMLHttpRequest();
+                var url = "Rezepte/"+rcpId+".JPG";
+                http.open('HEAD', url, false);
+                try {
+                    http.send();
+                    result += '<img src="'+url+'" alt="Bild des Rezeptes" style="max-width:100%;"/>';
+                } catch(exception) {
+                    result += "<p>Zu diesem Rezept gibt es leider noch kein Bild.</p>"
+                }
+                
+                return result;
+            }
+        </script>
+        
+        <script>activeTab = "Rezepte"</script>
+        <script src="js/navbar.js"></script>
+        <script src="js/figure2modal.js"></script>
+        <script src="js/references.js"></script>
+	</body>
+</html> 

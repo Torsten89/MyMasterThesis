@@ -7,6 +7,10 @@ ul.myIndentLis li {
     padding-left: 2em;
 }
 
+.myIndent {
+    padding-left: 2em;
+}
+
 /* -------------- references - start -------------- */
 span[cite].beforePunctuation {
     margin-right: -0.3em; /* "removes" space after inline span element */
@@ -87,13 +91,18 @@ figure img {
     height: 5em; 
     visibility: hidden;
 }
+/* -------------- left navigation bar - end -------------- */
 
+/* -------------- print - start -------------- */
 @media print {
     .myHeaderForSideWithMyLeftNavBar {
         position: relative;
         overflow: visible;
     }
+    
+    figure {
+        page-break-inside: avoid;
+    }
 }
-/* -------------- left navigation bar - end -------------- */
-
+/* -------------- print - end -------------- */
 

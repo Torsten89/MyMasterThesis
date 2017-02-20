@@ -18,7 +18,7 @@
 		<div class="container-fluid">
             <div class="row myHeaderForSideWithMyLeftNavBar">
                 <div class="col-md-12">
-                    <h1><a href="#">Automatisches Anreichern mit <i>cueML</i></a></h1>
+                    <h1><a href="#">Automatisches auszeichnen mit <i>cueML</i></a></h1>
                 </div>
             </div>
 
@@ -78,7 +78,7 @@
                     
                     <div class="row">
                         <div class="col-md-6">
-                            <p>Abb. 2 zeigt den nahezu identischen Ablauf der dictionary-based Extraktion aus der <a href="IEKochDomain.html#DictBased" title="Information Extraction in der Koch-Domäne: Dictionary- and rule-based">vorherigen Sektion</a>. Die Überschrift eines Rezeptes wird als normaler Satz gesehen. Die Überschrift muss bei der Extraktion berücksichtigt werden, da manchmal eine Zutat nur in dieser erwähnt wird. Die Sätze splitten wir anhand von Satzzeichen. Um beispielsweise aus <i>Nach Nro. 2 wird [...]</i> nicht 2 Sätze zu machen, haben wir eine Menge von Abkürzungen, bei denen der Split wieder zusammengeführt wird.
+                            <p>Abb. 2 zeigt den nahezu identischen Ablauf der dictionary-based Extraktion aus der <a href="IEKochDomain.html#DictBased" title="Information Extraction in der Koch-Domäne: Dictionary- and rule-based">vorherigen Sektion</a>. Die Überschrift eines Rezeptes wird als normaler Satz gesehen. Die Überschrift muss bei der Extraktion berücksichtigt werden, da manchmal eine Zutat nur in dieser erwähnt wird. Die Sätze splitten wir anhand von Satzzeichen. Um beispielsweise aus <i>Nach Nro. 2 wird [...]</i> nicht zwei Sätze zu machen, haben wir eine Menge von Abkürzungen definiert, bei denen der Split wieder zusammengeführt wird.
                             </p>
                         </div>
                         
@@ -122,7 +122,7 @@
                             <p style="padding-top: 1em;">Die Einschränkung auf das Nomen einer Zutat ist eine große Beschleunigung der Laufzeit der dictionary-based Extraktion. Bei einem Satz der Länge <i>n</i> werden so <i>n look ups</i> im Wörterbuch benötigt. Um Zutaten der Länge eins und zwei nachschlagen zu können, wären bereits <i>n * (n-1) look ups</i> nötig. Problematisch wären auch Fälle, in denen die Wörter einer Zutat nicht benachtbart sind wie z.B. <i>Man nehme Wein; bevorzug Weißen</i>.
                             </p>
                             
-                            <p style="padding-top: 1em;">Wenn ein Lemma nicht im Zutaten-Wörterbuch ist, überprüfen wir zusätzlich, ob es eine zusammengesetzte Zutat ist, bzw. ein eigenes Rezept. Ist im Wort eins der Wörter <i>bouillon, klöße oder kloß</i> enhtalten, ist dies auch ein positives Ergebnis und es wird eine leere Liste von möglichen BLS zurückgegeben.
+                            <p>Wenn ein Lemma nicht im Zutaten-Wörterbuch ist, überprüfen wir zusätzlich, ob es eine zusammengesetzte Zutat ist, bzw. ein eigenes Rezept. Ist im Wort eins der Wörter <i>bouillon, klöße oder kloß</i> enhtalten, ist dies auch ein positives Ergebnis und es wird eine leere Liste von möglichen BLS zurückgegeben.
                             </p>
                         </li>
                     </ul>
@@ -157,10 +157,10 @@
                     
                     
                     <h4><b>Design der dictionary-based Extraktion</b></h4>
-                    <p>Abb. 5 zeigt die aufs wesentliche reduzierten Bestandteile des Designs. Jedes Rezept wird zunächst in ein <b>PlainTextRecipe</b> umgewandelt, welches zu jedem Rezept die rcp-id, den Rezept-Typ, den Namen und eine Liste von Zubereitungs-Anweisungen speichert. Satzweise führt der <b>Extractor</b> dann mittels <b>dictBasedEnrichment</b> eine Extraktion der gesuchten Entities durch. Dazu werden zunächst mit der Hilfe von <b>TreeTagger</b> die Lemmatas zu jedem Wort gebildet. Diese Lemmatas werden dann durch den <b>IngredientExtractor</b>, <b>UnitExtractor</b> und <b>QuantityExtractor</b> getestet. Ist einer dieser Tests positiv, wird in der entsprechenden <b>WordProperty</b> im <b>properties</b>-dict das Ergebnis des Tests hinterlegt. Der <b>QuantityExtractor</b> besteht nur aus der Funktion <b>isQuantity</b>, welche ein Lemma bekommt und <i>True</i> bzw <i>False</i> wieder gibt. Der <b>IngredientExtractor</b> sowie der <b>UnitExtractor</b> werden mittels dem <b>XmlParser</b>, wie zuvor beschrieben, aus dem manuell mit cueML angereicherten Kochbuch extrahiert.
+                    <p>Abb. 5 zeigt die aufs wesentliche reduzierten Bestandteile des Designs. Jedes Rezept wird zunächst in ein <b>PlainTextRecipe</b> umgewandelt, welches zu jedem Rezept die rcp-id, den Rezept-Typ, den Namen und eine Liste von Zubereitungs-Anweisungen speichert. Satzweise führt der <b>Extractor</b> dann mittels <b>dictBasedEnrichment</b> eine Extraktion der gesuchten Entities durch. Dazu werden zunächst mit der Hilfe von <b>TreeTagger</b> die Lemmatas zu jedem Wort gebildet. Diese Lemmatas werden dann durch den <b>IngredientExtractor</b>, <b>UnitExtractor</b> und <b>QuantityExtractor</b> getestet. Ist einer dieser Tests positiv, wird in der entsprechenden <b>WordProperty</b> im <b>properties</b>-dict das Ergebnis des Tests hinterlegt. Der <b>QuantityExtractor</b> besteht nur aus der Funktion <b>isQuantity</b>, welche ein Lemma bekommt und <i>True</i> bzw <i>False</i> wieder gibt. Die Wörterbücher für den <b>IngredientExtractor</b> sowie den <b>UnitExtractor</b> werden mittels dem <b>XmlParser</b>, wie zuvor beschrieben, aus dem manuell mit cueML angereicherten Kochbuch extrahiert.
                     </p>
                     
-                    <p>Das Ergebnis des Satzes <i>"Schütte 1 Maß Wein hinzu."</i> mit dem Zutaten-Wörterbuch aus Abb. 4b wäre zum Beispiel: <br/>
+                    <p>Das Ergebnis der Extraktion des Satzes <i>"Schütte 1 Maß Wein hinzu."</i> mit dem Zutaten-Wörterbuch aus Abb. 4b wäre zum Beispiel die Liste folgender WordProperties: <br/>
                     <i>[<br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="Schütte", lemma="schütten", properties={} )<br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="1", lemma="1", properties={"quantity":"1"} )<br/>
@@ -179,25 +179,7 @@
                         </figure>
                     </p>
                     
-                    
-                    <h4><b>Rule-based Weiterverarbeitung</b></h4>
-                    <p>In das saubere Design aus Abb. 5 fügen wir nun eine rule-based Weiterverarbeitung ein. Diese ist in Abb. 6 zu sehen. Nachdem die <i>WordProperties</i> extrahiert sind, wird auf diese eine Menge von Regeln angewendet. Zur Zeit sind folgende Regeln implementiert:
-                    </p>
-                    <ul class="myIndentLis">
-                        <li><b>findQuantityAndUnitOfIngredientRule:</b> Die Regel versucht zu jeder WordProperty (wp), die als Zutat ausgezeichnet ist (<i>key "ingredient" &isin; wp.properties</i>), eine Mengenangabe und Einheit zu finden. Sie sucht dafür den nächsten Nachbar von links (wp'), dessen WordProperty als Mengenangabe bzw. Einheit ausgezeichnet ist und fügt diese der wp hinzu (<i>wp.properties["quantity"] = wp'.properties["quantity"]</i>). Um zu verhindern, dass beispielsweise bei <i>"Man nehme 2 EL Mehl und Butter"</i> 2 EL Butter extrahiert wird, bricht diese Regel ab, wenn vor der Mengenangabe bzw. Einheit eine andere Entity kommt.
-                        </li>
-                        <li>asdf asdf asfd</li>
-                        <li>asdf asdf asfd</li>
-                    </ul>
-                    
-                    <p>
-                        <figure myModal="images/AutomatischesAnreichrenCueML/SourceCodeDesign2.png">
-                            <figcaption>Abb. 6: Design mit rule-based Weiterverarbeitung</figcaption>
-                            <img src="images/AutomatischesAnreichrenCueML/SourceCodeDesign2.png"/>
-                        </figure>
-                    </p>
-                    
-                    <p>Des Weiteren haben wir noch folgende Sachen gegenüber der Version 0.1 verbessert:</p>
+                    <p>Nach einer genaueren Analyse der Evaluation mit dem sauberen Design haben wir des Weiteren noch folgende Sachen verbessert:</p>
                     <ul>
                         <li>Um zu vermeiden dass beispielsweise <i>abgebrüht</i> als Zutat extrahiert wird, da in ihm <i>brühe</i> vorkommt, schlägt der Test mit dem IngredientExtractor bei klein geschrieben Wörtern immer fehl.
                         </li>
@@ -212,6 +194,37 @@
                         <li>Uns sind einige Fehler im manuell ausgezeichneten Kochbuch aufgefallen, welches unseren Golden Standard bildet, die wir korrigiert haben.
                         </li>
                     </ul>
+                    
+                    
+                    <h4><b>Rule-based Weiterverarbeitung</b></h4>
+                    <p>In das saubere Design aus Abb. 5 fügen wir nun eine rule-based Weiterverarbeitung ein. Diese ist in Abb. 6 zu sehen. Nachdem die <i>WordProperties</i> extrahiert sind, wird auf diese eine Menge von Regeln angewendet. Eine Regel kriegt die Liste der WordProperties eines Satzes, sowie das Rezept, zu dem der Satz gehört und gibt eine Liste mit geänderten WordProperties zurückgibt. Beispiele für solche Regeln sind:
+                    </p>
+                    <ul class="myIndentLis">
+                        <li><b>findQuantityAndUnitOfIngredientRule:</b> Die Regel versucht zu jeder WordProperty (wp), die als Zutat ausgezeichnet ist (<i>key "ingredient" &isin; wp.properties</i>), eine Mengenangabe und Einheit zu finden. Sie sucht dafür den nächsten Nachbar von links (wp'), dessen WordProperty als Mengenangabe bzw. Einheit ausgezeichnet ist und fügt diese der wp hinzu (<i>wp.properties["quantity"] = wp'.properties["quantity"]</i>). Um zu verhindern, dass beispielsweise bei <i>"Man nehme 2 EL Mehl und Butter"</i> 2 EL Butter extrahiert wird, bricht diese Regel ab, wenn vor der Mengenangabe bzw. Einheit eine andere Entity kommt.
+                        </li>
+                        <li><b>dissolveAmbiguityWein:</b> Wenn das Lemma zu einer Zutat <i>wein</i> enthält, sucht diese Regel nach den Wörtern "rot" oder "weiß". Wird eins von beiden gefunden, werden aus der Liste der möglichen xml:ids alle herausgefiltert, die dieses Wort nicht enthalten.
+                        </li>
+                        <li><b>dontUseRule:</b> Wenn vor einer Zutat das Wort "ohne" steht, wird die Zutaten-Eigenschaft des Wortes zurück genommen (<i>wp.properties["ingredient"] = None</i>).
+                        </li>
+                    </ul>
+                    
+                    <p>
+                        <figure myModal="images/AutomatischesAnreichrenCueML/SourceCodeDesign2.png">
+                            <figcaption>Abb. 6: Design mit rule-based Weiterverarbeitung</figcaption>
+                            <img src="images/AutomatischesAnreichrenCueML/SourceCodeDesign2.png"/>
+                        </figure>
+                    </p>
+                    
+                    
+                    
+                    <h4><b>Automatisches auszeichnen mit cueML</b></h4>
+                    
+                    <p>Nach dem alle Entities mittels den WordProperties extrahiert wurden, müssen diese noch, mit dem cueML-Vokabular ausgezeichnet, zurück geschrieben werden. Aufgrund unserer guten Kapselung der Entities in den WordProperties ist dies trivial. Jede WordProperty hat eine <i>toXml</i>-Methode. Ist ein Wort keine Zutat, wird von der Methode die Wort-Identität zurück gegeben. Ansonsten wird die Word-Identität in ein <i>recipeIngredient</i>-Element mit den entsprechenden Attributen eingekapselt.
+                    </p>
+                    
+                    
+                    
+                    <h4><b>Transformation in HTML</b></h4>
                     
                 </div>
                 
