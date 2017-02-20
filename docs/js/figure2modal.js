@@ -18,7 +18,7 @@ $("[myModal]").each(function() {
     
     var modal =' \
     <div class="modal fade" id="' + id + '" role="dialog"> \
-        <div class="modal-dialog"> \
+        <div class="modal-dialog" style="width:100%;"> \
             <div class="modal-content"> \
                 <div class="modal-header">  \
                     <button type="button" class="close" data-dismiss="modal">&times;</button> \
