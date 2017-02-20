@@ -14,7 +14,7 @@ debug = True
 ergFilePath = "erg.xml"
 goldenStandardPath = "/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted.xml"
 rcpIds = ["B-{}".format(i) for i in range(1, 51)]
-attris=set(["quantity", "atLeast", "atMost", "unit"]) #attris which should be relevant in evaluation
+attris=set(["quantity", "atLeast", "atMost", "unit", "optional", "altGrp"]) #attris which should be relevant in evaluation
 ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
 unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng"))    
 if __name__ == '__main__':

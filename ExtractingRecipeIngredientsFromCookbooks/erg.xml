@@ -34,9 +34,9 @@
 				<head> Klare weiße Rindfleischsuppe.</head>
 				<p>
 					 Man rechnet, wenn die Gesellschaft klein ist, auf jede Person ¾ Pfund, bei einer großen Gesellschaft ½ Pfund 
-					<cue:recipeIngredient QUANTITY="0.5" UNIT="Pfund" ref="#Rindkochfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="0.5" ref="#Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					. Dasselbe wird gewaschen und mit doppelt so vielem Wasser, als man Suppe haben will, zu Feuer gesetzt. Auf jede Person rechnet man bei einem Gesellschaftsessen ⅜ Maß Suppe, also auch ¾ Maß Wasser, wozu man gleich das nöthige 
-					<cue:recipeIngredient QUANTITY="0.75" UNIT="Maß" ref="#Salz">Salz</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 gibt, weil das 
 					<cue:recipeIngredient ref="#Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 nur in der ersten Stunde des Kochens das 
@@ -46,25 +46,25 @@
 					 nur die Suppe würzt. Ist das 
 					<cue:recipeIngredient ref="#Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 sorgfältig ausgeschäumt, gibt man eine fein geschnittene 
-					<cue:recipeIngredient QUANTITY="1" ref="#Zwiebel">Zwiebel</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Zwiebel">Zwiebel</cue:recipeIngredient>
 					 hinzu, wodurch die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 an Kraft gewinnt, und läßt sie, fest zugedeckt, fortwährend, aber nicht zu stark kochen. Eine Stunde später gießt man die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 durch ein Haarsieb, weil sie nie ganz klar ist, spült das Stück 
-					<cue:recipeIngredient QUANTITY="1" ref="#Rindkochfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 eben ab und setzt es mit der 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					, die man vom Bodensatz langsam abschüttet, in dem ebenfalls umgespülten Topfe wieder zu Feuer nebst einigen 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Schwarzwurzel">Scorzoner-</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Schwarzwurzel">Scorzoner-</cue:recipeIngredient>
 					, einer 
-					<cue:recipeIngredient QUANTITY="1" ref="#Knollensellerie">Sellerie-</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Knollensellerie">Sellerie-</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient ref="#Wurzelpetersilie">Petersilienwurzel</cue:recipeIngredient>
 					. Hiermit läßt man die Suppe ferner kochen, während man zuweilen das Fett abnimmt, das der 
 					<cue:recipeIngredient>Bouillon</cue:recipeIngredient>
 					 den feinen Geschmack benimmt. Man kann ein halbes Stündchen vor dem Anrichten 
-					<cue:recipeIngredient QUANTITY="1" ref="#SpargelGekocht">Spargel</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#SpargelGekocht">Spargel</cue:recipeIngredient>
 					 oder 
 					<cue:recipeIngredient ref="#BlumenkohlGekocht">Blumenkohl</cue:recipeIngredient>
 					, was die Jahreszeit gerade bietet, hinein geben, nur muß beides eben abgekocht sein, und darf ja nicht in der 
@@ -76,7 +76,7 @@
 					 eben darin gahr kochen und richtet die Suppe an. Zugleich hat man 
 					<cue:recipeIngredient ref="#Reis">Reis</cue:recipeIngredient>
 					, für jede Person einen Eßlöffel gerechnet, abgebrüht und in 
-					<cue:recipeIngredient QUANTITY="1">Bouillon</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" unit="EL">Bouillon</cue:recipeIngredient>
 					, wozu man so viel mehr 
 					<cue:recipeIngredient ref="#Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 genommen, gahr und dick gekocht; doch müssen die Körner ganz bleiben. Derselbe wird bei der Suppe( nach Belieben mit geriebenem 
@@ -97,7 +97,7 @@
 					 Wird gekocht wie die vorhergehende, nur mit der Abänderung, daß, wenn die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 durch ein Haarsieb geschüttet ist, man verhältnißmäßig 1—2 Eßlöffel voll 
-					<cue:recipeIngredient atLeast="1.0" atMost="2.0" ref="#Mehl">Mehl</cue:recipeIngredient>
+					<cue:recipeIngredient atLeast="1" atMost="2" ref="#Mehl" unit="EL">Mehl</cue:recipeIngredient>
 					 mit frischer 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 durchschwitzt, welches jedoch weiß bleiben muß, und die vom Bodensatz abgeklärte 
@@ -105,7 +105,7 @@
 					 hinzuschüttet. Zugleich gibt man feine 
 					<cue:recipeIngredient ref="#Perlgraupen #Gerste">Gerste</cue:recipeIngredient>
 					 nebst etwas 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient>
 					 in die Suppe, später auch 
 					<cue:recipeIngredient ref="#SpargelGekocht">Spargel</cue:recipeIngredient>
 					, 
@@ -117,7 +117,7 @@
 					 und beliebige 
 					<cue:recipeIngredient>Klöße</cue:recipeIngredient>
 					. Man rührt die Suppe mit 1—2 
-					<cue:recipeIngredient atLeast="1.0" atMost="2.0" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
+					<cue:recipeIngredient atLeast="1" atMost="2" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 ab, indem man solche mit etwas Wasser zerrührt, und unter fortwährendem Rühren die kochende Suppe hinzu gibt. Sie muß gebunden, nur ja nicht zu sämig sein. Anmerk. Will man 
 					<cue:recipeIngredient ref="#Reis">Reis</cue:recipeIngredient>
 					 oder 
@@ -130,19 +130,19 @@
 				<head> Schnell gemachte Rindfleischsuppe.</head>
 				<p>
 					 Für 6—7 Personen schneidet man 2 Pfund 
-					<cue:recipeIngredient QUANTITY="2.0" UNIT="Pfund" ref="#Rindkochfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="2" ref="#Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					 in kleine Würfel, läßt einige Löffel 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Mehl">Mehl</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Mehl" unit="EL">Mehl</cue:recipeIngredient>
 					 in 2 Stich frischer 
-					<cue:recipeIngredient QUANTITY="2.0" UNIT="Stich" ref="#Butter">Butter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="2" ref="#Butter" unit="Stich">Butter</cue:recipeIngredient>
 					 gelbbraun werden, gibt das 
 					<cue:recipeIngredient ref="#Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 hinzu und läßt es ebenfalls ein wenig rösten, so wie nachher eine, in 8 Theile geschnittene 
-					<cue:recipeIngredient QUANTITY="8.0" ref="#Knollensellerie">Sellerieknolle</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="8" ref="#Knollensellerie">Sellerieknolle</cue:recipeIngredient>
 					, eine klein geschnittene 
-					<cue:recipeIngredient QUANTITY="1" ref="#Zwiebel">Zwiebel</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Zwiebel">Zwiebel</cue:recipeIngredient>
 					 und eine geriebene gelbe Murzel( 
-					<cue:recipeIngredient QUANTITY="1" ref="#Karotte">Möhre</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Karotte">Möhre</cue:recipeIngredient>
 					). Dies wird eine Weile gerührt und so viel kochendes Wasser zugegossen, als man, zum Einkochen mitgerechnet, Suppe haben will. Eine bis 1½ Stunden läßt man Alles kochen und schüttet es durch ein Sieb. Der 
 					<cue:recipeIngredient ref="#Reis">Reis</cue:recipeIngredient>
 					 wird allein gekocht, beim Anrichten mit dem 
@@ -161,13 +161,13 @@
 					 Die Bereitung dieser braunen 
 					<cue:recipeIngredient>Kraftbrühe</cue:recipeIngredient>
 					 findet man in A. No. 12. Zu einer Gesellschaft von 12 Personen nimmt man 6 Pfund 
-					<cue:recipeIngredient QUANTITY="6.0" UNIT="Pfund" ref="#Rindkochfleisch">Rindfleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="6" ref="#Rindkochfleisch" unit="Pfund">Rindfleisch</cue:recipeIngredient>
 					 und 1 Pfund rohen 
-					<cue:recipeIngredient QUANTITY="1.0" UNIT="Pfund" ref="#Schweineschinken">Schinken</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Schweineschinken" unit="Pfund">Schinken</cue:recipeIngredient>
 					. Es werden braune 
 					<cue:recipeIngredient>Klöße</cue:recipeIngredient>
 					 No. 3 und 
-					<cue:recipeIngredient QUANTITY="3.0">Schwammklöße</cue:recipeIngredient>
+					<cue:recipeIngredient>Schwammklöße</cue:recipeIngredient>
 					 darin gemacht. Auch kann man nach Belieben braunen 
 					<cue:recipeIngredient ref="#Sago">Sago</cue:recipeIngredient>
 					 darin kochen.
@@ -177,24 +177,24 @@
 			<cue:recipe rcp-id="B-5" type="Suppen" xmlns:cue="http://cueML/ns">
 				<head>
 					 Eine gute Suppe von 
-					<cue:recipeIngredient QUANTITY="1" ref="#Bratenjus">Braten-Jus</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Bratenjus">Braten-Jus</cue:recipeIngredient>
 					.
 				</head>
 				<p>
 					 Man schmort eine fein geschnittene 
-					<cue:recipeIngredient QUANTITY="1" ref="#Zwiebel">Zwiebel</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Zwiebel">Zwiebel</cue:recipeIngredient>
 					 mit reichlich frischer 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					, läßt ein bis zwei Eßlöffel voll feines 
-					<cue:recipeIngredient QUANTITY="1" ref="#Mehl">Mehl</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Mehl" unit="EL">Mehl</cue:recipeIngredient>
 					 darin anziehen, und gießt dann so viel kochendes Wasser hinzu, als man( zum Einkochen mitgerechnet) Suppe haben will. Nachdem 
 					<cue:recipeIngredient ref="#Reis">Reis</cue:recipeIngredient>
 					 und eine geschnittene 
-					<cue:recipeIngredient QUANTITY="1" ref="#Knollensellerie">Sellerieknolle</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Knollensellerie">Sellerieknolle</cue:recipeIngredient>
 					 darin weich gekocht sind, gibt man 
 					<cue:recipeIngredient ref="#Bratenjus">Braten-Jus</cue:recipeIngredient>
 					 hinzu. Die vom Rost-Beef No. 3 eignet sich vorzüglich zu dieser Suppe. Hat man reichlich Jus, so kann man eine Kraftsuppe daraus bereiten, das 
-					<cue:recipeIngredient QUANTITY="1" ref="#Mehl">Mehl</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Mehl">Mehl</cue:recipeIngredient>
 					 bleibt dann weg.
 				</p>
 			</cue:recipe>
@@ -204,20 +204,22 @@
 				<p>
 					 Das 
 					<cue:recipeIngredient ref="#Kalbkochfleisch">Kalbfleisch</cue:recipeIngredient>
-					 wie in No. 1, nach der Personenzahl, doch etwas reichlicher genommen, da solches weniger Kraft gibt, als Rindfleisch. Nachdem es gut gewaschen, mit Wasser und 
+					 wie in No. 1, nach der Personenzahl, doch etwas reichlicher genommen, da solches weniger Kraft gibt, als 
+					<cue:recipeIngredient quantity="etwas" ref="#Rindkochfleisch">Rindfleisch</cue:recipeIngredient>
+					. Nachdem es gut gewaschen, mit Wasser und 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 rein ausgeschäumt, gibt man die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 nach Verlauf von einer starken halben Stunde durch ein Sieb, schwitzt wie in No. 2, 
-					<cue:recipeIngredient QUANTITY="2.0" ref="#Mehl">Mehl</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Mehl">Mehl</cue:recipeIngredient>
 					 in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					, schüttet die 
 					<cue:recipeIngredient>Kalbfleischbrühe</cue:recipeIngredient>
 					 vom Bodensatz langsam hinzu, gibt eine 
-					<cue:recipeIngredient QUANTITY="1" ref="#Wurzelpetersilie">Petersilien-</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Wurzelpetersilie">Petersilien-</cue:recipeIngredient>
 					 und einige 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Schwarzwurzel">Scorzoner-Wurzeln</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Schwarzwurzel">Scorzoner-Wurzeln</cue:recipeIngredient>
 					 dazu, so wie ½ Stunde vor dem Anrichten abgebrühten 
 					<cue:recipeIngredient ref="#Reis">Reis</cue:recipeIngredient>
 					, und kocht die Suppe langsam, fest zugedeckt, gahr. Später kann man 
@@ -231,9 +233,9 @@
 					 darin gahr kochen. Die Suppe wird mit 
 					<cue:recipeIngredient ref="#Muskatnuß">Muskat</cue:recipeIngredient>
 					, etwas fein gehackter 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Petersilienblatt">Petersilie</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Petersilienblatt">Petersilie</cue:recipeIngredient>
 					 und 1—2 
-					<cue:recipeIngredient atLeast="1.0" atMost="2.0" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
+					<cue:recipeIngredient atLeast="1" atMost="2" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 abgerührt. Soll 
 					<cue:recipeIngredient ref="#Weizengrießmehl #Griesmehl">Griesmehl</cue:recipeIngredient>
 					 in der Suppe gekocht werden, bleibt das 
@@ -241,7 +243,7 @@
 					 weg. Wird das 
 					<cue:recipeIngredient ref="#Kalbkochfleisch">Fleisch</cue:recipeIngredient>
 					 nach derselben gegessen, schneidet man es vor dem Kochen in passende viereckige Stückchen, und gibt eine 
-					<cue:recipeIngredient QUANTITY="1" ref="#Meerrettichsauce">Meerrettig-Sauce</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Meerrettichsauce">Meerrettig-Sauce</cue:recipeIngredient>
 					 dabei. Kalbfleischsuppe muß 1½ — 2 Stunden kochen.
 				</p>
 			</cue:recipe>
@@ -250,19 +252,19 @@
 				<head> Kalbfleischsuppe für Kranke.</head>
 				<p>
 					 Es wird dazu ein gutes, fleischiges Stück genommen, wie oben mit etwas 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Salz">Salz</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
 					 ausgeschäumt, die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 durch ein Sieb geschüttet, mit 
-					<cue:recipeIngredient QUANTITY="1" ref="#Reis">Reis</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Reis">Reis</cue:recipeIngredient>
 					, der in kochendem Wasser abgebrüht ist, gahr gekocht. Hat man 
 					<cue:recipeIngredient ref="#SpargelGekocht">Spargel</cue:recipeIngredient>
 					 oder 
 					<cue:recipeIngredient ref="#Schwarzwurzel">Scorzoneren</cue:recipeIngredient>
 					, so kann man solche abgekocht darin weich kochen, auch ein wenig fein gehackte 
-					<cue:recipeIngredient QUANTITY="1" ref="#Petersilienblatt">Petersilie</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Petersilienblatt">Petersilie</cue:recipeIngredient>
 					 dazu geben und die Suppe, wenn es dem Kranken erlaubt ist, mit einem frischen 
-					<cue:recipeIngredient QUANTITY="1" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 abrühren.
 				</p>
 			</cue:recipe>
@@ -277,19 +279,19 @@
 					 Das 
 					<cue:recipeIngredient ref="#Midder">Midder</cue:recipeIngredient>
 					 wird nach A. No. 16 vorgerichtet, in kleine Würfel geschnitten und in 
-					<cue:recipeIngredient QUANTITY="16.0" ref="#Butter">Butter</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					 gelb gemacht, mit 
 					<cue:recipeIngredient>Kalbfleischbrühe</cue:recipeIngredient>
 					 eine Weile gekocht, dann mit etwas fein gehackter 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Petersilienblatt">Petersilie</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Petersilienblatt">Petersilie</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Muskatblüte">Muskatblüthe</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 abgerührt. Auch für Kranke ist dies eine passende Suppe, dann aber muß das 
-					<cue:recipeIngredient QUANTITY="1" ref="#braunes_Gewürz">Gewürz</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#braunes_Gewürz">Gewürz</cue:recipeIngredient>
 					 wegbleiben und das 
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					 mit wenig 
@@ -302,15 +304,15 @@
 				<head> Hammelfleischsuppe.</head>
 				<p>
 					 Das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird in Stückchen gehauen, gut gewaschen, mit 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 ausgeschäumt, 
 					<cue:recipeIngredient ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient>
 					, eine fein geschnittene 
-					<cue:recipeIngredient QUANTITY="1" ref="#Zwiebel">Zwiebel</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Zwiebel">Zwiebel</cue:recipeIngredient>
 					 und einige in Würfel geschnittene 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Kartoffeln">Kartoffeln</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Kartoffeln">Kartoffeln</cue:recipeIngredient>
 					 hinein gegeben. Letztere müssen ganz zerkochen, ist dies nicht der Fall, weil manche 
 					<cue:recipeIngredient ref="#Kartoffeln">Kartoffeln</cue:recipeIngredient>
 					 sich nicht auflösen, so reibt man sie durch ein Sieb. Eine halbe Stunde vor dem Anrichten wird 
@@ -331,13 +333,13 @@
 				<head> Hühnersuppe.</head>
 				<p>
 					 Zu 4—5 Personen rechnet man ein großes, fettes 
-					<cue:recipeIngredient QUANTITY="1" ref="#Suppenhuhn">Huhn</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Suppenhuhn">Huhn</cue:recipeIngredient>
 					. Dasselbe wird mit 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 gehörig ausgeschäumt, die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					, wie bei allen Fleischsuppen, durch ein Sieb geschüttet und mit einer 
-					<cue:recipeIngredient QUANTITY="1" ref="#Wurzelpetersilie">Petersilien-Wurzel</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Wurzelpetersilie">Petersilien-Wurzel</cue:recipeIngredient>
 					 gahr gekocht, was ungefähr 3 Stunden Zeit erfordert. Ein und eine halbe Stunde vorher gibt man gut abgebrühten 
 					<cue:recipeIngredient ref="#Reis">Reis</cue:recipeIngredient>
 					, oder nach Belieben 
@@ -349,7 +351,7 @@
 					 sind vorzüglich gut darin; in Ermangelung derselben nehme man 
 					<cue:recipeIngredient>Klöße</cue:recipeIngredient>
 					 nach Belieben und rühre die Suppe mit etwas fein gehackter 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Petersilienblatt">Petersilie</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Petersilienblatt">Petersilie</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Muskatblüte">Muskatblüthe</cue:recipeIngredient>
 					 und 
@@ -380,9 +382,9 @@
 					 hineingegeben, so wie ½ Stunde vor dem Anrichten abgekochte 
 					<cue:recipeIngredient ref="#Spargelkopf">Spargelköpfe</cue:recipeIngredient>
 					 oder etwas 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#BlumenkohlGekocht">Blumenkohl</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#BlumenkohlGekocht">Blumenkohl</cue:recipeIngredient>
 					, was man haben kann. Ist dem Kranken ein 
-					<cue:recipeIngredient QUANTITY="1" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 erlaubt, so wird die Suppe damit abgerührt. Sie muß, wenn die 
 					<cue:recipeIngredient ref="#Taube">Tauben</cue:recipeIngredient>
 					 jung sind, 1½, im andern Fall 2 Stunden kochen.
@@ -393,23 +395,23 @@
 				<head> Krebssuppe.</head>
 				<p>
 					 Man kocht nach No. 1 eine gute 
-					<cue:recipeIngredient QUANTITY="1">Bouillon</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1">Bouillon</cue:recipeIngredient>
 					 und zu 12 Personen etwa 24 Stück 
-					<cue:recipeIngredient QUANTITY="24.0" ref="#Flusskrebs">Krebse</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="24" ref="#Flusskrebs">Krebse</cue:recipeIngredient>
 					. Dann wird das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 aus Scheeren und Schwänzen gebrochen, die sämmtlichen Schalen im Mörser nicht zu fein gestoßen und über Feuer mit einem großen Stück frischer 
-					<cue:recipeIngredient QUANTITY="1" ref="#Butter">Butter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 durchgerührt, bis diese roth wird und zu steigen anfängt. Nun läßt man darin so viel 
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					 anziehn, daß die Suppe davon gebunden wird, gießt 
 					<cue:recipeIngredient>Fleischbrühe</cue:recipeIngredient>
 					 hinzu und das Ganze durch ein Haarsieb zu der kochenden 
-					<cue:recipeIngredient QUANTITY="1">Bouillon</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1">Bouillon</cue:recipeIngredient>
 					. Kurz vor dem Anrichten giebt man 
 					<cue:recipeIngredient>Krebsklöße</cue:recipeIngredient>
 					, nach L. No. 2, 
-					<cue:recipeIngredient QUANTITY="2.0" ref="#Midder">Midder</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Midder">Midder</cue:recipeIngredient>
 					( Kälbermilch), Krebsköpfe gefüllt, mit der Masse, von der man 
 					<cue:recipeIngredient>Schwammklöße</cue:recipeIngredient>
 					 macht, hinein, und rührt die Suppe mit 
@@ -432,15 +434,15 @@
 					 und 
 					<cue:recipeIngredient ref="#Wurzelpetersilie">Petersilienwurzeln</cue:recipeIngredient>
 					 nebst einem tiefen Teller voll geschälter, in 4 Theile geschnittener guter 
-					<cue:recipeIngredient QUANTITY="4.0" ref="#Birne">Birnen</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="4" ref="#Birne">Birnen</cue:recipeIngredient>
 					 weich. Dann nimmt man 2—3 Pfund kleine 
-					<cue:recipeIngredient UNIT="Pfund" atLeast="2.0" atMost="3.0" ref="#Aal">Aale</cue:recipeIngredient>
+					<cue:recipeIngredient atLeast="2" atMost="3" ref="#Aal" unit="Pfund">Aale</cue:recipeIngredient>
 					, zieht die Haut ab, schneidet sie in 3 Finger breite Stücke, wäscht sie rein, und läßt sie in kochendem Wasser und 
-					<cue:recipeIngredient QUANTITY="3.0" ref="#Salz">Salz</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 halb gahr kochen, thut sie in die Suppe, nebst feinen 
 					<cue:recipeIngredient ref="#Küchenkräuter">Suppenkräutern</cue:recipeIngredient>
 					, einigen 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Zitronenscheibe">Zitronenscheiben</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Zitronenscheibe">Zitronenscheiben</cue:recipeIngredient>
 					, macht dieselbe mit in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 gelb geröstetem 
@@ -459,23 +461,23 @@
 					 Kleine 
 					<cue:recipeIngredient ref="#Aal">Aale</cue:recipeIngredient>
 					 werden abgezogen, in 3 Finger breite Stücke geschnitten, gesalzen, gewaschen und abgetrocknet, in 
-					<cue:recipeIngredient QUANTITY="3.0" ref="#Zwieback">Zwieback</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="3" ref="#Zwieback">Zwieback</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient ref="#Salbei">Salbei</cue:recipeIngredient>
 					 gedreht, mit 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 gelb gebraten. Unterdeß läßt man einige Löffel 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Mehl">Mehl</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Mehl" unit="EL">Mehl</cue:recipeIngredient>
 					 in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 anziehn, schüttet Wasser hinzu und läßt folgende Kräuter darin eine Weile kochen: 
-					<cue:recipeIngredient QUANTITY="1" ref="#Kerbel">Kerbel</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kerbel">Kerbel</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Portulak">Portulac</cue:recipeIngredient>
 					 oder 
 					<cue:recipeIngredient ref="#Sauerampfer">Sauerampfer</cue:recipeIngredient>
 					, etwas 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Thymian">Thimian</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Thymian">Thimian</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Majoran">Majoran</cue:recipeIngredient>
 					, 
@@ -485,11 +487,11 @@
 					 und was man sonst dieser Art hat; Alles fein geschnitten, nebst 
 					<cue:recipeIngredient ref="#Muskatnuß">Muskat</cue:recipeIngredient>
 					 und etwas 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Pfeffer #spanischer_Pfeffer">Pfeffer</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Pfeffer #spanischer_Pfeffer">Pfeffer</cue:recipeIngredient>
 					, gibt die 
 					<cue:recipeIngredient ref="#Aal">Aale</cue:recipeIngredient>
 					 hinein und rührt die Suppe mit 1—2 
-					<cue:recipeIngredient atLeast="1.0" atMost="2.0" ref="#HühnereiEigelb">Eidottern</cue:recipeIngredient>
+					<cue:recipeIngredient atLeast="1" atMost="2" ref="#HühnereiEigelb">Eidottern</cue:recipeIngredient>
 					 ab.
 				</p>
 			</cue:recipe>
@@ -516,7 +518,7 @@
 					 gekocht ist, oder auch frische 
 					<cue:recipeIngredient>Erbsenbrühe</cue:recipeIngredient>
 					 dazu, läßt dies noch eine Weile kochen, rührt es kurz vor dem Anrichten durch ein Sieb, läßt es wieder zum Kochen kommen, gibt fein gehackte 
-					<cue:recipeIngredient QUANTITY="1" ref="#Petersilienblatt">Petersilie</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Petersilienblatt">Petersilie</cue:recipeIngredient>
 					 hinein, die nicht durchkochen muß, damit sie ihre grüne Farbe behalte. Es wird in Würfel geschnittenes und in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 geröstetes 
@@ -531,31 +533,31 @@
 				<head> Mock Turtle Suppe.</head>
 				<p>
 					 Es wird hierzu für 24—30 Personen eine kräftige 
-					<cue:recipeIngredient QUANTITY="1">Bouillon</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1">Bouillon</cue:recipeIngredient>
 					 von 8—10 Pfund 
-					<cue:recipeIngredient UNIT="Pfund" atLeast="8.0" atMost="10.0" ref="#Rindkochfleisch">Rindfleisch</cue:recipeIngredient>
+					<cue:recipeIngredient atLeast="8" atMost="10" ref="#Rindkochfleisch" unit="Pfund">Rindfleisch</cue:recipeIngredient>
 					 mit 
 					<cue:recipeIngredient ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient>
 					 gekocht. Zugleich bringt man einen großen 
-					<cue:recipeIngredient QUANTITY="1" ref="#Kalbskopf">Kalbskopf</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbskopf">Kalbskopf</cue:recipeIngredient>
 					, eine 
-					<cue:recipeIngredient QUANTITY="1" ref="#Schweineschnauze">Schweineschnauze</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Schweineschnauze">Schweineschnauze</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient ref="#Ohr">Ohren</cue:recipeIngredient>
 					, einen 
-					<cue:recipeIngredient QUANTITY="1" ref="#Ochsengaumen">Ochsengaumen</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Ochsengaumen">Ochsengaumen</cue:recipeIngredient>
 					 und eine geräucherte 
-					<cue:recipeIngredient QUANTITY="1" ref="#Ochsenzunge">Ochsenzunge</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Ochsenzunge">Ochsenzunge</cue:recipeIngredient>
 					 zu Feuer und kocht dies Alles gahr, aber nicht zu weich. Kalt, schneidet man es in kleine, länglich viereckige Stückchen, gibt das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 in die 
 					<cue:recipeIngredient>Bouillon</cue:recipeIngredient>
 					, nebst braunem 
 					<cue:recipeIngredient ref="#braunes_Gewürz">Gewürz</cue:recipeIngredient>
 					, ein Paar Messerspitzen 
-					<cue:recipeIngredient QUANTITY="1" ref="#Cayennepfeffer">Cayenne-Pfeffer</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Cayennepfeffer">Cayenne-Pfeffer</cue:recipeIngredient>
 					, einige 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Midder">Kalbsmidder</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Midder">Kalbsmidder</cue:recipeIngredient>
 					 in Stückchen geschnitten( siehe Vorbereitungsregeln), kleine 
 					<cue:recipeIngredient ref="#Saucisse">Saucissen</cue:recipeIngredient>
 					, so viel 
@@ -569,28 +571,30 @@
 					 von 
 					<cue:recipeIngredient ref="#Kalbkochfleisch">Kalbfleisch</cue:recipeIngredient>
 					, einige hart gekochte 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Ei">Eier</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Ei">Eier</cue:recipeIngredient>
 					 in Würfel geschnitten, ein Paar Eßlöffel Engl. 
-					<cue:recipeIngredient QUANTITY="1" ref="#Englische_Soja">Soja</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Englische_Soja" unit="EL">Soja</cue:recipeIngredient>
 					 hinzu, und wenn die 
 					<cue:recipeIngredient>Klößchen</cue:recipeIngredient>
 					 einige Minuten gekocht haben, ½ Flasche 
-					<cue:recipeIngredient QUANTITY="0.5" UNIT="Flasche" ref="#Madeira">Madeira</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="0.5" ref="#Madeira" unit="Flasche">Madeira</cue:recipeIngredient>
 					 und auch 
 					<cue:recipeIngredient ref="#Auster">Austern</cue:recipeIngredient>
 					, wenn man sie haben kann. Dann wird die Suppe sogleich angerichtet. Anmerk. Der 
-					<cue:recipeIngredient OPTIONAL="True" ref="#Englische_Soja">Soja</cue:recipeIngredient>
+					<cue:recipeIngredient optional="True" ref="#Englische_Soja">Soja</cue:recipeIngredient>
 					 macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und statt 
-					<cue:recipeIngredient ALT_GRP="1" ref="#Madeira">Madeira</cue:recipeIngredient>
+					<cue:recipeIngredient altGrp="1" ref="#Madeira">Madeira</cue:recipeIngredient>
 					 kann man weißen 
-					<cue:recipeIngredient ALT_GRP="2" ref="#weißer_Franzwein">Franzwein</cue:recipeIngredient>
+					<cue:recipeIngredient altGrp="2" ref="#weißer_Franzwein">Franzwein</cue:recipeIngredient>
 					 und etwas 
-					<cue:recipeIngredient ALT_GRP="2" QUANTITY="etwas" ref="#Rum">Rum</cue:recipeIngredient>
+					<cue:recipeIngredient altGrp="2" quantity="etwas" ref="#Rum">Rum</cue:recipeIngredient>
 					 nehmen.
 					<cue:alt target="1 2"/>
 					 Sowohl die 
 					<cue:recipeIngredient>Bouillon</cue:recipeIngredient>
-					 als Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden.
+					 als 
+					<cue:recipeIngredient ref="#Kalbskopf">Kalbskopf</cue:recipeIngredient>
+					 können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden.
 				</p>
 			</cue:recipe>
 			 
@@ -598,15 +602,15 @@
 				<head> Mock Turtle Suppe einfacher zubereitet.</head>
 				<p>
 					 Ein großer 
-					<cue:recipeIngredient QUANTITY="1" ref="#Kalbskopf">Kalbskopf</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbskopf">Kalbskopf</cue:recipeIngredient>
 					 wird gut gereinigt, nebst einem 
-					<cue:recipeIngredient QUANTITY="1" ref="#Ochsenmaul">Ochsenmaul</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Ochsenmaul">Ochsenmaul</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient ref="#Karotte">Möhren</cue:recipeIngredient>
 					 gahr, doch nicht ganz weich gekocht und kalt in kleine, länglich viereckige Stückchen geschnitten. Dann macht man einige 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Schalotte">Charlotten</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Schalotte">Charlotten</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Estragon">Dragon</cue:recipeIngredient>
 					 und 
@@ -618,21 +622,21 @@
 					 und 
 					<cue:recipeIngredient>Kalbskopfbrühe</cue:recipeIngredient>
 					 dazu, gibt das geschnittene 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Cayennepfeffer">Cayenne-Pfeffer</cue:recipeIngredient>
 					 und braunes 
 					<cue:recipeIngredient ref="#braunes_Gewürz">Gewürz</cue:recipeIngredient>
 					 hinein und läßt es ¼ Stunde kochen. Dann kommt noch dazu: statt 
-					<cue:recipeIngredient ALT_GRP="1" ref="#Madeira">Madeira</cue:recipeIngredient>
+					<cue:recipeIngredient altGrp="1" ref="#Madeira">Madeira</cue:recipeIngredient>
 					 ½ Flasche 
-					<cue:recipeIngredient ALT_GRP="2" QUANTITY="0.5" UNIT="Flasche" ref="#Graves">Graves</cue:recipeIngredient>
+					<cue:recipeIngredient altGrp="2" quantity="0.5" ref="#Graves" unit="Flasche">Graves</cue:recipeIngredient>
 					 und ein Glas 
-					<cue:recipeIngredient ALT_GRP="2" QUANTITY="1" UNIT="Glas" ref="#Arrak">Arrac</cue:recipeIngredient>
+					<cue:recipeIngredient altGrp="2" quantity="1" ref="#Arrak" unit="Glas">Arrac</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient>Kalbfleisch-Klöße</cue:recipeIngredient>
 					 und einige hart gekochte, in Würfel geschnittene 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Ei">Eier</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Ei">Eier</cue:recipeIngredient>
 					.
 					<cue:alt target="1 2"/>
 					 Diese Suppe muß recht gebunden, doch ja nicht dicklich sein, man kann also, ehe der 
@@ -649,7 +653,7 @@
 				<head> Kerry-Suppe.</head>
 				<p>
 					 Für 12 Personen werden 2 
-					<cue:recipeIngredient QUANTITY="2.0" ref="#Suppenhuhn">Hühner</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="2" ref="#Suppenhuhn">Hühner</cue:recipeIngredient>
 					 in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 und 
@@ -657,11 +661,11 @@
 					 gelb gemacht, dann in 
 					<cue:recipeIngredient>Kalbfleischbrühe</cue:recipeIngredient>
 					 gahr gekocht, mit einem Loth 
-					<cue:recipeIngredient QUANTITY="1" UNIT="Loth" ref="#Tamarinden">Thamarinde</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Tamarinden" unit="Loth">Thamarinde</cue:recipeIngredient>
 					 und einer Messerspitze Spanischem 
-					<cue:recipeIngredient QUANTITY="1" UNIT="Messerspitze" ref="#Pfeffer #spanischer_Pfeffer">Pfeffer</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Pfeffer #spanischer_Pfeffer" unit="Messerspitze">Pfeffer</cue:recipeIngredient>
 					 gewürzt. Eine Stunde vor dem Anrichten ½ Eßlöffel voll 
-					<cue:recipeIngredient QUANTITY="0.5" ref="#Currypulver">Kerry-Pulver</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="0.5" ref="#Currypulver" unit="EL">Kerry-Pulver</cue:recipeIngredient>
 					( dessen Zubereitung in den Vorbereitungsregeln zu finden ist), durchgerührt und vor dem Anrichten werden 
 					<cue:recipeIngredient>Kalbfleischklöße</cue:recipeIngredient>
 					 darin gahr gekocht. Jenachdem die 
@@ -673,20 +677,20 @@
 			<cue:recipe rcp-id="B-19" type="Suppen" xmlns:cue="http://cueML/ns">
 				<head>
 					 Hasensuppe von einem ganzen 
-					<cue:recipeIngredient QUANTITY="1" ref="#Hase">Hasen</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Hase">Hasen</cue:recipeIngredient>
 					.
 				</head>
 				<p>
 					 Man reinige einen großen 
-					<cue:recipeIngredient QUANTITY="1" ref="#Hase">Hasen</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Hase">Hasen</cue:recipeIngredient>
 					, fange das Blut sorgfältig auf, zerschlage die Knochen, zerschneide das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, jedoch wird der Rücken zurückgelegt, und koche Beides mit 2—3 Pfund 
-					<cue:recipeIngredient UNIT="Pfund" atLeast="2.0" atMost="3.0" ref="#Rindkochfleisch">Rindfleisch</cue:recipeIngredient>
+					<cue:recipeIngredient atLeast="2" atMost="3" ref="#Rindkochfleisch" unit="Pfund">Rindfleisch</cue:recipeIngredient>
 					, 3 Loth 
-					<cue:recipeIngredient QUANTITY="3.0" UNIT="Loth" ref="#Zwiebel">Zwiebeln</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="3" ref="#Zwiebel" unit="Loth">Zwiebeln</cue:recipeIngredient>
 					, einigen 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Gewürznelken">Nelken</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Gewürznelken">Nelken</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient ref="#Pfefferkörner">Pfefferkörnern</cue:recipeIngredient>
 					, gelben 
@@ -694,21 +698,21 @@
 					, 
 					<cue:recipeIngredient ref="#Küchenkräuter">Suppenkräutern</cue:recipeIngredient>
 					 und einigen Schnitten rohen 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Schweineschinken">Schinken</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Schweineschinken">Schinken</cue:recipeIngredient>
 					 gehörig aus. Der Rücken wird mit reichlich 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient ref="#Sahne">Sahne</cue:recipeIngredient>
 					 weich gebraten, in zierliche Stücken geschnitten und mit einigen 
-					<cue:recipeIngredient QUANTITY="einige">Fleischklößchen</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige">Fleischklößchen</cue:recipeIngredient>
 					 in die Terrine gelegt; vorher aber die 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 nebst dem Blut an die Suppe gethan, solche mit bräunlich gebratenem 
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					 sämig gemacht, Alles durch ein Sieb gerührt, wieder zu Feuer gesetzt, mit ¼ Flasche 
-					<cue:recipeIngredient QUANTITY="0.25" UNIT="Flasche" ref="#Portwein">Portwein</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="0.25" ref="#Portwein" unit="Flasche">Portwein</cue:recipeIngredient>
 					, einer kleinen Messerspitze 
-					<cue:recipeIngredient QUANTITY="1" UNIT="Messerspitze" ref="#Cayennepfeffer">Cayenne-Pfeffer</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Cayennepfeffer" unit="Messerspitze">Cayenne-Pfeffer</cue:recipeIngredient>
 					 und dem nöthigen 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 nur eben durchgekocht und zu dem Uebrigen in die Terrine geschüttet. In Ermangelung des Hasenblutes nehme man etwas Schweineblut. Zum Kochen dieser Suppe gehören, in Bezug auf das Kochen des 
@@ -725,17 +729,17 @@
 				</head>
 				<p>
 					 Ist noch gutes 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 an einem 
-					<cue:recipeIngredient QUANTITY="1" ref="#Hasenbraten">Hasenbraten</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Hasenbraten">Hasenbraten</cue:recipeIngredient>
 					, der schon zur Tafel gewesen ist, wird dies ganz fein gehackt, hinzugegeben: etwa für 8 Pfennig in Wasser eingeweichtes und ausgedrücktes 
-					<cue:recipeIngredient QUANTITY="8.0" UNIT="Pfennig" ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
 					, 1 
-					<cue:recipeIngredient QUANTITY="1.0" ref="#Ei">Ei</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Ei">Ei</cue:recipeIngredient>
 					 dick frische 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					, 2 
-					<cue:recipeIngredient QUANTITY="2.0" ref="#Ei">Eier</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="2" ref="#Ei">Eier</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Gewürznelken">Nelken</cue:recipeIngredient>
 					, 
@@ -745,17 +749,17 @@
 					. Hiervon kleine 
 					<cue:recipeIngredient>Klöße</cue:recipeIngredient>
 					 aufgerollt, wovon man erst einen in der Suppe aufkochen läßt, um zu sehen, ob sie locker werden; man gibt sonst ein wenig Wasser, im andern Falle geriebenes 
-					<cue:recipeIngredient QUANTITY="1" ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
 					 hinzu. Dann wird das Knochengerippe in kleine Stückchen gehauen. Zugleich schneidet man für 8 Personen 2 Pfund 
-					<cue:recipeIngredient QUANTITY="2.0" UNIT="Pfund" ref="#Rindkochfleisch">Rindfleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="2" ref="#Rindkochfleisch" unit="Pfund">Rindfleisch</cue:recipeIngredient>
 					 in kleine Würfel, macht in reichlich 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 einige Scheiben rohen 
-					<cue:recipeIngredient QUANTITY="einige" UNIT="Scheibe" ref="#Schweineschinken">Schinken</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Schweineschinken" unit="Scheibe">Schinken</cue:recipeIngredient>
 					, 4—5 
-					<cue:recipeIngredient atLeast="4.0" atMost="5.0" ref="#Zwiebel">Zwiebeln</cue:recipeIngredient>
+					<cue:recipeIngredient atLeast="4" atMost="5" ref="#Zwiebel">Zwiebeln</cue:recipeIngredient>
 					, eine 
-					<cue:recipeIngredient QUANTITY="1" ref="#Wurzelpetersilie">Petersilien-</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Wurzelpetersilie">Petersilien-</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Knollensellerie">Sellerie-</cue:recipeIngredient>
 					 und gelbe 
@@ -763,19 +767,19 @@
 					( 
 					<cue:recipeIngredient ref="#Karotte">Möhren</cue:recipeIngredient>
 					), in Scheiben geschnitten, nebst 2—3 Löffel 
-					<cue:recipeIngredient UNIT="Scheibe" atLeast="2.0" atMost="3.0" ref="#Mehl">Mehl</cue:recipeIngredient>
+					<cue:recipeIngredient atLeast="2" atMost="3" ref="#Mehl" unit="EL">Mehl</cue:recipeIngredient>
 					 braun, läßt dann das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und zuletzt die Hasenknochen darin rösten; gibt nun so viel Wasser, als nöthig ist, hinzu, auf jede Person etwa ½ bis ¾ Maß gerechnet. Wenn 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 vom 
 					<cue:recipeIngredient ref="#Hase">Hasen</cue:recipeIngredient>
 					 da ist, kommt sie hinzu. Ist das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 ausgekocht und das 
 					<cue:recipeIngredient ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient>
 					 weich, reibt man die Suppe durch ein Sieb, bringt sie wieder zum Kochen, würzt sie mit 
-					<cue:recipeIngredient QUANTITY="1" ref="#Salz">Salz</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Salz">Salz</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Muskatnuß">Muskat</cue:recipeIngredient>
 					 und 
@@ -798,11 +802,11 @@
 					 braun gemacht, 
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					 gleichfalls darin gebräunt, das zerhackte Hasengerippe, oder auch Knochen von anderem, gutem gebratenem 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleische</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleische</cue:recipeIngredient>
 					 nebst 
 					<cue:recipeIngredient ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient>
 					 eine Weile darin durchgebraten und kochendes Wasser und 
-					<cue:recipeIngredient QUANTITY="1" ref="#Bratenjus">Bratenjus</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Bratenjus">Bratenjus</cue:recipeIngredient>
 					 hinzugeschüttet, mit 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, 
@@ -810,7 +814,7 @@
 					 und 
 					<cue:recipeIngredient ref="#Gewürznelken">Nelken</cue:recipeIngredient>
 					 gewürzt und nachdem es 1—1½ Stunde gekocht, durch ein Sieb gegeben, wieder zum Kochen gebracht, Schwammoder 
-					<cue:recipeIngredient QUANTITY="1">Griesmehl-Klößchen</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1">Griesmehl-Klößchen</cue:recipeIngredient>
 					 hinein gegeben, oder mit in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 gebratenen kleinen 
@@ -823,7 +827,7 @@
 				<head> Feldhühnersuppe.</head>
 				<p>
 					 Wird wie Hasensuppe bereitet; man kann statt 
-					<cue:recipeIngredient ALT_GRP="1">Klöße</cue:recipeIngredient>
+					<cue:recipeIngredient altGrp="1">Klöße</cue:recipeIngredient>
 					 das Brustfleisch in feine Scheiben schneiden und in der Suppe anrichten.
 					<cue:alt target="1 2"/>
 				</p>
@@ -833,13 +837,13 @@
 				<head> Krammetsvögelsuppe.</head>
 				<p>
 					 Man rechnet auf jede Person einen 
-					<cue:recipeIngredient QUANTITY="1" ref="#Krammetsvogel">Krammetsvogel</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Krammetsvogel">Krammetsvogel</cue:recipeIngredient>
 					. Diese werden mit etwas 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Salz">Salz</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
 					, in reichlich 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 fest zugedeckt, langsam weich gebraten. Das Brustfleisch in feine Scheiben geschnitten, das Knochengerippe im Mörser zerstoßen. Dann wird letzteres mit einigen Scheiben 
-					<cue:recipeIngredient QUANTITY="einige" UNIT="Scheibe" ref="#Knollensellerie #Sellerieblätter">Sellerie</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Knollensellerie #Sellerieblätter" unit="Scheibe">Sellerie</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Karotte">Möhren</cue:recipeIngredient>
 					 und 
@@ -847,7 +851,7 @@
 					 in der Krammetsvögel-Butter gedämpft, 
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					 darin eine Weile gerührt und mit guter 
-					<cue:recipeIngredient QUANTITY="1">Bouillon</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1">Bouillon</cue:recipeIngredient>
 					 oder Wasser eine Stunde langsam gekocht. Das Fett abgenommen, durchgegeben, wieder aufgekocht, 
 					<cue:recipeIngredient>Schwamm-</cue:recipeIngredient>
 					 oder 
@@ -862,11 +866,11 @@
 				<head> Kartoffelsuppe.</head>
 				<p>
 					 Es wird ein Stück 
-					<cue:recipeIngredient QUANTITY="1" ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 mit 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 oder auch Knochen von gutem 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, die klein gehauen und gewaschen sind, zeitig zu Feuer gesetzt, ausgeschäumt, 
 					<cue:recipeIngredient ref="#Kartoffeln">Kartoffeln</cue:recipeIngredient>
 					, 
@@ -878,7 +882,7 @@
 					 hinein gegeben und dies Alles fest zugedeckt, stark und wohl 3 Stunden gekocht. Die 
 					<cue:recipeIngredient ref="#Knollensellerie">Sellerieknollen</cue:recipeIngredient>
 					 werden jedoch, sobald sie weich sind, herausgenommen, die Suppe durch ein Sieb gerührt, wieder zum Kochen gebracht, die 
-					<cue:recipeIngredient QUANTITY="1" ref="#Knollensellerie">Sellerieknollen</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Knollensellerie">Sellerieknollen</cue:recipeIngredient>
 					 nebst gehackten 
 					<cue:recipeIngredient ref="#Knollensellerie #Sellerieblätter">Sellerie-</cue:recipeIngredient>
 					 oder 
@@ -891,7 +895,7 @@
 				<head> Suppe von jungen Gemüsen.</head>
 				<p>
 					 Man läßt in einem Stich 
-					<cue:recipeIngredient QUANTITY="1" UNIT="Stich" ref="#Butter">Butter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Butter" unit="Stich">Butter</cue:recipeIngredient>
 					 
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					 anziehn, gibt so viel 
@@ -932,9 +936,9 @@
 					 Die 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					 läßt man, ohne sie zu waschen, in einem Stück zergangener 
-					<cue:recipeIngredient QUANTITY="1" ref="#Butter">Butter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 eine Weile schwitzen, so wie später darin nach Portion der Suppe, 1—2 Löffel 
-					<cue:recipeIngredient atLeast="1.0" atMost="2.0" ref="#Mehl">Mehl</cue:recipeIngredient>
+					<cue:recipeIngredient atLeast="1" atMost="2" ref="#Mehl" unit="EL">Mehl</cue:recipeIngredient>
 					, doch muß dasselbe weiß bleiben. Dann schüttet man so viel 
 					<cue:recipeIngredient>Bouillon</cue:recipeIngredient>
 					 oder Wasser zu, als man Suppe haben will und gibt, wenn die 
@@ -963,7 +967,7 @@
 				</head>
 				<p>
 					 Diese lassen sich am besten zur Suppe benutzen. Man setzt sie mit einem guten Stück 
-					<cue:recipeIngredient QUANTITY="1" ref="#Butter">Butter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 und weichem kochenden Wasser zu Feuer, läßt sie weich kochen und rührt sie durch ein Sieb. Die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 bringt man wieder zum Kochen, gibt 
@@ -992,9 +996,9 @@
 					 Man muß die 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					, je nachdem sie gut sind, 2 auch wohl 3 Stunden vor dem Anrichten zu Feuer bringen und zwei Mal, jedes Mal nach einer halben Stunde Kochens abschütten und mit frischem, weichem Wasser ferner kochen lassen. Man kann nach Belieben ein Stück 
-					<cue:recipeIngredient QUANTITY="1" ref="#Rindkochfleisch">Rindfleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Rindkochfleisch">Rindfleisch</cue:recipeIngredient>
 					, oder eine geräucherte 
-					<cue:recipeIngredient QUANTITY="1" ref="#Mettwurst">Mettwurst</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Mettwurst">Mettwurst</cue:recipeIngredient>
 					, oder 
 					<cue:recipeIngredient ref="#Schweineschnauze">Schweinschnauze</cue:recipeIngredient>
 					 und 
@@ -1004,13 +1008,13 @@
 					 die 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					 hart macht. Die geräucherte Wurst muß heiß abgewaschen und wenn sie etwa sehr trocken sein sollte, die vorige Nacht eingewässert sein, wodurch sie weicher wird. Das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 muß man mit wenig 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 ausschäumen und die abgeschütteten 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					 hineingeben. Was es nun an 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 sein soll, läßt man mit den 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					 und reichlich 
@@ -1018,17 +1022,17 @@
 					 und 
 					<cue:recipeIngredient ref="#Knollensellerie">Sellerieknollen</cue:recipeIngredient>
 					 weich werden, während man im Anfang zuweilen einen Guß kaltes Wasser nachschüttet, welches das schnellere Weichwerden befördert. Sie müssen ununterbrochen, aber nicht zu stark kochen. Dann nimmt man das 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und die Knollen heraus, reibt die 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					 durch einen Durchschlag und läßt sie mit in 
-					<cue:recipeIngredient QUANTITY="1" ref="#Butter">Butter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 gelb gebratenen 
 					<cue:recipeIngredient ref="#Zwiebel">Zwiebeln</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, dem 
-					<cue:recipeIngredient ref="#Rindkochfleisch #Hammelfleisch #Kalbkochfleisch #Hasenfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hammelfleisch #Hasenfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und den Knollen eben durchkochen. Es wird in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 geröstetes 
@@ -1040,13 +1044,13 @@
 					 helfen. Anmerk. Hat man 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					, die nicht weich werden, so gibt man eine weiße 
-					<cue:recipeIngredient QUANTITY="1" ref="#BohneWeiß">Bohne</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#BohneWeiß">Bohne</cue:recipeIngredient>
 					 groß gereinigte 
 					<cue:recipeIngredient ref="#Kaliumcarbonat">Pottasche</cue:recipeIngredient>
 					 zu denselben. Auch befördert ein Stück Glas von einer Flasche, gleich mit den 
-					<cue:recipeIngredient QUANTITY="1" UNIT="Flasche" ref="#Erbsen">Erbsen</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Erbsen" unit="Flasche">Erbsen</cue:recipeIngredient>
 					 zu Feuer gesetzt, einigermaßen das Weichwerden. So auch das Hineinschneiden einiger 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Zwiebel">Zwiebeln</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Zwiebel">Zwiebeln</cue:recipeIngredient>
 					 gleich nach dem Abschütten. Man hüte sich aber, sowohl 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					, als jede andere Art von Hülsenfrüchten in weiß glasirten Töpfen zu kochen, weil sie darin gekocht, völlig hart bleiben.
@@ -1076,9 +1080,9 @@
 				<head> Linsensuppe.</head>
 				<p>
 					 Auch diese wird wie Erbsensuppe mit einer 
-					<cue:recipeIngredient QUANTITY="1" ref="#Mettwurst">Mettwurst</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Mettwurst">Mettwurst</cue:recipeIngredient>
 					 oder einem Stück 
-					<cue:recipeIngredient QUANTITY="1" ref="#Bauchspeck">Bauchspeck</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Bauchspeck">Bauchspeck</cue:recipeIngredient>
 					 gekocht, jedoch bleiben die 
 					<cue:recipeIngredient ref="#Linsen">Linsen</cue:recipeIngredient>
 					 darin ganz und man macht mit den 
@@ -1101,7 +1105,7 @@
 					 mit reichlich frischer 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 gelb gemacht, ein guter Theil abgestreifte und gewaschene 
-					<cue:recipeIngredient QUANTITY="1" ref="#Sauerampfer">Sauerampferblätter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Sauerampfer">Sauerampferblätter</cue:recipeIngredient>
 					 darin durchgerührt, bis sie zergehn, dann mit 
 					<cue:recipeIngredient>Kalbfleischbouillon</cue:recipeIngredient>
 					 oder Wasser und 
@@ -1111,7 +1115,7 @@
 					, dicker 
 					<cue:recipeIngredient ref="#Sahne">Sahne</cue:recipeIngredient>
 					 und einigen 
-					<cue:recipeIngredient QUANTITY="einige" ref="#HühnereiEigelb">Eidottern</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#HühnereiEigelb">Eidottern</cue:recipeIngredient>
 					 abgerührt und auf geröstetem 
 					<cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
 					 angerichtet, oder 
@@ -1132,9 +1136,9 @@
 					 oder Wasser fein gerührt, mit 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, einem guten Theil gewaschenem und fein gehacktem 
-					<cue:recipeIngredient QUANTITY="1" ref="#Kerbel">Kerbel</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kerbel">Kerbel</cue:recipeIngredient>
 					 durchgekocht, mit 1 
-					<cue:recipeIngredient QUANTITY="1.0" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 abgerührt und auf geröstetem 
 					<cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
 					 angerichtet. Letzteres bleibt für Kranke weg und statt des 
@@ -1165,7 +1169,7 @@
 					, 
 					<cue:recipeIngredient ref="#Schnittlauch">Schnittlauch</cue:recipeIngredient>
 					 und überhaupt was man von passenden Kräutern hat, doch von den stärkern weniger, zusammen einige Hände voll, wasche und schneide sie fein. Schwitze dann ein gutes Stück 
-					<cue:recipeIngredient QUANTITY="1" ref="#Butter">Butter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 mit so vielem 
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					, als man zur Suppe nöthig hat und gebe die Kräuter dazu, welche man mit 
@@ -1188,21 +1192,21 @@
 				<head> Weiße Weinsuppe.</head>
 				<p>
 					 Zwei Eßlöffel 
-					<cue:recipeIngredient ref="#Stärke">Stärke</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Stärke" unit="EL">Stärke</cue:recipeIngredient>
 					 oder feines 
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					, 6 
-					<cue:recipeIngredient QUANTITY="6.0" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="6" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 werden mit einer Flasche 
-					<cue:recipeIngredient QUANTITY="1" UNIT="Flasche" ref="#Rotwein #Weißwein">Wein</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Rotwein #Weißwein" unit="Flasche">Wein</cue:recipeIngredient>
 					 und einer Flasche Wasser angerührt, mit 
-					<cue:recipeIngredient QUANTITY="1" UNIT="Flasche" ref="#Zucker">Zucker</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>
 					 gehörig versüßt und mit einigen 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Zitronenscheibe">Zitronenscheiben</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Zitronenscheibe">Zitronenscheiben</cue:recipeIngredient>
 					, aus denen man die Kerne nehmen muß, über starkem Feuer fortwährend bis vor dem Kochen stark gerührt und schnell in die Suppenterrine geschüttet, in der man etwas Blüthe zerrührt hat. Das Durchkochen bringt die Suppe zum Gerinnen. Dann legt man von dem mit 
 					<cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>
 					 zu Schaum geschlagenen Weißen mit einem Eßlöffel kleine 
-					<cue:recipeIngredient QUANTITY="1">Klößchen</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" unit="EL">Klößchen</cue:recipeIngredient>
 					 auf die Suppe, bestreut solche stark mit 
 					<cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>
 					 und 
@@ -1238,13 +1242,13 @@
 					 Der 
 					<cue:recipeIngredient ref="#Sago">Sago</cue:recipeIngredient>
 					 wird zwei Mal mit heißem Wasser abgebrüht, mit kaltem, weichem Wasser zu Feuer gebracht und mit einigen 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Zitronenscheibe">Zitronenscheiben</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Zitronenscheibe">Zitronenscheiben</cue:recipeIngredient>
 					 weich gekocht, welches etwa 2 Stunden dauert. Dann gibt man eben so viel rothen 
 					<cue:recipeIngredient ref="#Rotwein">Wein</cue:recipeIngredient>
 					, als man Suppe hat, dazu, versüßt sie gehörig mit 
 					<cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>
 					, läßt sie eben zum Kochen kommen und richtet sie mit etwas feinem 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Zimt">Zimmet</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Zimt">Zimmet</cue:recipeIngredient>
 					 an. Man gibt 
 					<cue:recipeIngredient ref="#Biskuit">Bisquit</cue:recipeIngredient>
 					 oder frischen 
@@ -1265,9 +1269,9 @@
 					 Die 
 					<cue:recipeIngredient ref="#Perlgraupen #Gerste">Gerste</cue:recipeIngredient>
 					 wird in’s kochende Wasser geschüttet, mit etwas frischer 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Butter">Butter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Butter">Butter</cue:recipeIngredient>
 					 und einigen 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Zitronenscheibe">Zitronenscheiben</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Zitronenscheibe">Zitronenscheiben</cue:recipeIngredient>
 					, wodurch sie weißer und schneller weich wird, gahr gekocht. Eine Stunde vorher gibt man gewaschene 
 					<cue:recipeIngredient ref="#Rosinen">Rosinen</cue:recipeIngredient>
 					 dazu und beim Anrichten 
@@ -1279,13 +1283,11 @@
 					 und 
 					<cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>
 					, und rührt die Suppe mit 1—2 
-					<cue:recipeIngredient atLeast="1.0" atMost="2.0" ref="#HühnereiEigelb">Eidottern</cue:recipeIngredient>
-					 ab. Anmerk. Auch ohne 
-					<cue:recipeIngredient ref="#Rotwein #Weißwein">Wein</cue:recipeIngredient>
-					 ist dies eine angenehme Suppe; dann aber muß man, nachdem die 
-					<cue:recipeIngredient QUANTITY="1" ref="#Perlgraupen #Gerste">Gerste</cue:recipeIngredient>
+					<cue:recipeIngredient atLeast="1" atMost="2" ref="#HühnereiEigelb">Eidottern</cue:recipeIngredient>
+					 ab. Anmerk. Auch ohne Wein ist dies eine angenehme Suppe; dann aber muß man, nachdem die 
+					<cue:recipeIngredient quantity="1" ref="#Perlgraupen #Gerste">Gerste</cue:recipeIngredient>
 					 eine Stunde gekocht hat, für 6—8 Personen eine ganze in Scheiben geschnittene 
-					<cue:recipeIngredient QUANTITY="1" UNIT="Scheibe" ref="#Zitrone">Zitrone</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Zitrone" unit="Scheibe">Zitrone</cue:recipeIngredient>
 					 ohne Kerne hinein geben und eine Stunde vor dem Anrichten reichlicher 
 					<cue:recipeIngredient ref="#Rosinen">Rosinen</cue:recipeIngredient>
 					.
@@ -1295,32 +1297,32 @@
 			<cue:recipe rcp-id="B-38" type="Suppen" xmlns:cue="http://cueML/ns">
 				<head>
 					 Eine sehr angenehme Suppe von grober 
-					<cue:recipeIngredient QUANTITY="1" ref="#Perlgraupen #Gerste">Gerste</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Perlgraupen #Gerste">Gerste</cue:recipeIngredient>
 					.
 				</head>
 				<p>
 					 Es wird ein Pfund grobe 
-					<cue:recipeIngredient QUANTITY="1" UNIT="Pfund" ref="#Perlgraupen #Gerste">Gerste</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Perlgraupen #Gerste" unit="Pfund">Gerste</cue:recipeIngredient>
 					 mit einem Stückchen frischer 
-					<cue:recipeIngredient QUANTITY="1" ref="#Butter">Butter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					, einigen Stückchen 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Zimt">Zimmet</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Zimt">Zimmet</cue:recipeIngredient>
 					 und wenig kaltem Wasser zu Feuer gesetzt, nach und nach ein Guß kaltes Wasser dazu gegeben und recht weich gekocht, welches, jenachdem die 
-					<cue:recipeIngredient QUANTITY="1" ref="#Perlgraupen #Gerste">Gerste</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Perlgraupen #Gerste">Gerste</cue:recipeIngredient>
 					 sich gut kocht, 1½—2 Stunden Zeit erfordert. Dann wird die Suppe scharf durch ein Sieb gerührt, wobei, während des Durchrührens etwas Wasser über die 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Perlgraupen #Gerste">Gerste</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Perlgraupen #Gerste">Gerste</cue:recipeIngredient>
 					 geschüttet wird, um alles Sämige der Suppe zuzuwenden. Darnach werden ½ Pfund gut gewaschene 
-					<cue:recipeIngredient QUANTITY="0.5" UNIT="Pfund" ref="#Rosinen">Rosinen</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="0.5" ref="#Rosinen" unit="Pfund">Rosinen</cue:recipeIngredient>
 					 in der Suppe weich gekocht, welches etwa ¾ Stunde dauert, doch kann man diese nach Belieben auch schon früher allein kochen, die Suppe alsdann nach dem Durchrühren zum Kochen bringen und die 
 					<cue:recipeIngredient ref="#Rosinen">Rosinen</cue:recipeIngredient>
 					 sammt der 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 dazu schütten. Die Suppe muß recht sämig, doch ja nicht zu dick sein. Etwas 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Salz">Salz</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
 					 darf nicht vergessen werden. Beim Anrichten werden 2 frische 
-					<cue:recipeIngredient QUANTITY="2.0" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="2" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 mit ¼ Maß weißem 
-					<cue:recipeIngredient QUANTITY="0.25" UNIT="Maß" ref="#Weißwein">Wein</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="0.25" ref="#Weißwein" unit="Maß">Wein</cue:recipeIngredient>
 					 angerührt und die kochende Suppe nach und nach dazu gerührt. Diese Portion ist auf 8 Personen berechnet.
 				</p>
 			</cue:recipe>
@@ -1335,27 +1337,27 @@
 				</head>
 				<p>
 					 Zu 1¼ Maß Wasser nehme man 3 Loth 
-					<cue:recipeIngredient QUANTITY="3.0" UNIT="Loth" ref="#Weizengrießmehl #Griesmehl">Griesmehl</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="3" ref="#Weizengrießmehl #Griesmehl" unit="Loth">Griesmehl</cue:recipeIngredient>
 					, 3 Loth 
-					<cue:recipeIngredient QUANTITY="3.0" UNIT="Loth" ref="#Zucker">Zucker</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="3" ref="#Zucker" unit="Loth">Zucker</cue:recipeIngredient>
 					, 3 Loth 
-					<cue:recipeIngredient QUANTITY="3.0" UNIT="Loth" ref="#Rosinen">Korinthen</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="3" ref="#Rosinen" unit="Loth">Korinthen</cue:recipeIngredient>
 					, einen gehäuften Theelöffel 
-					<cue:recipeIngredient QUANTITY="1" ref="#Salz">Salz</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Salz">Salz</cue:recipeIngredient>
 					, ½ Tasse weißen 
-					<cue:recipeIngredient QUANTITY="0.5" UNIT="Tasse" ref="#Weißwein">Wein</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="0.5" ref="#Weißwein" unit="Tasse">Wein</cue:recipeIngredient>
 					 und 1 
-					<cue:recipeIngredient QUANTITY="1.0" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					. Das Wasser wird kalt mit den gewaschenen 
 					<cue:recipeIngredient ref="#Rosinen">Korinthen</cue:recipeIngredient>
 					, einer großen 
-					<cue:recipeIngredient QUANTITY="1" ref="#BohneWeiß">Bohne</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#BohneWeiß">Bohne</cue:recipeIngredient>
 					 dick 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 und einem Stückchen 
-					<cue:recipeIngredient QUANTITY="1" ref="#Zimt">Zimmet</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Zimt">Zimmet</cue:recipeIngredient>
 					 von der Länge eines halben Fingers, zu Feuer gesetzt und wenn es kocht, das 
-					<cue:recipeIngredient QUANTITY="1" ref="#Weizengrießmehl #Griesmehl">Griesmehl</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Weizengrießmehl #Griesmehl">Griesmehl</cue:recipeIngredient>
 					 langsam hinein gestreut, 
 					<cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>
 					 und 
@@ -1365,7 +1367,7 @@
 					 sich nicht mehr senkt. Dann wird das 
 					<cue:recipeIngredient ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 mit etwas 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Rotwein #Weißwein">Wein</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Rotwein #Weißwein">Wein</cue:recipeIngredient>
 					 angerührt, der übrige zur Suppe geschüttet und das 
 					<cue:recipeIngredient ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 allgemach dazu gerührt. Es ist diese Portion auf zwei Personen berechnet. Auch 
@@ -1378,11 +1380,11 @@
 				<head> Schaumbiersuppe.</head>
 				<p>
 					 Ein Maß 
-					<cue:recipeIngredient QUANTITY="1" UNIT="Maß" ref="#Bier">Bier</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Bier" unit="Maß">Bier</cue:recipeIngredient>
 					, eben so viel Wasser, 2 Eßlöffel feines 
-					<cue:recipeIngredient QUANTITY="2.0" ref="#Mehl">Mehl</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="2" ref="#Mehl" unit="EL">Mehl</cue:recipeIngredient>
 					, 4 ganze 
-					<cue:recipeIngredient QUANTITY="4.0" ref="#Ei">Eier</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="4" ref="#Ei">Eier</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>
 					, 
@@ -1411,11 +1413,11 @@
 					 hinzu, daß es recht kräftig schmeckt, versüßt es mit 
 					<cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>
 					, und gibt, wenn es kocht, nach Portion der Suppe ½—1 Eßlöffel voll mit Wasser angerührtes 
-					<cue:recipeIngredient atLeast="0.5" atMost="1.0" ref="#Mehl">Mehl</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					 hinzu und rührt die Suppe mit einigen 
-					<cue:recipeIngredient QUANTITY="einige" ref="#HühnereiEigelb">Eidottern</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#HühnereiEigelb">Eidottern</cue:recipeIngredient>
 					 und etwas 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Zimt">Zimmet</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Zimt">Zimmet</cue:recipeIngredient>
 					 ab. Sie darf weder zu dünn, noch zu dicklich sein. In Ermangelung der 
 					<cue:recipeIngredient ref="#Ei">Eier</cue:recipeIngredient>
 					 rühre man das 
@@ -1432,23 +1434,23 @@
 				<head> Schnell gemachte Biersuppe.</head>
 				<p>
 					 Auf jede Person rechne man ¼ Maß Wasser, eben so viel 
-					<cue:recipeIngredient QUANTITY="0.25" UNIT="Maß" ref="#Bier">Bier</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Bier">Bier</cue:recipeIngredient>
 					, lasse es kochen, gebe den nöthigen 
 					<cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>
 					 und eine Messerspitze 
-					<cue:recipeIngredient QUANTITY="1" UNIT="Messerspitze" ref="#Salz">Salz</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Salz" unit="Messerspitze">Salz</cue:recipeIngredient>
 					 hinzu. Dann rühre man 1 
-					<cue:recipeIngredient QUANTITY="1.0" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 und einen gehäuften Theelöffel 
-					<cue:recipeIngredient QUANTITY="1" ref="#Kartoffelstärkemehl">Kartoffelmehl</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kartoffelstärkemehl">Kartoffelmehl</cue:recipeIngredient>
 					 zusammen mit etwas kaltem Wasser an, gebe unter beständigem Rühren nach und nach etwas von dem kochenden 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Bier">Bier</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Bier">Bier</cue:recipeIngredient>
 					 hinzu und gieße solches hinein, indem man die Suppe gut durchrührt, den Topf vom Feuer nimmt und noch eine kleine Weile rührt, welches das Gerinnen verhütet. Nach Belieben kann man das 
 					<cue:recipeIngredient ref="#Eiweiß">Eiweiß</cue:recipeIngredient>
 					 mit 
 					<cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>
 					 zu Schnee schlagen, solches mit einem Löffel abstechen, auf die angerichtete Suppe legen und mit 
-					<cue:recipeIngredient QUANTITY="1" ref="#Zucker">Zucker</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Zucker" unit="EL">Zucker</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient ref="#Zimt">Zimmet</cue:recipeIngredient>
 					 bestreuen.
@@ -1463,7 +1465,7 @@
 					, halb 
 					<cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
 					 wird mit wenig Wasser ganz weich gekocht, durch ein Sieb gerührt, 
-					<cue:recipeIngredient QUANTITY="1" ref="#Rosinen">Korinthen</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Rosinen">Korinthen</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Zitronenscheibe">Zitronenscheiben</cue:recipeIngredient>
 					, 
@@ -1486,31 +1488,29 @@
 				</head>
 				<p>
 					 Es wird besonders beim Kochen dieser Suppe angenehm sein, sich nach einem genau angegebenen Verhältniß richten zu können, weßhalb ich solches hier mittheile. Man nehme also für 2—3 Personen ½ Maß 
-					<cue:recipeIngredient QUANTITY="0.5" UNIT="Maß" ref="#Kuhmilch">Milch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="0.5" ref="#Kuhmilch" unit="Maß">Milch</cue:recipeIngredient>
 					 mit der 
 					<cue:recipeIngredient ref="#Sahne">Sahne</cue:recipeIngredient>
 					, ½ Maß Wasser, ¼ Maß gutes, starkes, jedoch kein bitteres 
-					<cue:recipeIngredient QUANTITY="0.25" UNIT="Maß" ref="#Bier">Bier</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="0.25" ref="#Bier" unit="Maß">Bier</cue:recipeIngredient>
 					, 4 Loth 
-					<cue:recipeIngredient QUANTITY="4.0" UNIT="Loth" ref="#Rosinen">Korinthen</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="4" ref="#Rosinen" unit="Loth">Korinthen</cue:recipeIngredient>
 					, 1½ Loth feines 
-					<cue:recipeIngredient QUANTITY="1.5" UNIT="Loth" ref="#Mehl">Mehl</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1.5" ref="#Mehl" unit="Loth">Mehl</cue:recipeIngredient>
 					, 2 Loth 
-					<cue:recipeIngredient QUANTITY="2.0" UNIT="Loth" ref="#Zucker">Zucker</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="2" ref="#Zucker" unit="Loth">Zucker</cue:recipeIngredient>
 					, ½ Theelöffel 
-					<cue:recipeIngredient QUANTITY="0.5" ref="#Salz">Salz</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="0.5" ref="#Salz">Salz</cue:recipeIngredient>
 					 und ein frisches 
-					<cue:recipeIngredient QUANTITY="1" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
-					. Es wird dies Alles ohne 
-					<cue:recipeIngredient ref="#Ei">Ei</cue:recipeIngredient>
-					 und 
+					<cue:recipeIngredient quantity="1" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
+					. Es wird dies Alles ohne Ei und 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 in einem tiefen Topf auf sehr starkem Feuer bis vor dem Kochen ohne Aufhören stark gerührt, dann der Topf schnell vom Feuer genommen, die Suppe noch einige Minuten gerührt, weil sie sonst leicht gerinnt, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 dazu gegeben und mit dem 
 					<cue:recipeIngredient ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 und etwas feinem 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Zimt">Zimmet</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Zimt">Zimmet</cue:recipeIngredient>
 					 abgerührt. Hat man keine Zeit, die Suppe gehörig zu rühren, ohne welches sie gerinnt, so lasse man Wasser, 
 					<cue:recipeIngredient ref="#Bier">Bier</cue:recipeIngredient>
 					, 
@@ -1522,17 +1522,17 @@
 					 besonders zum Kochen kommen, nehme beides vom Feuer, mische es unter einander und rühre die Suppe mit dem 
 					<cue:recipeIngredient ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 ab. In Ermangelung eines Eis, was übrigens sehr dazu gehört, muß man reichlicher 
-					<cue:recipeIngredient QUANTITY="1" ref="#Kuhmilch">Milch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kuhmilch">Milch</cue:recipeIngredient>
 					 und so viel weniger Wasser und auch eine Kleinigkeit 
-					<cue:recipeIngredient QUANTITY="1" ref="#Mehl">Mehl</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Mehl">Mehl</cue:recipeIngredient>
 					 mehr nehmen. Uebrigens versteht es sich von selbst, daß das Verhältniß dieser Flüssigkeiten zu einander vom eigenen Gutdünken abhängt und also zu dieser Suppe mehr 
 					<cue:recipeIngredient ref="#Kuhmilch">Milch</cue:recipeIngredient>
 					 oder 
 					<cue:recipeIngredient ref="#Bier">Bier</cue:recipeIngredient>
 					 genommen werden kann, wenn man nur dabei beachten wolle, daß zu 2¼ Maß Flüssigem 1½ Loth feines 
-					<cue:recipeIngredient QUANTITY="1.5" UNIT="Loth" ref="#Mehl">Mehl</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1.5" ref="#Mehl" unit="Loth">Mehl</cue:recipeIngredient>
 					 und 1 
-					<cue:recipeIngredient QUANTITY="1.0" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 hinreichend sind. Es wird zu dieser Suppe 
 					<cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient>
 					 oder in 
@@ -1547,21 +1547,21 @@
 				<head> Milchsuppe.</head>
 				<p>
 					 Ein Maß 
-					<cue:recipeIngredient QUANTITY="1" UNIT="Maß" ref="#Kuhmilch">Milch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kuhmilch" unit="Maß">Milch</cue:recipeIngredient>
 					, einen Eßlöffel voll 
-					<cue:recipeIngredient QUANTITY="1" ref="#Stärke">Stärke</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Stärke" unit="EL">Stärke</cue:recipeIngredient>
 					 oder 
 					<cue:recipeIngredient ref="#Kartoffelstärkemehl">Kartoffelmehl</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Zitronenschale">Zitronenschale</cue:recipeIngredient>
 					 oder auch ein Paar frische 
-					<cue:recipeIngredient QUANTITY="1" ref="#Pfirsich">Pfirsichblätter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Pfirsich">Pfirsichblätter</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>
 					, 2 
-					<cue:recipeIngredient QUANTITY="2.0" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="2" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					, etwas 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Salz">Salz</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
 					, über starkem Feuer fortwährend stark gerührt, bis es kocht, dann in die Terrine geschüttet, von dem zu Schaum geschlagenen 
 					<cue:recipeIngredient ref="#Eiweiß">Eiweiß</cue:recipeIngredient>
 					 
@@ -1586,7 +1586,7 @@
 					 mit der kalten 
 					<cue:recipeIngredient ref="#Kuhmilch">Milch</cue:recipeIngredient>
 					 und etwas 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Salz">Salz</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
 					 über starkem Feuer rührt, bis sie gehörig kocht, und dann mit 
 					<cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>
 					 und 
@@ -1620,21 +1620,21 @@
 					 muß 1—1¼ Stunden kochen, wird mit kaltem Wasser zu Feuer gesetzt, und wenn er ganz heiß ist, abgeschüttet, weil mancher 
 					<cue:recipeIngredient ref="#Reis">Reis</cue:recipeIngredient>
 					 etwas Säuerliches hat, wodurch die 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Kuhmilch">Milch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Kuhmilch">Milch</cue:recipeIngredient>
 					 gerinnt. Dann läßt man zwei Theile frische 
 					<cue:recipeIngredient ref="#Kuhmilch">Milch</cue:recipeIngredient>
 					 mit einem Theil Wasser zusammen kochen, schüttet den 
-					<cue:recipeIngredient QUANTITY="1" ref="#Reis">Reis</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Reis">Reis</cue:recipeIngredient>
 					 mit einigen Stückchen 
-					<cue:recipeIngredient QUANTITY="einige" ref="#Zimt">Zimmet</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Zimt">Zimmet</cue:recipeIngredient>
 					 hinein und läßt die Suppe etwas sämig kochen. Beim Anrichten gibt man wenig 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 und nach Belieben etwas 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Zucker">Zucker</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Zucker">Zucker</cue:recipeIngredient>
 					 dazu. Man kann die Suppe auch durch ein wenig 
-					<cue:recipeIngredient QUANTITY="1" ref="#Kartoffelstärkemehl">Kartoffelmehl</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kartoffelstärkemehl">Kartoffelmehl</cue:recipeIngredient>
 					 gebunden machen und dagegen etwas 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Reis">Reis</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Reis">Reis</cue:recipeIngredient>
 					 weniger nehmen. Anmerk. Das Wasser, auf diese Weise mit der 
 					<cue:recipeIngredient ref="#Kuhmilch">Milch</cue:recipeIngredient>
 					 vorher zusammen gekocht, gibt der Suppe durchaus keinen wässerigen Geschmack.
@@ -1651,7 +1651,7 @@
 					 Ungefähr zwei Stunden muß die 
 					<cue:recipeIngredient ref="#Perlgraupen #Gerste">Gerste</cue:recipeIngredient>
 					 zu Feuer sein. Sie wird mit etwas 
-					<cue:recipeIngredient QUANTITY="etwas" ref="#Butter">Butter</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Butter">Butter</cue:recipeIngredient>
 					 in wenig weiches kochendes Wasser gegeben, kurz eingekocht, frische 
 					<cue:recipeIngredient ref="#Kuhmilch">Milch</cue:recipeIngredient>
 					 hinzu geschüttet und zu einer sämigen Suppe gekocht. 
