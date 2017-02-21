@@ -184,9 +184,10 @@ applyRulesToWordProperties(wps:WordProperty[0..*], rcp:PlanTextRecipe)
           <y:Geometry height="152.5808650065532" width="382.113106528505" x="-760.4612795161624" y="-251.55522290028398"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="143.6875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="364.814453125" x="8.649326701752443" y="4.446682503276605">def applyRulesToWordProperties(wps, rcp):
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="157.65625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="364.814453125" x="8.649326701752443" y="-2.5376924967233947">def applyRulesToWordProperties(wps, rcp):
     for rule in rules:
         wps = rule(wps, rcp)
+    return wps
 
 def exampleRule(wps, rcp):
     for wp in wps:
@@ -204,7 +205,6 @@ def exampleRule(wps, rcp):
       </data>
     </node>
     <edge id="e0" source="n4" target="n3">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-4.405383227050038" ty="4.139656792413007"/>
@@ -215,7 +215,6 @@ def exampleRule(wps, rcp):
       </data>
     </edge>
     <edge id="e1" source="n3" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="10.049082568807307" sy="4.816406154849233" tx="0.0" ty="0.0">
@@ -229,7 +228,6 @@ def exampleRule(wps, rcp):
       </data>
     </edge>
     <edge id="e2" source="n3" target="n6">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="10.801276854796697" sy="0.8943320217708788" tx="0.0" ty="0.0">
@@ -243,7 +241,6 @@ def exampleRule(wps, rcp):
       </data>
     </edge>
     <edge id="e3" source="n6" target="n8">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>

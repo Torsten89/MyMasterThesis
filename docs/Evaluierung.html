@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Davidis's Kochbuch</title>
+		<title>Davidis' Kochbuch</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         
@@ -231,7 +231,7 @@
                     </div>
                     
                         
-                    <p>Tabelle 3 zeigt die Ergebnisse mit unserer finalen Version 0.2.
+                    <p>Tabelle 3 zeigt die Ergebnisse mit unserer finalen Version 0.2. Die Laufzeit beträgt unabhängig von den zu evaluierten Optionen knapp <b>3 Min</b>.
                     </p>
                     
                     
@@ -262,16 +262,16 @@
                     <p>Der Recall und die Precision der Option 1 von fast 100% zeigen, dass nahezu alle Zutaten nach den Verbesserungen in der Version 0.2 extrahiert werden. Die verbliebenen Fehler sind <a href="verbliebeneFehler.html">hier</a> aufgelistet.
                     </p>
                     
-                    <p>Option 2 zeigt, dass wir zu mehr als 8 von 10 Zutaten die Mengenangabe und Einheit richtig zuordnen. Wir haben dabei zwei systematische Fehler festgestellt. Zu einem können wir textuelle Mengenspannen der Form <i>"auf jede Person ¾ Pfund, bei einer großen Gesellschaft ½ Pfund"</i> nicht extrahieren. Stattdessen wird nur ½ Pfund extrahiert. Zum anderen sind unsere vagen Mengenwörter wie <i>ein</i> oder <i>eine</i> Problematisch. Wenn wir diese bei der Extraktion verwendeten wird zum Beispiel in <i>"gibt man die Brühe [...] ein Sieb, schwitzt [...] Mehl in Butter [...]"</i> fälschlicherweise die Mengenangabe <i>ein/1</i> für Mehl extrahiert. Wenn wir solche Mengenwörter nicht berücksichtigen wird jedoch die Mengenanagabe <i>1</i> beispielsweise bei <i>"gibt man eine fein geschnittene Zwiebel hinzu"</i> nicht erkannt. In beiden Varianten gehen gut 20 Fehler auf die Verwendung bzw. nicht Verwendung solcher Mengenwörter zurück. Um die Mengenwörtern von den unbestimmten Artikeln besser differenzieren zu können, werden offensichtlich weitere Regeln benötigt.
+                    <p>Option 2 zeigt, dass wir zu mehr als 8 von 10 Zutaten die Mengenangabe und Einheit richtig zuordnen. Wir haben dabei zwei systematische Fehler festgestellt. Zu einem können wir textuelle Mengenspannen der Form <i>"auf jede Person ¾ Pfund, bei einer großen Gesellschaft ½ Pfund"</i> nicht extrahieren. Stattdessen wird nur ½ Pfund extrahiert. Zum anderen sind unsere vagen Mengenwörter wie <i>ein</i> oder <i>eine</i> Problematisch. Wenn wir diese bei der Extraktion verwendeten wird zum Beispiel in <i>"gibt man die Brühe [...] durch ein Sieb, schwitzt [...] Mehl in Butter [...]"</i> fälschlicherweise die Mengenangabe <i>ein/1</i> für Mehl extrahiert. Wenn wir solche Mengenwörter nicht berücksichtigen wird jedoch die Mengenanagabe <i>1</i> beispielsweise bei <i>"gibt man eine fein geschnittene Zwiebel hinzu"</i> nicht erkannt. In beiden Varianten gehen gut 20 Fehler auf die Verwendung bzw. nicht Verwendung solcher Mengenwörter zurück. Um die Mengenwörtern von den unbestimmten Artikeln besser differenzieren zu können, werden offensichtlich weitere Regeln benötigt.
                     </p>
                     
-                    <p>Unsere zwei beispielhaften Regeln für optionale und alternative Zutaten triggern so gut wie gar nicht. Dementsprechend geht der Recall und die Precision in der Option 3 stark nach unten. Das Differnezieren dieser Entities durch Regeln muss definitiv noch weiter erforscht werden.
+                    <p>In Option 3 wird ersichtlich, dass usere zwei beispielhaften Regeln für optionale und alternative Zutaten so gut wie gar nicht triggern. Dementsprechend geht der Recall und die Precision in der Option 3 stark nach unten. Das Differnezieren dieser Entities durch Regeln muss definitiv noch weiter erforscht werden.
                     </p>
                     
-                    <p>Dass die Anzahl unser extrahierten Entities mit den Optionen variert, liegt an unsrerem Rough match. In Option 1 wird z.B. im Rezept B-1 das erste Vorkommen von Fleisch als Exact match identifiziert. Alle weiteren Vorkommen werden daher durch einen Rough match vom Ergebnis ignoriert. In Option 2 wird jedoch beim ersten Vorkommen von Fleisch die Mengenangabe als falsch evaluiert. Daher schlägt anschließend auch der Rough match fehl und alle weiteren Vorkommen von Fleisch werden als Fehler identifiziert. In der Option 3 kommt es vor, dass Zutaten nun nicht mehr ein Exact match sind, da ihnen das <i>optional</i>-Attribut fehlt. Statt dessen werden sie jedoch durch einen Rough match gefangen. Daher tauchen in der Option 3 insgesammt weniger Entities in der Precision auf.
+                    <p>Dass die Anzahl unser extrahierten Entities mit den Optionen variert, liegt an unsrerem Rough match. In Option 1 wird z.B. im Rezept B-1 das erste Vorkommen von Fleisch als Exact match identifiziert. Im Golden Standard Rezept ist nur das erste Vorkommen ausgezeichnet. Alle weiteren Vorkommen von Fleisch werden dann bei unserer Evaluation durch einen Rough match vom Ergebnis ignoriert. In Option 2 wird jedoch beim ersten Vorkommen von Fleisch die Mengenangabe als falsch evaluiert. Daher schlägt anschließend auch der Rough match fehl und alle weiteren Vorkommen von Fleisch werden als Fehler identifiziert. In der Option 3 kommt es vor, dass Zutaten nun nicht mehr ein Exact match sind, da ihnen das <i>optional</i>-Attribut fehlt. Statt dessen werden sie jedoch durch einen Rough match gefangen. Daher tauchen in der Option 3 insgesammt weniger Entities in der Precision auf. Der Rough match muss daher vielleicht für optionale und alternative Zutaten überdacht werden.
                     </p>
                     
-                    <p>Insgesamt werten wir den dictionary- and rule-based Prototypen als viel versprechend, auch wenn in zukünftigen Arbeiten mehr als die einfachen Beispiel-Regeln entwickeln werden müssen.
+                    <p>Insgesamt ist die Evaluation des Dictionary- and rule-based Prototypens viel versprechend. Zukünftige Arbeiten sollten erforschen, in wie weit die Unterscheidung der Entities durch weitere Regeln verbessert werden kann.
                     </p>
                     
                 </div>
