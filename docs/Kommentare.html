@@ -26,6 +26,8 @@
                 <div class="col-md-2">
                     <div class="list-group panel myLeftNavBar">
                         <a href="#PraktischerNutzen" class="list-group-item">Praktischer Nutzen der Arbeit</a>
+                        <a href="#Quali" class="list-group-item">Schwierigkeiten für die kulinarische Analyse mit cueML und Frau Davidis' Kochbuch</a>
+                        <a href="#WissenschaftlichesArbeiten" class="list-group-item">Wissenschaftliches Arbeiten im 21. Jahrhundert</a>
                         <a href="#WissenIstMacht" class="list-group-item">Wissen ist Macht</a>
                     </div>
                 </div>
@@ -34,6 +36,7 @@
                     bla bla
                     
                     <h2 id="PraktischerNutzen" class="myAnchorWithFixedheader">Praktischer Nutzen der Arbeit</h2>
+                    
                     <p>Ich selber koche gerne. Beim Beschäftigen mit Auszeichnungssprachen wie auch Information Extraction habe ich darüber hinaus viel gelernt. Beides finde ich klasse, ist jedoch keine echte Rechtfertigung für ein Master-Arbeits-Thema. Folgend werden daher ein Paar Beispiele vorgestellt, die durch (mit <a href="cueML.html">cueML</a>) ausgezeichnete Rezepte ermöglicht werden.
                     </p>
 
@@ -45,9 +48,83 @@
                     
                     
                     
+                    <h2 id="Quali" class="myAnchorWithFixedheader">Schwierigkeiten für die kulinarische Analyse mit cueML und Frau Davidis' Kochbuch</h2>
+                    
+                    <p>Das Ziel dieser Arbeit ist es, eine kulinarische Analyse von Frau Davidis' Kochbuch vorzubereiten. Folgend gehen wir auf Aspekte ein, welche noch nicht behandelt sind. Dies beinhaltet zu einem Ungenauigkeiten im Kochbuch und zum anderen noch offene Punkte in cueML.
+                    </p>
+                    
+                    <p>Nährwertangaben machen nur Sinn, wenn sie auf ein <b>Vergleichbares Maß</b> wie <i>pro Person</i> umgerechnet werden können. Ein Nudelsalat für 12 Personen wird insgesamt  mehr Kalorien haben, als ein fettiges 200g Streak. Bei Frau Davidis' Rezepten fehlt jedoch oft jegliche Angaben zu der angestrebte Portionen-Menge. Dementpsrechend muss diese geraten werden, was die Nährwertanalyse ungenau macht.
+                    </p>
+                    
+                    <p>Gleiches gilt für die einzelnen Mengenangaben der Zutaten. Zu einem müssen vage Mengenangabe wie <i>ein Stich Butter</i> interpretiert werden. Meine Oma versteht z.B. sicherlich mehr als die fünffache Menge Butter darunter, wie meine Freundin. Dies führt zu weitere Ungenauigkeiten bei der Nährwertanalyse. Zum anderen müssen historische Mengeneinheiten wie <i>ein Maß</i> oder <i>für 8 Pfennig Weißbrot</i> in heute übliche Einheiten umgerechnet werden, damit sie vergleichbar werden. Dafür ist historische Recherche nötig. Auch für manche Zutaten wie <i>ganzes Gewürz</i> sind weitere Recherchen nötig, was damit gemeint ist.
+                    </p>
+                    
+                    <p>Weitere Schwierigkeiten bereitet die <b>schlechte Struktur von Frau Davidis' Kochbuch</b>. Manche Informationen sind in anderen Rezepten versteckt. Im Rezept <i>Rindfleischsuppe mit Perlgerste und Reis</i> steht z.B. <i>"Anmerk. Will man Reis oder Sago zur Suppe nehmen, so gibt man dieses später hinein. Man rechnet davon auf jede Person bei allen Fleischsuppen einen gestrichenen Eßlöffel voll"</i> <span cite="DavidisKochbuch" supplement=", S. 29" class="beforePunctuation"></span>. Zu allen Fleischsuppen gehört also als optionale Zutat pro Person ein Eßlöffel Reis oder Sago, was man nur wissen kann, wenn man dieses Rezept gelesen hat.
+                    </p>
+                    
+                    <p>Überhaupt das Vorkommen von optionalen Zutaten erschwert die kulinarische Analyse. Je nachdem, ob die Zutat verwendet wird, hat ein Rezept eine andere Geschmacksrichtung und natürlich auch andere Nährwertangaben. Mathematisch den Mittelwert der Nährwertangaben einer optionalen Zutat zu verwenden, macht kulinarisch keinen Sinn. Gleiches gilt für alternative Zutaten. Das Rezept für <i>Barsch auf deutsche Art</i> <span cite="DavidisKochbuch" supplement=", S. 62"></span> gibt entweder als Soße geschmolzene Butter mit Senf, oder eine Eier-Sauce hinzu. Je nachdem welche Sauce verwendet wird, hat das Rezept einen anderen Flair. Streng genommen ist jede alternative Zutat, wie auch jede optionale Zutat ein eigenes Rezept. Ist in einem Rezept eine Zutat optional und drei alternativ zu einander, enthält das Rezept eigentlich sechs Rezepte. Zwei je nachdem, ob die optionale Zutat verwendet wird und jeweils 3 dazu, je nachdem welche der alternativen Zutaten verwendet wird. Eine kulinarische Analyse muss daher aus den Rezepten die <i>echte</i> Anzahl der Rezepte extrahieren.
+                    </p>
+                    
+                    <p>Die Anbindung von cueML an den <b>Bundeslebensmittelschlüssel</b> (BLS) erfüllt die Anforderung der frei verfügbare Ressource nicht. Ich sehe ihn allgemein aus folgenden Gründen kritisch:
+                    </p>
+                    <ul>
+                        <li>Er ist nicht öffentlich zugreifbar (wir dürfen ihn unter einer Forschungslizenz verwenden, jedoch in keiner Weise veröffentlichen). Damit sind durch ihn berechnete Nährwertangaben nicht nachvollziehbar. Somit geht die Transparenz verloren, welche ein wichtiger Bestandteil des semantischen Webs ist <span cite="SemanticWeb" class="beforePunctuation"></span>.
+                        </li>
+                        <li>Wie die Nährwertangaben einzelner Zutaten berechnet wird, ist im BLS bereits nicht transparent. Nach dem BLS haben z.B. <i>Nichtalkoholische Getränke</i> 47kcal/100g, 198kJ7100g, ... Da frage ich mich, wieso manche Leute aus Diät-Gründen auf Cola verzichten, wenn Wasser doch die gleichen Nährwertangaben hat. Als anderes Beispiel steht in einer <a href="https://www.blsdb.de/assets/uploads/Kundeninformation_BLS_3.02_Stand_16-09-2016.pdf" title="Abgerufen 2017-02-22">Liste über derzeit bekannte Diskrepanzen in BLS - Version 3.02</a>: <i>"Der Fettgehalt von U661100 „Schwein Schulter (Bug) (ma) roh“ hat sich von Version II.3 zu 3.02 fast verdoppelt. Ursache: Bereits im Zuge des Updates für Version 3.0 wurde gegenüber Version II.3 ein aktuellerer Analysenwert übernommen. WICHTIG: Dabei handelt es sich nicht um einen Fehler."</i> Daraus ergibt sich für mich keinerlei Transparenz, wie der BLS die Daten berechnet. Noch wirkt das auf mich sehr vertrauenserweckend, wenn eine Angabe, die um fast 50% korrigiert wurde, vorher nicht als falsch angesehen wird.
+                        </li>
+                        <li>Ein Mapping Zwischen einer Zutat und dem BLS ist gar nicht so einfach, wie man denken mag. Zu <i>Hauskaninchen</i> hat der BLS z.B. 17 Einträge (Hauskaninchen gegart, Hauskaninchen roh, Hauskaninchen gekocht, ...). Dies ist ein allgemeines Problem, dass es nicht die perfekte Muster-Zutat gibt. Streng genommen hat auch jedes individuelles Hauskaninchen (roh, gekocht, ...) individuelle Nährtwertangaben.
+                        </li>
+                        <li>Die Struktur des BLS-Schlüssels lässt eine Taxonomy erahnen. Allerdings ist diese nicht konsequent eingehalten und auch nicht dokumentiert.
+                        </li>
+                    </ul>
+                    
+                    <p>Da wir cueML entwickelt haben, sind wir noch die einzigen, die dieses Vokabular verwenden. Idealerweise würden nach einer Veröffentlichung <b>sämtliche Kochseiten cueML adoptieren</b>. Das würde die in <a href="#PraktischerNutzen">Praktischer Nutzen der Arbeit</a> erwähnten Anwendungen ermöglichen.
+                    </p>
+                    
+                    <p>Diese Arbeit hat sich für den Prototypen zur automatischen Auszeichnung erst einmal nur mit den ersten 50 Rezepten beschäftigt. Das Wörterbuch aller Zutaten konnte aus den manuell ausgezeichneten Rezepten extrahiert werden. Um neue Rezepte auszuzeichnen wird ein <b>allgemeines Wörterbuch von Zutaten</b> benötigt. Wie zuvor erwähnt, ist der BLS dafür nicht ideal. Als Alternative haben wir auch <a href="http://www.sfs.uni-tuebingen.de/GermaNet/" titel="Abgerufen 2017-02-22">GermaNet</a> in betracht gezogen. In diesem Thesaurus gibt es <i>Nahrung</i> als Unterkategorie von Nomen. Allerdings ist GermaNet auch nicht frei verfügbar. Des Weiteren sind in der Kategorie keine Nährwertangaben enthalten. Einträge wie <i>Fressen</i>, <i>Mahlerzeugnis</i>, <i>Gang</i>, <i>Biokleidung</i>, <i>Dübel</i>, <i>Haschzigarette</i>, usw. lassen mich auch an der Qualität der Unterkategoie zweifeln. Ich habe den allgemeinen Verdacht, dass frei zugängliche Datenquellen nicht nur nachvollziehbar sind, sondern durch die Transparenz und der Teilung mit vielen interessierten Leuten auch qualitativ besser sind.
+                    </p>  
+
+                    
+                    <h2 id="Entwicklung" class="myAnchorWithFixedheader">Der Entwicklungsprozess</h2>
+                    
+                    <p>Zunächst möchte ich erwähnen, dass ich von meiner Bachelor-Arbeit sehr profitiert habe. Dort wurden über Jahre hinweg mehrere Prototypen entwickelt und 
+                    </p>
+                    
+                    
+                    
+                    
+                    <h2 id="WissenschaftlichesArbeiten" class="myAnchorWithFixedheader">Wissenschaftliches Arbeiten im 21. Jahrhundert</h2>
+                    
+                    <p>Die Überschrift dieses Kapitels ist bewusst provokativ gewählt, in der Hoffnung, dass das Kapitel von vielen gelesen und diskutiert wird.
+                    </p>
+                    
+                    <p>Als ich 2004 meine Bachelor-Arbeit in <i>Word</i> geschrieben habe, wurde ich von allen gefragt, ob ich noch bei klarem Verstand bin - eine wissenschaftliche Arbeit ist doch selbstverständlich in <i>LaTeX</i> zu schreiben. Dem widerspreche ich vehement. "Vor meiner Zeit" mag LaTeX das mit Abstand beste und stabilste Textsatzsystems gewesen sein, so dass größere Arbeiten nur mit diesem sinnvoll zu schreiben waren. Inzwischen wurde Word hingegen seit mehr als 34 Jahre weiter entwickelt und Funktionen wie Bibliographien, Inhaltsverzeichnisse, Formeln, usw. funktionieren in Word problemlos. Ich sehe meine Bachelor-Arbeit als Beweis, dass man eine Abschluss-Arbeit sehr gut in Word schreiben kann.
+                    </p>
+                    
+                    <p>Ich gehe sogar noch einen Schritt weiter und behaupte, dass LaTeX ein Musterbeispiel für historisch gewachsene Software ist. Unterstreichen möchte ich dies durch drei frustrierende Beispiele, die ich erfahren habe, als ich meine Präsentationen mit <i>Beamer</i> erstellt habe bzw. angefangen habe, meine Master-Arbeit in Latex zu schreiben (kein Word, da ich als reiner Linux-Nutzer keins mehr habe).
+                    </p>
+                    <ul>
+                        <li>Das Laden des Paket <i>cleveref</i> vor dem Paket <i>hyperref</i> hat Formatierungen im  ganze Dokument scheinbar zufallsmäßig zerschossen.</li>
+                        <li>Schon einmal versucht in einem <i>lstlisting</i> Umlaute einzubauen? Das dafür bereits getrickst werden muss, finde ich im 21. jhr traurig. Schon einmal versucht bei Umlauten in lstlistings einen ggf. automatischen Zeilenumbrauch zu vermeiden? Da die Umlaute nicht als Standard-Buchstaben in lstlistings angesehen werden, wird jeder Umlaut, wie alle nicht Standard-Buchstaben in lstlistings, als möglicher Zeilenumbruch gesehen. Ein Zeilenumbruch bei <i>hä<br/>sslisch</i> ist jedoch einfach nur hässlich.</li>
+                        <li>Ich habe einmal versucht, in einer Präsentation ein Bild einen halben Zentimeter nach links zu verschieben. Der Befehl <i>\hspace{-0.5cm}</i> vor dem Bild, hat das Bild allerdings 1cm nach oben verschoben?! Natürlich konnte ich den gewünschten Effekt nach ein bisschen rumtricksen erreichen, aber so zu arbeiten macht mir zumindesten keinen Spaß.</li>
+                    </ul>
+                    
+                    <p>Wie anhand dieser Webseite zu sehen ist, will ich keines Wegs Word als Mittel der Wahl verkaufen. Wir denken, dass Papier im Allgemeinen für Abschluss-Arbeiten nicht mehr das ideale Medium ist. Gebunde exemplare tendieren dazu <i>im Regal einzustauben und nie mehr gefunden zu werden</i>. Wie diese Arbeit zeigt, kann eine Abschluss-Arbeit auch als Webseite dargeboten werden. Abbildungen profitieren vom dem potenziell größeren Bildschirm als das feste A-4 Format. Auch können Webseiten zu Hause am PC, auf der Couch am Tablet oder unterwegs am Handy gelesen werden. Links auf einer Webseite zu folgen ist angenehmer, als sie über ein gedrucktes Literaturverzeichnis manuell aufzufinden. Über die URL ist die Arbeit leicht verteilbar und durch das Word Wide Web frei zugänglich und auffindbar.
+                    </p>
+                    
+                    <p>Ein weiterer Vorteil bietet die Integration eines Blogs in die Webseite. Seine Gedanken niederzuschreiben ist immer sinnvoll. Dies hilft die Gedanken zu ordnen und früh zu merken, wo sie noch nicht stimmen. Der Blog bietet auch eine gute Plattform zum Austausch von Informationen. Der betreuende Professor ist nach dem Lesen stets im Bilde, was der Studenten erarbeitet hat. Unter die Blog-Einträge kann er dann auch ggf. sofort Feedback geben. So ist ein aneinander vorbeireden quasi unmöglich. Über den Blog können auch andere Wissenschafter Feedback geben und ihre Erkenntnise Teile. 
+                    </p>
+                    
+                    
+                    <p>Meiner Meinung nach hätten mich damals also alle Fragen sollen <b>wieso schreibst du keine Webseite für deine Abschluss-Arbeit?</b>
+                    </p>
+
+                    
+                    
+                    
                     <h2 id="WissenIstMacht" class="myAnchorWithFixedheader">Wissen ist Macht</h2>
                     
-                    <p>Es ist mir ein persönliches Anliegen darauf hinzuweisen, dass mit Wissen Macht ausgeübt werden kann. Eine tief gehende Anaylse dieses Themas möchte ich Geschichts-, Politik- und Gesellschaftswissenschaftlern überlassen. Dieses kleine Kapitel "erfreut sich" bereits, wenn über es kontrovers diskutiert. Zum Schluss es auch Bezug auf die eigene Arbeit.
+                    <p>Es ist mir ein persönliches Anliegen darauf hinzuweisen, dass mit Wissen Macht ausgeübt werden kann. Eine tief gehende Anaylse dieses Themas möchte ich Geschichts-, Politik- und Gesellschaftswissenschaftlern überlassen. Dieses kleine Kapitel "erfreut sich" bereits, wenn über es kontrovers diskutiert. Zum Schluss wird auch Bezug auf diese Arbeit genommen.
                     </p>
                     
                     <p>Bereits im 7. jhr. wird dem Schwiegersohn des Propheten Mohammeds das Zitat <i>"Knowledge is power..."</i> zugeordnet. Aber <i>"With great power comes great responsibility"</i>. Dies möchte ich folgend an ein paar Beispielen verdeutlichen.
@@ -76,7 +153,7 @@
                     <p>Das für mich persönlich krasseste Beispiel, wie Wissen instrumentalisiert und missbraucht werden kann, ist die Nazi-Zeit unter Adolf Hitler. Ein wesentlicher Bestandteil der Unrechts-Diktatur war sicherlich falsch Anschuldigungen gegenüber Juden, um ein gemeinsames Feindbild zu haben. Ein anderer die Hitlerjugend welche früh der Jugend eine Ideologie und Weltanschaung eingetrichtert hat. Beides sind Formen von Wissen. 
                     </p>
                     
-                    <p>Ein sehr aktuelles Beispiel ist die Diskussion, in wie weit <i>Fake News</i> öffentliche Meinungen und Wahlen beeinflussen (<a href="https://www.nytimes.com/2016/11/18/technology/fake-news-on-facebook-in-foreign-elections-thats-not-new.html?_r=1" title="Abgerufen 2017-02-19">s. z.B. hier</a>). Ich persönlich denke, dass die Methodik der bewusst falschen Informationen zum eigenen Vorteil kein neues Phänomen ist. Ich behaupte, dass es bereits seit dem bestehen von Zeitungen Zeitungsenten gegeben hat, um die Verkaufszahlen in die Höhe zu treiben. In den beiden Weltkriegen hat man kritische wie auch ausländische Presse oft als <i>Lügenpresse</i> angeprangert (ein Begriff der traurigerweise aktuell wieder im Umaluf ist). Die Amerikaner sind 2003 in den Irak einmaschiert mit der Begründung, dass der damalige Diktator Saddam Hussein Massen&shy;vernichtungs&shy;waffen besitzt, was sich im Nachhinein als eine Lüge hinausgestellt hat. Erst kürzlich wurden die im Baltikan stationierten Bundeswehr&shy;truppen fälschlicherweise einer Vergewaltikung beschuldigt, um die Toleranz ihnen gegenüber zu vermindern (<a href="http://www.spiegel.de/politik/ausland/bundeswehr-fake-news-attacke-gegen-deutsche-soldaten-in-litauen-a-1134925.html">Spiegel Artikel von 2017-02-16</a>). All dies verdeutlich die Macht von Informationen / Nachrichten / (falschem) Wissen. Was meiner Meinung nach neu ist, ist dass durch das Internet quasi jeder, annonym und ohne Zeitverzögerung ein großes Publikum erreichen (und auch belügen) kann.
+                    <p>Ein sehr aktuelles Beispiel ist die Diskussion, in wie weit <i>Fake News</i> öffentliche Meinungen und Wahlen beeinflussen (<a href="https://www.nytimes.com/2016/11/18/technology/fake-news-on-facebook-in-foreign-elections-thats-not-new.html?_r=1" title="Abgerufen 2017-02-19">s. z.B. hier</a>). Ich persönlich denke, dass die Methodik der bewusst falschen Informationen zum eigenen Vorteil kein neues Phänomen ist. Ich behaupte, dass es bereits seit dem bestehen von Zeitungen Zeitungsenten gegeben hat, um die Verkaufszahlen in die Höhe zu treiben. In den beiden Weltkriegen hat man kritische wie auch ausländische Presse oft als <i>Lügenpresse</i> angeprangert (ein Begriff der traurigerweise aktuell wieder im Umaluf ist). Die Amerikaner sind 2003 in den Irak einmaschiert mit der Begründung, dass der damalige Diktator Saddam Hussein Massen&shy;vernichtungs&shy;waffen besitzt, was sich im Nachhinein als eine Lüge hinausgestellt hat. Erst kürzlich wurden die im Baltikan stationierten Bundeswehr&shy;truppen fälschlicherweise einer Vergewaltikung beschuldigt, um die Toleranz ihnen gegenüber zu vermindern (<a href="http://www.spiegel.de/politik/ausland/bundeswehr-fake-news-attacke-gegen-deutsche-soldaten-in-litauen-a-1134925.html" title="Abgerufen 2017-02-16">s. z.B. hier</a>). All dies verdeutlich die Macht von Informationen / Nachrichten / (falschem) Wissen. Was meiner Meinung nach neu ist, ist dass durch das Internet quasi jeder, annonym und ohne Zeitverzögerung ein großes Publikum erreichen (und auch belügen) kann.
                     </p>
                     
                     <p>Ein weiteres Beispiel ist die blose Existenz von Geheimdiensten, deren einziger Zweck es ist, Informationen zu beschaffen. So  war z.B. in den Medien, dass der russische Geheimdienst Material gesammelt hat, um den aktuellen amerikanischen Präsidenten Donald Trump zu erpressen (<a href="https://www.nytimes.com/2017/01/10/us/politics/donald-trump-russia-intelligence.html" titel="Abgerufen 2017-02-19">s. z.B. hier</a>). <i>"Knowledge is power and it can command obedience</i>" lässt grüßen. Seit 2002 bis vielleicht sogar heute, wird auch von dem amerikanischen Geheimdiensten das Handy des deutschen Bundeskanzlers abgehört (<a href="http://www.spiegel.de/politik/deutschland/handy-der-kanzlerin-die-wichtigsten-fakten-der-abhoeraffaere-a-930411.html">s. z.B. hier</a>). Nur ein Schelm (wie ich) würde behaupten, dass das etwas mit <i>mangeldem command obedience</i> von dem damaligen Bundeskanzlers Gerhard Schröder, den Amerikanern in den Irak-Krieg zu folgen, zu tun haben könnte. 

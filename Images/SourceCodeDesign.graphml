@@ -80,7 +80,7 @@ instructionSentences: str[1..*]</y:AttributeLabel>
           <y:Geometry height="82.14999999999998" width="188.25" x="-1018.6609830971496" y="82.56428343435994"/>
           <y:Fill color="#CCCCCC" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="188.25000000000003" y="86.14999999999998">
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="188.25" y="86.14999999999998">
             <y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -398,7 +398,7 @@ properties: dict</y:AttributeLabel>
             <y:AttributeLabel>ingE
 unitE</y:AttributeLabel>
             <y:MethodLabel>extractRecipe(rcp:PlainTextRecipe): str
-extractSentence(sentence:string): str
+extractSentence(sentence:str): str
 
 </y:MethodLabel>
           </y:UML>
@@ -429,7 +429,7 @@ extractSentence(sentence:string): str
           <y:Geometry height="168.44783748361732" width="323.93420744593607" x="-1360.203536471984" y="-556.6332291257099"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="171.625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="317.634765625" x="3.149720910467977" y="-1.5885812581913683">def extractRecipe(rcp):
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="171.625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="317.634765625" x="3.149720910467977" y="-1.5885812581913115">def extractRecipe(rcp):
     xmlString = "&lt;recipe&gt;"
     for sentence in rcp.instructionSentences:
         xmlString += extractSentence(sentence)
@@ -466,7 +466,7 @@ def extractSentence(sentence):
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>__ingDict__: dict</y:AttributeLabel>
-            <y:MethodLabel>getIngredientCandidates(lemma:String)
+            <y:MethodLabel>getIngredientCandidates(lemma:str)
     : IngredientCandi[0..*] / None</y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
@@ -488,7 +488,7 @@ def extractSentence(sentence):
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>__unitSet__: set</y:AttributeLabel>
-            <y:MethodLabel>getUnit(lemma:String): String / None</y:MethodLabel>
+            <y:MethodLabel>getUnit(lemma:str): str / None</y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
       </data>
@@ -516,7 +516,7 @@ def extractSentence(sentence):
           <y:Geometry height="30.0" width="242.6094285714288" x="-694.223290240007" y="-238.75174822520688"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle hasColor="false" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="234.115234375" x="4.247097098214397" y="6.015625">isQuantity(lemma:String): True / False<y:LabelModel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="214.193359375" x="14.20803459821434" y="6.015625">isQuantity(lemma:str): True / False<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -564,7 +564,6 @@ splitIntoSentences(text:str): str[0..*]<y:LabelModel>
     </node>
     <node id="n28">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:UMLClassNode>
           <y:Geometry height="28.0" width="100.0" x="-486.4891479371461" y="-396.6367126512717"/>
@@ -595,7 +594,6 @@ splitIntoSentences(text:str): str[0..*]<y:LabelModel>
       </data>
     </edge>
     <edge id="e1" source="n14" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -606,7 +604,6 @@ splitIntoSentences(text:str): str[0..*]<y:LabelModel>
       </data>
     </edge>
     <edge id="e2" source="n14" target="n10">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="95.69288006962665" sy="15.979399864696632" tx="56.11273651513068" ty="-17.247751127267975"/>
@@ -617,7 +614,6 @@ splitIntoSentences(text:str): str[0..*]<y:LabelModel>
       </data>
     </edge>
     <edge id="e3" source="n14" target="n22">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="56.51931651575228" sy="-30.848846885610783" tx="0.0" ty="0.0">
@@ -632,7 +628,6 @@ splitIntoSentences(text:str): str[0..*]<y:LabelModel>
       </data>
     </edge>
     <edge id="e4" source="n14" target="n23">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="55.98093673017706" sy="-2.2467093679066465" tx="0.0" ty="0.0">
@@ -646,7 +641,6 @@ splitIntoSentences(text:str): str[0..*]<y:LabelModel>
       </data>
     </edge>
     <edge id="e5" source="n21" target="n19">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="1.38078903669998" ty="23.79223553585598"/>
@@ -657,7 +651,6 @@ splitIntoSentences(text:str): str[0..*]<y:LabelModel>
       </data>
     </edge>
     <edge id="e6" source="n24" target="n23">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-3.259382699867956" ty="-0.7244135358022561"/>
@@ -668,7 +661,6 @@ splitIntoSentences(text:str): str[0..*]<y:LabelModel>
       </data>
     </edge>
     <edge id="e7" source="n24" target="n22">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -682,7 +674,6 @@ splitIntoSentences(text:str): str[0..*]<y:LabelModel>
       </data>
     </edge>
     <edge id="e8" source="n24" target="n25">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="29.587838264429138" ty="-1.2069693452057777">
@@ -696,7 +687,6 @@ splitIntoSentences(text:str): str[0..*]<y:LabelModel>
       </data>
     </edge>
     <edge id="e9" source="n19" target="n24">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="10.049082568807307" sy="4.816406154849233" tx="0.0" ty="0.0"/>
@@ -707,7 +697,6 @@ splitIntoSentences(text:str): str[0..*]<y:LabelModel>
       </data>
     </edge>
     <edge id="e10" source="n24" target="n26">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -721,7 +710,6 @@ splitIntoSentences(text:str): str[0..*]<y:LabelModel>
       </data>
     </edge>
     <edge id="e11" source="n26" target="n28">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
