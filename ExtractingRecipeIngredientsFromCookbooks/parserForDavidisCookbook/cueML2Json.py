@@ -4,14 +4,15 @@ from xml.dom.minidom import parse
 import json
 from parserForDavidisCookbook.xmlHelper import getElems
 
-def getJsonRcps(pathToCueMLFile):
+def getJsonRcps(pathToCueMLFile, rcpIds):
     dictRcps = dict()
     
-    xmlRcps = (XmlParser(parse(pathToCueMLFile))).getXmlRecipes(["B-16"])
+    xmlRcps = (XmlParser(parse(pathToCueMLFile))).getXmlRecipes(rcpIds)
     for xmlRcp in xmlRcps:
         dictRcp = xmlRcp2dictRcp(xmlRcp)
         t = dictRcp["type"]
-        if t in dictRcps: dictRcps.append(dictRcp)
+        print(dictRcp)
+        if t in dictRcps: dictRcps[t].append(dictRcp)
         else: dictRcps[t] = [dictRcp]
 
     return json.dumps(dictRcps)
@@ -21,11 +22,11 @@ def xmlRcp2dictRcp(xmlRcp):
     dictRcp = dict()
     
     dictRcp["rcp-id"] = plainTextRcp.rcpId
-    dictRcp["type"] = plainTextRcp.rcpType
+    dictRcp["type"] = plainTextRcp.rcpType.replace("_", " ")
     dictRcp["name"] = plainTextRcp.name
     dictRcp["instructions"] = plainTextRcp.instructionSentences
     dictRcp["ingredients"] = mergeIngs(getIngsFromNode(xmlRcp))
-    dictRcp["cueAlt"] = [altElems.attributes["target"].value.split() for altElems in getElems(xmlRcp, "cue:alt")]
+    dictRcp["cueAlts"] = [altElems.attributes["target"].value.split() for altElems in getElems(xmlRcp, "cue:alt")]
         
     return dictRcp
 
@@ -53,11 +54,16 @@ def mergeIngs(ings):
                     
                     
             
-
+# Wurstmachen,_Einpöckeln_und_Räuchern_des_Fleisches
 if __name__ == '__main__':
     pathToCueMLFile = "/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted.xml"
-     
-    print(getJsonRcps(pathToCueMLFile))
+    pathToErg = "/home/torsten/Desktop/MyMasterThesis/docs/Rezepte/Rezepte.json"
+    with open(pathToErg, "w") as f:
+        f.write("rcps={}".format(getJsonRcps(pathToCueMLFile, []))) 
+
+    #print(json.dumps({"a b c":"hi"}))
+        
+   # print(getJsonRcps(pathToCueMLFile, [B-16]))
     
     
     
