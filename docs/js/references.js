@@ -168,6 +168,18 @@ references = [
         "title":"Daz ist ein guot geriht und versaltz ez niht",
          "in":"Texte für Technik - Ausgabe Herbst 2008",
          "pages":"4-5"
+    },
+    {
+        "id":"Retrospective",
+        "authors":"Kerth",
+        "year":"2001",
+        "title":"Project Retrospectives: A Handbook for Team Reviews"
+    },
+    {
+        "id":"thesaurusAlignmentTask",
+        "authors":"van Hage, Sini, Finch, Kolb, Schreiber",
+        "year":"2008",
+        "title":"The OAEI food task: an analysis of a thesaurus alignment task"
     }
 ].sort(function(a,b) {
    return a.authors > b.authors;

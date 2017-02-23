@@ -61,7 +61,6 @@ figure img {
     }
 }
 
-
 .myLeftNavBar div.in { /* div.in -> indent of expanded items */
     padding-left: 1em;
 }
@@ -90,6 +89,12 @@ figure img {
     margin-top: -5em; 
     height: 5em; 
     visibility: hidden;
+}
+
+
+.rcpsLeftNavBar {
+    position: relative;
+    width: auto;
 }
 /* -------------- left navigation bar - end -------------- */
 

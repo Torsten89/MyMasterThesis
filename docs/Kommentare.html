@@ -29,11 +29,12 @@
                         <a href="#Quali" class="list-group-item">Schwierigkeiten für die kulinarische Analyse mit cueML und Frau Davidis' Kochbuch</a>
                         <a href="#WissenschaftlichesArbeiten" class="list-group-item">Wissenschaftliches Arbeiten im 21. Jahrhundert</a>
                         <a href="#WissenIstMacht" class="list-group-item">Wissen ist Macht</a>
+                        <a href="#Retrospective" class="list-group-item">Final Retrospective</a>
                     </div>
                 </div>
                 
                 <div class="col-md-10">
-                    bla bla
+                    Hier werden ergänzend zur bisherigen Ausarbeitung Gedankengänge präsentiert, die wir während dieser Arbeit hatten.
                     
                     <h2 id="PraktischerNutzen" class="myAnchorWithFixedheader">Praktischer Nutzen der Arbeit</h2>
                     
@@ -82,14 +83,7 @@
                     </p>
                     
                     <p>Diese Arbeit hat sich für den Prototypen zur automatischen Auszeichnung erst einmal nur mit den ersten 50 Rezepten beschäftigt. Das Wörterbuch aller Zutaten konnte aus den manuell ausgezeichneten Rezepten extrahiert werden. Um neue Rezepte auszuzeichnen wird ein <b>allgemeines Wörterbuch von Zutaten</b> benötigt. Wie zuvor erwähnt, ist der BLS dafür nicht ideal. Als Alternative haben wir auch <a href="http://www.sfs.uni-tuebingen.de/GermaNet/" titel="Abgerufen 2017-02-22">GermaNet</a> in betracht gezogen. In diesem Thesaurus gibt es <i>Nahrung</i> als Unterkategorie von Nomen. Allerdings ist GermaNet auch nicht frei verfügbar. Des Weiteren sind in der Kategorie keine Nährwertangaben enthalten. Einträge wie <i>Fressen</i>, <i>Mahlerzeugnis</i>, <i>Gang</i>, <i>Biokleidung</i>, <i>Dübel</i>, <i>Haschzigarette</i>, usw. lassen mich auch an der Qualität der Unterkategoie zweifeln. Ich habe den allgemeinen Verdacht, dass frei zugängliche Datenquellen nicht nur nachvollziehbar sind, sondern durch die Transparenz und der Teilung mit vielen interessierten Leuten auch qualitativ besser sind.
-                    </p>  
-
-                    
-                    <h2 id="Entwicklung" class="myAnchorWithFixedheader">Der Entwicklungsprozess</h2>
-                    
-                    <p>Zunächst möchte ich erwähnen, dass ich von meiner Bachelor-Arbeit sehr profitiert habe. Dort wurden über Jahre hinweg mehrere Prototypen entwickelt und 
-                    </p>
-                    
+                    </p>                      
                     
                     
                     
@@ -161,6 +155,24 @@
                     
                     <p>In der Koch-Domäne die Macht des Wissens zu diskutieren, mag vielleicht übertrieben sein. Ich bin jedoch der Meinung, dass es nie falsch ist, das Thema zu diskutieren. Daher möchte ich diese kleine Abschweifung mit einem kurzen Gedankenspiel beenden. Dieses soll zeigen, wie selbst Wissen, welches durch unser cueML-Vokabular zugreifbar geworden ist, Macht ausüben könnte. Stellen Sie sich vor, es sind Wahlen und Sie wollen natürlich zukünftig einen gesunden BundeskanzlerIn haben. Nun lesen Sie in der Zeitung, dass jemand den Internet-Verkehr ihres Kandidaten mitgeschnitten hat. Seit 2 Monaten öffnet er verstärkt Rezepte, die folgende X Nährstoffe meiden. Wie Ihnen jeder Arzt bestätigen kann, macht es Sinn diese Nährstoffe zu meiden, wenn man Bauchspeicheldrüsenkrebs hat. Der Artikel kommt also zu dem Ergebniss, dass der Kandidat schwer krank ist. Der Kandidat selber weigert sich jedoch aus Prinzip, seine Kranken-Akte wegen einer so lächerlichen Anschuldigung öffentlich zu machen, da damit viele private Informationen verbunden sind. Denken Sie, dass dieses Szenario ihre Wahlentscheidung beeinflussen würde?
                     </p>
+                    
+                    
+                    
+                    
+                    <h2 id="Retrospective" class="myAnchorWithFixedheader">Final Retrospective</h2>
+                    
+                    <p>Abschließend möchte ich Revue passieren lassen, was ich in dieser Arbeit gelernt habe. Ich denke bei jedem Software Projekt sollte man etwas lernen. Dies gilt insbesondere für eine Abschluss-Arbeit. Dieses Revue orientiert sich dabei an folgenden vier Fragen aus <span cite="Retrospective" class="beforePunctuation"></span>: <i>1. What did we do well, that if we don’t discuss we might forget? 2. What did we learn? 3. What should we do differently next time? 4. What still puzzles us?</i>
+                    </p>
+                    <ol>
+                        <li>Zuerst <i>quick and dirty</i> Prototypen als Machbarkeitsanalyse zu erstellen war eine gute Idee. So wurden früh Probleme erkannt und der CRF-based Ansatz nicht weiter verfolgt. Den Dictionary- and rule-based Prototypen vor der Weiterentwicklung neu zu designen war ebenfalls sehr wichtig. Die anschließende Integration der rule-based Weiterverarbeitung, sowie das zukünftige Hinzufügen von weiteren Regeln, ist auf Grund des guten Desings trivial. Die Unit-Tests zeitgleich mit dem Source Code zuschreibe hat auch gut funktioniert. Dies war noch eine wichtige Lektion aus meiner <a href="Refaktorisierung%20eines%20Smartphone-basierten%20Content%20Management%20Systems.pdf" title="Download meiner Bachelor-Arbeit">Bachelor-Arbeit</a>.
+                        </li>
+                        <li>Natürlich habe ich viele Kleinigkeiten davon gelernt, interessante Artikel zu lesen und ein größeres Projekt vom Anfang bis zum Ende durchzuführen. Mein einschlagendes <i>Aha-Erlebnis</i> hatte ich jedoch sicher bezüglich Domänen-spezifischen Vokabulare. Ich habe stets gedacht, dass sich jemand ein Vokabular trivial aus den Fingern saugt und es dann von vielen Leuten verwendet wird. Aber Vokabulare aufzubauen ist zeitaufwendig, benötigt Fachwissen und ist daher auch teuer. Auch ist es nicht einfach ein passendes Vokabular zu finden. Ein universelles Vokabular für alle Zwecke ist illusorisch. Diese (für mich neue Erkentnisse) werden u.A. in <span cite="DictBased1"></span> und <span cite="thesaurusAlignmentTask"></span> bestätigt.
+                        </li>
+                        <li>Im Rahmen meiner SHK-Tätigkeit habe ich viele Rezepte aus Davidis' Buch manuell ausgezeichnet. Dies war gut, da ich dadurch ein Gefühl dafür bekommen habe, wie schwierig das Auszeichnen der Rezepte ist. Allerdings habe ich sehr viele Rezepte ausgezeichnet, bevor ich <i>Stop</i> gesagt habe - <i>Wir müssen unser cueML Vokabular ändern</i>. Dann habe ich wieder sehr viele Rezepte mit dem geänderten Vokabular ausgezeichnet, bevor ich erneut <i>Stop</i> gesagt habe - <i>Das stimmt noch immer nicht.</i> Stattdessen hätte ich mich an das Prinzip aus dem Agilen Manifest <i>Working software is the primary measure of progress</i> halten sollen. Das cueML Vokabular alleine ist keine funktionierende Anwendung. Der Sinn des Vokabulares ist es, Informationen so auszuzeichnen, dass sie von einer Anwendung verwendet werden können. Dementsprechend hätte ich nach einer Änderung im Vokabular den Workflow bis zur Webseite einmal exerzieren sollen; ein paar Rezepte auszeichnen, diese Rezepte in eine Webseite umwandeln und mir dann als Nutzer anschauen, ob ich die Rezepte passend dargestellt finde. Daraufhin kann das Vokabular erneut angepasst werden, usw. So hätte verhindert werden können, dass ein großteil meines Auszeichnens als SHK letztendlich nicht verwendet wird, da es mit einer alten Version von cueML ausgezeichnet ist. Dies verstärkt den Aha-Effekt aus Zweitens.
+                        </li>
+                        <li>Die Formulierung von viertens finde ich zu negativ. In meiner Bachelor-Arbeit habe ich die Test-Abdeckung schlicht weg vermurkst. Daraus habe ich jedoch gelernt und es in dieser Arbeit richtig gemacht. Dementsprechend sehe ich den Punkt als <i>What will I lern the next time</i>. Beim nächsten größeren Projekt versuche ich meine Anfangserwartungen runterzuschrauben. Am Anfang habe ich gedacht, dass ich selbstverständlich alle Informationen aus Davidis' Kochbuch extrahieren kann. Nach und nach musste ich jedoch erkennen, dass das gelinde gesagt übermotiviert war. Unser finaler vorgestellte Prototyp ist davon noch weit entfernt, was ihn in keiner Weise schlecht reden soll.
+                        </li>
+                    </ol>
                     
                     
                 </div>
