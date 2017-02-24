@@ -57,7 +57,7 @@
             }
             
             function loadRecipe(rcpType, i) {
-                var url = window.location.protocol + "//" + window.location.host + window.location.pathname + '?rcpType='+rcpType+'&index='+i;
+                var url = window.location.protocol + "//" + window.location.host + window.location.pathname + '?rcpType='+encodeURI(rcpType)+'&index='+i;
 				window.history.pushState({path:url}, '', url);
                 showRecipe(rcpType, i)
                 $("#"+activeRcp).removeClass("active");
@@ -133,7 +133,7 @@
                     }
                 }
                 
-                return heading+ings+"</ul><br/><br/><b>Optional:</b>"+optIngs+"</ul>";
+                return heading+ings+"</ul><br/><br/>" + ( (optIngs.length>9) ?  "<b>Optional:</b>"+optIngs+"</ul>" : "");
             }
             
             function getAltsOf(cueAlt, cueAlts) {
@@ -167,18 +167,19 @@
             }
             
             //load recipe if passed by url - has to be called after the table of contents was created!
-            var urlQuery = location.search;
+            var urlQuery = decodeURI(location.search);
 			if(urlQuery == "" || urlQuery == "undefined") {
 				$("#content").html('<img src="images/index/Buchcover.JPG" alt="Buchcover von Davidis Kochbuch" style="max-width:100%; max-height:800px; display:block; margin-left:auto; margin-right:auto;"/>');
 			} else {
                 var parameters = urlQuery.substring(1).split("&");
                 var rcpType = parameters[0].split("=")[1];
                 var index = parameters[1].split("=")[1];
-                activeRcp = str2id(""+rcpType+index);
-                $("#"+rcpType+"Expandable").attr("aria-expanded", "true");
-                $("#"+rcpType+"Expandable").removeClass("collapsed");
-                $("#"+rcpType).addClass("in");
-                $("#"+rcpType).attr("aria-expanded", "true");
+                rcpTypeId = str2id(rcpType);
+                activeRcp = rcpTypeId+index;
+                $("#"+rcpTypeId+"Expandable").attr("aria-expanded", "true");
+                $("#"+rcpTypeId+"Expandable").removeClass("collapsed");
+                $("#"+rcpTypeId).addClass("in");
+                $("#"+rcpTypeId).attr("aria-expanded", "true");
                 loadRecipe(rcpType, index);
             }
         </script>

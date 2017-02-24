@@ -24,11 +24,11 @@
             
             <div class="row">
                 <div class="col-md-5">
-					<img src="images/index/Buchcover.JPG" alt="Buchcover von Davidis Kochbuch" style="max-width:100%; max-height:620px;"/><br/>
+					<img id="bookcover" src="images/index/Buchcover.JPG" alt="Buchcover von Davidis Kochbuch" style="max-width:100%; max-height:620px;"/><br/>
                     <small>* Da das original Buchcover nicht erhalten ist,  ist hier das Buchcover von Marie Walters überarbeiteten Ausgabe (1933) zu sehen.</small>
 				</div>
                 
-				<div class="col-md-7">
+				<div class="col-md-7" id="tiles">
                     <div class="row">
                         <div class="col-md-5 tile tile-1"><a href="Problemstellung.html"><b>Problem&shy;stellung</b></a></div>
                         <div class="col-md-5 tile tile-2"><a href="Blog.html">Unser Entwickler-<wbr/><b>Blog</b></a></div>
@@ -45,7 +45,13 @@
 			</div>
         </div>
 		
-        
+        <script>
+            $("#bookcover").css("max-height", $("#tiles").height()+"px");
+            
+            $(window).on('resize', function(){
+                $("#bookcover").css("max-height", $("#tiles").height()+"px");
+            });
+        </script>
 		<script src="js/navbar.js"></script>
 	</body>
 </html> 

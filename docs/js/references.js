@@ -180,6 +180,13 @@ references = [
         "authors":"van Hage, Sini, Finch, Kolb, Schreiber",
         "year":"2008",
         "title":"The OAEI food task: an analysis of a thesaurus alignment task"
+    },
+    {
+        "id":"SemanticWeb2",
+        "authors":"Kashyap, Bussler, Moran",
+        "year":"2008",
+        "title":"The Semantic Web",
+        "publisher":"Springer-Verlag Berlin Heidelberg"
     }
 ].sort(function(a,b) {
    return a.authors > b.authors;
@@ -219,7 +226,7 @@ function getBibliography() {
 }
 
 function ref2Bib(ref) {
-    var result = '<p id="' + ref.id + '" style="text-indent:-4em;padding-left:4em">';
+    var result = '<div id="' + ref.id + '" class="referenceEntry"><p>';
     result += '<b>'+ref.authors+' (' + ref.year +'). </b>';
     result += '"' + ref.title + '". ';
     if(ref.hasOwnProperty("in")) {
@@ -240,7 +247,7 @@ function ref2Bib(ref) {
     if(ref.hasOwnProperty("date")) {
         result += "Abgerufen am " + ref.date + ". ";
     }
-    return result + '</p>';
+    return result + '</p></div>';
 }
 
 function getAuthorRepresentationOfRef(ref) {

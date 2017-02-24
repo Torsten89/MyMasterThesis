@@ -33,7 +33,7 @@
                 
                 
                 <div class="col-md-10">
-                    <p>Ziel dieser Arbeit ist die Erstellung einer digitalen Edition des Buches <i>Praktisches Kochbuch für die gewöhnliche und feinere Küche</i> <span cite="DavidisKochbuch" class="beforePunctuation"></span>, welche für kulinarische Analysen genutzt werden kann. Eine <a href="http://www.deutschestextarchiv.de/book/view/davidis_kochbuch_1849?p=7" title="Link zur Transkription des Deutschen Text Archives">Transkription des Kochbuches</a> wurde bereits vom Deutschen Text Archiv angefertigt. Ein beispielhafter Auszug ist in Abb. 1 zu sehen. Abb. 1a zeigt den Scan eines Rezeptes, Abb. 1b die textuelle Form und Abb. 1c eine, bereits von uns überarbeitete, Version der <a href="http://www.tei-c.org/index.xml" title="TEI: Text Encoding Initiative">TEI</a>-basierte Kodierung der textuellen Form.
+                    <p>Ziel dieser Arbeit ist die Erstellung einer digitalen Edition des Buches <i>Praktisches Kochbuch für die gewöhnliche und feinere Küche</i> <span cite="DavidisKochbuch" class="beforePunctuation"></span>, welche für kulinarische Analysen genutzt werden kann. Eine <a href="http://www.deutschestextarchiv.de/book/view/davidis_kochbuch_1849?p=7" title="Link zur Transkription des Deutschen Text Archives">Transkription des Kochbuches</a> wurde bereits vom Deutschen Text Archiv angefertigt. Ein beispielhafter Auszug ist in Abb. 1 zu sehen. Abb. 1a zeigt den Scan eines Rezeptes, Abb. 1b die textuelle Form und Abb. 1c eine bereits von uns überarbeitete Version der <a href="http://www.tei-c.org/index.xml" title="TEI: Text Encoding Initiative">TEI</a>-basierten Transkription.
                     </p>
 
                     <p>
@@ -67,7 +67,7 @@
 
 
                     <h2 id="Vokabular" class="myAnchorWithFixedheader">Domänen-spezifisches Vokabular</h2>
-                    <p>TEI hat kein spezifisches Vokabular um Rezepte auszuzeichnen. <a href="https://schema.org/Recipe">Schema.org/Recipe</a> ist ein Vokabular, welches das Ziel hat, Treffer von Suchmaschinen anzureichern. <span cite="Schema.org"></span> Es wird davon ausgegangen, dass jedes Rezept eine Zutatenliste hat. In dieser wird jede Zeile mit Microdata angereichert; z.B. <i>&lt;span itemprop="recipeIngredient"&gt;2 EL Zucker&lt;/span&gt;</i>. Für den Computer stellt dieser Tag-Inhalt jedoch nur einen String dar. Für eine kulinarische Analyse müsste die Mengenangabe (2), die Einheit (EL), sowie die Zutat (Zucker) explizit ausgezeichnet werden. Das Auszeichnen von Zutaten im Fließtext, was wir mangels bestehender Zutatenliste machen müssen, muss darüber hinaus einige Sonderfälle beachten, was anhand folgender zwei Beispielsätzen aus dem Kochbuch symbolhaft verdeutlicht wird:
+                    <p>TEI hat kein spezifisches Vokabular um Rezepte auszuzeichnen. <a href="https://schema.org/Recipe">Schema.org/Recipe</a> ist ein Vokabular, welches das Ziel hat, Treffer von Suchmaschinen anzureichern. <span cite="Schema.org"></span> Es wird davon ausgegangen, dass jedes Rezept eine Zutatenliste hat. In dieser wird jede Zeile mit Microdata angereichert; z.B. <i>&lt;span itemprop="recipeIngredient"&gt;2 EL Zucker&lt;/span&gt;</i>. Für den Computer stellt dieser Tag-Inhalt jedoch nur einen String dar. Für eine kulinarische Analyse müsste die Mengenangabe (2), die Einheit (EL), sowie die Zutat (Zucker) explizit ausgezeichnet sein. Das Auszeichnen von Zutaten im Fließtext, was wir mangels bestehender Zutatenliste machen müssen, muss darüber hinaus einige Sonderfälle beachten. Dies verdeutlichen folgende zwei Beispielsätzen aus dem Kochbuch:
                     </p>
 
                     <ol>
@@ -82,13 +82,11 @@
 
 
                     <h2 id="IE" class="myAnchorWithFixedheader">Information Extraction in der Koch-Domäne</h2>
-                    <p>Information Extraction beschäftigt sich damit, nützliche Informationen aus unstrukturiertem Text zu extrahieren. Es wurde erstmals in <span cite="KDT"></span> als eigene Diziplin erwähnt. Ein allgemeiner Überblick kann in <span cite="TextMining"></span> gefunden werden. Die Algorithmen versuchen meist bestehende Semi-Strukturen auszunutzen.</p>
-
-                    <p>In der Koch-Domäne haben wir drei unterschiedliche automatisierte Ansätze gefunden, auf die wir genauer eingehen werden:</p>
+                    <p>Information Extraction beschäftigt sich damit, nützliche Informationen aus unstrukturiertem Text zu extrahieren. Es wurde erstmals in <span cite="KDT"></span> als eigene Diziplin erwähnt. Ein allgemeiner Überblick kann in <span cite="TextMining"></span> gefunden werden. Die Algorithmen versuchen meist bestehende Semi-Strukturen auszunutzen. In der Koch-Domäne haben wir drei unterschiedliche automatisierte Ansätze gefunden, auf die wir genauer eingehen werden:</p>
                     <ul>
-                        <li>Regular Expression based</li>
-                        <li>Conditional Random Field based</li>
-                        <li>Dictionary and rule based</li>
+                        <li>Regular Expression-based</li>
+                        <li>Conditional Random Field-based</li>
+                        <li>Dictionary- and rule-based</li>
                     </ul>
                     <p>Nachdem die Zutaten von einem Programm extrahiert wurden, müssen die extrahierten Entities zum Auszeichnen nur noch entprechend dem Domänen-spezifischen Vokabular zurückgeschrieben werden.
                     </p>
@@ -110,6 +108,7 @@
                                     </li>
                                     <li><a href="AuszeichnenRezepte.html">Auszeichnen von Rezepten</a>
                                         <ol>
+                                            <li><a href="AuszeichnenRezepte.html#Auszeichnungssprachen">Auszeichnungssprachen</a></li>
                                             <li><a href="AuszeichnenRezepte.html#TEI">TEI: Text Encoding Initiative</a></li>
                                             <li><a href="AuszeichnenRezepte.html#SchemaOrgRecipe">Schema.org/Recipe</a></li>
                                             <li><a href="AuszeichnenRezepte.html#kommerzielleKochseiten">In kommerziellen Kochseiten</a></li>
@@ -176,7 +175,7 @@
                             
                         </div>
                         <div class="col-md-8">
-                            <p>Links ist ein klassisches Inhaltsverzeichnis zu sehen. Das erste Kapitel behandelt, wie wir das gedrucktes Buch von Frau Davidis, aufbauend auf der Version des deutschen Text Archivs, transkripiert haben. Im zweitem Kapitel stellen wir bestehende Auszeichnungssprachen in der Koch-Domäne vor. Da diese nicht für eine kulinarische Analyse geeinigt sind, definieren wir für diesen Zweck im 3. Kapitel die Auszeichnungssprache cueML. Das vierte Kapitel beschäftigt sich mit der Information Extraction in der Koch-Domäne mit dem Ziel, später Rezepte automatisch mit cueML auszeichnen zu können. Darauf aufbauend werden im fünften Kapitel zwei Prototypen zur Extraktion von Entities in der Koch-Domäne entwickelt. Die Evaluation dieser Prototypen ist im sechsten Kapitel. Im siebten Kapitel sind einige Kommentare unsererseits zu dieser Arbeit.
+                            <p>Links ist ein klassisches Inhaltsverzeichnis zu sehen. Das erste Kapitel behandelt, wie wir das gedruckte Buch von Frau Davidis, aufbauend auf der Version des Deutschen Text Archivs, transkripiert haben. Im zweiten Kapitel stellen wir bestehende Auszeichnungssprachen in der Koch-Domäne vor. Da diese nicht für eine kulinarische Analyse geeinigt sind, definieren wir für diesen Zweck im 3. Kapitel die Auszeichnungssprache cueML. Das vierte Kapitel beschäftigt sich mit der Information Extraction in der Koch-Domäne, mit dem Ziel später Rezepte automatisch mit cueML auszeichnen zu können. Darauf aufbauend werden im fünften Kapitel zwei Prototypen zur Extraktion von Entities in der Koch-Domäne entwickelt. Die Evaluation dieser Prototypen ist im sechsten Kapitel. Im siebten Kapitel sind einige Kommentare unsererseits zu dieser Arbeit.
                             </p>
                         </div>
                     </div>

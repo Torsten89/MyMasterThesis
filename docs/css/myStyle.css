@@ -90,7 +90,7 @@ figure img {
     padding-top: 5em;
 }
 
-.myAnchorWithFixedheader:before {
+.myAnchorWithFixedheader:before { /*For h2 */
     display: block; 
     content: ""; 
     margin-top: -5em; 
@@ -113,6 +113,21 @@ figure img {
 }
 /* -------------- left navigation bar - end -------------- */
 
+/* -------------- references - start -------------- */
+div.referenceEntry p {
+    text-indent: -4em;
+    padding-left: 4em;
+}
+
+div.referenceEntry:before { 
+    display: block;
+    content: ""; 
+    margin-top: -50px; 
+    height: 50px; 
+    visibility: hidden;
+}
+/* -------------- references - end -------------- */
+
 /* -------------- print - start -------------- */
 @media print {
     .myHeaderForSideWithMyLeftNavBar {
@@ -125,4 +140,3 @@ figure img {
     }
 }
 /* -------------- print - end -------------- */
-
