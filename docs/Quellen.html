@@ -27,6 +27,12 @@
         <script>activeTab = "DigitaleEdition"</script>
         <script src="js/navbar.js"></script>
         <script src="js/references.js"></script>
-        <script>$("#bibliography").html(getBibliography());</script>
+        <script>
+            $("#bibliography").html(getBibliography());
+            var anchor = window.location.hash.substr(1);
+            if(anchor!="") {
+                $("#"+anchor).attr("style", "border: 3px solid; margin-top: 0.5em; margin-bottom: 0.5em; padding-top: 0.6em;");
+            }
+        </script>
 	</body>
 </html> 
