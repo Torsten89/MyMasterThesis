@@ -42,7 +42,7 @@
                 </div>
                 
                 <div class="col-md-10">
-                    <p>Auf dieser Seite werden die <a href="AutomatischesAnreichernCueML.html">zuvor vorgestellten Prototypen</a> evaluiert. Beim CRF-based Prototyp wird erläutert, dass CRF für uns nicht umsetzbar ist. Die Dictionary- and rule-based Prototypen werten wir mit den Metriken Recall und Precision aus, weswegen wir diese als erstes einführen.
+                    <p>Auf dieser Seite werden die <a href="AutomatischesAnreichernCueML.html" title="Automatisches auszeichnen mit cueML">zuvor vorgestellten Prototypen</a> evaluiert. Beim CRF-based Prototyp wird erläutert, dass CRF für uns nicht umsetzbar ist. Die Dictionary- and rule-based Prototypen werten wir mit den Metriken Recall und Precision aus, weswegen wir diese als Erstes einführen.
                     </p>
                     
                     <h2 id="Metrics" class="myAnchorWithFixedheader">Recall &amp; Precision</h2>
@@ -54,79 +54,88 @@
                         <div class="col-md-6">\begin{equation} Precision = \frac{\#(retrieved \cap relevant)}{\#retrieved} \end{equation}</div>
                     </div>
                     
-                    <p>Ein hoher Recall-Wert zeugt davon, dass viele relevante Informationen extrahiert werden. Ein hoher Precision-Wert zeugt davon, dass nur wenig falsche Informationen als relevant extrahiert werden. Beide Metriken sind nur zusammen aussagekräftig. Ein perfekter Recall-Wert von eins könnte ansonsten erreicht werden, in dem einfach alle Informationen als relevant extrahiert werden. Dies würde jedoch die Precision sehr wahrscheinlich ruinieren. Ein perfekter Wert von eins für die Precision könnte hingegen dadurch erreicht werden, dass keine Information als relevant extrahiert wird. Der Recall wäre dann allerdings null.
+                    <p>Ein hoher Recall-Wert zeugt davon, dass viele relevante Informationen extrahiert werden. Ein hoher Precision-Wert zeugt davon, dass nur wenig falsche Informationen als relevant extrahiert werden. Beide Metriken sind nur zusammen aussagekräftig. Ein perfekter Recall-Wert von eins könnte ansonsten erreicht werden, in dem einfach alle Informationen als relevant extrahiert werden. Dies würde jedoch die Precision sehr wahrscheinlich ruinieren. Ein sehr guter Wert für die Precision könnte hingegen dadurch erreicht werden, dass nur eindeutige Informationen als relevant extrahiert werden. Darunter leidet jedoch wieder der Recall. Würden gar keine Informationen extrahiert, wäre die Precision nicht definitiert, da dann durch null geteilt wird.
                     </p>
                     
                     <h2 id="CRFPrototyp" class="myAnchorWithFixedheader">CRF-based Prototyp</h2>
                     
                     <div class="row">
-                        <div class="col-md-6">
-                            <p>Antrainiert haben wir den CRF-based Prototypen mit <a href="#">9 Rezepten</a>. <a href="#" title="Link zu unserer digitalen Version des Rezeptes">Unser Test-Rezept</a> besteht aus 96 Wörtern. Von den dazugehörenden Labels sind 83 <i>O</i> für <i>others</i>.
+                        <div class="col-md-5">
+                            <p>Antrainiert haben wir den CRF-based Prototypen mit <a href="#">diesen 9 Rezepten</a>. <a href="#" title="Link zu unserer digitalen Version des Rezeptes">Unser Test-Rezept</a> besteht aus 96 Wörtern. Von den dazugehörenden Labels sind 83 <i>O</i> für <i>others</i>.
                             </p>
                             
-                            <p>Tabelle 1 zeigt die Stellen, wo sich die manuellen und die vom Prototypen extrahierten Labels unterscheiden. Die beiden Zutaten <i>Kartoffeln </i> und <i>Kartoffel-Klöße</i>, die nicht extrahiert wurden, sind auch nicht in den Trainings-Rezepten vorhanden. <i>Eine</i> und <i>einige</i> hingegen sind in den Trainingsdaten vorhanden. Sie sind mal als Mengenangabe gelabelt (z.B. in <i>eine geriebene gelbe Murzel</i>) und mal nicht (z.B. in <i>dies wird eine Weile gerührt</i>). Wenn dem CRF nur positive Gewichte erlaubt sind, orakelt er auch <i>Griesmehl</i> als <i>O</i>, obwohl Griesmehl in den Trainingsdaten nur einmal als <i>B-Ingredient</i> gelabelt vorkommt.
+                            <p>Tabelle 1 zeigt die Stellen, in denen sich die manuellen und die vom Prototypen extrahierten Labels unterscheiden. Die beiden Zutaten <i>Kartoffeln </i> und <i>Kartoffel-Klöße</i>, die nicht extrahiert wurden, sind auch nicht in den Trainings-Rezepten vorhanden. <i>Eine</i> und <i>einige</i> hingegen sind in den Trainingsdaten vorhanden. Sie sind mal als Mengenangabe gelabelt (z.B. in <i>eine geriebene gelbe Murzel</i>) und mal nicht (z.B. in <i>dies wird eine Weile gerührt</i>). Wenn dem CRF nur positive Gewichte erlaubt sind, orakelt er auch <i>Griesmehl</i> als <i>O</i>, obwohl Griesmehl in den Trainingsdaten nur einmal als <i>B-Ingredient</i> gelabelt vorkommt.
                             </p>
                             
                             <p>Tabelle 2 zeigt die Precision und Recall von dem CRF mit ausschließlich positiven, wie auch mit negativen Gewichten. Alle extrahierten Entities sind korrekt. Allerdings wurden 5 bzw. 6 der 13 Entitites des Rezeptes nicht als solche sondern als <i>O</i> gelabelt.
                             </p>
                         </div>
 
-                        <div class="col-md-3">
-                            <table border="1">
-                                <caption>Tabelle 1: Unterschiede zwischen den manuellen und extrahierten Labels</caption>
-                                <tr>
-                                    <th>Wort im Satz</th>
-                                    <th>Manuelle Labels</th>
-                                    <th>Labels vom CRF</th>
-                                </tr>
-                                <tr>
-                                    <td>eine</td>
-                                    <td>B-Quantity</td>
-                                    <td>O</td>
-                                </tr>
-                                <tr>
-                                    <td>einige</td>
-                                    <td>B-Quantity</td>
-                                    <td>O</td>
-                                </tr>
-                                <tr>
-                                    <td>Kartoffeln</td>
-                                    <td>B-Ingredient</td>
-                                    <td>O</td>
-                                </tr>
-                                <tr>
-                                    <td>Kartoffeln</td>
-                                    <td>B-Ingredient</td>
-                                    <td>O</td>
-                                </tr>
-                                <tr>
-                                    <td>Kartoffel-Klöße</td>
-                                    <td>B-Ingredient</td>
-                                    <td>O</td>
-                                </tr>
-                            </table>
+                        <div class="col-md-7">
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    <div class="table-responsive">
+                                        <table border="1">
+                                            <caption>Tabelle 1: Unterschiede zwischen den manuellen und extrahierten Labels</caption>
+                                            <tr>
+                                                <th>Wort im Satz</th>
+                                                <th>Manuelle Labels</th>
+                                                <th>Orakelte Labels</th>
+                                            </tr>
+                                            <tr>
+                                                <td>eine</td>
+                                                <td>B-Quantity</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td>einige</td>
+                                                <td>B-Quantity</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kartoffeln</td>
+                                                <td>B-Ingredient</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kartoffeln</td>
+                                                <td>B-Ingredient</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kartoffel-Klöße</td>
+                                                <td>B-Ingredient</td>
+                                                <td>O</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-5">
+                                    <div class="table-responsive">
+                                        <table border="1">
+                                            <caption>Tabelle 2:<br/> Precision &amp; Recall</caption>
+                                            <tr>
+                                                <th></th>
+                                                <th>Precision</th>
+                                                <th>Recall</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Mit negativen Gewichten</th>
+                                                <td>100,00%</td>
+                                                <td>61,54%</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Ohne negativen Gewichten</th>
+                                                <td>100,00%</td>
+                                                <td>53,85%</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         
-                        <div class="col-md-3">
-                            <table border="1">
-                                <caption>Tabelle 2:<br/> Precision and Recall</caption>
-                                <tr>
-                                    <th></th>
-                                    <th>Precision</th>
-                                    <th>Recall</th>
-                                </tr>
-                                <tr>
-                                    <th>Prototyp mit negativen Gewichten</th>
-                                    <td>100,00%</td>
-                                    <td>61,54%</td>
-                                </tr>
-                                <tr>
-                                    <th>Prototyp ohne negativen Gewichten</th>
-                                    <td>100,00%</td>
-                                    <td>53,85%</td>
-                                </tr>
-                            </table>
-                        </div>
                     </div>
                     
                     
@@ -142,7 +151,7 @@
                                 </figure>
                             </p>
                             
-                            <p>Abb. 1 zeigt den, zu den gelabelten Trainingsdaten aus Abb. 2, entsprechenden mit cueML ausgezeichneten Text. Bereits in diesem kleinen Ausschnitt der Trainingsdaten lassen sich viele Stolpersteine finden:
+                            <p>Abb. 1 zeigt den zu den gelabelten Trainingsdaten aus Abb. 2 entsprechenden mit cueML ausgezeichneten Text. Bereits in diesem kleinen Ausschnitt der Trainingsdaten lassen sich viele Stolpersteine finden:
                             </p>
                             
                             <ul>
@@ -154,7 +163,7 @@
                                 </li>
                                 <li>Im Gegensatz zu <span cite="CRFNYT"></span> labeln wir ganze Sätze und nicht nur eine Zutatenliste. <b>Die meisten unserer Labels sind daher <i>O</i> für Other</b>. Dies führt dazu, dass das CRF-Orakel Wörter wie <i>eine</i> bevorzugt als <i>O</i> orakelt anstatt als <i>B-Quantity</i>.
                                 </li>
-                                <li>Daran das <i>Kartoffeln</i> nicht erkannt wird, wird auch deutlich, <b>dass der CRF nur Wörter als Zutaten erkennen kann, die auch in den Trainings&shy;daten waren</b>. Wäre in den Trainingsdaten <i>eine Kartoffel</i> vorhanden, so könnte der CRF <i>Kartoffeln</i> immer noch nicht erkennen. Daher ist als custom feature das Lemma des Wortes nötig. Wenn wir nun allerdings davon ausgehen, dass wir alle Zutaten (in den Trainingsdaten) kennen und zusätzlich die Lemmatas der Wörter haben, können wir die Zutaten-Entities auch über einen Wörterbuch-Check extrahieren und brauchen den CRF dafür nicht.
+                                <li>Daran das <i>Kartoffeln</i> nicht erkannt wird, wird auch deutlich, <b>dass der CRF nur Wörter als Zutaten erkennen kann, die auch in den Trainings&shy;daten waren</b>. Wäre in den Trainingsdaten <i>eine Kartoffel</i> vorhanden, so könnte der CRF <i>Kartoffeln</i> immer noch nicht erkennen. Daher ist als custom feature das Lemma des Wortes nötig. Wenn wir nun allerdings davon ausgehen, dass wir alle Zutaten (in den Trainingsdaten) kennen und zusätzlich die Lemmata der Wörter haben, können wir die Zutaten-Entities auch über einen Wörterbuch-Check extrahieren und brauchen den CRF dafür nicht.
                                 </li>
                             </ul>
                         </div>
@@ -170,14 +179,14 @@
                     <p>Des Weiteren ist uns unklar, <b>wie die Unterscheidung zwischen Zutaten, optionalen Zutaten, alternativen Zutaten und nicht zu verwendenten Zutaten zu modelieren ist</b>. Für diese sind auf jeden Fall eigene Labels nötig. Da die Wörter/Zutaten zu den unterschiedlichen Labels jeweils die selben sind, braucht das CRF zur Unterscheidung wahrscheinlich zusätzlich weitere Labels und Features. Diese zu entwickeln und zu evaluieren ist jedoch wieder aufwendig.
                     </p>
                     
-                    <p>Wir wollen damit nicht ausschließen, dass es möglich ist, die Zutaten mittels CRF zu extrahieren. Allerdings ist dieser Algorithmus bei den schlecht strukturierten Zubereitungs-Anweisungen von Frau Davides's mit vielen Stolpersteinen verbunden. Eine sinnvolle Umsetzung ist daher aus den oben genannten Gründen nicht im Rahmen dieser Arbeit zu erledigen. Stattdessen haben wir den <i>Dictionary- and rule-based</i>-Ansatz weiterverfolgt.
+                    <p>Wir wollen damit nicht ausschließen, dass es möglich ist, die Zutaten mittels CRF zu extrahieren. Allerdings ist dieser Algorithmus bei den schlecht strukturierten Zubereitungs-Anweisungen von Frau Davides's mit vielen Stolpersteinen verbunden und somit nicht der richtige Ansatz für uns. <span cite="CRFNYT"></span> konnte auf eine bereits im Rezept vorhandene Zutatenliste zurückgreifen sowie auf über 130.000 Trainingsdaten. Beides ist bei uns nicht gegeben. Stattdessen haben wir daher den <i>Dictionary- and rule-based</i>-Ansatz weiterverfolgt.
                     </p>
                     
                     
                     
                     
                     <h2 id="Dictbased" class="myAnchorWithFixedheader">Dictionary- and rule-based Prototyp</h2>
-                    <p>Unsere Dictionary- and rule-based Prototypen testen wir anhand von Recall and Precision. Wir haben dazu die <a href="DavidisesKochbuch/Rezepte%20mit%20cueML.xml">die ersten 50 Suppen von Frau Davidis's Kochbuch</a> manuell ausgezeichnet und verwenden dies als Golden Standard.
+                    <p>Unsere Dictionary- and rule-based Prototypen testen wir anhand von Recall und Precision. Wir haben dazu die <a href="DavidisesKochbuch/Rezepte%20mit%20cueML.xml">die ersten 50 Suppen von Frau Davidis' Kochbuch</a> manuell ausgezeichnet und verwenden dies als Golden Standard.
                     </p>
                     
                     <h3 id="DictBasedV01" class="myAnchorWithFixedheader">Version 0.1</h3>

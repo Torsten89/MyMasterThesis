@@ -46,7 +46,7 @@
                             <p>Unser CRF-based Prototyp ist in unserem Git-Repository unter dem Tag <a href="#">CRF-BasedPrototypeV0.1</a> zu finden. Er verwendet das <a href="http://www.swig.org/" title="Simplified Wrapper and Interface Generator">SWIG</a> Interface für <i>Python 3</i> von <a href="http://www.chokkan.org/software/crfsuite/">CRFsuite 0.12</a>.
                             </p>
                             
-                            <p>Wie in <a href="IEKochDomain.html#CRFTheorie">CRF erklärt</a> erläutert, muss der Prototyp zuerst antrainiert werden. Abb. 1 zeigt einen kleinen Ausschnitt unserer Trainingsdaten für den CRF-based Prototypen. Nebenbei sei erwähnt, dass wir diese Anweisungen heute als eine Mehlschwitze bezeichnen würden.
+                            <p>Wie in <a href="IEKochDomain.html#CRFTheorie">CRF erklärt</a>, muss der Prototyp zuerst antrainiert werden. Abb. 1 zeigt einen kleinen Ausschnitt unserer Trainingsdaten für den CRF-based Prototypen. Nebenbei sei erwähnt, dass wir diese Anweisungen heute als eine Mehlschwitze bezeichnen würden.
                             </p>
                             
                             <p>Aus diesem kleinen Ausschnitt der Trainingsdaten sind bereits viele Problematiken ersichtlich, was später in der <a href="Evaluierung.html#CRFPrototyp" >Evaluierung dieses Prototypens</a> genauer erläutert wird. Daher haben wir zunächst einen simplen Prototypen gebaut, um zu schauen, ob CRF wirklich der richtige algorithmische Ansatz für unser Problem ist. Wie in Abb. 1 haben wir 10 Rezepte gelabelt. Mit <a href="#" title="Link zu den gelabelten Trainings-Rezepten">9</a> davon haben wir den CRF-based Prototypen trainiert und an dem <a href="#" title="Link zu dem gelabelten Test-Rezept">10.</a> getestet. Als features verwenden wir ausschließlich die Wort-Identität, sowie den Übergang von zwei benachtbarten Labels (B-Template). Für die Gewichte der features erlauben wir auch negative Werte.
@@ -67,13 +67,13 @@
                     
                     <h2 id="Dictbased" class="myAnchorWithFixedheader">Dictionary- and rule-based Prototyp</h2>
                     
-                    <p>Nach dem wir zu der Erkenntnis gekommen sind, das <a href="Evaluierung.html#CRFPrototyp" title="Link zur Evaluierung">der vorherige Ansatz für diese Arbeit nicht zielführend ist</a>, stellen wir hier einen Dictionary- and rule-based Prototypen vor. Unsere Lemmatisierung für den dendictionary-based Teil baut auf <a href="https://github.com/miotto/treetagger-python">treetagger Version 1.0.1</a> auf.
+                    <p>Nachdem wir zu der Erkenntnis gekommen sind, das <a href="Evaluierung.html#CRFPrototyp" title="Link zur Evaluierung">der vorherige Ansatz für diese Arbeit nicht zielführend ist</a>, stellen wir hier einen Dictionary- and rule-based Prototypen vor. Unsere Lemmatisierung für den dendictionary-based Teil baut auf <a href="https://github.com/miotto/treetagger-python">treetagger Version 1.0.1</a> auf.
                     </p>
                     
                     
                     <h3 id="DictBasedV01" class="myAnchorWithFixedheader">Version 0.1</h3>
                     
-                    <p>Ein erster Prototyp ist in unserem Git-Repository unter dem Tag <a href="#">Dict-AndRule-BasedPrototypeV0.1</a> zu finden. Das Ziel dieses Prototypens ist erst einmal ausschließlich zu testen, ob das dictionary-based extrahieren unserer gesuchten Entities (Zutaten, Mengenangaben und Einheiten) funktioniert. Deswegen ist er nach dem Motto <i>quick and dirty</i> implementiert. Nach dem <a href="#Evaluierung.html/#DictBasedV01">die erste Evaluierung</a> positiv stimmt, haben wir den Prototypen quasi weggeworfen und in der folgeden Version 0.2 redesigned, wie es sich für einen quick and dirty Prototypen gehört. Daher wird hier auch nicht weiter auf Implementierung-Details eingegangen sondern nur auf konzeptionelle Ideen.
+                    <p>Ein erster Prototyp ist in unserem Git-Repository unter dem Tag <a href="#">Dict-AndRule-BasedPrototypeV0.1</a> zu finden. Das Ziel dieses Prototypens ist erst einmal ausschließlich zu testen, ob das dictionary-based extrahieren unserer gesuchten Entities (Zutaten, Mengenangaben und Einheiten) funktioniert. Deswegen ist er nach dem Motto <i>quick and dirty</i> implementiert. Nachdem <a href="Evaluierung.html#DictBasedV01">die erste Evaluierung</a> positiv stimmt, haben wir den Prototypen quasi weggeworfen und in der folgeden Version 0.2 redesigned, wie es sich für einen quick and dirty Prototypen gehört. Daher wird hier auch nicht weiter auf Implementierung-Details eingegangen sondern nur auf konzeptionelle Ideen.
                     </p>
                     
                     <div class="row">
@@ -152,21 +152,21 @@
                     
                     <h3 id="DictBasedV02" class="myAnchorWithFixedheader">Version 0.2</h3>
                     
-                    <p>Die <a href="Evaluierung.html/#DictBasedV01">Evaluierung der Version 0.1</a> zeigt, dass die dictionary-based Extraktion funktioniert.  Daher lohnt sich die Weiterverfolgung des dictionary- and rule-based Ansatzes. Bevor wir uns jedoch mit der rule-based Weiterverarbeitung beschäftigen, erinnern wir uns daran, dass der Prototyp bis jetzt eine quick and dirty Machbarkeitsanalyse war, welche wir zuerst redesignen wollten.
+                    <p>Die <a href="Evaluierung.html#DictBasedV01">Evaluierung der Version 0.1</a> zeigt, dass die dictionary-based Extraktion funktioniert.  Daher lohnt sich die Weiterverfolgung des dictionary- and rule-based Ansatzes. Bevor wir uns jedoch mit der rule-based Weiterverarbeitung beschäftigen, erinnern wir uns daran, dass der Prototyp bis jetzt eine quick and dirty Machbarkeitsanalyse war, welche wir zuerst redesignen wollen.
                     </p>
                     
                     
                     <h4><b>Design der dictionary-based Extraktion</b></h4>
-                    <p>Abb. 5 zeigt die aufs wesentliche reduzierten Bestandteile des Designs. Jedes Rezept wird zunächst in ein <b>PlainTextRecipe</b> umgewandelt, welches zu jedem Rezept die rcp-id, den Rezept-Typ, den Namen und eine Liste von Zubereitungs-Anweisungen speichert. Satzweise führt der <b>Extractor</b> dann mittels <b>dictBasedEnrichment</b> eine Extraktion der gesuchten Entities durch. Dazu werden zunächst mit der Hilfe von <b>TreeTagger</b> die Lemmatas zu jedem Wort gebildet. Diese Lemmatas werden dann durch den <b>IngredientExtractor</b>, <b>UnitExtractor</b> und <b>QuantityExtractor</b> getestet. Ist einer dieser Tests positiv, wird in der entsprechenden <b>WordProperty</b> im <b>properties</b>-dict das Ergebnis des Tests hinterlegt. Der <b>QuantityExtractor</b> besteht nur aus der Funktion <b>isQuantity</b>, welche ein Lemma bekommt und <i>True</i> bzw <i>False</i> wieder gibt. Die Wörterbücher für den <b>IngredientExtractor</b> sowie den <b>UnitExtractor</b> werden mittels dem <b>XmlParser</b>, wie zuvor beschrieben, aus dem manuell mit cueML angereicherten Kochbuch extrahiert.
+                    <p>Abb. 5 zeigt die aufs wesentliche reduzierten Bestandteile des Designs. Jedes Rezept wird zunächst in ein <b>PlainTextRecipe</b> umgewandelt, welches zu jedem Rezept die rcp-id, den Rezept-Typ, den Namen und eine Liste von Zubereitungs-Anweisungen speichert. Satzweise führt der <b>Extractor</b> dann mittels <b>dictBasedEnrichment</b> eine Extraktion der gesuchten Entities durch. Dazu werden zunächst mit der Hilfe von <b>TreeTagger</b> die Lemmata zu jedem Wort gebildet. Diese Lemmata werden dann durch den <b>IngredientExtractor</b>, <b>UnitExtractor</b> und <b>QuantityExtractor</b> getestet. Ist einer dieser Tests positiv, wird in der entsprechenden <b>WordProperty</b> im <b>properties</b>-dict das Ergebnis des Tests hinterlegt. Der <b>QuantityExtractor</b> besteht nur aus der Funktion <b>isQuantity</b>, welche ein Lemma bekommt und <i>True</i> bzw <i>False</i> wieder gibt. Die Wörterbücher für den <b>IngredientExtractor</b> sowie den <b>UnitExtractor</b> werden mittels dem <b>XmlParser</b>, wie zuvor beschrieben, aus dem manuell mit cueML angereicherten Kochbuch extrahiert.
                     </p>
                     
                     <p>Das Ergebnis der Extraktion des Satzes <i>"Schütte 1 Maß Wein hinzu."</i> mit dem Zutaten-Wörterbuch aus Abb. 4b wäre zum Beispiel die Liste folgender WordProperties: <br/>
                     <i>[<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="Schütte", lemma="schütten", properties={} )<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="1", lemma="1", properties={"quantity":"1"} )<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="Maß", lemma="Maß", properties={"unit":"Maß"} )<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="Wein", lemma="Wein", properties={"ingredient":["Weißwein, "Rotwein"]} )<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="hinzu", lemma="hinzu", properties={} )<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="Schütte", lemma="schütten", properties={} ),<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="1", lemma="1", properties={"quantity":"1"} ),<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="Maß", lemma="Maß", properties={"unit":"Maß"} ),<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="Wein", lemma="Wein", properties={"ingredient":["Weißwein, "Rotwein"]} ),<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word="hinzu", lemma="hinzu", properties={} ),<br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;WordProperty(word=".", lemma=".", properties={} )<br/>
                         ]
                     </i>
@@ -208,7 +208,7 @@
                         </li>
                         <li><b>dontUseRule:</b> Wenn vor einer Zutat das Wort "ohne" steht, wird die Zutaten-Eigenschaft des Wortes zurückgenommen (<i>wp.properties["ingredient"] = None</i>).
                         </li>
-                        <li><b>optionalRule:</b> Sind nach einer Zutat die Lemmata "können" und "webleiben" im Satz enthalten, so wird diese Zutat als optional ausgezeichnet (<i>wp.properties["optional"] = True </i>).
+                        <li><b>optionalRule:</b> Sind nach einer Zutat die Lemmata "können" und "wegbleiben" im Satz enthalten, so wird diese Zutat als optional ausgezeichnet (<i>wp.properties["optional"] = True </i>).
                         </li>
                         <li><b>altGrpRule:</b> Folgt auf einer Zutat das Lemma "statt", werden alle Folgende, durch "und" separierten Zuaten, als Alternative zu dieser ausgezeichnet.
                         </li>
@@ -225,7 +225,7 @@
                     
                     <h4><b>Automatisches auszeichnen mit cueML</b></h4>
                     
-                    <p>Nach dem alle Entities mittels den WordProperties extrahiert wurden, müssen diese noch, mit dem cueML-Vokabular ausgezeichnet, zurück geschrieben werden. Aufgrund unserer guten Kapselung der Entities in den WordProperties ist dies trivial. Jede WordProperty hat eine <i>toXml</i>-Methode. Ist ein Wort keine Zutat, wird von der Methode die Wort-Identität zurück gegeben. Ansonsten wird die Word-Identität in ein <i>recipeIngredient</i>-Element mit den entsprechenden Attributen eingeschlossen.
+                    <p>Nachdem alle Entities mittels den WordProperties extrahiert wurden, müssen diese noch, mit dem <i>cueML</i>-Vokabular ausgezeichnet, zurück geschrieben werden. Aufgrund unserer guten Kapselung der Entities in den WordProperties ist dies trivial. Jede WordProperty hat eine <i>toXml</i>-Methode. Ist ein Wort keine Zutat, wird von der Methode die Wort-Identität zurück gegeben. Ansonsten wird die Word-Identität in ein <i>recipeIngredient</i>-Element mit den entsprechenden Attributen eingeschlossen.
                     </p>
                     
                     <h4><b>Transformation in HTML</b></h4>
