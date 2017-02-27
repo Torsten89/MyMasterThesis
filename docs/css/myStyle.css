@@ -119,13 +119,21 @@ div.referenceEntry p {
     padding-left: 4em;
 }
 
-div.referenceEntry:before { 
+div.referenceEntry p.focus {
+    border: 3px solid;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+div.referenceEntry:before {
     display: block;
     content: ""; 
     margin-top: -50px; 
     height: 50px; 
     visibility: hidden;
 }
+
+
 /* -------------- references - end -------------- */
 
 /* -------------- print - start -------------- */

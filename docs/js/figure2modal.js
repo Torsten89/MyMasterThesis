@@ -7,14 +7,12 @@
     
     NOTE: This script should be called before references.js for the case if in the caption is a "<span cite=...".
 */
-
 var figIdCounter = 0;
 $("[myModal]").each(function() {
     figIdCounter += 1;
     var id = "myFigureID" + figIdCounter;
     caption = $(this)[0].hasAttribute("myModalTitle") ? $(this).attr("myModalTitle") : $(this).children("figcaption").html();
-    caption = caption.replace(/"/g, '&quot;');
-    caption = caption.replace(/'/g, "&apos;");
+    caption = caption.replace(/'/g, '"');
     
     var modal =' \
     <div class="modal fade" id="' + id + '" role="dialog"> \
@@ -26,13 +24,17 @@ $("[myModal]").each(function() {
                 </div> \
                 <div class="modal-body"> \
                     <figure> \
-                        <img src="' + $(this).attr("myModal") + '" alt="' + caption + '"/> \
+                        <img src="' + $(this).attr("myModal") + '" alt="' + caption.replace(/"/g, '&quot;') + '"/> \
                     </figure> \
                 </div> \
             </div> \
         </div> \
     </div>';
     $(this).after(modal);
+    
+    if(caption.startsWith("g")) {
+        console.log(modal);
+    }
 
     connectModalWithElem($(this), id);
 });

@@ -188,9 +188,7 @@ references = [
         "title":"The Semantic Web",
         "publisher":"Springer-Verlag Berlin Heidelberg"
     }
-].sort(function(a,b) {
-   return a.authors > b.authors;
-});
+]
 
 
 $("span[cite]").each(function() {
@@ -217,16 +215,19 @@ function ref2Cite(ref, stem, supplement){
 }
 
 function getBibliography() {
-    //Sorted by author name!!!
+    refs = references.sort(function(a,b) {
+       return a.authors > b.authors;
+    });
+    
     var result = "";
-    for(var i=0; i<references.length; i++) {
+    for(var i=0; i<refs.length; i++) {
         result += ref2Bib(references[i]);
     }
     return result;
 }
 
 function ref2Bib(ref) {
-    var result = '<div id="' + ref.id + '" class="referenceEntry"><p>';
+    var result = '<div id="' + ref.id + '" class="referenceEntry"><p id="'+ ref.id+"P" +'">';
     result += '<b>'+ref.authors+' (' + ref.year +'). </b>';
     result += '"' + ref.title + '". ';
     if(ref.hasOwnProperty("in")) {
