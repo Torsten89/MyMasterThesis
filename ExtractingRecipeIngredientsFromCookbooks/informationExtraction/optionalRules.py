@@ -9,7 +9,7 @@ def optionalRule(wps, rcp):
     return wps
 
 def testOptional(wps, i):
-    """ Searches for following "kann" and "wegbleiben". """
+    """ Searches for following "können" and "wegbleiben". """
     foundKann = False
     foundWegbleiben = False
     for j in range(i+1, len(wps)):
