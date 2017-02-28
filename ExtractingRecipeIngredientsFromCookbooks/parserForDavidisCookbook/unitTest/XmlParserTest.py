@@ -110,21 +110,34 @@ class XmlParserTest(unittest.TestCase):
     def testRecipeB49(self):
         dom = createCueMLDom([getRecipeB49()])
         recipe = XmlParser(dom).getPlainTextRecipes().__next__()
-        self.assertEqual("Suppen", recipe.rcpType)
+        self.assertEqual("Suppen.", recipe.rcpType)
         self.assertEqual("B-49", recipe.rcpId)
         self.assertEqual("Suppe von feiner Gerste (Graupen).", recipe.name)
-        instructionSentences = ["Ungefähr zwei Stunden muß die Gerste zu Feuer sein.",
-            "Sie wird mit etwas Butter in wenig weiches kochendes Wasser gegeben, kurz eingekocht, frische Milch hinzu geschüttet und zu einer sämigen Suppe gekocht.",
-            "Salz, Zucker und Zimmet darf nicht darin fehlen."]
-        self.assertEqual(instructionSentences, recipe.instructionSentences)
+        paragraphs = ["Ungefähr zwei Stunden muß die Gerste zu Feuer sein. \
+Sie wird mit etwas Butter in wenig weiches kochendes Wasser gegeben, kurz eingekocht, frische Milch hinzu geschüttet und zu einer sämigen Suppe gekocht. \
+Salz, Zucker und Zimmet darf nicht darin fehlen."]
+        self.assertEqual(paragraphs, recipe.paragraphs)
         
          
     def testRecipeB2(self):
         dom = createCueMLDom([getRecipeB2()])
         recipe = XmlParser(dom).getPlainTextRecipes().__next__()
-        self.assertEqual("Suppen", recipe.rcpType)
+        self.assertEqual("Suppen.", recipe.rcpType)
         self.assertEqual("B-2", recipe.rcpId)
         self.assertEqual("Rindfleischsuppe mit Perlgerste und Reis.", recipe.name)
+        paragraphs = ["Wird gekocht wie die vorhergehende, nur mit der Abänderung, daß, wenn die Brühe durch \
+ein Haarsieb geschüttet ist, man verhältnißmäßig 1—2 Eßlöffel voll Mehl mit frischer \
+Butter durchschwitzt, welches jedoch weiß bleiben muß, und die vom Bodensatz \
+abgeklärte Brühe hinzuschüttet. Zugleich gibt man feine Gerste nebst etwas Wurzelwerk \
+in die Suppe, später auch Spargel, Blumenkohl oder Scorzonerwurzeln, was die \
+Jahreszeit bietet, und vor dem Anrichten die Herzblättchen der Sellerieknollen und \
+beliebige Klöße. Man rührt die Suppe mit 1—2 Eidotter ab, indem man solche mit etwas \
+Wasser zerrührt, und unter fortwährendem Rühren die kochende Suppe hinzu gibt. Sie \
+muß gebunden, nur ja nicht zu sämig sein.",
+"Anmerk. Will man Reis oder Sago zur Suppe nehmen, so gibt man dieses später \
+hinein. Man rechnet davon auf jede Person bei allen Fleischsuppen einen gestrichenen \
+Eßlöffel voll."]
+        self.assertEqual(paragraphs, recipe.paragraphs)
          
     def testGetCertainRecipe(self):
         dom = createCueMLDom([getRecipeB49(), getRecipeB2()])
@@ -136,6 +149,17 @@ class XmlParserTest(unittest.TestCase):
         ings = getIngsFromNode(parseString(getTaggedRecipeB16()))
         self.assertIn(Ingredient({"target":"#Bouillon"}, ["Bouillon"], (11,11)), ings)
         self.assertIn(Ingredient({"ref":"#Rindkochfleisch", "unit":"Pfund", "atLeast":"8", "atMost":"10"}, ["Rindfleisch"], (15,15)), ings)
+        
+    def testMultiplePElementsInRecipe(self):
+        rcpStr = '<cue:recipe type="Suppen." rcp-id="B-49"> \
+            <head>b.</head> \
+            <p>a</p> \
+            <p>b</p> \
+         </cue:recipe>'
+        dom = createCueMLDom([rcpStr])
+        recipe = XmlParser(dom).getPlainTextRecipes().__next__()
+        self.assertEqual(["a","b"], recipe.paragraphs)
+         
                     
          
 if __name__ == "__main__":

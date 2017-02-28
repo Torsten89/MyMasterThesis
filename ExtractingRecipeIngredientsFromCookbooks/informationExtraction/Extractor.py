@@ -2,6 +2,7 @@ from informationExtraction.dictBasedExtractor import dictBasedEnrichment
 from informationExtraction.ruleBasedExtractor import applyRulesToWordProperties
 import string
 from xml.dom.minidom import parseString
+from informationExtraction.textualHelper import splitIntoSentences
 
 class Extractor():
     
@@ -27,19 +28,21 @@ class Extractor():
                       .format(self.cueMLPrefix, plainTextRcp.rcpType, plainTextRcp.rcpId, self.cueMLPrefix[:-1])]
         
         xmlStrings.append('<head>{}</head>'.format(self.extractSentence(plainTextRcp.name, plainTextRcp)))
-        xmlStrings.append('<p>')
-        for sentence in plainTextRcp.instructionSentences:
-            try:
-                xmlStrings.append(self.extractSentence(sentence, plainTextRcp))
-            except Exception as e:
-                print(str(e))
-                print("Error in Extractor.extractRecipe('{}')".format(sentence))
-        xmlStrings.append('</p>')        
+        for paragraph in plainTextRcp.paragraphs:
+            xmlStrings.append('<p>')
+            for sentence in splitIntoSentences(paragraph):
+                try:
+                    xmlStrings.append(self.extractSentence(sentence, plainTextRcp))
+                except Exception as e:
+                    print(str(e))
+                    print("Error in Extractor.extractRecipe('{}')".format(sentence))
+            xmlStrings.append('</p>')
+       
         xmlStrings.append("</{}recipe>".format(self.cueMLPrefix))
 
         return "".join(xmlStrings)
     
-    def extractRecipes2TEICueML(self, rcps, ergFilePath):    
+    def extractRecipes2TEICueML(self, plainTextRcp, ergFilePath):    
         xmlString = ['<TEI xmlns="tei">\
             <teiHeader>\
             <fileDesc>\
@@ -55,7 +58,7 @@ class Extractor():
               </fileDesc>\
             </teiHeader>\
         <text><body>']
-        for rcp in rcps:
+        for rcp in plainTextRcp:
             xmlString.append(self.extractRecipe(rcp))
         xmlString.append("</body></text></TEI>")
         

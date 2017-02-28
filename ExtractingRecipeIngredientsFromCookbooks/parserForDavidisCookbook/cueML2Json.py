@@ -1,19 +1,25 @@
 from parserForDavidisCookbook.XmlParser import XmlParser,\
     parseXml2PlainTextRecipe, getIngsFromNode
-from xml.dom.minidom import parse
+from xml.dom.minidom import parse, parseString
 import json
 from parserForDavidisCookbook.xmlHelper import getElems
 
-def getJsonRcps(pathToCueMLFile, rcpIds):
+def getJsonRcps(pathToCueMLFile, rcpIds, hack=True):
     dictRcps = dict()
     
     xmlRcps = (XmlParser(parse(pathToCueMLFile))).getXmlRecipes(rcpIds)
     for xmlRcp in xmlRcps:
         dictRcp = xmlRcp2dictRcp(xmlRcp)
         t = dictRcp["type"]
-        print(dictRcp)
         if t in dictRcps: dictRcps[t].append(dictRcp)
         else: dictRcps[t] = [dictRcp]
+        
+    # hack for using our manual tagged soups:
+    if hack:
+        pathToGoldenStandard = "/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted.xml"
+        xmlRcps = (XmlParser(parse(pathToGoldenStandard))).getXmlRecipes(["B-{}".format(i) for i in range(1, 94)])
+        soups = [xmlRcp2dictRcp(xmlRcp) for xmlRcp in xmlRcps]
+        dictRcps["Suppen"] = soups
 
     return json.dumps(dictRcps)
 
@@ -22,13 +28,19 @@ def xmlRcp2dictRcp(xmlRcp):
     dictRcp = dict()
     
     dictRcp["rcp-id"] = plainTextRcp.rcpId
-    dictRcp["type"] = plainTextRcp.rcpType.replace("_", " ")
+    dictRcp["type"] = plainTextRcp.rcpType.replace("_", " ") #[:-1]  # remove . at the end
     dictRcp["name"] = plainTextRcp.name
-    dictRcp["instructions"] = plainTextRcp.instructionSentences
+    dictRcp["instructions"] = getInstructionText(xmlRcp, "p") + getInstructionText(xmlRcp, "note")
     dictRcp["ingredients"] = mergeIngs(getIngsFromNode(xmlRcp))
     dictRcp["cueAlts"] = [altElems.attributes["target"].value.split() for altElems in getElems(xmlRcp, "cue:alt")]
         
     return dictRcp
+
+def getInstructionText(node, elemName):
+    result = []
+    for instruction in getElems(node, elemName):
+        result.append("\n".join(instruction.toprettyxml().split("\n")))
+    return "".join(result)
 
 def mergeIngs(ings):
     newIngs = []
@@ -53,17 +65,12 @@ def mergeIngs(ings):
     return [i.__dict__ for i in newIngs]
                     
                     
-            
-# Wurstmachen,_Einpöckeln_und_Räuchern_des_Fleisches
 if __name__ == '__main__':
-    pathToCueMLFile = "/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted.xml"
+    pathToCueMLFile = "/home/torsten/Desktop/erg.xml"
     pathToErg = "/home/torsten/Desktop/MyMasterThesis/docs/Rezepte/Rezepte.json"
     with open(pathToErg, "w") as f:
         f.write("rcps={}".format(getJsonRcps(pathToCueMLFile, []))) 
 
-    #print(json.dumps({"a b c":"hi"}))
-        
-   # print(getJsonRcps(pathToCueMLFile, [B-16]))
     
     
     

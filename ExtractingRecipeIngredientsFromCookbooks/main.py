@@ -9,15 +9,14 @@ from model.PlainTextRecipe import PlainTextRecipe
 from informationExtraction.dictBasedExtractor import dictBasedEnrichment
 from informationExtraction.ruleBasedExtractor import applyRulesToWordProperties
 
-
-debug = True
-ergFilePath = "erg.xml"
-goldenStandardPath = "/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted.xml"
-rcpIds = ["B-{}".format(i) for i in range(1, 51)]
-attris=set(["quantity", "atLeast", "atMost", "unit", "optional", "altGrp"]) #attris which should be relevant in evaluation
+evalAttris=set(["quantity", "atLeast", "atMost", "unit", "optional", "altGrp"]) #attris which should be relevant in evaluation
 ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
 unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng"))    
-if __name__ == '__main__':
+ergFilePath = "erg.xml"
+
+def evalRecipes(rcpIds=["B-{}".format(i) for i in range(1, 51)], debug=True, attris=evalAttris, ergFilePath=ergFilePath):
+    goldenStandardPath = "/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted.xml"
+    
     startTime = time.time()    
     cookbook = XmlParser(parse(goldenStandardPath))
     extractor = Extractor(ingE, unitE)
@@ -26,18 +25,28 @@ if __name__ == '__main__':
        
     startTime = time.time()  
     evalFromFiles(goldenStandardPath, ergFilePath, attris=attris, rcpIds=rcpIds, debug=True)  
-    print('--- Needed for evaluating: {} seconds ---'.format(time.time() - startTime)) 
+    print('--- Needed for evaluating: {} seconds ---'.format(time.time() - startTime))    
 
-#     rcp = PlainTextRecipe("B-16", "Suppen", "Mock Turtle Suppe", ["Sowohl die Bouillon als \
-# Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden."])
-#     extractor = Extractor(ingE, unitE)
-#     print(extractor.extractRecipe(rcp))
+def myPlaygroundTest():
+    rcp = PlainTextRecipe("B-16", "Suppen", "Mock Turtle Suppe", ["Sowohl die Bouillon als \
+Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden."])
+    extractor = Extractor(ingE, unitE)
+    print(extractor.extractRecipe(rcp))
 
-#     s = "nach L. No. 2,"
-#     wps = dictBasedEnrichment(s, ingE, unitE)
-#     wps = applyRulesToWordProperties(wps, None)
-#     for wp in wps:
-#         print(wp)
+    s = "nach L. No. 2,"
+    wps = dictBasedEnrichment(s, ingE, unitE)
+    wps = applyRulesToWordProperties(wps, None)
+    for wp in wps:
+        print(wp)
+        
+def extractAllRecipes(pathToCookbook, ergFilePath=ergFilePath):
+    extractor = Extractor(ingE, unitE)
+    cookbook = XmlParser(parse(pathToCookbook))
+    extractor.extractRecipes2TEICueML(cookbook.getPlainTextRecipes(), ergFilePath)
+    
 
+if __name__ == '__main__':
+#     evalRecipes()
+    extractAllRecipes("/home/torsten/Desktop/MyMasterThesis/docs/DavidisesKochbuch/Rezepte mit cueML.xml")
     
     

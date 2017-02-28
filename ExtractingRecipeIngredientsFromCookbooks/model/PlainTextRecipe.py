@@ -1,8 +1,8 @@
 class PlainTextRecipe:
     
-    def __init__(self, rcpId, rcpType, name, sentences):
-        """ self.instructionSentences is a list of sentences / strings from the instruction text of the recipe. """
+    def __init__(self, rcpId, rcpType, name, paragraphs):
+        """ self.paragraphs contains a str for each paragraph of the recipes instruction text. """
         self.rcpId = rcpId
         self.rcpType = rcpType
         self.name = name
-        self.instructionSentences = sentences
+        self.paragraphs = paragraphs

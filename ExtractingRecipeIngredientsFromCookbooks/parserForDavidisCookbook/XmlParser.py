@@ -1,8 +1,7 @@
 from model.PlainTextRecipe import PlainTextRecipe
 from parserForDavidisCookbook.xmlHelper import getElems, getAllChildText,\
     getAttriOrNone
-from informationExtraction.textualHelper import splitAndRemovePunctuations,\
-    splitIntoSentences
+from informationExtraction.textualHelper import splitAndRemovePunctuations
 from model.Ingredient import Ingredient
 
 rcpIdTagName = "rcp-id"
@@ -30,10 +29,10 @@ class XmlParser(object):
 
 def parseXml2PlainTextRecipe(xmlRecipe):
     rcpId = xmlRecipe.attributes[rcpIdTagName].value
-    rcpType = xmlRecipe.attributes["type"].value[:-1]  # remove . at the end
-    sentences = list(splitIntoSentences(getAllChildText(xmlRecipe)))
-    name = sentences[0]
-    return PlainTextRecipe(rcpId, rcpType, name, sentences[1:])
+    rcpType = xmlRecipe.attributes["type"].value
+    name = getAllChildText(list(getElems(xmlRecipe, "head"))[0])
+    paragraphs = [getAllChildText(x) for x in getElems(xmlRecipe, "p")] + [getAllChildText(x) for x in getElems(xmlRecipe, "note")]
+    return PlainTextRecipe(rcpId, rcpType, name, paragraphs)
 
 def getIngsFromNode(node):
     ings, _ =  parseIngsFromNodeHelper(node, 0)
