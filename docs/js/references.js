@@ -177,7 +177,7 @@ references = [
     },
     {
         "id":"thesaurusAlignmentTask",
-        "authors":"van Hage, Sini, Finch, Kolb, Schreiber",
+        "authors":"Van Hage, Sini, Finch, Kolb, Schreiber",
         "year":"2008",
         "title":"The OAEI food task: an analysis of a thesaurus alignment task"
     },

@@ -68,7 +68,7 @@
             <y:AttributeLabel>rcpID: str
 rcpType: str
 name: str
-instructionSentences: str[1..*]</y:AttributeLabel>
+paragraphs: str[1..*]</y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>
@@ -426,21 +426,26 @@ extractSentence(sentence:str): str
       <data key="d4"/>
       <data key="d6">
         <y:UMLNoteNode>
-          <y:Geometry height="168.44783748361732" width="323.93420744593607" x="-1360.203536471984" y="-556.6332291257099"/>
+          <y:Geometry height="232.44783748361732" width="323.93420744593607" x="-1360.203536471984" y="-556.6332291257099"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="171.625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="317.634765625" x="3.149720910467977" y="-1.5885812581913115">def extractRecipe(rcp):
-    xmlString = "&lt;recipe&gt;"
-    for sentence in rcp.instructionSentences:
-        xmlString += extractSentence(sentence)
-    return xmlString + "&lt;/recipe&gt;"
-
-def extractSentence(sentence):
-    xmlString = ""
-    wps = dictBasedEnrichment(sentence,ingE unitE)
-    for wp in wps:
-        xmlString += wp.toXml()
-    return xmlString<y:LabelModel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="229.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="332.0" x="-4.032896277032023" y="1.7239187418086885">&lt;html&gt;
+def extractRecipe(rcp):&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString = "&amp;lt;recipe&amp;gt;"&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;for paragraph in rcp.paragraphs:&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString += "&amp;lt;p&amp;gt;"&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;for sentence in splitIntoSentences(paragraph):&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString += extractSentence(sentence)&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString += "&amp;lt;/p&amp;gt;"&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return xmlString + "&amp;lt;/recipe&amp;gt;"&lt;br/&gt;
+&lt;br/&gt;
+def extractSentence(sentence):&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString = ""&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;wps = dictBasedEnrichment(sentence,ingE unitE)&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;for wp in wps:&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString += wp.toXml()&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return xmlString
+&lt;/html&gt;<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>

@@ -33,26 +33,43 @@
       </data>
     </node>
     <node id="n1">
+      <data key="d4"/>
       <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="30.0" width="160.25" x="-1220.4041801209594" y="-586.6332291257098"/>
-          <y:Fill hasColor="false" transparent="false"/>
-          <y:BorderStyle hasColor="false" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="152.716796875" x="4.0" y="0.0">informationExtraction<y:LabelModel>
+        <y:UMLNoteNode>
+          <y:Geometry height="246.27924584971623" width="421.7805377211656" x="-1481.9347178421249" y="-558.6349274655965"/>
+          <y:Fill color="#CCFFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="244.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="412.0" x="4.890268860582864" y="1.1396229248581449">&lt;html&gt;
+def extractRecipe(rcp):&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString = "&amp;lt;recipe&amp;gt;"&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;for paragraph in rcp.paragraphs:&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString += "&amp;lt;p&amp;gt;"&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;for sentence in splitIntoSentences(paragraph):&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString += extractSentence(sentence)&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString += "&amp;lt;/p&amp;gt;"&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return xmlString + "&amp;lt;/recipe&amp;gt;"&lt;br/&gt;
+&lt;br/&gt;
+def extractSentence(sentence):&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString = ""&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;wps = dictBasedEnrichment(sentence,ingE unitE)&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;improvedWps = applyRulesToWordProperties(wps, rcp)&lt;/b&gt;&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;for wp in improvedWps:&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString += wp.toXml()&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return xmlString
+&lt;/html&gt;<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="-0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:Shape type="rectangle"/>
-        </y:ShapeNode>
+        </y:UMLNoteNode>
       </data>
     </node>
     <node id="n2">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="121.25" x="-1199.838824438892" y="-357.5694430837702"/>
+          <y:Geometry height="30.0" width="121.25" x="-1199.838824438892" y="-304.5694430837702"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle hasColor="false" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="133.369140625" x="-6.0595703125" y="6.015625">dictBasedExtractor<y:LabelModel>
@@ -92,40 +109,9 @@ extractSentence(sentence:string): str
       </data>
     </node>
     <node id="n4">
-      <data key="d4"/>
-      <data key="d6">
-        <y:UMLNoteNode>
-          <y:Geometry height="198.27924584971623" width="421.7805377211656" x="-1455.4053713343694" y="-556.2409590295981"/>
-          <y:Fill color="#CCFFFF" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="199.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="412.0" x="4.890268860582864" y="-0.36037707514185513">&lt;html&gt;
-def extractRecipe(rcp):&lt;br/&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString = "&amp;lt;recipe&amp;gt;"&lt;br/&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;for sentence in rcp.instructionSentences:&lt;br/&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString += extractSentence(sentence)&lt;br/&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return xmlString + "&amp;lt;/recipe&amp;gt;"&lt;br/&gt;
-&lt;br/&gt;
-def extractSentence(sentence):&lt;br/&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString = ""&lt;br/&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;wps = dictBasedEnrichment(sentence,ingE unitE)&lt;br/&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;improvedWps = applyRulesToWordProperties(wps, rcp)&lt;/b&gt;&lt;br/&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;for wp in improvedWps:&lt;br/&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xmlString += wp.toXml()&lt;br/&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return xmlString
-&lt;/html&gt;<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-        </y:UMLNoteNode>
-      </data>
-    </node>
-    <node id="n5">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="363.95015323285327" x="-1207.475598303025" y="-335.35568161588026"/>
+          <y:Geometry height="30.0" width="363.95015323285327" x="-1207.475598303025" y="-282.35568161588026"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle hasColor="false" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="359.11328125" x="2.418435991426577" y="6.015625">dictBasedEnrichment(text, ingE, unitE): WordProperty[0..*]<y:LabelModel>
@@ -139,10 +125,10 @@ def extractSentence(sentence):&lt;br/&gt;
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n6">
+    <node id="n5">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="53.80045871559628" width="464.4409789209268" x="-801.6252157123733" y="-335.35568161588026"/>
+          <y:Geometry height="53.80045871559628" width="464.4409789209268" x="-801.6252157123733" y="-282.35568161588026"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle hasColor="false" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="42.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="465.0" x="-0.27951053953665905" y="5.900229357798139">&lt;html&gt;
@@ -160,10 +146,10 @@ applyRulesToWordProperties(wps:WordProperty[0..*], rcp:PlanTextRecipe)
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n7">
+    <node id="n6">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="121.25" x="-794.961252027358" y="-357.5694430837702"/>
+          <y:Geometry height="30.0" width="121.25" x="-794.961252027358" y="-335.5694430837702"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle hasColor="false" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="134.529296875" x="-6.6396484375" y="6.015625">ruleBasedExtractor<y:LabelModel>
@@ -177,11 +163,11 @@ applyRulesToWordProperties(wps:WordProperty[0..*], rcp:PlanTextRecipe)
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n8">
+    <node id="n7">
       <data key="d4"/>
       <data key="d6">
         <y:UMLNoteNode>
-          <y:Geometry height="152.5808650065532" width="382.113106528505" x="-760.4612795161624" y="-251.55522290028398"/>
+          <y:Geometry height="152.5808650065532" width="382.113106528505" x="-760.4612795161624" y="-181.77631289591534"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="157.65625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="364.814453125" x="8.649326701752443" y="-2.5376924967233947">def applyRulesToWordProperties(wps, rcp):
@@ -204,7 +190,24 @@ def exampleRule(wps, rcp):
         </y:UMLNoteNode>
       </data>
     </node>
-    <edge id="e0" source="n4" target="n3">
+    <node id="n8">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="160.25" x="-1220.4041801209594" y="-586.6332291257098"/>
+          <y:Fill hasColor="false" transparent="false"/>
+          <y:BorderStyle hasColor="false" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="152.716796875" x="4.0" y="0.0">informationExtraction<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="-0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <edge id="e0" source="n1" target="n3">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-4.405383227050038" ty="4.139656792413007"/>
@@ -214,7 +217,7 @@ def exampleRule(wps, rcp):
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e1" source="n3" target="n5">
+    <edge id="e1" source="n3" target="n4">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="10.049082568807307" sy="4.816406154849233" tx="0.0" ty="0.0">
@@ -227,7 +230,7 @@ def exampleRule(wps, rcp):
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e2" source="n3" target="n6">
+    <edge id="e2" source="n3" target="n5">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="10.801276854796697" sy="0.8943320217708788" tx="0.0" ty="0.0">
@@ -240,7 +243,7 @@ def exampleRule(wps, rcp):
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e3" source="n6" target="n8">
+    <edge id="e3" source="n5" target="n7">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>

@@ -18,7 +18,7 @@
 		<div class="container-fluid">
             <div class="row myHeaderForSideWithMyLeftNavBar">
                 <div class="col-md-12">
-                    <h1><a href="#">Rezepte</a></h1>
+                    <h1><a href="Rezepte.html">Rezepte</a></h1>
                 </div>
             </div>
 
@@ -41,7 +41,7 @@
         <script>
             activeRcp = "notSetYet"; // if not set to anything, jquery is an grumpy idiot
             function str2id(s) {
-                return s.split(" ").join("");
+                return s.split(" ").join("").replace(",");
             }
             
             // load left recipes table of contents
@@ -133,7 +133,7 @@
                     }
                 }
                 
-                return heading+ings+"</ul><br/><br/>" + ( (optIngs.length>9) ?  "<b>Optional:</b>"+optIngs+"</ul>" : "");
+                return heading+ings+"</ul><br/>" + ( (optIngs.length>9) ?  "<b>Optional:</b>"+optIngs+"</ul>" : "");
             }
             
             function getAltsOf(cueAlt, cueAlts) {
@@ -148,7 +148,7 @@
             }
             
             function getInstructions(rcp) {
-                return "<h3>Zubereitung</h3><p>"+rcp["instructions"].join(" ")+"</p>";
+                return "<h3>Zubereitung</h3>"+rcp["instructions"];
             }
             
             function getPicture(rcpId) {
