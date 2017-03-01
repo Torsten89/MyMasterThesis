@@ -85,7 +85,7 @@
                     <p>Jetzt stellt sich nur noch die Frage, woher man so ein Orakel bekommt. Folgend erläutern wir die Idee, wie so ein Orakel antrainiert werden kann. Eine detaillierte Einführung ist in <span cite="CRFIntroduction"></span> zu finden. Wir fangen damit an, dass wir dem Orakel eine Reihe von Wort-Vektoren geben und ihm für diese bereits die passenden Antworten von Label-Vektoren mitgeben. Solch eine Menge von Wort- und entsprechenden Label-Vektoren werden auch <i>Trainingsdaten</i> genannt. Fragen wir es nun nach den Labels von einen dieser Wort-Vektoren, könnte er uns einfach den entsprechenden Label-Vektor orakeln.
                     </p>
                     
-                    <p>Spannend ist die Frage, wie er Labels für Wort-Vektoren rät, von denen er die Lösung nicht kennt. Dafür leitet er zunächst aus den Trainingsdaten eine multivariate  Wahrscheinlichkeits&shy;verteilung \( p(X,Y) \) ab, wie wahrscheinlich zu einem Wort-Vektor \( X \) ein Label-Vektor \( Y \) gehört. Wenn wir jetzt vereinfacht davon ausgehen, dass jedes Label \( y_i \) nur vom vorherigen Label \( y_{i-1} \) und dem entsprechenden Wort \( x_i \) abhängt, ergibt sich Formel (1).
+                    <p>Spannend ist die Frage, wie er Labels für Wort-Vektoren rät, von denen er die Lösung nicht kennt. Dafür leitet er zunächst aus den Trainingsdaten eine multivariate  Wahrscheinlichkeits&shy;verteilung \( p(X,Y) \) ab, wie wahrscheinlich zu einem Wort-Vektor \( X \) ein Label-Vektor \( Y \) gehört. Wenn wir jetzt vereinfacht davon ausgehen, dass jedes Label \( y_i \in Y \) nur vom vorherigen Label \( y_{i-1} \in Y \) und dem entsprechenden Wort \( x_i \in X \) abhängt, ergibt sich Formel (1).
                     </p>
                     
                     \begin{equation} \boldsymbol{ p(X,Y) = \prod_{t=1}^{\#X} p(y_t|y_{t-1}) * p(y_t|x_t) } \end{equation}
@@ -96,7 +96,7 @@
                     \begin{align}
                         mit\ \Theta_{i,j} \in \mathbb{R}^+,\ L = alle\ moeglichen\ Labels, \ W = alle\ moeglichen\ Woerter \nonumber
                         \\
-                        und\ Z(X,Y) = \sum_{X}^{}\sum_{Y}^{}\prod_{t=1}^{\#X} exp(\sum_{i,j\in L}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in L}^{} \sum_{o \in W}^{} \mu_{i,o} * 1_{y=i} * 1_{x_t=o}), \nonumber
+                        und\ Z(X,Y) = \sum_{X \in W}^{}\sum_{Y \in L}^{}\prod_{t=1}^{\#X} exp(\sum_{i,j\in L}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in L}^{} \sum_{o \in W}^{} \mu_{i,o} * 1_{y=i} * 1_{x_t=o}), \nonumber
                         \\
                         \boldsymbol{ p(X,Y) = \frac{1}{Z(X,Y)}\prod_{t=1}^{\#X} exp(\sum_{i,j \in L}^{} \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} + \sum_{i \in L}^{} \sum_{o \in W}^{} \mu_{i,o} * 1_{y=i} * 1_{x_t=o}) }
                     \end{align}
@@ -107,7 +107,7 @@
                     \begin{align}
                         \boldsymbol{ p(X,Y) = \frac{1}{Z(X,Y)}\prod_{t=1}^{\#X} exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, x_t)) },
                         \\
-                        mit,\ Z(X,Y) = \sum_{X,Y}^{}\prod_{t=1}^{\#X} exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, x_t)) \nonumber
+                        mit,\ Z(X,Y) = \sum_{X \in W}^{}\sum_{Y \in L}^{}\prod_{t=1}^{\#X} exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, x_t)) \nonumber
                     \end{align}
                     
                     <p>Wie in Formel (4) zu sehen ist, kann jede multivariate Wahrscheinlichkeit in eine bedingte Wahrscheinlichkeit umgerechnet werden.
