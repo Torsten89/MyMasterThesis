@@ -24,14 +24,11 @@
 
             <div class="row">
                 <div class="col-md-3">
-                    <div class="list-group panel myLeftNavBar rcpsLeftNavBar" id="rcpsPanel">
-                    </div>
+                    <div class="list-group panel rcpsLeftNavBar" id="rcpsPanel"></div>
                 </div>
                 
                 <div class="col-md-9" id="content">
                 </div>
-                
-                
             </div>
         </div>
                 
@@ -44,9 +41,17 @@
                 return s.split(" ").join("").replace(",");
             }
             
-            // load left recipes table of contents
-            for(var rcpType in rcps) {
-                rcpTypeId = str2id(rcpType);
+            // load left recipes table of contents (in alphabetic order)
+            var keys = [];
+            for(var key in rcps) {
+                console.log(key);
+                keys.push(key);
+            }
+            keys.sort();
+            
+            for(var j=0; j<keys.length; j++) {
+                var rcpType = keys[j];
+                var rcpTypeId = str2id(rcpType);
                 $("#rcpsPanel").append('<a id="'+ rcpTypeId+'Expandable' +'" data-toggle="collapse" class="list-group-item" href="#'+rcpTypeId+'">'+rcpType+'<span class="caret" style="float:right;"></span></a>');
                 var expandable = '<div id="'+rcpTypeId+'" class="collapse">';
                 for(var i=0; i<rcps[rcpType].length; i++) {
@@ -169,12 +174,12 @@
             //load recipe if passed by url - has to be called after the table of contents was created!
             var urlQuery = decodeURI(location.search);
 			if(urlQuery == "" || urlQuery == "undefined") {
-				$("#content").html('<img src="images/index/Buchcover.JPG" alt="Buchcover von Davidis Kochbuch" style="max-width:100%; max-height:800px; display:block; margin-left:auto; margin-right:auto;"/>');
+				$("#content").html('<img src="images/index/Buchcover.JPG" alt="Buchcover von Davidis Kochbuch" style="max-width:100%; max-height:80vh; display:block; margin-left:auto; margin-right:auto;"/>');
 			} else {
                 var parameters = urlQuery.substring(1).split("&");
                 var rcpType = parameters[0].split("=")[1];
                 var index = parameters[1].split("=")[1];
-                rcpTypeId = str2id(rcpType);
+                var rcpTypeId = str2id(rcpType);
                 activeRcp = rcpTypeId+index;
                 $("#"+rcpTypeId+"Expandable").attr("aria-expanded", "true");
                 $("#"+rcpTypeId+"Expandable").removeClass("collapsed");
@@ -182,7 +187,16 @@
                 $("#"+rcpTypeId).attr("aria-expanded", "true");
                 loadRecipe(rcpType, index);
             }
+            
+            
+            // let left navbar fill screen height
+            $("#rcpsPanel").height($(window).height() - $("#rcpsPanel").offset().top - 22);
+            $(window).on('resize', function(){
+                $("#rcpsPanel").height($(window).height() - $("#rcpsPanel").offset().top - 22);
+            });
+            
         </script>
+        
         
         <script>activeTab = "Rezepte"</script>
         <script src="js/navbar.js"></script>

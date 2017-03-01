@@ -90,7 +90,14 @@ references = [
         "year":"2001",
         "title":"The Semantic Web",
         "in":"Scientific American, 2001-05, S. 29-37"
-    }, 
+    },
+    {
+        "id":"WWWCERN",
+        "authors":"Berners-Lee",
+        "year":"1989",
+        "title":"Information Management: A Proposal",
+        "url":"https://www.w3.org/History/1989/proposal.html"
+    },
     {
         "id":"manualTaggingErrorProne",
         "authors":"Erdmann, Maedche, Schnurr, Staab",
@@ -187,6 +194,12 @@ references = [
         "year":"2008",
         "title":"The Semantic Web",
         "publisher":"Springer-Verlag Berlin Heidelberg"
+    },
+    {
+        "id":"KnowledgeIsPower",
+        "authors":"Imam Ali",
+        "year":"ca. 599-661 n.Chr.",
+        "title": "Nahj Al-Balagha, Saying 146",
     }
 ]
 

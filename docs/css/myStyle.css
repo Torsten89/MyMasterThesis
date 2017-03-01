@@ -25,6 +25,10 @@ span[cite].beforePunctuation {
 /* -------------- references - end -------------- */
 
 /* -------------- figures - start -------------- */
+figure {
+    margin-bottom: 1em;
+}
+
 figure.supFigure {
     border: 1.5px solid;
     padding: 0.5em;
@@ -107,9 +111,12 @@ figure img {
 }
 
 
-.rcpsLeftNavBar {
-    position: relative;
-    width: auto;
+#rcpsPanel{
+    overflow-y: auto;
+}
+
+.rcpsLeftNavBar div.in { /* overwrite indent of expanded items for recipes */
+    padding-left: 2em;
 }
 /* -------------- left navigation bar - end -------------- */
 

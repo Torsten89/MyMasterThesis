@@ -61,7 +61,7 @@
                     
                     <div class="row">
                         <div class="col-md-5">
-                            <p>Antrainiert haben wir den CRF-based Prototypen mit <a href="#">diesen 9 Rezepten</a>. <a href="#" title="Link zu unserer digitalen Version des Rezeptes">Unser Test-Rezept</a> besteht aus 96 Wörtern. Von den dazugehörenden Labels sind 83 <i>O</i> für <i>others</i>.
+                            <p>Antrainiert haben wir den CRF-based Prototypen mit <a href="images/AutomatischesAnreichrenCueML/Trainings-Rezepte.txt">diesen 9 Rezepten</a>. <a href="images/AutomatischesAnreichrenCueML/Test-Rezept.txt">Unser Test-Rezept</a> besteht aus 96 Wörtern. Von den dazugehörenden Labels sind 83 <i>O</i> für <i>others</i>.
                             </p>
                             
                             <p>Tabelle 1 zeigt die Stellen, in denen sich die manuellen und die vom Prototypen extrahierten Labels unterscheiden. Die beiden Zutaten <i>Kartoffeln </i> und <i>Kartoffel-Klöße</i>, die nicht extrahiert wurden, sind auch nicht in den Trainings-Rezepten vorhanden. <i>Eine</i> und <i>einige</i> hingegen sind in den Trainingsdaten vorhanden. Sie sind mal als Mengenangabe gelabelt (z.B. in <i>eine geriebene gelbe Murzel</i>) und mal nicht (z.B. in <i>dies wird eine Weile gerührt</i>). Wenn dem CRF nur positive Gewichte erlaubt sind, orakelt er auch <i>Griesmehl</i> als <i>O</i>, obwohl Griesmehl in den Trainingsdaten nur einmal als <i>B-Ingredient</i> gelabelt vorkommt.
@@ -144,12 +144,10 @@
                 
                     <div class="row">
                         <div class="col-md-9">
-                            <p>
-                                <figure myModal="images/AutomatischesAnreichrenCueML/cueMLvonAusschnittCRFTrainingsdaten.png">
-                                    <figcaption>Abb. 1: Zu Abb. 2 entsprechender mit cueML ausgezeichneter Text</figcaption>
-                                    <img src="images/AutomatischesAnreichrenCueML/cueMLvonAusschnittCRFTrainingsdaten.png"/>
-                                </figure>
-                            </p>
+                            <figure myModal="images/AutomatischesAnreichrenCueML/cueMLvonAusschnittCRFTrainingsdaten.png">
+                                <figcaption>Abb. 1: Zu Abb. 2 entsprechender mit cueML ausgezeichneter Text</figcaption>
+                                <img src="images/AutomatischesAnreichrenCueML/cueMLvonAusschnittCRFTrainingsdaten.png"/>
+                            </figure>
                             
                             <p>Abb. 1 zeigt den zu den gelabelten Trainingsdaten aus Abb. 2 entsprechenden mit cueML ausgezeichneten Text. Bereits in diesem kleinen Ausschnitt der Trainingsdaten lassen sich viele Stolpersteine finden:
                             </p>
@@ -215,12 +213,10 @@
                         </div>
                         
                         <div class="col-md-6">
-                            <p>
-                                <figure myModal="images/Evaluierung/precision.png">
-                                    <figcaption>Abb. 4: Precision</figcaption>
-                                    <img src="images/Evaluierung/precision.png"/>
-                                </figure>
-                            </p>
+                            <figure myModal="images/Evaluierung/precision.png">
+                                <figcaption>Abb. 4: Precision</figcaption>
+                                <img src="images/Evaluierung/precision.png"/>
+                            </figure>
                         </div>
                     </div>
                     
