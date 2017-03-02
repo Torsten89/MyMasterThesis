@@ -109,13 +109,13 @@
                     \begin{align}
                         \boldsymbol{ p(X,Y) = \frac{1}{Z}\prod_{t=1}^{\#X} exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, x_t)) },
                         \\
-                        mit,\ Z( = \sum_{X \in X^*}^{}\sum_{Y \in Y^*}^{}\prod_{t=1}^{\#X} exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, x_t)) \nonumber
+                        mit\ Z = \sum_{X \in X^*}^{}\sum_{Y \in Y^*}^{}\prod_{t=1}^{\#X} exp(\sum_{k=1}^{K} \Theta_{k} * f_k(y_t, y_{t-1}, x_t)) \nonumber
                     \end{align}
                     
                     <p>Wie in Formel (4) zu sehen ist, kann jede multivariate Wahrscheinlichkeit in eine bedingte Wahrscheinlichkeit umgerechnet werden.
                     </p>
                     
-                    \begin{equation} \boldsymbol{ p(Y|X) = \frac{p(X,Y)}{\sum_{Y'\in L}^{}p(Y', X)} } \end{equation}
+                    \begin{equation} \boldsymbol{ p(Y|X) = \frac{p(X,Y)}{\sum_{Y'\in Y^*}^{}p(Y', X)} } \end{equation}
                     
                     <p><b>Eine nahe liegende Art zu Orakeln ist nun Formel (5)</b>, was nebenbei erwähnt, bis hierhin erläutert, ein Hidden Markov Model (HMM) ist:
                     </p>
