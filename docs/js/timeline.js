@@ -1,5 +1,4 @@
 // collapse first line of timeline
-/*$("[fstLineToggle]").each(function() {collapseFstLine($(this), 0) });*/
 $("[fstLineToggle]").each(function() {
     var lineToToggle = "#" + $(this).attr("fstLineToggle");
     $(lineToToggle).toggle(0);
@@ -12,31 +11,32 @@ $("[fstLineToggle]").each(function() {
 });
 
 
-// set active dot and "load" content
+// set active/in dot and collapse content
 var activeContent = "";
 $(".sndLine").each(function() {
-    //var dotClass = $(this).attr("dotClass");
     $(this).children(".timelineItem").each(function() {
         var id = $(this).attr("id");
         
-        //set active dot
+        //set active/in dot
         $(this).click(function () {
-            if($("#"+id +" span").hasClass("active")) {
-                return // was already the active item
+            console.log("hi")
+            console.log(activeContent)
+            if(activeContent!= "") {
+                $("#"+activeContent).attr("aria-expanded", "false");
+                console.log(activeContent.replace("Item", "Content"));
+                $("#"+activeContent.replace("Item", "Content")).removeClass("in");
             }
-            
-            $(".sndLine .timelineDot").removeClass("active");
-            $(this).children("span").addClass("active");
-            
-            // "load" content
+            activeContent = id;
+/*            // "load" content
             var contentId = "#" + id.replace("Item", "Content");
+            console.log(contentId);
             var ths  = $(contentId);
             if(activeContent != "") {
                 $(activeContent).toggle(400, function() { ths.toggle(400); });
             } else {
                 ths.toggle(400);
             }
-            activeContent = contentId;
+            activeContent = contentId;*/
         });
     });
 });

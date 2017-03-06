@@ -50,5 +50,4 @@ function connectModalWithElem(elem, id) {
     
     modalElem.attr("data-toggle", "modal");
     modalElem.attr("data-target", "#"+id);
-    modalElem.attr("style", "cursor:pointer;");
 }

@@ -44,31 +44,35 @@
                     </p>
                     
                     
-                    <div class="timeline">
+                    <div class="timeline" id="timelineDiv">
                         <div class="row">
-                            <div class="col-md-3" style="border-right: solid 3px;">
+                            <div class="col-md-3">
                                 <span class="timelineItem" fstLineToggle="greenTimeline"><span class="timelineDot timelineDotGreen active"></span></span>Transkription <br/>
                                 <div id="greenTimeline">
                                     <span class="timelineLinesConnectionExpand"></span> <br/>
                                     <div class="sndLine">
-                                        <span id="timelineItem1_1" class="timelineItem"><span class="timelineDot timelineDotGreen"></span></span>Gedrucktes Buch<br/>
+                                        <a id="timelineItem1_1" href="#timelineContent1_1" class="timelineItem" data-toggle="collapse"><span class="timelineDot timelineDotGreen"></span></a>Gedrucktes Buch<br/>
                                         <span class="timelineConnection"></span><br/>
-                                        <span id="timelineItem1_2" class="timelineItem"><span class="timelineDot timelineDotGreen"></span></span>Eingescanntes Buch<br/>
+                                        <a id="timelineItem1_2" href="#timelineContent1_2" class="timelineItem" data-toggle="collapse"><span class="timelineDot timelineDotGreen"></span></a>Eingescanntes Buch<br/>
                                         <span class="timelineConnection"></span><br/>
-                                        <span id="timelineItem1_3" class="timelineItem"><span class="timelineDot timelineDotGreen"></span></span>Transkription des DTA<br/>
+                                        <a id="timelineItem1_3" href="#timelineContent1_3" class="timelineItem" data-toggle="collapse"><span class="timelineDot timelineDotGreen"></span></a>Transkription des DTA<br/>
                                         <span class="timelineConnection"></span><br/>
-                                        <span id="timelineItem1_4" class="timelineItem"><span class="timelineDot timelineDotGreen"></span></span>Unsere Transkription
+                                        <a id="timelineItem1_4" href="#timelineContent1_4" class="timelineItem" data-toggle="collapse"><span class="timelineDot timelineDotGreen"></span></a>Unsere Transkription
                                     </div>
                                     <span class="timelineLinesConnectionClose"></span>
                                 </div><br/>
                                 
-                                <span class="timelineItem"><span class="timelineDot timelineDotOrange active" fstLineToggle="orangeTimeline"></span></span>Auszeichnugnssprachen<br/>
-                                <div id="orangeTimeline">    
-                                    <span class="timelineLinesConnectionExpand"></span><br/>
-                                    <div class="sndLine" dotClass="timelineDotOrange">
-                                        <span id="timelineItem2_1" class="timelineItem"><span class="timelineDot timelineDotOrange"></span></span>Stand der Forschung<br/>
+                                <span class="timelineItem" fstLineToggle="greenTimeline"><span class="timelineDot timelineDotGreen active"></span></span>Transkription <br/>
+                                <div id="greenTimeline">
+                                    <span class="timelineLinesConnectionExpand"></span> <br/>
+                                    <div class="sndLine">
+                                        <a id="timelineItem1_1" href="#timelineContent1_1" class="timelineItem" data-toggle="collapse"><span class="timelineDot timelineDotGreen"></span></a>Gedrucktes Buch<br/>
                                         <span class="timelineConnection"></span><br/>
-                                        <span id="timelineItem2_2" class="timelineItem"><span class="timelineDot timelineDotOrange"></span></span>cueML<br/>
+                                        <a id="timelineItem1_2" href="#timelineContent1_2" class="timelineItem" data-toggle="collapse"><span class="timelineDot timelineDotGreen"></span></a>Eingescanntes Buch<br/>
+                                        <span class="timelineConnection"></span><br/>
+                                        <a id="timelineItem1_3" href="#timelineContent1_3" class="timelineItem" data-toggle="collapse"><span class="timelineDot timelineDotGreen"></span></a>Transkription des DTA<br/>
+                                        <span class="timelineConnection"></span><br/>
+                                        <a id="timelineItem1_4" href="#timelineContent1_4" class="timelineItem" data-toggle="collapse"><span class="timelineDot timelineDotGreen"></span></a>Unsere Transkription
                                     </div>
                                     <span class="timelineLinesConnectionClose"></span>
                                 </div><br/>
@@ -89,13 +93,71 @@
                                 
                             </div>
                         
-                            <div class="col-md-9 timelineContent">
-                                <div id="timelineContent1_1">
-                                    <p>WOLOLOLO</p>
+                            <div class="col-md-9" id="content">
+                                <div id="timelineContent1_1" class="collapse">
+                                    <figure myModal="images/index/Buchcover.JPG">
+                                        <img src="images/index/Buchcover.JPG" style="max-height:400px; vertical-align:baseline;margin-left:0px;"/>
+                                        <figcaption style="text-align:left;"><small>* Da das originale Buchcover nicht erhalten ist,  ist hier das Buchcover von Marie Walters überarbeiteten Ausgabe (1933) zu sehen.</small></figcaption>
+                                    </figure>
                                 </div>
-                                <div id="timelineContent1_2">
-                                    <p>Need more wood</p>
+                                
+                                <div id="timelineContent1_2" class="collapse">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <h4>Neue Version</h4>
+                                            <figure myModal="images/Zusammenfassung/B-3.jpg">
+                                                <figcaption><span cite="DavidisKochbuchDTA"></span></figcaption>
+                                                <img src="images/Zusammenfassung/B-3.jpg" style="max-height: 600px;" />  
+                                            </figure>
+                                        </div>
+                                        <div class="col-md-5 newOldBorder">
+                                            <h4>Vorherige Version</h4>
+                                            <figure myModal="images/index/Buchcover.JPG">
+                                                <img src="images/index/Buchcover.JPG"/>
+                                                <figcaption><small>* Da das originale Buchcover nicht erhalten ist,  ist hier das Buchcover von Marie Walters überarbeiteten Ausgabe (1933) zu sehen.</small></figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
                                 </div>
+                                
+                                <div id="timelineContent1_3" class="collapse">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <h4>Neue Version</h4>
+                                            <figure myModal="images/Transkription/B3TEIOrig.png">
+                                                <figcaption><span cite="DavidisKochbuchDTA"></span></figcaption>
+                                                <img src="images/Transkription/B3TEIOrig.png"/>  
+                                            </figure>
+                                        </div>
+                                        <div class="col-md-5 newOldBorder">
+                                            <h4>Vorherige Version</h4>
+                                            <figure myModal="images/Problemstellung/B3Bild.jpg">
+                                                <figcaption><span cite="DavidisKochbuchDTA"></span></figcaption>
+                                                <img src="images/Problemstellung/B3Bild.jpg" />  
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="timelineContent1_4" class="collapse">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <h4>Neue Version</h4>
+                                            <figure myModal="images/Problemstellung/B3TEI.png">
+                                                <figcaption><a href="Transkription.html">Unsere Transkription</a></figcaption>
+                                                <img src="images/Problemstellung/B3TEI.png"/>  
+                                            </figure>
+                                        </div>
+                                        <div class="col-md-5 newOldBorder">
+                                            <h4>Vorherige Version</h4>
+                                            <figure myModal="images/Transkription/B3TEIOrig.png">
+                                                <figcaption><span cite="DavidisKochbuchDTA"></span></figcaption>
+                                                <img src="images/Transkription/B3TEIOrig.png"/>  
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -130,7 +192,7 @@
         <script>activeTab = "DigitaleEdition"</script>
         <script src="js/navbar.js"></script>
         <script src="js/figure2modal.js"></script>
-        <script src="js/timeline.js"></script
+        <script src="js/timeline.js"></script>
         <script src="js/references.js"></script>
 	</body>
 </html> 
