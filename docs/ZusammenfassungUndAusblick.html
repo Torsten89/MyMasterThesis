@@ -7,6 +7,7 @@
         
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/myStyle.css">
+        <link rel="stylesheet" href="css/timeline.css">
         
 		<script src="js/jquery.min.js"></script>
 		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
@@ -43,6 +44,63 @@
                     </p>
                     
                     
+                    <div class="timeline">
+                        <div class="row">
+                            <div class="col-md-3" style="border-right: solid 3px;">
+                                <span class="timelineItem" fstLineToggle="greenTimeline"><span class="timelineDot timelineDotGreen active"></span></span>Transkription <br/>
+                                <div id="greenTimeline">
+                                    <span class="timelineLinesConnectionExpand"></span> <br/>
+                                    <div class="sndLine">
+                                        <span id="timelineItem1_1" class="timelineItem"><span class="timelineDot timelineDotGreen"></span></span>Gedrucktes Buch<br/>
+                                        <span class="timelineConnection"></span><br/>
+                                        <span id="timelineItem1_2" class="timelineItem"><span class="timelineDot timelineDotGreen"></span></span>Eingescanntes Buch<br/>
+                                        <span class="timelineConnection"></span><br/>
+                                        <span id="timelineItem1_3" class="timelineItem"><span class="timelineDot timelineDotGreen"></span></span>Transkription des DTA<br/>
+                                        <span class="timelineConnection"></span><br/>
+                                        <span id="timelineItem1_4" class="timelineItem"><span class="timelineDot timelineDotGreen"></span></span>Unsere Transkription
+                                    </div>
+                                    <span class="timelineLinesConnectionClose"></span>
+                                </div><br/>
+                                
+                                <span class="timelineItem"><span class="timelineDot timelineDotOrange active" fstLineToggle="orangeTimeline"></span></span>Auszeichnugnssprachen<br/>
+                                <div id="orangeTimeline">    
+                                    <span class="timelineLinesConnectionExpand"></span><br/>
+                                    <div class="sndLine" dotClass="timelineDotOrange">
+                                        <span id="timelineItem2_1" class="timelineItem"><span class="timelineDot timelineDotOrange"></span></span>Stand der Forschung<br/>
+                                        <span class="timelineConnection"></span><br/>
+                                        <span id="timelineItem2_2" class="timelineItem"><span class="timelineDot timelineDotOrange"></span></span>cueML<br/>
+                                    </div>
+                                    <span class="timelineLinesConnectionClose"></span>
+                                </div><br/>
+                                
+                                <span class="timelineItem"><span class="timelineDot timelineDotYellow active" fstLineToggle="redTimeline"></span></span>Information Extraction<br/>
+                                <div id="redTimeline">    
+                                    <span class="timelineLinesConnectionExpand"></span><br/>
+                                    <div class="sndLine" dotClass="timelineDotOrange">
+                                        <span id="timelineItem3_1" class="timelineItem"><span class="timelineDot timelineDotOrange"></span></span>Stand der Forschung<br/>
+                                        <span class="timelineConnection"></span><br/>
+                                        <span id="timelineItem3_2" class="timelineItem"><span class="timelineDot timelineDotOrange"></span></span>Unser Prototyp<br/>
+                                    </div>
+                                    <span class="timelineLinesConnectionClose"></span>
+                                </div><br/>
+                                
+                                <span id="timelineItem4_1" class="timelineItem"><span class="timelineDot timelineDotRed active"></span></span>Digitale Rezepte<br/>
+                                    
+                                
+                            </div>
+                        
+                            <div class="col-md-9 timelineContent">
+                                <div id="timelineContent1_1">
+                                    <p>WOLOLOLO</p>
+                                </div>
+                                <div id="timelineContent1_2">
+                                    <p>Need more wood</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
                     <h2 id="Ausblick" class="myAnchorWithFixedheader">Ausblick</h2>
                     
                     <p>Diese Arbeit war der Startschuss in ein neues Forschungsfeld. Dementsprechend stehen noch weitere Arbeiten an, die wir folgend auflisten wollen:
@@ -72,6 +130,7 @@
         <script>activeTab = "DigitaleEdition"</script>
         <script src="js/navbar.js"></script>
         <script src="js/figure2modal.js"></script>
+        <script src="js/timeline.js"></script
         <script src="js/references.js"></script>
 	</body>
 </html> 

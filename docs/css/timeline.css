@@ -1,0 +1,83 @@
+.timelineItem {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 3px solid;
+    background-color: white;
+    padding-bottom: -5px;
+    margin-right: 3px;
+}
+
+.timelineDot {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 13px;
+    z-index: 1;
+    margin-left: 2px;
+    margin-top: 2px;
+    opacity: 0;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.timelineDot.active {
+    opacity: 1;
+}
+
+.timelineDotGreen {
+    background-color: #9DB668;
+}
+
+.timelineDotOrange{
+    background-color: rgb(242, 104, 5);
+}
+
+.timelineDotRed{
+    background-color: rgb(143, 24, 24);
+}
+
+.timelineDotYellow {
+    background-color: rgb(255, 208, 66);
+}
+
+.timelineConnection {
+    position: relative;
+    border-left: solid 2px;
+    margin-left: -18px;
+    z-index: -2;
+}
+
+.timelineLinesConnectionExpand {
+    width: 40px;
+    height: 20px;
+    border-bottom: 2px solid;
+    -webkit-transform: translate(-8px, -5px) rotate(27deg);  
+    -ms-transform: translate(-8px, -5px) rotate(27deg); 
+    transform: translate(-8px, -5px) rotate(27deg); 
+    position: absolute;
+}
+
+.timelineLinesConnectionClose {
+    width: 40px;
+    height: 20px;
+    border-bottom: 2px solid;
+    -webkit-transform: translate(-68px, -5px) rotate(-27deg); 
+    -ms-transform: translate(-68px, -5px) rotate(-27deg); 
+    transform: translate(-68px, -5px) rotate(-27deg);
+    position: absolute;
+    z-index: -2;
+}
+
+.sndLine {    
+    margin-left: 50px;
+}
+
+
+
+.timelineContent div {
+    display: none;
+}
