@@ -61,12 +61,12 @@
 }
 
 .timelineLinesConnectionClose {
-    width: 40px;
-    height: 20px;
+    width: 50px;
+    height: 25px;
     border-bottom: 2px solid;
-    -webkit-transform: translate(-68px, -5px) rotate(-27deg); 
-    -ms-transform: translate(-68px, -5px) rotate(-27deg); 
-    transform: translate(-68px, -5px) rotate(-27deg);
+    -webkit-transform: translate(-68px, -5px) rotate(153deg); 
+    -ms-transform: translate(-68px, -5px) rotate(153deg); 
+    transform: translate(-55px, 12px) rotate(153deg);
     position: absolute;
     z-index: -2;
 }
