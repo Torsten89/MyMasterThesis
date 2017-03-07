@@ -103,14 +103,14 @@
                         continue;
                     var ing = rcp["ingredients"][i];
                     if(ing["optional"]=="True") {
-                        optIngs += "<li>"+ing["words"].join(" ")+"</li>";
+                        optIngs += "<li>"+jsonIng2Str(ing)+"</li>";
                     } else if (ing["altGrp"]!=undefined) {
-                        ings += "<li>"+ing["words"].join(" ");
+                        ings += "<li>"+jsonIng2Str(ing);
                             var cueAlt = ing["altGrp"];
                             for(var j=i+1; j<rcp["ingredients"].length; j++) {
                                 var ingPrime = rcp["ingredients"][j];
                                 if(ingPrime["altGrp"] == cueAlt) {
-                                    ings += " und " + ingPrime["words"].join(" ");
+                                    ings += " und " + jsonIng2Str(ingPrime);
                                     alreadyHandledIngs.push(j);
                                 }
                             }
@@ -123,10 +123,10 @@
                                     var ingPrime = rcp["ingredients"][j];
                                     if(ingPrime["altGrp"] == altToThisIngr) {
                                         if(first) {
-                                            ings += ingPrime["words"].join(" ");
+                                            ings += jsonIng2Str(ingPrime);
                                             first = false;
                                         } else {
-                                            ings += " und " + ingPrime["words"].join(" ");
+                                            ings += " und " + jsonIng2Str(ingPrime);
                                         }
                                         alreadyHandledIngs.push(j);
                                     }
@@ -134,7 +134,7 @@
                             }
                         ings += "</li>";
                     } else {
-                        ings += "<li>"+ing["words"].join(" ")+"</li>";
+                        ings += "<li>"+jsonIng2Str(ing)+"</li>";
                     }
                 }
                 
@@ -150,6 +150,17 @@
                     }
                 }   
                 return [];
+            }
+            
+            function jsonIng2Str(ing) {
+                result = "";
+                if(ing.hasOwnProperty("quantity")) {
+                    result += ing["quantity"]+" ";
+                }
+                if(ing.hasOwnProperty("unit")) {
+                    result += ing["unit"]+" ";
+                }
+                return result + ing["words"].join(" ");
             }
             
             function getInstructions(rcp) {

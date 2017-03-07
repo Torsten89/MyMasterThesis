@@ -1,14 +1,31 @@
+Startseite offen (für kulinarische Analyse), Rezepte alt offen (B-16)
+
+Vorteil von Webseite
+- 1989 T. B.-Lee Proposol: Doku durch Buch zu Projekt, welches durch ständig andere Leute weiterentwickelt wird, ist mist
+- mehr Platz (für Grafiken), Verweise/Links netter, Blog können andere Wissenschaftler mitmachen + Kommunikation mit Betreuer, leicht veröffentlichbar und auffindbar (auch für Laien nett zugänglich)... 
+- Nachteil: Fragen keine Foliennr. -> einfach Fragen
+- Eigentlich das Problem, hier Inhaltsverzeichnis, aber interactiver timeline :)
+
+
 Transkription
 - strukturelle und linguistische Merkmale deutschsprachiger Texte des 17. bis zum 19. Jahrhunderts
 
-Auszeichnungssprachen (Link zum Kapitel Auszeichnen von Rezepten gif unhappy/nachdenklich)
-- Auszeichnungssprache mit wohl definiertem Vokabular und Beziehungen zwischen Voks
+Auszeichnungssprachen
+- Schema.org: Microdata, RDF, JSON
 - image, aggregateRating.ratingValue, description
+- cueML:
+	- ZUTATENLISTE
+	- im Rezept Sellerie, Muskat
+	- some data is better than none vs Grammar! (validation (tippfehler), doku)
+	
+	
+CRF:
+-negative Gewichte!	
+	
+CRF-Prototyp:
+- Wort-Identität + Übergang von zwei benachbarten Labels + negative Gewichte
+	
+Dict-Prototyp:
+- durch weniger exact match gehen rough matches verloren -> mehr
+- durch opt/alt entstehen rough matches statt exact matches
 
-- alt und opt -> eigene Rezepte (Beispiel 4 unterschiedliche)
-- some data is better than none vs Grammar! (validation (tippfehler), doku)
-
-- im Rezept Sellerie, Muskat
-
-IE
-- Stand der Forschung (smiley idee glühbirne kaputt)

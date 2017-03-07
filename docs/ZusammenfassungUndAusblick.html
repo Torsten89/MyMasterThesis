@@ -40,14 +40,14 @@
                     <p>Bis zu dieser Arbeit gab es noch kein frei verfügbares Vokabular in der Koch-Domäne, welches eine kulinarische Analyse von Rezepten ermöglicht. Daher haben wir Anforderungen an so ein Vokabular aufgestellt und darauf aufbauend <a href="cueML.html">culinary editions Markup Language (cueML)</a> entwickelt. CueML erweitert den Standard der <a href="http://www.tei-c.org/index.xml">TEI: Text Encoding Initiative</a> und <a href="https://schema.org/Recipe">Schema.org/Recipe</a>. Es führt unter anderem Möglichkeiten zur Auszeichnung von Mengenangaben und Einheiten von Zutaten ein, sowie Unterscheidungen zwischen optionalen und alternativen Zutaten. Verweise auf Teil-Rezepte können gesetzt werden, wie auch allgemeine Verweise auf andere Stellen.
                     </p>
                     
-                    <p>Da das manuelle Auszeichnen zeitaufwendig und fehleranfällig ist, haben wir des Weiteren an Prototypen zum automatischen Auszeichnen geforscht. Dazu müssen die auszuzeichnenden Entities zuerst extrahiert werden. Für das Extrahieren haben wir zwei verschiedene Ansätze ausprobiert. Der <a href="AutomatischesAuszeichnenCueML.html#CRFPrototyp">Conditional Random Field-based Prototyp</a> hat sich nicht als zielführend erwiesen. Der <a href="AutomatischesAuszeichnenCueML.html#Dictbased">dictionary- and rule-based Prototyp</a> ist hingegen vielversprechend.
+                    <p>Da das manuelle Auszeichnen zeitaufwendig und fehleranfällig ist, haben wir des Weiteren an Prototypen zum automatischen Auszeichnen geforscht. Dazu müssen die auszuzeichnenden Entities zuerst extrahiert werden. Für das Extrahieren haben wir zwei verschiedene Ansätze ausprobiert. Der <a href="AutomatischesAuszeichnenCueML.html#CRFPrototyp">Conditional Random Field-based Prototyp</a> hat sich nicht als zielführend erwiesen. Der <a href="AutomatischesAuszeichnenCueML.html#Dictbased">dictionary- and rule<wbr/>-based Prototyp</a> ist hingegen vielversprechend.
                     </p>
                     
                     
                     <div class="timeline" id="timelineDiv">
                         <div class="row">
                             <div class="col-md-3">
-                                <span class="timelineItem" fstLineToggle="greenTimeline"><span class="timelineDot timelineDotGreen active"></span></span>Transkription <br/>
+                                <span class="timelineItem" fstLineToggle="greenTimeline"><span class="timelineDot timelineDotGreen"></span></span>Transkription <br/>
                                 <div id="greenTimeline">
                                     <span class="timelineLinesConnectionExpand"></span> <br/>
                                     <div class="sndLine">
@@ -62,7 +62,7 @@
                                     <span class="timelineLinesConnectionClose"></span>
                                 </div><br/>
                                 
-                                <span class="timelineItem" fstLineToggle="orangeTimeline"><span class="timelineDot timelineDotOrange active"></span></span>Auszeichnungssprachen <br/>
+                                <span class="timelineItem" fstLineToggle="orangeTimeline"><span class="timelineDot timelineDotOrange"></span></span>Auszeichnungssprachen <br/>
                                 <div id="orangeTimeline">
                                     <span class="timelineLinesConnectionExpand"></span> <br/>
                                     <div class="sndLine">
@@ -73,7 +73,7 @@
                                     <span class="timelineLinesConnectionClose"></span>
                                 </div><br/>
                                 
-                                <span class="timelineItem" fstLineToggle="yellowTimeline"><span class="timelineDot timelineDotYellow active"></span></span>Information Extraction<br/>
+                                <span class="timelineItem" fstLineToggle="yellowTimeline"><span class="timelineDot timelineDotYellow"></span></span>Information Extraction<br/>
                                 <div id="yellowTimeline">    
                                     <span class="timelineLinesConnectionExpand"></span><br/>
                                     <div class="sndLine">
@@ -84,16 +84,18 @@
                                     <span class="timelineLinesConnectionClose"></span>
                                 </div><br/>
                                 
-                                <span id="timelineItem4_1" class="timelineItem" fstLineToggle="yellowTimeline"><span class="timelineDot timelineDotRed active"></span></span>Digitale Rezepte<br/>
+                                <a id="timelineItem4_1" href="#timelineContent4_1" class="timelineItem" data-toggle="collapse"><span class="timelineDot timelineDotRed active"></span></a>Digitale Rezepte<br/>
                                     
-                                
                             </div>
                         
+                            
+                            
+                            
                             <div class="col-md-9" id="content">
                                 <div id="timelineContent1_1" class="collapse">
                                     <figure myModal="images/index/Buchcover.JPG">
-                                        <img src="images/index/Buchcover.JPG" style="max-height:400px; vertical-align:baseline;margin-left:0px;"/>
                                         <figcaption style="text-align:left;"><small>* Da das originale Buchcover nicht erhalten ist,  ist hier das Buchcover von Marie Walters überarbeiteten Ausgabe (1933) zu sehen.</small></figcaption>
+                                        <img src="images/index/Buchcover.JPG" style="max-height:400px; vertical-align:baseline;margin-left:0px;"/>
                                     </figure>
                                 </div>
                                 
@@ -102,15 +104,15 @@
                                         <div class="col-md-7 borderToOld">
                                             <h4 class="new">Neue Version</h4>
                                             <figure myModal="images/Zusammenfassung/B-3.jpg">
+                                                <figcaption>Seiten des Buches eingescannt <span cite="DavidisKochbuchDTA"></span></figcaption>
                                                 <img src="images/Zusammenfassung/B-3.jpg" style="max-height: 600px;" />  
-                                                <figcaption><span cite="DavidisKochbuchDTA"></span></figcaption>
                                             </figure>
                                         </div>
                                         <div class="col-md-5">
                                             <h4 class="old">Vorherige Version</h4>
                                             <figure myModal="images/index/Buchcover.JPG">
-                                                <img src="images/index/Buchcover.JPG"/>
                                                 <figcaption><small>* Da das originale Buchcover nicht erhalten ist,  ist hier das Buchcover von Marie Walters überarbeiteten Ausgabe (1933) zu sehen.</small></figcaption>
+                                                <img src="images/index/Buchcover.JPG"/>
                                             </figure>
                                         </div>
                                     </div>
@@ -121,14 +123,14 @@
                                         <div class="col-md-7 borderToOld">
                                             <h4 class="new">Neue Version</h4>
                                             <figure myModal="images/Transkription/B3TEIOrig.png">
-                                                <figcaption><span cite="DavidisKochbuchDTA"></span></figcaption>
+                                                <figcaption>Transkription des Deutschen Textarchivs <br/> <span cite="DavidisKochbuchDTA"></span></figcaption>
                                                 <img src="images/Transkription/B3TEIOrig.png"/>  
                                             </figure>
                                         </div>
                                         <div class="col-md-5">
                                             <h4 class="old">Vorherige Version</h4>
                                             <figure myModal="images/Problemstellung/B3Bild.jpg">
-                                                <figcaption><span cite="DavidisKochbuchDTA"></span></figcaption>
+                                                <figcaption>Seiten des Buches eingescannt <br/> <span cite="DavidisKochbuchDTA"></span></figcaption>
                                                 <img src="images/Problemstellung/B3Bild.jpg" />  
                                             </figure>
                                         </div>
@@ -147,7 +149,7 @@
                                         <div class="col-md-5">
                                             <h4 class="old">Vorherige Version</h4>
                                             <figure myModal="images/Transkription/B3TEIOrig.png">
-                                                <figcaption><span cite="DavidisKochbuchDTA"></span></figcaption>
+                                                <figcaption>Transkription des DTA <span cite="DavidisKochbuchDTA"></span></figcaption>
                                                 <img src="images/Transkription/B3TEIOrig.png"/>  
                                             </figure>
                                         </div>
@@ -158,6 +160,7 @@
                                 
                                 <div id="timelineContent2_1" class="collapse">
                                     <h4><a href="AuszeichnenRezepte.html">Link zum Kapitel Auszeichnen von Rezepten</a></h4>
+                                    <p><b>Informationen werden durch eine Auszeichnungssprache mit wohl definiertem Vokabular und Beziehungen zwischen den Vokabeln zugänglich gemacht.</b></p>
                                     <p>Existierende Auszeichnungssprachen in der Koch-Domäne:</p>
                                     <ul>
                                         <li><a href="http://www.tei-c.org/index.xml" title="TEI: Text Encoding Initiative">TEI</a></li>
@@ -168,10 +171,13 @@
                                 
                                 <div id="timelineContent2_2" class="collapse">
                                     <div class="row">
+                                        <h4><a href="cueML.html">Link zum Kapitel Domänen-spezifisches Vokabular <i>cueML</i></a></h4>
+                                        <p>Koch-Domänen-spezifisches Vokabular für <b>kulinarische Analysen</b>.</p>
+                                        
                                         <div class="col-md-7 borderToOld">
                                             <h4 class="new">Neue Version</h4>
                                             <figure myModal="images/Zusammenfassung/B3cueML.png">
-                                                <figcaption>Mit <i>cueML</i> ausgezeichnet</figcaption>
+                                                <figcaption>Manuell mit <i>cueML</i> ausgezeichnet</figcaption>
                                                 <img src="images/Zusammenfassung/B3cueML.png"/>  
                                             </figure>
                                         </div>
@@ -183,15 +189,13 @@
                                             </figure>
                                         </div>
                                     </div>
-                                    
-                                    <h4><a href="AuszeichnenRezepte.html">Link zum Kapitel Domänen-spezifisches Vokabular <i>cueML</i></a></h4>
                                 </div>
                                 
                                 
                                 
                                 <div id="timelineContent3_1" class="collapse">
                                     <h4><a href="IEKochDomain.html">Link zum Kapitel Information Extraction in der Koch-Domäne</a></h4>
-                                    <p>Bestehende Ansätze zum Information Extraction in der Koch-Domäne:</p>
+                                    <p>Bestehende Ansätze um in der Koch-Domäne automatisiert Entities/Vokabeln sowie ihre Beziehungen untereinander zu extrahieren. Nach dem diese extrahiert sind, können sie automatisiert, mit <i>cueML</i> ausgezeichnet, zurückgeschrieben werden.</p>
                                     <ul>
                                         <li><a href="IEKochDomain.html#REBased">RE-based</a></li>
                                         <li><a href="IEKochDomain.html#CRFBased">CRF-based</a></li>
@@ -200,24 +204,7 @@
                                 </div>
                                 
                                 <div id="timelineContent3_2" class="collapse">
-                                    <div class="row">
-                                        <div class="col-md-7 borderToOld">
-                                            <h4 class="new">Neue Version</h4>
-                                            <figure myModal="images/Zusammenfassung/B3cueML.png">
-                                                <figcaption>Automatisierte Auszeichnung mit <i>cueML</i></figcaption>
-                                                <img src="images/Zusammenfassung/B3cueML.png"/>  
-                                            </figure>
-                                        </div>
-                                        <div class="col-md-5">
-                                            <h4 class="old">Vorherige Version</h4>
-                                            <figure myModal="images/Problemstellung/B3TEI.png">
-                                                <figcaption>Unsere Transkription</figcaption>
-                                                <img src="images/Problemstellung/B3TEI.png"/>  
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    
-                                    <h4><a href="IEKochDomain.html">Link zum Kapitel Automatisches Auszeichnen mit <i>cueML</i></a></h4>
+                                    <h4><a href="AutomatischesAuszeichnenCueML.html">Link zum Kapitel Automatisches Auszeichnen mit <i>cueML</i></a></h4>
                                     <ul>
                                         <li><a href="AutomatischesAuszeichnenCueML.html#CRFPrototyp">CRF-based</a></li>
                                         <li><a href="AutomatischesAuszeichnenCueML.html#Dictbased">Dictionary- and rule-based</a></li>
@@ -228,6 +215,47 @@
                                         <li><a href="AutomatischesAuszeichnenCueML.html#CRFPrototyp">CRF-based</a></li>
                                         <li><a href="AutomatischesAuszeichnenCueML.html#Dictbased">Dictionary- and rule-based</a></li>
                                     </ul>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-7 borderToOld">
+                                            <h4 class="new">Neue Version</h4>
+                                            <figure myModal="images/Zusammenfassung/B3cueMLAuto.png">
+                                                <figcaption>Automatisierte Auszeichnung mit <i>cueML</i></figcaption>
+                                                <img src="images/Zusammenfassung/B3cueMLAuto.png"/>  
+                                            </figure>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h4 class="old">Vorherige Version</h4>
+                                            <figure myModal="images/Problemstellung/B3TEI.png">
+                                                <figcaption>Unsere Transkription</figcaption>
+                                                <img src="images/Problemstellung/B3TEI.png"/>  
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                <div id="timelineContent4_1" class="collapse">
+                                    <div class="row">
+                                        <h4><a href="Rezepte.html">Link zu den digitalen Rezepten</a></h4>
+                                        <p>Mit cueML ausgezeichnete Rezepte mittels JSON in HTML umgewandelt.</p>
+                                        
+                                        <div class="col-md-7 borderToOld">
+                                            <h4 class="new">Neue Version</h4>
+                                            <figure myModal="images/Zusammenfassung/B3html.png">
+                                                <figcaption><a href="Rezepte.html?rcpType=Suppen&index=2">Link zur Schnell gemachte[n] Rindfleischsuppe.</a></figcaption>
+                                                <img src="images/Zusammenfassung/B3html.png"/>  
+                                            </figure>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h4 class="old">Vorherige Version</h4>
+                                            <figure myModal="images/Zusammenfassung/B3cueML.png">
+                                                <figcaption>Unsere Transkription</figcaption>
+                                                <img src="images/Zusammenfassung/B3cueML.png"/>  
+                                            </figure>
+                                        </div>
+                                    </div>
                                 </div>
                                 
                             </div>

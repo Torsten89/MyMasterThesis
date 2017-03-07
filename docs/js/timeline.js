@@ -11,32 +11,16 @@ $("[fstLineToggle]").each(function() {
 });
 
 
-// set active/in dot and collapse content
+// deactivate old active/in and collapse content
 var activeContent = "";
-$(".sndLine").each(function() {
-    $(this).children(".timelineItem").each(function() {
-        var id = $(this).attr("id");
-        
-        //set active/in dot
-        $(this).click(function () {
-            console.log("hi")
-            console.log(activeContent)
-            if(activeContent!= "") {
-                $("#"+activeContent).attr("aria-expanded", "false");
-                console.log(activeContent.replace("Item", "Content"));
-                $("#"+activeContent.replace("Item", "Content")).removeClass("in");
-            }
-            activeContent = id;
-/*            // "load" content
-            var contentId = "#" + id.replace("Item", "Content");
-            console.log(contentId);
-            var ths  = $(contentId);
-            if(activeContent != "") {
-                $(activeContent).toggle(400, function() { ths.toggle(400); });
-            } else {
-                ths.toggle(400);
-            }
-            activeContent = contentId;*/
-        });
+$("a.timelineItem").each(function() {
+    $(this).click(function () {
+        if(activeContent!= "") {
+            $("#"+activeContent).attr("aria-expanded", "false");
+            $("a.timelineItem").each(function() {
+                $("#"+$(this).attr("id").replace("Item", "Content")).removeClass("in");
+            });
+        }
+        activeContent = $(this).attr("id");;
     });
 });
