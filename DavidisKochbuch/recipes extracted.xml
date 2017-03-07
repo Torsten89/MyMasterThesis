@@ -85,7 +85,7 @@
                   >Sellerieknolle</cue:recipeIngredient>, eine klein geschnittene <cue:recipeIngredient ref="#Zwiebel" quantity="1"
                   >Zwiebel</cue:recipeIngredient> und eine geriebene gelbe Murzel (<cue:recipeIngredient ref="#Karotte" quantity="1"
                   >Möhre</cue:recipeIngredient>). Dies wird eine Weile gerührt und so viel kochendes Wasser zugegossen, als man, zum Einkochen
-               mitgerechnet, Suppe haben will. Eine bis 1½ Stunden läßt man Alles kochen und schüttet es durch ein Sieb. Der <cue:recipeIngredient
+               mitgerechnet, Suppe haben will. <cue:cookTime dur-iso="PT1H15M">Eine bis 1½ Stunden</cue:cookTime> läßt man Alles kochen und schüttet es durch ein Sieb. Der <cue:recipeIngredient
                   ref="#Reis">Reis</cue:recipeIngredient> wird allein gekocht, beim Anrichten mit dem Sellerie in die Suppe gegeben, und diese mit
                   <cue:recipeIngredient ref="#Hühnereigelb">Eidotter</cue:recipeIngredient> und <cue:recipeIngredient ref="#Muskatnuß"
                   >Muskat</cue:recipeIngredient> abgerührt. </p>
