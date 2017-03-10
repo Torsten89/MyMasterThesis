@@ -87,4 +87,13 @@ h4.new {
     .sndLine {    
         display: inherit;
     }
+    
+    .timelineCol {
+        page-break-inside: avoid;
+    }
+    
+    #content > div {
+        display: inherit;
+        page-break-inside: avoid;
+    }
 }
