@@ -1,13 +1,6 @@
-svg = $("#mySvg");
-svgPosi = svg.offset();
-svgTop = svgPosi.top + $(window).scrollTop(); // + window-scroll because svg has position:absoulte (only on page-load)
-svgLeft = svgPosi.left;
+
 
 $(window).on('resize', function(){
-    svg = $("#mySvg");
-    svgPosi = svg.offset();
-    svgTop = svgPosi.top + $(window).scrollTop(); // + window-scroll because svg has position:absoulte (only on page-load)
-    svgLeft = svgPosi.left;
     drawLines();
 });
 
@@ -50,6 +43,10 @@ $("a.timelineItem").each(function() {
 
 
 function drawLines() {
+    svg = $("#mySvg");
+    svgPosi = svg.offset();
+    svgTop = svgPosi.top + $(window).scrollTop(); // + window-scroll because svg has position:absoulte (only on page-load)
+    svgLeft = svgPosi.left;
     svg.empty();
     
     var fstLines = $("[fstLineToggle]");
