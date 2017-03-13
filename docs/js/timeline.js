@@ -1,24 +1,27 @@
-
+var svg = $("#mySvg");
+var svgPosi;
+var svgTop;
+var svgLeft;
 
 $(window).on('resize', function(){
     drawLines();
 });
 
-// collapse first line of timeline
+// expand all for test purpose
 /*$("[fstLineToggle]").each(function() {
     var lineToToggle = $(this).attr("fstLineToggle");
     $("#"+lineToToggle).toggle(0);
 });*/
 drawLines();
 
-//set onclick handler for fst line
+//set onclick handler for fst line (expand / collapse and redraw)
 $("[fstLineToggle]").each(function() {
     var lineToToggle = $(this).attr("fstLineToggle");
-    if(lineToToggle == "") return;
+    if(lineToToggle == "") return; // last timeline item is not expandable
     
     var toggledLine = $(this);
     $(this).click(function() {
-        svg.empty();
+        svg.empty(); // otherwise sndLine slides in while lines are still at their old position - which is ugly
         $("#"+lineToToggle).toggle(400, function() {
             toggledLine.toggleClass("active");
             drawLines();
@@ -43,25 +46,24 @@ $("a.timelineItem").each(function() {
 
 
 function drawLines() {
-    svg = $("#mySvg");
-    svgPosi = svg.offset();
-    svgTop = svgPosi.top + $(window).scrollTop(); // + window-scroll because svg has position:absoulte (only on page-load)
-    svgLeft = svgPosi.left;
     svg.empty();
+    svgPosi = svg.offset();
+    svgTop = svgPosi.top; // add scroll because svg has position:absoulte
+    svgLeft = svgPosi.left;
     
     var fstLines = $("[fstLineToggle]");
     for(var i=0; i<fstLines.length-1; i++) {
-        var ths = $(fstLines[i]);
-        if(ths.hasClass("active")) {
-            var lineToToggle = ths.attr("fstLineToggle");
+        var fstLine = $(fstLines[i]);
+        if(fstLine.hasClass("active")) {
+            var lineToToggle = fstLine.attr("fstLineToggle");
             if (lineToToggle == "") continue;
             
             var sndLine = $("#"+lineToToggle).children("a");
-            connectLines(ths, sndLine);
+            connectLines(fstLine, sndLine);
             connectMarkers(sndLine);
-            connectLines(fstLines[i+1], sndLine[sndLine.length-1]);
+            connectLines(sndLine[sndLine.length-1], fstLines[i+1]);
         } else {
-            connectLines(ths, fstLines[i+1]);
+            connectLines(fstLine, fstLines[i+1]);
         }
     }
 }
@@ -91,7 +93,6 @@ function getCenterPoint(elem) {
 //parameters are absolute pixel values of screen (from jquerys offset)
 function getLine(x1, y1, x2, y2) {
     var l = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    
     l.setAttribute('x1', x1-svgLeft);
     l.setAttribute('y1', y1-svgTop);
     var calculatedX2 = x2-svgLeft;
@@ -101,11 +102,8 @@ function getLine(x1, y1, x2, y2) {
     l.setAttribute('stroke', "black");
     l.setAttribute('stroke-width', "2px");
     
-/*  
-    handled through overflow:visible :D
     if(svg.width() < calculatedX2) svg.attr("width", calculatedX2);
     if(svg.height() < calculatedY2) svg.attr("height", calculatedY2);
-*/
     
     return l;
 }
