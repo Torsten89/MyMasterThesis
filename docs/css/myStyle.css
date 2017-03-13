@@ -2,7 +2,7 @@ h4 {
     padding-top: 1em;
 }
 
-ul.myIndentLis li {
+ul.myIndentLis li, {
     text-indent: -2em;
     padding-left: 2em;
 }

@@ -26,15 +26,14 @@
             <div class="row">
                 <div class="col-md-2">
                     <div class="list-group panel myLeftNavBar">
-                        <a href="#Vokabular" class="list-group-item">Domänen-spezifisches Vokabular</a>
-                        <a href="#IE" class="list-group-item">Information Extraction in der Koch-Dömäne</a>
+                        <a href="#Beitrag" class="list-group-item">Beitrag zur Forschung</a>
                         <a href="#Struktur" class="list-group-item">Struktur der Arbeit / Webseite</a>
                     </div>
                 </div>
                 
                 
                 <div class="col-md-10">
-                    <p>Ziel dieser Arbeit ist die Erstellung einer digitalen Edition des Buches <i>Praktisches Kochbuch für die gewöhnliche und feinere Küche</i> <span cite="DavidisKochbuch" class="beforePunctuation"></span>, welche für kulinarische Analysen genutzt werden kann. Eine <a href="http://www.deutschestextarchiv.de/book/view/davidis_kochbuch_1849?p=7" title="Link zur Transkription des Deutschen Text Archives">Transkription des Kochbuches</a> wurde bereits vom Deutschen Text Archiv angefertigt. Ein beispielhafter Auszug ist in Abb. 1 zu sehen. Abb. 1a zeigt den Scan eines Rezeptes, Abb. 1b die textuelle Form und Abb. 1c eine bereits von uns überarbeitete Version der <a href="http://www.tei-c.org/index.xml" title="TEI: Text Encoding Initiative">TEI</a>-basierten Transkription.
+                    <p>Ziel dieser Arbeit ist die Erstellung einer digitalen Edition des Buches <i>Praktisches Kochbuch für die gewöhnliche und feinere Küche</i> <span cite="DavidisKochbuch" class="beforePunctuation"></span>, welche für kulinarische Analysen genutzt werden kann. Eine <a href="http://www.deutschestextarchiv.de/book/view/davidis_kochbuch_1849?p=7" title="Link zur Transkription des Deutschen Text Archivs">Transkription des Kochbuches</a> wurde bereits vom Deutschen Text Archiv angefertigt. Ein beispielhafter Auszug ist in Abb. 1 zu sehen. Abb. 1a zeigt den Scan eines Rezeptes, Abb. 1b die textuelle Form und Abb. 1c eine bereits von uns überarbeitete Version der <a href="http://www.tei-c.org/index.xml" title="TEI: Text Encoding Initiative">TEI</a>-basierten Transkription.
                     </p>
 
                     <p>
@@ -63,12 +62,13 @@
                         </figure>
                     </p>
 
-                    <p>Für kulinarische Analysen sind insbesondere Zutatenlisten wünschenswert, welche bei den Rezepten nicht vorhanden sind. Für eine maschinenlesbare Aufarbeitung wird ein <b>Domänen-spezifisches Vokabular</b> benötigt. Da die manuelle Auszeichnung zeitaufwendig und fehleranfällig ist, forschen wir des Weiteren im Bereich <b>Information Extraction</b> an Möglichkeiten zum automatischen Auszeichnen. Beides sind keine trivialen Probleme.
+                    <p>Für kulinarische Analysen sind insbesondere Zutatenlisten wünschenswert, welche bei den Rezepten nicht vorhanden sind. Für eine maschinenlesbare Aufarbeitung wird ein <b>Domänen-spezifisches Vokabular</b> benötigt. Idealerweise können aus den mit dem Vokabular ausgezeichneten Rezepten anschließend die Zutatenlisten automatisch extrahiert werden. Da die manuelle Auszeichnung zeitaufwendig und fehleranfällig ist, forschen wir des Weiteren im Bereich <b>Information Extraction</b> an Möglichkeiten zum automatischen Auszeichnen. Beides sind keine trivialen Probleme.
                     </p>
 
 
-                    <h2 id="Vokabular" class="myAnchorWithFixedheader">Domänen-spezifisches Vokabular</h2>
-                    <p>Bestehende Vokabulare ermöglichen keine kulinarische Analyse. <a href="http://www.tei-c.org/index.xml" title="Text Encoding Initiative">TEI</a> hat kein spezifisches Vokabular um Rezepte auszuzeichnen. <a href="https://schema.org/Recipe">Schema.org/Recipe</a> ist ein Vokabular, welches das Ziel hat, Treffer von Suchmaschinen anzureichern. <span cite="Schema.org"></span> Es wird davon ausgegangen, dass jedes Rezept eine Zutatenliste hat. In dieser wird jede Zeile mit Microdata angereichert; z.B. <i>&lt;span itemprop="recipeIngredient"&gt;2 EL Zucker&lt;/span&gt;</i>. Für den Computer stellt dieser Tag-Inhalt jedoch nur einen String dar. Für eine kulinarische Analyse müsste die Mengenangabe (2), die Einheit (EL), sowie die Zutat (Zucker) explizit ausgezeichnet sein. Das Auszeichnen von Zutaten im Fließtext, was wir mangels bestehender Zutatenliste machen müssen, muss darüber hinaus einige Sonderfälle beachten. Dies verdeutlichen folgende zwei Beispielsätzen aus dem Kochbuch:
+                    
+                    <h3 id="Vokabular" class="myAnchorWithFixedheader">Domänen-spezifisches Vokabular</h3>
+                    <p>Bestehende Vokabulare ermöglichen keine kulinarische Analyse. <a href="http://www.tei-c.org/index.xml" title="Text Encoding Initiative">TEI</a> hat kein spezifisches Vokabular um Rezepte auszuzeichnen. <a href="https://schema.org/Recipe">Schema.org/Recipe</a> ist ein Vokabular, welches das Ziel hat, Treffer von Suchmaschinen anzureichern. <span cite="Schema.org"></span> Es wird davon ausgegangen, dass jedes Rezept eine Zutatenliste hat. In dieser wird jede Zeile beispielsweise mit Microdata angereichert; z.B. <i>&lt;span itemprop="recipeIngredient"&gt;2 EL Zucker&lt;/span&gt;</i>. Für den Computer stellt dieser Tag-Inhalt jedoch nur einen String dar. Für eine kulinarische Analyse müsste die Mengenangabe (2), die Einheit (EL), sowie die Zutat (Zucker) explizit ausgezeichnet sein. Das Auszeichnen von Zutaten im Fließtext, was wir mangels bestehender Zutatenliste machen müssen, muss darüber hinaus einige Sonderfälle beachten. Dies verdeutlichen folgende zwei Beispielsätzen aus dem Kochbuch:
                     </p>
 
                     <ol>
@@ -82,7 +82,7 @@
                     </p>
 
 
-                    <h2 id="IE" class="myAnchorWithFixedheader">Information Extraction in der Koch-Domäne</h2>
+                    <h3 id="IE" class="myAnchorWithFixedheader">Information Extraction in der Koch-Domäne</h3>
                     <p>Information Extraction beschäftigt sich damit, nützliche Informationen aus unstrukturiertem Text zu extrahieren. Es wurde erstmals in <span cite="KDT"></span> als eigene Disziplin erwähnt. Ein allgemeiner Überblick kann in <span cite="TextMining"></span> gefunden werden. Die Algorithmen versuchen meist bestehende Semi-Strukturen auszunutzen. In der Koch-Domäne haben wir drei unterschiedliche automatisierte Ansätze gefunden, auf die wir genauer eingehen werden:</p>
                     <ul>
                         <li>Regular Expression-based</li>
@@ -92,7 +92,24 @@
                     <p>Nachdem die Zutaten von einem Programm extrahiert wurden, müssen die extrahierten Entities zum Auszeichnen nur noch entsprechend dem Domänen-spezifischen Vokabular zurückgeschrieben werden.
                     </p>
 
+                    
+                    
+                    
+                    <h2 id="Beitrag" class="myAnchorWithFixedheader">Beitrag zur Forschung</h2>
+                    
+                    <p>Der Beitrag dieser Arbeit zu dem aktuellen Forschungsstand lässt sich wie folgt zusammenfassen:
+                    </p>
+                    
+                    <ul>
+                        <li>Die Feststellung, dass bestehende Auszeichnungssprachen nicht für eine kulinarische Analyse geeignet sind</li>
+                        <li>Entwicklung einer Auszeichnunggssprache für kulinarische Analysen</li>
+                        <li>Die Erkenntnis, dass Information Extraction mittels Conditional Random Fields für unsere Problemstellung nicht zielführend ist</li>
+                        <li>Erstellung eines Dictionary- and rule-based Prototypens</li>
+                        <li>Dokumentation sowie Durchführung aller nötigen Arbeitsschritte, wie ein gedrucktes Buch digital zu einer Webseite aufgearbeitet werden kann</li>
+                    </ul>
 
+                    
+                    
                     <h2 id="Struktur" class="myAnchorWithFixedheader">Struktur der Arbeit / Webseite</h2>
                     
                     <p>Unten stehend ist eine interaktive Grafik. Diese zeigt unsere Arbeitsschritte in logisch chronologischer Reihenfolge. Als erstes muss das gedruckte Buch transkribiert werden. Anschließend entwickeln wir eine Auszeichnungssprache, welche eine kulinarische Analyse ermöglicht. Danach beschäftigen wir uns mit Programmen, welche die Rezepte automatisch auszeichnen. Abschließend werden die ausgezeich&shy;neten Rezepte in eine Webseite umgewandelt. Aufbauend auf dieser kann eine kulinarische Analyse durchgeführt werden, was nicht mehr Teil dieser Informatik-Arbeit ist. Wenn in dem jeweiligen Arbeitsschritt eine Transformation stattgefunden hat, ist rechts die Grundlage zu sehen und links, die neue, transformierte Version. Unter dieser Grafik ist auch die Struktur der Arbeit als klassisches Inhaltsverzeichnis zu finden.</p>
@@ -206,7 +223,7 @@
                                     <ul>
                                         <li><a href="http://www.tei-c.org/index.xml" title="TEI: Text Encoding Initiative">TEI</a></li>
                                         <li><a href="https://schema.org/Recipe">Schema.org/Recipe</a></li>
-                                        <li><a href="AuszeichnenRezepte.html#kommerzielleKochseiten" title="Link zum Kapitel-Abschnitt">In kommerziellen Kochseiten</a> wie <a href="http://www.chefkoch.de/">Chefkoch.de</a></li>
+                                        <li>In kommerziellen Kochseiten wie <a href="http://www.chefkoch.de/">Chefkoch.de</a></li>
                                     </ul>
                                 </div>
                                 
@@ -292,7 +309,7 @@
                                         <div class="col-md-5">
                                             <h4 class="old">Vorherige Version</h4>
                                             <figure myModal="images/Zusammenfassung/B3cueML.png">
-                                                <figcaption>Unsere Transkription</figcaption>
+                                                <figcaption>Mit <i>cueML</i> ausgezeichnetes Rezept</figcaption>
                                                 <img src="images/Zusammenfassung/B3cueML.png"/>  
                                             </figure>
                                         </div>
@@ -313,9 +330,9 @@
                     <div class="row" style="margin-top:1em;">
                         <div class="col-md-4">
                             <style>
-                                div.tableOfContents ol { counter-reset: item }
-                                div.tableOfContents li { display: block }
-                                div.tableOfContents li:before { content: counters(item, ".") " "; counter-increment: item }
+                                div.tableOfContents ol { counter-reset: item; }
+                                div.tableOfContents li { display: block; }
+                                div.tableOfContents li:before { content: counters(item, ".") " "; counter-increment: item; }
                             </style>
 
                             <div class="tableOfContents">
@@ -375,8 +392,9 @@
                                         <ol>
                                             <li><a href="Kommentare.html#PraktischerNutzen">Praktischer Nutzen der Arbeit</a></li>
                                             <li><a href="Kommentare.html#Quali">Schwierigkeiten für die kulinarische Analyse mit cueML und Frau Davidis' Kochbuch</a></li>
-                                            <li> <a href="Kommentare.html#WissenschaftlichesArbeiten">Wissenschaftliches Arbeiten im 21. Jahrhundert</a></li>
+                                            <li><a href="Kommentare.html#WissenschaftlichesArbeiten">Wissenschaftliches Arbeiten im 21. Jahrhundert</a></li>
                                             <li><a href="Kommentare.html#WissenIstMacht">Wissen ist Macht</a></li>
+                                            <li><a href="Kommentare.html#Retrospective">Final Retrospective</a></li>
                                         </ol>
                                     </li>
                                     <li><a href="ZusammenfassungUndAusblick.html">Zusammenfassung &amp; Ausblick</a>
