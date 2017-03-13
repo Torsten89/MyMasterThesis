@@ -56,10 +56,6 @@ svg {
     position: absolute; /* otherwise svg "needs space" and timeline items are below the svg */
 }
 
-svg:not(:root) {
-    /*overflow: visible;*/
-}
-
 
 
 
