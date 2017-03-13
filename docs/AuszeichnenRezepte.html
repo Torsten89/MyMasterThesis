@@ -34,7 +34,7 @@
                 
                 
                 <div class="col-md-10">
-                    <p>Nachdem wir <a href="Transkription.html">im vorherigen Abschnitt</a> eine Transkription zu Davids' Kochbuch erarbeitet haben, wollen wir uns nun damit beschäftigen, wie wir die Informationen aus dem Buch automatisch auswerten können. Dafür gehen wir zeurst darauf ein, wie Informationen zugänglich gemacht werden können. Anschließend betrachten wir existierende Auszeichnungssprachen, die Informationen aus unserer Domäne zugänglich machen.
+                    <p>Nachdem wir <a href="Transkription.html">im vorherigen Abschnitt</a> eine Transkription zu Davids' Kochbuch erarbeitet haben, wollen wir uns nun damit beschäftigen, wie wir die Informationen aus dem Buch automatisch auswerten können. Dafür gehen wir zuerst darauf ein, wie Informationen zugänglich gemacht werden können. Anschließend betrachten wir existierende Auszeichnungssprachen, die Informationen aus unserer Domäne zugänglich machen.
                     </p>
                     
                     
@@ -47,7 +47,7 @@
                     <p>Eine <i>Ontology</i> wiederum ist ein <i>"set of interest in a particular information domain and the relationships among them"</i><span cite="SemanticWeb2" supplement=", S. 79" class="beforePunctuation"></span>. Ein wohl definiertes <i>Vokabular</i> kann demnach eine Ontology sein. Dieses kann beispielsweise durch ein <i>Extensible Markup Language Schema (XML Schema)</i> definiert werden <span cite="SemanticWeb2" stem="vgl. " supplement=", S. 84 ff." class="beforePunctuation"></span>. Alle Informationen eines XML Dokumentes nach einem Schema können dann automatisch extrahiert werden.
                     </p>
                     
-                    <p>Das Ziel ist somit, die Rezepte aus Davidis' Kochbuch in einer Auszeichnungssprache zu erfassen, dessen Vokabular und Beziehungen untereinander wohl definiert sind und den Bereich einer kulinarischen Analyse abdeckt. Das Erfassen von Informationen durch eine Auszeichnungssprache nennen wir <i>auszeichnen</i>. Folgend stellen wir einige Auszeichnungssprachen aus unserer Domäne vor.
+                    <p>Das Ziel ist somit, die Rezepte aus Davidis' Kochbuch in einer Auszeichnungssprache zu erfassen, dessen Vokabular und Beziehungen untereinander wohl definiert sind und den Bereich einer kulinarischen Analyse abdeckt. Das Erfassen von Informationen durch eine Auszeichnungssprache nennen wir <i>auszeichnen</i>. Folgend stellen wir einige Auszeichnungssprachen für unsere Koch-Domäne vor.
                     </p>
                     
                     
@@ -98,7 +98,7 @@
                             <p>In Abb. 3 sind die hinterlegten Meta-Informationen auf der Webseite des Treffers in JSON-LD-Format. Es wird unter anderem ersichtlich, dass das Vorschau-Bild in Google eine Vorschau des <i>image</i>-Attributes ist, die Bewertung des <i>aggregateRating.ratingValue</i>-Attributes und der Vorschau-Text der Beginn des <i>description</i>-Attributes ist.
                             </p>
                             
-                            <p>Die wesentlichen Bestandteile der Webseite mit dem eigentlichen Rezept sind <a href="#" myModal="images/AuszeichnungRezepte/PfannekuchenChefkoch.png" myModalTitle='<span cite="ChefkochPfannekuchen" stem="Nach: "></span>'><b>hier</b></a> zu sehen.
+                            <p>Die wesentlichen Bestandteile der Webseite mit dem eigentlichen Rezept sind <a href="#myFigureID3" myModal="images/AuszeichnungRezepte/PfannekuchenChefkoch.png" myModalTitle='<span cite="ChefkochPfannekuchen" stem="Nach: "></span>'><b>hier</b></a> zu sehen.
                             </p>
                         </div>
                         
@@ -111,7 +111,7 @@
                     </div>
                     
                     <h2 id="kommerzielleKochseiten" class="myAnchorWithFixedheader">In kommerziellen Kochseiten</h2>
-                    <p>Wie im vorherigen Abschnitt gesehen, verwendet <a href="http://www.chefkoch.de/">Chefkoch.de</a> Schema.org/Recipe. Zusätzlich speichern sie jedes Rezept in einem JSON-Objekt, wie in Abb. 4 zu sehen ist. Neben einer zusätzlichen ID (id) für das Rezept, werden die Einträge der Zutatenliste, welche bereits mit Schema.org/Recipe erfasst wurden, genauer aufgespalten. Jede Zutat hat eine eigene ID (id), Mengenangabe (base_amount) mit Mengeneinheit (amount_unit), sowie optional einen Kommentar (suffix).
+                    <p>Wie im vorherigen Abschnitt gesehen, verwendet <a href="http://www.chefkoch.de/">Chefkoch.de</a> Schema.org/Recipe. Zusätzlich speichern sie jedes Rezept in einem JSON-Objekt, was in Abb. 4 zu sehen ist. Neben einer zusätzlichen ID (id) für das Rezept, werden die Einträge der Zutatenliste, welche bereits mit Schema.org/Recipe erfasst wurden, genauer aufgespalten. Jede Zutat hat eine eigene ID (id), Mengenangabe (base_amount) mit Mengeneinheit (amount_unit), sowie optional einen Kommentar (suffix).
                     </p>
                     
                     <p>
@@ -128,6 +128,12 @@
         </div>
 		
         
+        <script>
+            // hacky :P
+            $(document).ready(function() {
+                $(window.location.hash).modal("show");
+            });
+        </script>
         <script>activeTab = "DigitaleEdition"</script>
         <script src="js/navbar.js"></script>
         <script src="js/figure2modal.js"></script>

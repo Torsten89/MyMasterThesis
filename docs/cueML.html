@@ -31,7 +31,7 @@
                 </div>
                 
                 <div class="col-md-10">
-                    <p>Zunächst werden hier die Anforderungen an ein Vokabular in der Koch-Domäne dargelegt, welche sich aus unserem Kochbuch ergeben. Da die <a href="AuszeichnenRezepte.html" title="Auszeichnen von Rezepten">zuvor vorgestellten Auszeichnugssprachen</a> diesen Anforderungen nicht genügen, stellen wir anschließend unser <i>cueML</i>-Vokabular vor.
+                    <p>Zunächst werden hier die Anforderungen an ein Vokabular in der Koch-Domäne dargelegt, welche sich aus unserem Kochbuch ergeben. Da die <a href="AuszeichnenRezepte.html" title="Auszeichnen von Rezepten">zuvor vorgestellten Auszeichnugssprachen</a> diesen Anforderungen nicht genügen, stellen wir anschließend unser selbst entwickeltes <i>cueML</i>-Vokabular vor.
                     </p>
                     
                     <h2 id="Anforderungen" class="myAnchorWithFixedheader">Anforderungen</h2>
@@ -83,7 +83,7 @@
                     <p>Erstens enhält somit genau genommen vier mögliche, unterschiedliche Rezepte. Je zwei ob die Soja verwendet wird oder nicht, sowie je zwei ob Madeira oder weißer Franzwein und Rum verwendet wird. Nach der Auszeichnung sollen daher aus den Rezepten alle möglichen Rezepte abgeleitet werden können.
                     </p>
                     
-                    <p>In Zweitens soll <i>nach No. 1</i> eine Bouillon gekocht werden. Rezept No. 1 ist jedoch nicht ein Rezept für Bouillon, sondern ein Rezept für Rindfleischsuppe, in welches das Rezept für Bouillon integriert ist. <span cite="DavidisKochbuch" supplement=", S. 28"></span> Dementsprechend soll das Vokabular <b>Verweise auf (Teil-) Rezepte</b> ermöglichen.
+                    <p>In Zweitens soll <i>nach No. 1</i> eine Bouillon gekocht werden. Rezept No. 1 ist jedoch nicht ein Rezept für Bouillon, sondern ein Rezept für Rindfleischsuppe, in welches das Rezept für Bouillon integriert ist <span class="beforePunctuation" cite="DavidisKochbuch" supplement=", S. 28"></span>. Dementsprechend soll das Vokabular <b>Verweise auf (Teil-) Rezepte</b> ermöglichen.
                     </p>
                     
                     <p>Für eine kulinarische Analyse sind offensichtlich nicht nur die Zutaten wichtig, sondern auch die Mengenangaben der Zutat, wobei eine Mengenangabe ohne Einheit wertlos ist. Daher wird im Vokabular zusätzlich eine Möglichkeit zur Auszeichnung von <b>Mengenangaben</b> und <b>Mengeneinheiten</b> benötigt.   
@@ -108,7 +108,7 @@
                     <p>Die <a href="AuszeichnenRezepte.html" title="Auszeichnen von Rezepten">zuvor vorgestellten Auszeichnugssprachen</a> erfüllen die oben genannten Anforderungen an das benötigte Vokabular nicht, wie folgend knapp an je einem Punkt erläutert wird: <i>TEI</i> erhält zwar die Struktur des Rezeptes, stellt allerdings bereits keine Vokabeln zur Verfügung, um die einzelnen Themenbereiche wie Zutatenliste oder Zubereitungs-Anweisung als solche auszuzeichnen. <i>Schema.org/Recipe</i> bietet zwar die Möglichkeit Zutaten als solche zu markieren, aus dem eingeschlossenen Text der Markierungen kann der Computer jedoch weder die konkrete Zutat noch die Mengenangabe mit dazugehörender Einheit ableiten. Die eigenen Vokabulare von <i>Chefkoch.de</i> und <i>Cooking.nytimes.com</i> zeichnen die bestehenden Zutatenlisten aus, welche bei unserem Kochbuch nicht vorhanden sind. Des Weiteren sind ihre Vokabulare nicht frei verfügbar und somit von uns sowieso nicht verwendbar.
                     </p>
                     
-                    <p>Daher haben wir <b>culinary editions Markup Language (cueML)</b> entwickelt, was unserem Verständnis nach netterweise wie Kümmel auszusprechen ist. Eine beispielhafte Auszeichnung eines Rezeptes unseres Kochbuches mit cueML ist in Abb. 2 zu sehen. 
+                    <p>Daher haben wir <b>culinary editions Markup Language (cueML)</b> entwickelt, was unserem Verständnis nach netterweise wie Kümmel auszusprechen ist. Eine beispielhafte Auszeichnung von einem Rezept aus unserem Kochbuch mit cueML ist in Abb. 2 zu sehen. 
                     </p>
                     
                     <p>
@@ -131,7 +131,7 @@
                         </figure>
                     </p>
                     
-                    <p>Es kombiniert und erweitert <i>TEI</i> und <i>Schema.org/Recipe</i>. TEI ist ein Standard, um gedruckten Text digital abzubilden. Da die Transkription bereits in TEI vorliegt, ist es naheliegend TEI zu erweitern. Das Vokabular von Schema.org/Recipe übernehmen wir. Zusätzlich erweitern wir es um Attribute für Mengenangaben (<i>quantity</i>, bzw. <i>atLeast</i> und <i>atMost</i>) und Mengeneinheiten (<i>unit</i>), sowie Möglichkeiten um optionale (<i>optional="True"</i>) und alternative Zutaten (<i>altGrp="id"</i> und <i>alt="id1 id2 [...]"</i>) auszuzeichnen. Des Weiteren führen wir Möglichkeiten ein, um eine Zutat auf Bereiche des Kochbuches verweisen zu lassen (<i>target="#id"</i>), sowie allgemeine Verweise innerhalb eines Rezeptes kenntlich zu machen (ein in Abb. 2b nicht vorhandenes <i>ref</i>-Element). 
+                    <p>Es kombiniert und erweitert <i>TEI</i> und <i>Schema.org/Recipe</i>. TEI ist ein Standard, um gedruckten Text digital abzubilden. Da die Transkription bereits in TEI vorliegt, ist es naheliegend TEI zu erweitern. Das Vokabular von Schema.org/Recipe übernehmen wir. So kann aus cueML für Suchmaschinen leicht zusätzlich eine Auszeichnung mit Schema.org/Recipe abgeleitet werden. Des Weiteren erweitern wir es um Attribute für Mengenangaben (<i>quantity</i>, bzw. <i>atLeast</i> und <i>atMost</i>) und Mengeneinheiten (<i>unit</i>), sowie Möglichkeiten um optionale (<i>optional="True"</i>) und alternative Zutaten (<i>altGrp="id"</i> und <i>alt="id1 id2 [...]"</i>) auszuzeichnen. Des Weiteren führen wir Möglichkeiten ein, um eine Zutat auf Bereiche des Kochbuches verweisen zu lassen (<i>target="#id"</i>), sowie allgemeine Verweise innerhalb eines Rezeptes kenntlich zu machen (ein in Abb. 2b nicht vorhandenes <i>ref</i>-Element). 
                     </p>
                     
                     <div class="row">
