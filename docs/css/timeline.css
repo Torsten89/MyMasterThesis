@@ -80,7 +80,7 @@ h4.new {
 
 
 @media print {
-    .sndLine {    
+/*    .sndLine {    
         display: inherit;
     }
     
@@ -91,5 +91,9 @@ h4.new {
     #content > div {
         display: inherit;
         page-break-inside: avoid;
+    }*/
+    
+    .timeline {
+        display: none;
     }
 }

@@ -154,5 +154,8 @@ div.referenceEntry:before {
     figure {
         page-break-inside: avoid;
     }
+    
+    table { page-break-inside:auto; margin-bottom: 1em; }
+    tr    { page-break-inside:avoid; page-break-after:auto;}
 }
 /* -------------- print - end -------------- */
