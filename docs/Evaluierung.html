@@ -57,7 +57,7 @@
                     <p>Ein hoher Recall-Wert zeugt davon, dass viele relevante Informationen extrahiert werden. Ein hoher Precision-Wert zeugt davon, dass nur wenig falsche Informationen als relevant extrahiert werden. Beide Metriken sind nur zusammen aussagekräftig. Ein perfekter Recall-Wert von eins könnte ansonsten erreicht werden, in dem einfach alle Informationen als relevant extrahiert werden. Dies würde jedoch die Precision sehr wahrscheinlich ruinieren. Ein sehr guter Wert für die Precision könnte hingegen dadurch erreicht werden, dass nur eindeutige Informationen als relevant extrahiert werden. Darunter leidet jedoch wieder der Recall. Würden gar keine Informationen extrahiert, wäre die Precision nicht definiert, da dann durch null geteilt wird.
                     </p>
                     
-                    <h2 id="CRFPrototyp" class="myAnchorWithFixedheader"><a href="AutomatischesAuszeichnenCueML.html##CRFPrototyp" title="Link zur Beschreibung des Prototypens">CRF-based Prototyp</a></h2>
+                    <h2 id="CRFPrototyp" class="myAnchorWithFixedheader"><a href="AutomatischesAuszeichnenCueML.html##CRFPrototyp" title="Link zur Beschreibung des Prototypen">CRF-based Prototyp</a></h2>
                     
                     <div class="row">
                         <div class="col-md-5">
@@ -187,9 +187,9 @@
                     <p>Unsere dictionary- and rule-based Prototypen testen wir anhand von Recall und Precision. Wir haben dazu die <a href="DavidisesKochbuch/Rezepte%20mit%20cueML.xml">die ersten 50 Suppen von Frau Davidis' Kochbuch</a> manuell ausgezeichnet und verwenden dies als Golden Standard.
                     </p>
                     
-                    <h3 id="DictBasedV01" class="myAnchorWithFixedheader"><a href="AutomatischesAuszeichnenCueML.html#DictBasedV01" title="Link zur Beschreibung des Prototypens">Version 0.1</a></h3>
+                    <h3 id="DictBasedV01" class="myAnchorWithFixedheader"><a href="AutomatischesAuszeichnenCueML.html#DictBasedV01" title="Link zur Beschreibung des Prototypen">Version 0.1</a></h3>
                     
-                    <p>Das Ziel dieses Prototypens ist es zu testen, ob unsere gesuchten Entities (Zutaten, Mengenangaben und Einheiten) extrahiert werden können. Da bei den Mengenangaben und Einheiten meine Intuition nicht Alarm schlägt, reichen mir ein paar Beispiel Daten, um zu verifizieren, dass das funktioniert. Dies scheint der Fall zu sein. Daher wird eine genauere Evaluation der Mengenangaben und Einheiten auf einen ausgereifteren Prototypen verschoben.
+                    <p>Das Ziel dieses Prototypen ist es zu testen, ob unsere gesuchten Entities (Zutaten, Mengenangaben und Einheiten) extrahiert werden können. Da bei den Mengenangaben und Einheiten meine Intuition nicht Alarm schlägt, reichen mir ein paar Beispiel Daten, um zu verifizieren, dass das funktioniert. Dies scheint der Fall zu sein. Daher wird eine genauere Evaluation der Mengenangaben und Einheiten auf einen ausgereifteren Prototypen verschoben.
                     </p>
                     
                     <div class="row">
@@ -224,7 +224,7 @@
                     </p>
                     
                     
-                    <h3 id="DictBasedV02" class="myAnchorWithFixedheader"><a href="AutomatischesAuszeichnenCueML.html#DictBasedV02" title="Link zur Beschreibung des Prototypens">Version 0.2</a></h3>
+                    <h3 id="DictBasedV02" class="myAnchorWithFixedheader"><a href="AutomatischesAuszeichnenCueML.html#DictBasedV02" title="Link zur Beschreibung des Prototypen">Version 0.2</a></h3>
                     
                     <p>Folgend testen wir nicht mehr nur die Machbarkeitsanalyse, sondern wollen eine echte Evaluierung. Daher machen wir uns zunächst genauere Gedanken, wie wir evaluieren, ob eine extrahierte Entitiy bezüglich einem manuell getagtem Rezept relevant und korrekt ist. Wie in Abb. 4 zu sehen ist, brauchen wir zwei unterschiedliche Vergleich-Ansätze, die wir <b>Exact match</b> und <b>Rough match</b> nennen wollen:
                     </p>
@@ -277,7 +277,7 @@
                     <p>Dass die Anzahl unser extrahierten Entities mit den Optionen variiert, liegt an unserem Rough match. In der Option 1 wird z.&thinsp;B. im Rezept B-1 das erste Vorkommen von Fleisch als Exact match identifiziert. Im Golden Standard Rezept ist nur das erste Vorkommen ausgezeichnet. Alle weiteren Vorkommen von Fleisch werden dann bei unserer Evaluation durch einen Rough match vom Ergebnis ignoriert. In der Option 2 wird jedoch beim ersten Vorkommen von Fleisch die Mengenangabe als falsch evaluiert. Daher schlägt anschließend auch der Rough match fehl und alle weiteren Vorkommen von Fleisch werden als Fehler identifiziert. In der Option 3 kommt es vor, dass Zutaten nun nicht mehr ein Exact match sind, da ihnen das <i>optional</i>-Attribut fehlt. Statt dessen werden sie jedoch durch einen Rough match gefangen. Daher tauchen in der Option 3 weniger Entities in der Precision auf. Der Rough match muss daher vielleicht für optionale und alternative Zutaten überdacht werden.
                     </p>
                     
-                    <p>Insgesamt ist die Evaluation des dictionary- and rule-based Prototypens viel versprechend. Zukünftige Arbeiten sollten erforschen, in wie weit die Unterscheidung der Entities durch weitere Regeln verbessert werden kann sowie sich mit der Differenzierung von <i>ein/eine</i> als unbestimmter Artikel oder Zahlenwort beschäftigen.
+                    <p>Insgesamt ist die Evaluation des dictionary- and rule-based Prototypen viel versprechend. Zukünftige Arbeiten sollten erforschen, in wie weit die Unterscheidung der Entities durch weitere Regeln verbessert werden kann sowie sich mit der Differenzierung von <i>ein/eine</i> als unbestimmter Artikel oder Zahlenwort beschäftigen.
                     </p>
                     
                 </div>
