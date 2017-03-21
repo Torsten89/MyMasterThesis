@@ -58,12 +58,14 @@ class Extractor():
               </fileDesc>\
             </teiHeader>\
         <text><body>']
-        for rcp in plainTextRcp:
+        for rcp in plainTextRcp:    
+            #if rcp.rcpId =="V-5":
             xmlString.append(self.extractRecipe(rcp))
         xmlString.append("</body></text></TEI>")
         
         with open(ergFilePath, 'w') as f:
             f.write(parseString(" ".join(xmlString)).toprettyxml())
+            print("Extracted recipes were written to: "+ergFilePath)
           
         
 

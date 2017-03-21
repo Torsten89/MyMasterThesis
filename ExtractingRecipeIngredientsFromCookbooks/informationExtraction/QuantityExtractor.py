@@ -1,7 +1,19 @@
 import unicodedata
 
 #not really good cause of things like "ein Paar", "schüttet es durch ein Sieb"... -.-
-quantityWords = {"ein":"1", "eine":"1", "einige":"einige", "etwas":"etwas"}
+quantityWords = {"einige":"einige", "etwas":"etwas",
+                 "ein":"1", "eine":"1",
+                 "zwei":"2",
+                 "drei":"3",
+                 "vier":"4",
+                 "fünf":"5",
+                 "sechs":"6",
+                 "sieben":"7",
+                 "acht":"8",
+                 "neun":"9",
+                 "zehn":"10",
+                 "elf":"11",
+                 "zwölf":"12"}
 
 def isQuantity(lemma):
     if isNumber(lemma):
@@ -23,7 +35,7 @@ def isNumber(s):
     except ValueError:
         pass
     
-    if s in quantityWords:
+    if s.lower() in quantityWords:
         return True
         
     return False
@@ -41,4 +53,4 @@ def str2Quantity(s):
         if len(s)>1: return s[:-1] + "."+ str(frac)[2:]
         else: return str(frac)
     else:
-        return quantityWords[s]
+        return quantityWords[s.lower()]

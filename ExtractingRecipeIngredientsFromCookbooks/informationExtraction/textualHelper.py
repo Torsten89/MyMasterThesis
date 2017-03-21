@@ -73,7 +73,7 @@ Finger breite Stücke, wäscht sie rein, und läßt sie in kochendem Wasser und 
 gahr kochen, thut sie in die Suppe, nebst feinen Suppenkräutern, einigen \
 Zitronenscheiben, macht dieselbe mit in Butter gelb geröstetem Mehl gebunden und gibt \
 kurz vor dem Anrichten Fleisch- oder Schwammklöße hinein."
-    s="\n\n"
+    s="das zerhackte Hasengerippe oder auch Knochen von anderem, gutem gebratenem Fleische nebst..."
     for w, pos, l in treeTagger.tag(s):
         print(w, pos, l)
 

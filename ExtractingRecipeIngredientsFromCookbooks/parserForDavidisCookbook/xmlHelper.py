@@ -1,4 +1,5 @@
 from model.IngredientCandi import IngredientCandi
+from parserForDavidisCookbook.getManualCreatedListOfDavidisIngredientsTxt import getManualCreatedListOfDavidisIngredients
 
 def getElems(node, elemName, withAttris={}):
     """ withAttris = {key: iterator with possible values}
@@ -44,6 +45,7 @@ def getUnitValuesFromCueML(cueMLRngDom):
 def buildIngredientDict(dom):
     """ Returns dictionary of ingredients from a cue:listIngredient-element. The key is the noun of an ingredient (e.g. Wein for weißer Wein)
         and the value is a list of possible IngredientCandis.
+        Additional adds all manual written out ingredients from manualCreatedListOfDavidisIngredients.txt
     """
     ingDict = {}
     
@@ -56,14 +58,18 @@ def buildIngredientDict(dom):
                 if word[0].isupper():
                     __addAllToDict__(ingDict, word, [IngredientCandi(xmlID, basicForm)])
     
-    #add candidates for verbose ingredients like Fleisch
+    # add candidates for verbose ingredients like Fleisch
     verboseIngs = ["Fleisch"] 
     for verboseIng in verboseIngs:
         ingDict[verboseIng] = []
-    for key in ingDict.keys():
+    for key in ingDict:
         for verboseIng in verboseIngs:
             if verboseIng == "Fleisch" and "brühe" in key: continue
             if verboseIng.lower() in key: ingDict[verboseIng] += ingDict[key]
+    
+    # add ingredients from manualCreatedListOfDavidisIngredients.txt
+    for ing in getManualCreatedListOfDavidisIngredients():
+        if ing not in ingDict: ingDict[ing] = []
     
     return ingDict
 

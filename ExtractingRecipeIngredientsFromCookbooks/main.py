@@ -9,12 +9,12 @@ from model.PlainTextRecipe import PlainTextRecipe
 from informationExtraction.dictBasedExtractor import dictBasedEnrichment
 from informationExtraction.ruleBasedExtractor import applyRulesToWordProperties
 
-evalAttris=set(["quantity", "atLeast", "atMost", "unit", "optional", "altGrp"]) #attris which should be relevant in evaluation
+evalAttris=set() #["quantity", "atLeast", "atMost", "unit", "optional", "altGrp"]) #attris which should be relevant in evaluation
 ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
 unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng"))    
-ergFilePath = "erg.xml"
+defaultErgFilePath = "erg.xml"
 
-def evalRecipes(rcpIds=["B-{}".format(i) for i in range(1, 51)], debug=True, attris=evalAttris, ergFilePath=ergFilePath):
+def evalRecipes(rcpIds=["B-{}".format(i) for i in range(1, 51)], debug=True, attris=evalAttris, ergFilePath=defaultErgFilePath):
     goldenStandardPath = "/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted.xml"
     
     startTime = time.time()    
@@ -28,6 +28,7 @@ def evalRecipes(rcpIds=["B-{}".format(i) for i in range(1, 51)], debug=True, att
     print('--- Needed for evaluating: {} seconds ---'.format(time.time() - startTime))    
 
 def myPlaygroundTest():
+    """Just a random test function for me"""
     rcp = PlainTextRecipe("B-16", "Suppen", "Mock Turtle Suppe", ["Sowohl die Bouillon als \
 Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekocht werden."])
     extractor = Extractor(ingE, unitE)
@@ -39,14 +40,16 @@ Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekoch
     for wp in wps:
         print(wp)
         
-def extractAllRecipes(pathToCookbook, ergFilePath=ergFilePath):
+def extractAllRecipes(pathToCookbook, ergFilePath=defaultErgFilePath):
     extractor = Extractor(ingE, unitE)
     cookbook = XmlParser(parse(pathToCookbook))
     extractor.extractRecipes2TEICueML(cookbook.getPlainTextRecipes(), ergFilePath)
     
 
 if __name__ == '__main__':
-#     evalRecipes()
-    extractAllRecipes("/home/torsten/Desktop/MyMasterThesis/docs/DavidisesKochbuch/Rezepte mit cueML.xml")
+#      evalRecipes()
+    print(ingE.__ingDict__["Muskatnuß"])
+#     extractAllRecipes("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted (original).xml", 
+#                      ergFilePath="/home/torsten/Desktop/MyMasterThesis/docs/DavidisesKochbuch/Rezepte mit cueML.xml")
     
     
