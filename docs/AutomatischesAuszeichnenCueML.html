@@ -35,7 +35,7 @@
                 </div>
                 
                 <div class="col-md-10">
-                    <p>Inspiriert von dem vorherigen Abschnitt <a href="IEKochDomain.html">Information Extraction in der Koch-Domäne</a> stellen wir hier zwei Prototypen vor, um aus den Zubereitungs-Anweisungen von unserem Kochbuch eine Zutatenliste zu extrahieren. Da wir auf keine vorhandene Semi-Struktur aufbauen können, ist ein Regular Expression-based Ansatz nicht möglich. Wir implementieren daher einen CRF-based und einen dictionary- and rule-based Prototypen. Der CRF-based Prototyp ist sehr simpel. Uns ist bereits während der Konstruktion klar geworden, dass wir andere Voraussetzungen als <span cite="CRFNYT"></span> haben und dies daher nicht der richtige Ansatz für uns ist.
+                    <p>Inspiriert von dem vorherigen Abschnitt <a href="IEKochDomain.html">Information Extraction in der Koch-Domäne</a> stellen wir hier zwei Prototypen vor, um aus den Zubereitungs-Anweisungen von unserem Kochbuch eine Zutatenliste zu extrahieren. Da wir auf keine vorhandene Semi-Struktur aufbauen können, ist ein Regular Expression-based Ansatz nicht möglich. Wir implementieren einen Conditional Random Field-based (CRF-based) und einen dictionary- and rule-based Prototypen. Der CRF-based Prototyp ist sehr simpel. Uns ist bereits während der Konstruktion klar geworden, dass wir andere Voraussetzungen als <span cite="CRFNYT"></span> haben und dies daher nicht der richtige Ansatz für uns ist.
                     </p>
                     
                     
@@ -92,7 +92,7 @@
                     
                     <div class="row">
                         <div class="col-md-6">
-                            <p>In Abb. 3 ist in einem ersten Schritt der Output eines Satzes von TreeTagger zu sehen. Neben dem Lemma gibt er zusätzlich ein Part-of-Speech-Tag (PoS) zu jedem Wort aus. Wie bei <i>Sellerie-</i> und <i>Scorzonerwurzeln</i> kann TreeTagger allerdings manchmal kein Lemma finden. Deswegen nehmen wir zuerst von jedem Wort ohne Lemma die Wort-Identität als Lemma. Anschließend versuchen wir bei jedem abgekürzten Wort die Endung zu finden. Abgekürzte Wörter haben das PoS TRUNC für truncation. Da alle abgekürzten Wörter, an denen wir interessiert sind, Zutaten und somit Nomen sind, suchen wir das nächste Nomen im Satz, welches eine typisch abgekürzte Endung hat. Der Prototyp testet, ob in dem Nomen „wurzel“ bzw. „Wurzel“ vorkommt, da dies die einzige Endung ist, die uns aufgefallen ist, dass sie von Frau Davidis regelmäßig abgekürzt wird. Ist dies der Fall, wird in dem abgekürzten Lemma der Bindestrich durch die entsprechende Endung ersetzt.
+                            <p>In Abb. 3 ist in einem ersten Schritt der Output eines Satzes von TreeTagger zu sehen. Neben dem Lemma gibt er zusätzlich ein Part-of-Speech-Tag (PoS) zu jedem Wort aus. Wie bei <i>Sellerie-</i> und <i>Scorzonerwurzeln</i> kann TreeTagger allerdings manchmal kein Lemma finden. Deswegen nehmen wir zuerst von jedem Wort ohne Lemma die Wort-Identität als Lemma. Anschließend versuchen wir bei jedem abgekürzten Wort die Endung zu finden. Abgekürzte Wörter haben das PoS TRUNC für truncation. Da alle abgekürzten Wörter, an denen wir interessiert sind, Zutaten und somit Nomen sind, suchen wir das nächste Nomen im Satz, welches eine typisch abgekürzte Endung hat. Ein Beispiel für so eine Endung ist <i>wurzel</i>. Ist dies der Fall, wird in dem abgekürzten Lemma der Bindestrich durch die entsprechende Endung ersetzt.
                             </p>
                         </div>
                         
@@ -190,7 +190,7 @@
                         </li>
                         <li>Manchmal schreibt Frau Davidis eine Zutat als zusammengesetztes Wort (z.&thinsp;B. <i>Petersilien-Wurzel</i>) und manchmal nicht (<i>Petersilienwurzel</i>). Man könnte die zusammengesetzte Schreibweise ins Wörterbuch als alternative Schreibweise hinzufügen. Wir fangen das hingegen im Programm ab. Wenn das Lemma zu einem Wort nicht gefunden werden konnte, eliminieren wir den Bindestrich aus dem Wort, und versuchen dann erneut ein Lemma zu finden.
                         </li>
-                        <li>Die Liste der typischen Endungen von abgekürzten Wörtern wurde um <i>klöchen</i>, <i>brot</i> und <i>brod</i> erweitert.
+                        <li>Die Liste der typischen Endungen von abgekürzten Wörtern wurde um <i>klöße</i>, <i>kloß</i>, <i>brot</i> und <i>brod</i> erweitert.
                         </li>
                         <li>Uns sind einige Fehler im manuell ausgezeichneten Kochbuch aufgefallen, welches unseren Golden Standard bildet, die wir korrigiert haben.
                         </li>
@@ -201,7 +201,7 @@
                     <p>In das saubere Design aus Abb. 5 fügen wir nun eine rule-based Weiterverarbeitung ein. Diese ist in Abb. 6 zu sehen. Nachdem die <i>WordProperties</i> extrahiert sind, wird auf diese eine Menge von Regeln angewendet. Eine Regel kriegt die Liste der WordProperties eines Satzes, sowie das Rezept, zu dem der Satz gehört und gibt eine Liste mit geänderten WordProperties zurück. Beispiele für solche Regeln sind:
                     </p>
                     <ul class="myIndentLis">
-                        <li><b>findQuantityAndUnitOfIngredientRule:</b> Die Regel versucht zu jeder WordProperty (wp), die als Zutat ausgezeichnet ist (<i>key "ingredient" &isin; wp.properties</i>), eine Mengenangabe und Einheit zu finden. Sie sucht dafür den nächsten Nachbar von links (wp'), dessen WordProperty als Mengenangabe bzw. Einheit ausgezeichnet ist und fügt diese der wp hinzu (<i>wp.properties["quantity"] = wp'.properties["quantity"]</i>). Um zu verhindern, dass beispielsweise bei <i>„Man nehme 2 EL Mehl und Butter“</i> 2 EL Butter extrahiert wird, bricht diese Regel ab, wenn vor der Mengenangabe bzw. Einheit eine andere Entity kommt.
+                        <li><b>findQuantityAndUnitOfIngredientRule:</b> Die Regel versucht zu jeder WordProperty (wp), die als Zutat ausgezeichnet ist (<i>key "ingredient" &isin; wp.properties</i>), eine Mengenangabe und Einheit zu finden. Sie sucht dafür den nächsten Nachbarn von links (wp'), dessen WordProperty als Mengenangabe bzw. Einheit ausgezeichnet ist und fügt diese der wp hinzu (<i>wp.properties["quantity"] = wp'.properties["quantity"]</i>). Um zu verhindern, dass beispielsweise bei <i>„Man nehme 2 EL Mehl und Butter“</i> 2 EL Butter extrahiert wird, bricht diese Regel ab, wenn vor der Mengenangabe bzw. Einheit eine andere Entity kommt.
                         </li>
                         <li><b>dissolveAmbiguityWein:</b> Wenn das Lemma zu einer Zutat <i>wein</i> enthält, sucht diese Regel nach den Wörtern „rot“ oder „weiß“. Wird eins von beiden gefunden, werden aus der Liste der möglichen xml:ids alle herausgefiltert, die dieses Wort nicht enthalten.
                         </li>
@@ -211,7 +211,7 @@
                         </li>
                         <li><b>optionalRule:</b> Sind nach einer Zutat die Lemmata „können“ und „wegbleiben“ im Satz enthalten, so wird diese Zutat als optional ausgezeichnet (<i>wp.properties["optional"] = True </i>).
                         </li>
-                        <li><b>altGrpRule:</b> Folgt auf einer Zutat das Lemma „statt“, werden alle Folgende, durch „und“ separierten Zutaten, als Alternative zu dieser ausgezeichnet.
+                        <li><b>altGrpRule:</b> Folgt auf eine Zutat das Lemma „statt“, werden alle Folgende, durch „und“ separierten Zutaten, als Alternative zu dieser ausgezeichnet.
                         </li>
                     </ul>
                     

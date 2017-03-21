@@ -114,7 +114,7 @@
                   >Reis</cue:recipeIngredient> und eine geschnittene <cue:recipeIngredient ref="#Knollensellerie" quantity="1"
                   >Sellerieknolle</cue:recipeIngredient> darin weich gekocht sind, gibt man <cue:recipeIngredient ref="#Bratenjus"
                   >Braten-Jus</cue:recipeIngredient> hinzu. Die vom Rost-Beef <ref target="#I-3">No. 3</ref> eignet sich vorzüglich zu dieser Suppe.
-               Hat man reichlich Jus, so kann man eine Kraftsuppe daraus bereiten, das <cue:recipeIngredient ref="#Mehl" optional="True"
+               Hat man reichlich <cue:recipeIngredient optional="True">Jus</cue:recipeIngredient>, so kann man eine Kraftsuppe daraus bereiten, das <cue:recipeIngredient ref="#Mehl" optional="True"
                   >Mehl</cue:recipeIngredient> bleibt dann weg. </p>
 
          </cue:recipe>
@@ -238,7 +238,7 @@
                   >Mehl</cue:recipeIngredient> anziehn, daß die Suppe davon gebunden wird, gießt
                   <cue:recipeIngredient>Fleischbrühe</cue:recipeIngredient> hinzu und das Ganze durch ein Haarsieb zu der kochenden Bouillon. Kurz vor
                dem Anrichten giebt man <cue:recipeIngredient target="#L-2">Krebsklöße</cue:recipeIngredient>, nach L. No. 2, <cue:recipeIngredient
-                  ref="#Midder">Midder</cue:recipeIngredient> (Kälbermilch), Krebsköpfe gefüllt, mit der Masse, von der man <cue:recipeIngredient
+                  ref="#Midder">Midder</cue:recipeIngredient> (Kälbermilch), <cue:recipeIngredient>Krebsköpfe</cue:recipeIngredient> gefüllt, mit der Masse, von der man <cue:recipeIngredient
                   target="#L-6">Schwammklöße</cue:recipeIngredient> macht, hinein, und rührt die Suppe mit <cue:recipeIngredient ref="#HühnereiEigelb"
                   >Eidotter</cue:recipeIngredient> ab; doch darf sie ja nicht zu sämig sein, was überhaupt bei allen Gesellschaftssuppen vermieden
                werden muß. </p>
@@ -375,8 +375,8 @@
          <cue:recipe type="Suppen." rcp-id="B-19">
             <head>Hasensuppe von einem ganzen Hasen.</head>
 
-            <p>Man reinige einen großen <cue:recipeIngredient ref="#Hase" quantity="1">Hasen</cue:recipeIngredient>, fange das Blut sorgfältig auf,
-               zerschlage die Knochen, zerschneide das Fleisch, jedoch wird der Rücken zurückgelegt, und koche Beides mit 2—3 Pfund
+            <p>Man reinige einen großen <cue:recipeIngredient ref="#Hase" quantity="1">Hasen</cue:recipeIngredient>, fange das <cue:recipeIngredient>Blut</cue:recipeIngredient> sorgfältig auf,
+               zerschlage die <cue:recipeIngredient>Knochen</cue:recipeIngredient>, zerschneide das Fleisch, jedoch wird der Rücken zurückgelegt, und koche Beides mit 2—3 Pfund
                   <cue:recipeIngredient ref="#Rindkochfleisch" atLeast="2" atMost="3" unit="Pfund">Rindfleisch</cue:recipeIngredient>, 3 Loth
                   <cue:recipeIngredient ref="#Zwiebel" quantity="3" unit="Loth">Zwiebeln</cue:recipeIngredient>, einigen <cue:recipeIngredient
                   ref="#Gewürznelken" quantity="einige">Nelken</cue:recipeIngredient> und <cue:recipeIngredient ref="#Pfefferkörner"
@@ -385,7 +385,7 @@
                   ref="#Schweineschinken" quantity="einige" unit="Scheibe">Schinken</cue:recipeIngredient> gehörig aus. Der Rücken wird mit reichlich
                   <cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient> und <cue:recipeIngredient ref="#Sahne"
                   >Sahne</cue:recipeIngredient> weich gebraten, in zierliche Stücken geschnitten und mit einigen
-                  <cue:recipeIngredient>Fleischklößchen</cue:recipeIngredient> in die Terrine gelegt; vorher aber die Sauce nebst dem Blut an die
+                  <cue:recipeIngredient>Fleischklößchen</cue:recipeIngredient> in die Terrine gelegt; vorher aber die Sauce nebst dem <cue:recipeIngredient>Blut</cue:recipeIngredient> an die
                Suppe gethan, solche mit bräunlich gebratenem <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient> sämig gemacht, Alles durch
                ein Sieb gerührt, wieder zu Feuer gesetzt, mit ¼ Flasche <cue:recipeIngredient ref="#Portwein" quantity="0.25" unit="Flasche"
                   >Portwein</cue:recipeIngredient>, einer kleinen Messerspitze <cue:recipeIngredient ref="#Cayennepfeffer" quantity="1"
@@ -407,7 +407,7 @@
                   <cue:recipeIngredient ref="#Muskatnuß">Muskat</cue:recipeIngredient> und <cue:recipeIngredient ref="#Salz"
                   >Salz</cue:recipeIngredient>. Hiervon kleine Klöße aufgerollt, wovon man erst einen in der Suppe aufkochen läßt, um zu sehen, ob sie
                locker werden; man gibt sonst ein wenig Wasser, im andern Falle geriebenes <cue:recipeIngredient ref="#WeißbrotToast" optional="True"
-                  >Weißbrod</cue:recipeIngredient> hinzu. Dann wird das Knochengerippe in kleine Stückchen gehauen. Zugleich schneidet man für
+                  >Weißbrod</cue:recipeIngredient> hinzu. Dann wird das <cue:recipeIngredient>Knochengerippe</cue:recipeIngredient> in kleine Stückchen gehauen. Zugleich schneidet man für
                   <cue:recipeYield quantity="8" unit="people">8 Personen</cue:recipeYield> 2 Pfund <cue:recipeIngredient ref="#Rindkochfleisch"
                   quantity="2" unit="Pfund">Rindfleisch</cue:recipeIngredient> in kleine Würfel, macht in reichlich <cue:recipeIngredient
                   ref="#Butter">Butter</cue:recipeIngredient> einige Scheiben rohen <cue:recipeIngredient ref="#Schweineschinken" quantity="einige"
@@ -416,7 +416,7 @@
                   >Petersilien-</cue:recipeIngredient>, <cue:recipeIngredient ref="#Knollensellerie">Sellerie-</cue:recipeIngredient> und gelbe
                   <cue:recipeIngredient ref="#Karotte">Wurzel</cue:recipeIngredient> (Möhren), in Scheiben geschnitten, nebst 2—3 Löffel
                   <cue:recipeIngredient ref="#Mehl" atLeast="2" atMost="3" unit="EL">Mehl</cue:recipeIngredient> braun, läßt dann das Fleisch und
-               zuletzt die Hasenknochen darin rösten; gibt nun so viel Wasser, als nöthig ist, hinzu, auf jede Person etwa ½ bis ¾ Maß gerechnet. Wenn
+               zuletzt die <cue:recipeIngredient>Hasenknochen</cue:recipeIngredient> darin rösten; gibt nun so viel Wasser, als nöthig ist, hinzu, auf jede Person etwa ½ bis ¾ Maß gerechnet. Wenn
                   <cue:recipeIngredient optional="True">Sauce</cue:recipeIngredient> vom Hasen da ist, kommt sie hinzu. Ist das Fleisch ausgekocht und
                das <cue:recipeIngredient ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient> weich, reibt man die Suppe durch ein Sieb, bringt sie
                wieder zum Kochen, würzt sie mit <cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>, <cue:recipeIngredient ref="#Muskatnuß"
@@ -459,7 +459,7 @@
             <p>Man rechnet auf jede Person einen <cue:recipeIngredient>Krammetsvogel</cue:recipeIngredient>. Diese werden mit etwas
                   <cue:recipeIngredient ref="#Salz" quantity="etwas">Salz</cue:recipeIngredient>, in reichlich <cue:recipeIngredient ref="#Butter"
                   >Butter</cue:recipeIngredient> fest zugedeckt, langsam weich gebraten. Das Brustfleisch in feine Scheiben geschnitten, das
-               Knochengerippe im Mörser zerstoßen. Dann wird letzteres mit einigen Scheiben <cue:recipeIngredient ref="#Sellerieblätter"
+               <cue:recipeIngredient>Knochengerippe</cue:recipeIngredient> im Mörser zerstoßen. Dann wird letzteres mit einigen Scheiben <cue:recipeIngredient ref="#Sellerieblätter"
                   quantity="einige" unit="Scheibe">Sellerie</cue:recipeIngredient>, <cue:recipeIngredient ref="#Karotte">Möhren</cue:recipeIngredient>
                und <cue:recipeIngredient ref="#Zwiebel">Zwiebeln</cue:recipeIngredient> in der Krammetsvögel-Butter gedämpft, <cue:recipeIngredient
                   ref="#Mehl">Mehl</cue:recipeIngredient> darin eine Weile gerührt und mit guter <cue:recipeIngredient target="#Boullion"
@@ -473,7 +473,7 @@
          <cue:recipe type="Suppen." rcp-id="B-24">
             <head>Kartoffelsuppe.</head>
             <p>Es wird ein Stück <cue:recipeIngredient>Fleisch</cue:recipeIngredient> mit <cue:recipeIngredient ref="#Salz"
-                  >Salz</cue:recipeIngredient> oder auch Knochen von gutem Fleisch, die klein gehauen und gewaschen sind, zeitig zu Feuer gesetzt,
+                  >Salz</cue:recipeIngredient> oder auch <cue:recipeIngredient>Knochen</cue:recipeIngredient> von gutem Fleisch, die klein gehauen und gewaschen sind, zeitig zu Feuer gesetzt,
                ausgeschäumt, <cue:recipeIngredient ref="#Kartoffeln">Kartoffeln</cue:recipeIngredient>, <cue:recipeIngredient ref="#Zwiebel"
                   >Zwiebeln</cue:recipeIngredient>, recht viel <cue:recipeIngredient ref="#Porree">Purree</cue:recipeIngredient> und
                   <cue:recipeIngredient ref="#Knollensellerie">Sellerieknollen</cue:recipeIngredient> hinein gegeben und dies Alles fest zugedeckt,
@@ -608,10 +608,10 @@
                   >Portulac</cue:recipeIngredient>, <cue:recipeIngredient ref="#Basilikum">Basilikum</cue:recipeIngredient>, <cue:recipeIngredient
                   ref="#Kopfsalat">Kopfsalat</cue:recipeIngredient>, <cue:recipeIngredient ref="#Spinat">Spinat</cue:recipeIngredient>,
                   <cue:recipeIngredient ref="#Estragon">Dragon</cue:recipeIngredient>, <cue:recipeIngredient>Pimpernell</cue:recipeIngredient>,
-                  <cue:recipeIngredient ref="#Schnittlauch">Schnittlauch</cue:recipeIngredient> und überhaupt was man von passenden Kräutern hat, doch
+                  <cue:recipeIngredient ref="#Schnittlauch">Schnittlauch</cue:recipeIngredient> und überhaupt was man von passenden <cue:recipeIngredient>Kräutern</cue:recipeIngredient> hat, doch
                von den stärkern weniger, zusammen einige Hände voll, wasche und schneide sie fein. Schwitze dann ein gutes Stück <cue:recipeIngredient
                   ref="#Butter">Butter</cue:recipeIngredient> mit so vielem <cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>, als man zur
-               Suppe nöthig hat und gebe die Kräuter dazu, welche man mit <cue:recipeIngredient target="#Boullion" optional="True"
+               Suppe nöthig hat und gebe die <cue:recipeIngredient>Kräuter</cue:recipeIngredient> dazu, welche man mit <cue:recipeIngredient target="#Boullion" optional="True"
                   >Bouillon</cue:recipeIngredient> oder Wasser fein rührt und nachfüllt und mit <cue:recipeIngredient ref="#Salz"
                   >Salz</cue:recipeIngredient>, <cue:recipeIngredient ref="#Kerbel">Kerbel</cue:recipeIngredient> und , Beides fein gehackt,
                durchkocht. <cue:recipeIngredient altGrp="1">Kartoffel-</cue:recipeIngredient> oder <cue:recipeIngredient altGrp="2"
@@ -742,7 +742,7 @@
          </cue:recipe>
 
          <cue:recipe type="Suppen." rcp-id="B-43">
-            <head>Biersuppe mit Brod.</head>
+            <head>Biersuppe mit <cue:recipeIngredient>Brod</cue:recipeIngredient>.</head>
             <p>Halb <cue:recipeIngredient ref="#Vollkornschrotbrot">Schwarz-</cue:recipeIngredient>, halb <cue:recipeIngredient ref="#WeißbrotToast"
                   >Weißbrod</cue:recipeIngredient> wird mit wenig Wasser ganz weich gekocht, durch ein Sieb gerührt, <cue:recipeIngredient
                   ref="#Rosinen">Korinthen</cue:recipeIngredient>, <cue:recipeIngredient ref="#Zitrone" unit="Scheibe"

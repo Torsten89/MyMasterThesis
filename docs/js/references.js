@@ -37,7 +37,7 @@ references = [
         "id":"DavidisKochbuchDTA",
         "authors":"Deutsches Textarchiv (A)",
         "year":"2008",
-        "title":"Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849 - Digitalisiert vom Deutschem Text Archiv",
+        "title":"Davidis, Henriette: Praktisches Kochbuch für die gewöhnliche und feinere Küche. 4. Aufl. Bielefeld, 1849 - Digitalisiert vom Deutschem Textarchiv",
         "location":"Berlin-Brandenburgische Akademie der Wissenschaften",
         "url":"http://www.deutschestextarchiv.de/book/show/davidis_kochbuch_1849",
         "date":"2017-01.06"

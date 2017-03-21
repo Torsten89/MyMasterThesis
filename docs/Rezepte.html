@@ -38,13 +38,12 @@
         <script>
             activeRcp = "notSetYet"; // if not set to anything, jquery is an grumpy idiot
             function str2id(s) {
-                return s.split(" ").join("").replace(",");
+                return s.split(" ").join("").replace(",", "");
             }
             
             // load left recipes table of contents (in alphabetic order)
             var keys = [];
             for(var key in rcps) {
-                console.log(key);
                 keys.push(key);
             }
             keys.sort();
