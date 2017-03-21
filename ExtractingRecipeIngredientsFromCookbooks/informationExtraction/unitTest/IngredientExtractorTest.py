@@ -4,6 +4,7 @@ from informationExtraction.IngredientExtractor import IngredientExtractor
 
 
 class IngredientExtractorTest(unittest.TestCase):
+    """Caution: These tests depend on the listIngredients.xml within setUp()"""
     
     def setUp(self):
         unittest.TestCase.setUp(self)
@@ -34,6 +35,13 @@ class IngredientExtractorTest(unittest.TestCase):
         candis = self.ingE.getIngredientCandidates("Fleisch")
         self.assertLess(1, len(candis))
         self.assertIn("Rindfleisch", [candi.basicForm for candi in candis])
+        
+
+    def testSchweinefleisch(self):
+        candis = self.ingE.getIngredientCandidates("Schweinefleisch")
+        self.assertEqual([], candis)
+
+
         
         
 if __name__ == "__main__":
