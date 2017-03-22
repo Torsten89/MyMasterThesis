@@ -16,8 +16,10 @@ def getJsonRcps(pathToCueMLFile, rcpIds, hack=False):
         
     # hack for using our manual tagged soups:
     if hack:
+        # take B-1 to B-68 from golden standard and B-69 to B-93 from pathToCueMLFile
         pathToGoldenStandard = "/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted.xml"
-        xmlRcps = (XmlParser(parse(pathToGoldenStandard))).getXmlRecipes(["B-{}".format(i) for i in range(1, 69)])
+        xmlRcps = (XmlParser(parse(pathToGoldenStandard))).getXmlRecipes(["B-{}".format(i) for i in range(1, 69)]) \
+            + (XmlParser(parse(pathToCueMLFile))).getXmlRecipes(["B-{}".format(i) for i in range(69, 94)])
         soups = [xmlRcp2dictRcp(xmlRcp) for xmlRcp in xmlRcps]
         dictRcps["Suppen"] = soups
 
