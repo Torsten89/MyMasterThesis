@@ -2,6 +2,7 @@ from parserForDavidisCookbook.XmlParser import XmlParser,\
     parseXml2PlainTextRecipe, getIngsFromNode
 from xml.dom.minidom import parse, parseString
 import json
+import copy
 from parserForDavidisCookbook.xmlHelper import getElems
 
 def getJsonRcps(pathToCueMLFile, rcpIds, hack=False):
@@ -48,7 +49,7 @@ def mergeIngs(ings):
     newIngs = []
     for ing in ings:
         if "ref" not in ing.__dict__:
-            newIngs.append(ing)
+            if all(not ingWithNoRefEqualExeptForPosiInRcp(ing, iPrime) for iPrime in newIngs): newIngs.append(ing)
             continue
         
         ref = ing.__dict__["ref"]
@@ -65,6 +66,18 @@ def mergeIngs(ings):
             newIngs.append(ing)
             
     return [i.__dict__ for i in newIngs]
+
+def ingWithNoRefEqualExeptForPosiInRcp(i1, i2):
+    if "ref" in i1.__dict__ or "ref" in i2.__dict__:
+        return False
+    
+    i1Prime = copy.deepcopy(i1)
+    i1Prime.positionInRecipe = None
+    i2Prime = copy.deepcopy(i2)
+    i2Prime.positionInRecipe = None
+    
+    return i1Prime == i2Prime
+    
                     
                     
 if __name__ == '__main__':
