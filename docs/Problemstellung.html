@@ -27,7 +27,7 @@
                 <div class="col-md-2">
                     <div class="list-group panel myLeftNavBar">
                         <a href="#Beitrag" class="list-group-item">Beitrag zur Forschung</a>
-                        <a href="#Struktur" class="list-group-item">Struktur der Arbeit / Webseite</a>
+                        <a href="#Struktur" class="list-group-item">Wie diese Arbeit zu lesen ist</a>
                     </div>
                 </div>
                 
@@ -110,12 +110,120 @@
 
                     
                     
-                    <h2 id="Struktur" class="myAnchorWithFixedheader">Struktur der Arbeit / Webseite</h2>
+                    <h2 id="Struktur" class="myAnchorWithFixedheader">Wie diese Arbeit zu lesen ist</h2>
                     
-                    <p>Unten stehend ist eine interaktive Grafik. Diese zeigt unsere Arbeitsschritte in logisch chronologischer Reihenfolge. Als erstes muss das gedruckte Buch transkribiert werden. Anschließend entwickeln wir eine Auszeichnungssprache, die eine kulinarische Analyse ermöglicht. Danach beschäftigen wir uns mit Programmen, welche die Rezepte automatisch auszeichnen. Abschließend werden die ausgezeich&shy;neten Rezepte in eine Webseite umgewandelt. Aufbauend auf dieser kann eine kulinarische Analyse durchgeführt werden, was nicht mehr Teil dieser Informatik-Arbeit ist. Wenn in dem jeweiligen Arbeitsschritt eine Transformation stattgefunden hat, ist rechts die Grundlage zu sehen und links, die neue, transformierte Version. Unter dieser Grafik ist auch die Struktur der Arbeit als klassisches Inhaltsverzeichnis zu finden.</p>
+                    <p>Diese Webseite ist das Ergebnis meiner Master-Arbeit mit dem Titel <i>Extracting recipe ingredients from cookbooks</i>.
+                    </p>
+                    
+                    <p>Abb. 2a zeigt die chronologische Reihenfolge, in welche diese Arbeit zu lesen ist. Die Problemstellung wird am Anfang dieser Seite erläutert. Unter dem Menüpunkt Digitale Edition sind die weiteren Abschnitte zu finden. Der erste Abschnitt behandelt aufbauend auf der Version des Deutschen Textarchivs unsere Transkription des gedruckten Buchs von Frau Davidis. Im zweiten Abschnitt stellen wir bestehende Auszeichnungssprachen in der Koch-Domäne vor. Da diese nicht für eine kulinarische Analyse geeinigt sind, definieren wir für diesen Zweck im dritten Abschnitt die Auszeichnungssprache cueML. Der vierte Abschnitt beschäftigt sich mit der Information Extraction in der Koch-Domäne, mit dem Ziel später Rezepte automatisch mit cueML auszeichnen zu können. Darauf aufbauend werden im fünften Abschnitt zwei Prototypen zur Extraktion von Entities in der Koch-Domäne entwickelt. Die Evaluation dieser Prototypen ist Gegenstand des sechsten Abschnitts. Der siebte Abschnitt enthält einige Kommentare unsererseits zu dieser Arbeit. Der Menüpunkt Rezepte zeigt die von uns aufgearbeiteten und in HTML transofrmierten Rezepte Frau Davidis'. Der Menüpunkt Blog gibt Einblicke in unsere Arbeitsweise. Diese beiden Menüpunkte sind als bonus Material für den interessierten Leser zu verstehen.
+                    </p>    
+                    
+                    <p>Abb. 2b zeigt, wie der Aufbau der Arbeit inklusive der Unterabschnitte als klassiches Inhaltsverzeichnis aussieht.
+                    </p>
+                    
+                    
+                    <figure class="supFigure">
+                        <figcaption>Abb. 2: Aufbau der Webseite</figcaption>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <figure myModal="images/Problemstellung/NavBedienung.png">
+                                    <figcaption>Abb. 2a: Navigationsbar</figcaption>
+                                    <img src="images/Problemstellung/NavBedienung.png" alt="Navigationsbar-Screenshot"/>
+                                </figure>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <figure>
+                                    <figcaption>Abb. 2b: Klassisches Inhaltsverzeichnis</figcaption>
+                                    <style>
+                                        div.tableOfContents { border: 1px solid; }
+                                        div.tableOfContents ol { counter-reset: item; }
+                                        div.tableOfContents li { display: block; }
+                                        div.tableOfContents li:before { content: counters(item, ".") " "; counter-increment: item; }
+                                    </style>
+
+                                    <div class="tableOfContents">
+                                        <ol>
+                                            <li><a href="Transkription.html">Transkription</a>
+                                            </li>
+                                            <li><a href="AuszeichnenRezepte.html">Auszeichnen von Rezepten</a>
+                                                <ol>
+                                                    <li><a href="AuszeichnenRezepte.html#Auszeichnungssprachen">Informationen zugänglich machen</a></li>
+                                                    <li><a href="AuszeichnenRezepte.html#TEI">TEI: Text Encoding Initiative</a></li>
+                                                    <li><a href="AuszeichnenRezepte.html#SchemaOrgRecipe">Schema.org/Recipe</a></li>
+                                                    <li><a href="AuszeichnenRezepte.html#kommerzielleKochseiten">In kommerziellen Kochseiten</a></li>
+                                                </ol>
+                                            </li>
+                                            <li><a href="cueML.html">Domänen-spezifisches Vokabular <i>cueML</i></a>
+                                                <ol>
+                                                    <li><a href="cueML.html#Anforderungen">Anforderungen</a></li>
+                                                    <li><a href="cueML.html#cueML">cueML</a></li>
+                                                </ol>
+                                            </li>
+                                            <li><a href="IEKochDomain.html">Information Extraction in der Koch-Domäne</a>
+                                                <ol>
+                                                    <li><a href="IEKochDomain.html#REBased">Regular Expression-based</a></li>
+                                                    <li><a href="IEKochDomain.html#CRFBased">Conditional Random Field-based</a>
+                                                        <ol>
+                                                            <li><a href="IEKochDomain.html#CRFTheorie">CRF erklärt</a></li>
+                                                            <li><a href="IEKochDomain.html#CRFNYT">Implementierung der NYT</a></li>
+                                                        </ol>
+                                                    </li>
+                                                    <li><a href="IEKochDomain.html#DictBased">Dictionary- and rule-based</a></li>
+                                                </ol>
+                                            </li>
+                                            <li><a href="AutomatischesAuszeichnenCueML.html">Automatisches Auszeichnen mit <i>cueML</i></a>
+                                                <ol>
+                                                    <li><a href="AutomatischesAuszeichnenCueML.html#CRFPrototyp">CRF-based Prototyp</a></li>
+                                                    <li><a href="AutomatischesAuszeichnenCueML.html#Dictbased">Dictionary- and rule-based Prototyp</a>
+                                                        <ol>
+                                                            <li><a href="AutomatischesAuszeichnenCueML.html#DictBasedV01">Version 0.1</a></li>
+                                                            <li><a href="AutomatischesAuszeichnenCueML.html#DictBasedV02">Version 0.2</a></li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li><a href="Evaluierung.html">Evaluierung</a>
+                                                <ol>
+                                                    <li><a href="Evaluierung.html#Metrics">Recall &amp; Precision</a></li>
+                                                    <li><a href="Evaluierung.html#CRFPrototyp">CRF-based Prototyp</a></li>
+                                                    <li><a href="Evaluierung.html#Dictbased">Dictionary- and rule-based Prototyp</a>
+                                                        <ol>
+                                                            <li><a href="Evaluierung.html#DictBasedV01">Version 0.1</a></li>
+                                                            <li><a href="Evaluierung.html#DictBasedV02">Version 0.2</a></li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li><a href="Kommentare.html">Kommentare</a>
+                                                <ol>
+                                                    <li><a href="Kommentare.html#PraktischerNutzen">Praktischer Nutzen der Arbeit</a></li>
+                                                    <li><a href="Kommentare.html#Quali">Schwierigkeiten für die kulinarische Analyse mit cueML und Frau Davidis' Kochbuch</a></li>
+                                                    <li><a href="Kommentare.html#WissenschaftlichesArbeiten">Wissenschaftliches Arbeiten im 21. Jahrhundert</a></li>
+                                                    <li><a href="Kommentare.html#WissenIstMacht">Wissen ist Macht</a></li>
+                                                    <li><a href="Kommentare.html#Retrospective">Final Retrospective</a></li>
+                                                </ol>
+                                            </li>
+                                            <li><a href="ZusammenfassungUndAusblick.html">Zusammenfassung &amp; Ausblick</a>
+                                                <ol>
+                                                    <li><a href="ZusammenfassungUndAusblick.html#Zusammenfassung">Zusammenfassung</a></li>
+                                                    <li><a href="ZusammenfassungUndAusblick.html#Ausblick">Ausblick</a></li>
+                                                </ol>
+                                            </li>
+                                            <li><a href="Quellen.html">Quellen</a></li>
+                                        </ol>
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                    </figure>
                     
                     
                     
+                    
+                    
+                    <p>Unten stehend ist zur Veranschaulichung eine interaktive Grafik. Diese zeigt alle nötigen Schritte und Zwischenergebnisse von der Transformation des gedruckten Buchs bis hin zur ausgezeichneten digitalen Version als Webseite. Als erstes muss das gedruckte Buch transkribiert werden. Anschließend entwickeln wir eine Auszeichnungssprache, die eine kulinarische Analyse ermöglicht. Danach beschäftigen wir uns mit Programmen, welche die Rezepte automatisch auszeichnen. Abschließend werden die ausgezeich&shy;neten Rezepte in eine Webseite umgewandelt. Aufbauend auf dieser kann eine kulinarische Analyse durchgeführt werden, was nicht mehr Teil dieser Informatik-Arbeit ist. Wenn in dem jeweiligen Arbeitsschritt eine Transformation stattgefunden hat, ist rechts die Grundlage zu sehen und links, die neue, transformierte Version.
+                    </p>
                     
                     <div class="timeline" id="timelineDiv">
                         <div class="row">
@@ -319,100 +427,7 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <div class="row" style="margin-top:1em;">
-                        <div class="col-md-4">
-                            <style>
-                                div.tableOfContents ol { counter-reset: item; }
-                                div.tableOfContents li { display: block; }
-                                div.tableOfContents li:before { content: counters(item, ".") " "; counter-increment: item; }
-                            </style>
 
-                            <div class="tableOfContents">
-                                <ol>
-                                    <li><a href="Transkription.html">Transkription</a>
-                                    </li>
-                                    <li><a href="AuszeichnenRezepte.html">Auszeichnen von Rezepten</a>
-                                        <ol>
-                                            <li><a href="AuszeichnenRezepte.html#Auszeichnungssprachen">Informationen zugänglich machen</a></li>
-                                            <li><a href="AuszeichnenRezepte.html#TEI">TEI: Text Encoding Initiative</a></li>
-                                            <li><a href="AuszeichnenRezepte.html#SchemaOrgRecipe">Schema.org/Recipe</a></li>
-                                            <li><a href="AuszeichnenRezepte.html#kommerzielleKochseiten">In kommerziellen Kochseiten</a></li>
-                                        </ol>
-                                    </li>
-                                    <li><a href="cueML.html">Domänen-spezifisches Vokabular <i>cueML</i></a>
-                                        <ol>
-                                            <li><a href="cueML.html#Anforderungen">Anforderungen</a></li>
-                                            <li><a href="cueML.html#cueML">cueML</a></li>
-                                        </ol>
-                                    </li>
-                                    <li><a href="IEKochDomain.html">Information Extraction in der Koch-Domäne</a>
-                                        <ol>
-                                            <li><a href="IEKochDomain.html#REBased">Regular Expression-based</a></li>
-                                            <li><a href="IEKochDomain.html#CRFBased">Conditional Random Field-based</a>
-                                                <ol>
-                                                    <li><a href="IEKochDomain.html#CRFTheorie">CRF erklärt</a></li>
-                                                    <li><a href="IEKochDomain.html#CRFNYT">Implementierung der NYT</a></li>
-                                                </ol>
-                                            </li>
-                                            <li><a href="IEKochDomain.html#DictBased">Dictionary- and rule-based</a></li>
-                                        </ol>
-                                    </li>
-                                    <li><a href="AutomatischesAuszeichnenCueML.html">Automatisches Auszeichnen mit <i>cueML</i></a>
-                                        <ol>
-                                            <li><a href="AutomatischesAuszeichnenCueML.html#CRFPrototyp">CRF-based Prototyp</a></li>
-                                            <li><a href="AutomatischesAuszeichnenCueML.html#Dictbased">Dictionary- and rule-based Prototyp</a>
-                                                <ol>
-                                                    <li><a href="AutomatischesAuszeichnenCueML.html#DictBasedV01">Version 0.1</a></li>
-                                                    <li><a href="AutomatischesAuszeichnenCueML.html#DictBasedV02">Version 0.2</a></li>
-                                                </ol>
-                                            </li>
-                                        </ol>
-                                    </li>
-                                    <li><a href="Evaluierung.html">Evaluierung</a>
-                                        <ol>
-                                            <li><a href="Evaluierung.html#Metrics">Recall &amp; Precision</a></li>
-                                            <li><a href="Evaluierung.html#CRFPrototyp">CRF-based Prototyp</a></li>
-                                            <li><a href="Evaluierung.html#Dictbased">Dictionary- and rule-based Prototyp</a>
-                                                <ol>
-                                                    <li><a href="Evaluierung.html#DictBasedV01">Version 0.1</a></li>
-                                                    <li><a href="Evaluierung.html#DictBasedV02">Version 0.2</a></li>
-                                                </ol>
-                                            </li>
-                                        </ol>
-                                    </li>
-                                    <li><a href="Kommentare.html">Kommentare</a>
-                                        <ol>
-                                            <li><a href="Kommentare.html#PraktischerNutzen">Praktischer Nutzen der Arbeit</a></li>
-                                            <li><a href="Kommentare.html#Quali">Schwierigkeiten für die kulinarische Analyse mit cueML und Frau Davidis' Kochbuch</a></li>
-                                            <li><a href="Kommentare.html#WissenschaftlichesArbeiten">Wissenschaftliches Arbeiten im 21. Jahrhundert</a></li>
-                                            <li><a href="Kommentare.html#WissenIstMacht">Wissen ist Macht</a></li>
-                                            <li><a href="Kommentare.html#Retrospective">Final Retrospective</a></li>
-                                        </ol>
-                                    </li>
-                                    <li><a href="ZusammenfassungUndAusblick.html">Zusammenfassung &amp; Ausblick</a>
-                                        <ol>
-                                            <li><a href="ZusammenfassungUndAusblick.html#Zusammenfassung">Zusammenfassung</a></li>
-                                            <li><a href="ZusammenfassungUndAusblick.html#Ausblick">Ausblick</a></li>
-                                        </ol>
-                                    </li>
-                                    <li><a href="Quellen.html">Quellen</a></li>
-                                </ol>
-                            </div>
-                            
-                        </div>
-                        <div class="col-md-8">
-                            <p>Links ist die Struktur der Webseite als klassisches Inhaltsverzeichnis. Aufbauend auf der Version des Deutschen Textarchivs behandelt das erste Kapitel unsere Transkription des  gedruckten Buchs von Frau Davidis. Im zweiten Kapitel stellen wir bestehende Auszeichnungssprachen in der Koch-Domäne vor. Da diese nicht für eine kulinarische Analyse geeinigt sind, definieren wir für diesen Zweck im dritten Kapitel die Auszeichnungssprache cueML. Das vierte Kapitel beschäftigt sich mit der Information Extraction in der Koch-Domäne, mit dem Ziel später Rezepte automatisch mit cueML auszeichnen zu können. Darauf aufbauend werden im fünften Kapitel zwei Prototypen zur Extraktion von Entities in der Koch-Domäne entwickelt. Die Evaluation dieser Prototypen ist Gegenstand des sechsten Kapitels. Das siebte Kapitel enthält einige Kommentare unsererseits zu dieser Arbeit.
-                            </p>
-                        </div>
-                    </div>
                     
                 </div>
             </div>
