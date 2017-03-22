@@ -34,7 +34,8 @@ Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der Suppe, gekoch
     extractor = Extractor(ingE, unitE)
     print(extractor.extractRecipe(rcp))
 
-    s = "nach L. No. 2,"
+    s = "Schweinemagen"
+    print(ingE.__ingDict__["Schweinemagen"])
     wps = dictBasedEnrichment(s, ingE, unitE)
     wps = applyRulesToWordProperties(wps, None)
     for wp in wps:
@@ -47,9 +48,9 @@ def extractAllRecipes(pathToCookbook, ergFilePath=defaultErgFilePath):
     
 
 if __name__ == '__main__':
-#      evalRecipes()
-    print(ingE.__ingDict__["Muskatnuß"])
+#     myPlaygroundTest()
+    evalRecipes()
 #     extractAllRecipes("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted (original).xml", 
 #                      ergFilePath="/home/torsten/Desktop/MyMasterThesis/docs/DavidisesKochbuch/Rezepte mit cueML.xml")
-    
+#     
     

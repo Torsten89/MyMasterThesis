@@ -1,6 +1,6 @@
 # All nouns of Davidis cookbook were extracted and the nouns, which were not an ingredient were manual removed.
 # Entries like "003 Himbeer-#oder#Johannisbeer-Gelee" were transformed into two lines like "003 Himbeergelee" and "003 Johannisbeergelee"
-# The fist column is how often the ingredient appeared in the cookbook.
+# The fist column is how often the ingredient appeared in the cookbook
 817	Butter
 810	Zucker
 559	Salz
@@ -29,6 +29,7 @@
 083	Zitronenscheiben
 081	Reis
 074	Muskatnuß
+XXX Muskatnuss # cause lemma of Muskatnuß becomes Muskatnuss
 071	Petersilie
 071	Bouillon
 071	Aepfel
@@ -431,9 +432,7 @@
 002	Schweinsleber
 002	Schweinskopf
 002	Schweinsbraten
-002	Schweines
 002	Schweinepfoten
-002	Schweine
 002	Schwanzstück
 002	Schnepfen
 002	Schlangengurken
@@ -674,9 +673,9 @@
 001	Schweine-Cotelettes
 001 Hammel-Cotelettes
 001	Schweinemagen
+XXX Schweinemägen # cause lemma of Schweinemagen becomes Schweinemägen
 001	Schweinefett
 001	Schweinedärme
-001	Schwein
 001	Schwarzbrot
 001 Weißbrod
 001	Schwarzbrodes
@@ -697,7 +696,7 @@
 001 Semmelklößchen
 001	Schaumsauce
 001 Rumsauce
-001	Sauerkrauts
+001	Sauerkraut
 001	Sauerampfer-Sauce
 001	Saucissen-Fleisch
 001	Sardellensauce

@@ -1,6 +1,7 @@
 import unittest
 from parserForDavidisCookbook.unitTest.XmlParserTest import XmlParserTest
 from parserForDavidisCookbook.unitTest.XmlHelperTest import XmlHelperTest
+from parserForDavidisCookbook.unitTest.CueML2JsonTest import CueML2JsonTest
 from model.unitTest.WordPropertyTest import WordPropertyTest
 from informationExtraction.unitTest.IngredientExtractorTest import IngredientExtractorTest
 from informationExtraction.unitTest.DictBasedExtractorTest import DictBasedExtractorTest
@@ -19,6 +20,7 @@ from evaluation.unitTest.ComparatorTest import ComparatorTest
 def getTests():
     return [unittest.TestLoader().loadTestsFromTestCase(XmlParserTest),
             unittest.TestLoader().loadTestsFromTestCase(XmlHelperTest),
+            unittest.TestLoader().loadTestsFromTestCase(CueML2JsonTest),
             unittest.TestLoader().loadTestsFromTestCase(WordPropertyTest),
             unittest.TestLoader().loadTestsFromTestCase(DictBasedExtractorTest),
             unittest.TestLoader().loadTestsFromTestCase(DissolveAmbiguityRulesTest),
