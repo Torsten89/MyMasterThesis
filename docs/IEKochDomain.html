@@ -73,6 +73,7 @@
                     </div>
                     
                     
+                
                     
                     <h2 id="CRFBased" class="myAnchorWithFixedheader">Conditional Random Field-based</h2>
                     <p>Die New York Times (NYT) betreibt eine eigene <a href="https://cooking.nytimes.com/" title="https://cooking.nytimes.com/">Kochseite</a>. Greene behauptet, dass sie mittels Linear-chain Conditional Random Fields (CRF) in der Lage sind <i>„automatisch den unstrukturierten Text von Rezepten in strukturierte Daten umzuwandeln“</i> <span cite="CRFNYT"></span>. Dies beinhaltet insbesondere das Extrahieren der Zutaten mit ihren Mengenangaben und Einheiten. Da diese Behauptung genau unserer Problemstellung entspricht, stellen wir zunächst die Idee von CRF vor und gehen anschließend auf die Implementierung von Greene ein.
@@ -85,12 +86,12 @@
                     <p>Jetzt stellt sich nur noch die Frage, woher man so ein Orakel bekommt. Folgend erläutern wir die Idee, wie so ein Orakel antrainiert werden kann. Eine detaillierte Einführung ist in <span cite="CRFIntroduction"></span> zu finden. Wir fangen damit an, dass wir dem Orakel eine Reihe von Wort-Vektoren geben und ihm für diese bereits die passenden Antworten von Label-Vektoren mitgeben. Solch eine Menge von Wort- und zugehörenden Label-Vektoren werden auch <i>Trainingsdaten</i> genannt. Fragen wir es nun nach den Labels von einen dieser Wort-Vektoren, könnte es uns einfach den zugehörenden Label-Vektor orakeln.
                     </p>
                     
-                    <p>Spannend ist die Frage, wie es Labels für Wort-Vektoren rät, von denen es die Lösung nicht kennt. Dafür leitet es zunächst aus den Trainingsdaten eine multivariate  Wahrscheinlichkeits&shy;verteilung \( p(X,Y) \) ab, die angibt, wie wahrscheinlich zu einem Wort-Vektor \( X \) ein Label-Vektor \( Y \) gehört. Wenn wir jetzt vereinfacht davon ausgehen, dass jedes Label \( y_i \in Y \) nur vom vorherigen Label \( y_{i-1} \in Y \) und dem entsprechenden Wort \( x_i \in X \) abhängt, ergibt sich Formel (1).
+                    <p>Spannend ist die Frage, wie es Labels für Wort-Vektoren rät, von denen es die Lösung nicht kennt. Dafür leitet es zunächst aus den Trainingsdaten eine multivariate  Wahrscheinlichkeits&shy;verteilung \( p(X,Y) \) ab, die angibt, wie wahrscheinlich zu einem Wort-Vektor \( X \) ein Label-Vektor \( Y \) gehört. Wenn wir jetzt von dem <i>vereinfachtem Modell</i> ausgehen, dass jedes Label \( y_i \in Y \) nur vom vorherigen Label \( y_{i-1} \in Y \) und dem entsprechenden Wort \( x_i \in X \) abhängt, ergibt sich Formel (1).
                     </p>
                     
                     \begin{equation} \boldsymbol{ p(X,Y) = \prod_{t=1}^{\#X} p(y_t|y_{t-1}) * p(y_t|x_t) } \end{equation}
                     
-                    <p>Wahrscheinlichkeiten der Form von (1) können immer in die Form von Formel (2) überführt werden. \( 1_{Bedingung} \) ist dabei eine Funktion, die genau dann Eins ist, wenn die Bedingung erfüllt ist und ansonsten Null. Je öfter \( y_t=i \) und \( y_{t-1}=j \) gemeinsam in der Verteilung vorkommen, desto größer wird \( \Theta_ {i,j} \) sein. Kommen \( y_t=i \) und \( y_{t-1}=j \) gar nicht gemeinsam vor, gilt \( \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} = 0 \). Gleiches gilt für \( y_t=i \), \( x_t=o \) und \( \mu_{i,o} \). Die Thetas werden auch als <i>Gewichte</i> bezeichnet. \( Z \) bildet die Summe der Werte für alle möglichen Vorkommen von \( X \) und \( Y \). Nach der Division durch \( Z \) ist somit sichergestellt, dass Formel (2) zwischen \( 0 \) und \( 1 \) liegt, sowie dass die Summe über alle möglichen Wahrscheinlichkeiten \( 1 \) ist, wie es für eine Wahrscheinlichkeitsverteilung der Fall sein muss. Die Berechnung von \( Z \) ist sehr Ressourcen-intensiv, selbst wenn die maximale Dimension von \( X^* \) und \( Y^* \) beschränkt wird. 
+                    <p>Wahrscheinlichkeiten der Form von (1) können immer in die Form von Formel (2) überführt werden. \( 1_{Bedingung} \) ist dabei eine Funktion, die genau dann Eins ist, wenn die Bedingung erfüllt ist und ansonsten Null. Je öfter \( y_t=i \) und \( y_{t-1}=j \) gemeinsam in der Verteilung vorkommen, desto größer wird \( \Theta_ {i,j} \) sein. Kommen \( y_t=i \) und \( y_{t-1}=j \) gar nicht gemeinsam vor, gilt \( \Theta_{i,j} * 1_{y_t=i} * 1_{y_{t-1}=j} = 0 \). Gleiches gilt für \( y_t=i \), \( x_t=o \) und \( \mu_{i,o} \). Die Thetas werden auch als <i>Gewichte</i> bezeichnet. \( Z \) bildet die Summe der Werte für alle möglichen Vorkommen von \( X \) und \( Y \). Nach der Division durch \( Z \) ist somit sichergestellt, dass Formel (2) zwischen \( 0 \) und \( 1 \) liegt, sowie dass die Summe über alle möglichen Wahrscheinlichkeiten \( 1 \) ist, wie es für eine Wahrscheinlichkeitsverteilung der Fall sein muss. Die Berechnung von \( Z \) ist sehr Ressourcen-intensiv, selbst wenn die maximale Länge von \( X^* \) und \( Y^* \) beschränkt wird. 
                     </p> 
                     
                     \begin{align}
@@ -247,7 +248,7 @@
                         
                         <div class="row">
                             <div class="col-md-6">
-                                <p>Der zweite Ansatz basiert auf <b>dependency-based parsing</b>. Abb. 8 zeigt ein exemplarisches Ergebnis eines dependency-based parsings des Satzes <i>Koche die Erbsen und Bohnen</i>. Aus diesem wird sofort ersichtlich, dass sich das Verb <i>kochen</i> auf die Subjekte <i>Erbsen</i> und <i>Bohnen</i> bezieht. Das dependency-based parsing kann von Bibliotheken wie dem <a href="http://nlp.stanford.edu/software/lex-parser.shtml">Stanford Parser</a> erledigt werden.
+                                <p>Der zweite Ansatz basiert auf <b>dependency-based parsing</b>. Abb. 8 zeigt ein exemplarisches Ergebnis eines dependency-based parsings des Satzes <i>Koche die Erbsen und Bohnen</i>. Aus diesem wird sofort ersichtlich, dass sich das Verb <i>kochen</i> auf die Objekte <i>Erbsen</i> und <i>Bohnen</i> bezieht. Das dependency-based parsing kann von Bibliotheken wie dem <a href="http://nlp.stanford.edu/software/lex-parser.shtml">Stanford Parser</a> erledigt werden.
                                 </p>
                             </div>
                             
