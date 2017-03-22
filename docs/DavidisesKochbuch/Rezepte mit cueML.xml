@@ -34,17 +34,17 @@
 				<head> Klare weiße Rindfleischsuppe.</head>
 				<p>
 					 Man rechnet, wenn die Gesellschaft klein ist, auf jede Person ¾ Pfund, bei einer großen Gesellschaft ½ Pfund 
-					<cue:recipeIngredient quantity="0.5" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="0.5" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					. Dasselbe wird gewaschen und mit doppelt so vielem Wasser, als man Suppe haben will, zu Feuer gesetzt. Auf jede Person rechnet man bei einem Gesellschaftsessen ⅜ Maß Suppe, also auch ¾ Maß Wasser, wozu man gleich das nöthige 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 gibt, weil das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 nur in der ersten Stunde des Kochens das 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 annimmt und das spätere Hinzugeben des 
 					<cue:recipeIngredient ref="#Salz">Salzes</cue:recipeIngredient>
 					 nur die Suppe würzt. Ist das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 sorgfältig ausgeschäumt, gibt man eine fein geschnittene 
 					<cue:recipeIngredient quantity="1" ref="#Zwiebel">Zwiebel</cue:recipeIngredient>
 					 hinzu, wodurch die 
@@ -52,7 +52,7 @@
 					 an Kraft gewinnt, und läßt sie, fest zugedeckt, fortwährend, aber nicht zu stark kochen. Eine Stunde später gießt man die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 durch ein Haarsieb, weil sie nie ganz klar ist, spült das Stück 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 eben ab und setzt es mit der 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					, die man vom Bodensatz langsam abschüttet, in dem ebenfalls umgespülten Topfe wieder zu Feuer nebst einigen 
@@ -70,7 +70,7 @@
 					, was die Jahreszeit gerade bietet, hinein geben, nur muß beides eben abgekocht sein, und darf ja nicht in der 
 					<cue:recipeIngredient>Bouillon</cue:recipeIngredient>
 					 zerkochen. Ist das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 gahr, aber nicht zu weich gekocht, läßt man beliebige 
 					<cue:recipeIngredient>Klöße</cue:recipeIngredient>
 					 eben darin gahr kochen und richtet die Suppe an. Zugleich hat man 
@@ -78,7 +78,7 @@
 					, für jede Person einen Eßlöffel gerechnet, abgebrüht und in 
 					<cue:recipeIngredient quantity="1" unit="EL">Bouillon</cue:recipeIngredient>
 					, wozu man so viel mehr 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 genommen, gahr und dick gekocht; doch müssen die Körner ganz bleiben. Derselbe wird bei der Suppe( nach Belieben mit geriebenem 
 					<cue:recipeIngredient ref="#Hartkäse45">Parmesankäse</cue:recipeIngredient>
 					) herumgereicht.
@@ -134,13 +134,13 @@
 				<head> Schnell gemachte Rindfleischsuppe.</head>
 				<p>
 					 Für 6—7 Personen schneidet man 2 Pfund 
-					<cue:recipeIngredient quantity="2" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="2" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					 in kleine Würfel, läßt einige Löffel 
 					<cue:recipeIngredient quantity="einige" ref="#Mehl" unit="EL">Mehl</cue:recipeIngredient>
 					 in 2 Stich frischer 
 					<cue:recipeIngredient quantity="2" ref="#Butter" unit="Stich">Butter</cue:recipeIngredient>
 					 gelbbraun werden, gibt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 hinzu und läßt es ebenfalls ein wenig rösten, so wie nachher eine, in 8 Theile geschnittene 
 					<cue:recipeIngredient quantity="8" ref="#Knollensellerie">Sellerieknolle</cue:recipeIngredient>
 					, eine klein geschnittene 
@@ -248,7 +248,7 @@
 					 in der Suppe gekocht werden, bleibt das 
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					 weg. Wird das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 nach derselben gegessen, schneidet man es vor dem Kochen in passende viereckige Stückchen, und gibt eine 
 					<cue:recipeIngredient quantity="1" ref="#Meerrettichsauce">Meerrettig-Sauce</cue:recipeIngredient>
 					 dabei.
@@ -312,7 +312,7 @@
 				<head> Hammelfleischsuppe.</head>
 				<p>
 					 Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird in Stückchen gehauen, gut gewaschen, mit 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 ausgeschäumt, 
@@ -413,7 +413,7 @@
 					 und zu 12 Personen etwa 24 Stück 
 					<cue:recipeIngredient quantity="24" ref="#Flusskrebs">Krebse</cue:recipeIngredient>
 					. Dann wird das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 aus Scheeren und Schwänzen gebrochen, die sämmtlichen Schalen im Mörser nicht zu fein gestoßen und über Feuer mit einem großen Stück frischer 
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 durchgerührt, bis diese roth wird und zu steigen anfängt. Nun läßt man darin so viel 
@@ -570,7 +570,7 @@
 					 und eine geräucherte 
 					<cue:recipeIngredient quantity="1" ref="#Ochsenzunge">Ochsenzunge</cue:recipeIngredient>
 					 zu Feuer und kocht dies Alles gahr, aber nicht zu weich. Kalt, schneidet man es in kleine, länglich viereckige Stückchen, gibt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 in die 
 					<cue:recipeIngredient>Bouillon</cue:recipeIngredient>
 					, nebst braunem 
@@ -646,7 +646,7 @@
 					 und 
 					<cue:recipeIngredient>Kalbskopfbrühe</cue:recipeIngredient>
 					 dazu, gibt das geschnittene 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Cayennepfeffer">Cayenne-Pfeffer</cue:recipeIngredient>
 					 und braunes 
@@ -715,7 +715,7 @@
 					 sorgfältig auf, zerschlage die 
 					<cue:recipeIngredient>Knochen</cue:recipeIngredient>
 					, zerschneide das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, jedoch wird der Rücken zurückgelegt, und koche Beides mit 2—3 Pfund 
 					<cue:recipeIngredient atLeast="2" atMost="3" ref="#Rindkochfleisch" unit="Pfund">Rindfleisch</cue:recipeIngredient>
 					, 3 Loth 
@@ -765,7 +765,7 @@
 				</head>
 				<p>
 					 Ist noch gutes 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 an einem 
 					<cue:recipeIngredient quantity="1" ref="#Hasenbraten">Hasenbraten</cue:recipeIngredient>
 					, der schon zur Tafel gewesen ist, wird dies ganz fein gehackt, hinzugegeben: etwa für 8 Pfennig in Wasser eingeweichtes und ausgedrücktes 
@@ -805,7 +805,7 @@
 					), in Scheiben geschnitten, nebst 2—3 Löffel 
 					<cue:recipeIngredient atLeast="2" atMost="3" ref="#Mehl" unit="EL">Mehl</cue:recipeIngredient>
 					 braun, läßt dann das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und zuletzt die 
 					<cue:recipeIngredient>Hasenknochen</cue:recipeIngredient>
 					 darin rösten; gibt nun so viel Wasser, als nöthig ist, hinzu, auf jede Person etwa ½ bis ¾ Maß gerechnet. Wenn 
@@ -813,7 +813,7 @@
 					 vom 
 					<cue:recipeIngredient ref="#Hase">Hasen</cue:recipeIngredient>
 					 da ist, kommt sie hinzu. Ist das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 ausgekocht und das 
 					<cue:recipeIngredient ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient>
 					 weich, reibt man die Suppe durch ein Sieb, bringt sie wieder zum Kochen, würzt sie mit 
@@ -845,7 +845,7 @@
 					, oder auch 
 					<cue:recipeIngredient>Knochen</cue:recipeIngredient>
 					 von anderem, gutem gebratenem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleische</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleische</cue:recipeIngredient>
 					 nebst 
 					<cue:recipeIngredient ref="#Wurzelwerk">Wurzelwerk</cue:recipeIngredient>
 					 eine Weile darin durchgebraten und kochendes Wasser und 
@@ -914,13 +914,13 @@
 				<head> Kartoffelsuppe.</head>
 				<p>
 					 Es wird ein Stück 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 mit 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 oder auch 
 					<cue:recipeIngredient>Knochen</cue:recipeIngredient>
 					 von gutem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, die klein gehauen und gewaschen sind, zeitig zu Feuer gesetzt, ausgeschäumt, 
 					<cue:recipeIngredient ref="#Kartoffeln">Kartoffeln</cue:recipeIngredient>
 					, 
@@ -1061,13 +1061,13 @@
 					 die 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					 hart macht. Die geräucherte Wurst muß heiß abgewaschen und wenn sie etwa sehr trocken sein sollte, die vorige Nacht eingewässert sein, wodurch sie weicher wird. Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 muß man mit wenig 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 ausschäumen und die abgeschütteten 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					 hineingeben. Was es nun an 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 sein soll, läßt man mit den 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					 und reichlich 
@@ -1075,7 +1075,7 @@
 					 und 
 					<cue:recipeIngredient ref="#Knollensellerie">Sellerieknollen</cue:recipeIngredient>
 					 weich werden, während man im Anfang zuweilen einen Guß kaltes Wasser nachschüttet, welches das schnellere Weichwerden befördert. Sie müssen ununterbrochen, aber nicht zu stark kochen. Dann nimmt man das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und die Knollen heraus, reibt die 
 					<cue:recipeIngredient ref="#Erbsen">Erbsen</cue:recipeIngredient>
 					 durch einen Durchschlag und läßt sie mit in 
@@ -1085,7 +1085,7 @@
 					, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, dem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und den Knollen eben durchkochen. Es wird in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 geröstetes 
@@ -2019,7 +2019,9 @@
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 anziehen, schüttet, indem man gut rührt, langsam kochendes Wasser hinzu, gibt 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
-					, und wenn es gahr ist, Muskatnuß und 1 
+					, und wenn es gahr ist, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und 1 
 					<cue:recipeIngredient quantity="1" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 daran, und in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
@@ -2040,7 +2042,9 @@
 					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
 					 und fein gehackte 
 					<cue:recipeIngredient ref="#Petersilienblatt">Petersilie</cue:recipeIngredient>
-					 oder Muskatnuß dazu. Letzteres ist bei Magenschwäche zu empfehlen.
+					 oder 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 dazu. Letzteres ist bei Magenschwäche zu empfehlen.
 				</p>
 			</cue:recipe>
 			 
@@ -3153,7 +3157,9 @@
 					<cue:recipeIngredient>Thymian</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient ref="#Majoran">Majoran</cue:recipeIngredient>
-					, Alles gehackt, Muskatnuß und 
+					, Alles gehackt, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, und wenn man sie hat, einige kleine 
 					<cue:recipeIngredient quantity="einige">Fische</cue:recipeIngredient>
@@ -3507,9 +3513,9 @@
 					 Man schuppt den 
 					<cue:recipeIngredient ref="#Karpfen">Karpfen</cue:recipeIngredient>
 					, nimmt ihn aus, salzt ihn und lös’t von der einen Seite das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 weg, das zwischen Kopf und Schwanz sitzt, doch recht behutsam, daß Beide an der Haut hängen bleiben und der Rückgrat und die Haut nicht beschädigt werden; dann hackt man das herausgeschnittene 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, nachdem man die Gräten herausgemacht hat, recht fein, reibt ein reichliches Stück 
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 zu 
@@ -3919,7 +3925,7 @@
 					, läßt ihn auf einem Einleger, damit er ganz bleibe, in gesalzenem Wasser mit einem Stück 
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					, wodurch das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 milder wird, gahr kochen, läßt ihn dann etwas abtröpfeln, richtet ihn in eine tiefe, heiß gemachte Schüssel an und füllt folgende 
 					<cue:recipeIngredient quantity="1">Sauce</cue:recipeIngredient>
 					 darüber:.
@@ -3964,13 +3970,13 @@
 				</head>
 				<p>
 					 Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird vom Rückgrat so geschnitten, daß Kopf und Schwanz an demselben sitzen bleiben und das 
 					<cue:recipeIngredient>Gerippe</cue:recipeIngredient>
 					 in eine irdene Pfanne gelegt. Dann wirft man das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 eben in kochendes Wasser, wodurch man die Gräten leichter herausnehmen kann. Nachdem diese herausgenommen sind, wird das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 fein gehackt, mit einem reichlichen Stück 
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					, zwei 
@@ -4712,7 +4718,9 @@
 				<p>
 					 Derselbe wird gesalzen, abgespült und in eine irdene Schüssel gelegt; darüber gegeben: gestoßener 
 					<cue:recipeIngredient quantity="1" ref="#Zwieback">Zwieback</cue:recipeIngredient>
-					, Muskatnuß oder 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 oder 
 					<cue:recipeIngredient>Blüthe</cue:recipeIngredient>
 					, reichlich 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
@@ -5171,7 +5179,7 @@
 				</p>
 				<p>
 					 Bringt man ihn zur Tafel, muß man vorher die Scheeren aufhauen, damit man das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 leicht heraus heben kann, den Leib aufschneiden und die 
 					<cue:recipeIngredient>Galle</cue:recipeIngredient>
 					 wegnehmen.
@@ -5271,8 +5279,10 @@
 					<cue:recipeIngredient quantity="1">Farce</cue:recipeIngredient>
 					 von einem Stück zerrührter 
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
-					, etwas Muskatnuß und 
-					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
+					, etwas 
+					<cue:recipeIngredient quantity="etwas">Muskatnuß</cue:recipeIngredient>
+					 und 
+					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, einigen 
 					<cue:recipeIngredient quantity="einige" ref="#Ei">Eiern</cue:recipeIngredient>
 					, 
@@ -5392,7 +5402,9 @@
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					 hat anziehen lassen, mit 
 					<cue:recipeIngredient>Fleischbrühe</cue:recipeIngredient>
-					 oder Wasser, Muskatnuß oder 
+					 oder Wasser, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 oder 
 					<cue:recipeIngredient>Blüthe</cue:recipeIngredient>
 					 aufgestovt.
 				</p>
@@ -5415,7 +5427,9 @@
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 abgekocht und auf einen Durchschlag gegeben. Die Fäden werden alsdann abgenommen, die Bündchen auf eine heiße Schüssel angerichtet, mit fein gestoßenem 
 					<cue:recipeIngredient quantity="1" ref="#Zwieback">Zwieback</cue:recipeIngredient>
-					 und Muskatnuß bestreut und eine saure 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 bestreut und eine saure 
 					<cue:recipeIngredient quantity="1">Eiersauce</cue:recipeIngredient>
 					 dabei herumgereicht.
 				</p>
@@ -5483,7 +5497,9 @@
 					<cue:recipeIngredient>Fleischbrühe</cue:recipeIngredient>
 					 oder 
 					<cue:recipeIngredient ref="#Kuhmilch">Milch</cue:recipeIngredient>
-					 nebst Muskatnuß und 
+					 nebst 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 dazu, und läßt den 
 					<cue:recipeIngredient ref="#Spinat">Spinat</cue:recipeIngredient>
@@ -5557,7 +5573,9 @@
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 gelb gewordenem 
 					<cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient>
-					 und Muskatnuß und gibt zuletzt auch wohl ein wenig 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und gibt zuletzt auch wohl ein wenig 
 					<cue:recipeIngredient quantity="1" ref="#Essig">Essig</cue:recipeIngredient>
 					 hinzu, damit er nicht zu weichlich werde. Man kann ihn auch wie 
 					<cue:recipeIngredient ref="#Spinat">Spinat</cue:recipeIngredient>
@@ -5597,7 +5615,9 @@
 					<cue:recipeIngredient quantity="1" ref="#Sahne" unit="Tasse">Sahne</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
-					 und Muskatnuß dazu und läßt denselben darin durchkochen. Die Schüssel wird mit in 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 dazu und läßt denselben darin durchkochen. Die Schüssel wird mit in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 gebratenen 
 					<cue:recipeIngredient>Weißbrodstreifchen</cue:recipeIngredient>
@@ -5632,7 +5652,9 @@
 					<cue:recipeIngredient ref="#SpargelGekocht">Spargel</cue:recipeIngredient>
 					 wird fein abgeschält, und zwar vom Kopf zum Fuße hin, so weit er hart ist, abgeschnitten, gewaschen, in Bündchen gebunden, in reichlich kochendem Wasser mit dem nöthigen 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
-					, nicht gar zu stark, weich gekocht, weil sonst die Köpfe zerkochen, auf einer heißgemachten Schüssel zierlich angerichtet und mit Muskatnuß und etwas gestoßenem 
+					, nicht gar zu stark, weich gekocht, weil sonst die Köpfe zerkochen, auf einer heißgemachten Schüssel zierlich angerichtet und mit 
+					<cue:recipeIngredient quantity="1">Muskatnuß</cue:recipeIngredient>
+					 und etwas gestoßenem 
 					<cue:recipeIngredient quantity="etwas" ref="#Zwieback">Zwieback</cue:recipeIngredient>
 					 bestreut.
 				</p>
@@ -5742,7 +5764,9 @@
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 gahr gekocht; alsdann angerichtet, die Fäden sorgfältig heraus gezogen, gestoßener 
 					<cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient>
-					 und Muskatnuß darüber gestreut und eine säuerliche 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 darüber gestreut und eine säuerliche 
 					<cue:recipeIngredient quantity="1">Sauce</cue:recipeIngredient>
 					, z. B. Nro. 19, dazu gegeben.
 				</p>
@@ -5781,8 +5805,10 @@
 					<cue:recipeIngredient ref="#Sahne">Sahne</cue:recipeIngredient>
 					 oder 
 					<cue:recipeIngredient ref="#Kuhmilch">Milch</cue:recipeIngredient>
-					, etwas Muskatnuß und 
-					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
+					, etwas 
+					<cue:recipeIngredient quantity="etwas">Muskatnuß</cue:recipeIngredient>
+					 und 
+					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 dazu gegeben und das 
 					<cue:recipeIngredient>Rübstiel</cue:recipeIngredient>
 					 darin gestovt.
@@ -5815,7 +5841,9 @@
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 zu Feuer, läßt sie gahr kochen und gibt ein wenig 
 					<cue:recipeIngredient quantity="1" ref="#Kartoffelstärkemehl">Kartoffelmehl</cue:recipeIngredient>
-					 daran. Wenn sie angerichtet sind, reibt man Muskatnuß darüber. Auch sind einige 
+					 daran. Wenn sie angerichtet sind, reibt man 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 darüber. Auch sind einige 
 					<cue:recipeIngredient quantity="einige" ref="#Kartoffeln">Kartoffeln</cue:recipeIngredient>
 					, darauf gekocht, recht angenehm.
 				</p>
@@ -5825,9 +5853,7 @@
 					 durchstoven; dann aber müssen sie gahr abgekocht sein. Es gehört dazu, je nachdem sie zart sind, ½ — 1 Stunde.
 				</p>
 				<p>
-					 
-					<cue:recipeIngredient>Schweine-</cue:recipeIngredient>
-					 oder Hammel-Cotelettes und 
+					 Schweine- oder Hammel-Cotelettes und 
 					<cue:recipeIngredient>Bratwurst</cue:recipeIngredient>
 					 als Beilage.
 				</p>
@@ -5985,9 +6011,9 @@
 					, zieht den 
 					<cue:recipeIngredient>Darm</cue:recipeIngredient>
 					 aus, schneidet das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 an der Stelle glatt und hackt den Abfall nebst dem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleische</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleische</cue:recipeIngredient>
 					 aus den Scheeren recht fein, gibt hinzu ein Stück zerrührte 
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					, in Wasser eingeweichtes und ausgedrücktes 
@@ -6003,7 +6029,7 @@
 					 und kocht diese mit kleinen Fleisch- und 
 					<cue:recipeIngredient>Weißbrodklößchen</cue:recipeIngredient>
 					, während man schon das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 nebst dem 
 					<cue:recipeIngredient ref="#BlumenkohlGekocht">Blumenkohl</cue:recipeIngredient>
 					 in eine heiße Schüssel ordnet. Dann rührt man die 
@@ -6176,7 +6202,9 @@
 					<cue:recipeIngredient ref="#Sahne">Sahne</cue:recipeIngredient>
 					 oder 
 					<cue:recipeIngredient>Fleischbrühe</cue:recipeIngredient>
-					, Muskatnuß und 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 dazugegeben und darin durchgestovt. Sind die 
 					<cue:recipeIngredient>Kohlrabi</cue:recipeIngredient>
@@ -6423,7 +6451,9 @@
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					, etwas 
 					<cue:recipeIngredient quantity="etwas">Fleischbrühe</cue:recipeIngredient>
-					 und Muskatnuß durchgestovt.
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 durchgestovt.
 				</p>
 				<p> Zeit des Kochens 1¼ Stunden.</p>
 				<p>
@@ -6584,13 +6614,13 @@
 					 wird ausgeschäumt und 2 Stunden lang etwas kurz eingekocht. Alsdann gießt man die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 durch ein Haarsieb und nachdem sie wieder auf das 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 geschüttet, wird der 
 					<cue:recipeIngredient>Kohl</cue:recipeIngredient>
 					, der in große Stücke geschnitten, auch abgekocht ist, hinzu gethan, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 darüber gestreut und mit dem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleische</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleische</cue:recipeIngredient>
 					 und einigen kleinen 
 					<cue:recipeIngredient quantity="einige" ref="#Kartoffeln">Kartoffeln</cue:recipeIngredient>
 					, die später dazu gegeben werden, völlig gahr gekocht.
@@ -6653,7 +6683,9 @@
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
-					 und Muskatnuß durchgestovt. Auch wird etwas 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 durchgestovt. Auch wird etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Bratenjus">Braten-Jus</cue:recipeIngredient>
 					 zugesetzt, damit der 
 					<cue:recipeIngredient ref="#Knollensellerie #Sellerieblätter">Sellerie</cue:recipeIngredient>
@@ -6750,13 +6782,13 @@
 				</p>
 				<p>
 					 Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 muß 3 Stunden kochen; eine Stunde vor Anrichtezeit werden 
 					<cue:recipeIngredient>Borrei</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient ref="#Kartoffeln">Kartoffeln</cue:recipeIngredient>
 					 zum 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleische</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleische</cue:recipeIngredient>
 					 gethan.
 				</p>
 			</cue:recipe>
@@ -6768,7 +6800,9 @@
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient>Fleischbrühe</cue:recipeIngredient>
-					, Muskatnuß, gestoßenem 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, gestoßenem 
 					<cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
@@ -6873,7 +6907,9 @@
 					<cue:recipeIngredient quantity="1" ref="#Butter" unit="Stich">Butter</cue:recipeIngredient>
 					 gelb, rührt frische 
 					<cue:recipeIngredient ref="#Kuhmilch">Milch</cue:recipeIngredient>
-					 dazu, würzt sie mit Muskatnuß und läßt das Gemüse eben darin durchstoven. Es hat dieses etwas Aehnliches mit 
+					 dazu, würzt sie mit 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und läßt das Gemüse eben darin durchstoven. Es hat dieses etwas Aehnliches mit 
 					<cue:recipeIngredient quantity="etwas" ref="#BlumenkohlGekocht">Blumenkohl</cue:recipeIngredient>
 					.
 				</p>
@@ -6890,7 +6926,7 @@
 					, gebratene 
 					<cue:recipeIngredient>Kücken</cue:recipeIngredient>
 					, jedes gesalzene und geräucherte 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					.
 				</p>
 			</cue:recipe>
@@ -7047,7 +7083,7 @@
 				</p>
 				<p>
 					 Beilagen: jedes geräucherte und gesalzene 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					.
 				</p>
 				<p> Zeit des Kochens 1½ Stunden.</p>
@@ -7387,11 +7423,7 @@
 					<cue:recipeIngredient ref="#BohneWeiß">Bohnen</cue:recipeIngredient>
 					 ist dies sehr zu empfehlen.
 				</p>
-				<p>
-					 Man rechne zum Kochen gewöhnlichen 
-					<cue:recipeIngredient>Sauerkrauts</cue:recipeIngredient>
-					 2 Stunden.
-				</p>
+				<p> Man rechne zum Kochen gewöhnlichen Sauerkrauts 2 Stunden.</p>
 			</cue:recipe>
 			 
 			<cue:recipe rcp-id="D-64" type="Gemüse." xmlns:cue="http://cueML/ns">
@@ -7716,7 +7748,7 @@
 					 halb mit Wasser bedeckt und etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
 					 zu Feuer, deckt die Pfanne fest zu und läßt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 eine Stunde nicht zu stark kochen und gelb braten. Alsdann nimmt man dasselbe heraus, belegt die Pfanne mit kleinen. rund geschälten 
 					<cue:recipeIngredient ref="#Kartoffeln">Kartoffeln</cue:recipeIngredient>
 					, streut ein wenig 
@@ -7803,7 +7835,9 @@
 					<cue:recipeIngredient quantity="4" ref="#Ei">Eier</cue:recipeIngredient>
 					 gut geschlagen, dazu etwa 3 Tassen 
 					<cue:recipeIngredient quantity="3" ref="#Kuhmilch" unit="Tasse">Milch</cue:recipeIngredient>
-					 und Muskatnuß. Nach Belieben kann man auch mit dem 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					. Nach Belieben kann man auch mit dem 
 					<cue:recipeIngredient ref="#Schweineschinken">Schinken</cue:recipeIngredient>
 					 einen 
 					<cue:recipeIngredient quantity="1">Häring</cue:recipeIngredient>
@@ -7838,7 +7872,7 @@
 					 nicht ganz bedeckt sind und läßt sie fest zugedeckt weich kochen. Nach Belieben gibt man auch etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Essig">Essig</cue:recipeIngredient>
 					 dazu. Zum Kochen 1 Stunde. Beilage: jedes kalte 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, Wurst, Rollen.
 				</p>
 			</cue:recipe>
@@ -8168,7 +8202,9 @@
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 und ein wenig gute 
 					<cue:recipeIngredient quantity="1" ref="#Kuhmilch">Milch</cue:recipeIngredient>
-					, auch Muskatnuß durchgerührt, runde oder längliche Bällchen davon gemacht, mit gestoßenem 
+					, auch 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 durchgerührt, runde oder längliche Bällchen davon gemacht, mit gestoßenem 
 					<cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient>
 					 bestreut und in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
@@ -8290,7 +8326,9 @@
 					<cue:recipeIngredient quantity="2" unit="Loth">Succade</cue:recipeIngredient>
 					, 2 Loth 
 					<cue:recipeIngredient quantity="2" unit="Loth">Orangenschale</cue:recipeIngredient>
-					, eine halbe Muskatnuß, ein halbes Weinglas 
+					, eine halbe 
+					<cue:recipeIngredient quantity="1">Muskatnuß</cue:recipeIngredient>
+					, ein halbes Weinglas 
 					<cue:recipeIngredient quantity="1" ref="#Rum">Rum</cue:recipeIngredient>
 					 und etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
@@ -8754,7 +8792,9 @@
 					<cue:recipeIngredient quantity="2" ref="#Zucker" unit="EL">Zucker</cue:recipeIngredient>
 					, das Abgeriebene von einer 
 					<cue:recipeIngredient quantity="1" ref="#Zitrone">Zitrone</cue:recipeIngredient>
-					 oder auch Muskatnuß, ½ Pfund gut gewaschene und wieder abgetrocknete 
+					 oder auch 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, ½ Pfund gut gewaschene und wieder abgetrocknete 
 					<cue:recipeIngredient quantity="0.5" ref="#Rosinen" unit="Pfund">Korinthen</cue:recipeIngredient>
 					, für ½ Sgr. altes geriebenes 
 					<cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
@@ -9171,7 +9211,9 @@
 					<cue:recipeIngredient quantity="0.25" ref="#Zucker" unit="Pfund">Zucker</cue:recipeIngredient>
 					, Schale einer 
 					<cue:recipeIngredient quantity="1" ref="#Zitrone">Zitrone</cue:recipeIngredient>
-					, eine halbe Muskatnuß.
+					, eine halbe 
+					<cue:recipeIngredient quantity="1">Muskatnuß</cue:recipeIngredient>
+					.
 				</p>
 				<p>
 					 Die 
@@ -9682,8 +9724,10 @@
 					<cue:recipeIngredient quantity="6" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					, das nöthige 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
-					, etwas Muskatnuß und 
-					<cue:recipeIngredient quantity="etwas">Blüthe</cue:recipeIngredient>
+					, etwas 
+					<cue:recipeIngredient quantity="etwas">Muskatnuß</cue:recipeIngredient>
+					 und 
+					<cue:recipeIngredient>Blüthe</cue:recipeIngredient>
 					, das 
 					<cue:recipeIngredient>Rührei</cue:recipeIngredient>
 					, einige Löffel süße 
@@ -9713,7 +9757,9 @@
 					<cue:recipeIngredient quantity="10" ref="#Ei">Eier</cue:recipeIngredient>
 					, etwas gehackte 
 					<cue:recipeIngredient quantity="etwas" ref="#Schalotte">Charlotten</cue:recipeIngredient>
-					, Muskatnuß, 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, 2 geriebene 4 Pfennigs-Semmel, 2½ Pfund klein gehackter 
 					<cue:recipeIngredient quantity="2.5" unit="Pfund">Stockfisch</cue:recipeIngredient>
@@ -9728,7 +9774,9 @@
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					, ein Paar 
 					<cue:recipeIngredient quantity="1" ref="#HühnereiEigelb">Eidottern</cue:recipeIngredient>
-					, etwas kaltem Wasser, Muskatnuß, fein gehackten 
+					, etwas kaltem Wasser, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, fein gehackten 
 					<cue:recipeIngredient ref="#Schalotte">Charlotten</cue:recipeIngredient>
 					 gut durchgerührt und wenn es kocht, etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Sahne">Sahne</cue:recipeIngredient>
@@ -10768,7 +10816,9 @@
 					<cue:recipeIngredient quantity="1">Crême</cue:recipeIngredient>
 					. Wenn derselbe etwas abgekühlt ist, rührt man 6 
 					<cue:recipeIngredient quantity="6" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
-					, Muskatnuß 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, ¼ Pfund geriebenen 
 					<cue:recipeIngredient quantity="0.25" ref="#Hartkäse45" unit="Pfund">Parmesan-Käse</cue:recipeIngredient>
@@ -10795,7 +10845,9 @@
 					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
 					 weich, aber nicht breiig gekocht, abgegossen, in einen Zoll lange Stücke geschnitten, mit gekochtem und gehacktem 
 					<cue:recipeIngredient quantity="1" ref="#Schweineschinken">Schinken</cue:recipeIngredient>
-					( man rechnet auf diese Portion 1 Pfund), Muskatnuß und 4 Loth geriebenem 
+					( man rechnet auf diese Portion 1 Pfund), 
+					<cue:recipeIngredient quantity="1" unit="Pfund">Muskatnuß</cue:recipeIngredient>
+					 und 4 Loth geriebenem 
 					<cue:recipeIngredient quantity="4" unit="Loth">Käse</cue:recipeIngredient>
 					 lagenweise in die Form gelegt und mit Folgendem übergossen: ¼ Maß 
 					<cue:recipeIngredient quantity="0.25" ref="#Kuhmilch" unit="Maß">Milch</cue:recipeIngredient>
@@ -10853,8 +10905,10 @@
 					<cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>
 					, und die darin bemerkten 
 					<cue:recipeIngredient ref="#braunes_Gewürz">Gewürze</cue:recipeIngredient>
-					 weg und rühre reichlich Muskatnuß und das in feine Würfel geschnittene 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					 weg und rühre reichlich 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und das in feine Würfel geschnittene 
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 von 2—3 gut gewässerten und ausgegräteten 
 					<cue:recipeIngredient atLeast="2" atMost="3">Häringen</cue:recipeIngredient>
 					 nebst einer Untertasse voll in 
@@ -10869,20 +10923,22 @@
 				<head> Fleisch-Auflauf.</head>
 				<p>
 					 Man hackt Braten oder passendes 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 recht fein, läßt 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 gelb werden, das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darin schwitzen und gibt, wenn solches etwas abgekühlt ist, ein 
 					<cue:recipeIngredient quantity="1">Rührei</cue:recipeIngredient>
 					 von 4—6 
 					<cue:recipeIngredient atLeast="4" atMost="6" ref="#Ei">Eiern</cue:recipeIngredient>
 					 nach der Portion des 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisches</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisches</cue:recipeIngredient>
 					, ferner 
 					<cue:recipeIngredient ref="#Zitronenschale">Zitronenschale</cue:recipeIngredient>
-					, Muskatnuß, etwas in Wasser geweichtes und ausgedrücktes 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, etwas in Wasser geweichtes und ausgedrücktes 
 					<cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
 					, noch 2—3 
 					<cue:recipeIngredient atLeast="2" atMost="3" ref="#Ei">Eier</cue:recipeIngredient>
@@ -12818,12 +12874,12 @@
 					, 
 					<cue:recipeIngredient ref="#Schweineschinken">Schinken</cue:recipeIngredient>
 					 und Braten werden fein gehackt, eine Omelette nach No. 55 angerührt, das gehackte 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darunter gemischt und auf einer Seite gebacken.
 				</p>
 				<p>
 					 Oder man rührt das gehackte 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 durch Pfannkuchenteig und backt es auf beiden Seiten. Auch kann man aus dieser Masse kleine Kuchen backen.
 				</p>
 			</cue:recipe>
@@ -12882,7 +12938,7 @@
 					 auf das Backbrett, macht in der Mitte ein Loch und rührt das kochende Wasser nach und nach zum 
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					, macht einen festen Teig daraus, den man aber stark verarbeiten und der so steif sein muß, daß, wenn man ein Stück in die Höhe zieht, dasselbe stehen bleibt. Vorher wird das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, es sei 
 					<cue:recipeIngredient ref="#Hase">Hasen</cue:recipeIngredient>
 					, 
@@ -12916,13 +12972,13 @@
 					, Alles fein gemacht, gibt 
 					<cue:recipeIngredient ref="#Essig">Essig</cue:recipeIngredient>
 					 hinzu, reibt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 damit ein, legt es mit einigen 
 					<cue:recipeIngredient quantity="einige">Lorberblättern</cue:recipeIngredient>
 					 und mit Stückchen 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 auf Speckscheiben in einen Topf und läßt es fest zugedeckt halb gahr werden. Auch kann man das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 zu dieser Pastete auf folgende Weise 24 Stunden vorher mariniren. Man rührt die genannten 
 					<cue:recipeIngredient>Kräuter</cue:recipeIngredient>
 					 und 
@@ -12930,7 +12986,7 @@
 					 mit 
 					<cue:recipeIngredient ref="#Essig">Essig</cue:recipeIngredient>
 					 an, dreht das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 von allen Seiten in dieser Beize herum, legt es in eine flache Schüssel, gießt die 
 					<cue:recipeIngredient quantity="1">Brühe</cue:recipeIngredient>
 					 darüber und deckt es zu. Am andern Tage wird es ebenfalls auf Speckscheiben halb gahr gemacht. Zugleich wird eine 
@@ -12938,7 +12994,7 @@
 					 nach A. No. 6 bereitet. Nun rollt man ein Stück Teig als Unterblatt einen halben Finger dick aus, legt es in die mit 
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 bestrichene Pfanne, rollt ein Stück Teig zum Rande mit den Händen rund und lang wie zu einem Krengel, drückt es mit dem Rollholz platt, ungefähr eine Hand breit auseinander und schneidet beide Ende glatt ab. Der Rand muß höher sein als das darin liegende 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, damit Raum für die 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 bleibt, die später hineingeschüttet wird. Man bestreicht nun das Unterblatt, so breit der Rand ist, mit 
@@ -12946,13 +13002,13 @@
 					, setzt den langen Streifen als Rand rund herum, legt einige dünne Speckscheiben auf das Unterblatt und an den Seiten herum, streicht die 
 					<cue:recipeIngredient quantity="einige">Farce</cue:recipeIngredient>
 					 darüber und ordnet nun das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 mit einigen 
 					<cue:recipeIngredient quantity="einige" ref="#Zitronenscheibe">Zitronenscheiben</cue:recipeIngredient>
 					 nach der Mitte etwas höher und nicht zu fest in die Pastete, daß sie eine gute Form erhalte. Hat man reichlich 
 					<cue:recipeIngredient>Farce</cue:recipeIngredient>
 					, kann man auch davon einige Bällchen zwischen legen. Ist das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 nicht gut gewürzt, so streut man noch etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
 					 und 
@@ -13000,7 +13056,7 @@
 					 Die 
 					<cue:recipeIngredient ref="#Hase">Hasen</cue:recipeIngredient>
 					 werden, nachdem sie abgezogen und gewaschen, von Haut und Sehnen befreit. Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird vom Rückgrad gelös’t, in passende Stückchen geschnitten und gespickt; das 
 					<cue:recipeIngredient>Geflügel</cue:recipeIngredient>
 					 in Stückchen gehauen. Beides nach No. 2 marinirt und nachher beinahe gahr gedämpft. Nun bestreicht man eine Schüssel dick mit 
@@ -13008,7 +13064,7 @@
 					, streut geriebenes 
 					<cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
 					 darüber, legt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 abwechselnd mit 
 					<cue:recipeIngredient>Klößen</cue:recipeIngredient>
 					 aus der 
@@ -13022,7 +13078,7 @@
 					 und Wasser los, und gibt, um dies zu würzen, etwas von der 
 					<cue:recipeIngredient quantity="etwas">Kräuterbrühe</cue:recipeIngredient>
 					 hinzu und gießt es durch ein Sieb über das 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					. Der Teig wird nach Q. No. 4 oder 5 zu einer mittelmäßig großen Pastete von ½ Pfunde 
 					<cue:recipeIngredient quantity="0.5" ref="#Mehl" unit="Pfund">Mehl</cue:recipeIngredient>
 					 gemacht, dieser ein Strohhalm dick ausgerollt, etwas 
@@ -13030,7 +13086,7 @@
 					 darüber gestaubt und kreuzweis zusammengeschlagen( wodurch er sich bequemer auflegen läßt), der Rand der Schüssel mit 
 					<cue:recipeIngredient ref="#Ei">Ei</cue:recipeIngredient>
 					 bestrichen, der Teig auf das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 gelegt, auseinander geschlagen und rund herum glatt geschnitten. Von dem übrigen Teig wird ein Rand gemacht, die Pastete mit 
 					<cue:recipeIngredient quantity="1" ref="#Ei">Ei</cue:recipeIngredient>
 					 bestrichen, der Rand aufgelegt und auch dieser bestrichen, nur nicht rund herum, wodurch der Teig nicht aufgehen würde. Dann werden in der Mitte der Pastete zum Ausdämpfen 2 kleine Einschnitte gemacht und es wird dieselbe bei einem Grad Hitze 1—1 ½ Stunden, je nachdem der Inhalt milde ist, gebacken. Vor dem Anrichten schneidet man einen runden Deckel heraus, gibt eine 
@@ -13109,7 +13165,7 @@
 					. Die Hälfte der 
 					<cue:recipeIngredient>Farce</cue:recipeIngredient>
 					 wird nun auf den ausgebreiteten Teig auseinander gestrichen, Speckscheiben darüber gelegt, dann das kalt gewordene 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 mit 
 					<cue:recipeIngredient ref="#Zitronenscheibe">Zitronenscheiben</cue:recipeIngredient>
 					 egal nach der Mitte hin höher darauf geordnet, mit 
@@ -13117,7 +13173,7 @@
 					 bedeckt und wieder Speckscheibchen darüber hingelegt. Nun macht man mit einem Messer in der Mitte bis auf den Grund eine Oefsnung, legt von dem zurückgelassenen Teig ein ausgerolltes 
 					<cue:recipeIngredient quantity="1">Oberblatt</cue:recipeIngredient>
 					 über das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, schneidet es rund herum glatt, bestreicht es mit 
 					<cue:recipeIngredient ref="#Ei">Ei</cue:recipeIngredient>
 					, legt einen Rand darauf, bestreicht ihn ebenfalls und macht von dem abgeschnittenen Teig Verzierungen auf die Pastete und in der Mitte derselben einen Fingerhut große Oeffnung. Sie muß, je nachdem die Bestandtheile der Pastete sind, 1 ½—2 Stunden backen, und sollte sie zu früh Farbe bekommen, mit grünen Blättern oder mit 
@@ -13137,7 +13193,7 @@
 					 oder 
 					<cue:recipeIngredient>Morcheln-Sauce</cue:recipeIngredient>
 					, wozu man den Satz des gedämpften 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisches</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisches</cue:recipeIngredient>
 					 benutzt. Doch kann diese Pastete auch kalt gegeben werden. Es wird dann, wenn sie aus dem Ofen kommt, 1—2 Tassen 
 					<cue:recipeIngredient atLeast="1" atMost="2" unit="Tasse">Jus</cue:recipeIngredient>
 					 oder kräftige 
@@ -13412,7 +13468,7 @@
 					 und 
 					<cue:recipeIngredient ref="#Gewürznelken">Nelken</cue:recipeIngredient>
 					 hinzu, läßt ihn beinah gahr kochen, welches 2—2 ¼ Stunden dauert und legt ihn zum Ablaufen auf einen Durchschlag. Dann schneidet man das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 in längliche Stücke, die 
 					<cue:recipeIngredient>Zunge</cue:recipeIngredient>
 					, nachdem sie abgezogen, in runde Scheiben; setzt dies mit etwa 1 ½ — 2 Maß 
@@ -13426,7 +13482,7 @@
 					 und 1—2 Messerspitzen 
 					<cue:recipeIngredient atLeast="1" atMost="2">Cayenne</cue:recipeIngredient>
 					 zu Feuer und läßt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 fest verschlossen auf gelindem Feuer vollends gahr kochen. Zugleich hat man auch 2 
 					<cue:recipeIngredient quantity="2" ref="#Ochsengaumen">Ochsengaumen</cue:recipeIngredient>
 					 zur rechten Zeit zu Feuer gebracht, wobei man auf 3—3 ½ Stunde Kochens rechnen kann. Diese werden ebenfalls in längliche Stücke geschnitten und zum 
@@ -13529,7 +13585,7 @@
 					 zur 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					. Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird aus derselben genommen und zum Kaltwerden hingestellt. Zugleich macht man eine gute 
 					<cue:recipeIngredient quantity="1">Farce</cue:recipeIngredient>
 					 nach A. No. 8, von 1 ½ Pfund 
@@ -13543,7 +13599,7 @@
 					 hackt. Nun wird das Unterblatt nach No. 5 mit 
 					<cue:recipeIngredient>Farce</cue:recipeIngredient>
 					 bestrichen, das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darauf geordnet, mit 
 					<cue:recipeIngredient>Farce</cue:recipeIngredient>
 					 bedeckt und übrigens nach No. 5 verfahren. Beim Anrichten wird wie gewöhnlich ein Deckel ausgeschnitten, etwas von der heiß gemachten mit 
@@ -13730,7 +13786,7 @@
 					 oder andere 
 					<cue:recipeIngredient>Fische</cue:recipeIngredient>
 					 werden geschuppt und auf folgende Weise entgrätet: man schneidet sie unausgenommen am Rückgrat der Länge nach mit einem scharfen Messer auf, trennt das 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 von den Gräten und sticht den Kopf am Rückgrat ab, doch muß die Haut unbeschädigt bleiben. Darauf werden sie wie in No. 15 einmarinirt; erkaltet mit der beschriebenen 
 					<cue:recipeIngredient>Farce</cue:recipeIngredient>
 					 gefüllt und auf ein mit Speckscheiben belegtes Unterblatt von Butterteig geordnet; übrigens richte man sich nach No. 5.
@@ -14006,7 +14062,7 @@
 					 recht heiß darübergegeben. Hierzu nimmt man eine gute 
 					<cue:recipeIngredient quantity="1">Jus</cue:recipeIngredient>
 					, die aus 4—6 Pfund 
-					<cue:recipeIngredient atLeast="4" atMost="6" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient atLeast="4" atMost="6" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					 nach A. No. 12 bereitet ist, macht 1 bis 2 Löffel 
 					<cue:recipeIngredient quantity="2" ref="#Mehl" unit="EL">Mehl</cue:recipeIngredient>
 					 in 
@@ -14058,7 +14114,7 @@
 					 Man kocht 30—40 
 					<cue:recipeIngredient atLeast="30" atMost="40" ref="#Flusskrebs">Krebse</cue:recipeIngredient>
 					, bricht das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 aus Scheeren und Schwänzen und stößt die Schalen mit frischer 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 im Mörser nicht ganz fein, kocht sie, bis die 
@@ -14125,11 +14181,11 @@
 					 und stark eine halbe Obertasse kaltes Wasser, macht hiervon im Kalten einen Teig, den man gut verarbeitet und in 2 nicht ganz gleiche Theile schneidet. Den kleinsten Theil rollt man aus, schneidet 3 Finger breite Streifen daraus und belegt damit den Rand einer tiefen Schüssel, den man vorher mit 
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 bestrichen hat. Dann nimmt man jedes kalt gebratene 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient>Geflügel</cue:recipeIngredient>
 					 oder auch verschiedene Reste, schneidet es in kleine passende Stücke, legt nun einige Speckscheiben auf den Boden der Schüssel und das 
-					<cue:recipeIngredient quantity="einige" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="einige" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darauf, indem man 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, 
@@ -14143,7 +14199,7 @@
 					 oder kräftige 
 					<cue:recipeIngredient>Bouillon</cue:recipeIngredient>
 					 darüber gegeben, das andere Stück Teig rund herum etwas größer, als die Schüssel ausgerollt und über das 
-					<cue:recipeIngredient quantity="etwas" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 gelegt. Den überhängenden Teig biegt man wie eine feine Rolle nach innen und drückt ihn mit 2 Fingern rund herum, um einen Rand zu formen und bestreicht das Ganze mit verdünntem 
 					<cue:recipeIngredient quantity="1" ref="#Ei">Ei</cue:recipeIngredient>
 					, macht in der Mitte zwei Einschnitte in den Teig, und läßt diese Pastete eine Stunde backen; doch muß die Oberhitze stärker als die Unterhitze sein.
@@ -14299,7 +14355,7 @@
 					 in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 gelb gemacht, das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 mit 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, 
@@ -14501,7 +14557,9 @@
 					<cue:recipeIngredient quantity="0.5" ref="#Rosinen" unit="Pfund">Korinthen</cue:recipeIngredient>
 					, beides gut gewaschen und wieder angetrocknet, aus ersteren die Steine gemacht und mit 10 Loth 
 					<cue:recipeIngredient quantity="10" unit="Loth">Nierenfett</cue:recipeIngredient>
-					 ganz fein gehackt. Dies vermischt mit einer halben Muskatnuß und einer großen Tasse 
+					 ganz fein gehackt. Dies vermischt mit einer halben 
+					<cue:recipeIngredient quantity="1">Muskatnuß</cue:recipeIngredient>
+					 und einer großen Tasse 
 					<cue:recipeIngredient quantity="1" ref="#Rum" unit="Tasse">Rum</cue:recipeIngredient>
 					. Dies wird auf die Unterblätter der Pastetchen gelegt und solche statt eines Randes, mit einem 
 					<cue:recipeIngredient quantity="1">Oberblatt</cue:recipeIngredient>
@@ -14526,7 +14584,9 @@
 					<cue:recipeIngredient quantity="0.5" ref="#Zucker" unit="Pfund">Zucker</cue:recipeIngredient>
 					, ¼ Pfund in feine Würfel geschnittene, saure 
 					<cue:recipeIngredient quantity="0.25" unit="Pfund">Aepfel</cue:recipeIngredient>
-					, ½ Muskatnuß, 2 Loth geschnittene 
+					, ½ 
+					<cue:recipeIngredient quantity="0.5">Muskatnuß</cue:recipeIngredient>
+					, 2 Loth geschnittene 
 					<cue:recipeIngredient quantity="2" unit="Loth">Succade</cue:recipeIngredient>
 					 und eine Obertasse 
 					<cue:recipeIngredient quantity="1" ref="#Rum">Rum</cue:recipeIngredient>
@@ -14563,7 +14623,7 @@
 					 Das 
 					<cue:recipeIngredient>Eingeweide</cue:recipeIngredient>
 					 ohne Magen nebst Resten von gebratenem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird fein gehackt. Hinzugegeben: etwas in Wasser ausgedrücktes 
 					<cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
 					, ein Paar Löffel 
@@ -14604,7 +14664,7 @@
 					 Man hackt übergebliebenen 
 					<cue:recipeIngredient>Kalbsbraten</cue:recipeIngredient>
 					, oder was man dieser Art hat, mit etwas fettem 
-					<cue:recipeIngredient quantity="etwas" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="etwas" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, auch kann etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Schweineschinken">Schinken</cue:recipeIngredient>
 					 dazu genommen werden, ganz fein, gibt 
@@ -14666,7 +14726,7 @@
 					, nach Belieben auch mit etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Pfeffer #spanischer_Pfeffer">Pfeffer</cue:recipeIngredient>
 					 eingerieben darauf, stellt es in einen heißen Ofen und begießt es recht oft mit dem Fett; Wasser kommt nicht hinzu. So läßt man das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 etwa 3 Stunden braten, richtet es an, nimmt das Fett größtentheils von der 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					, rührt etwas Kaltes dazu und macht solche mit einem Theelöffel 
@@ -14751,9 +14811,9 @@
 					 in einen Topf, ist solches gelb geworden, das Stück in 
 					<cue:recipeIngredient quantity="1" ref="#Mehl">Mehl</cue:recipeIngredient>
 					 umgewendet hinein, dasselbe zuweilen gedreht, ohne in’s 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 zu stechen und so lange gebraten, bis es von allen Seiten recht gelb ist. Nun wird so viel kochendes Wasser zugegossen, daß das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 reichlich zur Hälfte bedeckt ist und solches schnell fest zugedeckt, nicht zu rasch gekocht, nach 2 Stunden umgedreht, eine Obertasse voll gewürfelter, saurer 
 					<cue:recipeIngredient quantity="1">Gurken</cue:recipeIngredient>
 					, oder frische mit ein bis zwei Löffel voll 
@@ -14761,9 +14821,9 @@
 					, nebst 2 
 					<cue:recipeIngredient quantity="2">Lorberblättern</cue:recipeIngredient>
 					 dazugegeben, das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wieder zugedeckt und ferner kochen gelassen, bis es weich ist, welches gewöhnlich 3 Stunden erfordert. Dann richtet man das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 an, nimmt das Fett größtentheils von der 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					, ist sie zu dick, rührt man etwas Wasser dazu, im andern Fall ein wenig 
@@ -14771,7 +14831,7 @@
 					, schüttet einige Löffel von dieser sämigen 
 					<cue:recipeIngredient quantity="einige" unit="EL">Sauce</cue:recipeIngredient>
 					 über das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und gibt die übrige dazu. Nimmt man das 
 					<cue:recipeIngredient>Beef</cue:recipeIngredient>
 					 à la Mode als Voressen, kann man noch Trüffeln, Champignons und 
@@ -14838,7 +14898,7 @@
 					 zu Feuer. Nachdem der Braten von allen Seiten unter öfterem Begießen gelb, und wohl zur Hälfte gahr geworden, schütte man einen tiefen Teller voll dicke saure 
 					<cue:recipeIngredient quantity="1" ref="#Sahne">Sahne</cue:recipeIngredient>
 					 darüber und lasse das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 2½ Stunden auf einem nicht zu starken Feuer schmoren; indem dies Stück, ohne darin zu stechen, oft umgewendet und fortwährend oft begossen werden muß, wobei der Braten mit den 
 					<cue:recipeIngredient quantity="1">Speckwürfeln</cue:recipeIngredient>
 					 bedeckt wird. Ist die 
@@ -14851,7 +14911,7 @@
 				</p>
 				<p>
 					 Anmerk. Wenn zugleich für gutes 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 gesorgt ist, so wird man diesen Braten vorzüglich gut finden.
 				</p>
 			</cue:recipe>
@@ -14882,7 +14942,7 @@
 					 und 1 Eßlöffel voll pulverisirten 
 					<cue:recipeIngredient quantity="1" unit="EL">Salpeter</cue:recipeIngredient>
 					. Dieses Alles wird untereinander gerührt und das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 von allen Seiten damit eingerieben, dann recht fest aufgerollt, mit einem Bindfaden dicht neben einander fest umbunden, in eine hölzerne Molle gelegt, worin es 4 Wochen liegen bleibt, während es täglich umgedreht und mit der 
 					<cue:recipeIngredient quantity="4">Brühe</cue:recipeIngredient>
 					, die herauszieht, begossen werden muß. Man setzt es mit kochendem Wasser bedeckt und etwas von feiner 
@@ -14890,7 +14950,7 @@
 					 zu Feuer, läßt es 4 Stunden, fest zugedeckt, fortwährend langsam kochen, und ½ Stunde in der 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 nachweichen. Zu diesem kräftigen, sehr zu empfehlenden 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleische</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleische</cue:recipeIngredient>
 					 gibt man in Bremen 
 					<cue:recipeIngredient>Sauerkraut</cue:recipeIngredient>
 					, dicke 
@@ -14905,7 +14965,7 @@
 				</p>
 				<p>
 					 Anmerk. Es läßt sich dieses 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 lange aufbewahren, schmeckt auch kalt vorzüglich gut und selbst aus den Ueberresten lassen sich wieder angenehme Speisen bereiten, z. B. Round of 
 					<cue:recipeIngredient>Beef</cue:recipeIngredient>
 					 Omelette, Round of 
@@ -14926,7 +14986,7 @@
 				</head>
 				<p>
 					 Ein Stück 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 aus der Kluft von etwa 8 Pfund, welches nach der Jahreszeit 2—4 Tage alt sein muß, wird geklopft, mit etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Salz" unit="Pfund">Salz</cue:recipeIngredient>
 					 bestreut, in einen Topf auf einige Scheiben 
@@ -14954,7 +15014,7 @@
 					 an die 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 gegeben, solche durch ein Sieb gerührt und das 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 damit angerichtet.
 				</p>
 			</cue:recipe>
@@ -14987,7 +15047,7 @@
 					 und 
 					<cue:recipeIngredient>Nelkenpfeffer</cue:recipeIngredient>
 					, legt ein Stück 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 aus der Kluft von 8—10 Pfund, welches gehörig alt sein muß, geklopft und mit etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Salz" unit="Pfund">Salz</cue:recipeIngredient>
 					 bestreut ist, hinein, gibt 2 Obertassen voll 
@@ -15003,7 +15063,7 @@
 					 gewürzt, etwas von der 
 					<cue:recipeIngredient quantity="etwas">Sauce</cue:recipeIngredient>
 					 über das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 gegeben und die übrige dabei herumgereicht.
 				</p>
 			</cue:recipe>
@@ -15040,7 +15100,7 @@
 					 zu haben wünscht, und richtet sie mit einigen 
 					<cue:recipeIngredient quantity="einige" ref="#Zitronenscheibe">Zitronenscheiben</cue:recipeIngredient>
 					 über das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 an.
 				</p>
 			</cue:recipe>
@@ -15067,7 +15127,7 @@
 					 bemerkt. Darauf legt man sie schnell in eine heiße Schüssel, rührt etwas kaltes Wasser zu der 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 und gießt dieselbe über das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					. Nur muß man nicht viel Wasser nehmen, damit die 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 gebunden werde.
@@ -15079,7 +15139,7 @@
 				</p>
 				<p>
 					 Zu jedem Pfunde 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					 kann man zu gebratenen 
 					<cue:recipeIngredient>Beefsteaks</cue:recipeIngredient>
 					 ein knappes, zu geschmorten 
@@ -15136,11 +15196,11 @@
 					 oder 
 					<cue:recipeIngredient>Bratfett</cue:recipeIngredient>
 					 eine Stunde fest zugedeckt, langsam geschmort. Nun so viel kochendes Wasser zugeschüttet, daß es mit dem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 gleich ist, wieder fest zugedeckt und noch eine Stunde gekocht. Dann ein Eßlöffel voll 
 					<cue:recipeIngredient quantity="1" ref="#Essig" unit="EL">Essig</cue:recipeIngredient>
 					 daran gegeben und das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 in der 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 zu gekochten 
@@ -15167,7 +15227,7 @@
 					 gelblich werden, legt einige Steaks hinein, darauf eine Lage große Zwiebelscheiben, dann wieder Steaks und so wechselt man damit ab, bis die 
 					<cue:recipeIngredient quantity="1" ref="#Zwiebel">Zwiebeln</cue:recipeIngredient>
 					 den Beschluß machen. Nun wird so viel kochendes Wasser darauf gegossen, daß es mit dem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 gleich steht, der Deckel mit 
 					<cue:recipeIngredient>Roggenmehl</cue:recipeIngredient>
 					, das mit Wasser dick angerührt ist, zugeklebt und auf einem ganz gelinden Kohlenfeuer 3—3½ Stunde gekocht.
@@ -15191,11 +15251,11 @@
 				</head>
 				<p>
 					 Man nimmt hierzu das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wie zu 
 					<cue:recipeIngredient>Beefsteaks</cue:recipeIngredient>
 					 und hackt es recht fein. Zu 1½ Pfund 
-					<cue:recipeIngredient quantity="1.5" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1.5" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					 nimmt man 9 Loth recht fein gehacktes 
 					<cue:recipeIngredient quantity="9" unit="Loth">Nierenfett</cue:recipeIngredient>
 					, vermischt Beides mit 1 ½ Loth 
@@ -15207,7 +15267,7 @@
 					 rund oder länglich platt, streut fein gehackte 
 					<cue:recipeIngredient ref="#Zwiebel">Zwiebeln</cue:recipeIngredient>
 					 darüber, drückt sie mit dem Messer an und brät das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 in gelber 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 etwa 10—15 Minuten auf beiden Seiten nicht zu rasch.
@@ -15230,7 +15290,7 @@
 					 und etwas kaltes Wasser zur 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 gerührt und darüber gegeben. Besser ist es, wenn man den Abfall vom 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 gehörig auskocht und die kräftige 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 statt Wasser zur 
@@ -15249,7 +15309,7 @@
 				</head>
 				<p>
 					 Zwei Pfund fein gehacktes 
-					<cue:recipeIngredient quantity="2" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="2" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					 wie zu 
 					<cue:recipeIngredient>Escalopps</cue:recipeIngredient>
 					, wird mit 4 
@@ -15262,7 +15322,9 @@
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Zitronenschale">Zitronenschale</cue:recipeIngredient>
-					, Muskatnuß und einer Tasse geschmolzener 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und einer Tasse geschmolzener 
 					<cue:recipeIngredient quantity="1" ref="#Butter" unit="Tasse">Butter</cue:recipeIngredient>
 					, und 1 Glas 
 					<cue:recipeIngredient quantity="1" ref="#Weißwein" unit="Glas">Wein</cue:recipeIngredient>
@@ -15298,7 +15360,7 @@
 				</head>
 				<p>
 					 Zu 2 Pfund sehr fein gehacktem 
-					<cue:recipeIngredient quantity="2" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="2" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					 nimmt man ein Viertel Pfund fein gehacktes 
 					<cue:recipeIngredient quantity="1" unit="Pfund">Nierenfett</cue:recipeIngredient>
 					, 1 
@@ -15315,7 +15377,9 @@
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Pfeffer #spanischer_Pfeffer">Pfeffer</cue:recipeIngredient>
-					 und Muskatnuß, und mischt Alles gut untereinander. Dann macht man kleine 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, und mischt Alles gut untereinander. Dann macht man kleine 
 					<cue:recipeIngredient>Klöße</cue:recipeIngredient>
 					 davon, setzt sie in eine Casserole, legt einige Stückchen 
 					<cue:recipeIngredient quantity="einige" ref="#Butter">Butter</cue:recipeIngredient>
@@ -15404,7 +15468,9 @@
 					<cue:recipeIngredient>Salzwasser</cue:recipeIngredient>
 					 weich gekocht, abgezogen und gespalten, steckt man einige 
 					<cue:recipeIngredient quantity="einige" ref="#Gewürznelken">Nelken</cue:recipeIngredient>
-					 hinein, bestreut sie mit Muskatnuß, streut gestoßenen 
+					 hinein, bestreut sie mit 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, streut gestoßenen 
 					<cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient>
 					 darüber und brät sie in steigender 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
@@ -15429,7 +15495,9 @@
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Gewürznelken">Nelken</cue:recipeIngredient>
-					 und Muskatnuß unter einander gemischt, die weich gekochte und gespaltene 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 unter einander gemischt, die weich gekochte und gespaltene 
 					<cue:recipeIngredient>Zunge</cue:recipeIngredient>
 					 damit eingerieben, mit 
 					<cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient>
@@ -15504,7 +15572,7 @@
 				<head> Ochsenfleisch-Cotelettes.</head>
 				<p>
 					 Vier Theile schieres 
-					<cue:recipeIngredient quantity="4" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="4" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 ohne Sehnen, 1 Theil 
 					<cue:recipeIngredient quantity="1">Nierenfett</cue:recipeIngredient>
 					 mit 
@@ -15513,7 +15581,9 @@
 					<cue:recipeIngredient quantity="1" ref="#Ei" unit="Scheibe">Ei</cue:recipeIngredient>
 					, worin 
 					<cue:recipeIngredient ref="#Gewürznelken">Nelken</cue:recipeIngredient>
-					 und Muskatnuß gerührt, umgedreht, mit gestoßenem 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 gerührt, umgedreht, mit gestoßenem 
 					<cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient>
 					 bestreut und in steigender 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
@@ -15541,7 +15611,7 @@
 					, nebst 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 zu Feuer gesetzt, halb kochend, halb bratend gahr gemacht; doch darf nicht hineingestochen werden. Man läßt dieses 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 eine Nacht stehen, hackt viel 
 					<cue:recipeIngredient quantity="1" ref="#Schalotte">Charlotten</cue:recipeIngredient>
 					, mengt sie mit 
@@ -15551,7 +15621,7 @@
 					 und geriebenem 
 					<cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
 					 unter einander, schneidet das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 in Scheiben, bestreicht sie mit 
 					<cue:recipeIngredient ref="#Ei" unit="Scheibe">Ei</cue:recipeIngredient>
 					, drückt sie in das Gemengsel und brät sie in einer Pfanne wie 
@@ -15570,7 +15640,7 @@
 					 Wird überaus fein und wohlschmeckend, wenn man dazu 1 Theil Rind-, 1 Theil Kalb- und 1 Theil durchwachsenes 
 					<cue:recipeIngredient quantity="1">Schweinefleisch</cue:recipeIngredient>
 					 fein unter einander hackt und dann zu 1 ½ Pfund 
-					<cue:recipeIngredient quantity="0.5" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="0.5" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					 6 Loth 
 					<cue:recipeIngredient quantity="6" ref="#Butter" unit="Loth">Butter</cue:recipeIngredient>
 					 nimmt. Diese Mischung kann man jedoch nicht immer haben und man zerhackt dann 1 ½ Pfund gutes 
@@ -15613,10 +15683,12 @@
 				</head>
 				<p>
 					 Ein und ein halbes Pfund fein gehacktes 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					 mit etwas Fett, 1 ½ Loth 
 					<cue:recipeIngredient quantity="0.5" ref="#Salz" unit="Loth">Salz</cue:recipeIngredient>
-					, 3 Nägelchen, ½ geriebene Muskatnuß, 3 
+					, 3 Nägelchen, ½ geriebene 
+					<cue:recipeIngredient quantity="0.5">Muskatnuß</cue:recipeIngredient>
+					, 3 
 					<cue:recipeIngredient quantity="3" ref="#Ei">Eier</cue:recipeIngredient>
 					, das Weiße eben schäumig geschlagen, für 1 Sgr. gestoßenen 
 					<cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient>
@@ -15642,7 +15714,7 @@
 				</head>
 				<p>
 					 Ein und ein halbes Pfund sehr fein gehacktes, mageres 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					 ohne Haut und Sehnen( nach dem Hacken gewogen), ¼ Pfund fein gehacktes 
 					<cue:recipeIngredient quantity="0.25" unit="Pfund">Nierenfett</cue:recipeIngredient>
 					, für 6 Pfennige dünn abgeschältes, in kaltem Wasser eingeweichtes und ausgedrücktes 
@@ -15651,7 +15723,9 @@
 					<cue:recipeIngredient quantity="3" ref="#Ei">Eier</cue:recipeIngredient>
 					, das Weiße etwas schäumig geschlagen, 1 ½ Loth 
 					<cue:recipeIngredient quantity="0.5" ref="#Salz" unit="Loth">Salz</cue:recipeIngredient>
-					 und nach Belieben ½ Muskatnuß. Dies Alles gut unter einander gemischt und rund und glatt geformt. Alsdann läßt man reichlich einen Stich 
+					 und nach Belieben ½ 
+					<cue:recipeIngredient quantity="0.5">Muskatnuß</cue:recipeIngredient>
+					. Dies Alles gut unter einander gemischt und rund und glatt geformt. Alsdann läßt man reichlich einen Stich 
 					<cue:recipeIngredient quantity="1" ref="#Butter" unit="Stich">Butter</cue:recipeIngredient>
 					 in einem passenden, irdenen Töpfchen mit 12—15 Stück frischen zerschnittenen 
 					<cue:recipeIngredient atLeast="12" atMost="15">Wachholderbeeren</cue:recipeIngredient>
@@ -15720,7 +15794,7 @@
 				<head> Geschmorte Fleisch-Rouladen.</head>
 				<p>
 					 Man klopft ein Stück 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 aus der Kluft, welches mehrere Tage alt sein muß, gehörig durch, schneidet es in große Scheiben, die man ebenfalls noch etwas mit einem Klopfholz, nicht mit dem Messer, klopft, bestreut dieselben mit gestoßenem 
 					<cue:recipeIngredient quantity="1" ref="#Zwieback" unit="Scheibe">Zwieback</cue:recipeIngredient>
 					, 
@@ -15748,12 +15822,12 @@
 			<cue:recipe rcp-id="I-35" type="Fleischspeisen_aller_Art." xmlns:cue="http://cueML/ns">
 				<head>
 					 Gekochtes 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 mit einer Kruste.
 				</head>
 				<p>
 					 Von der Nachbrust eines Ochsen wird eine gute Suppe gekocht. Ist das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 beinahe weich, legt man es in eine Bratpfanne, gibt einige Löffel 
 					<cue:recipeIngredient quantity="einige" unit="EL">Suppenfett</cue:recipeIngredient>
 					, 2 
@@ -15761,10 +15835,12 @@
 					, 3 
 					<cue:recipeIngredient quantity="3">Lorberblätter</cue:recipeIngredient>
 					 darunter, bestreut das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 mit 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
-					, Muskatnuß und gestoßenem 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und gestoßenem 
 					<cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient>
 					, und läßt es unter einem Tortendeckel, worauf viel Feuer gelegt wird, oder im heißen Ofen gelbbraun werden. Es wird eine kräftige 
 					<cue:recipeIngredient quantity="1">Sauce</cue:recipeIngredient>
@@ -15793,16 +15869,18 @@
 					<cue:recipeIngredient quantity="2" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					, etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
-					, Muskatnuß, oder 1 Obertasse voll geriebenen 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, oder 1 Obertasse voll geriebenen 
 					<cue:recipeIngredient quantity="1">Meerrettig</cue:recipeIngredient>
 					. Ist das Stück 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 damit bestrichen, so bestreut man es mit gestoßenem 
 					<cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient>
 					, legt es in eine ausgeschmierte Bratpfanne, in die man ein wenig 
 					<cue:recipeIngredient quantity="1">Bouillonfett</cue:recipeIngredient>
 					 gießt, damit das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 sich nicht ansetze, und läßt es im heißen Ofen gelb braten.
 				</p>
 			</cue:recipe>
@@ -15817,7 +15895,7 @@
 				</head>
 				<p>
 					 Das übergebliebene 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird in Scheiben geschnitten, eine Nacht in 
 					<cue:recipeIngredient quantity="1" ref="#Essig" unit="Scheibe">Essig</cue:recipeIngredient>
 					 gelegt, in 
@@ -15842,7 +15920,7 @@
 				</head>
 				<p>
 					 Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird in dünne Scheibchen geschnitten, mit einer 
 					<cue:recipeIngredient quantity="1">Sauce</cue:recipeIngredient>
 					 von saurer 
@@ -15879,12 +15957,12 @@
 					 
 					<cue:recipeIngredient>Fricadellen</cue:recipeIngredient>
 					 von gebratenem oder gekochtem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					.
 				</head>
 				<p>
 					 Man nimmt hierzu Ueberreste von 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, am besten von Gebratenem, hackt sie mit einer 
 					<cue:recipeIngredient quantity="1" ref="#Zwiebel">Zwiebel</cue:recipeIngredient>
 					 oder mit 
@@ -15949,7 +16027,7 @@
 			<cue:recipe rcp-id="I-41" type="Fleischspeisen_aller_Art." xmlns:cue="http://cueML/ns">
 				<head>
 					 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 mit 
 					<cue:recipeIngredient>Aepfel</cue:recipeIngredient>
 					.
@@ -15968,7 +16046,7 @@
 					, 
 					<cue:recipeIngredient>Bouillon</cue:recipeIngredient>
 					 oder Wasser, doch nicht zu viel, hinzu, das in dünne Scheiben geschnittene 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Scheibe">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Scheibe">Fleisch</cue:recipeIngredient>
 					( 
 					<cue:recipeIngredient>Kalbsbraten</cue:recipeIngredient>
 					 oder auch gekochtes 
@@ -15991,7 +16069,7 @@
 				</head>
 				<p>
 					 Man schneidet das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 in passende Stücke, das Fett in kleine Würfel, oder man macht statt letzterem 
 					<cue:recipeIngredient>Bratenfett</cue:recipeIngredient>
 					 oder 
@@ -16017,7 +16095,7 @@
 					 zur 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					, läßt sie durchkochen und das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darin ein wenig schmoren. Die 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 muß recht sämig sein. Man kann auch ½ Eßlöffel voll 
@@ -16228,9 +16306,9 @@
 				</p>
 				<p>
 					 Anmerk. Diese Zubereitung ist besonders auf dem Lande zu empfehlen, wo man nicht immer gutes 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 haben, oder bei einem selbst gemästeten Kalbe das 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 in der Hitze nicht vor einem Nebengeschmack schützen kann. Auch kann man statt 
 					<cue:recipeIngredient altGrp="1" ref="#Buttermilch">Buttermilch</cue:recipeIngredient>
 					 dicke saure 
@@ -16260,7 +16338,9 @@
 					<cue:recipeIngredient>Niere</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
-					, Muskatnuß, einen Löffel saure 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, einen Löffel saure 
 					<cue:recipeIngredient quantity="1" ref="#Sahne" unit="EL">Sahne</cue:recipeIngredient>
 					, halb so viel 
 					<cue:recipeIngredient>Senf</cue:recipeIngredient>
@@ -16285,7 +16365,9 @@
 					<cue:recipeIngredient quantity="1">Kalbsbraten</cue:recipeIngredient>
 					 fein gehackt, geriebene 
 					<cue:recipeIngredient ref="#Zitronenschale">Zitronenschale</cue:recipeIngredient>
-					 und Muskatnuß dazu gegeben. Dann läßt man ein Stückchen 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 dazu gegeben. Dann läßt man ein Stückchen 
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 hellbraun werden, gibt hinein: etwas fein gehackte 
 					<cue:recipeIngredient quantity="etwas" ref="#Zwiebel">Zwiebeln</cue:recipeIngredient>
@@ -16302,7 +16384,7 @@
 					 eben durchkochen. Etwas abgekühlt rührt man einige 
 					<cue:recipeIngredient quantity="einige" ref="#Ei">Eier</cue:recipeIngredient>
 					 mit dem gehackten 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darunter, sticht mit einem Löffel kleine, längliche 
 					<cue:recipeIngredient quantity="1" unit="EL">Klöße</cue:recipeIngredient>
 					 davon ab, wälzt sie in gestoßenem 
@@ -16390,7 +16472,7 @@
 				</head>
 				<p>
 					 Es gehört hierzu sehr gutes 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					. Man schneidet die 
 					<cue:recipeIngredient>Rippen</cue:recipeIngredient>
 					 glatt ab, klopft sie gehörig, aber nicht auseinander, damit sie ½ Zoll dick bleiben und hackt die 
@@ -16408,7 +16490,7 @@
 					, etwas gestoßenen 
 					<cue:recipeIngredient quantity="etwas" ref="#Zwieback">Zwieback</cue:recipeIngredient>
 					 und etwa zu 3 Pfund 
-					<cue:recipeIngredient quantity="3" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="3" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					, nicht ganz ¼ Maß halb Wasser und halb 
 					<cue:recipeIngredient ref="#Rotwein #Weißwein">Wein</cue:recipeIngredient>
 					 hinzu. Dann wird die Schüssel fest zugedeckt, ein feuchtes Tuch darüber hingelegt und auf Kohlen ¼ Stunde geschmort.
@@ -16425,7 +16507,7 @@
 					 Man lös’t den 
 					<cue:recipeIngredient>Knochen</cue:recipeIngredient>
 					 aus, wäscht und trocknet das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, gibt die Fülle No. 9 in die Oeffnung, näht sie zu, reibt die 
 					<cue:recipeIngredient>Brust</cue:recipeIngredient>
 					 mit 
@@ -16448,7 +16530,7 @@
 					 wird gut geklopft, gewaschen, getrocknet und in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 gelb geschwitzt; dann gibt man so viel kochendes Wasser dazu, daß das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 nicht ganz bedeckt ist, nebst 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, 
@@ -16499,7 +16581,7 @@
 					 darauf geschüttet und fest verschlossen auf ein nicht zu rasches Feuer gesetzt. Sollte die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 zu früh abkochen, so muß man von beiden etwas nachgießen. Darauf wird sie kurz und gelblichbraun eingekocht, während man durch häufiges Rütteln das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 vor Anbrennen schützt und mit der 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 so lange begießt, bis sie sämig geworden ist.
@@ -16532,14 +16614,14 @@
 					 bestreut in die 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					, deckt das Töpfchen fest zu und läßt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 1½ Stunden langsam darin schmoren, während es in dieser Zeit nur einmal umgelegt, aber oft gehoben werden muß, um es vor Ansetzen zu bewahren.
 				</p>
 				<p>
 					 Hat man gerade eine angeschnittene 
 					<cue:recipeIngredient quantity="1" ref="#Zitrone">Zitrone</cue:recipeIngredient>
 					 zur Hand, so kann man beim Umlegen des 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisches</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisches</cue:recipeIngredient>
 					 einige Scheiben dazu geben. Uebrigens wird man kein 
 					<cue:recipeIngredient ref="#braunes_Gewürz">Gewürz</cue:recipeIngredient>
 					 vermissen und das Gericht wohlschmeckend finden.
@@ -16584,7 +16666,7 @@
 					 oder Wasser, rührt dies gut unter einander und bestreicht mit dieser 
 					<cue:recipeIngredient>Farce</cue:recipeIngredient>
 					 das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 auf der inwendigen Seite, rollt es auf und umwickelt es mit einem Bindfaden. Darauf bringt man den Braten zu Feuer, läßt ihn in reichlicher 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 von allen Seiten gelb werden, schüttet ¼ Maß kochendes Wasser zu, welches man später wiederholt und gibt eine 
@@ -16642,7 +16724,7 @@
 					 Man schneidet die 
 					<cue:recipeIngredient>Brust</cue:recipeIngredient>
 					 in kleine, viereckige Stücke und blanchirt sie auf folgende Weise, damit das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 recht weiß werde. Nachdem solches mit kaltem Wasser gewaschen, wird es zu Feuer gesetzt und vor dem Kochen in kaltes Wasser geworfen und abgetrocknet. So lege man die Stücke in einen Topf, in welchem man 
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 hat zergehen lassen, streut einen Löffel 
@@ -16652,7 +16734,7 @@
 					 in der 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 gahr, aber nicht gelb werden, gießt dann so viel kochendes Wasser zu, daß das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 zur Hälfte bedeckt wird, gibt 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 hinzu und nimmt den sich etwa zeigenden Schaum ab. So läßt man es fest zugedeckt langsam mürbe, aber nicht zu weich kochen; ¼ Stunde vor dem Anrichten füllt man folgende Sachen hinzu: 
@@ -16698,11 +16780,11 @@
 					 in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 ein wenig durch und gießt so viel kochendes Wasser zu, daß das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 reichlich bedeckt ist. Nachdem es geschäumt ist, gibt man eben so viel gereinigte und in Stücke geschnittene 
 					<cue:recipeIngredient>Scorzonern</cue:recipeIngredient>
 					, als man 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 hat, mit etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
 					 und 
@@ -16735,7 +16817,7 @@
 					 in Wasser und 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 langsam gahr, damit er ein schönes Ansehn behält, richtet das 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 in der Mitte der Schüssel an, legt den 
 					<cue:recipeIngredient ref="#BlumenkohlGekocht">Blumenkohl</cue:recipeIngredient>
 					 zierlich daran herum, die Blumen nach oben( jedoch muß man denselben erst behutsam auf ein Sieb legen, damit das Wasser ablaufe), und gibt dann über die angerichtete Schüssel die reichlich lange und recht sämige 
@@ -16752,7 +16834,7 @@
 					 wird in 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 gelb geschwitzt, das in kleine Stücke geschnittene 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 nebst einem Eßlöffel 
 					<cue:recipeIngredient quantity="1" ref="#Mehl" unit="EL">Mehl</cue:recipeIngredient>
 					 eine Weile durchgerührt, mit kochendem Wasser zur Hälfte bedeckt, geschäumt, 
@@ -16777,7 +16859,7 @@
 				<head> Auf andere Art.</head>
 				<p>
 					 Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird mit Wasser und 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 zu Feuer gesetzt, ausgeschäumt, ein Stich 
@@ -16815,7 +16897,7 @@
 					 Man schneidet aus einer 
 					<cue:recipeIngredient quantity="1">Kalbskeule</cue:recipeIngredient>
 					 ungefähr 8 Pfund, diese in Handgroße Stücken, das 
-					<cue:recipeIngredient quantity="8" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="8" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					, welches abfällt, wird gebraten, klein gehackt, mit 
 					<cue:recipeIngredient ref="#Zitronenschale">Zitronenschalen</cue:recipeIngredient>
 					, ¼ Pfund Sardellen, 
@@ -16827,7 +16909,7 @@
 					 zu einer 
 					<cue:recipeIngredient quantity="1">Farce</cue:recipeIngredient>
 					 gemacht. Die Stücken 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 damit gefüllt; mit einem Bindfaden umbunden, langsam gebraten.
 				</p>
 				<p>
@@ -16838,7 +16920,7 @@
 					, 2 Loth Morcheln, etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Kartoffelstärkemehl" unit="Loth">Kartoffelmehl</cue:recipeIngredient>
 					, und läßt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darin noch einige Minuten dämpfen.
 				</p>
 			</cue:recipe>
@@ -16904,7 +16986,7 @@
 					 dazu gegeben und mit einem 
 					<cue:recipeIngredient quantity="1">Eigelb</cue:recipeIngredient>
 					 abgerührt, das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darin durchgekocht und zum Kaltwerden auf eine Schüssel gelegt. Sodann wird ein 
 					<cue:recipeIngredient quantity="1" ref="#Ei">Ei</cue:recipeIngredient>
 					 mit etwas 
@@ -17060,14 +17142,16 @@
 					 Wenn der 
 					<cue:recipeIngredient ref="#Kalbskopf">Kalbskopf</cue:recipeIngredient>
 					, wie eben gesagt, gekocht ist, schneidet man das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 in feine Scheiben, legt diese in eine mit 
 					<cue:recipeIngredient quantity="1" ref="#Butter" unit="Scheibe">Butter</cue:recipeIngredient>
 					 bestrichene Schüssel, streut etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
 					 dazwischen und gießt Folgendes darüber hin: ¼ Maß saure 
 					<cue:recipeIngredient quantity="0.25" ref="#Sahne" unit="Maß">Sahne</cue:recipeIngredient>
-					, Muskatnuß, 4 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, 4 
 					<cue:recipeIngredient quantity="4" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
@@ -17087,18 +17171,20 @@
 					, schneidet den Rückgrat, die obere Haut und Sehnen ab, und theilt es so, daß an jedes Stück eine 
 					<cue:recipeIngredient quantity="1">Rippe</cue:recipeIngredient>
 					 kommt; dann lös’t man das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 davon ab, faßt an den 
 					<cue:recipeIngredient>Knochen</cue:recipeIngredient>
 					 und klopft mit einem hölzernen Hammer das 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 langsam weich, haut den 
 					<cue:recipeIngredient>Knochen</cue:recipeIngredient>
 					 zur Hälfte glatt davon, formt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 mit einem Messer rund und glatt, einen Finger dick, tunkt jedes in 
 					<cue:recipeIngredient quantity="1" ref="#Ei">Ei</cue:recipeIngredient>
-					 mit Muskatnuß, wälzt es in gestoßenem 
+					 mit 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, wälzt es in gestoßenem 
 					<cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient>
 					 und legt es in viel kochende 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
@@ -17134,7 +17220,7 @@
 					 verwenden. Um gute 
 					<cue:recipeIngredient>Cotelettes</cue:recipeIngredient>
 					 zu machen, ist die Hauptbedingung gutes 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					.
 				</p>
 			</cue:recipe>
@@ -17162,7 +17248,7 @@
 				</head>
 				<p>
 					 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 aus der Keule wird nach seinen Muskeln abgelös’t, geklopft, daraus ½ Zoll dicke, glatte Stücke geschnitten, die ungefähr 4 Zoll breit und 6 Zoll lang sind. Von dem Abfall macht man eine 
 					<cue:recipeIngredient quantity="1">Farce</cue:recipeIngredient>
 					 nach No. 8; spickt die Streifen auf einer Seite mit 
@@ -17192,7 +17278,9 @@
 					<cue:recipeIngredient quantity="etwas">Speck</cue:recipeIngredient>
 					 oder 
 					<cue:recipeIngredient>Nierenfett</cue:recipeIngredient>
-					 so fein als möglich gehackt, Muskatnuß und 
+					 so fein als möglich gehackt, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, besser mit einem Löffel saurer 
 					<cue:recipeIngredient quantity="1" ref="#Sahne" unit="EL">Sahne</cue:recipeIngredient>
@@ -17219,7 +17307,7 @@
 					 oder 
 					<cue:recipeIngredient>Nierenfett</cue:recipeIngredient>
 					 recht fein gehackt; dann nimmt man zu 2 Pfund von diesem 
-					<cue:recipeIngredient quantity="2" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleische</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="2" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleische</cue:recipeIngredient>
 					 4 ganze 
 					<cue:recipeIngredient quantity="4" ref="#Ei">Eier</cue:recipeIngredient>
 					, 4 Löffel voll gestoßenen 
@@ -17230,7 +17318,9 @@
 					<cue:recipeIngredient ref="#Rotwein #Weißwein">Wein</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
-					 und Muskatnuß, mischt dies gut unter einander und füllt es in eine Wurstspritze. Darauf läßt man in einer flachen Bratpfanne oder Schüssel 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, mischt dies gut unter einander und füllt es in eine Wurstspritze. Darauf läßt man in einer flachen Bratpfanne oder Schüssel 
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 gelb werden, drückt die Masse schneckenförmig in die Form einer dicht neben einander gelegten Wurst hinein, macht sie mit etwas gelbbrauner 
 					<cue:recipeIngredient quantity="etwas" ref="#Butter">Butter</cue:recipeIngredient>
@@ -17398,7 +17488,9 @@
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 dazu und rühre dieses so lange, bis sie weich ist. Dann gebe man geriebenes 
 					<cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
-					, Muskatnuß und 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und 
 					<cue:recipeIngredient>Nelkenpfeffer</cue:recipeIngredient>
 					, 2 Tassen 
 					<cue:recipeIngredient quantity="2" unit="Tasse">Bouillon</cue:recipeIngredient>
@@ -17551,7 +17643,9 @@
 					<cue:recipeIngredient quantity="2" ref="#Ei">Eiern</cue:recipeIngredient>
 					, etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
-					 und Muskatnuß untereinander gemischt. Dann macht man 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 untereinander gemischt. Dann macht man 
 					<cue:recipeIngredient ref="#WeißbrotToast">Weißbrodscheiben</cue:recipeIngredient>
 					 in 
 					<cue:recipeIngredient ref="#Kuhmilch">Milch</cue:recipeIngredient>
@@ -17588,7 +17682,7 @@
 					, schneidet alles Sehnige heraus und hackt es recht fein. Dann läßt man ein gutes Stück 
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 gelb werden, rührt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 eine Weile darin durch, gibt es in ein Geschirr und fügt hinzu: etwas gestoßenen 
 					<cue:recipeIngredient quantity="etwas" ref="#Zwieback">Zwieback</cue:recipeIngredient>
 					 oder geriebenes 
@@ -17739,7 +17833,7 @@
 					 an die 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 und läßt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darin gut durchkochen.
 				</p>
 			</cue:recipe>
@@ -17778,7 +17872,7 @@
 					, und wenn man trüben 
 					<cue:recipeIngredient>Rothwein</cue:recipeIngredient>
 					 hat, eben so viel dazu, wodurch das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 auch die bräunliche Wildfarbe erhält. Mit diesem wird die Keule recht oft begossen und jeden Morgen umgelegt, während man sie wenigstens 8 Tage darin liegen läßt. Dann wird sie wie 
 					<cue:recipeIngredient ref="#Hase">Hasen</cue:recipeIngredient>
 					 gespickt, oder man nimmt in 
@@ -17944,7 +18038,7 @@
 					, halb 
 					<cue:recipeIngredient>Rothwein</cue:recipeIngredient>
 					 darauf und läßt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darin unter öfterem Begießen 2—3 Tage liegen. Es wird alsdann nach Belieben gespickt, mit reichlich 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 und etwas von der Beize, worin es gelegen, in einer irdenen Bratpfanne, zugedeckt zu Feuer gesetzt und bei fleißigem Begießen 1—1½ Stunden gahr und gelb gebraten. Eine halbe Stunde vorher nimmt man den Deckel ab, gibt eine Tasse gute 
@@ -17966,7 +18060,7 @@
 				<head> Gehackte Hammel-Cotelettes.</head>
 				<p>
 					 Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird von den 
 					<cue:recipeIngredient>Rippen</cue:recipeIngredient>
 					 abgeschnitten, ganz fein gehackt, mit fein gehacktem 
@@ -18005,7 +18099,7 @@
 				</head>
 				<p>
 					 Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird in kleine viereckige Stücke geschnitten, gewaschen, in kochende 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 gelegt, nebst einigen 
@@ -18036,7 +18130,7 @@
 				<head> Hammel-Ragout.</head>
 				<p>
 					 Das in kleine Stücke geschnittene 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird in Wasser und 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 ausgeschäumt, mit 
@@ -18058,7 +18152,7 @@
 					 geschwitzt, die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 ohne Fett dazu gerührt, das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 nebst einigen 
 					<cue:recipeIngredient quantity="einige" ref="#Zitronenscheibe">Zitronenscheiben</cue:recipeIngredient>
 					 ohne Kerne, 
@@ -18074,7 +18168,7 @@
 			<cue:recipe rcp-id="I-105" type="Fleischspeisen_aller_Art." xmlns:cue="http://cueML/ns">
 				<head>
 					 Hammel-Ragout von gekochtem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					.
 				</head>
 				<p>
@@ -18093,7 +18187,7 @@
 					 und etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Essig">Essig</cue:recipeIngredient>
 					, läßt dies eine Weile kochen, rührt es durch ein Sieb und läßt das in kleine Stücke geschnittene 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 ein wenig darin schmoren.
 				</p>
 			</cue:recipe>
@@ -18261,7 +18355,9 @@
 					<cue:recipeIngredient ref="#Schweineschinken">Schinken</cue:recipeIngredient>
 					, streicht es mit dem Messer glatt, streut gestoßenen 
 					<cue:recipeIngredient ref="#Zwieback">Zwieback</cue:recipeIngredient>
-					 und Muskatnuß darüber, setzt die Schüssel in eine Tortenpfanne, legt einen Deckel mit Glut darüber und läßt es ½ Stunde backen. Er wird mit einer 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 darüber, setzt die Schüssel in eine Tortenpfanne, legt einen Deckel mit Glut darüber und läßt es ½ Stunde backen. Er wird mit einer 
 					<cue:recipeIngredient quantity="1">Trüffelsauce</cue:recipeIngredient>
 					 No. 4 als Mittelschüssel zur Tafel gegeben.
 				</p>
@@ -18281,7 +18377,7 @@
 					 ein, schneidet das kleine blutige Stück ab, knickt die 
 					<cue:recipeIngredient quantity="1">Rippen</cue:recipeIngredient>
 					 in der Mitte, ohne das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 zu verletzen, ein, füllt in 4 Theile geschnittene saure 
 					<cue:recipeIngredient quantity="4">Aepfel</cue:recipeIngredient>
 					 hinein, biegt das Stück zusammen und näht es von allen Seiten fest zu. Darauf legt man die 
@@ -18329,8 +18425,10 @@
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 gahr geschmort dazugegeben, nebst 
 					<cue:recipeIngredient>Zitronensaft</cue:recipeIngredient>
-					, etwas von der fein gehackten Schale, Muskatnuß, 
-					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
+					, etwas von der fein gehackten Schale, 
+					<cue:recipeIngredient quantity="etwas">Muskatnuß</cue:recipeIngredient>
+					, 
+					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient>Nelkenpfeffer</cue:recipeIngredient>
 					 und dieses Alles ein wenig gekocht.
@@ -18346,9 +18444,7 @@
 				<p>
 					 Man nimmt den 
 					<cue:recipeIngredient ref="#Schweineschinken">Schinken</cue:recipeIngredient>
-					 eines jungen 
-					<cue:recipeIngredient quantity="1">Schweines</cue:recipeIngredient>
-					 von 8 bis 10 Pfund, schneidet die 
+					 eines jungen Schweines von 8 bis 10 Pfund, schneidet die 
 					<cue:recipeIngredient quantity="10" unit="Pfund">Schwarte</cue:recipeIngredient>
 					 ab und reibt ihn gut ein mit folgender Mischung: ½ Maß rothen 
 					<cue:recipeIngredient quantity="0.5" ref="#Rotwein" unit="Maß">Wein</cue:recipeIngredient>
@@ -18475,7 +18571,7 @@
 				</head>
 				<p>
 					 Ist das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 nach No. 114 gekocht, wird es in 
 					<cue:recipeIngredient ref="#Ei">Ei</cue:recipeIngredient>
 					 und 
@@ -18498,7 +18594,7 @@
 				</head>
 				<p>
 					 Sie werden wie in No. 19 zubereitet. Ist das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 ein wenig durchwachsen, läßt man 
 					<cue:recipeIngredient quantity="1" ref="#Butter">Butter</cue:recipeIngredient>
 					 weg. Man gibt sie nach Belieben mit oder ohne 
@@ -18558,14 +18654,12 @@
 					 erhält sich in kalten Wintertagen, wenn er gleich nach dem Schießen ausgeweidet ist, im Fell an der Luft hängend 8 Tage ganz frisch; doch auch nicht länger. Indeß kann man, wenn es sein muß, ihn dann noch einige Tage in 
 					<cue:recipeIngredient quantity="einige" ref="#Essig">Essig</cue:recipeIngredient>
 					 aufbewahren. 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 vom 
 					<cue:recipeIngredient>Reh</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient>Hirsch</cue:recipeIngredient>
-					 oder 
-					<cue:recipeIngredient>Schwein</cue:recipeIngredient>
-					 auf folgende Weise: man läßt die Stücke gehörig zu Braten hauen, bestreut sie mit 
+					 oder Schwein auf folgende Weise: man läßt die Stücke gehörig zu Braten hauen, bestreut sie mit 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 und läßt sie in einer Pfanne schnell von allen Seiten zurösten, dann sticht man kurze 
 					<cue:recipeIngredient quantity="1">Speckstreifchen</cue:recipeIngredient>
@@ -18584,7 +18678,7 @@
 					 festschließend in ein kleines Faß, oder einen passenden Topf, gießt so viel gekochten und wieder kalt gewordenen 
 					<cue:recipeIngredient quantity="1">Bieressig</cue:recipeIngredient>
 					 darauf, daß das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 bedeckt ist und gießt es mit Fett etwa zwei Finger dick zu. Es wird dadurch vor dem Zutritt der Luft bewahrt, erhält sich sehr lange und bekommt in dieser Beitze einen angenehmen Geschmack.
 				</p>
 				<p> Beim Herausnehmen eines Stückes muß man das Fett von neuem schmelzen und darauf gießen. Man kann die Stücke braten oder schmoren, letzteres ist besonders zu empfehlen.</p>
@@ -18623,7 +18717,7 @@
 					 und 
 					<cue:recipeIngredient>Hals</cue:recipeIngredient>
 					. Man muß diese Stücke, besonders wenn sie zerschossen, blutig, und an diesen Stellen durch den Schuß mit Haaren gefüllt sind, gehörig nachsehen und waschen. Dann wird das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 in kleine, passende Stücke geschnitten, nochmals gespült, mit Wasser und 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 ausgeschäumt und Folgendes dazugegeben: geriebenes 
@@ -18662,7 +18756,7 @@
 					 Die 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					, mit der das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 angerichtet wird, muß reichlich und sämig sein.
 				</p>
 			</cue:recipe>
@@ -18689,7 +18783,7 @@
 					 unter einander und begießt die Braten unermüdlich damit, weil sie nur dadurch saftig werden. Brät die 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 zu viel ein, gießt man ein wenig kochendes Wasser hinzu und läßt sie so langsam nach dem Alter des 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisches</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisches</cue:recipeIngredient>
 					 und der Größe des Stücks 2 bis 2½ Stunden braten. Beim Anrichten wird die 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 mit etwas kaltem Wasser gut zusammen gerührt, und sollte dieselbe nicht schon durch die 
@@ -18730,7 +18824,7 @@
 					 über, bewickelt die Füße mit Papier und läßt ihn am besten mit recht vieler 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 unter fortwährendem Begießen am Spieß etwa eine Stunde braten. Liebt man indeß, nach englischer Weise, das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 inwendig roth, so braucht man ihn nur ½ Stunde in der Maschine zu lassen, ¼ Stunde vorher gibt man eine Tasse 
 					<cue:recipeIngredient quantity="1" ref="#Sahne" unit="Tasse">Sahne</cue:recipeIngredient>
 					 zur 
@@ -18740,7 +18834,7 @@
 					 nicht bei zu schwachem Feuer zu braten, weil er sonst austrocknet. Reichlich 
 					<cue:recipeIngredient ref="#Butter">Butter</cue:recipeIngredient>
 					 und sehr fleißiges Begießen macht ihn saftig, selbst das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 an den Beinen wird dadurch eben so mürbe und saftig, als der Rücken. Ist er gahr, welches in einer Stunde der Fall ist, so muß er sogleich aus dem Ofen genommen und die 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 mit etwas kaltem Wasser zusammengerührt werden, wodurch sich die 
@@ -18794,7 +18888,7 @@
 					 braun gemachtes 
 					<cue:recipeIngredient ref="#Mehl">Mehl</cue:recipeIngredient>
 					, welches man nur hinein geben kann, ohne es erst mit Wasser anzurühren. Wenn das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 gahr ist, rührt man einen Löffel 
 					<cue:recipeIngredient quantity="1" unit="EL">Birnkraut</cue:recipeIngredient>
 					 oder ein Stück 
@@ -18934,7 +19028,7 @@
 				</head>
 				<p>
 					 Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird in passende Ragoutstücke gehauen, mit einigen 
 					<cue:recipeIngredient quantity="einige">Lorberblättern</cue:recipeIngredient>
 					, 
@@ -18954,7 +19048,7 @@
 					 hinzugeschüttet, nebst recht viel in Würfel zerschnittenen 
 					<cue:recipeIngredient ref="#Zwiebel">Zwiebeln</cue:recipeIngredient>
 					, das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darin gahr gekocht. Eine halbe Stunde vorher wird die 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 mit in 
@@ -19027,7 +19121,7 @@
 					 in 
 					<cue:recipeIngredient>Bouillon</cue:recipeIngredient>
 					 oder gesalzenem Wasser aufgekocht, zwischen das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 gelegt werden.
 				</p>
 			</cue:recipe>
@@ -19421,7 +19515,7 @@
 					, 
 					<cue:recipeIngredient>Klöße</cue:recipeIngredient>
 					, die aus ½ Pfund fein gehacktem 
-					<cue:recipeIngredient quantity="0.5" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="0.5" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					 aufgerollt sind, eine halbe Tasse 
 					<cue:recipeIngredient quantity="1" unit="Tasse">Capern</cue:recipeIngredient>
 					 und ein Eßlöffel voll 
@@ -19429,7 +19523,7 @@
 					. Wie dies Alles vorgerichtet werden und wie lange es im 
 					<cue:recipeIngredient>Ragout</cue:recipeIngredient>
 					 kochen muß, kann man in den Vorbereitungsregeln nachsehen. Zugleich wird auch das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 ins 
 					<cue:recipeIngredient>Ragout</cue:recipeIngredient>
 					 gelegt, und wenn Alles ¼ Stunde langsam gekocht hat, angerichtet. Die 
@@ -19546,7 +19640,9 @@
 					<cue:recipeIngredient quantity="2" ref="#Ei">Eier</cue:recipeIngredient>
 					, für 8 Pfennige in Wasser eingeweichtes, stark ausgedrücktes 
 					<cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
-					, Muskatnuß und 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, oder man nimmt zum Füllen 
 					<cue:recipeIngredient ref="#Zwiebel">Zwiebeln</cue:recipeIngredient>
@@ -19790,7 +19886,7 @@
 					 in einem irdenen oder glasirten Topfe ausgeschäumt, die 
 					<cue:recipeIngredient quantity="1">Brühe</cue:recipeIngredient>
 					 durch ein feines Sieb geschüttet, das 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 eben abgespült und mit der 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					, wenn sich alles Unklare gesenkt hat, wieder zu Feuer gesetzt. Dann gibt man hinzu: für 2 Sgr. geraspeltes 
@@ -19806,11 +19902,11 @@
 					 und 
 					<cue:recipeIngredient ref="#Gewürznelken">Nelken</cue:recipeIngredient>
 					, läßt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darin weich werden und die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 so viel einkochen, daß sie, wenn man etwas davon kalt werden läßt, dick wird. Dann legt man das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 in ein gläsernes oder porzellanenes Gefäß, nimmt so viel als möglich das Fett von der 
 					<cue:recipeIngredient quantity="1">Brühe</cue:recipeIngredient>
 					, gießt solche durch ein Haarsieb darüber und bewahrt es bis zum Gebrauche auf. Dies 
@@ -20019,14 +20115,14 @@
 					 und eine Messerspitze 
 					<cue:recipeIngredient quantity="1" ref="#Pfeffer #spanischer_Pfeffer" unit="Messerspitze">Pfeffer</cue:recipeIngredient>
 					 und kocht sie mit dem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 eben durch.
 				</p>
 				<p>
 					 Die 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 muß recht sämig sein, und eigentlich von durchgerührtem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 sämig gemacht werden; doch kann man auch auf andere Weise ein wenig nachhelfen.
 				</p>
 			</cue:recipe>
@@ -20038,7 +20134,7 @@
 					 von 
 					<cue:recipeIngredient>Kalbsfüßen</cue:recipeIngredient>
 					 für jede Art 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient>Fisch</cue:recipeIngredient>
 					.
@@ -20075,7 +20171,7 @@
 					, etwa ½ Maß guten 
 					<cue:recipeIngredient quantity="0.5" unit="Maß">Weinessig</cue:recipeIngredient>
 					, läßt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darin weich werden und die Füße so lange kochen, bis die 
 					<cue:recipeIngredient>Knochen</cue:recipeIngredient>
 					 herausfallen. Dann gießt man die 
@@ -20126,7 +20222,7 @@
 					 darauf, bedeckt dies mit etwas 
 					<cue:recipeIngredient quantity="etwas">Gelee</cue:recipeIngredient>
 					 und legt, wenn solcher fest geworden, das Bestimmte, 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 oder 
 					<cue:recipeIngredient>Fisch</cue:recipeIngredient>
 					, darauf, gibt nun den übrigen 
@@ -20134,7 +20230,7 @@
 					 hinzu, mit welchem der 
 					<cue:recipeIngredient>Fisch</cue:recipeIngredient>
 					 oder das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 bedeckt sein muß und stellt es zum Kaltwerden hin. Kann man die Form auf Eis stellen, so ist man schneller damit fertig und wünscht man den 
 					<cue:recipeIngredient>Gelee</cue:recipeIngredient>
 					 gelblich zu haben, so gibt man mit dem 
@@ -20181,7 +20277,7 @@
 					, 
 					<cue:recipeIngredient ref="#Wurzelpetersilie">Petersilienwurzeln</cue:recipeIngredient>
 					 dazu gethan und gekocht, bis das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 von den 
 					<cue:recipeIngredient>Knochen</cue:recipeIngredient>
 					 fällt. Ist dieser 
@@ -20251,12 +20347,12 @@
 			<cue:recipe rcp-id="K-5" type="Gelees_und_Gefrornes." xmlns:cue="http://cueML/ns">
 				<head>
 					 Zubereitung des 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisches</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisches</cue:recipeIngredient>
 					, das zu einer Gelee-Schüssel bestimmt ist.
 				</head>
 				<p>
 					 Jedes 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, es sei 
 					<cue:recipeIngredient>Mürbebraten</cue:recipeIngredient>
 					( 
@@ -20278,7 +20374,7 @@
 					 nimmt man die 
 					<cue:recipeIngredient>Knochen</cue:recipeIngredient>
 					, worüber eine Anweisung in den Vorbereitungsregeln zu finden ist. Dann setzt man das bestimmte 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 mit halb Wasser, halb 
 					<cue:recipeIngredient ref="#Essig">Essig</cue:recipeIngredient>
 					 und dem nöthigen 
@@ -20286,7 +20382,7 @@
 					 zu Feuer, schäumt es rein aus, fügt die in No. 2 angegebenen 
 					<cue:recipeIngredient ref="#braunes_Gewürz">Gewürze</cue:recipeIngredient>
 					 hinzu und läßt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 zu jener 
 					<cue:recipeIngredient>Gelee-Brühe</cue:recipeIngredient>
 					, wie sie in No. 2 angegeben worden ist, oder man schüttet sie durch ein Haarsieb, reinigt sie am nächsten Tage von allem Fett und Bodensatz, setzt sie mit 2 Pfund 
@@ -20319,7 +20415,7 @@
 					 und 1 ½ — 2 Flaschen rothem 
 					<cue:recipeIngredient quantity="2" ref="#Weißwein" unit="Flasche">Wein</cue:recipeIngredient>
 					 drei Stunden, fest verschlossen, langsam kochen. Dann nimmt man das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 heraus, schüttet die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 durch ein feines Sieb, gibt etwas braun gebrannten 
@@ -20327,7 +20423,7 @@
 					 dazu, klärt sie, wie angegeben worden ist, und schüttet die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 über das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					.
 				</p>
 			</cue:recipe>
@@ -20346,7 +20442,7 @@
 					 Die 
 					<cue:recipeIngredient>Kalbsfüße</cue:recipeIngredient>
 					 werden mit dem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und den 
 					<cue:recipeIngredient ref="#braunes_Gewürz">Gewürzen</cue:recipeIngredient>
 					 nach No. 2 zu Feuer gebracht. Dann nimmt man aus den 
@@ -20881,7 +20977,7 @@
 					 und 
 					<cue:recipeIngredient ref="#Muskatblüte">Muskatblüthe</cue:recipeIngredient>
 					 hinzugefügt, nebst dem gehackten 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und dem zu Schaum geschlagenen Weißen. Hiervon werden kleine 
 					<cue:recipeIngredient>Klöße</cue:recipeIngredient>
 					 aufgerollt, dieselben in 
@@ -21011,7 +21107,9 @@
 					<cue:recipeIngredient ref="#Sahne">Sahne</cue:recipeIngredient>
 					, dazu 2 ganze 
 					<cue:recipeIngredient quantity="2" ref="#Ei">Eier</cue:recipeIngredient>
-					 und Muskatnuß, gibt dann nach und nach unter fortwährendem Rühren 6 fein gestoßene 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, gibt dann nach und nach unter fortwährendem Rühren 6 fein gestoßene 
 					<cue:recipeIngredient quantity="6">Kaffeebrödchen</cue:recipeIngredient>
 					, gleich 4 gehäufter Eßlöffel voll 
 					<cue:recipeIngredient quantity="4" ref="#Zwieback" unit="EL">Zwieback</cue:recipeIngredient>
@@ -23196,7 +23294,7 @@
 					 angerührt und die 
 					<cue:recipeIngredient>Kraftsauce</cue:recipeIngredient>
 					 kochend dazu gegeben, die alsdann über das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 geschüttet wird. Dann wird 
 					<cue:recipeIngredient>Kopsalat</cue:recipeIngredient>
 					 in 4 Theile geschnitten, oder Endivien, aus denen der Grat geschnitten, mit folgender 
@@ -23218,9 +23316,9 @@
 					, die 
 					<cue:recipeIngredient>Kraftsauce</cue:recipeIngredient>
 					, welche das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 nicht aufgenommen, sondern sich in der Schüssel gesenkt hat. Mit diesem Salat wird das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 sternförmig in eine feine Schüssel gelegt.
 				</p>
 				<p>
@@ -23525,7 +23623,7 @@
 					, eben so viel saure 
 					<cue:recipeIngredient>Aepfel</cue:recipeIngredient>
 					 und 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, Alles in feine Scheiben geschnitten, mit 
 					<cue:recipeIngredient ref="#Zwiebel" unit="Scheibe">Zwiebeln</cue:recipeIngredient>
 					, 
@@ -23822,7 +23920,7 @@
 				</p>
 				<p>
 					 Es wird kaltes 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient>Häring</cue:recipeIngredient>
 					 dazugegeben.
@@ -24280,7 +24378,7 @@
 					 Zu 
 					<cue:recipeIngredient>Fischen</cue:recipeIngredient>
 					 und 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					.
 				</p>
 			</cue:recipe>
@@ -24415,7 +24513,9 @@
 					<cue:recipeIngredient quantity="4" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					, ein Eßlöffel 
 					<cue:recipeIngredient quantity="1" ref="#Mehl" unit="EL">Mehl</cue:recipeIngredient>
-					, Muskatnuß, 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, eine Tasse voll 
 					<cue:recipeIngredient quantity="1" ref="#Krebsbutter" unit="Tasse">Krebsbutter</cue:recipeIngredient>
@@ -24603,7 +24703,9 @@
 					<cue:recipeIngredient quantity="0.25" ref="#Sahne" unit="Maß">Sahne</cue:recipeIngredient>
 					 angerührt, ein sehr reichlicher Stich frischer 
 					<cue:recipeIngredient quantity="1" ref="#Butter" unit="Stich">Butter</cue:recipeIngredient>
-					, Muskatnuß und so viel 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und so viel 
 					<cue:recipeIngredient ref="#Essig">Essig</cue:recipeIngredient>
 					 dazu gegeben, daß die 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
@@ -24644,7 +24746,7 @@
 					 
 					<cue:recipeIngredient>Senf-Sauce</cue:recipeIngredient>
 					 zu 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					.
 				</head>
 				<p>
@@ -24801,7 +24903,7 @@
 					 
 					<cue:recipeIngredient>Zwiebel-Sauce</cue:recipeIngredient>
 					 zu jedem gekochten 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 passend.
 				</head>
 				<p>
@@ -24829,7 +24931,7 @@
 					 Diese 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
 					 paßt zu allem gekochten 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					.
 				</p>
 			</cue:recipe>
@@ -24845,7 +24947,9 @@
 					<cue:recipeIngredient quantity="4" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 werden mit Wasser und 2 Theelöffel voll feinem 
 					<cue:recipeIngredient quantity="2" ref="#Mehl">Mehl</cue:recipeIngredient>
-					 glatt gerührt, dies mit Wasser und Muskatnuß unter beständigem Rühren durchgekocht, dann ¼ Pfund 
+					 glatt gerührt, dies mit Wasser und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 unter beständigem Rühren durchgekocht, dann ¼ Pfund 
 					<cue:recipeIngredient quantity="0.25" ref="#Butter" unit="Pfund">Butter</cue:recipeIngredient>
 					 und etwas 
 					<cue:recipeIngredient quantity="etwas" ref="#Essig">Essig</cue:recipeIngredient>
@@ -24946,7 +25050,9 @@
 					<cue:recipeIngredient>Spargelbrühe</cue:recipeIngredient>
 					, einen guten Stich frischer 
 					<cue:recipeIngredient quantity="1" ref="#Butter" unit="Stich">Butter</cue:recipeIngredient>
-					, Muskatnuß, 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Essig">Essig</cue:recipeIngredient>
@@ -24982,7 +25088,9 @@
 					<cue:recipeIngredient>Bouillon</cue:recipeIngredient>
 					, je nachdem man die 
 					<cue:recipeIngredient>Sauce</cue:recipeIngredient>
-					 liebt, Muskatnuß und 
+					 liebt, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 hinzu und rührt sie mit 2—3 
 					<cue:recipeIngredient atLeast="2" atMost="3" ref="#HühnereiEigelb">Eidottern</cue:recipeIngredient>
@@ -25550,7 +25658,7 @@
 				</p>
 				<p>
 					 Zu kaltem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 passend. Dieser 
 					<cue:recipeIngredient ref="#Essig">Essig</cue:recipeIngredient>
 					 läßt sich, in Flaschen verkorkt, lange aufbewahren.
@@ -25574,7 +25682,9 @@
 					<cue:recipeIngredient quantity="etwas" ref="#Salz">Salz</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Pfeffer #spanischer_Pfeffer">Pfeffer</cue:recipeIngredient>
-					 und Muskatnuß dazu.
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 dazu.
 				</p>
 				<p>
 					 Diese 
@@ -26650,7 +26760,9 @@
 					<cue:recipeIngredient quantity="1" ref="#Stärke" unit="Pfund">Stärke</cue:recipeIngredient>
 					, 1 Pfund 
 					<cue:recipeIngredient quantity="1" ref="#Zucker" unit="Pfund">Zucker</cue:recipeIngredient>
-					, eine Muskatnuß, 1 Pfund 
+					, eine 
+					<cue:recipeIngredient quantity="1">Muskatnuß</cue:recipeIngredient>
+					, 1 Pfund 
 					<cue:recipeIngredient quantity="1" ref="#Rosinen" unit="Pfund">Korinthen</cue:recipeIngredient>
 					, 1 Weinglas 
 					<cue:recipeIngredient quantity="1" ref="#Arrak">Arrac</cue:recipeIngredient>
@@ -26800,7 +26912,9 @@
 					<cue:recipeIngredient quantity="1" ref="#Zitrone">Zitrone</cue:recipeIngredient>
 					, ½ Loth 
 					<cue:recipeIngredient quantity="0.5" ref="#Zimt" unit="Loth">Zimmet</cue:recipeIngredient>
-					, einer Muskatnuß und einem Pfund mit 
+					, einer 
+					<cue:recipeIngredient quantity="1">Muskatnuß</cue:recipeIngredient>
+					 und einem Pfund mit 
 					<cue:recipeIngredient quantity="1" ref="#Eiweiß" unit="Pfund">Eiweiß</cue:recipeIngredient>
 					 feingestoßener 
 					<cue:recipeIngredient>Mandeln</cue:recipeIngredient>
@@ -27498,7 +27612,9 @@
 					<cue:recipeIngredient quantity="0.75" ref="#Zucker" unit="Pfund">Zucker</cue:recipeIngredient>
 					, der abgeriebenen Schale einer 
 					<cue:recipeIngredient quantity="1" ref="#Zitrone">Zitrone</cue:recipeIngredient>
-					, ½ Muskatnuß eine Weile gerührt, dann gibt man unter fortwährendem Rühren 12 
+					, ½ 
+					<cue:recipeIngredient quantity="0.5">Muskatnuß</cue:recipeIngredient>
+					 eine Weile gerührt, dann gibt man unter fortwährendem Rühren 12 
 					<cue:recipeIngredient quantity="12" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					 eins nach dem andern langsam hinein, eine Messerspitze pulverisirtes 
 					<cue:recipeIngredient quantity="1" unit="Messerspitze">Hirschhornsalz</cue:recipeIngredient>
@@ -27681,7 +27797,9 @@
 					<cue:recipeIngredient quantity="1" ref="#Zitrone">Zitrone</cue:recipeIngredient>
 					, ein Loth 
 					<cue:recipeIngredient quantity="1" ref="#Zimt" unit="Loth">Zimmet</cue:recipeIngredient>
-					, eine Muskatnuß. Dies Alles ½ Stunde stark und gleichmäßig gerührt, ½ Pfund feines 
+					, eine 
+					<cue:recipeIngredient quantity="1">Muskatnuß</cue:recipeIngredient>
+					. Dies Alles ½ Stunde stark und gleichmäßig gerührt, ½ Pfund feines 
 					<cue:recipeIngredient quantity="0.5" ref="#Mehl" unit="Pfund">Mehl</cue:recipeIngredient>
 					 darunter gemischt und bei 2 Grad Hitze gebacken.
 				</p>
@@ -29971,7 +30089,9 @@
 					<cue:recipeIngredient quantity="5" ref="#Ei">Eier</cue:recipeIngredient>
 					, ½ Pfund 
 					<cue:recipeIngredient quantity="0.5" ref="#Zucker" unit="Pfund">Zucker</cue:recipeIngredient>
-					, eine halbe Muskatnuß, etwas 
+					, eine halbe 
+					<cue:recipeIngredient quantity="1">Muskatnuß</cue:recipeIngredient>
+					, etwas 
 					<cue:recipeIngredient quantity="etwas">Cardemum</cue:recipeIngredient>
 					 gut gerührt, ½ Pfund 
 					<cue:recipeIngredient quantity="0.5" ref="#Mehl" unit="Pfund">Mehl</cue:recipeIngredient>
@@ -30451,7 +30571,9 @@
 					<cue:recipeIngredient quantity="etwas" ref="#Gewürznelken">Nelken</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient>Blüthe</cue:recipeIngredient>
-					 oder Muskatnuß mit so viel 
+					 oder 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 mit so viel 
 					<cue:recipeIngredient ref="#Eiweiß">Eiweiß</cue:recipeIngredient>
 					, daß die Masse hält, vermischt, welches auf folgende Weise geschieht: man stößt die Masse mit einem hölzernen Löffel eine gute Weile hin und her, ohne sie zu rühren. Die 
 					<cue:recipeIngredient>Macronen</cue:recipeIngredient>
@@ -30512,7 +30634,9 @@
 					<cue:recipeIngredient quantity="4" unit="Loth">Mandeln</cue:recipeIngredient>
 					, ⅛ Loth 
 					<cue:recipeIngredient quantity="0.125" ref="#Gewürznelken" unit="Loth">Nelken</cue:recipeIngredient>
-					, ⅛ Loth Muskatnuß, 2 Loth 
+					, ⅛ Loth 
+					<cue:recipeIngredient quantity="0.125" unit="Loth">Muskatnuß</cue:recipeIngredient>
+					, 2 Loth 
 					<cue:recipeIngredient quantity="2" unit="Loth">Succade</cue:recipeIngredient>
 					, 2 Loth candirte 
 					<cue:recipeIngredient quantity="2" unit="Loth">Orangenschale</cue:recipeIngredient>
@@ -30529,8 +30653,10 @@
 					<cue:recipeIngredient quantity="1" ref="#Zucker" unit="Pfund">Zucker</cue:recipeIngredient>
 					 wird mit 10 
 					<cue:recipeIngredient quantity="10" ref="#HühnereiEigelb">Eidottern</cue:recipeIngredient>
-					 ¼ Stunde gerührt, 3 kleine geriebene Muskatnüsse, 
-					<cue:recipeIngredient quantity="3" ref="#Zimt">Zimmet</cue:recipeIngredient>
+					 ¼ Stunde gerührt, 3 kleine geriebene 
+					<cue:recipeIngredient quantity="3">Muskatnüsse</cue:recipeIngredient>
+					, 
+					<cue:recipeIngredient ref="#Zimt">Zimmet</cue:recipeIngredient>
 					 nach Belieben und 1 Pfund 
 					<cue:recipeIngredient quantity="1" ref="#Mehl" unit="Pfund">Mehl</cue:recipeIngredient>
 					 dazu gerührt. Wie in No. 156 gebacken.
@@ -30607,7 +30733,9 @@
 					<cue:recipeIngredient quantity="6" unit="Loth">Zitronat</cue:recipeIngredient>
 					, die Schale einer 
 					<cue:recipeIngredient quantity="1" ref="#Zitrone">Zitrone</cue:recipeIngredient>
-					, 1 Muskatnuß, 1 kleines Kaffeelöffelchen gestoßener 
+					, 1 
+					<cue:recipeIngredient quantity="1">Muskatnuß</cue:recipeIngredient>
+					, 1 kleines Kaffeelöffelchen gestoßener 
 					<cue:recipeIngredient quantity="1" ref="#Gewürznelken">Nelken</cue:recipeIngredient>
 					, 1 Eßlöffel 
 					<cue:recipeIngredient quantity="1" ref="#Zimt" unit="EL">Zimmet</cue:recipeIngredient>
@@ -30907,7 +31035,9 @@
 					<cue:recipeIngredient quantity="0.75" unit="Pfund">Honig</cue:recipeIngredient>
 					 mit 1¼ Pfund braunem 
 					<cue:recipeIngredient quantity="1.25" unit="Pfund">Farinzucker</cue:recipeIngredient>
-					, schäumt ihn aus und gibt, wenn er abgekühlt ist, hinzu: 1 geriebene Muskatnuß, ¼ Loth 
+					, schäumt ihn aus und gibt, wenn er abgekühlt ist, hinzu: 1 geriebene 
+					<cue:recipeIngredient quantity="1">Muskatnuß</cue:recipeIngredient>
+					, ¼ Loth 
 					<cue:recipeIngredient quantity="0.25" ref="#Zimt" unit="Loth">Zimmet</cue:recipeIngredient>
 					, 4 Loth 
 					<cue:recipeIngredient quantity="4" unit="Loth">Orangenschale</cue:recipeIngredient>
@@ -35037,7 +35167,9 @@
 					<cue:recipeIngredient quantity="etwas">Thee</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Zimt">Zimmet</cue:recipeIngredient>
-					, Muskatnuß und einige 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und einige 
 					<cue:recipeIngredient quantity="einige" ref="#Gewürznelken">Nelken</cue:recipeIngredient>
 					 läßt man in ½ Maß kochendem Wasser ausziehen und preßt es aus, gibt hinzu ¾ Pfund 
 					<cue:recipeIngredient quantity="0.75" ref="#Zucker" unit="Pfund">Zucker</cue:recipeIngredient>
@@ -35075,7 +35207,9 @@
 					<cue:recipeIngredient quantity="2" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
 					, rührt sie mit geriebenem 
 					<cue:recipeIngredient ref="#Zucker">Zucker</cue:recipeIngredient>
-					 und Muskatnuß und dann den 
+					 und 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					 und dann den 
 					<cue:recipeIngredient ref="#Weißwein">Wein</cue:recipeIngredient>
 					 allgemach dazu.
 				</p>
@@ -35380,7 +35514,9 @@
 				<p>
 					 Vier 
 					<cue:recipeIngredient quantity="4" ref="#HühnereiEigelb">Eidotter</cue:recipeIngredient>
-					 und ½ geriebene Muskatnuß werden mit ½ Maß süßer 
+					 und ½ geriebene 
+					<cue:recipeIngredient quantity="0.5">Muskatnuß</cue:recipeIngredient>
+					 werden mit ½ Maß süßer 
 					<cue:recipeIngredient quantity="0.5" ref="#Sahne" unit="Maß">Sahne</cue:recipeIngredient>
 					 angerührt, dann wird ¼ Maß 
 					<cue:recipeIngredient quantity="0.25" ref="#Arrak" unit="Maß">Arrac</cue:recipeIngredient>
@@ -35874,9 +36010,9 @@
 					 Man schneidet gutes, mageres 
 					<cue:recipeIngredient>Schweinefleisch</cue:recipeIngredient>
 					 ohne Sehnen, auch fettes, in grobe Würfel, hackt jedes allein so fein, daß man keine Stückchen mehr fühlt. Beides zusammen gehackt ist nicht so gut, das Fett hängt sich zusammen und wird nicht so fein. Es müssen ungefähr 6 Theile 
-					<cue:recipeIngredient quantity="6" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="6" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und ein Theil Fett sein. Zu 12 Pfund von diesem gehackten 
-					<cue:recipeIngredient quantity="12" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="12" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					( der blutige Saft muß ja durchgemischt werden) nimmt man 12 Loth 
 					<cue:recipeIngredient quantity="12" ref="#Salz" unit="Loth">Salz</cue:recipeIngredient>
 					, 2 Loth gröblich gestoßenen, am besten weißen, oder 2 ½ Loth schwarzen 
@@ -35892,7 +36028,7 @@
 					, oder man löset auch wohl die Haut von dem 
 					<cue:recipeIngredient>Nierenfett</cue:recipeIngredient>
 					, schneidet solche in passende Stücke, näht sie zu und füllt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 hinein, drückt sie vorsichtig nach, damit sie nicht platzen, jedoch so fest als möglich werden und bindet sie zu. Je fester sie gefüllt und je dicker sie sind, desto besser erhalten sie sich. Es ist nöthig, um die in 
 					<cue:recipeIngredient>Fettdärme</cue:recipeIngredient>
 					 gefüllten Würste ein Kreuzband zu machen, da solche zuweilen am Bande abreißen. Darauf hängt man sie 10—14 Tage in einen schwachen mit Luft verbundenen Rauch, der von Wachholder ist der beste, und bewahrt sie dann an einem luftigen Orte. Man thut wohl, diese Wurst nicht zu frisch zu benutzen, indem sie nach Verlauf von 2 Monaten ungleich schmackhafter wird.
@@ -36007,7 +36143,7 @@
 					 Man stampft eine 
 					<cue:recipeIngredient quantity="1">Schweinsleber</cue:recipeIngredient>
 					 ganz fein, reibt sie durch ein Sieb, gibt einen guten Theil weich gekochtes, fein gehacktes 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und Fett hinzu, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					( doch nicht zu viel, weil man die 
@@ -36016,7 +36152,9 @@
 					<cue:recipeIngredient ref="#Gewürznelken">Nelken</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient>Nelkenpfeffer</cue:recipeIngredient>
-					, Muskatnuß, nebst in feine Würfel geschnittenem, rohem, in der Pfanne heiß gemachtem 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, nebst in feine Würfel geschnittenem, rohem, in der Pfanne heiß gemachtem 
 					<cue:recipeIngredient>Speck</cue:recipeIngredient>
 					. Dies Alles mischt man gut durcheinander, füllt es in dicke, glatte 
 					<cue:recipeIngredient>Schweinsdärme</cue:recipeIngredient>
@@ -36040,7 +36178,7 @@
 					 Auch zu diesen Würsten ist die 
 					<cue:recipeIngredient>Leber</cue:recipeIngredient>
 					 roh geklopft und durch ein Sieb gerührt der gekochten vorzuziehen. Man gibt hierzu fein gehacktes 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und Fett, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, 
@@ -36065,13 +36203,11 @@
 					 Will man außer der Schlachtzeit 
 					<cue:recipeIngredient>Leberwurst</cue:recipeIngredient>
 					 machen, so kann man beim Bestellen des 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisches</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisches</cue:recipeIngredient>
 					 sich nach folgendem Verhältniß richten: Auf eine 
 					<cue:recipeIngredient quantity="1">Schweinsleber</cue:recipeIngredient>
-					 3 Pfund gekochtes und gehacktes 
-					<cue:recipeIngredient quantity="3" unit="Pfund">Schweine-</cue:recipeIngredient>
-					 oder 
-					<cue:recipeIngredient ref="#Rindkochfleisch">Rindfleisch</cue:recipeIngredient>
+					 3 Pfund gekochtes und gehacktes Schweine- oder 
+					<cue:recipeIngredient quantity="3" ref="#Rindkochfleisch" unit="Pfund">Rindfleisch</cue:recipeIngredient>
 					, 2 Pfund halb gahr gekochten, in feine Würfel geschnittenen 
 					<cue:recipeIngredient quantity="2" unit="Pfund">Speck</cue:recipeIngredient>
 					, 3 Pfund 
@@ -36079,7 +36215,7 @@
 					 und so viel von der eingekochten 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					, worin das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 gekocht ist, als zum Zusammenhalten der Masse nöthig ist; 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, 
@@ -36093,9 +36229,7 @@
 				<p>
 					 Das 
 					<cue:recipeIngredient>Blut</cue:recipeIngredient>
-					 wird warm, so wie es vom 
-					<cue:recipeIngredient>Schweine</cue:recipeIngredient>
-					 kommt, mit einem kleinen Besen geschlagen, bis es ganz kalt ist, und durch ein Sieb gerührt, wodurch es flüssig bleibt. Dann gibt man zu diesem 
+					 wird warm, so wie es vom Schweine kommt, mit einem kleinen Besen geschlagen, bis es ganz kalt ist, und durch ein Sieb gerührt, wodurch es flüssig bleibt. Dann gibt man zu diesem 
 					<cue:recipeIngredient>Blut</cue:recipeIngredient>
 					 etwas kräftige, kochend heiße 
 					<cue:recipeIngredient quantity="etwas">Fleischbrühe</cue:recipeIngredient>
@@ -36136,7 +36270,9 @@
 					<cue:recipeIngredient ref="#WeißbrotToast">Weißbrod</cue:recipeIngredient>
 					 ohne Kruste mit kaltem Wasser ein, drückt es aus, gibt solches nebst einigen Eßlöffeln voll dicker saurer 
 					<cue:recipeIngredient quantity="einige" ref="#Sahne" unit="EL">Sahne</cue:recipeIngredient>
-					, Muskatnuß, 
+					, 
+					<cue:recipeIngredient>Muskatnuß</cue:recipeIngredient>
+					, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, eine Messerspitze 
 					<cue:recipeIngredient quantity="1" unit="Messerspitze">Nelkenpfeffer</cue:recipeIngredient>
@@ -36145,7 +36281,7 @@
 					 gebratene und durch ein Sieb gerührte 
 					<cue:recipeIngredient quantity="1" ref="#Zwiebel">Zwiebeln</cue:recipeIngredient>
 					 zu dem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, mischt Alles wohl unter einander, füllt es nicht zu fest in 
 					<cue:recipeIngredient>Därme</cue:recipeIngredient>
 					, kocht die Würste gahr und brät sie beim Gebrauch in 
@@ -36173,11 +36309,11 @@
 					<cue:recipeIngredient quantity="1">Blut</cue:recipeIngredient>
 					, die gekochten 
 					<cue:recipeIngredient>Zungen</cue:recipeIngredient>
-					 von zwei 
-					<cue:recipeIngredient quantity="2">Schweinen</cue:recipeIngredient>
-					, oder eine 
+					 von zwei Schweinen, oder eine 
 					<cue:recipeIngredient quantity="1">Kuhzunge</cue:recipeIngredient>
-					 in kleine Würfel geschnitten, füllt diese Masse, nachdem sie wohl durcheinander gerührt ist, nicht zu fest in den Schweinemagen, läßt denselben 2 Stunden langsam in etwas gesalzenem Wasser oder 
+					 in kleine Würfel geschnitten, füllt diese Masse, nachdem sie wohl durcheinander gerührt ist, nicht zu fest in den 
+					<cue:recipeIngredient>Schweinemagen</cue:recipeIngredient>
+					, läßt denselben 2 Stunden langsam in etwas gesalzenem Wasser oder 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 kochen, preßt ihn eine Nacht zwischen 2 Brettern und räuchert ihn 2—3 Wochen.
 				</p>
@@ -36228,7 +36364,7 @@
 				<head> Eine zweite Sorte Rindfleisch-Wurst.</head>
 				<p>
 					 Man verlängert das gehackte 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 mit 
 					<cue:recipeIngredient>Gerstengrütze</cue:recipeIngredient>
 					, die man vorher mit 
@@ -36243,7 +36379,7 @@
 				</p>
 				<p>
 					 Oder man füllt zu dem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 einige Löffel 
 					<cue:recipeIngredient quantity="einige" unit="EL">Fleischbrühe</cue:recipeIngredient>
 					 nebst Fett, gibt die 
@@ -36256,7 +36392,7 @@
 					 Oder dies und gibt es nebst 
 					<cue:recipeIngredient ref="#braunes_Gewürz">Gewürzen</cue:recipeIngredient>
 					 zum 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					.
 				</p>
 			</cue:recipe>
@@ -36313,7 +36449,7 @@
 					 heraus, hackt es ganz fein und schüttet die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 durch ein Sieb zu dem 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					. Dann läßt man solches kochen, würzt es mit 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, 
@@ -36345,7 +36481,7 @@
 					 und 
 					<cue:recipeIngredient ref="#Gewürznelken">Nelken</cue:recipeIngredient>
 					. Man kann zu 10 Pfund 
-					<cue:recipeIngredient quantity="10" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="10" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					 12 Loth 
 					<cue:recipeIngredient quantity="12" ref="#Salz" unit="Loth">Salz</cue:recipeIngredient>
 					, 1 ¼ Loth 
@@ -36360,9 +36496,9 @@
 					( 
 					<cue:recipeIngredient>Panze</cue:recipeIngredient>
 					) in große, länglich viereckige Stücke, legt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darauf und näht solche recht dicht zu, damit 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und 
 					<cue:recipeIngredient ref="#braunes_Gewürz">Gewürz</cue:recipeIngredient>
 					 nicht so sehr auskochen; doch dürfen sie nicht zu fest gefüllt sein, weil sie sonst platzen. Darauf bringt man die Rollen reichlich mit Wasser bedeckt und etwas 
@@ -36427,9 +36563,7 @@
 					<cue:recipeIngredient>Schnauze</cue:recipeIngredient>
 					, Pfoten und 
 					<cue:recipeIngredient ref="#Ohr">Ohren</cue:recipeIngredient>
-					 vom 
-					<cue:recipeIngredient>Schweine</cue:recipeIngredient>
-					 werden mit 1 ½ Pfund magerem 
+					 vom Schweine werden mit 1 ½ Pfund magerem 
 					<cue:recipeIngredient quantity="0.5" ref="#Rindkochfleisch" unit="Pfund">Rindfleisch</cue:recipeIngredient>
 					, 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
@@ -36442,7 +36576,7 @@
 					 und 
 					<cue:recipeIngredient>Nelkenpfeffer</cue:recipeIngredient>
 					 so weich gekocht, daß sich das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 von den 
 					<cue:recipeIngredient>Knochen</cue:recipeIngredient>
 					 trennt. Dann wird die 
@@ -36450,13 +36584,13 @@
 					 durch ein Haarsieb geschüttet, bis zum andern Tage hingesetzt, die 
 					<cue:recipeIngredient quantity="1">Knochen</cue:recipeIngredient>
 					 aus dem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 genommen, und wenn dasselbe ganz kalt geworden, in feine Streifchen geschnitten; doch bleibt das 
 					<cue:recipeIngredient ref="#Rindkochfleisch">Rindfleisch</cue:recipeIngredient>
 					 zurück. Am andern Tage schneidet man Fett und Bodensatz von dem 
 					<cue:recipeIngredient>Gelee</cue:recipeIngredient>
 					, setzt ihn mit dem geschnittenen 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 und einer in Scheiben geschnittenen 
 					<cue:recipeIngredient quantity="1" ref="#Zitrone" unit="Scheibe">Zitrone</cue:recipeIngredient>
 					 zu Feuer, läßt es ¼ Stunde kochen und füllt es in Geschirre oder Formen, die man vorher mit kaltem Wasser umgespült hat. Beim Gebrauch stürzt man die 
@@ -36543,11 +36677,11 @@
 					 und eine in Scheiben geschnittene 
 					<cue:recipeIngredient quantity="1" ref="#Zwiebel" unit="Scheibe">Zwiebel</cue:recipeIngredient>
 					 dazu gethan und das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 darin gahr gekocht. Solches wird von den 
 					<cue:recipeIngredient>Knochen</cue:recipeIngredient>
 					 gesucht, in längliche Stückchen geschnitten, in ein sauberes Küchentuch gelegt, in dünne Scheibchen geschnittene rothe Rüben abwechselnd mit dem 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 in die 
 					<cue:recipeIngredient>Schwarte</cue:recipeIngredient>
 					 gelegt, mit 
@@ -36563,7 +36697,7 @@
 					 Bodensatz und Fett abgeschnitten, wie 
 					<cue:recipeIngredient>Gelee</cue:recipeIngredient>
 					 geklärt und auf das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 geschüttet. Es wird umgestürzt zur Tafel gegeben.
 				</p>
 			</cue:recipe>
@@ -36577,9 +36711,7 @@
 				<p>
 					 Eine 
 					<cue:recipeIngredient quantity="1">Kuhzunge</cue:recipeIngredient>
-					 wird mit dem halben Kopf eines 
-					<cue:recipeIngredient quantity="1">Schweines</cue:recipeIngredient>
-					 und einigen 
+					 wird mit dem halben Kopf eines Schweines und einigen 
 					<cue:recipeIngredient quantity="einige">Schwarten</cue:recipeIngredient>
 					 gahr gekocht, die 
 					<cue:recipeIngredient>Schwarte</cue:recipeIngredient>
@@ -36590,7 +36722,7 @@
 					, legt die 
 					<cue:recipeIngredient>Schwarte</cue:recipeIngredient>
 					 darauf und füllt dieselbe mit dem geschnittenen 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, das man lagenweise mit reichlich 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					, gestoßenen 
@@ -36602,7 +36734,7 @@
 					 und fein geschnittener 
 					<cue:recipeIngredient ref="#Zitronenschale">Zitronenschale</cue:recipeIngredient>
 					 würzt. Ist dies geschehen, legt man das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 mit 
 					<cue:recipeIngredient>Schwarten</cue:recipeIngredient>
 					 zu, nimmt das Tuch fest zusammen und bindet einen Bindfaden darum, legt den 
@@ -36637,7 +36769,7 @@
 					 gahr und lös’t die 
 					<cue:recipeIngredient>Schwarte</cue:recipeIngredient>
 					 ab. Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird gehackt und mit ¾ Loth 
 					<cue:recipeIngredient quantity="0.75" ref="#Pfeffer #spanischer_Pfeffer" unit="Loth">Pfeffer</cue:recipeIngredient>
 					, ¾ Loth 
@@ -36647,7 +36779,7 @@
 					, etwa einer Hand voll, vermischt. Dann werden 
 					<cue:recipeIngredient>Schwarten</cue:recipeIngredient>
 					 in ein Küchentuch gelegt, das 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 hinein und weiter nach vorhergehender Angabe verfahren.
 				</p>
 			</cue:recipe>
@@ -36682,7 +36814,7 @@
 					, 
 					<cue:recipeIngredient>Lorberblätter</cue:recipeIngredient>
 					 hinzu und läßt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 gahr, aber nicht zu weich kochen. Dann nimmt man solches heraus, schüttet die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 durch ein Sieb, macht in einem eisernen Topf 
@@ -36698,7 +36830,7 @@
 					 dazu, doch nur so viel, daß der 
 					<cue:recipeIngredient ref="#Essig">Essig</cue:recipeIngredient>
 					 gemildert wird, läßt das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 noch gut darin durchkochen und füllt es in einen steinernen Topf.
 				</p>
 				<p>
@@ -36728,7 +36860,7 @@
 				</p>
 				<p>
 					 Die Fettdecke erhält das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 lange frisch und läßt auch nicht so viel 
 					<cue:recipeIngredient>Säure</cue:recipeIngredient>
 					 eindringen.
@@ -36770,16 +36902,16 @@
 					 zum Kochen der Gemüse gebraucht werden kann und schüttet die 
 					<cue:recipeIngredient>Brühe</cue:recipeIngredient>
 					 über das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, welches völlig damit bedeckt sein muß. Wenn solches ganz kalt geworden ist, schmilzt man es mit gutem 
 					<cue:recipeIngredient>Rinderfett</cue:recipeIngredient>
 					 einen Zoll hoch zu. Beim Herausnehmen eines jeden Stückes muß das Fett geschmolzen und das 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wieder damit bedeckt werden.
 				</p>
 				<p>
 					 Beim Gebrauch wird das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wie anderer 
 					<cue:recipeIngredient>Sauerbraten</cue:recipeIngredient>
 					 zubereitet, nur gibt man, nachdem sie gelb gebraten sind, einige Löffelchen von der 
@@ -36834,12 +36966,12 @@
 			<cue:recipe rcp-id="V-26" type="Wurstmachen,_Einpöckeln_und_Räuchern_des_Fleisches." xmlns:cue="http://cueML/ns">
 				<head>
 					 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 einzupöckeln, welches geräuchert werden soll.
 				</head>
 				<p>
 					 Auf 100 Pfund 
-					<cue:recipeIngredient quantity="100" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="100" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					, es sei 
 					<cue:recipeIngredient ref="#Rindkochfleisch">Rindfleisch</cue:recipeIngredient>
 					 oder 
@@ -36857,19 +36989,19 @@
 					 durcheinander gemischt, jedes einzelne Stück damit recht stark eingerieben und so ins Faß gepackt, daß alle Stücke fest ineinander schließen, wobei die Lücken mit kleinen 
 					<cue:recipeIngredient>Knochen</cue:recipeIngredient>
 					 oder Stückchen 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 ausgefüllt werden. Dann wird 
 					<cue:recipeIngredient ref="#Salz">Salz</cue:recipeIngredient>
 					 darüber gestreut und so lagenweise fortgefahren. Von diesem festen Zusammenpacken hängt viel der reine Geschmack des 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisches</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisches</cue:recipeIngredient>
 					 ab. Nach 14 Tagen wird es aus der 
 					<cue:recipeIngredient quantity="14">Pöckel</cue:recipeIngredient>
 					 genommen und zum Räuchern an einem luftigen Ort aufgehangen und am besten mit Wachholder geräuchert, wozu man auf folgende Weise leicht eine Einrichtung machen kann: es wird nämlich da, wo geräuchert werden soll, ein alter Ofen ohne Deckel und Röhre hingestellt, mit einigen 
 					<cue:recipeIngredient quantity="einige">Wachholderzweigen</cue:recipeIngredient>
 					 gefüllt, die angesteckt werden. Dies wird täglich wiederholt, während auch dem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 durch Oeffnen des Fensters zuweilen Luft gegeben werden muß, weil nicht Rauch allein, sondern Rauch mit Luft verbunden dem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 einen guten Geschmack gibt.
 				</p>
 			</cue:recipe>
@@ -36886,7 +37018,7 @@
 				</head>
 				<p>
 					 Hierzu nimmt man am besten ein Nagelstück von einem gut gemästeten Ochsen, salzt es nicht zu stark ein, weil dies das 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 überhaupt zähe macht, gibt auch nach Belieben sehr wenig 
 					<cue:recipeIngredient>Salpeter</cue:recipeIngredient>
 					 hinzu und läßt es nach Verlauf von 14 Tagen langsam mit Wachholder räuchern.
@@ -36904,20 +37036,20 @@
 					 Dazu werden Stücke genommen, die nicht viel 
 					<cue:recipeIngredient>Knochen</cue:recipeIngredient>
 					 haben. Zu 100 Pfund 
-					<cue:recipeIngredient quantity="100" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="100" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					 gehören 8 Pfund 
 					<cue:recipeIngredient quantity="8" ref="#Salz" unit="Pfund">Salz</cue:recipeIngredient>
 					 und für 6 Pfennige 
 					<cue:recipeIngredient quantity="6" unit="Pfennig">Salzpeter</cue:recipeIngredient>
 					. Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 wird damit recht stark eingerieben und so fest in halbe Ankerfässer( ⅛ Ohm) gepackt, daß bis oben hin keine Zwischenräume zu sehen sind. Dann werden die Fässer zugeküfert, in den Keller gestellt und alle 8 Tage herumgesetzt. Nachdem ein Faß angebrochen ist, muß immer das oberste 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 genommen, das Faß mit einer Schieferscheibe belegt und mit Gewicht beschwert werden.
 				</p>
 				<p>
 					 Anmerk. Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 erhält sich auf diese Weise von einem Jahr in’s andere.
 				</p>
 			</cue:recipe>
@@ -36926,7 +37058,7 @@
 				<head> Eine gute Fleischpöckel.</head>
 				<p>
 					 Zu 100 Pfund 
-					<cue:recipeIngredient quantity="100" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="100" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					, es sei 
 					<cue:recipeIngredient ref="#Rindkochfleisch">Rindfleisch</cue:recipeIngredient>
 					 oder 
@@ -36938,7 +37070,7 @@
 					, 6 Loth 
 					<cue:recipeIngredient quantity="6" unit="Loth">Salpeter</cue:recipeIngredient>
 					 und 14 Maß Wasser zusammen gekocht und, ganz kalt geworden, auf’s 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 geschüttet.
 				</p>
 			</cue:recipe>
@@ -36949,7 +37081,7 @@
 					 Am besten eignet sich dazu ein gutes 
 					<cue:recipeIngredient quantity="1">Schwanzstück</cue:recipeIngredient>
 					. Man nehme zu 7 Pfund 
-					<cue:recipeIngredient quantity="7" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="7" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch" unit="Pfund">Fleisch</cue:recipeIngredient>
 					 1 ¾ Maß Wasser, ½ Pfund 
 					<cue:recipeIngredient quantity="0.5" ref="#Salz" unit="Pfund">Salz</cue:recipeIngredient>
 					, 2 Loth 
@@ -36959,12 +37091,12 @@
 					 und 2 Eßlöffel 
 					<cue:recipeIngredient quantity="2" unit="EL">Syrup</cue:recipeIngredient>
 					. Dies Alles wird zusammen ausgeschäumt und kalt über das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 geschüttet, welches ungefähr 8—9 Tage darin liegen muß.
 				</p>
 				<p>
 					 Beim Kochen wird das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					, damit der Saft nicht herauslaufe, mit kochendem Wasser zu Feuer gebracht.
 				</p>
 				<p>
@@ -36982,11 +37114,11 @@
 				</head>
 				<p>
 					 Zu einem Stück 
-					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient quantity="1" ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 von 12 Pfund wirft man 2 Hand voll 
 					<cue:recipeIngredient quantity="2" ref="#Salz" unit="Pfund">Salz</cue:recipeIngredient>
 					 in einen Kessel kochendes Wasser, läßt es schmelzen und das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 eben darin aufkremmeln( kochen darf es nicht), und dann kalt werden. Nachdem reibt man es mit 12 Loth 
 					<cue:recipeIngredient quantity="12" ref="#Salz" unit="Loth">Salz</cue:recipeIngredient>
 					 und 2 Loth gestoßenen 
@@ -36995,7 +37127,7 @@
 				</p>
 				<p>
 					 Anmerk. Das 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 hält sich gut und ist von angenehmem Geschmack.
 				</p>
 			</cue:recipe>
@@ -37003,12 +37135,12 @@
 			<cue:recipe rcp-id="V-32" type="Wurstmachen,_Einpöckeln_und_Räuchern_des_Fleisches." xmlns:cue="http://cueML/ns">
 				<head>
 					 Dem 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 ohne Rauch einen Rauchgeschmack zu geben.
 				</head>
 				<p>
 					 Die Stücke 
-					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Rindkochfleisch #Hammelfleisch">Fleisch</cue:recipeIngredient>
+					<cue:recipeIngredient ref="#Kalbkochfleisch #Hasenfleisch #Hammelfleisch #Rindkochfleisch">Fleisch</cue:recipeIngredient>
 					 werden wie gewöhnlich eingesalzen, dann überall mit 
 					<cue:recipeIngredient>Holzessig</cue:recipeIngredient>
 					( eine Essenz, die einen Rauchgeschmack gibt) bepinselt, in der Luft angetrocknet, wieder bepinselt und so bis zu drei Malen. Darauf hängt man es an einen luftigen Ort auf.

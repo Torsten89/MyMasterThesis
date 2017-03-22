@@ -158,7 +158,7 @@
                     
                     
                     <h4><b>Design der dictionary-based Extraktion</b></h4>
-                    <p>Abb. 5 zeigt die aufs wesentliche reduzierten Bestandteile des Designs. Jedes Rezept wird zunächst in ein <b>PlainTextRecipe</b> umgewandelt, welches zu jedem Rezept die rcp-id, den Rezept-Typ, den Namen und eine Liste von Zubereitungs-Anweisungen speichert. Satzweise führt der <b>Extractor</b> dann mittels <b>dictBasedEnrichment</b> eine Extraktion der gesuchten Entities durch. Dazu werden zunächst mit der Hilfe von <b>TreeTagger</b> die Lemmata zu jedem Wort gebildet. Diese Lemmata werden dann durch den <b>IngredientExtractor</b>, <b>UnitExtractor</b> und <b>QuantityExtractor</b> getestet. Ist einer dieser Tests positiv, wird in der entsprechenden <b>WordProperty</b> im <b>properties</b>-dict das Ergebnis des Tests hinterlegt. Der <b>QuantityExtractor</b> besteht nur aus der Funktion <b>isQuantity</b>, welche ein Lemma bekommt und <i>True</i> bzw. <i>False</i> wieder gibt. Die Wörterbücher für den <b>IngredientExtractor</b> sowie den <b>UnitExtractor</b> werden mittels dem <b>XmlParser</b>, wie zuvor beschrieben, aus dem manuell mit cueML angereicherten Kochbuch extrahiert.
+                    <p>Abb. 5 zeigt die aufs wesentliche reduzierten Bestandteile des Designs. Jedes Rezept wird zunächst in ein <b>PlainTextRecipe</b> umgewandelt, welches zu jedem Rezept die rcp-id, den Rezept-Typ, den Namen und eine Liste von Zubereitungs-Anweisungen speichert. Satzweise führt der <b>Extractor</b> dann mittels <b>dictBasedEnrichment</b> eine Extraktion der gesuchten Entities durch. Dazu werden zunächst mit der Hilfe von <b>TreeTagger</b> die Lemmata zu jedem Wort gebildet. Diese Lemmata werden dann durch den <b>IngredientExtractor</b>, <b>UnitExtractor</b> und <b>QuantityExtractor</b> getestet. Ist einer dieser Tests positiv, wird in der entsprechenden <b>WordProperty</b> im <b>properties</b>-dict das Ergebnis des Tests hinterlegt. Der <b>QuantityExtractor</b> besteht nur aus der Funktion <b>isQuantity</b>, welche ein Lemma bekommt und <i>True</i> bzw. <i>False</i> wiedergibt. Die Wörterbücher für den <b>IngredientExtractor</b> sowie den <b>UnitExtractor</b> werden mittels dem <b>XmlParser</b>, wie zuvor beschrieben, aus dem manuell mit cueML angereicherten Kochbuch extrahiert.
                     </p>
                     
                     <p>Das Ergebnis der Extraktion des Satzes <i>„Schütte 1 Maß Wein hinzu.“</i> mit dem Zutaten-Wörterbuch aus Abb. 4b wäre zum Beispiel die Liste folgender WordProperties: <br/>
@@ -180,7 +180,7 @@
                         </figure>
                     </p>
                     
-                    <p>Nach einer genaueren Analyse der Evaluation mit dem sauberen Design haben wir des Weiteren noch folgende Punkte verbessert:</p>
+                    <p>Das saubere Design erleichtert auch eine genaueren Analyse der vorherigen Evaluation der Version 0.1. Aufbauend auf dieser Analyse haben wir noch folgende Punkte verbessert:</p>
                     <ul>
                         <li>Um zu vermeiden, dass beispielsweise <i>abgebrüht</i> als Zutat extrahiert wird, da es das Teilwort <i>brühe</i> enthält, schlägt der Test mit dem IngredientExtractor nun bei klein geschrieben Wörtern immer fehl.
                         </li>
@@ -188,7 +188,7 @@
                         </li>
                         <li>TreeTagger findet manchmal mehrere Lemmata durch <i>|</i> getrennt. Beispielsweise kann das Lemma zu <i>„Linsen“</i> <i>„Linse|Linsen“</i> sein, was nicht in unserem Zutaten-Wörterbuch zu finden ist. Ist dies der Fall, nehmen wir daher nur das erste Lemma (Linse).
                         </li>
-                        <li>Manchmal schreibt Frau Davidis eine Zutat als zusammengesetztes Wort (z.&thinsp;B. <i>Petersilien-Wurzel</i>) und manchmal nicht (<i>Petersilienwurzel</i>). Man könnte die zusammengesetzte Schreibweise ins Wörterbuch als alternative Schreibweise hinzufügen. Wir fangen das hingegen im Programm ab. Wenn das Lemma zu einem Wort nicht gefunden werden konnte, eliminieren wir den Bindestrich aus dem Wort, und versuchen dann erneut ein Lemma zu finden.
+                        <li>Manchmal schreibt Frau Davidis eine Zutat als zusammengesetztes Wort (z.&thinsp;B. <i>Petersilien-Wurzel</i>) und manchmal nicht (<i>Petersilienwurzel</i>). Man könnte die zusammengesetzte Schreibweise ins Wörterbuch als alternative Schreibweise hinzufügen. Wir berücksichtigen das hingegen im Programm. Wenn das Lemma zu einem Wort nicht gefunden werden konnte, eliminieren wir den Bindestrich aus dem Wort, und versuchen dann erneut ein Lemma zu finden.
                         </li>
                         <li>Die Liste der typischen Endungen von abgekürzten Wörtern wurde um <i>klöße</i>, <i>kloß</i>, <i>brot</i> und <i>brod</i> erweitert.
                         </li>
@@ -198,10 +198,10 @@
                     
                     
                     <h4><b>Rule-based Weiterverarbeitung</b></h4>
-                    <p>In das saubere Design aus Abb. 5 fügen wir nun eine rule-based Weiterverarbeitung ein. Diese ist in Abb. 6 zu sehen. Nachdem die <i>WordProperties</i> extrahiert sind, wird auf diese eine Menge von Regeln angewendet. Eine Regel kriegt die Liste der WordProperties eines Satzes, sowie das Rezept, zu dem der Satz gehört und gibt eine Liste mit geänderten WordProperties zurück. Beispiele für solche Regeln sind:
+                    <p>In das saubere Design aus Abb. 5 fügen wir nun eine rule-based Weiterverarbeitung ein. Diese ist in Abb. 6 zu sehen. Nachdem die <i>WordProperties</i> extrahiert sind, wird auf diese eine Menge von Regeln angewendet. Eine Regel bekommt als Parameter die Liste der WordProperties eines Satzes, sowie das Rezept, zu dem der Satz gehört und gibt eine Liste mit geänderten WordProperties zurück. Beispiele für solche Regeln sind:
                     </p>
                     <ul class="myIndentLis">
-                        <li><b>findQuantityAndUnitOfIngredientRule:</b> Die Regel versucht zu jeder WordProperty (wp), die als Zutat ausgezeichnet ist (<i>key "ingredient" &isin; wp.properties</i>), eine Mengenangabe und Einheit zu finden. Sie sucht dafür den nächsten Nachbarn von links (wp'), dessen WordProperty als Mengenangabe bzw. Einheit ausgezeichnet ist und fügt diese der wp hinzu (<i>wp.properties["quantity"] = wp'.properties["quantity"]</i>). Um zu verhindern, dass beispielsweise bei <i>„Man nehme 2 EL Mehl und Butter“</i> 2 EL Butter extrahiert wird, bricht diese Regel ab, wenn vor der Mengenangabe bzw. Einheit eine andere Entity kommt.
+                        <li><b>findQuantityAndUnitOfIngredientRule:</b> Die Regel versucht zu jeder WordProperty (wp), die als Zutat ausgezeichnet ist (<i>key "ingredient" &isin; wp.properties</i>), eine Mengenangabe und Einheit zu finden. Sie sucht dafür den nächsten Nachbarn von links (wp'), dessen WordProperty als Mengenangabe bzw. Einheit ausgezeichnet ist und fügt diese der wp hinzu (<i>wp.properties["quantity"] = wp'.properties["quantity"]</i>). Um zu verhindern, dass beispielsweise bei <i>„Man nehme 2 EL Mehl und Butter“</i> 2 EL Butter extrahiert wird, bricht diese Regel ab, wenn vor der Mengenangabe bzw. Einheit eine andere Entity wie eine andere Zutat oder Kochzeit gefunden wird.
                         </li>
                         <li><b>dissolveAmbiguityWein:</b> Wenn das Lemma zu einer Zutat <i>wein</i> enthält, sucht diese Regel nach den Wörtern „rot“ oder „weiß“. Wird eins von beiden gefunden, werden aus der Liste der möglichen xml:ids alle herausgefiltert, die dieses Wort nicht enthalten.
                         </li>
@@ -211,7 +211,7 @@
                         </li>
                         <li><b>optionalRule:</b> Sind nach einer Zutat die Lemmata „können“ und „wegbleiben“ im Satz enthalten, so wird diese Zutat als optional ausgezeichnet (<i>wp.properties["optional"] = True </i>).
                         </li>
-                        <li><b>altGrpRule:</b> Folgt auf eine Zutat das Lemma „statt“, werden alle Folgende, durch „und“ separierten Zutaten, als Alternative zu dieser ausgezeichnet.
+                        <li><b>altGrpRule:</b> Folgt auf eine Zutat das Lemma „statt“, werden alle Folgenden durch „und“ separierten Zutaten als Alternative zu der ersten Zutat ausgezeichnet.
                         </li>
                     </ul>
                     
@@ -224,19 +224,21 @@
                     
                     
                     
-                    <h4><b>Automatisches auszeichnen mit cueML</b></h4>
+                    <h4><b>Automatisches Auszeichnen mit cueML</b></h4>
                     
-                    <p>Nachdem alle Entities mittels den WordProperties extrahiert wurden, müssen diese noch, mit dem <i>cueML</i>-Vokabular ausgezeichnet, zurück geschrieben werden. Aufgrund unserer guten Kapselung der Entities in den WordProperties ist dies trivial. Jede WordProperty hat eine <i>toXml</i>-Methode. Ist ein Wort keine Zutat, wird von der Methode die Wort-Identität zurück gegeben. Ansonsten wird die Word-Identität in ein <i>recipeIngredient</i>-Element mit den entsprechenden Attributen eingeschlossen.
+                    <p>Nachdem alle Entities mittels den WordProperties extrahiert wurden, müssen diese noch, mit dem <i>cueML</i>-Vokabular ausgezeichnet, zurückgeschrieben werden. Aufgrund unserer guten Kapselung der Entities in den WordProperties ist dies trivial. Jede WordProperty hat eine <i>toXml</i>-Methode. Ist ein Wort keine Zutat, wird von der Methode die Wort-Identität zurückgegeben. Ansonsten wird die Word-Identität in ein <i>recipeIngredient</i>-Element mit den entsprechenden Attributen eingeschlossen.
                     </p>
                     
                     <h4><b>Transformation in HTML</b></h4>
                     
-                    <p>Das letztendliche Ziel der Digitalisierung ist natürlich, das Kochbuch im Internet jedem Zugänglich zu machen. Dementsprechend müssen die mit cueML ausgezeichneten Rezepte noch in eine Webseite eingebettet werden. Da cueML XML ist, kann dies durch eine XSLT-Transformation geschehen. Im Rahmen meiner SHK-Tätigkeit habe ich dies für eine experimentelle cueML-Version umgesetzt. Da sich die aktuelle cueML-Version sehr von der Experimentellen unterscheidet, muss die Transformation angepasst werden. Aus Experimentierfreude habe ich nun <a href="Rezepte.html" title="Zu den in HTML transofrmierten Rezepten">die Rezepte</a> mittels <i>cueML2Json.py</i> in ein JSON-Objekt transformiert und aus diesem mittels JavaScript die Webseiten generiert. Dies macht die Verwaltung des HTML-Inhaltsverzeichnisses einfacher. 
+                    <p>Durch eine Transformation der mit cueML ausgezeichneten Rezepten in HTML kann das digitalisierte Kochbuch nun übers Internet jedem zugänglich gemacht werden.
                     </p>
                     
-                    <p>Während meiner SHK-Tätigkeit hatte ich mehr Zeit für die XSLT-Transformation als für die mittels <i>cueML2Json.py</i>. Bei den Rezepten, die mit dem experimentellen cueML ausgezeichneten wurden, sind auch mehr Entities wie Verweise innerhalb von Rezepten ausgezeichnet. Daher ist diese Webseite schicker zum Herumklicken. Als Inspiration für folgende Arbeiten sei <a href="https://git.informatik.uni-kiel.de/nl/Culinary_Analysis/tree/master/Webseite/html">hier darauf verlinkt</a>.
+                    <p>Das Python-Script <i>cueML2Json.py</i> parst die cueML Rezepte in ein <i>JSON-Objekt</i>, welches von einer Webseite ausgelesen werden kann. In der oberen Navigationsleitste im Menüpunkt <a href="Rezepte.html" title="Zu den in HTML transofrmierten Rezepten">Rezepte</a> sind aufbauend auf dem von cueML2Json.py erstellten JSON-Objekt die in HTML transformierten Rezepte von Frau Davidis  zu finden. Da unser Prototyp noch ausschließlich die Zutaten mit ihren Mengenangaben und Mengeneinheiten auszeichnet, kann die Transformation auch nur diese Entities berücksichtigen. Daher enthält die Webseite beispielsweise keine Verweise zwischen den Rezepten. 
                     </p>
                     
+                    <p>Eine andere Möglichkeit die mit cueML ausgezeichneten Rezepte in HTML zu transformieren ist mittels <i>XSLT</i>. Während meiner SHK-Tätigkeit habe ich die mit dem experimentellen cueML ausgezeichneten Rezepte mittels XSLT in HTML umgewandelt. Dies hat den Nachteil, dass die Erstellung der Navigationsbar für die Rezepte schwieriger ist, da nicht alle Rezepte in einem Objekt gekapselt sind. Da das Auszeichnen mit dem experimentelle cueML manuell erfoglte, wurden dort auch alle Entities wie beispielsweise Zubereitungszeiten oder Verweise auf andere Rezepte ausgezeichnet. Als Beispiel wie alle Entites von cueML in HTML dargestellt werden können, sei daher <a href="https://git.informatik.uni-kiel.de/nl/Culinary_Analysis/tree/master/Webseite/html">hier</a> auf die Transformation des experimentellen cueMLs mittels XSLT verlinkt. Da sich das experimentelle cueML sehr von der aktuelen Version unterschiedet, ist eine Anpassung des Scripts jedoch leider aufwendig.
+                    </p>
                     
                 </div>
                 
