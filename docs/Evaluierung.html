@@ -42,11 +42,11 @@
                 </div>
                 
                 <div class="col-md-10">
-                    <p>Auf dieser Seite werden die <a href="AutomatischesAnreichernCueML.html" title="Automatisches auszeichnen mit cueML">zuvor vorgestellten Prototypen</a> evaluiert. Beim CRF-based Prototyp wird erläutert, dass CRF für uns nicht umsetzbar ist. Die dictionary- and rule-based Prototypen werten wir mit den Metriken Recall und Precision aus, weswegen wir diese als Erstes einführen.
+                    <p>Auf dieser Seite werden die <a href="AutomatischesAnreichernCueML.html" title="Automatisches auszeichnen mit cueML">zuvor vorgestellten Prototypen</a> evaluiert. Als Metriken verwenden wir die Recall und die Precision, welche zuerst erläutert werden.
                     </p>
                     
                     <h2 id="Metrics" class="myAnchorWithFixedheader">Recall &amp; Precision</h2>
-                    <p>Wir definieren Recall und Precision wie in den Formeln (1) und (2) nach <span cite="TextMining" class="beforePunctuation"></span>. Der Recall berechnet somit, ein wie großer Anteil der relevanten Informationen gefunden wurde. Die Precision berechnet, ein wie großer Anteil der extrahiereten Informationen relevant ist. Je höher diese beiden Metriken sind, desto besser ist der evaluierte Algorithmus.
+                    <p>Wir definieren Recall und Precision wie in den Formeln (1) und (2) nach <span cite="TextMining" class="beforePunctuation"></span>. Der Recall berechnet somit, ein wie großer Anteil der relevanten Informationen gefunden wurde. Die Precision berechnet, ein wie großer Anteil der extrahierten Informationen relevant ist. Je höher diese beiden Metriken sind, desto besser ist der evaluierte Algorithmus.
                     </p>
                     
                     <div class="row">
@@ -54,7 +54,7 @@
                         <div class="col-md-6">\begin{equation} Precision = \frac{\#(retrieved \cap relevant)}{\#retrieved} \end{equation}</div>
                     </div>
                     
-                    <p>Beide Metriken sind nur zusammen aussagekräftig. Ein perfekter Recall-Wert von eins könnte ansonsten erreicht werden, in dem einfach alle Informationen als relevant extrahiert werden. Dies würde jedoch die Precision sehr wahrscheinlich ruinieren. Ein sehr guter Wert für die Precision könnte hingegen dadurch erreicht werden, dass nur eindeutige Informationen als relevant extrahiert werden. Darunter leidet jedoch wieder der Recall. Würden gar keine Informationen extrahiert, wäre die Precision nicht definiert, da dann durch null geteilt wird.
+                    <p>Beide Metriken sind nur zusammen aussagekräftig. Ein perfekter Recall-Wert von eins könnte ansonsten erreicht werden, indem einfach alle Informationen als relevant extrahiert werden. Dies würde jedoch die Precision verschlechtern, sofern nicht alle Informationen relevant sind, wovon auszugehen ist. Ein sehr guter Wert für die Precision könnte hingegen dadurch erreicht werden, dass nur eindeutig als relevant klassifizierbare Informationen extrahiert werden. Dies verschlechtert wiederum den Recall, weil dadurch meist viele relevante Informationen nicht mehr gefunden werden. Würden gar keine Informationen extrahiert, wäre die Precision nicht definiert, da dann durch null geteilt wird.
                     </p>
                     
                     <h2 id="CRFPrototyp" class="myAnchorWithFixedheader"><a href="AutomatischesAuszeichnenCueML.html##CRFPrototyp" title="Link zur Beschreibung des Prototypen">CRF-based Prototyp</a></h2>
@@ -64,10 +64,10 @@
                             <p>Antrainiert haben wir den CRF-based Prototypen mit <a href="images/AutomatischesAnreichrenCueML/Trainings-Rezepte.txt">diesen 9 Rezepten</a>. <a href="images/AutomatischesAnreichrenCueML/Test-Rezept.txt">Unser Test-Rezept</a> besteht aus 96 Wörtern. 83 der entsprechenden 96 Labels sind <i>O</i> für <i>others</i>.
                             </p>
                             
-                            <p>Tabelle 1 zeigt die Stellen, in denen sich die manuellen und die vom Prototypen extrahierten Labels unterscheiden. Die beiden Zutaten <i>Kartoffeln </i> und <i>Kartoffel-Klöße</i>, die nicht extrahiert wurden, sind auch nicht in den Trainings-Rezepten vorhanden. <i>Eine</i> und <i>einige</i> hingegen sind in den Trainingsdaten vorhanden. Sie sind mal als Mengenangabe gelabelt (z.&thinsp;B. in <i>eine geriebene gelbe Murzel</i>) und mal nicht (z.&thinsp;B. in <i>dies wird eine Weile gerührt</i>). Wenn dem CRF nur positive Gewichte erlaubt sind, orakelt er auch <i>Griesmehl</i> als <i>O</i>, obwohl Griesmehl in den Trainingsdaten nur einmal als <i>B-Ingredient</i> gelabelt vorkommt.
+                            <p>Tabelle 1 zeigt die Stellen, in denen sich die manuellen und die vom Prototypen extrahierten Labels unterscheiden. Die beiden Zutaten <i>Kartoffeln </i> und <i>Kartoffel-Klöße</i>, die nicht extrahiert wurden, sind auch nicht in den Trainings-Rezepten vorhanden. <i>Eine</i> und <i>einige</i> hingegen sind in den Trainingsdaten vorhanden. Sie sind mal als Mengenangabe gelabelt (z.&thinsp;B. in <i>eine geriebene gelbe Murzel</i>) und mal nicht (z.&thinsp;B. in <i>dies wird eine Weile gerührt</i>). Wenn dem CRF nur positive Gewichte erlaubt sind, orakelt er auch <i>Griesmehl</i> als <i>O</i>, obwohl Griesmehl in den Trainingsdaten genau einmal vorkommt und dort das Label <i>B-Ingredient</i> hat.
                             </p>
                             
-                            <p>Tabelle 2 zeigt die Precision und Recall von dem CRF mit ausschließlich positiven, wie auch mit negativen Gewichten. Alle extrahierten Entities sind korrekt. Allerdings wurden 5 bzw. 6 der 13 Entitites des Rezeptes nicht als solche sondern als <i>O</i> gelabelt.
+                            <p>Tabelle 2 zeigt die Precision und den Recall des CRF mit ausschließlich positiven, wie auch mit negativen Gewichten. Alle extrahierten Entities sind korrekt. Allerdings wurden 5 bzw. 6 der 13 Entitites des Rezeptes nicht erkannt sondern als <i>O</i> gelabelt.
                             </p>
                         </div>
 
@@ -139,7 +139,7 @@
                     </div>
                     
                     
-                    <p>Das Antrainieren mit 9 Rezepten, sowie das Auswerten anhand nur einem Rezept ist natürlich kein Maßstab für eine echte Evaluierung. Allerdings sind uns bereits an diesem simplen Prototypen viele Stolpersteine aufgefallen.
+                    <p>Das Antrainieren mit 9 Rezepten, sowie das Auswerten anhand nur einem Rezept ist natürlich kein Maßstab für eine echte Evaluierung. Allerdings sind uns bereits an dem simplen mit 9 Rezepten antrainierten Prototypen viele Stolpersteine aufgefallen.
                     </p>
                 
                     <div class="row">
@@ -149,15 +149,15 @@
                                 <img src="images/AutomatischesAnreichrenCueML/cueMLvonAusschnittCRFTrainingsdaten.png"/>
                             </figure>
                             
-                            <p>Abb. 1 zeigt den zu den gelabelten Trainingsdaten aus Abb. 2 entsprechenden mit cueML ausgezeichneten Text. Bereits in diesem kleinen Ausschnitt der Trainingsdaten lassen sich viele Stolpersteine finden:
+                            <p>Abb. 1 zeigt den mit cueML ausgezeichneten Text zu den gelabelten Trainingsdaten aus Abb. 2. Bereits in diesem kleinen Ausschnitt der Trainingsdaten lassen sich viele Stolpersteine finden:
                             </p>
                             
                             <ul>
-                                <li><i>„Ein bis zwei Eßlöffel“</i> sind in cueML eindeutig mit den Attributen <i>atLeast="1"</i> und <i>atMost="2"</i> abzubilden. <b>Ein eindeutiges Mapping zwischen cueML und den Labels aus Abb. 2 ist jedoch nicht trivial</b>. Aus (ein|B-Quantity) muss das Attribut <i>atLeast="1"</i> und aus (zwei|I-Quantity) das Attribut <i>atLeast="2"</i> abgeleitet werden. Alternativ hätte man auch folgende Labels überlegen können; <i>ein (B-atLeast) bis (O) zwei (B-atMost)</i> oder <i>ein (B-atLeast) bis (B-IndicatorForAtLeastAtMost) zwei (B-atMost).</i>
+                                <li><i>„Ein bis zwei Eßlöffel“</i> sind in cueML eindeutig mit den Attributen <i>atLeast="1"</i> und <i>atMost="2"</i> abzubilden. <b>Ein eindeutiges Mapping zwischen cueML und den Labels aus Abb. 2 ist jedoch nicht trivial</b>. Aus (ein|B-Quantity) muss das Attribut <i>atLeast="1"</i> und aus (zwei|I-Quantity) das Attribut <i>atMost="2"</i> abgeleitet werden. Alternativ hätte man auch folgende Labels überlegen können; <i>ein (B-atLeast) bis (O) zwei (B-atMost)</i> oder <i>ein (B-atLeast) bis (B-IndicatorForAtLeastAtMost) zwei (B-atMost).</i>
                                 </li>
-                                <li>Ungeachtet davon, welche Labels beispielsweise für <i>ein bis zwei</i> verwendet wurden, geht aus ihnen noch nicht hervor, dass sich diese Mengenangabe auf das <i>Mehl</i> bezieht. Wir stehen damit vor dem allgemeinen Problem, <b>dass mittels CRF zwar Entities extrahiert werden können, aber nicht Beziehungen zwischen diesen</b>. <span cite="CRFNYT"></span> hatte dieses Problem nicht. Wenn ein CRF-Orakel auf jede Zeile einer bestehenden Zutatenliste angewendet wird, ist klar, dass sich die extrahierte Mengenangabe auf die <b>eine</b> Zutat bezieht. Bei seinem Beispiel <i>„4 tablespoons melted nonhydrogenated margarine, melted coconut oil or canola oil“</i> stellt er selber fest, dass sein CRF dafür nicht gerüstet ist (<i>„This ingredient phrase contains multiple ingredient names, which is a situation that is not accounted for in our database schema. We need to rethink the way we label ingredient parts to account for examples like this.“</i> <span cite="CRFNYT" class="beforePunctuation"></span>).
+                                <li>Ungeachtet davon, welche Labels beispielsweise für <i>ein bis zwei</i> verwendet werden, geht aus ihnen noch nicht hervor, dass sich diese Mengenangabe auf das <i>Mehl</i> bezieht. Wir stehen damit vor dem allgemeinen Problem, <b>dass mittels CRF zwar Entities extrahiert werden können, aber nicht Beziehungen zwischen diesen</b>. <span cite="CRFNYT"></span> hatte dieses Problem nicht. Wenn ein CRF-Orakel auf jede Zeile einer bestehenden Zutatenliste angewendet wird, ist klar, dass sich die extrahierte Mengenangabe auf die <b>eine</b> Zutat bezieht. Bei seinem Beispiel <i>„4 tablespoons melted nonhydrogenated margarine, melted coconut oil or canola oil“</i> stellt er selber fest, dass sein CRF dafür nicht gerüstet ist (<i>„This ingredient phrase contains multiple ingredient names, which is a situation that is not accounted for in our database schema. We need to rethink the way we label ingredient parts to account for examples like this.“</i> <span cite="CRFNYT" class="beforePunctuation"></span>).
                                 </li>
-                                <li>Es ist schwierig aus dem cueML-Attribut <i>quantity="1"</i> abzuleiten, dass zu dem vorherigen Wort <i>eine</i> das Label <i>B-Quantity</i> gehört. Daher muss <b>das Labeln der Trainingsdaten manuell erledigt werden, obwohl es bereits mit cueML ausgezeichnete Rezepte gibt</b>. Aus den 10 verwendeten Rezepten ergeben sich mehr als 1.500 Zeilen, die gelabelt werden müssen. Wie <span cite="CRFNYT"></span> den CRF mit mehr als 130.000 Trainingsdaten anzutrainieren, ist somit ein nicht zu stemmender Aufwand. Dies gilt insbesondere, da nach dem ersten Punkt die zu verwendeten Labels nicht eindeutig sind. Dementsprechend müssen unterschiedliche Labels evaluiert werden und somit die Trainingsdaten sogar mehrmals zeitaufwendig mit unterschiedlichen Labels erstellt werden.
+                                <li>Es ist schwierig aus dem cueML-Attribut <i>quantity="1"</i> abzuleiten, dass zu dem vorherigen Wort <i>eine</i> das Label <i>B-Quantity</i> gehört. Daher muss <b>das Labeln der Trainingsdaten manuell erledigt werden, obwohl es bereits mit cueML ausgezeichnete Rezepte gibt</b>. Aus den 10 verwendeten Rezepten ergeben sich mehr als 1.500 Zeilen, die gelabelt werden müssen. Wie <span cite="CRFNYT"></span> den CRF mit mehr als 130.000 Trainingsdaten anzutrainieren, ist somit ein nicht zu stemmender Aufwand. Dies gilt insbesondere, da nach dem ersten Punkt die zu verwendeten Labels nicht eindeutig sind. Dementsprechend müssen unterschiedliche Labels für einen optimalen Algorithmus evaluiert werden und somit die Trainingsdaten sogar mehrmals zeitaufwendig mit unterschiedlichen Labels erstellt werden.
                                 </li>
                                 <li>Im Gegensatz zu <span cite="CRFNYT"></span> labeln wir ganze Sätze und nicht nur eine Zutatenliste. <b>Die meisten unserer Labels sind daher <i>O</i> für Other</b>. Dies führt dazu, dass das CRF-Orakel Wörter wie <i>eine</i> bevorzugt als <i>O</i> orakelt anstatt als <i>B-Quantity</i>.
                                 </li>
@@ -174,27 +174,27 @@
                         </div>
                     </div>
                     
-                    <p>Des Weiteren ist uns unklar, <b>wie die Unterscheidung zwischen Zutaten, optionalen Zutaten, alternativen Zutaten und nicht zu verwendeten Zutaten zu modellieren ist</b>. Für diese sind auf jeden Fall eigene Labels nötig. Da die Wörter/Zutaten zu den unterschiedlichen Labels jeweils die selben sind, braucht das CRF zur Unterscheidung wahrscheinlich zusätzlich weitere Labels und Features. Diese zu entwickeln und zu evaluieren ist jedoch wieder aufwendig.
+                    <p>Des Weiteren muss noch entwickelt werden, <b>wie die Unterscheidung zwischen Zutaten, optionalen Zutaten, alternativen Zutaten und nicht zu verwendeten Zutaten zu modellieren ist</b>. Für diese sind auf jeden Fall eigene Labels nötig. Da die Wörter/Zutaten zu den unterschiedlichen Labels jeweils die selben sind, braucht das CRF zur Unterscheidung wahrscheinlich zusätzlich weitere Labels und Features. Diese zu entwickeln und zu evaluieren ist jedoch wieder aufwendig.
                     </p>
                     
-                    <p>Wir wollen damit nicht ausschließen, dass es möglich ist, die Zutaten mittels CRF zu extrahieren. Allerdings ist dieser Algorithmus bei den schlecht strukturierten Zubereitungs-Anweisungen von Frau Davides mit vielen Stolpersteinen verbunden und somit nicht der richtige Ansatz für uns. <span cite="CRFNYT"></span> konnte auf eine bereits im Rezept vorhandene Zutatenliste zurückgreifen sowie auf über 130.000 Trainingsdaten. Beides ist bei uns nicht gegeben. Stattdessen haben wir daher den <i>dictionary- and rule-based</i>-Ansatz weiterverfolgt.
+                    <p>Wir wollen damit nicht ausschließen, dass es möglich ist, die Zutaten mittels CRF zu extrahieren. Allerdings stößt dieser Algorithmus bei den schlecht strukturierten Zubereitungs-Anweisungen von Frau Davides auf viele Hindernisse und ist somit nicht der richtige Ansatz für uns. <span cite="CRFNYT"></span> konnte auf eine bereits im Rezept vorhandene Zutatenliste zurückgreifen sowie auf über 130.000 Trainingsdaten. Beides ist bei uns nicht gegeben. Stattdessen haben wir daher den <i>dictionary- and rule-based</i>-Ansatz weiterverfolgt.
                     </p>
                     
                     
                     
                     
                     <h2 id="Dictbased" class="myAnchorWithFixedheader">Dictionary- and rule-based Prototyp</h2>
-                    <p>Unsere dictionary- and rule-based Prototypen testen wir anhand von Recall und Precision. Wir haben dazu die <a href="DavidisesKochbuch/Rezepte%20mit%20cueML.xml">die ersten 50 Suppen von Frau Davidis' Kochbuch</a> manuell ausgezeichnet und verwenden dies als Golden Standard.
+                    <p>Unsere dictionary- and rule-based Prototypen testen wir anhand von Recall und Precision. Wir haben dazu die <a href="DavidisesKochbuch/Rezepte%20mit%20cueML.xml"> ersten 50 Suppen von Frau Davidis' Kochbuch</a> manuell ausgezeichnet und verwenden dies als Golden Standard. Unsere Prototypen zeichnen die gleichen 50 Rezepte aus und werden dann gegen unseren Golden Standard evaluiert.
                     </p>
                     
                     <h3 id="DictBasedV01" class="myAnchorWithFixedheader"><a href="AutomatischesAuszeichnenCueML.html#DictBasedV01" title="Link zur Beschreibung des Prototypen">Version 0.1</a></h3>
                     
-                    <p>Das Ziel dieses Prototypen ist es zu testen, ob unsere gesuchten Entities (Zutaten, Mengenangaben und Einheiten) extrahiert werden können. Da bei den Mengenangaben und Einheiten meine Intuition nicht Alarm schlägt, reichen mir ein paar Beispieldaten, um zu verifizieren, dass das funktioniert. Dies scheint der Fall zu sein. Daher wird eine genauere Evaluation der Mengenangaben und Einheiten auf einen ausgereifteren Prototypen verschoben.
+                    <p>Das Ziel dieses Prototypen ist es zu testen, ob unsere gesuchten Entities (Zutaten, Mengenangaben und Einheiten) extrahiert werden können. Da bei den Mengenangaben und Einheiten meine Intuition nicht Alarm schlägt, reichen mir ein paar Beispieldaten, um zu verifizieren, dass das funktioniert. Dies scheint der Fall zu sein. Daher wird eine genauere Evaluation der Mengenangaben und Einheiten auf einen ausgereifteren Prototypen verschoben. Folgend werden daher zunächst nur die Zutaten genauer betrachtet.
                     </p>
                     
                     <div class="row">
                         <div class="col-md-6">
-                            <p>Abb. 3 zeigt, wie wir den <b>Recall</b> ausgewertet haben. Idealerweise ist in den extrahierten Zutaten jede Zutat wiederzufinden, die in unserem Golden Standard auch manuell ausgezeichnet wurde. Ist ein Wort im Golden Standard Rezept als Zutat ausgezeichnet, überprüfen wir einfach, ob unser Prototyp an der gleichen Stelle eine Zutat extrahiert hat.
+                            <p>Abb. 3 zeigt, wie wir den <b>Recall</b> ausgewertet haben. Idealerweise ist in den extrahierten Zutaten jede Zutat wiederzufinden, die in unserem Golden Standard auch manuell ausgezeichnet wurde. Ist ein Wort im Golden Standard als Zutat ausgezeichnet, überprüfen wir einfach, ob unser Prototyp an der gleichen Stelle eine Zutat extrahiert hat.
                             </p>
                         </div>
                         
@@ -208,7 +208,7 @@
                     
                     <div class="row">
                         <div class="col-md-6">
-                            <p>Die Auswertung der <b>Precision</b> ist komplexer, wie in Abb. 4 zu sehen ist. Wenn eine Zutat in unserem Golden Standard Rezept mehrfach erwähnt wird, ist es valide, dass sie dort nur einmal als solche ausgezeichnet ist. Dass unser Prototyp alle Vorkommen auszeichnet, ist kein Fehler. Die Relevanz kann aber somit nicht mehr ausschließlich über die Wortposition verifiziert werden. Wenn die Verifizierung über die Wortposition fehlschlägt, versuchen wir es daher anschließend noch über die möglichen <i>ref</i>-Elemente. Beim Nachschlagen in unserem Zutaten-Wörterbuch speichern wir uns die möglichen <i>xml:ids</i>. Ist im Golden Standard Rezept einer der möglichen extrahierten xml:ids ausgezeichnet, wird die extrahierte Zutat ebenfalls als relevant evaluiert.
+                            <p>Die Auswertung der <b>Precision</b> ist komplexer, wie in Abb. 4 zu sehen ist. Wenn eine Zutat eines Rezeptes aus unserem Golden Standard mehrfach erwähnt wird, ist es valide, dass sie dort nur einmal als solche ausgezeichnet ist. Dass unser Prototyp alle Vorkommen im Rezept auszeichnet, ist kein Fehler. Die Relevanz kann aber daher nicht mehr ausschließlich über die Wortposition verifiziert werden. Wenn die Verifizierung über die Wortposition fehlschlägt, versuchen wir es daher anschließend noch über die möglichen <i>ref</i>-Elemente. Beim Nachschlagen in unserem Zutaten-Wörterbuch speichern wir uns die möglichen <i>xml:ids</i>. Ist im Golden Standard Rezept eine der möglichen extrahierten xml:ids ausgezeichnet, wird die extrahierte Zutat ebenfalls als relevant evaluiert.
                             </p>
                         </div>
                         
@@ -226,18 +226,24 @@
                     
                     <h3 id="DictBasedV02" class="myAnchorWithFixedheader"><a href="AutomatischesAuszeichnenCueML.html#DictBasedV02" title="Link zur Beschreibung des Prototypen">Version 0.2</a></h3>
                     
-                    <p>Folgend testen wir nicht mehr nur die Machbarkeitsanalyse, sondern wollen eine echte Evaluierung. Daher machen wir uns zunächst genauere Gedanken, wie wir evaluieren, ob eine extrahierte Entitiy bezüglich einem manuell getagtem Rezept relevant und korrekt ist. Wie in Abb. 4 zu sehen ist, brauchen wir zwei unterschiedliche Vergleich-Ansätze, die wir <b>Exact match</b> und <b>Rough match</b> nennen wollen:
+                    <p>Folgend testen wir nicht mehr nur die Machbarkeitsanalyse, sondern wollen eine echte Evaluierung durchführen. Daher machen wir uns zunächst genauere Gedanken, wie wir evaluieren, ob eine extrahierte Entitiy bezüglich einem manuell ausgezeichneten Rezept relevant und korrekt ist. Wie in Abb. 4 zu sehen ist, brauchen wir zwei unterschiedliche Vergleich-Ansätze, die wir <b>Exact match</b> und <b>Rough match</b> nennen wollen:
                     </p>
                     <div class="myIndent">
-                        <p>Ein <b>Exact match</b> kann nur vorliegen, wenn an gleicher Position im Rezept eine Zutat extrahiert wurde. Des Weiteren evaluieren wir alle weiteren extrahierten Entities anhand der Zutaten, da nur die Zutaten in cueML ausgezeichnet werden. Wenn beispielsweise korrekterweise <i>2 EL</i> extrahiert wurde, aber es keiner Zutat zugeordnet werden kann, ist die extrahierte Information wertlos.  In der <i>Option 2</i> muss für einen exact match zusätzlich zu einer Zutat die Mengenangabe (das <i>quantitiy</i>-Attribut) und Einheit (<i>unit</i>-Attribut) korrekt extrahiert sein. <i>Option 3</i> überprüft zusätzlich die Attribute <i>optional</i> und <i>altGrp</i>. Die zu überprüfenden Attribute werden im Programm in <i>main.py</i> in der <i>attris</i>-variabel gesetzt.
+                        <p>Ein <b>Exact match</b> kann nur vorliegen, wenn an gleicher Position im Rezept eine Zutat extrahiert wurde. Alle weiteren extrahierten Entities evaluieren wir anhand der Zutaten, da nur die Zutaten in cueML ausgezeichnet werden. Wenn beispielsweise korrekterweise <i>2 EL</i> extrahiert wurde, aber es keiner Zutat zugeordnet werden kann, ist die extrahierte Information wertlos. Bei den Optionen 2 und 3 fordern wir für die Korrektheit nicht nur das extrahieren der Zutat, sondern das zusätzlich das Extrahieren und Zuordnen von weiteren Entities wie beispielsweise eine Mengenangabe korrekt ist.
+                        </p>
+                            
+                        <p>In der <i>Option 2</i> muss für einen exact match zusätzlich zu einer Zutat die Mengenangabe (das <i>quantitiy</i>-Attribut) und Einheit (<i>unit</i>-Attribut) korrekt extrahiert sein.
                         </p>
                         
-                        <p>Wenn bei der Precision kein Exact match vorliegt, folgt daraus nicht sofort, dass die Zutat nicht relevant ist, wie in Abb. 4 zu sehen ist. Wenn die extrahierte Zutat kein Exact match ist, aber ebenfalls an einer anderen Stelle im Rezept extrahiert wurde und sie an der anderen Stelle ein Exact Match ist, liegt ein <b>Rough match</b> vor. Da diese extrahierte Zutat weder falsch ist, noch zu den relevanten Zutaten gehört, ignorieren wir sie für die Evaluation.
+                        <p><i>Option 3</i> überprüft zusätzlich die Attribute <i>optional</i> und <i>altGrp</i>. Die zu überprüfenden Attribute werden im Programm in <i>main.py</i> in der <i>attris</i>-Variabel gesetzt.
+                        </p>
+                        
+                        <p>Wenn bei der Precision kein Exact match vorliegt, folgt daraus nicht sofort, dass die Zutat nicht relevant ist, wie in Abb. 4 zu sehen ist. Wenn die extrahierte Zutat kein Exact match ist, aber an einer anderen Stelle im Rezept die gleiche Zutat extrahiert wurde und an der anderen Stelle ein Exact Match ist, liegt ein <b>Rough match</b> vor. Da diese extrahierte Zutat weder falsch ist, noch zu den relevanten Zutaten gehört, tun wir so, als ob wir diese Zutat nicht extrahiert hätten.
                         </p>
                     </div>
                     
                         
-                    <p>Tabelle 3 zeigt die Ergebnisse mit unserer finalen Version 0.2. Die Laufzeit beträgt unabhängig von den zu evaluierten Optionen knapp <b>3 Min</b>.
+                    <p>Tabelle 3 zeigt die Ergebnisse mit unserer finalen Version 0.2. Die Laufzeit beträgt unabhängig von den zu evaluierenden Optionen knapp <b>3 Min</b>.
                     </p>
                     
                     
@@ -265,19 +271,19 @@
                         </tr>
                     </table>
                     
-                    <p>Der Recall und die Precision der Option 1 von fast 100% zeigen, dass nahezu alle Zutaten nach den Verbesserungen in der Version 0.2 extrahiert werden. Die verbliebenen Fehler sind <a href="verbliebeneFehler.html">hier</a> aufgelistet.
+                    <p>Der Recall und die Precision der Option 1 von fast 100% zeigen, dass nach den Verbesserungen in der Version 0.2 nahezu alle Zutaten extrahiert werden. Die verbliebenen Fehler sind <a href="verbliebeneFehler.html">hier</a> aufgelistet.
                     </p>
                     
-                    <p>Option 2 zeigt, dass wir zu mehr als 8 von 10 Zutaten die Mengenangabe und Einheit richtig zuordnen. Wir haben dabei zwei systematische Fehler festgestellt. Zu einem können wir textuelle Mengenspannen der Form <i>„auf jede Person ¾ Pfund, bei einer großen Gesellschaft ½ Pfund“</i> nicht extrahieren. Stattdessen wird nur <i>½ Pfund</i> extrahiert. Zum anderen sind unsere vagen Mengenwörter wie <i>ein</i> oder <i>eine</i> Problematisch. Wenn wir diese bei der Extraktion verwenden wird zum Beispiel in <i>„gibt man die Brühe [...] durch ein Sieb, schwitzt [...] Mehl in Butter [...]“</i> fälschlicherweise die Mengenangabe <i>ein/1</i> für Mehl extrahiert. Wenn wir solche Mengenwörter nicht berücksichtigen wird jedoch die Mengenangabe <i>1</i> beispielsweise bei <i>„gibt man eine fein geschnittene Zwiebel hinzu“</i> nicht erkannt. In beiden Varianten gehen gut 20 Fehler auf die Verwendung bzw. nicht Verwendung solcher Mengenwörter zurück. Um die Mengenwörter von den unbestimmten Artikeln besser differenzieren zu können, werden offensichtlich weitere Regeln benötigt.
+                    <p>Die Auswertun zu Option 2 zeigt, dass wir zu mehr als 8 von 10 Zutaten die Mengenangabe und Einheit richtig zuordnen. Wir haben dabei zwei systematische Fehler festgestellt. Zu einem können wir textuelle Mengenspannen der Form <i>„auf jede Person ¾ Pfund, bei einer großen Gesellschaft ½ Pfund“</i> nicht extrahieren. Stattdessen wird nur <i>½ Pfund</i> extrahiert. Zum anderen sind unsere vagen Mengenwörter wie <i>ein</i> oder <i>eine</i> problematisch. Wenn wir diese bei der Extraktion verwenden, wird zum Beispiel in <i>„gibt man die Brühe [...] durch ein Sieb, schwitzt [...] Mehl in Butter [...]“</i> fälschlicherweise die Mengenangabe <i>ein/1</i> für Mehl extrahiert. Wenn wir solche Mengenwörter nicht berücksichtigen wird jedoch die Mengenangabe <i>1</i> beispielsweise bei <i>„gibt man eine fein geschnittene Zwiebel hinzu“</i> nicht erkannt. In beiden Varianten gehen gut 20 Fehler auf die Verwendung bzw. nicht Verwendung solcher Mengenwörter zurück. Um die Mengenwörter von den unbestimmten Artikeln besser differenzieren zu können, werden offensichtlich weitere Regeln benötigt.
                     </p>
                     
-                    <p>In Option 3 wird ersichtlich, dass unsere zwei beispielhaften Regeln für optionale und alternative Zutaten so gut wie gar nicht triggern. Dementsprechend geht der Recall und die Precision in der Option 3 stark nach unten. Das Differenzieren dieser Entities durch Regeln muss definitiv noch weiter erforscht werden.
+                    <p>In Option 3 wird ersichtlich, dass unsere zwei beispielhaften Regeln für optionale und alternative Zutaten so gut wie gar nicht triggern. Dementsprechend gehen der Recall und die Precision in der Option 3 stark nach unten. Das Differenzieren dieser Entities durch Regeln muss definitiv noch weiter erforscht werden.
                     </p>
                     
                     <p>Dass die Anzahl unser extrahierten Entities mit den Optionen variiert, liegt an unserem Rough match. In der Option 1 wird z.&thinsp;B. im Rezept B-1 das erste Vorkommen von Fleisch als Exact match identifiziert. Im Golden Standard Rezept ist nur das erste Vorkommen ausgezeichnet. Alle weiteren Vorkommen von Fleisch werden dann bei unserer Evaluation durch einen Rough match vom Ergebnis ignoriert. In der Option 2 wird jedoch beim ersten Vorkommen von Fleisch die Mengenangabe als falsch evaluiert. Daher schlägt anschließend auch der Rough match fehl und alle weiteren Vorkommen von Fleisch werden als Fehler identifiziert. In der Option 3 kommt es vor, dass Zutaten nun nicht mehr ein Exact match sind, da ihnen das <i>optional</i>-Attribut fehlt. Statt dessen werden sie jedoch durch einen Rough match gefangen. Daher tauchen in der Option 3 weniger Entities in der Precision auf. Der Rough match muss daher vielleicht für optionale und alternative Zutaten überdacht werden.
                     </p>
                     
-                    <p>Insgesamt ist die Evaluation des dictionary- and rule-based Prototypen viel versprechend. Zukünftige Arbeiten sollten erforschen, in wie weit die Unterscheidung der Entities durch weitere Regeln verbessert werden kann sowie sich mit der Differenzierung von <i>ein/eine</i> als unbestimmter Artikel oder Zahlenwort beschäftigen.
+                    <p>Insgesamt ist die Evaluation des dictionary- and rule-based Prototypen viel versprechend. Zukünftige Arbeiten sollten erforschen, inwieweit die Unterscheidung der Entities durch weitere Regeln verbessert werden kann sowie sich mit der Differenzierung von <i>ein/eine</i> als unbestimmter Artikel oder Zahlenwort beschäftigen.
                     </p>
                     
                 </div>

@@ -21,38 +21,36 @@
                     <h2>Verbliebene Fehler in der Zutaten-Extraktion</h2>
                     <h3>Recall</h3>
                     <ol class="myIndentLis">
-                        <li><b>B-7:</b> <i>"fleischiges Stück"</i> wird nicht erkannt.
+                        <li><b>B-7:</b> <i>„fleischiges Stück“</i> wird nicht erkannt.
                         </li>
-                        <li><b>B-14:</b> Aus <i> "[...] werden [...] gesalzen"</i> ergibt sich, dass Salz eine Zutat ist, was nicht extrahiert wird.
+                        <li><b>B-14:</b> Aus <i> „[...] werden [...] gesalzen“</i> ergibt sich, dass Salz eine Zutat ist, was nicht extrahiert wird.
                         </li>
-                        <li><b>B-20:</b> Lemmatisierung von <i>"des Hasenfleisches"</i> funktioniert nicht und somit auch nicht die dictionary-based Extraktion.
+                        <li><b>B-20:</b> Lemmatisierung von <i>„des Hasenfleisches“</i> funktioniert nicht und somit auch nicht die dictionary-based Extraktion.
                         </li>
-                        <li style="margin-left:-2em; text-indent: -2em; padding-left: 2em;"><span>&amp; 5.</span> <b>B-21:</b> <i>"[...] das zerhackte Hasengerippe oder auch Knochen von anderem, gutem gebratenem Fleische nebst [...]"</i>; Hasengerippe und Knochen sind nicht im Zutaten-Wörterbuch. Zum Kochen der Suppe werden Knochen und ein Hasengerippe benötigt (diese geben Geschmack in die Suppe ab beim Kochen), daher ist es richtig, dass sie als Zutaten ausgezeichnet werden. Im Zutaten-Wörterbuch <i>Knochen</i> aufzunehmen ist trotzdem irgendwie komisch...
+                        <li style="margin-left:-2em; text-indent: -2em; padding-left: 2em;"><span>&amp; 5.</span> <b>B-21:</b> <i>„[...] das zerhackte Hasengerippe oder auch Knochen von anderem, gutem gebratenem Fleische nebst [...]“</i>; Hasengerippe und Knochen sind nicht im Zutaten-Wörterbuch. Zum Kochen der Suppe werden Knochen und ein Hasengerippe benötigt (diese geben Geschmack in die Suppe ab beim Kochen), daher ist es richtig, dass sie als Zutaten ausgezeichnet werden. Im Zutaten-Wörterbuch <i>Knochen</i> aufzunehmen ist trotzdem irgendwie komisch...
                         </li>
-                        <li value="6"><b>B-22:</b> <i>"Brustfleisch"</i> wird nicht erkannt.
+                        <li value="6"><b>B-22:</b> <i>„Brustfleisch“</i> wird nicht erkannt.
                         </li>
-                        <li><b>B-34</b>: Blüthe ist im Golden Standard als Zutat ausgezeichnet, jedoch nicht im Zutaten-Wörterbuch. Aus dem Satzbau im Rezept ist ersichtlich, dass Blüthe eine Zutat ist, mir persönlich ist jedoch vollkommen unklar, was damit genau gemeint ist. 
-                        </li> 
                     </ol>
                     
                     <h3>Precision</h3>
                     <ol class="myIndentLis">
-                        <li><b>B-6:</b> In <i>"doch etwas reichlicher genommen, da solches weniger Kraft gibt, als Rindfleisch" wird Rindfleisch als Zutat extrahiert, ist jedoch eine Erklärung zur Mengenangabe.</i></li>
-                        <li><b>B-8:</b> In <i>"dann aber muß das Gewürz muss wegbleiben"</i> wird Gewürz extrahiert. Diese Formulierung von Frau Davidis zeigt auch, wie komplex Zusammenhänge im Fließtext sein können; das einzige verwendete Gewürz in diesem Rezept ist nämlich Muskatblüthe, welches wohl damit gemeint ist.
+                        <li><b>B-6:</b> In <i>„doch etwas reichlicher genommen, da solches weniger Kraft gibt, als Rindfleisch“</i> wird Rindfleisch als Zutat extrahiert, ist jedoch eine Erklärung zur Mengenangabe.</li>
+                        <li><b>B-8:</b> In <i>„dann aber muß das Gewürz wegbleiben“</i> wird Gewürz extrahiert. Diese Formulierung von Frau Davidis zeigt auch, wie komplex Zusammenhänge im Fließtext sein können; das einzige verwendete Gewürz in diesem Rezept ist nämlich Muskatblüthe, welches wohl damit gemeint ist.
                         </li>
-                        <li><b>B-10:</b> Gleiches gilt für <i>"Für Kranke läßt man Klöße und Muskat weg."</i> Gemeint mit Muskat ist Muskatblüthe.
+                        <li><b>B-10:</b> Gleiches gilt für <i>„Für Kranke läßt man Klöße und Muskat weg.“</i> Gemeint mit Muskat ist Muskatblüthe.
                         </li>
-                        <li><b>B-12</b> In <i>"Krebse [...] dann wird das Fleisch aus Scheeren und Schwänzen gebrochen"</i> wird Fleisch fälschlicherweise extrahiert.
+                        <li><b>B-12</b> In <i>„Krebse [...] dann wird das Fleisch aus Scheeren und Schwänzen gebrochen“</i> wird Fleisch fälschlicherweise extrahiert.
                         </li>
-                        <li><b>B-17:</b> <i>"Diese Suppe muß recht gebunden, doch ja nicht dicklich sein, man kann also, ehe der Wein dazu gegeben wird, entweder noch Mehl oder Brühe hinzufügen."</i> In diesem Satz wird Wein als Zutat ausgezeichnet. Die Evaluierung schlägt jedoch fehl, da im manuell ausgezeichnetem Rezept ausschließlich Madeira ausgezeichnet ist, auf welches sich das Wein bezieht.
+                        <li><b>B-17:</b> <i>„Diese Suppe muß recht gebunden, doch ja nicht dicklich sein, man kann also, ehe der Wein dazu gegeben wird, entweder noch Mehl oder Brühe hinzufügen.“</i> In diesem Satz wird Wein als Zutat ausgezeichnet. Die Evaluierung schlägt jedoch fehl, da im manuell ausgezeichnetem Rezept ausschließlich Madeira ausgezeichnet ist, auf welches sich der Wein bezieht.
                         </li>
-                        <li><b>B-20:</b> Hase ist keine Zutat in <i>"Sauce vom Hasen"</i>
+                        <li><b>B-20:</b> Hase ist keine Zutat in <i>„Sauce vom Hasen“</i>
                         </li>
                         <li><b>B-24:</b> Im Golden Standard ist nur eins der zwei Vorkommnisse von Fleisch ausgezeichnet, unser Programm extrahiert jedoch beide. Da unklar ist, welches Fleisch gemeint ist, schlägt unsere Evaluierung fehl (keiner der möglichen xml:ids kann zugeordnet werden, da im Golden Standard das Fleisch auf keine xml:id verweist).
                         </li>
-                        <li><b>B-28</b>: In <i>"gibt man eine weiße Bohne groß"</i> wird Bohne als Zutat ausgezeichnet, es ist jedoch eine vage Mengenangabe.
+                        <li><b>B-28</b>: In <i>„gibt man eine weiße Bohne groß“</i> wird Bohne als Zutat ausgezeichnet, es ist jedoch eine vage Mengenangabe.
                         </li>
-                        <li><b>B-50:</b> In <i>"Wird wie Suppe von feiner Gerste (Nro. 49) gekocht."</i> ist Gerste im Golden Standard als Verweis auf das entsprechende Rezept ausgezeichnet. Unser Programm zeichnet dies jedoch als Zutat aus.
+                        <li><b>B-50:</b> In <i>„Wird wie Suppe von feiner Gerste (Nro. 49) gekocht.“</i> ist Gerste im Golden Standard als Verweis auf das entsprechende Rezept ausgezeichnet. Unser Programm zeichnet dies jedoch als Zutat aus.
                         </li>
                     </ol>
                     
