@@ -232,10 +232,10 @@
                         <p>Ein <b>Exact match</b> kann nur vorliegen, wenn an gleicher Position im Rezept eine Zutat extrahiert wurde. Alle weiteren extrahierten Entities evaluieren wir anhand der Zutaten, da nur die Zutaten in cueML ausgezeichnet werden. Wenn beispielsweise korrekterweise <i>2 EL</i> extrahiert wurde, aber es keiner Zutat zugeordnet werden kann, ist die extrahierte Information wertlos. Bei den Optionen 2 und 3 fordern wir für die Korrektheit nicht nur das extrahieren der Zutat, sondern das zusätzlich das Extrahieren und Zuordnen von weiteren Entities wie beispielsweise eine Mengenangabe korrekt ist.
                         </p>
                             
-                        <p>In der <i>Option 2</i> muss für einen exact match zusätzlich zu einer Zutat die Mengenangabe (das <i>quantitiy</i>-Attribut) und Einheit (<i>unit</i>-Attribut) korrekt extrahiert sein.
+                        <p>In der <i>Option 2</i> muss für einen exact match zusätzlich zu einer Zutat die Mengenangabe (das <i>quantitiy</i>-, <i>atLeast</i> und <i>atMost-</i>Attribut) und Einheit (<i>unit</i>-Attribut) korrekt extrahiert sein.
                         </p>
                         
-                        <p><i>Option 3</i> überprüft zusätzlich die Attribute <i>optional</i> und <i>altGrp</i>. Die zu überprüfenden Attribute werden im Programm in <i>main.py</i> in der <i>attris</i>-Variabel gesetzt.
+                        <p><i>Option 3</i> überprüft zusätzlich die Attribute <i>optional</i> und <i>altGrp</i>. Die zu überprüfenden Attribute werden im Programm in <i>main.py</i> mit der Variabel <i>evalAttris</i> gesetzt.
                         </p>
                         
                         <p>Wenn bei der Precision kein Exact match vorliegt, folgt daraus nicht sofort, dass die Zutat nicht relevant ist, wie in Abb. 4 zu sehen ist. Wenn die extrahierte Zutat kein Exact match ist, aber an einer anderen Stelle im Rezept die gleiche Zutat extrahiert wurde und an der anderen Stelle ein Exact Match ist, liegt ein <b>Rough match</b> vor. Da diese extrahierte Zutat weder falsch ist, noch zu den relevanten Zutaten gehört, tun wir so, als ob wir diese Zutat nicht extrahiert hätten.
@@ -256,18 +256,18 @@
                         </tr>
                         <tr>
                             <th>Option 1 (nur Zutaten) </th>
-                            <td>98,62% (499 von 506)</td>
-                            <td>98,23% (500 von 509)</td>
+                            <td>99,23% (514 von 518)</td>
+                            <td>98,10% (516 von 526)</td>
                         </tr>
                         <tr>
                             <th>Option 2 (mit Mengenangaben und Einheiten) </th>
-                            <td>84,78% (429 von 506)</td>
-                            <td>83,66% (430 von 514)</td><!-- weil roughMatch nicht mehr funktioniert mehr als 509 -->
+                            <td>85,71% (444 von 518)</td>
+                            <td>83,18% (445 von 535)</td><!-- weil roughMatch nicht mehr funktioniert mehr als 526 -->
                         </tr>
                         <tr>
                             <th>Option 3 (mit optionalen und alternativen Zutaten) </th>
-                            <td>71,34% (361 von 506</td>
-                            <td>72,84% (362 von 497)</td><!-- 2. erwähnung einer Zutat -> optional vorher exakt, nun aber durch roughMatch -->
+                            <td>71,81% (372 von 518</td>
+                            <td>72,01% (373 von 518)</td><!-- 2. erwähnung einer Zutat -> optional vorher exakt, nun aber durch roughMatch - daher nur noch 518 -->
                         </tr>
                     </table>
                     

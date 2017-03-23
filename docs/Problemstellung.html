@@ -347,15 +347,18 @@
                             </div>
                             
                             <div class="col-md-6">
-                                <figure>
-                                    <figcaption>Abb. 2b: Klassisches Inhaltsverzeichnis</figcaption>
-                                    <style>
-                                        div.tableOfContents { border: 1px solid; }
-                                        div.tableOfContents ol { counter-reset: item; }
-                                        div.tableOfContents li { display: block; }
-                                        div.tableOfContents li:before { content: counters(item, ".") " "; counter-increment: item; }
-                                    </style>
+                                <style>
+                                    div.tableOfContents { border: 1px solid; }
+                                    div.tableOfContents ol { counter-reset: item; }
+                                    div.tableOfContents li { display: block; }
+                                    div.tableOfContents li:before { content: counters(item, ".") " "; counter-increment: item; }
 
+                                    @media print {
+                                        .myPrintPagebreak { page-break-before: always; }
+                                    }
+                                </style>
+                                <figure class="myPrintPagebreak">
+                                    <figcaption>Abb. 2b: Klassisches Inhaltsverzeichnis</figcaption>
                                     <div class="tableOfContents">
                                         <ol>
                                             <li><a href="Transkription.html">Transkription</a>
