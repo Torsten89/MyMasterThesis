@@ -1,0 +1,133 @@
+\documentclass[12pt, twoside]{report}
+\usepackage[TS1,T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage{pdfpages}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+\usepackage{wrapfig}
+\usepackage{url}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds} % linebreaks of urls at - and other
+\makeatother
+
+% listings
+\usepackage{listings}
+\lstset{
+	captionpos=b,
+	frame=single,
+	breaklines=true,
+	tabsize=2,
+	literate=%
+		{Ö}{{\"O}}1
+		{Ä}{{\"A}}1
+		{Ü}{{\"U}}1
+		{ß}{{\ss}}1
+		{ü}{{\"u}}1
+		{ä}{{\"a}}1
+		{ö}{{\"o}}1
+		{~}{{\textasciitilde}}1,
+	alsoletter={{\"u}}
+}
+\definecolor{maroon}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\lstdefinelanguage{XML}
+{
+	basicstyle=\ttfamily\footnotesize,
+	morestring=[s]{"}{"},
+	morecomment=[s]{?}{?},
+	morecomment=[s]{!--}{--},
+	commentstyle=\color{darkgreen},
+	moredelim=[s][\color{black}]{>}{<},
+	moredelim=[s][\color{red}]{\ }{=},
+	stringstyle=\color{blue},
+	identifierstyle=\color{maroon}
+}
+
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+        \Huge{\textbf{Zutaten aus Kochbüchern extrahieren}}
+        
+        
+        \vspace{1cm}
+        
+        \Large
+        Master-Arbeit für den Abschluss:\\
+        Master of Science
+        
+        \vspace{0.8cm}
+        
+        \includegraphics[width=0.4\textwidth]{Images/cau-siegel.pdf}
+        
+        Arbeitsgruppe Kommunikationssysteme,\\
+        Technische Fakultät der\\
+        Christian-Albrechts-Universität zu Kiel\\
+        
+        \vspace{1cm}
+        
+            \Large vorgelegt von:\\
+            \LARGE Torsten Knauf\\
+            \Large am: 30.03.2017
+    \end{center}
+    
+    \vspace{1cm}
+    
+    \LARGE
+    \begin{tabbing}
+    Erstprüfer:\hspace{0.5cm} \= Prof. Dr.-Ing.Norbert Luttenberger\\
+    Zweitprüfer: \> Dr.-Ing. Jesper Zedlitz
+    \end{tabbing}
+\end{titlepage}
+
+
+\pagenumbering{Roman}
+
+{\huge \textbf{Eidesstattliche Erklärung}} \bigskip
+
+Hiermit  erkläre  ich,  dass  ich  die  vorliegende 
+Master Thesis selbständig  verfasst  habe,  dass  ich  sie  zuvor  an  keiner  anderen  Hochschule  und  in  
+keinem  anderen  Studiengang  als  Prüfungsleistung  eingereicht  habe  und  dass  ich keine  anderen  als  die  angegebenen  Quellen  und  Hilfsmittel  benutzt  habe.  Alle Stellen  der  Arbeit,  die  wörtlich  oder  sinngemäß  aus  Veröffentlichungen  oder  aus anderweitigen  fremden  Äußerungen  entnommen  wurden,  sind  als  solche  kenntlich gemacht.   
+\newline
+\newline
+\newline
+\rule{\textwidth}{1pt}
+Ort, Datum \hfill Signatur
+
+
+\newpage
+{\huge \textbf{Hinweis zum Lesen dieser Arbeit}} \bigskip
+
+Diese Master-Arbeit wurde als Webseite konzipiert. Die folgenden Seiten sind der Ausdruck der Webseite, um der Prüfungsordnung gerecht zu werden, welche eine gebundene Ausgabe verlangt. Es wird jedoch empfohlen die Webseite zu lesen, da die Formatierungen für den Browser im Computer, Tablet, oder Smartphone konzipiert sind.
+
+Die Webseite wie auch der zu dieser Arbeit gehörende Source Code kann auf der beiliegende CD gefunden werden.
+
+Die Webseite ist auch im Uni-internen GitLab unter XXX hinterlegt.
+
+Der Source Code kann ebenfalls im Uni-internen GitLab unter YYY gefunden werden. 
+
+
+\clearpage
+\pagenumbering{arabic} 
+\includepdf[pages=-, pagecommand={}]{WebseitenPdfs/1.pdf}
+\includepdf[pages=-, pagecommand={}]{WebseitenPdfs/2.pdf}
+\includepdf[pages=-, pagecommand={}]{WebseitenPdfs/3.pdf}
+\includepdf[pages=-, pagecommand={}]{WebseitenPdfs/4.pdf}
+\includepdf[pages=-, pagecommand={}]{WebseitenPdfs/5.pdf}
+\includepdf[pages=-, pagecommand={}]{WebseitenPdfs/6.pdf}
+\includepdf[pages=-, pagecommand={}]{WebseitenPdfs/7.pdf}
+\includepdf[pages=-, pagecommand={}]{WebseitenPdfs/8.pdf}
+\includepdf[pages=-, pagecommand={}]{WebseitenPdfs/9.pdf}
+\includepdf[pages=-, pagecommand={}]{WebseitenPdfs/10.pdf}
+
+
+
+
+\end{document}

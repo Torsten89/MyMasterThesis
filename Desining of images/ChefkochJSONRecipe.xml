@@ -1,0 +1,18 @@
+<script type="text/javascript">
+var _simplora_params = { recipes: [] };
+_simplora_params.recipes.push({
+    id: '363861121870267',
+    name: 'Pfannekuchen',
+    servings: 4,
+    ingredients: [
+        { id: '71', base_amount: '62.5', amount_unit: 'g', name: 'Mehl'},
+        { id: '36', base_amount: '1', amount_unit: '', name: 'Ei(er)'},
+        { id: '6', base_amount: '0', amount_unit: '', name: 'Salz'},
+        { id: '73', base_amount: '75', amount_unit: 'ml', name: 'Milch'},
+        { id: '1012', base_amount: '75', amount_unit: 'ml', name: 'Mineralwasser', suffix: ', (mit Kohlensäure)'},
+        { id: '184', base_amount: '0', amount_unit: '', name: 'Öl'},
+    ]
+});
+</script>
+
+

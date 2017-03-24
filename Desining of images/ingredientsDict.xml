@@ -1,0 +1,28 @@
+<cue:listIngredient xmlns="http://www.tei-c.org/ns/1.0" xmlns:cue="cueML">
+	<cue:ingredient xml:id="Rindkochfleisch" BLSref="U180100">
+		<cue:prefBasicForm>Rindfleisch</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Midder" BLSref="V582100">
+		<cue:prefBasicForm>Midder</cue:prefBasicForm>
+		<cue:altBasicForm>Kalbsmidder</cue:altBasicForm>
+		<cue:note>"Kalbsmidder ist auch unter dem Synonym [...]</cue:note>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Weißwein" BLSref="P220000">
+		<cue:prefBasicForm>Weißwein</cue:prefBasicForm>
+		<cue:altBasicForm>weißer Wein</cue:altBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Butter" BLSref="Q610000">
+		<cue:prefBasicForm>Butter</cue:prefBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Rotwein" BLSref="P240000">
+		<cue:prefBasicForm>Rotwein</cue:prefBasicForm>
+		<cue:altBasicForm>roter Wein</cue:altBasicForm>
+	</cue:ingredient>
+	<cue:ingredient xml:id="Kalbkochfleisch" BLSref="U380100">
+		<cue:prefBasicForm>Kalbfleisch</cue:prefBasicForm>
+	</cue:ingredient>
+	[...]
+</cue:listIngredient>
+
+
+

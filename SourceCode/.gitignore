@@ -1,5 +1,0 @@
-#remove build helper of latex
-.metadata
-*.pyc
-.cache
-__pycache__

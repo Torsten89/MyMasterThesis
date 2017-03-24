@@ -1,0 +1,21 @@
+{
+	"Rindfleisch"	: "Rindkochfleisch",
+	"Midder"	: "Midder",
+	"Kalbsmidder"	: "Midder",
+	"Weißwein"	: "Weißwein"
+	"Wein"		: [
+			    "Weißwein", 
+			    "Rotwein"
+			  ],
+	"Butter"	: "Butter",
+	"Rotwein"	: "Rotwein",
+	"Kalbfleisch"	: "Kalbkochfleisch",
+	
+	"Fleisch"	: [
+			    "Rindkochfleisch",
+			    "Kalbkochfleisch"
+			  ],
+	[...]
+}
+
+

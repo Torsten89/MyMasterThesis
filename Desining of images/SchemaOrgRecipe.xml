@@ -1,0 +1,31 @@
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Recipe",
+    "datePublished": "2005-07-20",
+    "description": "Pfannekuchen, ein gutes Rezept [...]"
+    "image": "http://[...].jpg",
+    "recipeIngredient": [
+        "250 g Mehl", "4  Ei(er)", "Salz", "300 ml Milch",
+        "300 ml Mineralwasser, (mit Kohlensäure)", "Öl"
+    ],
+    "name": "Pfannekuchen",
+    "author": {
+       "@type": "Person",
+       "name": "06onkel"
+    },
+    "prepTime": "PT30M",
+    "recipeInstructions": "Den ganzen Teig mit [...]"
+    "recipeYield": "4"
+    ,
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.27",
+        "reviewCount": "93",
+        "worstRating": 0,
+        "bestRating": 5
+    },
+    "recipeCategory": ["Braten", [...]]
+}
+</script>
+
