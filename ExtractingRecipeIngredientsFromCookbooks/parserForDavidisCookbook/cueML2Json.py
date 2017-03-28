@@ -18,9 +18,9 @@ def getJsonRcps(pathToCueMLFile, rcpIds, hack=False):
     # hack for using our manual tagged soups:
     if hack:
         # take B-1 to B-68 from golden standard and B-69 to B-93 from pathToCueMLFile
-        pathToGoldenStandard = "/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted.xml"
+        pathToGoldenStandard = "/home/torsten/Desktop/MyMasterThesis/docs/DavidisesKochbuch/GoldenStandard.xml"
         xmlRcps = (XmlParser(parse(pathToGoldenStandard))).getXmlRecipes(["B-{}".format(i) for i in range(1, 69)]) \
-            + (XmlParser(parse(pathToCueMLFile))).getXmlRecipes(["B-{}".format(i) for i in range(69, 94)])
+           + (XmlParser(parse(pathToCueMLFile))).getXmlRecipes(["B-{}".format(i) for i in range(69, 94)])
         soups = [xmlRcp2dictRcp(xmlRcp) for xmlRcp in xmlRcps]
         dictRcps["Suppen"] = soups
 
@@ -35,7 +35,7 @@ def xmlRcp2dictRcp(xmlRcp):
     dictRcp["name"] = plainTextRcp.name
     dictRcp["instructions"] = getInstructionText(xmlRcp, "p") + getInstructionText(xmlRcp, "note")
     dictRcp["ingredients"] = mergeIngs(getIngsFromNode(xmlRcp))
-    dictRcp["cueAlts"] = [altElems.attributes["target"].value.split() for altElems in getElems(xmlRcp, "cue:alt")]
+    dictRcp["cueAlts"] = [altElems.attributes["target"].value.split() for altElems in getElems(xmlRcp, "alt")]
         
     return dictRcp
 
@@ -59,7 +59,7 @@ def mergeIngs(ings):
                 continue
             else:
                 if ref == iPrime.__dict__["ref"]:
-                    iPrime.__dict__.update (ing.__dict__)
+                    iPrime.__dict__.update(ing.__dict__)
                     added = True
                     break
         if not added:
@@ -82,7 +82,7 @@ def ingWithNoRefEqualExeptForPosiInRcp(i1, i2):
                     
 if __name__ == '__main__':
     #pathToCueMLFile = "/home/torsten/Desktop/erg.xml"
-    pathToCueMLFile = "/home/torsten/Desktop/MyMasterThesis/docs/DavidisesKochbuch/Rezepte mit cueML.xml"
+    pathToCueMLFile = "/home/torsten/Desktop/MyMasterThesis/docs/DavidisesKochbuch/Rezepte automatisch mit cueML ausgezeichnet.xml"
     pathToErg = "/home/torsten/Desktop/MyMasterThesis/docs/Rezepte/Rezepte.json"
     with open(pathToErg, "w") as f:
         f.write("rcps={}".format(getJsonRcps(pathToCueMLFile, [], hack=True))) 
