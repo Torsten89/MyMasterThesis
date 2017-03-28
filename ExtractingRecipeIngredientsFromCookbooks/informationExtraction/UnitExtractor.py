@@ -1,8 +1,7 @@
-from parserForDavidisCookbook.xmlHelper import getUnitValuesFromCueML
 
 class UnitExtractor(object):
 
-    def __init__(self, cueMLRngDom):
+    def __init__(self):
         self.__unitSet__ = set(["kg",
                                 "Pfund",
                                 "Loth",

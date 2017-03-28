@@ -4,6 +4,7 @@ from informationExtraction.UnitExtractor import UnitExtractor
 from parserForDavidisCookbook.XmlParser import XmlParser
 from informationExtraction.IngredientExtractor import IngredientExtractor
 from informationExtraction.Extractor import Extractor
+from unitTest.pathToFiles import pathToListIngredients
 
 def createCueMLDom(recipes=[]):
     return parseString('\
@@ -33,9 +34,9 @@ def getRecipeB49():
 class ExtractorTest(unittest.TestCase):
 
     def testExtractionIsValidXml(self):
-        uE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng"))
+        uE = UnitExtractor()
         plainTextRcp = XmlParser(createCueMLDom([getRecipeB49()])).getPlainTextRecipes().__next__()
-        iE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
+        iE = IngredientExtractor(parse(pathToListIngredients))
         e = Extractor(iE, uE)
         xmlString = e.extractRecipe(plainTextRcp)
         try:

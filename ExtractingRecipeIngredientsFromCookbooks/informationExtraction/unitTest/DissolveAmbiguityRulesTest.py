@@ -6,13 +6,14 @@ from informationExtraction.dictBasedExtractor import dictBasedEnrichment
 from model.WordProperty import WordProperty
 from informationExtraction.dissolveAmbiguityRules import dissolveAmbiguityRule
 from model.PlainTextRecipe import PlainTextRecipe
+from unitTest.pathToFiles import pathToListIngredients
 
 class DissolveAmbiguityRulesTest(unittest.TestCase):
     """ These tests make only sense, when all DictBasedExtractorTests are passed. """
     
     def setUp(self):
-        self.ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
-        self.unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng"))
+        self.ingE = IngredientExtractor(parse(pathToListIngredients))
+        self.unitE = UnitExtractor()
 
         
     def testWein(self):

@@ -5,13 +5,14 @@ from informationExtraction.UnitExtractor import UnitExtractor
 from informationExtraction.IngredientExtractor import IngredientExtractor
 from informationExtraction.dictBasedExtractor import dictBasedEnrichment
 from model.WordProperty import WordProperty
+from unitTest.pathToFiles import pathToListIngredients
 
 
 class DictBasedExtractorTest(unittest.TestCase):
     
     def setUp(self):
-        self.ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
-        self.unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng"))
+        self.ingE = IngredientExtractor(parse(pathToListIngredients))
+        self.unitE = UnitExtractor()
 
     def testWP0(self):
         s = "Es wird hierzu für 24—30 Personen eine kräftige Bouillon von 8—10 Pfund Rindfleisch mit Wurzelwerk gekocht."

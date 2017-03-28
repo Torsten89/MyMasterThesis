@@ -96,7 +96,7 @@ eine kräftige <cue:recipeIngredient target="#Bouillon" \
                 >Madeira</cue:recipeIngredient> kann man <cue:recipeIngredient \
                 ref="weißen_Franzwein" altGrp="2">weißen Franzwein</cue:recipeIngredient> \
             und etwas <cue:recipeIngredient ref="#Rum" altGrp="2" quantity="etwas" \
-                >Rum</cue:recipeIngredient> nehmen<cue:alt target="1 2"/>. Sowohl die \
+                >Rum</cue:recipeIngredient> nehmen<alt target="1 2"/>. Sowohl die \
             Bouillon als Kalbskopf können schon am vorhergehenden Tage, ohne Nachtheil der \
             Suppe, gekocht werden.</note> \
     </cue:recipe>'

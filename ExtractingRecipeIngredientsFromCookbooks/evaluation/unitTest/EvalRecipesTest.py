@@ -7,11 +7,12 @@ from informationExtraction.UnitExtractor import UnitExtractor
 from informationExtraction.Extractor import Extractor
 from evaluation.evalRecipes import recallOf2Recipes, precisionOf2Recipes
 from evaluation.metrics import recall, precision
+from unitTest.pathToFiles import pathToListIngredients
 
 
 class EvalRecipesTest(unittest.TestCase):
-    ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
-    unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng")) 
+    ingE = IngredientExtractor(parse(pathToListIngredients))
+    unitE = UnitExtractor() 
     extractor = Extractor(ingE, unitE)
 
     def testPrecisionOf2Recipes(self):

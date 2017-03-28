@@ -5,13 +5,14 @@ from informationExtraction.UnitExtractor import UnitExtractor
 from informationExtraction.dictBasedExtractor import dictBasedEnrichment
 from model.WordProperty import WordProperty
 from informationExtraction.optionalRules import optionalRule
+from unitTest.pathToFiles import pathToListIngredients
 
 
 class OptionalRuleTest(unittest.TestCase):
 
     def setUp(self):
-        self.ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
-        self.unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng"))
+        self.ingE = IngredientExtractor(parse(pathToListIngredients))
+        self.unitE = UnitExtractor()
         
     def test1(self):
         s = "Der Soja macht die Suppe gewürzreicher, kann jedoch gut wegbleiben, und \

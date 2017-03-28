@@ -9,14 +9,13 @@ from model.PlainTextRecipe import PlainTextRecipe
 from informationExtraction.dictBasedExtractor import dictBasedEnrichment
 from informationExtraction.ruleBasedExtractor import applyRulesToWordProperties
 
-evalAttris=set() #["quantity", "atLeast", "atMost", "unit", "optional", "altGrp"]) #attris which should be relevant in evaluation
-ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
-unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng"))    
+evalAttris=set(["quantity", "atLeast", "atMost", "unit"]) #["quantity", "atLeast", "atMost", "unit", "optional", "altGrp"]) #attris which should be relevant in evaluation
+ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/docs/DavidisesKochbuch/listIngredients.xml"))
+unitE = UnitExtractor()    
+goldenStandardPath = "/home/torsten/Desktop/MyMasterThesis/docs/DavidisesKochbuch/GoldenStandard.xml" # contains B-1 to B-68 labeled and the rest unlabeled
 defaultErgFilePath = "erg.xml"
 
-def evalRecipes(rcpIds=["B-{}".format(i) for i in range(1, 51)], debug=True, attris=evalAttris, ergFilePath=defaultErgFilePath):
-    goldenStandardPath = "/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted.xml"
-    
+def evalRecipes(rcpIds=["B-{}".format(i) for i in range(1, 51)], debug=True, attris=evalAttris, ergFilePath=defaultErgFilePath):    
     startTime = time.time()    
     cookbook = XmlParser(parse(goldenStandardPath))
     extractor = Extractor(ingE, unitE)
@@ -49,8 +48,8 @@ def extractAllRecipes(pathToCookbook, ergFilePath=defaultErgFilePath):
 
 if __name__ == '__main__':
 #     myPlaygroundTest()
-    evalRecipes()
-#     extractAllRecipes("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/recipes extracted (original).xml", 
-#                      ergFilePath="/home/torsten/Desktop/MyMasterThesis/docs/DavidisesKochbuch/Rezepte mit cueML.xml")
-#     
+#     evalRecipes()
+    extractAllRecipes("/home/torsten/Desktop/MyMasterThesis/docs/DavidisesKochbuch/recipes extracted (original).xml", 
+                     ergFilePath="/home/torsten/Desktop/MyMasterThesis/docs/DavidisesKochbuch/Rezepte automatisch mit cueML ausgezeichnet.xml")
+     
     

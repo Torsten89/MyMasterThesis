@@ -1,6 +1,7 @@
 from xml.dom.minidom import parse
 import unittest
 from informationExtraction.IngredientExtractor import IngredientExtractor
+from unitTest.pathToFiles import pathToListIngredients
 
 
 class IngredientExtractorTest(unittest.TestCase):
@@ -8,7 +9,7 @@ class IngredientExtractorTest(unittest.TestCase):
     
     def setUp(self):
         unittest.TestCase.setUp(self)
-        dom = parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml")
+        dom = parse(pathToListIngredients)
         self.ingE = IngredientExtractor(dom)
         
     def testWein(self):

@@ -5,13 +5,14 @@ from informationExtraction.UnitExtractor import UnitExtractor
 from informationExtraction.dictBasedExtractor import dictBasedEnrichment
 from informationExtraction.dontUseRules import dontUseRule
 from model.WordProperty import WordProperty
+from unitTest.pathToFiles import pathToListIngredients
 
 
 class DontUseRuleTest(unittest.TestCase):
 
     def setUp(self):
-        self.ingE = IngredientExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/listIngredients.xml"))
-        self.unitE = UnitExtractor(parse("/home/torsten/Desktop/MyMasterThesis/DavidisKochbuch/cueML/cueML_v0.5.rng"))
+        self.ingE = IngredientExtractor(parse(pathToListIngredients))
+        self.unitE = UnitExtractor()
         
     def testIngredient1(self):
         s = " Es wird dies Alles ohne Ei und Salz in einem tiefen Topf auf sehr starkem Feuer bis vor dem Kochen ohne Aufhören stark gerührt."
