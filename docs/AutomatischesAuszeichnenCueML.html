@@ -43,7 +43,7 @@
                     
                     <div class="row">
                         <div class="col-md-9">
-                            <p>Unser CRF-based Prototyp ist in unserem Git-Repository unter dem Tag <a href="#">CRF-BasedPrototypeV0.1</a> zu finden. Er verwendet das <a href="http://www.swig.org/" title="Simplified Wrapper and Interface Generator">SWIG</a> Interface für <i>Python 3</i> von <a href="http://www.chokkan.org/software/crfsuite/">CRFsuite 0.12</a>.
+                            <p>Unser CRF-based Prototyp ist in unserem Git-Repository unter dem Tag <a href="https://git.informatik.uni-kiel.de/stu121256/Torsten_Knauf_Master-Arbeit_Davidises_Kochbuch_Source_Code/tree/CRF-BasedPrototypeV0.1">CRF-BasedPrototypeV0.1</a> zu finden. Er verwendet das <a href="http://www.swig.org/" title="Simplified Wrapper and Interface Generator">SWIG</a> Interface für <i>Python 3</i> von <a href="http://www.chokkan.org/software/crfsuite/">CRFsuite 0.12</a>.
                             </p>
                             
                             <p>Wie in <a href="IEKochDomain.html#CRFTheorie">CRF erklärt</a>, muss der Prototyp zuerst antrainiert werden. Abb. 1 zeigt einen kleinen Ausschnitt unserer Trainingsdaten für den CRF-based Prototypen. Nebenbei sei erwähnt, dass wir diese Anweisungen heute als eine Mehlschwitze bezeichnen würden.
@@ -73,7 +73,7 @@
                     
                     <h3 id="DictBasedV01" class="myAnchorWithFixedheader">Version 0.1</h3>
                     
-                    <p>Ein erster Prototyp ist in unserem Git-Repository unter dem Tag <a href="#">Dict-AndRule-BasedPrototypeV0.1</a> zu finden. Das Ziel dieses Prototypen ist, erst einmal ausschließlich zu testen, ob das dictionary-based Extrahieren unserer gesuchten Entities (Zutaten, Mengenangaben und Einheiten) funktioniert. Deswegen ist er nach dem Motto <i>quick and dirty</i> implementiert. Nachdem <a href="Evaluierung.html#DictBasedV01">die erste Evaluierung</a> positiv stimmt, haben wir den Prototypen quasi weggeworfen und in der folgenden Version 0.2 redesigned, wie es sich für einen quick and dirty Prototypen gehört. Daher wird hier auch nicht weiter auf Implementierung-Details eingegangen sondern nur auf konzeptionelle Ideen.
+                    <p>Ein erster Prototyp ist in unserem Git-Repository unter dem Tag <a href="https://git.informatik.uni-kiel.de/stu121256/Torsten_Knauf_Master-Arbeit_Davidises_Kochbuch_Source_Code/tree/Dict-AndRule-BasedPrototypeV0.1">Dict-AndRule-BasedPrototypeV0.1</a> zu finden. Das Ziel dieses Prototypen ist es, erst einmal ausschließlich zu testen, ob das dictionary-based Extrahieren unserer gesuchten Entities (Zutaten, Mengenangaben und Einheiten) funktioniert. Deswegen ist er nach dem Motto <i>quick and dirty</i> implementiert. Nachdem <a href="Evaluierung.html#DictBasedV01">die erste Evaluierung</a> positiv stimmt, haben wir den Prototypen quasi weggeworfen und in der folgenden Version 0.2 redesigned, wie es sich für einen quick and dirty Prototypen gehört. Daher wird hier auch nicht weiter auf Implementierung-Details eingegangen sondern nur auf konzeptionelle Ideen.
                     </p>
                     
                     <div class="row">
@@ -108,7 +108,7 @@
                     </p>
 
                     <ul>
-                        <li>In unserer <a href="DavidisesKochbuch/cueML/cueML_v0.5.rng">cueML-Schema Definition</a> ist eine Liste von erlaubten <b>Mengeneinheiten</b> (unit). Diese Liste von erlaubten Werten nehmen wir als Wörterbuch der Einheiten.
+                        <li>Das Wörterbuch für <b>Mengeneinheiten</b> erstellen wir manuell. Es enthält beispielsweise <i>Pfund</i> und <i>Maß</i>.
                         </li>
                         <li>Für die <b>Mengenangaben</b> verwenden wir kein echtes Wörterbuch sondern eine Funktion. Diese bekommt als Argument ein Lemma und returniert in folgenden drei Fällen <i>True</i>:
                             <ul>
@@ -118,9 +118,9 @@
                             </ul>
                         Ansonsten returniert die Funktion <i>False</i>.
                         </li>
-                        <li>Wie in <a href="cueML.html">Domänen-spezifisches Vokabular cueML</a> erläutert, haben wir alle ausgezeichneten Zutaten mittels einer Liste von <i>ingredient</i>-Elementen an den BLS angeschlossen. Unten stehende Abb. 4 zeigt, wie wir aus diesen ein <b>Wörterbuch von Zutaten</b> extrahieren. Jedes Nomen einer Basisform ist ein Eintrag im Wörterbuch. Zu jedem Eintrag speichern wir zusätzlich eine Liste von möglichen xml:ids ab. Wein könnte z.&thinsp;B. Weißwein wie auch Rotwein sein. Bei einer rule-based Weiterverarbeitung kann aus der Liste der möglichen <i>xml:id</i>s ggf. eine eindeutige <i>xml:id</i> bestimmt werden. Dies werden wir in der <a href="#DictBasedV02">Version 0.2</a> in Angriff nehmen. Der letzte Eintrag in Abb. 4b ist besonders. Frau Davidis verwendet oft Fleisch als Zutat und aus dem Kontext wird ersichtlich, was für ein Fleisch gemeint ist. Bei einer Rindfleischsuppe zum Beispiel ist mit Fleisch ziemlich sicher Rindfleisch gemeint. Um auch das Lemma Fleisch als Zutat extrahieren zu können, fügen wir dieses dem Wörterbuch hinzu. Der hinterlegte Wert ist eine Liste von allen xml:ids, in dessen Einträgen das Wort Fleisch vorkommt.
+                        <li>Wie in <a href="cueML.html#cueML">Domänen-spezifisches Vokabular cueML</a> erläutert, haben wir alle ausgezeichneten Zutaten mittels einer Liste von <i>ingredient</i>-Elementen an den BLS angeschlossen. Unten stehende Abb. 4 zeigt, wie wir aus diesen ein <b>Wörterbuch von Zutaten</b> extrahieren. Jedes Nomen einer Basisform ist ein Eintrag im Wörterbuch. Zu jedem Eintrag speichern wir zusätzlich eine Liste von möglichen xml:ids ab. Wein könnte z.&thinsp;B. Weißwein wie auch Rotwein sein. Bei einer rule-based Weiterverarbeitung kann aus der Liste der möglichen <i>xml:id</i>s ggf. eine eindeutige <i>xml:id</i> bestimmt werden. Dies werden wir in der <a href="#DictBasedV02">Version 0.2</a> in Angriff nehmen. Der letzte Eintrag in Abb. 4b ist besonders. Frau Davidis verwendet oft Fleisch als Zutat und aus dem Kontext wird ersichtlich, was für ein Fleisch gemeint ist. Bei einer Rindfleischsuppe zum Beispiel ist mit Fleisch ziemlich sicher Rindkochfleisch gemeint. Um auch das Lemma Fleisch als Zutat extrahieren zu können, fügen wir dieses dem Wörterbuch hinzu. Der hinterlegte Wert ist eine Liste von allen xml:ids, in dessen Einträgen das Wort Fleisch vorkommt.
                             
-                            <p style="padding-top: 1em;">Die Einschränkung auf das Nomen einer Zutat ist eine große Beschleunigung der Laufzeit der dictionary-based Extraktion. Bei einem Satz der Länge <i>n</i> werden so <i>n look ups</i> im Wörterbuch benötigt. Um Zutaten der Länge eins und zwei nachschlagen zu können, wären bereits <i>n * (n-1) look ups</i> nötig. Problematisch wären auch Fälle, in denen die Wörter einer Zutat nicht benachbart sind wie z.&thinsp;B. <i>Man nehme Wein; bevorzugt Weißen</i>.
+                            <p style="padding-top: 1em;">Die Einschränkung auf das Nomen einer Zutat ist eine große Beschleunigung der Laufzeit der dictionary-based Extraktion. Bei einem Satz der Länge <i>n</i> werden so <i>n look ups</i> im Wörterbuch benötigt. Um Zutaten der Länge eins und zwei nachschlagen zu können, wären bereits <i>n * (n-1) look ups</i> nötig. Problematisch wären auch Fälle, in denen die Wörter einer Zutat nicht benachbart sind wie z.&thinsp;B. bei <i>Man nehme Wein; bevorzugt Weißen</i>.
                             </p>
                             
                             <p>Wenn ein Lemma nicht im Zutaten-Wörterbuch ist, überprüfen wir zusätzlich, ob es eine zusammengesetzte Zutat ist, bzw. ein eigenes Rezept. Ist im Wort eins der Wörter <i>bouillon, klöße oder kloß</i> enthalten, ist dies auch ein positives Ergebnis und es wird eine leere Liste von möglichen BLS zurückgegeben.
@@ -135,7 +135,7 @@
                                 <div class="col-md-7">
                                     <figure myModal="images/AutomatischesAnreichrenCueML/ingListCueML.png">
                                         <figcaption>Abb. 4a: Beispielhafter Aussschnitt von <i>cueML ingredient</i>-Elementen</figcaption>
-                                        <img src="images/AutomatischesAnreichrenCueML/ingListCueML.png"/>
+                                        <img src="images/cueML/AnbindungAnBLS.png"/>
                                     </figure>
                                 </div>
                                 <div class="col-md-5">
@@ -158,7 +158,7 @@
                     
                     
                     <h4><b>Design der dictionary-based Extraktion</b></h4>
-                    <p>Abb. 5 zeigt die aufs wesentliche reduzierten Bestandteile des Designs. Jedes Rezept wird zunächst in ein <b>PlainTextRecipe</b> umgewandelt, welches zu jedem Rezept die rcp-id, den Rezept-Typ, den Namen und eine Liste von Zubereitungs-Anweisungen speichert. Satzweise führt der <b>Extractor</b> dann mittels <b>dictBasedEnrichment</b> eine Extraktion der gesuchten Entities durch. Dazu werden zunächst mit der Hilfe von <b>TreeTagger</b> die Lemmata zu jedem Wort gebildet. Diese Lemmata werden dann durch den <b>IngredientExtractor</b>, <b>UnitExtractor</b> und <b>QuantityExtractor</b> getestet. Ist einer dieser Tests positiv, wird in der entsprechenden <b>WordProperty</b> im <b>properties</b>-dict das Ergebnis des Tests hinterlegt. Der <b>QuantityExtractor</b> besteht nur aus der Funktion <b>isQuantity</b>, welche ein Lemma bekommt und <i>True</i> bzw. <i>False</i> wiedergibt. Die Wörterbücher für den <b>IngredientExtractor</b> sowie den <b>UnitExtractor</b> werden mittels dem <b>XmlParser</b>, wie zuvor beschrieben, aus dem manuell mit cueML angereicherten Kochbuch extrahiert.
+                    <p>Abb. 5 zeigt die aufs wesentliche reduzierten Bestandteile des Designs. Jedes Rezept wird zunächst in ein <b>PlainTextRecipe</b> umgewandelt, welches zu jedem Rezept die rcp-id, den Rezept-Typ, den Namen und eine Liste von Zubereitungs-Anweisungen speichert. Satzweise führt der <b>Extractor</b> dann mittels <b>dictBasedEnrichment</b> eine Extraktion der gesuchten Entities durch. Dazu werden zunächst mit der Hilfe von <b>TreeTagger</b> die Lemmata zu jedem Wort gebildet. Diese Lemmata werden dann durch den <b>IngredientExtractor</b>, <b>UnitExtractor</b> und <b>QuantityExtractor</b> getestet. Ist einer dieser Tests positiv, wird in der entsprechenden <b>WordProperty</b> im <b>properties</b>-dict das Ergebnis des Tests hinterlegt. Der <b>QuantityExtractor</b> besteht nur aus der Funktion <b>isQuantity</b>, welche ein Lemma bekommt und <i>True</i> bzw. <i>False</i> wiedergibt. Das Wörterbuch des <b>IngredientExtractor</b> wird mittels dem <b>XmlParser</b>, wie zuvor beschrieben, aus dem manuell mit cueML angereicherten Kochbuch extrahiert. Das Wörterbuch des <b>UnitExtractor</b> ist manuell im Attribut <i>__unitSet__</i> eingetragen.
                     </p>
                     
                     <p>Das Ergebnis der Extraktion des Satzes <i>„Schütte 1 Maß Wein hinzu.“</i> mit dem Zutaten-Wörterbuch aus Abb. 4b wäre zum Beispiel die Liste folgender WordProperties: <br/>
@@ -193,6 +193,8 @@
                         <li>Die Liste der typischen Endungen von abgekürzten Wörtern wurde um <i>klöße</i>, <i>kloß</i>, <i>brot</i> und <i>brod</i> erweitert.
                         </li>
                         <li>Uns sind einige Fehler im manuell ausgezeichneten Kochbuch aufgefallen, welches unseren Golden Standard bildet, die wir korrigiert haben.
+                        </li>
+                        <li>Wir haben das Zutaten-Wörterbuch mit einer manuell erstellten Liste von Zutaten erweitert. Diese ist <a href="DavidisesKochbuch/manualCreatedListOfDavidisIngredients.txt">hier</a> zu finden.
                         </li>
                     </ul>
                     
@@ -237,7 +239,7 @@
                     <p>Das Python-Script <i>cueML2Json.py</i> parst die cueML Rezepte in ein <i>JSON-Objekt</i>, welches von einer Webseite ausgelesen werden kann. In der oberen Navigationsleitste im Menüpunkt <a href="Rezepte.html" title="Zu den in HTML transofrmierten Rezepten">Rezepte</a> sind aufbauend auf dem von cueML2Json.py erstellten JSON-Objekt die in HTML transformierten Rezepte von Frau Davidis  zu finden. Da unser Prototyp noch ausschließlich die Zutaten mit ihren Mengenangaben und Mengeneinheiten auszeichnet, kann die Transformation auch nur diese Entities berücksichtigen. Daher enthält die Webseite beispielsweise keine Verweise zwischen den Rezepten. 
                     </p>
                     
-                    <p>Eine andere Möglichkeit die mit cueML ausgezeichneten Rezepte in HTML zu transformieren ist mittels <i>XSLT</i>. Während meiner SHK-Tätigkeit habe ich die mit dem experimentellen cueML ausgezeichneten Rezepte mittels XSLT in HTML umgewandelt. Dies hat den Nachteil, dass die Erstellung der Navigationsbar für die Rezepte schwieriger ist, da nicht alle Rezepte in einem Objekt gekapselt sind. Da das Auszeichnen mit dem experimentelle cueML manuell erfoglte, wurden dort alle Entities wie beispielsweise Zubereitungszeiten oder Verweise auf andere Rezepte ausgezeichnet. Als Beispiel wie alle Entites von cueML in HTML dargestellt werden können, sei daher <a href="https://git.informatik.uni-kiel.de/nl/Culinary_Analysis/tree/master/Webseite/html">hier</a> auf die Transformation des experimentellen cueMLs mittels XSLT verlinkt. Da sich das experimentelle cueML sehr von der aktuellen Version unterschiedet, ist eine Anpassung des Scripts jedoch leider aufwendig.
+                    <p>Eine andere Möglichkeit die mit cueML ausgezeichneten Rezepte in HTML zu transformieren ist mittels <i>XSLT</i>. Während meiner SHK-Tätigkeit habe ich die mit dem experimentellen cueML ausgezeichneten Rezepte mittels XSLT in HTML umgewandelt. Dies hat den Nachteil, dass die Erstellung der Navigationsbar für die Rezepte schwieriger ist, da nicht alle Rezepte in einem Objekt gekapselt sind. Da das Auszeichnen mit dem experimentelle cueML manuell erfoglte, wurden dort alle Entities wie beispielsweise Zubereitungszeiten oder Verweise auf andere Rezepte ausgezeichnet. Als Beispiel wie alle Entites von cueML in HTML dargestellt werden können, sei daher <a href="https://git.informatik.uni-kiel.de/nl/Culinary_Analysis/tree/master/Webseite/html">hier</a> auf die Transformation des experimentellen cueMLs mittels XSLT verlinkt. Da sich das experimentelle cueML sehr von der aktuellen Version unterscheidet, ist eine Anpassung des Scripts jedoch leider aufwendig.
                     </p>
                     
                 </div>

@@ -1,11 +1,11 @@
-<cue:listIngredient xmlns="http://www.tei-c.org/ns/1.0" xmlns:cue="cueML">
+<cue:listIngredient xmlns="http://www.tei-c.org/ns/1.0" xmlns:cue="http://cueML/ns">
 	<cue:ingredient xml:id="Rindkochfleisch" BLSref="U180100">
 		<cue:prefBasicForm>Rindfleisch</cue:prefBasicForm>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Midder" BLSref="V582100">
 		<cue:prefBasicForm>Midder</cue:prefBasicForm>
 		<cue:altBasicForm>Kalbsmidder</cue:altBasicForm>
-		<cue:note>"Kalbsmidder ist auch unter dem Synonym [...]</cue:note>
+		<note>"Kalbsmidder ist auch unter dem Synonym [...]</note>
 	</cue:ingredient>
 	<cue:ingredient xml:id="Weißwein" BLSref="P220000">
 		<cue:prefBasicForm>Weißwein</cue:prefBasicForm>

@@ -15,7 +15,6 @@
   <graph edgedefault="directed" id="G">
     <data key="d0"/>
     <node id="n0">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="46.0" width="307.0" x="228.0" y="60.74048000000013"/>
@@ -293,16 +292,14 @@
       </data>
     </node>
     <node id="n16">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="85.0" width="246.0" x="-56.19999999999999" y="34.0"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="59.875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="240.138671875" x="2.9306640625" y="12.5625">Satz 1: Überschrift
-Satz 2. [...] 
-Satz n ("Man nehme 2 EL Zucker").
-Satz 4. [...]<y:LabelModel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="45.90625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="229.216796875" x="8.3916015625" y="19.546875">Satz 1: Überschrift
+Satz 2: "Man nehme 2 EL Zucker"
+[...]<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -394,7 +391,6 @@ Satz 4. [...]<y:LabelModel>
       </data>
     </edge>
     <edge id="e8" source="n16" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="7.240480000000133" tx="3.5" ty="0.0"/>
