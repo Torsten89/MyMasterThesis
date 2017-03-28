@@ -18,7 +18,7 @@ class WordProperty(object):
         if ingProp is not None:
             return "<{}recipeIngredient {}>{}</{}recipeIngredient>".format(cueMLPrefix, self.attrisToXml(), self.word, cueMLPrefix)
         elif self.properties.get(WordProperty.ALT_GRP):
-            return '<{}alt target="{}"/>'.format(cueMLPrefix, " ".join(self.properties[WordProperty.ALT_GRP]))
+            return '<alt target="{}"/>'.format(" ".join(self.properties[WordProperty.ALT_GRP]))
         else:
             return self.word
     
