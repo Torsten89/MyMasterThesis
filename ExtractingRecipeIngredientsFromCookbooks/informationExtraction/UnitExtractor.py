@@ -3,7 +3,20 @@ from parserForDavidisCookbook.xmlHelper import getUnitValuesFromCueML
 class UnitExtractor(object):
 
     def __init__(self, cueMLRngDom):
-        self.__unitSet__ = set(unit for unit in getUnitValuesFromCueML(cueMLRngDom))
+        self.__unitSet__ = set(["kg",
+                                "Pfund",
+                                "Loth",
+                                "Stich",
+                                "Messerspitze",
+                                "Pfennig", "EL",
+                                "Teelöffel",
+                                "Tasse",
+                                "l",
+                                "Maß",
+                                "Flasche",
+                                "Glas",
+                                "Scheibe"
+        ])
         
     def getUnit(self, lemma, default=None):
         if lemma in self.__unitSet__:

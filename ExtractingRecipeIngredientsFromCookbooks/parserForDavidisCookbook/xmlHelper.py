@@ -36,11 +36,6 @@ def getAttriOrNone(node, attriName):
         return node.attributes[attriName].value
     except KeyError:
         return None
-    
-def getUnitValuesFromCueML(cueMLRngDom):
-    unitForIngredientElem = list(getElems(cueMLRngDom, "define", {"name":["tei_att.unitForIngredient"]}))[0]
-    for valueElem in unitForIngredientElem.getElementsByTagName("value"):
-        yield getAllChildText(valueElem)
      
 def buildIngredientDict(dom):
     """ Returns dictionary of ingredients from a cue:listIngredient-element. The key is the noun of an ingredient (e.g. Wein for weißer Wein)
