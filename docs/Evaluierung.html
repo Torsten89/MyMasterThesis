@@ -42,7 +42,7 @@
                 </div>
                 
                 <div class="col-md-10">
-                    <p>Auf dieser Seite werden die <a href="AutomatischesAnreichernCueML.html" title="Automatisches auszeichnen mit cueML">zuvor vorgestellten Prototypen</a> evaluiert. Als Metriken verwenden wir die Recall und die Precision, welche zuerst erläutert werden.
+                    <p>Auf dieser Seite werden die <a href="AutomatischesAuszeichnenCueML.html" title="Automatisches Auszeichnen mit cueML">zuvor vorgestellten Prototypen</a> evaluiert. Als Metriken verwenden wir die Recall und die Precision, welche zuerst erläutert werden.
                     </p>
                     
                     <h2 id="Metrics" class="myAnchorWithFixedheader">Recall &amp; Precision</h2>
@@ -61,7 +61,7 @@
                     
                     <div class="row">
                         <div class="col-md-5">
-                            <p>Antrainiert haben wir den CRF-based Prototypen mit <a href="images/AutomatischesAnreichrenCueML/Trainings-Rezepte.txt">diesen 9 Rezepten</a>. <a href="images/AutomatischesAnreichrenCueML/Test-Rezept.txt">Unser Test-Rezept</a> besteht aus 96 Wörtern. 83 der entsprechenden 96 Labels sind <i>O</i> für <i>others</i>.
+                            <p>Antrainiert haben wir den CRF-based Prototypen mit <a href="images/AutomatischesAnreichrenCueML/Trainings-Rezepte.txt">diesen 9 Rezepten</a>. <a href="images/AutomatischesAnreichrenCueML/Test-Rezept.txt">Unser Test-Rezept</a> besteht aus 96 Wörtern. 83 der 96 Labels des Test-Rezeptes sind <i>O</i> für <i>others</i>.
                             </p>
                             
                             <p>Tabelle 1 zeigt die Stellen, in denen sich die manuellen und die vom Prototypen extrahierten Labels unterscheiden. Die beiden Zutaten <i>Kartoffeln </i> und <i>Kartoffel-Klöße</i>, die nicht extrahiert wurden, sind auch nicht in den Trainings-Rezepten vorhanden. <i>Eine</i> und <i>einige</i> hingegen sind in den Trainingsdaten vorhanden. Sie sind mal als Mengenangabe gelabelt (z.&thinsp;B. in <i>eine geriebene gelbe Murzel</i>) und mal nicht (z.&thinsp;B. in <i>dies wird eine Weile gerührt</i>). Wenn dem CRF nur positive Gewichte erlaubt sind, orakelt er auch <i>Griesmehl</i> als <i>O</i>, obwohl Griesmehl in den Trainingsdaten genau einmal vorkommt und dort das Label <i>B-Ingredient</i> hat.
@@ -177,7 +177,7 @@
                     <p>Des Weiteren muss noch entwickelt werden, <b>wie die Unterscheidung zwischen Zutaten, optionalen Zutaten, alternativen Zutaten und nicht zu verwendeten Zutaten zu modellieren ist</b>. Für diese sind auf jeden Fall eigene Labels nötig. Da die Wörter/Zutaten zu den unterschiedlichen Labels jeweils die selben sind, braucht das CRF zur Unterscheidung wahrscheinlich zusätzlich weitere Labels und Features. Diese zu entwickeln und zu evaluieren ist jedoch wieder aufwendig.
                     </p>
                     
-                    <p>Wir wollen damit nicht ausschließen, dass es möglich ist, die Zutaten mittels CRF zu extrahieren. Allerdings stößt dieser Algorithmus bei den schlecht strukturierten Zubereitungs-Anweisungen von Frau Davides auf viele Hindernisse und ist somit nicht der richtige Ansatz für uns. <span cite="CRFNYT"></span> konnte auf eine bereits im Rezept vorhandene Zutatenliste zurückgreifen sowie auf über 130.000 Trainingsdaten. Beides ist bei uns nicht gegeben. Stattdessen haben wir daher den <i>dictionary- and rule-based</i>-Ansatz weiterverfolgt.
+                    <p>Wir wollen damit nicht ausschließen, dass es möglich ist, die Zutaten mittels CRF zu extrahieren. Allerdings stößt dieser Algorithmus bei den schlecht strukturierten Zubereitungs-Anweisungen von Frau Davidis auf viele Hindernisse und ist somit nicht der richtige Ansatz für uns. <span cite="CRFNYT"></span> konnte auf eine bereits im Rezept vorhandene Zutatenliste zurückgreifen sowie auf über 130.000 Trainingsdaten. Beides ist bei uns nicht gegeben. Stattdessen haben wir daher den <i>dictionary- and rule-based</i>-Ansatz weiterverfolgt.
                     </p>
                     
                     
@@ -189,7 +189,7 @@
                     
                     <h3 id="DictBasedV01" class="myAnchorWithFixedheader"><a href="AutomatischesAuszeichnenCueML.html#DictBasedV01" title="Link zur Beschreibung des Prototypen">Version 0.1</a></h3>
                     
-                    <p>Das Ziel dieses Prototypen ist es zu testen, ob unsere gesuchten Entities (Zutaten, Mengenangaben und Einheiten) extrahiert werden können. Da bei den Mengenangaben und Einheiten meine Intuition nicht Alarm schlägt, reichen mir ein paar Beispieldaten, um zu verifizieren, dass das funktioniert. Dies scheint der Fall zu sein. Daher wird eine genauere Evaluation der Mengenangaben und Einheiten auf einen ausgereifteren Prototypen verschoben. Folgend werden daher zunächst nur die Zutaten genauer betrachtet.
+                    <p>Das Ziel dieses Prototypen ist es zu testen, ob unsere gesuchten Entities (Zutaten, Mengenangaben und Einheiten) extrahiert werden können. Da bei den Mengenangaben und Einheiten meine Intuition nicht Alarm schlägt, reichen mir ein paar Beispieldaten, um zu verifizieren, dass das funktioniert. Dies scheint der Fall zu sein. Daher wird eine genauere Evaluation der Mengenangaben und Einheiten auf einen ausgereifteren Prototypen verschoben. Folgend werden zunächst nur die Zutaten genauer betrachtet.
                     </p>
                     
                     <div class="row">
