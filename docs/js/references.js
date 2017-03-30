@@ -18,7 +18,7 @@ references = [
         "in":"LDV Forum - GLDV Journal for Computational Linguistics and Language Technology"
     },
     {
-        "id":"Schema.orgNoGrammar",
+        "id":"SchemaOrgNoGrammar",
         "authors":"Schema.org",
         "year":"2017",
         "title":"http://schema.org/docs/datamodel.html",
