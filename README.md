@@ -1,0 +1,1 @@
+This project was my master thesis in computer science. The whole worke is documented as GitHub Page [here in the docs folder](http://shaman-apprentice.github.io/Metos3dPrototyp/)
